@@ -1,7 +1,8 @@
 build_data/remaster - the remaster's art (branch track-b/remaster, REMASTER.md)
 
-hd3x/3d, hd3x/res   every texture at 3x its original size, from the Topaz Gigapixel upscale (Documents/DH2-textures/upscaled,
-                    "-wonder 3.5-6x"), made by:  py -3 tools/trackb/remaster_prep.py downscale --scale 3 --out <hd3x>
+hd3x/3d, hd3x/res   every texture at 3x its original size (lossless WebP; convert back to PNG before using the tools, see
+                    WEBP-TO-PNG.md), from the Topaz Gigapixel upscale, made by:
+                    py -3 tools/trackb/remaster_prep.py downscale --scale 3 --out <hd3x>
                     prep_log.csv lists the method per texture (upscaled 3x as is, 6x box-averaged to 3x, data maps such as
                     lightmaps and grey alpha masks enlarged from the original with Lanczos instead of the AI output).
 normals             <texture>_n.png tangent-space normal maps (OpenGL green-up) for the 47 lit textures, from StableNormal
