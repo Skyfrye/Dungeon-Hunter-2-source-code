@@ -37,3 +37,5 @@ py -3 tools/trackb/android/build_release.py --bundle-data build_data/files --onl
 ```
 
 See [`RIGHTS.md`](RIGHTS.md) for the status of the game data and recovered material.
+
+Made by Skyfrye , Angelkiller with AI
