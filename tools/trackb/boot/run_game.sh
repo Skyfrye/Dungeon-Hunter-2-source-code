@@ -1,7 +1,7 @@
 #!/bin/bash
 # launch the DungeonHunter2 activity (skipping the Samsung DRM activity) and capture logcat for N seconds
 export MSYS_NO_PATHCONV=1
-SDK=<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk
+SDK=${ANDROID_HOME:-$HOME/AppData/Local/Android/Sdk}
 ADB="$SDK/platform-tools/adb.exe"
 PKG=com.gameloft.android.GAND.GloftD2SS
 SECS=${1:-25}

@@ -17,7 +17,7 @@ import re
 import sys
 from pathlib import Path
 
-WORK = Path(r"<home>\Documents\Projects\Dungeon Hunter 2 Recomp\DH_sc\.worktrees\track-b")
+WORK = Path(__import__("os").path.expanduser("~") + r"\Documents\Projects\Dungeon Hunter 2 Recomp\DH_sc\.worktrees\track-b")
 SRC = WORK / "port" / "decomp-reconstruction"
 
 

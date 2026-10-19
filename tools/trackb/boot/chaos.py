@@ -10,7 +10,7 @@ The seed fully determines the action list (timing of the emulator is not determi
 """
 import argparse, os, random, re, subprocess, sys, time, json, hashlib
 
-SDK = r"<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk"
+SDK = (os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT") or os.path.expanduser("~/AppData/Local/Android/Sdk"))
 ADB = SDK + "/platform-tools/adb.exe"
 A2L = SDK + "/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-addr2line.exe"
 PKG = "com.gameloft.android.GAND.GloftD2SS"

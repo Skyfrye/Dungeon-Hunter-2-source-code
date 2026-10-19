@@ -18,7 +18,7 @@ import subprocess
 import sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-DEFAULT_NDK = '<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk/ndk/29.0.14206865'
+DEFAULT_NDK = (os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT") or os.path.expanduser("~/AppData/Local/Android/Sdk")) + '/ndk/29.0.14206865'
 
 
 def main():

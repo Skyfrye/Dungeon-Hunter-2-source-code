@@ -1,6 +1,6 @@
 #!/bin/bash
 # after iterate.sh: dismiss the old-SDK dialog, wait N seconds, collect log + screenshot, show crash summary
-A=<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk/platform-tools/adb.exe
+A=${ANDROID_HOME:-$HOME/AppData/Local/Android/Sdk}/platform-tools/adb.exe
 sleep 1; $A shell input tap 1884 656; sleep ${1:-80}
 $A logcat -d -v threadtime > build/own-r/run.log
 $A exec-out screencap -p > build/own-r/play.png

@@ -12,7 +12,7 @@ but missing in the .so (2).
 """
 import argparse, os, re, subprocess, sys, tempfile, zipfile
 
-SDK = os.environ.get("ANDROID_HOME", r"<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk")
+SDK = (os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT") or os.path.expanduser("~/AppData/Local/Android/Sdk"))
 DEXDUMP = SDK + "/build-tools/37.0.0/dexdump.exe"
 NM = SDK + "/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-nm.exe"
 

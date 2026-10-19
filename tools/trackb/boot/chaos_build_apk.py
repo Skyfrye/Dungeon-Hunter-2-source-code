@@ -7,12 +7,12 @@ byte-identical to the reference armeabi-v7a .so). The only manifest edit is minS
 (absent) targetSdk follows and Android 14+ accepts the install.
 """
 import argparse, os, shutil, struct, subprocess, sys, zipfile
-SDK = r"<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk"
+SDK = (os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT") or os.path.expanduser("~/AppData/Local/Android/Sdk"))
 BT = SDK + "/build-tools/37.0.0"
 NDKB = SDK + "/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin"
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 OUT = os.path.join(ROOT, "build", "own-m")
-ORIG = r"<home>/Documents/Projects/Dungeon Hunter 2 Recomp/Dungeon-Hunter-2-HD-v1-0-2.apk"
+ORIG = os.path.expanduser("~") + r"/Documents/Projects/Dungeon Hunter 2 Recomp/Dungeon-Hunter-2-HD-v1-0-2.apk"
 
 def patch_min_sdk(axml, new):
     # find resource id 0x0101020c (minSdkVersion) index in the RESOURCE_MAP chunk, then the attribute using it

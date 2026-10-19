@@ -13,7 +13,7 @@ import argparse, glob, os, re, shutil, subprocess, sys, zipfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 PROJ = os.path.join(ROOT, "port", "android-trackb", "app", "src", "main")
-SDK = os.environ.get("ANDROID_HOME", r"<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk")
+SDK = (os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT") or os.path.expanduser("~/AppData/Local/Android/Sdk"))
 BT = SDK + "/build-tools/37.0.0"
 PLAT = SDK + "/platforms/android-37.0"
 PKG = "com.gameloft.android.GAND.GloftD2SS"

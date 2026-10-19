@@ -1,7 +1,7 @@
 """trace.py and|ios ADDR : compact event trace of a function (calls with partner names, vcalls, strings, big immediates, branches).
 Annotates iOS calls with the matched Android symbol (from m.pkl) and Android calls with symbol names."""
 import sys, pickle
-sys.path.insert(0, '<home>/AppData/Local/Temp/claude/C--Users-user-Documents-Projects-Dungeon-Hunter-2-Recomp-DH-sc/92aea28a-441d-487f-b829-7d37b39f798b/scratchpad/matcher')
+sys.path.insert(0, __import__("os").path.expanduser("~") + '/AppData/Local/Temp/claude/C--Users-user-Documents-Projects-Dungeon-Hunter-2-Recomp-DH-sc/92aea28a-441d-487f-b829-7d37b39f798b/scratchpad/matcher')
 import extract
 from capstone import *
 from capstone.arm import *

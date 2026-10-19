@@ -1,6 +1,6 @@
 exec(open('twin.py').read().split("if __name__")[0])
 import csv
-P='<home>/Documents/Projects/Dungeon Hunter 2 Recomp/DH_sc/.worktrees/track-b/reports/decomp-reconstruction/android-link-missing.csv'
+P=__import__("os").path.expanduser("~") + '/Documents/Projects/Dungeon Hunter 2 Recomp/DH_sc/.worktrees/track-b/reports/decomp-reconstruction/android-link-missing.csv'
 rows=[r for r in csv.DictReader(open(P,encoding='utf-8')) if r['android_category'] in('original-not-reconstructed','original-partial-row')]
 stat=collections.Counter(); out=[]
 for r in rows:

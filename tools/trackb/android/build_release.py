@@ -15,7 +15,7 @@ tools/trackb/java/import_resources.py (this script runs it when port/android-tra
 import argparse, hashlib, os, shutil, subprocess, sys, zipfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
-SDK = os.environ.get("ANDROID_HOME", r"<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk")
+SDK = (os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT") or os.path.expanduser("~/AppData/Local/Android/Sdk"))
 NDK = SDK + "/ndk/29.0.14206865"
 NDKB = NDK + "/toolchains/llvm/prebuilt/windows-x86_64/bin"
 BT = SDK + "/build-tools/37.0.0"
@@ -28,7 +28,7 @@ OUTROOT = os.path.join(ROOT, "build", "own-ab")
 OUT = os.path.join(OUTROOT, "out")
 BUILD = os.path.join(ROOT, "build", "own-ab-arm64")
 PROJ = os.path.join(ROOT, "port", "android-trackb", "app", "src", "main")
-DEFAULT_APK = r"<home>/Documents/Projects/Dungeon Hunter 2 Recomp/Dungeon-Hunter-2-HD-v1-0-2.apk"
+DEFAULT_APK = os.path.expanduser("~") + r"/Documents/Projects/Dungeon Hunter 2 Recomp/Dungeon-Hunter-2-HD-v1-0-2.apk"
 BUILD_DATA = os.path.join(ROOT, "build_data")   # optional git-ignored folder: android-res/, files/ (the unpacked cache), ios-sounds/
 PREFIX = PKG + "/files/"
 

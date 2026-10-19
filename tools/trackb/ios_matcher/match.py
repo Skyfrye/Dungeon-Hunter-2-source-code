@@ -100,7 +100,7 @@ def vt_slots(img_ptrs, funcidx, getu32):
 
 
 def load_regions():
-    sys.path.insert(0, '<home>/AppData/Local/Temp/claude/C--Users-user-Documents-Projects-Dungeon-Hunter-2-Recomp-DH-sc/92aea28a-441d-487f-b829-7d37b39f798b/scratchpad/matcher')
+    sys.path.insert(0, __import__("os").path.expanduser("~") + '/AppData/Local/Temp/claude/C--Users-user-Documents-Projects-Dungeon-Hunter-2-Recomp-DH-sc/92aea28a-441d-487f-b829-7d37b39f798b/scratchpad/matcher')
     import extract
     ai = extract.load_android()[0]
     ii = extract.load_ios()[0]

@@ -3,7 +3,7 @@
 # same --allow-multiple-definition), then run it. Used because the shared ninja build is off limits.
 #   tools/trackb/local-test.sh <category>/tests/<file>_test.cpp <exe-name>
 set -uo pipefail
-root="<home>/Documents/Projects/Dungeon Hunter 2 Recomp/DH_sc/.worktrees/track-b"
+root="$HOME/Documents/Projects/Dungeon Hunter 2 Recomp/DH_sc/.worktrees/track-b"
 dr="$root/port/decomp-reconstruction"
 build="$root/build/tb-int"
 src="$1"        # e.g. game-anim/tests/r2a-game-anim-AnimationSet-4fa4a6-0_test.cpp

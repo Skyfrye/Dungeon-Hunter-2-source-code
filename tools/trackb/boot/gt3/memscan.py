@@ -1,5 +1,5 @@
 import subprocess,sys,struct,re,time
-ADB=r"<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk/platform-tools/adb.exe"
+ADB=(__import__("os").environ.get("ANDROID_HOME") or __import__("os").environ.get("ANDROID_SDK_ROOT") or __import__("os").path.expanduser("~/AppData/Local/Android/Sdk")) + r"/platform-tools/adb.exe"
 S=['-s','emulator-5592']
 PKG='com.gameloft.android.GAND.GloftD2SS'
 def sh(c): return subprocess.run([ADB]+S+['exec-out',c],capture_output=True).stdout

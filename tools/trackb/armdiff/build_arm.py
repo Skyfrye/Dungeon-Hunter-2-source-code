@@ -33,7 +33,7 @@ ROOT = Path(__file__).resolve().parents[3]
 DR = ROOT / "port" / "decomp-reconstruction"
 OUT_ROOT = Path(os.environ["DH2_ARMDIFF_OUT"]) if os.environ.get("DH2_ARMDIFF_OUT") else ROOT / "build" / "tb-arm32"
 
-DEFAULT_NDK = Path(r"<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk/ndk/29.0.14206865")
+DEFAULT_NDK = Path((os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT") or os.path.expanduser("~/AppData/Local/Android/Sdk")) + r"/ndk/29.0.14206865")
 TARGET = "armv7a-linux-androideabi21"
 META_VERSION = 6          # bump when the signature or layout extraction changes: cached metadata is then rebuilt
 

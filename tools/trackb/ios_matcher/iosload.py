@@ -1,5 +1,5 @@
 import struct,re
-P='<home>/AppData/Local/Temp/claude/C--Users-user-Documents-Projects-Dungeon-Hunter-2-Recomp-DH-sc/92aea28a-441d-487f-b829-7d37b39f798b/scratchpad/ios-x/Payload/dungeonhunter2iPad.app/dungeonhunter2iPad'
+P=__import__("os").path.expanduser("~") + '/AppData/Local/Temp/claude/C--Users-user-Documents-Projects-Dungeon-Hunter-2-Recomp-DH-sc/92aea28a-441d-487f-b829-7d37b39f798b/scratchpad/ios-x/Payload/dungeonhunter2iPad.app/dungeonhunter2iPad'
 class IOS:
     def __init__(s):
         s.b=open(P,'rb').read()

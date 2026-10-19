@@ -21,8 +21,8 @@ import argparse, hashlib, os, shutil, subprocess, sys, tempfile, urllib.request,
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 PROJ = os.path.join(ROOT, "port", "android-trackb", "app", "src", "main")
-DEFAULT_APK = r"<home>/Documents/Projects/Dungeon Hunter 2 Recomp/Dungeon-Hunter-2-HD-v1-0-2.apk"
-SDK = os.environ.get("ANDROID_HOME", r"<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk")
+DEFAULT_APK = os.path.expanduser("~") + r"/Documents/Projects/Dungeon Hunter 2 Recomp/Dungeon-Hunter-2-HD-v1-0-2.apk"
+SDK = (os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT") or os.path.expanduser("~/AppData/Local/Android/Sdk"))
 NDKB = SDK + "/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin"
 JADX_URL = "https://github.com/skylot/jadx/releases/download/v1.5.6/jadx-1.5.6.zip"
 JADX_SHA256 = "545ea2be9c242511bc145755cf4bda2485ade42966e096f8b4d3da2a230e8974"

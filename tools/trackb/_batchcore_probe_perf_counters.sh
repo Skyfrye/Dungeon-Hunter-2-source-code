@@ -7,7 +7,7 @@
 # it whenever it stops being useful. It builds build/tb-int/perf_counters_probe.exe; run that and expect
 # "perf_counters: ok". The absolute `root=` below is this worktree's path.
 set -uo pipefail
-root=<home>/Documents/Projects/Dungeon\ Hunter\ 2\ Recomp/DH_sc/.worktrees/track-b
+root=$HOME/Documents/Projects/Dungeon\ Hunter\ 2\ Recomp/DH_sc/.worktrees/track-b
 dr=$root/port/decomp-reconstruction
 build=$root/build/tb-int
 cxx=${CXX:-g++}

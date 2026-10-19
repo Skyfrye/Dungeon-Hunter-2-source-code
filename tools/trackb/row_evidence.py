@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from note_evidence import CALL, INSN, LDR_PC, STORE, split  # noqa: E402
 
-WORK = Path(r"<home>\Documents\Projects\Dungeon Hunter 2 Recomp\DH_sc\.worktrees\track-b")
+WORK = Path(__import__("os").path.expanduser("~") + r"\Documents\Projects\Dungeon Hunter 2 Recomp\DH_sc\.worktrees\track-b")
 SRC = WORK / "port" / "decomp-reconstruction"
 
 

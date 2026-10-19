@@ -5,7 +5,7 @@ import sys, struct, pickle
 from capstone import *
 from capstone.arm import *
 
-S = '<home>/AppData/Local/Temp/claude/C--Users-user-Documents-Projects-Dungeon-Hunter-2-Recomp-DH-sc/92aea28a-441d-487f-b829-7d37b39f798b/scratchpad/'
+S = __import__("os").path.expanduser("~") + '/AppData/Local/Temp/claude/C--Users-user-Documents-Projects-Dungeon-Hunter-2-Recomp-DH-sc/92aea28a-441d-487f-b829-7d37b39f798b/scratchpad/'
 PRINT = set(range(32, 127)) | {9, 10, 13}
 
 

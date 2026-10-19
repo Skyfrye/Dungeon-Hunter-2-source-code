@@ -1,9 +1,9 @@
 #!/bin/bash
 # extract the game data cache zip once (build/own-r/data, untracked) and push it to the app's external files dir
 export MSYS_NO_PATHCONV=1
-SDK=<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk
+SDK=${ANDROID_HOME:-$HOME/AppData/Local/Android/Sdk}
 ADB="$SDK/platform-tools/adb.exe"
-ZIP="${DH2_DATA_ZIP:-<home>/Documents/Projects/Dungeon Hunter 2 Recomp/Dungeon-Hunter-2-HD-v1-0-2-cache.zip}"
+ZIP="${DH2_DATA_ZIP:-$HOME/Documents/Projects/Dungeon Hunter 2 Recomp/Dungeon-Hunter-2-HD-v1-0-2-cache.zip}"
 D=build/own-r/data
 [ -d $D/com.gameloft.android.GAND.GloftD2SS ] || { mkdir -p $D; python -c "import zipfile,sys;zipfile.ZipFile(sys.argv[1]).extractall(sys.argv[2])" "$ZIP" $D; }
 "$ADB" shell mkdir -p /sdcard/Android/data/com.gameloft.android.GAND.GloftD2SS

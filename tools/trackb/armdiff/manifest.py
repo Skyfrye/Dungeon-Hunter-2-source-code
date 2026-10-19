@@ -27,7 +27,7 @@ import elf32  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[3]
 DR = ROOT / "port" / "decomp-reconstruction"
-ORIG_DEFAULT = Path(r"<home>/Documents/Projects/Dungeon Hunter 2 Recomp/lib/armeabi-v7a/ida/libDungeonHunter2.so")
+ORIG_DEFAULT = Path(__import__("os").path.expanduser("~") + r"/Documents/Projects/Dungeon Hunter 2 Recomp/lib/armeabi-v7a/ida/libDungeonHunter2.so")
 ORIG_SHA_PREFIX = "36498eb8"
 
 

@@ -38,9 +38,6 @@ foreach(_var ANDROID_SDK_ROOT ANDROID_HOME)
   endif()
 endforeach()
 
-# Last resort: the NDK this project was set up with on the development machine (NDK 29.0.14206865).
-list(APPEND _dh2_ndk_candidates
-  "<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk/ndk/29.0.14206865")
 
 set(DH2_ANDROID_NDK_DIR "")
 foreach(_c IN LISTS _dh2_ndk_candidates)

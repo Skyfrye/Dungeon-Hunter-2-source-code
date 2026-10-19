@@ -1,6 +1,6 @@
 #!/bin/bash
 # launch, skip intro movie, title -> menu -> Start -> single player -> loading screen -> gameplay
-G=<home>/Documents/Projects/Dungeon\ Hunter\ 2\ Recomp/DH_sc/.worktrees/track-b/build/own-gt3/g.sh
+G=$HOME/Documents/Projects/Dungeon\ Hunter\ 2\ Recomp/DH_sc/.worktrees/track-b/build/own-gt3/g.sh
 PKG=com.gameloft.android.GAND.GloftD2SS
 "$G" shell am force-stop $PKG; "$G" logcat -c
 "$G" shell monkey -p $PKG -c android.intent.category.LAUNCHER 1 >/dev/null 2>&1

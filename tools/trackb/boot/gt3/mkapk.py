@@ -6,7 +6,7 @@
 #   --section-start=.patchB=0x317ef8 --defsym=pthread_attr_init_plt=0x30e454 --defsym=pthread_attr_setdetachstate_plt=0x30e5f8
 #   --defsym=pthread_create_plt=0x30dfe0 patch.o -o patch.elf ; llvm-objcopy -O binary --only-section=.patchA patch.elf pa.bin (and .patchB -> pb.bin)
 import zipfile,struct,sys
-SRC=r"<home>/Downloads/Dungeon-Hunter-2-HD-v1-0-2.apk"
+SRC=__import__("os").path.expanduser("~") + r"/Downloads/Dungeon-Hunter-2-HD-v1-0-2.apk"
 zi=zipfile.ZipFile(SRC); man=bytearray(zi.read('AndroidManifest.xml'))
 off=8+2772+104+24
 while off<len(man):

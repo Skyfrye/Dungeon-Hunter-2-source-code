@@ -1,6 +1,6 @@
 #!/bin/bash
 # start the headless AVD dh2_r (created as in FIRST-BOOT.md) and wait for boot
-SDK=<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk
+SDK=${ANDROID_HOME:-$HOME/AppData/Local/Android/Sdk}
 export ANDROID_SDK_ROOT=$SDK ANDROID_HOME=$SDK
 LOG=${TEMP:-/tmp}/dh2_emulator.log
 "$SDK/emulator/emulator.exe" -avd dh2_r -no-window -no-audio -no-snapshot -no-boot-anim -gpu swiftshader_indirect -memory 3072 -wipe-data > "$LOG" 2>&1 &

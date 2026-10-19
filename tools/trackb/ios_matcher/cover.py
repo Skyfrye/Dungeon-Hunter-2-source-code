@@ -1,7 +1,7 @@
 exec(open('twin.py').read().split("if __name__")[0])
 import csv,glob,re
 L={}
-for p in glob.glob('<home>/Documents/Projects/Dungeon Hunter 2 Recomp/DH_sc/.worktrees/track-b/port/decomp-reconstruction/*/ledger.csv'):
+for p in glob.glob(__import__("os").path.expanduser("~") + '/Documents/Projects/Dungeon Hunter 2 Recomp/DH_sc/.worktrees/track-b/port/decomp-reconstruction/*/ledger.csv'):
     for r in csv.DictReader(open(p,encoding='utf-8')):
         try: L[int(r['elf_address'],16)]=r['status']
         except: pass

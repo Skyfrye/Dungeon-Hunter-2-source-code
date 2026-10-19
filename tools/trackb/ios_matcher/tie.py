@@ -1,7 +1,7 @@
 exec(open('twin.py').read().split("if __name__")[0])
 import csv,glob,re
 rows=[]
-for p in glob.glob('<home>/Documents/Projects/Dungeon Hunter 2 Recomp/DH_sc/.worktrees/track-b/port/decomp-reconstruction/*/ledger.csv'):
+for p in glob.glob(__import__("os").path.expanduser("~") + '/Documents/Projects/Dungeon Hunter 2 Recomp/DH_sc/.worktrees/track-b/port/decomp-reconstruction/*/ledger.csv'):
     for r in csv.DictReader(open(p,encoding='utf-8')):
         if r['status']=='partial': r['_p']=p.split('/')[-2]; rows.append(r)
 kw=re.compile(r'(unknown|unidentified|unresolved|not identified|unclear|not known|undetermined|constant at|table at|dword_|byte_|flt_|off_)',re.I)

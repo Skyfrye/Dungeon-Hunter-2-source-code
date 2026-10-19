@@ -21,7 +21,7 @@ import sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 RUNNER = os.path.join(ROOT, 'build', 'own-v2b', 'host-runner', 'dh2_win_window.exe')
-ANGLE = r'<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk/emulator/lib64/gles_angle'
+ANGLE = (os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT") or os.path.expanduser("~/AppData/Local/Android/Sdk")) + r'/emulator/lib64/gles_angle'
 DATA = os.path.join(ROOT, 'build', 'own-ui4', 'data', 'files')
 REF = '1920x1080'
 

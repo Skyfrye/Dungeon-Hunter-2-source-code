@@ -15,7 +15,7 @@ Categories
 import argparse, csv, os, re, subprocess, tempfile, zipfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
-SDK = os.environ.get("ANDROID_HOME", r"<home>/Documents/Codex/2026-10-09/find/work/tools/android-sdk")
+SDK = (os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT") or os.path.expanduser("~/AppData/Local/Android/Sdk"))
 DEXDUMP = SDK + "/build-tools/37.0.0/dexdump.exe"
 SRC = os.path.join(ROOT, "port", "android-trackb", "app", "src", "main", "java")
 OUT = os.path.join(ROOT, "reports", "decomp-reconstruction", "java-inventory.csv")
