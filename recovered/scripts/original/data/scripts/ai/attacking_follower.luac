@@ -1,0 +1,165 @@
+local g_can_attack = true;
+local g_master = nil;
+local g_target = nil;
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- When the character spots an ally
+function attacking_follower_OnFriendSpotted(friend)
+	if(not HasMaster()) then
+		--Trace("Follower "..GetName().." got a new master: "..friend:GetName());
+
+		SetMaster(friend);
+		g_master = friend;	-- Caching the master
+	end
+end
+AddToVFTable("OnFriendSpotted", "attacking_follower_OnFriendSpotted");
+
+
+-- When the character spots an enemy
+function attacking_follower_OnEnemySpotted(enemy)
+	if(g_can_attack and not HasTarget()) then
+		--Trace("Follower "..GetName().." got a new target: "..enemy:GetName());
+
+		SetTarget(enemy);
+		g_target = enemy;		-- Caching the target
+	end
+end
+AddToVFTable("OnEnemySpotted", "attacking_follower_OnEnemySpotted");
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- When the character's master gets out of sight
+function attacking_follower_OnMasterOutOfSight()
+	g_can_attack = false;
+	ClearTarget();
+	WarpBehind(g_master);
+end
+AddToVFTable("OnMasterOutOfSight", "attacking_follower_OnMasterOutOfSight");
+
+
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- When the character's master is out of attack range
+function attacking_follower_OnMasterOutOfRange()
+	if(GetState() ~= GetPyCst("AIStates", "Move")) then
+		--Trace(""..GetName().." has its master "..g_master:GetName().." out of range");
+		MoveTo(g_master);
+	end
+	g_can_attack = false;
+	ClearTarget();
+end
+AddToVFTable("OnMasterOutOfRange", "attacking_follower_OnMasterOutOfRange");
+
+
+-- When the character's master is in range of a ranged attack
+function attacking_follower_OnMasterInRangedRange()
+	if(not g_can_attack) then
+		--Trace(""..GetName().." can now attack again");
+		Stop();
+		g_can_attack = true;
+	end
+end
+AddToVFTable("OnMasterInRangedRange", "attacking_follower_OnMasterInRangedRange");
+
+
+-- When the character's master is between ranged attack and melee attack ranges
+function attacking_follower_OnMasterInCloseRange()
+	if(not g_can_attack) then
+		--Trace(""..GetName().." can now attack again");
+		Stop();
+		g_can_attack = true;
+	end
+end
+AddToVFTable("OnMasterInCloseRange", "attacking_follower_OnMasterInCloseRange");
+
+
+-- When the character's master is in range of a melee attack
+function attacking_follower_OnMasterInMeleeRange()
+	if(not g_can_attack) then
+		--Trace(""..GetName().." can now attack again");
+		Stop();
+		g_can_attack = true;
+	end
+end
+AddToVFTable("OnMasterInMeleeRange", "attacking_follower_OnMasterInMeleeRange");
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- When the character's target dies
+function attacking_follower_OnTargetDied()
+	ClearTarget();
+end
+AddToVFTable("OnTargetDied", "attacking_follower_OnTargetDied");
+
+
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- When the character's target gets out of sight
+function attacking_follower_OnTargetOutOfSight()
+	ClearTarget();
+end
+AddToVFTable("OnTargetOutOfSight", "attacking_follower_OnTargetOutOfSight");
+
+
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- When the character's target is out of attack range
+function attacking_follower_OnTargetOutOfRange()
+	MoveTo(g_target);
+end
+AddToVFTable("OnTargetOutOfRange", "attacking_follower_OnTargetOutOfRange");
+
+
+-- When the character's target is in range of a ranged attack
+function attacking_follower_OnTargetInRangedRange()
+	if(CanAttackFromRange()) then
+		Stop();
+		Attack(g_target);
+	elseif(GetState() ~= GetPyCst("AIStates", "Move")) then
+		MoveTo(g_target);
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "attacking_follower_OnTargetInRangedRange");
+
+
+-- When the character's target is too close to do a range attack
+function attacking_follower_OnTargetInCloseRange()
+	if(GetState() ~= GetPyCst("AIStates", "Move")) then
+		if(CanAttackFromRange()) then
+			Flee(g_target);
+		elseif(CanAttackInMelee()) then
+			MoveTo(g_target);
+		else
+			Trace(""..GetName().." can't attack... wtf!");
+		end
+	end
+end
+AddToVFTable("OnTargetInCloseRange", "attacking_follower_OnTargetInCloseRange");
+
+
+-- When the character's target is in range of a melee attack
+function attacking_follower_OnTargetInMeleeRange()
+	if(CanAttackInMelee()) then
+		Stop();
+		Attack(g_target);
+	elseif(GetState() ~= GetPyCst("AIStates", "Move")) then
+		Flee(g_target);
+	end
+end
+AddToVFTable("OnTargetInMeleeRange", "attacking_follower_OnTargetInMeleeRange");

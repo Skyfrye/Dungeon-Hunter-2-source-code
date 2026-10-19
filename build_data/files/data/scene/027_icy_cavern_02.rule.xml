@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/icy_cavern"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\027_icy_caverns_02.pyscript"
+	camera_znear="900"
+	camera_zfar="5000"
+	music="IcyCaveTwoAmbientMusic"
+	ambiant_music="sfx_ice_cavern_ambiance"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	light_set="data/3D/Light/icycave.lightset_xml"
+	fixed_light_set="data/3D/Light/icycave_es1_1.lightset_xml"
+	prog_vertex_buffer_size="396576"
+	prog_index_buffer_size="150144"
+	fix_vertex_buffer_size="1753740"
+	fix_index_buffer_size="214812"
+>
+
+	<list name="deadends" random="true">
+		<elem name="deadend_icycavern_w_00" gameplay="ic02_deadend_icycavern_w_00_01.mgp" visual="ic02_deadend_icycavern_w_00_01.mvp"/>
+	</list>
+
+	<list name="tmodules" random="true">
+		<elem name="t_icycavern_nse_00" gameplay="ic02_t_icycavern_nse_00_01.mgp" visual="ic02_t_icycavern_nse_00_01.mvp"/>
+		<elem name="t_icycavern_nsw_00" gameplay="ic02_t_icycavern_nsw_00_01.mgp" visual="ic02_t_icycavern_nsw_00_01.mvp"/>
+	</list>
+
+	<list name="objectives" random="true" replacement="false">
+		<elem name="monument_icycavern_we" gameplay="ic02_monument_icycavern_we_01.mgp" visual="ic02_monument_icycavern_we_01.mvp"/>
+	</list>
+
+	<list name="path" random="true">
+		<elem name="corner_icycavern_ne_00" gameplay="ic02_corner_icycavern_ne_00_01.mgp" visual="ic02_corner_icycavern_ne_00_01.mvp"/>
+		<elem name="corner_icycavern_nw_00" gameplay="ic02_corner_icycavern_nw_00_01.mgp" visual="ic02_corner_icycavern_nw_00_01.mvp"/>
+		<elem name="corner_icycavern_se_00" gameplay="ic02_corner_icycavern_se_00_01.mgp" visual="ic02_corner_icycavern_se_00_01.mvp"/>
+		<elem name="corner_icycavern_sw_00" gameplay="ic02_corner_icycavern_sw_00_01.mgp" visual="ic02_corner_icycavern_sw_00_01.mvp"/>
+		<elem name="straight_icycavern_ns_00" gameplay="ic02_straight_icycavern_ns_00_01.mgp" visual="ic02_straight_icycavern_ns_00_01.mvp"/>
+		<elem name="straight_icycavern_we_00" gameplay="ic02_straight_icycavern_we_00_01.mgp" visual="ic02_straight_icycavern_we_00_01.mvp"/>
+	</list>
+
+	<list name="start" random="true">
+		<elem name="entrance_icycavern_e_00" gameplay="ic02_entrance_icycavern_e_00_01.mgp" visual="ic02_entrance_icycavern_e_00_01.mvp"/>
+	</list>
+	
+	<list name="end" random="true">
+		<elem name="bossroom_icycavern_w_00" gameplay="ic02_bossroom_icycavern_w_00_01.mgp" visual="ic02_bossroom_icycavern_w_00_01.mvp"/>
+	</list>
+
+<RootRule name="#objectives[0]">
+		<path name="#path[1]">
+				<Forceblock name="#tmodules[0]">
+					<path name="#path" length="4" dontGoBack="true" exit="east">
+						<Forceblock name="#end"/>
+					</path>
+					<path name="#path[3]">
+					 <path name="#path[5]"/>
+					 </path>
+				</Forceblock>
+		</path>
+		<path name="#path[0]">
+		  <Forceblock name="#tmodules[1]">
+					<Forceblock name="#start"/>
+					<Forceblock name="#path[3]"/>
+			</Forceblock>
+		</path>
+</RootRule>
+</rules>

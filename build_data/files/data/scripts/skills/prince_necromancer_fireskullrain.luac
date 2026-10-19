@@ -1,0 +1,160 @@
+--[[	Meteor
+
+	Select an area where to rain fire...
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local MANA_BASE		= ToFixed(6);	-- Base mana cost
+local MANA_PLVL		= ToFixed(0);	-- Mana cost per player level
+local MANA_SLVL		= ToFixed(1);	-- Mana cost per skill level
+
+local RANGE				= 280.0;
+local ANGLE				= 360.0;
+local EXTRA_RANGE		= 100.0;	-- To speed things up, we target for the whole duration of the damage ticks,
+										-- with a range bigger than what we need. Then we do smaller searches each ticks.
+
+local TICK_DELAY		= 1000.0;
+local MAX_TICKS			= 2;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Necromancer_FireSkullRain");
+local SPOT_FX			= GetPyOID("AnimatedEffectTable", "target_circle_05_attack");
+local METEOR_FX		= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_necromancer_fireskullrain");
+local USE_COOLDOWN	= true;
+
+local CST_CAST			= GetPyCst("AIStates", "Cast");
+local STRCT_SNS_LVL	= GetPyStruct("CharacterProperties", "SnS_Level");
+
+local CST_CHR_FILTER	= GetPyCst("AITargetList_CharacterFilter", "Enemy");
+local CST_OBJ_FILTER	= GetPyCst("AITargetList_ObjectFilter", "NONE");
+local CST_SORTING		= GetPyCst("AITargetList_Sorting", "NoSort");
+
+-- Cached values
+local skill_level		= 0;
+local mana_cost;
+local timer_id;
+local cooldown;
+local tick_count		= 0;
+local traces			= false;
+	
+
+-- ----------------------------------------------------------------------------------------------
+-- FUNCTIONS
+-- ----------------------------------------------------------------------------------------------
+local function PlaySkullRainAnim(isEmptyList, firstTarget)
+	if(not isEmptyList) then
+		
+		if (firstTarget ~= nil) then
+			firstTarget:PlayFX(METEOR_FX);
+		else
+			if (traces) then Trace("firstTarget IS NIL!!!"); end
+		end
+	end
+	if (isEmptyList) then
+	
+		local x,y,z = GetPosition();
+		PlayFX(METEOR_FX, x+160, y+160, z);
+	end
+end
+
+local function DamageTick()
+	SetTargetListCharacterFilter(CST_CHR_FILTER);
+	SetTargetListObjectFilter(CST_OBJ_FILTER);
+	SetTargetListSorting(CST_SORTING);
+	TargetListSearch(RANGE, ANGLE);
+	
+	if (tick_count < 1) then
+		local isEmptyList = IsTargetListEmpty();
+		if (not isEmptyList) then
+			PlaySkullRainAnim(isEmptyList, GetTargetListTop());
+		end
+		
+		if (isEmptyList) then
+			PlaySkullRainAnim(isEmptyList);
+		end
+	end
+	
+	if (IsTargetListEmpty()) then
+		StopTimerCB(timer_id);
+		timer_id = nil;
+		tick_count = 0;
+		return;
+	end
+	
+	if(not IsTargetListEmpty()) then
+	
+		SetProp(STRCT_SNS_LVL, ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+		repeat
+			local target = GetTargetListTop();
+			PopTargetList();
+			SkillCombatRoll(target);
+		until(IsTargetListEmpty())
+		
+		if (tick_count >= MAX_TICKS) then
+			StopTimerCB(timer_id);
+			timer_id = nil;
+			tick_count = 0;
+			return;
+		end
+	end
+	
+	tick_count = tick_count + 1;
+end
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+	return cooldown;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	cooldown = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Cooldown"), true));
+	if (traces) then Trace("[Skills | Time Control] current value is:"..(cooldown/1000).."seconds of cooldown"); end
+	if(cooldown <= 0) then
+		cooldown = 4000;
+		if (traces) then Trace("[Skills | Time control] Cooldown value failed"); end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return (not HasSkillCooldown() and HasMana(mana_cost)), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	UseMana(mana_cost);
+	SetSkillCooldown(cooldown);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if (timer_id == nil) then
+		timer_id = StartSkillTimerCB(TICK_DELAY, true, DamageTick);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

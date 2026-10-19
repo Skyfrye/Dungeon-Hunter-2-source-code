@@ -1,0 +1,3518 @@
+{
+ "source": "Dungeon_Hunter_2_HD_1.0.0_ios_3.2.ipa, Payload/dungeonhunter2iPad.app/data/file000787.dat (data/sounds/sounds.zip)",
+ "missing_entries": 324,
+ "missing_files": 284,
+ "added_entries": 243,
+ "added_files": 239,
+ "files": [
+  {
+   "name": "sfx_assassin_demon_die.wav",
+   "uids": [
+    403
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_assassin_demon_die.wav",
+   "size": 76506,
+   "sha256": "96b17385738a7de33233dc262af6d8b369d2bc4a795e336a91dd34d20a316126",
+   "converted": null
+  },
+  {
+   "name": "sfx_assassin_demon_hurt_1.wav",
+   "uids": [
+    401
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_assassin_demon_hurt_1.wav",
+   "size": 72120,
+   "sha256": "99cb488da22472dc0a6235cd8382af78f9fd5bde29f42b227f7c528003247175",
+   "converted": null
+  },
+  {
+   "name": "sfx_assassin_demon_hurt_2.wav",
+   "uids": [
+    402
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_assassin_demon_hurt_2.wav",
+   "size": 52850,
+   "sha256": "b19816dd14307de547a4e4d1439178df91f8e7344245ada33257236298d6b9bb",
+   "converted": null
+  },
+  {
+   "name": "sfx_assassin_demon_spawn.wav",
+   "uids": [
+    398
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_assassin_demon_spawn.wav",
+   "size": 174850,
+   "sha256": "30055ebe14cfdd781f8290061c1699eeb05838dd4730d28047845e16c3ac6061",
+   "converted": null
+  },
+  {
+   "name": "sfx_assassin_demon_spin_attack.wav",
+   "uids": [
+    400
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_assassin_demon_spin_attack.wav",
+   "size": 151450,
+   "sha256": "29873f49a50070afab0a03bf3b5f42344510bfd5105a86e24c8e7d45166e8dc0",
+   "converted": null
+  },
+  {
+   "name": "sfx_assassin_demon_sword_attack.wav",
+   "uids": [
+    399
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_assassin_demon_sword_attack.wav",
+   "size": 86580,
+   "sha256": "ce9810abb44554abcd0d27d3c0433974f53dccf3557447557d549e28e2364fba",
+   "converted": null
+  },
+  {
+   "name": "sfx_assassin_die.wav",
+   "uids": [
+    329
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_assassin_die.wav",
+   "size": 51586,
+   "sha256": "5a198ac6030cc3ef237f5a36299d0a55a2be542f3f65247ba30683bedd42897e",
+   "converted": null
+  },
+  {
+   "name": "sfx_assassin_hurt.wav",
+   "uids": [
+    327
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_assassin_hurt.wav",
+   "size": 35544,
+   "sha256": "fe10de1ffe7830cd657afb362e1dd61a3fc3174e82df2e360ad6963257671325",
+   "converted": null
+  },
+  {
+   "name": "sfx_assassin_knife_melee.wav",
+   "uids": [
+    325
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_assassin_knife_melee.wav",
+   "size": 18988,
+   "sha256": "1e42f66fadee3d5b06f22282a9b874e04c344ee3b259f067ae3696d375457798",
+   "converted": null
+  },
+  {
+   "name": "sfx_assassin_knife_throw_2.wav",
+   "uids": [
+    324
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_assassin_knife_throw_2.wav",
+   "size": 63946,
+   "sha256": "d801b55bf1d3a4585f63899cea32e888fc78314b00756edcb2ad006ff11cf3db",
+   "converted": null
+  },
+  {
+   "name": "sfx_assassin_spawn.wav",
+   "uids": [
+    322
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_assassin_spawn.wav",
+   "size": 71450,
+   "sha256": "ec79e85c5b32fd6d22290b9ce784b484e0cd27a2a46a49ca268ce4357b3193d5",
+   "converted": null
+  },
+  {
+   "name": "sfx_balrog_attack.wav",
+   "uids": [
+    210
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_balrog_attack.wav",
+   "size": 65410,
+   "sha256": "2993f9703e8dcb8ee7f338eccdf3e0dd9487693d2769b61234163dba0d806d39",
+   "converted": null
+  },
+  {
+   "name": "sfx_balrog_attack_2.wav",
+   "uids": [
+    211
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_balrog_attack_2.wav",
+   "size": 175690,
+   "sha256": "d998714cc75e5a3adf1323d335d05ab49e7d7d1651a720e6bb1809f7ba6da724",
+   "converted": null
+  },
+  {
+   "name": "sfx_balrog_hurt.wav",
+   "uids": [
+    208
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_balrog_hurt.wav",
+   "size": 80604,
+   "sha256": "3a5074279fe27e0d062bc2cca9e4f8fd681d8dbb0bb0dcb3f093703e276662a5",
+   "converted": null
+  },
+  {
+   "name": "sfx_balrog_killed.wav",
+   "uids": [
+    209
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_balrog_killed.wav",
+   "size": 134132,
+   "sha256": "69915dc4014ff7418915d0b975f96f965ef09126a089b21edb33209b5a59c781",
+   "converted": null
+  },
+  {
+   "name": "sfx_balrog_out.wav",
+   "uids": [
+    206
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=2 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_balrog_out.wav",
+   "size": 603964,
+   "sha256": "b51d20770ec2bbe5fdd4d49e4cf8799c98fe26b390ef713676cc20af4a69134f",
+   "converted": null
+  },
+  {
+   "name": "sfx_balrog_shockwave_attack.wav",
+   "uids": [
+    212
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_balrog_shockwave_attack.wav",
+   "size": 275712,
+   "sha256": "f9f11dfcc0cb88972e2f40cfa476eddcc00fae68cd0f735c0589a35326e60fd7",
+   "converted": null
+  },
+  {
+   "name": "sfx_bandit_attack.wav",
+   "uids": [
+    219
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_bandit_attack.wav",
+   "size": 44316,
+   "sha256": "cc625641c9a87b22df259ce12db81e4e614cefda2e4e7e3b43012118243776c3",
+   "converted": null
+  },
+  {
+   "name": "sfx_bandit_hurt.wav",
+   "uids": [
+    217
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_bandit_hurt.wav",
+   "size": 53802,
+   "sha256": "d0e0e722c5093f26f6cf65c7c6c17a77eb2f606fa50d52208b024f35c38fafc8",
+   "converted": null
+  },
+  {
+   "name": "sfx_bandit_killed.wav",
+   "uids": [
+    218
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_bandit_killed.wav",
+   "size": 49852,
+   "sha256": "02b0426228d3e3494939ecc4ba1070705fa692fee2812201c088cb4101321de2",
+   "converted": null
+  },
+  {
+   "name": "sfx_barbarian_attack.wav",
+   "uids": [
+    265
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_barbarian_attack.wav",
+   "size": 48146,
+   "sha256": "fcad7b4d1b61a25ab1dbf905df2a185561c3bb9457eb9a6e9a4e039f9bcbf4b4",
+   "converted": null
+  },
+  {
+   "name": "sfx_barbarian_hurt.wav",
+   "uids": [
+    263
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_barbarian_hurt.wav",
+   "size": 36610,
+   "sha256": "29e39a02006865040af68eaed7ae154ed9a8f663c7cd18638c0ba76c47d68cde",
+   "converted": null
+  },
+  {
+   "name": "sfx_barbarian_killed.wav",
+   "uids": [
+    264
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_barbarian_killed.wav",
+   "size": 95056,
+   "sha256": "83cf7b429ce13abaec045957ecd06184e585cd556887b91e9f91ec461506d263",
+   "converted": null
+  },
+  {
+   "name": "sfx_barrel_breaking.wav",
+   "uids": [
+    163
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_barrel_breaking.wav",
+   "size": 81564,
+   "sha256": "35b1abe0b6075aafd18a3a74425c588add405362319e620c3f8f4da12ca7ad3e",
+   "converted": null
+  },
+  {
+   "name": "sfx_break_vase.wav",
+   "uids": [
+    166
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_break_vase.wav",
+   "size": 88148,
+   "sha256": "9b0ec650fc704401534eec29545bbdeebdb9cff0eea10d5775fe60ef7f50655e",
+   "converted": null
+  },
+  {
+   "name": "sfx_cave_troll_attack.wav",
+   "uids": [
+    250
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cave_troll_attack.wav",
+   "size": 95978,
+   "sha256": "285299d46dfe287cd0d93fff0702175c236a1cf4a1baab77e8312c5f0ba70e70",
+   "converted": null
+  },
+  {
+   "name": "sfx_cave_troll_death.wav",
+   "uids": [
+    249
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cave_troll_death.wav",
+   "size": 132486,
+   "sha256": "b550d4d5f5e175e058282300de058c87a1f603a7d83de12cf711aa3a80139f65",
+   "converted": null
+  },
+  {
+   "name": "sfx_cave_troll_hurt_1.wav",
+   "uids": [
+    247
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cave_troll_hurt_1.wav",
+   "size": 57666,
+   "sha256": "20acd97f4a39fdc2405aa5e75142cb5e79355a9ab8539a95d7c18fb630eecf33",
+   "converted": null
+  },
+  {
+   "name": "sfx_cave_troll_hurt_2.wav",
+   "uids": [
+    248
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cave_troll_hurt_2.wav",
+   "size": 27238,
+   "sha256": "22da080c500ee2492778e155aa5f08f1fe53a9e9d37098dd0e5cadd959029c9e",
+   "converted": null
+  },
+  {
+   "name": "sfx_cave_troll_mace_attack.wav",
+   "uids": [
+    251
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cave_troll_mace_attack.wav",
+   "size": 134672,
+   "sha256": "06d58a9d4780b008258e4ef925f5af99e2c04f46505405199deecd7d85d57cf2",
+   "converted": null
+  },
+  {
+   "name": "sfx_cave_troll_smash_ground.wav",
+   "uids": [
+    252
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cave_troll_smash_ground.wav",
+   "size": 146796,
+   "sha256": "d084e9c2e9add9c925c22668abac022921bb82fb26ddab263dc60b8bdcf8f6a5",
+   "converted": null
+  },
+  {
+   "name": "sfx_chest_opening.wav",
+   "uids": [
+    162
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_chest_opening.wav",
+   "size": 34980,
+   "sha256": "85e6a87b41da5cb6e04a706ff122bb67b2eeb62f8cfcccf714400ef0356e0927",
+   "converted": null
+  },
+  {
+   "name": "sfx_corrupted_root_attack_1.wav",
+   "uids": [
+    424
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_corrupted_root_attack_1.wav",
+   "size": 55578,
+   "sha256": "9f9a0221009a7cce6b09eef7902b969fd1f0579eda12b260b69f08bf9f96fc1e",
+   "converted": null
+  },
+  {
+   "name": "sfx_corrupted_root_attack_2.wav",
+   "uids": [
+    425
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_corrupted_root_attack_2.wav",
+   "size": 66616,
+   "sha256": "117d8b1ce9466d6f4d764817dd8389f840c371064a3562ef53e74b7d5f98e506",
+   "converted": null
+  },
+  {
+   "name": "sfx_corrupted_root_death_1.wav",
+   "uids": [
+    426
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_corrupted_root_death_1.wav",
+   "size": 214836,
+   "sha256": "62483dcf184430eba4943fe0965ca713ca25d62ed914dec48558a8d1d30096ab",
+   "converted": null
+  },
+  {
+   "name": "sfx_corrupted_root_death_2.wav",
+   "uids": [
+    427
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_corrupted_root_death_2.wav",
+   "size": 181784,
+   "sha256": "08dc5037bdd3c1fbca6d83a2410d4a52ddd3466a0b6b1853f7ca9b6042e189e2",
+   "converted": null
+  },
+  {
+   "name": "sfx_corrupted_root_hurt_1.wav",
+   "uids": [
+    428
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_corrupted_root_hurt_1.wav",
+   "size": 55308,
+   "sha256": "2e1c489d632ec0cd91d42a87b035e517c8dd4ae5391cadc534fa05d147991269",
+   "converted": null
+  },
+  {
+   "name": "sfx_corrupted_root_hurt_2.wav",
+   "uids": [
+    429
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_corrupted_root_hurt_2.wav",
+   "size": 47376,
+   "sha256": "359719422d047b33a05586541db2ff4709c6ed3b332dc2a96c85896da2519608",
+   "converted": null
+  },
+  {
+   "name": "sfx_corrupted_root_spawn.wav",
+   "uids": [
+    430
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_corrupted_root_spawn.wav",
+   "size": 135464,
+   "sha256": "844fae20bc30421089734525589521f80f6b59c73a9bffd3ab009af0f03c0d89",
+   "converted": null
+  },
+  {
+   "name": "sfx_crystal_breaking.wav",
+   "uids": [
+    165
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_crystal_breaking.wav",
+   "size": 78480,
+   "sha256": "ec3592325368c4daa6c9247b15a09b8929261d9306c6b18626a50778c64f2699",
+   "converted": null
+  },
+  {
+   "name": "sfx_crystal_hitting.wav",
+   "uids": [
+    164
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_crystal_hitting.wav",
+   "size": 31740,
+   "sha256": "3f1b81e6c97e83d424a0dedffaa5d774528557c6f24dc81eb6b6488eb015537a",
+   "converted": null
+  },
+  {
+   "name": "sfx_cultist_attack_1.wav",
+   "uids": [
+    359
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cultist_attack_1.wav",
+   "size": 93886,
+   "sha256": "c5e9287335e4cc13ffdfc5e2c6e62fbfbaede214feb9a27b62d88969eb71114f",
+   "converted": null
+  },
+  {
+   "name": "sfx_cultist_attack_2.wav",
+   "uids": [
+    360
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cultist_attack_2.wav",
+   "size": 105616,
+   "sha256": "e5e5b4ea9ad46e159a0408e6b9c3ae2603f675a89ac0d1324a19afcbc3afa7af",
+   "converted": null
+  },
+  {
+   "name": "sfx_cultist_die_1.wav",
+   "uids": [
+    361
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cultist_die_1.wav",
+   "size": 188538,
+   "sha256": "2645b06975077bee8526d7b1102d12155b5e5b5097f5f40460168bd8ff7ac04a",
+   "converted": null
+  },
+  {
+   "name": "sfx_cultist_die_2.wav",
+   "uids": [
+    362
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cultist_die_2.wav",
+   "size": 180798,
+   "sha256": "74b536bc41cffe6bd7d737d4d819c4b39af9de8917308484b2091f2fd13786a6",
+   "converted": null
+  },
+  {
+   "name": "sfx_cultist_hurt_1.wav",
+   "uids": [
+    357
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cultist_hurt_1.wav",
+   "size": 87922,
+   "sha256": "2b1595d9336c7e16524618ab8e8dac31ff590494764086ff3a5d4399f740849e",
+   "converted": null
+  },
+  {
+   "name": "sfx_cultist_hurt_2.wav",
+   "uids": [
+    358
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_cultist_hurt_2.wav",
+   "size": 100940,
+   "sha256": "640e842fc99c780ea271515b21b7557660a6bc80b855ebff9d974f51a3af7931",
+   "converted": null
+  },
+  {
+   "name": "sfx_dark_queen_attack.wav",
+   "uids": [
+    262,
+    380
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=2 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_dark_queen_attack.wav",
+   "size": 343608,
+   "sha256": "14e860023073ee2ba4974ddad15771983beb506f21e3c0116487b9e6a47aed31",
+   "converted": null
+  },
+  {
+   "name": "sfx_dark_queen_die.wav",
+   "uids": [
+    379
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_dark_queen_die.wav",
+   "size": 412884,
+   "sha256": "74b2aa0b4a10d07a549699d77e7bce1117ce5c9f28d4dd610d76fac071990f52",
+   "converted": null
+  },
+  {
+   "name": "sfx_dark_queen_hurt.wav",
+   "uids": [
+    260,
+    377
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_dark_queen_hurt.wav",
+   "size": 22398,
+   "sha256": "3fc2ec595e22342e9a9aafb9ba27393de9d96afab40bd539e33f811001fabb0d",
+   "converted": null
+  },
+  {
+   "name": "sfx_dark_queen_spawn.wav",
+   "uids": [
+    373
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=2 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_dark_queen_spawn.wav",
+   "size": 864944,
+   "sha256": "3d8cd8f3d10ba53bef087151f8c80c781f8e0c34869f80c4636084edf9bb0b5a",
+   "converted": null
+  },
+  {
+   "name": "sfx_dead_body_vanish.wav",
+   "uids": [
+    197
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_dead_body_vanish.wav",
+   "size": 117042,
+   "sha256": "20f4b652894a512f8e0af3d42b3760df32520432ef437ad5d9d2459723b56e06",
+   "converted": null
+  },
+  {
+   "name": "sfx_doom_knight_attack.wav",
+   "uids": [
+    259
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=2 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_doom_knight_attack.wav",
+   "size": 236240,
+   "sha256": "23612bb399b70c6ddd5045da5d37a87db7731c20830ade9c7c9c3c0ca299a998",
+   "converted": null
+  },
+  {
+   "name": "sfx_doom_knight_hurt.wav",
+   "uids": [
+    257
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=2 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_doom_knight_hurt.wav",
+   "size": 241588,
+   "sha256": "5c96b764441ff04c46ceed076257c2d47edc20de36185de980076a33e6e84df1",
+   "converted": null
+  },
+  {
+   "name": "sfx_doom_knight_idle_1.wav",
+   "uids": [
+    253
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=2 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_doom_knight_idle_1.wav",
+   "size": 444016,
+   "sha256": "c99d2e4d1c151745e736eaa0784606a51a04f288dadc738332a63025b1943f25",
+   "converted": null
+  },
+  {
+   "name": "sfx_doom_knight_idle_2.wav",
+   "uids": [
+    254
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=2 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_doom_knight_idle_2.wav",
+   "size": 338896,
+   "sha256": "cfb16dbef2837f1d9810732c93e68494800adf38184b6d9b9503529143d874ac",
+   "converted": null
+  },
+  {
+   "name": "sfx_doom_knight_idle_3.wav",
+   "uids": [
+    255
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=2 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_doom_knight_idle_3.wav",
+   "size": 414160,
+   "sha256": "deeeddd6aefdf268004c885bf8e443355ed3ec016df5562659cd2c9d0f1f04ea",
+   "converted": null
+  },
+  {
+   "name": "sfx_doom_knight_idle_4.wav",
+   "uids": [
+    256
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=2 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_doom_knight_idle_4.wav",
+   "size": 477480,
+   "sha256": "b6352bb3852c2c17c4ab28e5aaa22e7ffc3058c0c3c491501a73a4903f3c6365",
+   "converted": null
+  },
+  {
+   "name": "sfx_doom_knight_killed.wav",
+   "uids": [
+    258
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=2 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_doom_knight_killed.wav",
+   "size": 445112,
+   "sha256": "cf2223e9ddb4a0c170a1094fa5606e105943361d44753a9c9c12b51077199331",
+   "converted": null
+  },
+  {
+   "name": "sfx_door_opening.wav",
+   "uids": [
+    159
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_door_opening.wav",
+   "size": 63494,
+   "sha256": "73a425cd50793cc173575d27a9d31f258e22e22ec77db26fde71659cd6693c69",
+   "converted": null
+  },
+  {
+   "name": "sfx_dragon_attack.wav",
+   "uids": [
+    369
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_dragon_attack.wav",
+   "size": 146476,
+   "sha256": "363b68aea4e549b4ecb6203cfa64288156f0277ee380a97b8eeaea1d417b3505",
+   "converted": null
+  },
+  {
+   "name": "sfx_dragon_attack_wind.wav",
+   "uids": [
+    368
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_dragon_attack_wind.wav",
+   "size": 441048,
+   "sha256": "031b8e906866a04deed214faa20f796feacf7489511c47b0413a3c72bf2cd31a",
+   "converted": null
+  },
+  {
+   "name": "sfx_dragon_die.wav",
+   "uids": [
+    371
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_dragon_die.wav",
+   "size": 212354,
+   "sha256": "7f61de0e28033944bb50481935e22645658ea3dc330c52b8c3ebe8541abbed6f",
+   "converted": null
+  },
+  {
+   "name": "sfx_dragon_hurt.wav",
+   "uids": [
+    367
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_dragon_hurt.wav",
+   "size": 81282,
+   "sha256": "28f864f9b15ade493f3ab50ac25f9f471f7a96c1d6030df9c1c7d64cfe279689",
+   "converted": null
+  },
+  {
+   "name": "sfx_dragon_reaperstorm.wav",
+   "uids": [
+    370
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_dragon_reaperstorm.wav",
+   "size": 204592,
+   "sha256": "afb7099b2cf9bcd68ec30d02be09a22cda1e2e78c5df4cbd3b9bcec99e60caad",
+   "converted": null
+  },
+  {
+   "name": "sfx_dragon_spawn.wav",
+   "uids": [
+    372
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_dragon_spawn.wav",
+   "size": 237100,
+   "sha256": "8acc0c8e77ad6eab6c01da311596445d5c60d16c6953f5741c9daf5435827d6a",
+   "converted": null
+  },
+  {
+   "name": "sfx_drake_attack.wav",
+   "uids": [
+    238
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_drake_attack.wav",
+   "size": 68836,
+   "sha256": "480103fa4fc4a1458af633203d73e8d416a36aa796e725a7710854e22e97b04b",
+   "converted": null
+  },
+  {
+   "name": "sfx_drake_hurt.wav",
+   "uids": [
+    236
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_drake_hurt.wav",
+   "size": 41740,
+   "sha256": "c04a038d87bc62b3aa3d47c8790c06b672f4bef1fcaa0ccd38deb9c27dd7edcc",
+   "converted": null
+  },
+  {
+   "name": "sfx_drake_killed.wav",
+   "uids": [
+    237
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_drake_killed.wav",
+   "size": 84638,
+   "sha256": "00eaf21639949eaed2c7e914e79bb0d9c16ba72540f08280b5337744f917521a",
+   "converted": null
+  },
+  {
+   "name": "sfx_drake_spawn.wav",
+   "uids": [
+    235
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_drake_spawn.wav",
+   "size": 87420,
+   "sha256": "ac2cc06af9400be5dcd361063901b60c2b21437803dbe80d75012a3bdd9b59c6",
+   "converted": null
+  },
+  {
+   "name": "sfx_drop_armor.wav",
+   "uids": [
+    148
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_drop_armor.wav",
+   "size": 128154,
+   "sha256": "aabc30334c7a3ebf0cc2fea795616e3c52757f4a401a1dc3157740646d681ddb",
+   "converted": null
+  },
+  {
+   "name": "sfx_drop_gold.wav",
+   "uids": [
+    151
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_drop_gold.wav",
+   "size": 126536,
+   "sha256": "caf591f2896a9143a89a1526124e6fcb0ff9efb560b405da7a4ef8b44afa0241",
+   "converted": null
+  },
+  {
+   "name": "sfx_drop_potion.wav",
+   "uids": [
+    149
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_drop_potion.wav",
+   "size": 143664,
+   "sha256": "1eb92ece4a0c068f2be820301fa5fba2a7876a79d104328cac598127970fc279",
+   "converted": null
+  },
+  {
+   "name": "sfx_drop_weapon.wav",
+   "uids": [
+    150
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_drop_weapon.wav",
+   "size": 144972,
+   "sha256": "6e982f2e2b130d5578ecbbb8f8d7dc4115d78ea2f306ade7d57f9da507970ebd",
+   "converted": null
+  },
+  {
+   "name": "sfx_earth_troll_dash_attack.wav",
+   "uids": [
+    394
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_earth_troll_dash_attack.wav",
+   "size": 80294,
+   "sha256": "d98d847dd60f9e81019d52be6d877d69d801b7f136c6c13d3236961e273be4d7",
+   "converted": null
+  },
+  {
+   "name": "sfx_earth_troll_die.wav",
+   "uids": [
+    397
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_earth_troll_die.wav",
+   "size": 211672,
+   "sha256": "3eb11d78c86023353be83623f00c76b32fca69068f9f495206d8ed363595582d",
+   "converted": null
+  },
+  {
+   "name": "sfx_earth_troll_ground_attack.wav",
+   "uids": [
+    395
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_earth_troll_ground_attack.wav",
+   "size": 215084,
+   "sha256": "59ec71b0f285e1cf4d9bf105f8f384ed4a3b5b3da92f2dc318491639743cbe74",
+   "converted": null
+  },
+  {
+   "name": "sfx_earth_troll_hurt.wav",
+   "uids": [
+    396
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_earth_troll_hurt.wav",
+   "size": 88108,
+   "sha256": "665067156df6fbc44d0b9d474ad03e75a727e09b63afb2c59b10b150c61ccf3d",
+   "converted": null
+  },
+  {
+   "name": "sfx_earth_troll_spawn.wav",
+   "uids": [
+    393
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_earth_troll_spawn.wav",
+   "size": 258904,
+   "sha256": "b9b7fa4e565b8b658d5f4a5990701fc4f1865ee4402f67373b9ee8add7528904",
+   "converted": null
+  },
+  {
+   "name": "sfx_edward_attack.wav",
+   "uids": [
+    365
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_edward_attack.wav",
+   "size": 101060,
+   "sha256": "8733da0528e6aa55076fda41511eac3b6551bb3d04e7ebe580e10d4a23387e97",
+   "converted": null
+  },
+  {
+   "name": "sfx_edward_die.wav",
+   "uids": [
+    366
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_edward_die.wav",
+   "size": 107862,
+   "sha256": "d9fd32b16c4f06801d83e0b0b0ab8c085d9228c9c70e3aff11e7e273c350c94d",
+   "converted": null
+  },
+  {
+   "name": "sfx_edward_hurt_1.wav",
+   "uids": [
+    363
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_edward_hurt_1.wav",
+   "size": 49592,
+   "sha256": "6dc242181e685083bb20f1ae3d669aadcd702293f19205beb734a789528de60a",
+   "converted": null
+  },
+  {
+   "name": "sfx_edward_hurt_2.wav",
+   "uids": [
+    364
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_edward_hurt_2.wav",
+   "size": 37784,
+   "sha256": "475114e0acc7f27fa1849686831a3ac535edcf8d4629c469c093c7bfd501faab",
+   "converted": null
+  },
+  {
+   "name": "sfx_energy_orb_popup.wav",
+   "uids": [
+    175
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_energy_orb_popup.wav",
+   "size": 142966,
+   "sha256": "b87078a79d6bb4cd0306e79d3c7577d4b689ddc4726e2ae158f4267cbdab1890",
+   "converted": null
+  },
+  {
+   "name": "sfx_gargoyle_attack.wav",
+   "uids": [
+    246
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_gargoyle_attack.wav",
+   "size": 70388,
+   "sha256": "f8a87e41ed1d16a1aa04d190c0a136ec53271ed4b2de7b039ebbac997988f5a8",
+   "converted": null
+  },
+  {
+   "name": "sfx_gargoyle_hurt.wav",
+   "uids": [
+    244
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_gargoyle_hurt.wav",
+   "size": 46202,
+   "sha256": "159cad82acf97b1153dd2105fadb7b5437d3f74136bde89649d1b0f86f15d669",
+   "converted": null
+  },
+  {
+   "name": "sfx_gargoyle_killed.wav",
+   "uids": [
+    245
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_gargoyle_killed.wav",
+   "size": 200564,
+   "sha256": "6aa242ffe9ccc4305a7a5fd784e664ada1a49fe85e1e251a550dfe9551e75406",
+   "converted": null
+  },
+  {
+   "name": "sfx_gargoyle_spawn.wav",
+   "uids": [
+    243
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_gargoyle_spawn.wav",
+   "size": 160124,
+   "sha256": "2cba7b2ef6f89b3b3e50e9e74790a2bf526708a1b5c4b56f86616aeb81beff38",
+   "converted": null
+  },
+  {
+   "name": "sfx_giant_wood_door_open.wav",
+   "uids": [
+    158
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_giant_wood_door_open.wav",
+   "size": 317324,
+   "sha256": "fa09ef2dae1f9b1919f5b99ea26a28f30f80c997cfa419c54b0aa8bc46e651c0",
+   "converted": null
+  },
+  {
+   "name": "sfx_goblin_archer_die.wav",
+   "uids": [
+    266
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_goblin_archer_die.wav",
+   "size": 97226,
+   "sha256": "cdf9ca258d758fc44af50ef822f6aab2838f8c3849743d65579cd8397c51aa59",
+   "converted": null
+  },
+  {
+   "name": "sfx_goblin_archer_shoot_1.wav",
+   "uids": [
+    269
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_goblin_archer_shoot_1.wav",
+   "size": 43776,
+   "sha256": "6a006d2b76a9c3ec1ae3ea541258c2041d243645417087d28feac433809d36aa",
+   "converted": null
+  },
+  {
+   "name": "sfx_goblin_archer_shoot_2.wav",
+   "uids": [
+    270
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_goblin_archer_shoot_2.wav",
+   "size": 22410,
+   "sha256": "20db7212fed5f2a82788e3a651c4c5bcf6200fe605fe03f1ba5a54ecbb1d4900",
+   "converted": null
+  },
+  {
+   "name": "sfx_goblin_shaman_attack_1.wav",
+   "uids": [
+    271
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_goblin_shaman_attack_1.wav",
+   "size": 138470,
+   "sha256": "95b3e0b2d130dca9b5f1956ce7b66581c96c0a48372d04237d343b61194c2f4d",
+   "converted": null
+  },
+  {
+   "name": "sfx_goblin_shaman_attack_2.wav",
+   "uids": [
+    272
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_goblin_shaman_attack_2.wav",
+   "size": 128962,
+   "sha256": "e690484e30a8ff08235305bfaf0b8ef98d1823b2071d55194358fe67bc16a457",
+   "converted": null
+  },
+  {
+   "name": "sfx_goblin_shaman_die.wav",
+   "uids": [
+    267
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_goblin_shaman_die.wav",
+   "size": 107628,
+   "sha256": "719c6d1d67244d4aa83d140e5eef1deea51ae1b6ae5bdd90f725ada164e82c2c",
+   "converted": null
+  },
+  {
+   "name": "sfx_goblin_sword_attack_1.wav",
+   "uids": [
+    273
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_goblin_sword_attack_1.wav",
+   "size": 22140,
+   "sha256": "33d332206f20c7d9a4f4edfd956d2d01093cb27ff94f7adbd0ec16c6271dff6d",
+   "converted": null
+  },
+  {
+   "name": "sfx_goblin_sword_attack_2.wav",
+   "uids": [
+    274
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_goblin_sword_attack_2.wav",
+   "size": 27178,
+   "sha256": "98404af10fd22609f30ae092d593a34fb23ccd48ffd4da7b719db52b1b6de5f0",
+   "converted": null
+  },
+  {
+   "name": "sfx_goblin_sword_die.wav",
+   "uids": [
+    268
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_goblin_sword_die.wav",
+   "size": 98260,
+   "sha256": "0dc79977ac9e16484d5908a7503274b778be05b43e6f9e679a8dbb54eaa18da6",
+   "converted": null
+  },
+  {
+   "name": "sfx_green_ghost_attack_1.wav",
+   "uids": [
+    275
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_green_ghost_attack_1.wav",
+   "size": 160812,
+   "sha256": "3f8791b681f54ae4e4e6686ff9db3c4de176808ea46c3821d0f209b56f9343a0",
+   "converted": null
+  },
+  {
+   "name": "sfx_green_ghost_attack_2.wav",
+   "uids": [
+    276
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_green_ghost_attack_2.wav",
+   "size": 137438,
+   "sha256": "6bd407b920e099b22126a7d569433f976a95dad914a98e7724602588f1ed927f",
+   "converted": null
+  },
+  {
+   "name": "sfx_green_ghost_attack_3.wav",
+   "uids": [
+    277
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_green_ghost_attack_3.wav",
+   "size": 152068,
+   "sha256": "5688eed51a25d60261abe776222f9cef27564584e853f6c78fdd0352ddc8499b",
+   "converted": null
+  },
+  {
+   "name": "sfx_green_ghost_die.wav",
+   "uids": [
+    278
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_green_ghost_die.wav",
+   "size": 257136,
+   "sha256": "997404a624dcea9eb5c8ab5a5fef60bc3efc72388df9230a31844c22a8bd8a23",
+   "converted": null
+  },
+  {
+   "name": "sfx_green_ghost_hurt_1.wav",
+   "uids": [
+    279
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_green_ghost_hurt_1.wav",
+   "size": 181346,
+   "sha256": "ed7f76488bb5200317eaf43d9391a312b8deaa440fdbe0ed2b5eaab6273cbcae",
+   "converted": null
+  },
+  {
+   "name": "sfx_green_ghost_hurt_2.wav",
+   "uids": [
+    280
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_green_ghost_hurt_2.wav",
+   "size": 186322,
+   "sha256": "5ff91759a6d8e2a6e24c40e87a0fc55f0bd9768deaf37fd4f4f59c09fa9ad1b0",
+   "converted": null
+  },
+  {
+   "name": "sfx_green_ghost_spawn.wav",
+   "uids": [
+    281
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_green_ghost_spawn.wav",
+   "size": 160472,
+   "sha256": "19116e26b8160a0cbe859c98c825259b703a36be95401f5a79c8f29fa9acc717",
+   "converted": null
+  },
+  {
+   "name": "sfx_hound_attack_1.wav",
+   "uids": [
+    404
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_hound_attack_1.wav",
+   "size": 61040,
+   "sha256": "8de570b3a144c228a90da313fa330231126ea842abc02223689ceda297dc4572",
+   "converted": null
+  },
+  {
+   "name": "sfx_hound_attack_2.wav",
+   "uids": [
+    405
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_hound_attack_2.wav",
+   "size": 47100,
+   "sha256": "5f2380fbef6fdb8a3fbf7a064755d09527c5e9d67ae40b3e3ac5829b3719845b",
+   "converted": null
+  },
+  {
+   "name": "sfx_hound_hurt_1.wav",
+   "uids": [
+    406
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_hound_hurt_1.wav",
+   "size": 35316,
+   "sha256": "c75559f794dbcaf3805b626bdef07d444a2ac6af6624e95a6c6c7da8f388ff17",
+   "converted": null
+  },
+  {
+   "name": "sfx_hound_hurt_2.wav",
+   "uids": [
+    407
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_hound_hurt_2.wav",
+   "size": 29996,
+   "sha256": "ed14c137efda849abe6d2a9c8a2f0b2714b33fa8acce6e11e2e986acb33aa640",
+   "converted": null
+  },
+  {
+   "name": "sfx_hound_killed_1.wav",
+   "uids": [
+    408
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_hound_killed_1.wav",
+   "size": 39494,
+   "sha256": "21ea8116fe623801cbf0a52978c9f5cc72d4c75cecef4731659c23ade372c8fb",
+   "converted": null
+  },
+  {
+   "name": "sfx_hound_killed_2.wav",
+   "uids": [
+    409
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_hound_killed_2.wav",
+   "size": 42608,
+   "sha256": "1b812d71162af1714661a340f40993001dd22b4e79c8c4f851b2305e88d712db",
+   "converted": null
+  },
+  {
+   "name": "sfx_iron_gate.wav",
+   "uids": [
+    173
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_iron_gate.wav",
+   "size": 162928,
+   "sha256": "2caf3911ca402944cae0c1d54ab58e150ab7e1d3d88f947fd867ba6f5a7c7393",
+   "converted": null
+  },
+  {
+   "name": "sfx_king_of_hell_attack.wav",
+   "uids": [
+    381
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_king_of_hell_attack.wav",
+   "size": 96718,
+   "sha256": "9a6c66b8698213ea148336c208281072d4788c03b47be6c694a4ce163ab93506",
+   "converted": null
+  },
+  {
+   "name": "sfx_king_of_hell_die.wav",
+   "uids": [
+    387
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_king_of_hell_die.wav",
+   "size": 182356,
+   "sha256": "a2b64c255a4856a0680965436bc6eab83f7d079877f8c95c7a4b2f171cd1f6f1",
+   "converted": null
+  },
+  {
+   "name": "sfx_king_of_hell_hurt_1.wav",
+   "uids": [
+    385
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_king_of_hell_hurt_1.wav",
+   "size": 75044,
+   "sha256": "cfc1002f6fc3138f98f495059dc607638347c1318e510180a488d47ac090b3df",
+   "converted": null
+  },
+  {
+   "name": "sfx_king_of_hell_hurt_2.wav",
+   "uids": [
+    386
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_king_of_hell_hurt_2.wav",
+   "size": 66788,
+   "sha256": "5138bcbd7aa7fb4d4b7df85beb39dcd6edd1c6645c30872289f4444efede9d2f",
+   "converted": null
+  },
+  {
+   "name": "sfx_king_of_hell_laser_attack.wav",
+   "uids": [
+    384
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_king_of_hell_laser_attack.wav",
+   "size": 208432,
+   "sha256": "36d1bff43e2a27716936c831895bece03fdda1ebe5e10fbe5e5a1036689c7a17",
+   "converted": null
+  },
+  {
+   "name": "sfx_king_of_hell_magic_attack.wav",
+   "uids": [
+    382
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_king_of_hell_magic_attack.wav",
+   "size": 333942,
+   "sha256": "a60fda4a3b405e8ca1b83688a8b48a7840b7c4b5cbfc99e847e79f6e20abde5e",
+   "converted": null
+  },
+  {
+   "name": "sfx_king_of_hell_magic_attack_hit.wav",
+   "uids": [
+    383
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_king_of_hell_magic_attack_hit.wav",
+   "size": 274920,
+   "sha256": "7f480bfb7e038159e3b597df83912e9e4c2ac53b5fa420549da35479149caedd",
+   "converted": null
+  },
+  {
+   "name": "sfx_lever_activate.wav",
+   "uids": [
+    156
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_lever_activate.wav",
+   "size": 32044,
+   "sha256": "59fd2a0feafd27294bf861f33bd53712587b378543d2005a377d2e0adcd1a3a9",
+   "converted": null
+  },
+  {
+   "name": "sfx_lizardman_attack_1.wav",
+   "uids": [
+    282
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_lizardman_attack_1.wav",
+   "size": 35946,
+   "sha256": "b62adc2ebdd9cef84a058dfbed5e3147305e854e1acb187038e9797a47baba26",
+   "converted": null
+  },
+  {
+   "name": "sfx_lizardman_attack_2.wav",
+   "uids": [
+    283
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_lizardman_attack_2.wav",
+   "size": 35946,
+   "sha256": "5d748cc5bc2fd17e1d0c8f609222bc62cb2a5ac15cc2b14c4e400df5b4ce1048",
+   "converted": null
+  },
+  {
+   "name": "sfx_lizardman_die.wav",
+   "uids": [
+    285
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_lizardman_die.wav",
+   "size": 64780,
+   "sha256": "db36c0823a01ad3a185fe66ba6a57b7c779158377eefe0372aa8c457a2bb1047",
+   "converted": null
+  },
+  {
+   "name": "sfx_lizardman_hurt.wav",
+   "uids": [
+    284
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_lizardman_hurt.wav",
+   "size": 59896,
+   "sha256": "15f312d40fda03e3de4f9bb68e0be0e346eff38f4a645fec104ccc5ac46fac9a",
+   "converted": null
+  },
+  {
+   "name": "sfx_mad_priest_attack.wav",
+   "uids": [
+    242
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_mad_priest_attack.wav",
+   "size": 105840,
+   "sha256": "23f545300ead34c4b2fc0926356db028bef936bec35bc58ac41d8a5c61237ac3",
+   "converted": null
+  },
+  {
+   "name": "sfx_mad_priest_hurt.wav",
+   "uids": [
+    240
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_mad_priest_hurt.wav",
+   "size": 94706,
+   "sha256": "81e17a48386b3698d4a6309d2f6698227b22f50a69c575b93e801d994eed3471",
+   "converted": null
+  },
+  {
+   "name": "sfx_mad_priest_killed.wav",
+   "uids": [
+    241
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_mad_priest_killed.wav",
+   "size": 151642,
+   "sha256": "fc0728aadcca260853541ed4248ccaf0b1b44e801c415a183a57756df957790e",
+   "converted": null
+  },
+  {
+   "name": "sfx_mad_priest_spawn.wav",
+   "uids": [
+    239
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_mad_priest_spawn.wav",
+   "size": 146548,
+   "sha256": "260d60711b7785bcd02a87cff9aedb65d573b65e6b816fa6ec6217ccd6d5ef6c",
+   "converted": null
+  },
+  {
+   "name": "sfx_magic_portal_spawn.wav",
+   "uids": [
+    172
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_magic_portal_spawn.wav",
+   "size": 292446,
+   "sha256": "668712ad8baffb093314e10b55d7091b3b105d71b189c53876e1ac4de46a00fe",
+   "converted": null
+  },
+  {
+   "name": "sfx_magical_shrine_power_down.wav",
+   "uids": [
+    169
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_magical_shrine_power_down.wav",
+   "size": 294126,
+   "sha256": "c119e8c009b17aec7b0be84d1b797db6e9257ecff23480f7eb647e475e388070",
+   "converted": null
+  },
+  {
+   "name": "sfx_magical_wall_down.wav",
+   "uids": [
+    161
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_magical_wall_down.wav",
+   "size": 196202,
+   "sha256": "712eaf68d09843024ef067a814067ae37c7d6bbd8d426087f96bf5453dc154d0",
+   "converted": null
+  },
+  {
+   "name": "sfx_magical_wall_up.wav",
+   "uids": [
+    160
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_magical_wall_up.wav",
+   "size": 225616,
+   "sha256": "81fcde90bccddcbcf2181401cb9d3d324f83e958f2fc289fea8e59b3385d1493",
+   "converted": null
+  },
+  {
+   "name": "sfx_metal_gate_open.wav",
+   "uids": [
+    157
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_metal_gate_open.wav",
+   "size": 100844,
+   "sha256": "688932960b1ed3670f8c5398b22f82858689ba0af026bfd8ea4da1efcea39d48",
+   "converted": null
+  },
+  {
+   "name": "sfx_moth_attack_1.wav",
+   "uids": [
+    286
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_moth_attack_1.wav",
+   "size": 58374,
+   "sha256": "3373c543a388416d2b2fc72708ead0d5e2848e72ef9abe516b8832bb781e2777",
+   "converted": null
+  },
+  {
+   "name": "sfx_moth_attack_2.wav",
+   "uids": [
+    287
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_moth_attack_2.wav",
+   "size": 59386,
+   "sha256": "69debb5e386f742aea58406d73a9b15bfc613a06d8b7b55572d96eaecc10ff13",
+   "converted": null
+  },
+  {
+   "name": "sfx_moth_die.wav",
+   "uids": [
+    290
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_moth_die.wav",
+   "size": 121200,
+   "sha256": "b8e0c359de9db701d5d5eb0d613b72436b8d8f35687e3cf580667f1b80956f8f",
+   "converted": null
+  },
+  {
+   "name": "sfx_moth_hurt_1.wav",
+   "uids": [
+    288
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_moth_hurt_1.wav",
+   "size": 51514,
+   "sha256": "3b03211b295456465258474da446a79c32f7760f8e8b13c53dc2b885a0a4a74d",
+   "converted": null
+  },
+  {
+   "name": "sfx_moth_hurt_2.wav",
+   "uids": [
+    289
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_moth_hurt_2.wav",
+   "size": 52124,
+   "sha256": "4bab7a35bfda9bf622aef567201f176e9347dfa35fecf68a5c37f5765daab1ea",
+   "converted": null
+  },
+  {
+   "name": "sfx_mother_slime_attack.wav",
+   "uids": [
+    230
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_mother_slime_attack.wav",
+   "size": 55502,
+   "sha256": "e55d5ee225ad09b343a3cf08255883fa50e5207473da2eac5afde545e0692a53",
+   "converted": null
+  },
+  {
+   "name": "sfx_mother_slime_hurt.wav",
+   "uids": [
+    228
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_mother_slime_hurt.wav",
+   "size": 32932,
+   "sha256": "8c4ecc402822ef001322f779968064666a4de6ce6eaeb59f7a5f91d2bb210fe9",
+   "converted": null
+  },
+  {
+   "name": "sfx_mother_slime_killed.wav",
+   "uids": [
+    229
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_mother_slime_killed.wav",
+   "size": 357782,
+   "sha256": "0814b8721f9fba20f2452dff332dc08767a342f00c9d94f6540c38ad6daab008",
+   "converted": null
+  },
+  {
+   "name": "sfx_mother_slime_spawn.wav",
+   "uids": [
+    227
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_mother_slime_spawn.wav",
+   "size": 179784,
+   "sha256": "670cd5a74704dd3b2c09a957390725434efa19a22220e2df5f91ca9564193f07",
+   "converted": null
+  },
+  {
+   "name": "sfx_mother_statue_summon.wav",
+   "uids": [
+    305
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_mother_statue_summon.wav",
+   "size": 238884,
+   "sha256": "ebb03110a465a97555bfe62ffa818b6570ab33b214d333248ee5a4e42f2ea6ae",
+   "converted": null
+  },
+  {
+   "name": "sfx_npc_archer.wav",
+   "uids": [
+    196
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_npc_archer.wav",
+   "size": 53276,
+   "sha256": "4294685debf09ca47f3c5f6c43a344230ad799a306a2ae57518c7f714efad29d",
+   "converted": null
+  },
+  {
+   "name": "sfx_npc_out.wav",
+   "uids": [
+    195
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_npc_out.wav",
+   "size": 153556,
+   "sha256": "bf2ac9bf94ff5f13a03393c41ccd0d71b06b2918f92db54b9c194efcd5185ba8",
+   "converted": null
+  },
+  {
+   "name": "sfx_orb_deactivate.wav",
+   "uids": [
+    170
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_orb_deactivate.wav",
+   "size": 138722,
+   "sha256": "9314d48554d2bb93b175ee6d59d2374afb7d5c219e371ca327b3894de9b7524a",
+   "converted": null
+  },
+  {
+   "name": "sfx_pickup_armor.wav",
+   "uids": [
+    152
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_pickup_armor.wav",
+   "size": 49656,
+   "sha256": "7f00007f0ffdb86753ce9ddb3ab7cbdeea9099216ecedde841997a8b118423bd",
+   "converted": null
+  },
+  {
+   "name": "sfx_pickup_gold.wav",
+   "uids": [
+    155
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_pickup_gold.wav",
+   "size": 66936,
+   "sha256": "1f6b70c1ee674bf894e50a736327e946d79307aa1d3f3e7aff2a72707a60a7a4",
+   "converted": null
+  },
+  {
+   "name": "sfx_pickup_potion.wav",
+   "uids": [
+    153
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_pickup_potion.wav",
+   "size": 31052,
+   "sha256": "ccc78cc0bf242953b0ce92196ca629e28e90d53f28bf32a43b6e124abfa109e5",
+   "converted": null
+  },
+  {
+   "name": "sfx_pickup_weapon.wav",
+   "uids": [
+    154
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_pickup_weapon.wav",
+   "size": 47224,
+   "sha256": "17c989affdb377591aa2add558339055e9bbe698e1a5a3a41a6c4f3d5d96ac44",
+   "converted": null
+  },
+  {
+   "name": "sfx_plant_attack_1.wav",
+   "uids": [
+    292
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_plant_attack_1.wav",
+   "size": 99250,
+   "sha256": "101c9071940ad49ff945342dcb9e3e19ac0a93b60353ad2c2ac5222960427160",
+   "converted": null
+  },
+  {
+   "name": "sfx_plant_attack_2.wav",
+   "uids": [
+    293
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_plant_attack_2.wav",
+   "size": 92432,
+   "sha256": "20bcf8043e6540e6601056b6cf992e100d4ebf029d3185346c86befb9c27312c",
+   "converted": null
+  },
+  {
+   "name": "sfx_plant_die.wav",
+   "uids": [
+    296
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_plant_die.wav",
+   "size": 71056,
+   "sha256": "0f8c3003074e260fea7c0a93fd70954cea023d98d761214129cb77394e45260f",
+   "converted": null
+  },
+  {
+   "name": "sfx_plant_hurt_1.wav",
+   "uids": [
+    294
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_plant_hurt_1.wav",
+   "size": 38102,
+   "sha256": "98c3a6a4d16777096cee69c74b0d044c6d06ce745660c877f8520d72f16ba8ef",
+   "converted": null
+  },
+  {
+   "name": "sfx_plant_hurt_2.wav",
+   "uids": [
+    295
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_plant_hurt_2.wav",
+   "size": 43268,
+   "sha256": "501971dfdd087c55f9dfe0e9e37f5b868d56556e5416e231a444d288d36d4f4f",
+   "converted": null
+  },
+  {
+   "name": "sfx_plant_spawn.wav",
+   "uids": [
+    291
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_plant_spawn.wav",
+   "size": 94374,
+   "sha256": "e6162f5badb0b0c0ea648543932d22335646b9f63301e51dec08f8504238b8fc",
+   "converted": null
+  },
+  {
+   "name": "sfx_potion_drink.wav",
+   "uids": [
+    8,
+    147
+   ],
+   "format": "pcm",
+   "bank": "6",
+   "wave": "tag=1 ch=2 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_potion_drink.wav",
+   "size": 434136,
+   "sha256": "7dbb89909725ea0f7967b2997bc0328f914e701ca37b1824a555c5b8c5e769b4",
+   "converted": null
+  },
+  {
+   "name": "sfx_serpent_attack.wav",
+   "uids": [
+    314
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_serpent_attack.wav",
+   "size": 170712,
+   "sha256": "9ca644cfd5417e1853a2f4b9ed58ada1b8013f1d0c4f478488e7ff0024afcac9",
+   "converted": null
+  },
+  {
+   "name": "sfx_serpent_collapse.wav",
+   "uids": [
+    316,
+    317
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_serpent_collapse.wav",
+   "size": 198104,
+   "sha256": "175ef1d494d19c7c78470fa853883a8c9e7662bf394a11d680579ffbfb52389e",
+   "converted": null
+  },
+  {
+   "name": "sfx_serpent_hurt.wav",
+   "uids": [
+    315
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_serpent_hurt.wav",
+   "size": 83330,
+   "sha256": "6da3de0061733e1ed4b5648f773bbdefe47c0c3a55e2eb2b5ca9f34215dd291d",
+   "converted": null
+  },
+  {
+   "name": "sfx_serpent_intimidate_1.wav",
+   "uids": [
+    318
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_serpent_intimidate_1.wav",
+   "size": 107224,
+   "sha256": "b047be6e166a8f5ba0a36856388535ba08507f507c0344d337ce7bf635c87d62",
+   "converted": null
+  },
+  {
+   "name": "sfx_serpent_intimidate_2.wav",
+   "uids": [
+    319
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_serpent_intimidate_2.wav",
+   "size": 129752,
+   "sha256": "83e7ee84dd57ef604115423328a6a4af2c7dcd900526ee03b29b9ece2894dd0c",
+   "converted": null
+  },
+  {
+   "name": "sfx_serpent_intimidate_3.wav",
+   "uids": [
+    320
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_serpent_intimidate_3.wav",
+   "size": 181976,
+   "sha256": "a4ba7af068bf21105d0e82c155d555333276293a297e066e5a1c5d935bcd7a3a",
+   "converted": null
+  },
+  {
+   "name": "sfx_serpent_shockwave.wav",
+   "uids": [
+    313
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_serpent_shockwave.wav",
+   "size": 209106,
+   "sha256": "4481cda6c7318e477ecafb26baf38e19898b5bc2c9436c811634213b0f023e59",
+   "converted": null
+  },
+  {
+   "name": "sfx_serpent_spawn.wav",
+   "uids": [
+    310
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_serpent_spawn.wav",
+   "size": 162264,
+   "sha256": "3b64a957e277add933f1f2e007a0a9548569bdf9c53e3dc10977854e05f54247",
+   "converted": null
+  },
+  {
+   "name": "sfx_serpent_spit_water.wav",
+   "uids": [
+    311
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_serpent_spit_water.wav",
+   "size": 177028,
+   "sha256": "5468f53fe652c9d09522d94e4f83c2e57f339f5f998cef5ba08d06e2493953fd",
+   "converted": null
+  },
+  {
+   "name": "sfx_serpent_spit_water_explosion.wav",
+   "uids": [
+    312
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_serpent_spit_water_explosion.wav",
+   "size": 382508,
+   "sha256": "231bf843f1128a4def21cedd1bdf89f39974219736858edfb9716bdb79b38ccd",
+   "converted": null
+  },
+  {
+   "name": "sfx_serpent_submerge.wav",
+   "uids": [
+    321
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_serpent_submerge.wav",
+   "size": 206892,
+   "sha256": "adb8fd199c2d74a6876975d390283818a4343ddb8354d1cb9d410b743e620bc5",
+   "converted": null
+  },
+  {
+   "name": "sfx_skeleton_attack.wav",
+   "uids": [
+    205
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_skeleton_attack.wav",
+   "size": 43052,
+   "sha256": "dcff5013f12932e61bc427e4e01a81517981c4eabfe407ecf06cd209aa436579",
+   "converted": null
+  },
+  {
+   "name": "sfx_skeleton_hurt.wav",
+   "uids": [
+    203
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_skeleton_hurt.wav",
+   "size": 51850,
+   "sha256": "5ce430d4f9c7393249956820019ca26d6a08413a23b684900241f6ce4cc73389",
+   "converted": null
+  },
+  {
+   "name": "sfx_skeleton_killed.wav",
+   "uids": [
+    204
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_skeleton_killed.wav",
+   "size": 129210,
+   "sha256": "346a88a1e52037ffb32a247c0cf163fa4129fba22b1e19082a67ebd85d8fc914",
+   "converted": null
+  },
+  {
+   "name": "sfx_skeleton_spawn.wav",
+   "uids": [
+    202
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_skeleton_spawn.wav",
+   "size": 153560,
+   "sha256": "9549737875d9d23164e3152ff9d591835bb5151ba624cd399e64c5277ac7c30d",
+   "converted": null
+  },
+  {
+   "name": "sfx_skydevil_attack_1.wav",
+   "uids": [
+    410
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_skydevil_attack_1.wav",
+   "size": 70378,
+   "sha256": "afee3ea919cfbde5b3ee7791b2271575d09cec67d85a8a6c4236f8a973dfe690",
+   "converted": null
+  },
+  {
+   "name": "sfx_skydevil_attack_2.wav",
+   "uids": [
+    411
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_skydevil_attack_2.wav",
+   "size": 68868,
+   "sha256": "fcd8079eae64a5073c9171e259260c99077eb41ec7972301201e5ad05c6cc57b",
+   "converted": null
+  },
+  {
+   "name": "sfx_skydevil_attack_3.wav",
+   "uids": [
+    412
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_skydevil_attack_3.wav",
+   "size": 68868,
+   "sha256": "59ec6099ac6bea7ab7fb791a55113991f46b1bc953883533f770648566b36acf",
+   "converted": null
+  },
+  {
+   "name": "sfx_skydevil_death_1.wav",
+   "uids": [
+    413
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_skydevil_death_1.wav",
+   "size": 72326,
+   "sha256": "1769b42ed37e98fe25beb2e1e797a689a0ddbbbb416c0a1cf49f731f19289d5b",
+   "converted": null
+  },
+  {
+   "name": "sfx_skydevil_death_2.wav",
+   "uids": [
+    414
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_skydevil_death_2.wav",
+   "size": 143912,
+   "sha256": "3158fff59f8b6a41309f4286818ed4e51543b283a27c6e5d483fe9c1efae3b43",
+   "converted": null
+  },
+  {
+   "name": "sfx_skydevil_hurt_1.wav",
+   "uids": [
+    415
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_skydevil_hurt_1.wav",
+   "size": 55104,
+   "sha256": "fd29a0993a72cbf70829136c4e6cedf699804fd4eca23c91ec0c9da567723721",
+   "converted": null
+  },
+  {
+   "name": "sfx_skydevil_hurt_2.wav",
+   "uids": [
+    416
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_skydevil_hurt_2.wav",
+   "size": 48016,
+   "sha256": "4c507cc188771451a7d11ac7909f9a017f1b286c074f6df4c0c0a1b54424ee60",
+   "converted": null
+  },
+  {
+   "name": "sfx_slime_attack.wav",
+   "uids": [
+    226
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_slime_attack.wav",
+   "size": 44062,
+   "sha256": "01c9fbacbaaea200935388c30a42ced882ecdfa0868a72cdabedd76ff2dfa006",
+   "converted": null
+  },
+  {
+   "name": "sfx_slime_hurt.wav",
+   "uids": [
+    224
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_slime_hurt.wav",
+   "size": 32044,
+   "sha256": "3d5cabab6dffd2784ddf0e6673542b2aeebb136b61475ceebe54134f4edddf9b",
+   "converted": null
+  },
+  {
+   "name": "sfx_slime_killed.wav",
+   "uids": [
+    225
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_slime_killed.wav",
+   "size": 302416,
+   "sha256": "434e06013be11612b44cea4edab933fc3f32bb53dea0485f0cde390d540b3a78",
+   "converted": null
+  },
+  {
+   "name": "sfx_slime_spawn.wav",
+   "uids": [
+    223
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_slime_spawn.wav",
+   "size": 134696,
+   "sha256": "5e6cc1140dd7444599b3134464285db27c1668d834be74107336f91218650742",
+   "converted": null
+  },
+  {
+   "name": "sfx_soldier_attack.wav",
+   "uids": [
+    222
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_soldier_attack.wav",
+   "size": 46102,
+   "sha256": "ad9c9994c036cb692f5df031e6ad1fed442db98fef74c96bb47bc44222539534",
+   "converted": null
+  },
+  {
+   "name": "sfx_soldier_hurt.wav",
+   "uids": [
+    220
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_soldier_hurt.wav",
+   "size": 23782,
+   "sha256": "c6b1d215a90feaa004235f7b24841d3156ecb7d4a3de4928f4d1f89853bcd4c4",
+   "converted": null
+  },
+  {
+   "name": "sfx_soldier_killed.wav",
+   "uids": [
+    221
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_soldier_killed.wav",
+   "size": 63390,
+   "sha256": "157ec55c9b2555342121092247c552ce64689f69b8b847d8865463b3aa127fda",
+   "converted": null
+  },
+  {
+   "name": "sfx_soulcrusher_attack_1.wav",
+   "uids": [
+    417
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_soulcrusher_attack_1.wav",
+   "size": 69376,
+   "sha256": "ffa786f79c7cf093f6f15d7802de75c5f6ac6dfeec343f075795b42f2114c61b",
+   "converted": null
+  },
+  {
+   "name": "sfx_soulcrusher_attack_2.wav",
+   "uids": [
+    418
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_soulcrusher_attack_2.wav",
+   "size": 89796,
+   "sha256": "984d2c3f45b745a414453d46dea0575c0fc9192a3977dc5e9314093b120ae132",
+   "converted": null
+  },
+  {
+   "name": "sfx_soulcrusher_attack_3.wav",
+   "uids": [
+    419
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_soulcrusher_attack_3.wav",
+   "size": 76576,
+   "sha256": "c48fc609c24f6eb845dc35810cb047845e947113655bd6f7f47f6097ceab6552",
+   "converted": null
+  },
+  {
+   "name": "sfx_soulcrusher_death_1.wav",
+   "uids": [
+    420
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_soulcrusher_death_1.wav",
+   "size": 152514,
+   "sha256": "4ddd129ba1b25263efa5b4aacd41ec5d8696b71e8994861fee848826c5a5f48b",
+   "converted": null
+  },
+  {
+   "name": "sfx_soulcrusher_death_2.wav",
+   "uids": [
+    421
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_soulcrusher_death_2.wav",
+   "size": 120244,
+   "sha256": "aeabb00e39d52933d97947abce89f145dcabab77edca0bf22bdca08a894ae2c1",
+   "converted": null
+  },
+  {
+   "name": "sfx_soulcrusher_hurt_1.wav",
+   "uids": [
+    422
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_soulcrusher_hurt_1.wav",
+   "size": 81958,
+   "sha256": "f227ed3ff115d3b5499e55e372e6f0ec6d3d0abfc403bebf153f59b207323ac4",
+   "converted": null
+  },
+  {
+   "name": "sfx_soulcrusher_hurt_2.wav",
+   "uids": [
+    423
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_soulcrusher_hurt_2.wav",
+   "size": 77806,
+   "sha256": "9362689d2220240554392dfa8fec869a1576504566a4bb370f1dce73bab2df81",
+   "converted": null
+  },
+  {
+   "name": "sfx_specter_attack_energyball_cast.wav",
+   "uids": [
+    391
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_specter_attack_energyball_cast.wav",
+   "size": 134028,
+   "sha256": "3e9674ce8e8b30f61ef8090cd6219c0d807b9a50c705b5b3a439e7da1023f387",
+   "converted": null
+  },
+  {
+   "name": "sfx_specter_attack_light_cast.wav",
+   "uids": [
+    389
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_specter_attack_light_cast.wav",
+   "size": 178374,
+   "sha256": "451b43d5ea1841da4548130e6e051fbe4ba80f803b3e5c74c7b487d5164bcf7e",
+   "converted": null
+  },
+  {
+   "name": "sfx_specter_attack_light_explosion.wav",
+   "uids": [
+    388
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_specter_attack_light_explosion.wav",
+   "size": 156786,
+   "sha256": "6a2085c8598aeadda064fec553d0086342258caa9ee68fe225ce7115e40fbeb6",
+   "converted": null
+  },
+  {
+   "name": "sfx_specter_attack_rock.wav",
+   "uids": [
+    390
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_specter_attack_rock.wav",
+   "size": 123216,
+   "sha256": "ddb72ca6c6fbc131db356672db2f306d2a599396127b703b2b67d6ac06f660e8",
+   "converted": null
+  },
+  {
+   "name": "sfx_spider_attack.wav",
+   "uids": [
+    216
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_spider_attack.wav",
+   "size": 38498,
+   "sha256": "db85bcf1e6b8e4fcb9cd23bb489940b22ddd8d890f31bf8d179edf7f415447ee",
+   "converted": null
+  },
+  {
+   "name": "sfx_spider_hurt.wav",
+   "uids": [
+    214
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_spider_hurt.wav",
+   "size": 32044,
+   "sha256": "6b3913f877cfd99b49da63af84f6f190e57d55fa0f3b5369248e060df927e037",
+   "converted": null
+  },
+  {
+   "name": "sfx_spider_killed.wav",
+   "uids": [
+    215
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_spider_killed.wav",
+   "size": 147096,
+   "sha256": "825f488cbc22a149180f6639af1fc5fdbe093176b4baff5fdc5cea88418274ab",
+   "converted": null
+  },
+  {
+   "name": "sfx_spider_spawn.wav",
+   "uids": [
+    213
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_spider_spawn.wav",
+   "size": 212496,
+   "sha256": "f441a5b039f5258388895af3cf90a37f3060eabb820aa6992d73aefefa1557aa",
+   "converted": null
+  },
+  {
+   "name": "sfx_spikes_trap_activating.wav",
+   "uids": [
+    167
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_spikes_trap_activating.wav",
+   "size": 59056,
+   "sha256": "9b27dd195f281b4e49a869e2aa8e85b4c70afd136c926eba128022299261aa1f",
+   "converted": null
+  },
+  {
+   "name": "sfx_spikes_trap_disabling.wav",
+   "uids": [
+    168
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_spikes_trap_disabling.wav",
+   "size": 50626,
+   "sha256": "e46dc985be1fc9e86e91af5d33cf9d2c574c169434638cd0466519044e222419",
+   "converted": null
+  },
+  {
+   "name": "sfx_static_ball_attack.wav",
+   "uids": [
+    234
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_static_ball_attack.wav",
+   "size": 104290,
+   "sha256": "2f21b2cc4f122e63e958c1b93ffff15f4b39bffd47e804b4fce0a512f36810c0",
+   "converted": null
+  },
+  {
+   "name": "sfx_static_ball_hurt.wav",
+   "uids": [
+    232
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_static_ball_hurt.wav",
+   "size": 67260,
+   "sha256": "9a5c575f3ec063a836db9b1232d74640a5067051cb5975c582acafbf74c0514f",
+   "converted": null
+  },
+  {
+   "name": "sfx_static_ball_killed.wav",
+   "uids": [
+    233
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_static_ball_killed.wav",
+   "size": 146786,
+   "sha256": "e1f0184d33d335835739d7ea7aa0ead8e32112d41f0791aa09b7c999f8e4c9ef",
+   "converted": null
+  },
+  {
+   "name": "sfx_static_ball_spawn.wav",
+   "uids": [
+    231
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_static_ball_spawn.wav",
+   "size": 197502,
+   "sha256": "ff0a54cf1ba886b210283975cd2269baf5a673a9fec16663aa9266484db42580",
+   "converted": null
+  },
+  {
+   "name": "sfx_statue_cherub_attack.wav",
+   "uids": [
+    306
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_statue_cherub_attack.wav",
+   "size": 14194,
+   "sha256": "6794adcf971d0c0768e3ec6d0fe3cc61f1acbf4a6c2fb3882b2eda581d83e65a",
+   "converted": null
+  },
+  {
+   "name": "sfx_statue_cherub_die.wav",
+   "uids": [
+    307
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_statue_cherub_die.wav",
+   "size": 76980,
+   "sha256": "4e4bce2bda462511d56a24425afcf79c92027727e2ac03674fd37d99b9ddcfb1",
+   "converted": null
+  },
+  {
+   "name": "sfx_statue_cherub_hurt_1.wav",
+   "uids": [
+    308
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_statue_cherub_hurt_1.wav",
+   "size": 61382,
+   "sha256": "5767ca18a67702726613ca8dd0ef812e1a665022c89301096a9b7c767ee718af",
+   "converted": null
+  },
+  {
+   "name": "sfx_statue_cherub_hurt_2.wav",
+   "uids": [
+    309
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_statue_cherub_hurt_2.wav",
+   "size": 54354,
+   "sha256": "6684cbfe9627a106452e39736736dacaa90f0fcd39f374457cc2bfed3ec61e80",
+   "converted": null
+  },
+  {
+   "name": "sfx_teleport.wav",
+   "uids": [
+    174
+   ],
+   "format": "pcm",
+   "bank": "3",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_teleport.wav",
+   "size": 124294,
+   "sha256": "d5a2454fa41f5b67c3ffa5b73d2825acab2f8fe2172c5811ed97273af433d468",
+   "converted": null
+  },
+  {
+   "name": "sfx_unnamed_one_attack.wav",
+   "uids": [
+    347
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_unnamed_one_attack.wav",
+   "size": 128260,
+   "sha256": "ae3b905f4836957f931315bf2100ff4e6f089931f30ff0ea8840ef1a90063930",
+   "converted": null
+  },
+  {
+   "name": "sfx_unnamed_one_die.wav",
+   "uids": [
+    348
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_unnamed_one_die.wav",
+   "size": 139502,
+   "sha256": "52f54cf960937bcbf6b6fd5da3dd673de7a68a45944364e23cd2f6d9ed23dbe3",
+   "converted": null
+  },
+  {
+   "name": "sfx_witch_attack.wav",
+   "uids": [
+    331
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_witch_attack.wav",
+   "size": 166486,
+   "sha256": "bdc1c7b472668272b814e9fa370f762f27bab9fd2b76310c731af37f2bb92998",
+   "converted": null
+  },
+  {
+   "name": "sfx_witch_death.wav",
+   "uids": [
+    335
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_witch_death.wav",
+   "size": 57930,
+   "sha256": "bef5fdba15019efd0c6da8fb96d6ac5f8f76b2073a112eaa95e65f66b85d8b3d",
+   "converted": null
+  },
+  {
+   "name": "sfx_witch_hurt_1.wav",
+   "uids": [
+    333
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_witch_hurt_1.wav",
+   "size": 62172,
+   "sha256": "016679e11c6ada285772c19ab2b422ea69fd21c48191ca1f4eb5664522ab21d1",
+   "converted": null
+  },
+  {
+   "name": "sfx_witch_hurt_2.wav",
+   "uids": [
+    334
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_witch_hurt_2.wav",
+   "size": 58754,
+   "sha256": "f33356dea37ef15e8914ae983b5a4c1b9bd7e1ec535e8116021ff112cc91c407",
+   "converted": null
+  },
+  {
+   "name": "sfx_witch_magic_explosion.wav",
+   "uids": [
+    332
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_witch_magic_explosion.wav",
+   "size": 151630,
+   "sha256": "462182faca80aaa7b45fd05400ae16463ec58c582474b1459c6d20920e1e91db",
+   "converted": null
+  },
+  {
+   "name": "sfx_witch_spawn.wav",
+   "uids": [
+    330
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_witch_spawn.wav",
+   "size": 250470,
+   "sha256": "8d30027f627e987702f98c5881e3a2cf137158679ea29dfcdd85ed175a39ff73",
+   "converted": null
+  },
+  {
+   "name": "sfx_worm_attack_1.wav",
+   "uids": [
+    344
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_worm_attack_1.wav",
+   "size": 106862,
+   "sha256": "e70e51c0dc0b6b20626dfe520f40caadb64aedf1dd9f4b3bd3c46c4a8d20552e",
+   "converted": null
+  },
+  {
+   "name": "sfx_worm_attack_2.wav",
+   "uids": [
+    345
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_worm_attack_2.wav",
+   "size": 107388,
+   "sha256": "9412a1d33f341c9438e228e2bd24c4e3bb06d8133114c8a02d70fc28ac0747f5",
+   "converted": null
+  },
+  {
+   "name": "sfx_worm_die.wav",
+   "uids": [
+    346
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_worm_die.wav",
+   "size": 198234,
+   "sha256": "7b94cc0ad58b1e378001eb525cb61cd2202dd97861f9468b500e47f8a0e3d307",
+   "converted": null
+  },
+  {
+   "name": "sfx_worm_hurt_1.wav",
+   "uids": [
+    342
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_worm_hurt_1.wav",
+   "size": 116074,
+   "sha256": "13737fc182fd263b977a518f5efa8c95dfcbd9d013ad8d04e8c24eac33e97d65",
+   "converted": null
+  },
+  {
+   "name": "sfx_worm_hurt_2.wav",
+   "uids": [
+    343
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_worm_hurt_2.wav",
+   "size": 124864,
+   "sha256": "35ea5e25bab572735f1d8b09a890855619b3aff284afda30d52d6534dd121d96",
+   "converted": null
+  },
+  {
+   "name": "sfx_worm_spawn.wav",
+   "uids": [
+    341
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_worm_spawn.wav",
+   "size": 166662,
+   "sha256": "a3989ae712e91e6cfb4a1950bfcd1ef111a925a5c30b5701dd9facc13f2b089d",
+   "converted": null
+  },
+  {
+   "name": "sfx_yeti_attack_1.wav",
+   "uids": [
+    297
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_yeti_attack_1.wav",
+   "size": 48422,
+   "sha256": "d528ea839fd8d577b122e0eb917e6f5d2f70430d18a5aacb412e2d1b92809faf",
+   "converted": null
+  },
+  {
+   "name": "sfx_yeti_attack_2.wav",
+   "uids": [
+    298
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_yeti_attack_2.wav",
+   "size": 84174,
+   "sha256": "890504d9880eba10b5f2f936ec10326f24d38874cb66373ef7a5c8e5ff59460a",
+   "converted": null
+  },
+  {
+   "name": "sfx_yeti_die.wav",
+   "uids": [
+    299
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_yeti_die.wav",
+   "size": 93088,
+   "sha256": "3f256f1182401eb7ba56ca61b9df5aa3928ce5686ce8b3cd96d1a4fbf57d68dc",
+   "converted": null
+  },
+  {
+   "name": "sfx_yeti_hurt_1.wav",
+   "uids": [
+    300
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_yeti_hurt_1.wav",
+   "size": 58756,
+   "sha256": "9aefd96a9065199bed94ef815280482394d6b3efc96f1f81fb76a3cfd42ede4c",
+   "converted": null
+  },
+  {
+   "name": "sfx_yeti_hurt_2.wav",
+   "uids": [
+    301
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_yeti_hurt_2.wav",
+   "size": 58570,
+   "sha256": "b6ee44376c5bb91f09d1bebdb2beffcebe77ceb4c7cc55633f17b218e857b124",
+   "converted": null
+  },
+  {
+   "name": "sfx_zombie_attack.wav",
+   "uids": [
+    201
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_zombie_attack.wav",
+   "size": 52992,
+   "sha256": "2d0ae08d45532577cf0fff7437629a5fdf590f4261df0627c9870620d7064fce",
+   "converted": null
+  },
+  {
+   "name": "sfx_zombie_hurt.wav",
+   "uids": [
+    199
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_zombie_hurt.wav",
+   "size": 56592,
+   "sha256": "4d4101400e60d9c3dcd0eea91d1c3a1153dcfd11811027aa245a1697934258bf",
+   "converted": null
+  },
+  {
+   "name": "sfx_zombie_killed.wav",
+   "uids": [
+    200
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_zombie_killed.wav",
+   "size": 134906,
+   "sha256": "190312d7e4ef7c83bd39ab4f3e192b5bba58a5414503febc384706aca774f7b2",
+   "converted": null
+  },
+  {
+   "name": "sfx_zombie_spawn.wav",
+   "uids": [
+    198
+   ],
+   "format": "pcm",
+   "bank": "5",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/sfx_zombie_spawn.wav",
+   "size": 295686,
+   "sha256": "3bef09e91e9a8acad7b3aeb2b0490ec2f03bc2b21d5c685a262e501d4203d652",
+   "converted": null
+  },
+  {
+   "name": "vfx_mp_attack.wav",
+   "uids": [
+    462
+   ],
+   "format": "adpcm",
+   "bank": "2",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/vfx_mp_attack.wav",
+   "size": 92832,
+   "sha256": "cb054f232c233ffe9d4f4651edabb540bf972c09e0f2b91e2e4b66b897bd1913",
+   "converted": null
+  },
+  {
+   "name": "vfx_mp_follow.wav",
+   "uids": [
+    460
+   ],
+   "format": "adpcm",
+   "bank": "2",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/vfx_mp_follow.wav",
+   "size": 99240,
+   "sha256": "c4a3517d7244a3db5c80ced40632409ade9e2b3bafdc71f21d5a1b5191dd8e6a",
+   "converted": null
+  },
+  {
+   "name": "vfx_mp_help.wav",
+   "uids": [
+    461
+   ],
+   "format": "adpcm",
+   "bank": "2",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/vfx_mp_help.wav",
+   "size": 102522,
+   "sha256": "eefea449ed2c7b886b5b93477a2c8a1eac28ce3078246f7bf7b91753e2d3aea8",
+   "converted": null
+  },
+  {
+   "name": "vfx_mp_retreat.wav",
+   "uids": [
+    463
+   ],
+   "format": "adpcm",
+   "bank": "2",
+   "wave": "tag=1 ch=1 rate=32000 bits=16",
+   "source": "Payload/dungeonhunter2iPad.app/data/file000787.dat!_build_iphone/data/sounds/vfx_mp_retreat.wav",
+   "size": 101470,
+   "sha256": "7087a9e47285baba70fb7c9e7a280339860c1592b9dc12fb919c5f68e337dff6",
+   "converted": null
+  }
+ ],
+ "absent_in_ios": [
+  {
+   "name": "m_boss_hell_king.wav",
+   "uids": [
+    531,
+    532
+   ],
+   "format": "adpcm",
+   "bank": "1"
+  },
+  {
+   "name": "m_combat_big_enemy.wav",
+   "uids": [
+    530
+   ],
+   "format": "adpcm",
+   "bank": "1"
+  },
+  {
+   "name": "m_cutscene_01.wav",
+   "uids": [
+    533
+   ],
+   "format": "adpcm",
+   "bank": "1"
+  },
+  {
+   "name": "m_level_cathedral.vxn",
+   "uids": [
+    555,
+    556,
+    557,
+    558,
+    559
+   ],
+   "format": "vxn",
+   "bank": "1"
+  },
+  {
+   "name": "m_level_darkwood.vxn",
+   "uids": [
+    543,
+    544,
+    545,
+    546,
+    547,
+    548
+   ],
+   "format": "vxn",
+   "bank": "1"
+  },
+  {
+   "name": "m_level_gothicus.vxn",
+   "uids": [
+    536,
+    537,
+    549,
+    550,
+    551,
+    552,
+    553,
+    554
+   ],
+   "format": "vxn",
+   "bank": "1"
+  },
+  {
+   "name": "m_level_hell.vxn",
+   "uids": [
+    538,
+    539,
+    574,
+    575,
+    576
+   ],
+   "format": "vxn",
+   "bank": "1"
+  },
+  {
+   "name": "m_level_icy_cliff.vxn",
+   "uids": [
+    566,
+    567,
+    568,
+    569,
+    570,
+    571,
+    572,
+    573
+   ],
+   "format": "vxn",
+   "bank": "1"
+  },
+  {
+   "name": "m_level_red_desert.vxn",
+   "uids": [
+    560,
+    561,
+    562,
+    563,
+    564,
+    565
+   ],
+   "format": "vxn",
+   "bank": "1"
+  },
+  {
+   "name": "m_level_swamp.vxn",
+   "uids": [
+    540,
+    541,
+    542
+   ],
+   "format": "vxn",
+   "bank": "1"
+  },
+  {
+   "name": "m_title_intro.wav",
+   "uids": [
+    534
+   ],
+   "format": "adpcm",
+   "bank": "1"
+  },
+  {
+   "name": "m_title_loop.wav",
+   "uids": [
+    535
+   ],
+   "format": "adpcm",
+   "bank": "1"
+  },
+  {
+   "name": "sfx_assassin_bomb_throw.wav",
+   "uids": [
+    326
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_assassin_knife_throw1.wav",
+   "uids": [
+    323
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_assassin_laugh.wav",
+   "uids": [
+    328
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_balrog_idle.wav",
+   "uids": [
+    207
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_checkpoint_activated.wav",
+   "uids": [
+    14
+   ],
+   "format": "pcm",
+   "bank": "6"
+  },
+  {
+   "name": "sfx_critical_hit.wav",
+   "uids": [
+    37
+   ],
+   "format": "pcm",
+   "bank": "2"
+  },
+  {
+   "name": "sfx_cultitst_group_chant_loop",
+   "uids": [
+    190
+   ],
+   "format": "pcm",
+   "bank": "4"
+  },
+  {
+   "name": "sfx_dark_queen_critical_hurt.wav",
+   "uids": [
+    378
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_dark_queen_intimidate_1.wav",
+   "uids": [
+    374
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_dark_queen_intimidate_2.wav",
+   "uids": [
+    375
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_dark_queen_intimidate_3.wav",
+   "uids": [
+    376
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_dark_queen_killed.wav",
+   "uids": [
+    261
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_demon_attack.wav",
+   "uids": [
+    351,
+    353
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_demon_die.wav",
+   "uids": [
+    355
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_demon_howl.wav",
+   "uids": [
+    356
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_demon_hurt.wav",
+   "uids": [
+    350
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_demon_rain_attack.wav",
+   "uids": [
+    352
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_demon_spawn.wav",
+   "uids": [
+    349
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_demon_steam_burst_attack",
+   "uids": [
+    354
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_faerie_ice.wav",
+   "uids": [
+    92
+   ],
+   "format": "pcm",
+   "bank": "2"
+  },
+  {
+   "name": "sfx_impact_metal_metal_2.wav",
+   "uids": [
+    42
+   ],
+   "format": "pcm",
+   "bank": "2"
+  },
+  {
+   "name": "sfx_impactl_metal_1_22.wav",
+   "uids": [
+    41
+   ],
+   "format": "pcm",
+   "bank": "2"
+  },
+  {
+   "name": "sfx_skill_mage_thunder_braid_add_2,wav",
+   "uids": [
+    118
+   ],
+   "format": "pcm",
+   "bank": "7"
+  },
+  {
+   "name": "sfx_specter_attack_energyball_explosion",
+   "uids": [
+    392
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_statue_attack.wav",
+   "uids": [
+    302
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_statue_frost_attack.wav",
+   "uids": [
+    304
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_statue_heat_attack.wav",
+   "uids": [
+    303
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_trap_armed.wav",
+   "uids": [
+    171
+   ],
+   "format": "pcm",
+   "bank": "3"
+  },
+  {
+   "name": "sfx_wolf_attack.wav",
+   "uids": [
+    338
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_wolf_die.wav",
+   "uids": [
+    339
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_wolf_howl.wav",
+   "uids": [
+    340
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_wolf_hurt.wav",
+   "uids": [
+    337
+   ],
+   "format": "pcm",
+   "bank": "5"
+  },
+  {
+   "name": "sfx_wolf_spawn.wav",
+   "uids": [
+    336
+   ],
+   "format": "pcm",
+   "bank": "5"
+  }
+ ]
+}

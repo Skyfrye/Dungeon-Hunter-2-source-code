@@ -1,0 +1,101 @@
+elf_address,symbol,status,source_file,notes
+0x541e18,_ZN6glitch3gui11CGUIListBox20recalculateScrollPosEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x541ef4,_ZN6glitch3gui11CGUIListBox20recalculateItemWidthEi,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,sprite width check and max width update only; per-item rect read via bank vtable not ported
+0x542050,_ZN6glitch3gui11CGUIListBox20setItemOverrideColorEjNS0_18EGUI_LISTBOX_COLORERKNS_5video6SColorE,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x542258,_ZNK6glitch3gui11CGUIListBox19getItemDefaultColorENS0_18EGUI_LISTBOX_COLORE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,original reads one skin sub-object for all four colour cases; index forwarded to IGUISkin getColor
+0x542400,_ZN6glitch3gui11CGUIListBox9selectNewEib,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x542518,_ZN6glitch3gui11CGUIListBox11setSelectedEi,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x542568,_ZN6glitch3gui11IGUIListBoxC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,base constructor: vtable writes and IGUIElement base layout not mapped; not rebuilt
+0x542840,_ZNK6glitch3gui11IGUIElement14getNextElementEibbRPS1_S3_b.clone.4,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x542994,_ZN6glitch3gui11IGUIElement11setTabOrderEi.clone.2,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x542a40,_ZN6glitch3gui11CGUIListBoxC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEbbb,skipped,,constructor: vtable fixups and scroll bar record creation not rebuilt
+0x542c64,_ZN6glitch3gui11CGUIListBoxC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEbbb,skipped,,constructor overload: vtable fixups and scroll bar record creation not rebuilt
+0x542f54,_ZN6glitch3gui11CGUIListBox7onEventERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,mouse category branches forward to parent; type-ahead search over item text not ported; GUI sub-events and arrow page home end keys ported
+0x5439b4,_ZN6glitch3gui11CGUIListBox4drawEv,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,row and icon drawing through skin not ported; child loop only
+0x544280,_ZN6glitch3gui11CGUIListBox5clearEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x544390,_ZN6glitch3gui11CGUIListBox10removeItemEj,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x54449c,_ZN6glitch3gui11CGUIListBoxD1Ev,skipped,,destructor body: vtable and member teardown only; compiler generated
+0x544578,_ZN6glitch3gui11CGUIListBoxD0Ev,skipped,,D0 deleting destructor thunk
+0x544594,_ZN6glitch3gui11CGUIListBoxD2Ev,skipped,,destructor body for secondary base subobject; compiler teardown
+0x544660,_ZN6glitch3gui11IGUIListBoxD0Ev,skipped,,destructor body: vtable writes and base teardown; compiler generated
+0x5446dc,_ZN6glitch3gui11CGUIListBox9swapItemsEjj,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,swap uses std::swap of item records; original field copy order not verified
+0x544828,_ZN6glitch3gui11CGUIListBox7setItemEjPKwi,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x5448ac,_ZNK6glitch3gui11CGUIListBox22getSerializationLabelsENS0_18EGUI_LISTBOX_COLORERSbIcSt11char_traitsIcENS_4core10SAllocatorIcLNS_6memory13E_MEMORY_HINTE0EEEESB_,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x545304,_ZN6glitch3gui11CGUIListBox10insertItemEjPKwi,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x545480,_ZN6glitch3gui11CGUIListBox7addItemEPKwi,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x5455b8,_ZN6glitch3gui8CGUIMenu15recalculateSizeEv,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,item height (font height plus 5) and stacking ported; per-item text measure and submenu padding not ported
+0x54585c,_ZNK6glitch3gui8CGUIMenu7getRectERKNS0_15CGUIContextMenu5SItemERKNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,stub returns base rect; virtual call on the menu item (vtable 200) not mapped
+0x545878,_ZN6glitch3gui8CGUIMenu22updateAbsolutePositionEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x5458b4,_ZN6glitch3gui8CGUIMenuD1Ev,skipped,,destructor body: vtable writes and base teardown; compiler generated
+0x545928,_ZN6glitch3gui8CGUIMenuC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor: vtable fixups and base constructor call not rebuilt
+0x545a10,_ZN6glitch3gui8CGUIMenuC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor overload: vtable fixups and base constructor call not rebuilt
+0x545aac,_ZN6glitch3gui11IGUIElementD2Ev.clone.0,skipped,,IGUIElement base destructor: child list and string teardown; compiler generated
+0x545c18,_ZN6glitch3gui8CGUIMenu7onEventERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,mouse hover and submenu open close paths not ported; forwards to parent
+0x545edc,_ZN6glitch3gui8CGUIMenuD0Ev,skipped,,D0 deleting destructor thunk
+0x545f58,_ZN6glitch3gui15IGUIContextMenuD0Ev,skipped,,IGUIContextMenu destructor: vtable writes and base teardown; compiler generated
+0x545fc4,_ZN6glitch3gui8CGUIMenu4drawEv,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,item row drawing not ported; child loop only
+0x5462c4,_ZN6glitch3gui14CGUIMeshViewer7setMeshERKN5boost13intrusive_ptrINS_5scene13IAnimatedMeshEEE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,reference counting not modelled; stand-in stores raw pointer
+0x5462f0,_ZNK6glitch3gui14CGUIMeshViewer7getMeshEv,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,reference counting not modelled; stand-in returns raw pointer
+0x54630c,_ZNK6glitch3gui14CGUIMeshViewer11getMaterialEv,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,reference counting not modelled; stand-in returns raw pointer
+0x546348,_ZN6glitch3gui14CGUIMeshViewer11setMaterialERKN5boost13intrusive_ptrINS_5video9CMaterialEEE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,reference counting not modelled; stand-in stores raw pointer
+0x546390,_ZN6glitch3gui14IGUIMeshViewerC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,base constructor: vtable fixups and IGUIElement base layout not rebuilt
+0x546650,_ZN6glitch3gui14CGUIMeshViewerC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor: vtable fixups and base constructor call not rebuilt
+0x546728,_ZN6glitch3gui14CGUIMeshViewerC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor overload: vtable fixups and base constructor call not rebuilt
+0x5467ac,_ZN6glitch3gui14CGUIMeshViewer7onEventERKNS_6SEventE,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x54684c,_ZN6glitch3gui14CGUIMeshViewerD1Ev,skipped,,destructor body: vtable writes and base teardown; compiler generated
+0x5468e0,_ZN6glitch3gui14CGUIMeshViewerD0Ev,skipped,,D0 deleting destructor thunk
+0x5468fc,_ZN6glitch3gui14CGUIMeshViewerD2Ev,skipped,,destructor body for secondary base subobject; compiler teardown
+0x546980,_ZN6glitch3gui14IGUIMeshViewerD0Ev,skipped,,IGUIMeshViewer destructor: vtable writes and base teardown; compiler generated
+0x5469fc,_ZN6glitch3gui14CGUIMeshViewer4drawEv,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,mesh and material submission through the video driver not ported; child loop only
+0x547014,_ZN6glitch3gui14CGUIMessageBox7onEventERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,key handling approximated from pseudocode; button slot roles not confirmed; key-up and focus hand-off not ported
+0x5472e0,_ZN6glitch3gui14CGUIMessageBox15refreshControlsEv,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,stub: button and text placement not ported
+0x547a0c,_ZN6glitch3gui14CGUIMessageBoxC2EPNS0_15IGUIEnvironmentEPKwS5_iPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor: vtable fixups and CGUIWindow base constructor not rebuilt
+0x547b48,_ZN6glitch3gui11IGUIElementD2Ev.clone.0,skipped,,IGUIElement base destructor: child list and string teardown; compiler generated
+0x547cb4,_ZN6glitch3gui14CGUIMessageBoxD1Ev,skipped,,destructor body: vtable writes and base teardown; compiler generated
+0x547db4,_ZN6glitch3gui14CGUIMessageBoxD0Ev,skipped,,D0 deleting destructor thunk
+0x547dd0,_ZN6glitch3gui14CGUIMessageBoxD2Ev,skipped,,destructor body for secondary base subobject; compiler teardown
+0x547ebc,_ZN6glitch3gui10IGUIWindowD0Ev,skipped,,IGUIWindow destructor: vtable writes and base teardown; compiler generated
+0x548070,_ZN6glitch3gui14CGUIMessageBoxC1EPNS0_15IGUIEnvironmentEPKwS5_iPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor: vtable fixups and CGUIWindow base constructor not rebuilt
+0x548260,_ZN6glitch3gui15CGUIModalScreen22updateAbsolutePositionEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x5482c8,_ZN6glitch3gui15CGUIModalScreen11removeChildEPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,base removal ported; empty-list environment hook (vtable 28) not mapped
+0x5482fc,_ZN6glitch3gui15CGUIModalScreen8addChildEPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,base addition ported; environment hook (vtable 16) not mapped
+0x54832c,_ZN6glitch3gui11IGUIElementC2ENS0_17EGUI_ELEMENT_TYPEEPNS0_15IGUIEnvironmentEPS1_iNS_4core4rectIiEE.clone.1,skipped,,IGUIElement base constructor: vtable fixups and string member setup not rebuilt
+0x5485c8,_ZN6glitch3gui15CGUIModalScreenC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEi,skipped,,constructor: vtable fixups and base constructor call not rebuilt
+0x548668,_ZN6glitch3gui15CGUIModalScreenC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEi,skipped,,constructor overload: vtable fixups and base constructor call not rebuilt
+0x548750,_ZN6glitch3gui11IGUIElementD2Ev.clone.2,skipped,,IGUIElement base destructor: child list and string teardown; compiler generated
+0x548858,_ZN6glitch3gui15CGUIModalScreenD1Ev,skipped,,destructor body: vtable writes and base teardown; compiler generated
+0x5488bc,_ZN6glitch3gui15CGUIModalScreen4drawEv,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,blinking background pass not ported; child loop only
+0x548a50,_ZN6glitch3gui15CGUIModalScreen7onEventERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,click timestamp and parent forwarding ported; focus hand-off to environment not ported
+0x548ba8,_ZN6glitch3gui15CGUIModalScreenD0Ev,skipped,,D0 deleting destructor thunk
+0x548c34,_ZNK6glitch3gui13CGUIScrollBar18getPosFromMousePosEii,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x548d90,_ZN6glitch3gui13CGUIScrollBar6setPosEi,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x548f6c,_ZN6glitch3gui13CGUIScrollBar6setMaxEi,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x5490c0,_ZN6glitch3gui13CGUIScrollBar15refreshControlsEv,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,arrow button placement ported; button creation and skin sprite assignment not ported
+0x5496b4,_ZN6glitch3gui13CGUIScrollBar22updateAbsolutePositionEv,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,base update and control refresh ported; thumb recomputation not ported
+0x549838,_ZNK6glitch3gui11IGUIElement14getNextElementEibbRPS1_S3_b.clone.2,skipped,,identical clone of 0x542840 (IGUIElement getNextElement); same body
+0x54998c,_ZN6glitch3gui11IGUIElement11setTabOrderEi.clone.3,skipped,,identical clone of 0x542994 (IGUIElement setTabOrder); same body
+0x549a3c,_ZN6glitch3gui13IGUIScrollBarC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,IGUIScrollBar constructor: vtable fixups and base constructor not rebuilt
+0x549cfc,_ZN6glitch3gui13CGUIScrollBarC1EbPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEb,skipped,,constructor: vtable fixups and base constructor call not rebuilt
+0x549e3c,_ZN6glitch3gui13CGUIScrollBarC2EbPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEb,skipped,,constructor overload: vtable fixups and base constructor call not rebuilt
+0x549fb8,_ZN6glitch3gui13CGUIScrollBarD1Ev,skipped,,destructor body: vtable writes and base teardown; compiler generated
+0x54a06c,_ZN6glitch3gui13CGUIScrollBarD0Ev,skipped,,D0 deleting destructor thunk
+0x54a088,_ZN6glitch3gui13CGUIScrollBarD2Ev,skipped,,destructor body for secondary base subobject; compiler teardown
+0x54a228,_ZN6glitch3gui13CGUIScrollBar7onEventERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,stub: drag and button dispatch not ported; forwards to base
+0x54a6dc,_ZN6glitch3gui13IGUIScrollBarD0Ev,skipped,,IGUIScrollBar destructor: vtable writes and base teardown; compiler generated
+0x54a758,_ZN6glitch3gui13CGUIScrollBar4drawEv,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,stub: track and thumb drawing not ported; child loop only
+0x54aac4,_ZNK6glitch3gui8CGUISkin7getFontENS0_17EGUI_DEFAULT_FONTE,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x54aaf0,_ZN6glitch3gui8CGUISkin7setFontEPNS0_8IGUIFontENS0_17EGUI_DEFAULT_FONTE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,reference counting not modelled; stand-in stores raw pointer
+0x54ab40,_ZN6glitch3gui8CGUISkin13setSpriteBankEPNS0_14IGUISpriteBankE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,reference counting not modelled; stand-in stores raw pointer
+0x54abb0,_ZN6glitch3gui8CGUISkin8drawIconEPNS0_11IGUIElementENS0_17EGUI_DEFAULT_ICONENS_4core10position2dIiEEjjbPKNS5_4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,stub: sprite draw call (bank vtable 36) not in stand-in sprite bank
+0x54ad6c,_ZN6glitch3gui8IGUISkinD0Ev,skipped,,IGUISkin destructor: vtable write and free; compiler generated
+0x54af28,_ZN6glitch3gui8CGUISkinD1Ev,skipped,,destructor body: sprite and font release; compiler generated
+0x54afc4,_ZN6glitch3gui8CGUISkinD0Ev,skipped,,D0 deleting destructor thunk
+0x54afe0,_ZN6glitch3gui8CGUISkinD2Ev,skipped,,destructor body for secondary base subobject; compiler teardown
+0x54b0ac,_ZN6glitch3gui8CGUISkin15draw3DTabButtonEPNS0_11IGUIElementEbRKNS_4core4rectIiEEPS7_NS0_14EGUI_ALIGNMENTE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,stub: tab button frame drawing not ported
+0x54b910,_ZN6glitch3gui8CGUISkin13draw3DTabBodyEPNS0_11IGUIElementEbbRKNS_4core4rectIiEEPS7_iNS0_14EGUI_ALIGNMENTE,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,stub: tab body frame drawing not ported
+0x54c40c,_ZN6glitch3gui8CGUISkin22draw3DWindowBackgroundEPNS0_11IGUIElementEbNS_5video6SColorERKNS_4core4rectIiEEPS9_,partial,glitch-scene-collada-gui/src/recon/slice_02.cpp,stub: window background frame drawing not ported
+0x54d0bc,_ZN6glitch3gui8CGUISkin14setDefaultTextENS0_17EGUI_DEFAULT_TEXTEPKw,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x54df40,_ZN6glitch3gui11CGUISpinBox8setRangeEff,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x54df7c,_ZN6glitch3gui11CGUISpinBox16verifyValueRangeEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x54dfd8,_ZN6glitch3gui11CGUISpinBox7setTextEPKw,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,
+0x54e028,_ZNK6glitch3gui11CGUISpinBox7getTextEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_02.cpp,

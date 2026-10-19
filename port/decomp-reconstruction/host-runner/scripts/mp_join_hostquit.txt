@@ -1,0 +1,31 @@
+# Joiner that stays: the host leaves at frame 3600; the joiner must not crash or hang.
+# Joiner side of the disconnect test: plays with the host, then leaves the room (LeaveRoom) and quits.
+# Multiplayer joiner (LAN/WiFi, mode 1): title -> main menu -> search rooms, join the first one, play with the host.
+60 tap 1000 700
+300 mp init 1
+330 mp search
+900 mp join 0
+1000 mp status
+1900 mp status
+# the loading movie waits for a tap on its continue button once every player is loaded and ready to roll
+2000 tap 1200 540
+2100 tap 1200 540
+2200 tap 1200 540
+2300 tap 1200 540
+2400 tap 1200 540
+2500 tap 1200 540
+2600 tap 1200 540
+2700 tap 1200 540
+2800 tap 1200 540
+2900 tap 1200 540
+2300 mp status
+3000 hunt 1000 2000
+3100 levelstat mp
+3100 mp status
+3500 mp status
+
+
+3600 mp status
+4200 mp status
+4800 mp status
+5200 mp status

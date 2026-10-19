@@ -1,0 +1,65 @@
+--[[	Example skill
+
+	"Naked" file, with the bare minimum
+
+	Notes:
+		-	OnDelayedSkill() is optional. It can be omitted in the RegisterSkill() call.
+			It is used with projectile skills.
+		-	OnSkillUpdate() is called when a spell or skill has a level up.
+		-	OnSkillUpdate() won't be called for monsters. Players only.
+
+	Examples:
+		-	Skill + Instant + Single 		: data/ps3/scripts/skills/prince_warrior_slam.lua
+		-	Skill + Instant + AoE			: data/ps3/scripts/skills/prince_warrior_whirlwind.lua
+		-	Skill + Instant + Cone			: data/ps3/scripts/skills/prince_warrior_charge.lua
+		-	Skill + Instant + Projectile	: data/ps3/scripts/skills/prince_mage_fireball.lua
+		-	Skill + Triggered + Buff		: data/ps3/scripts/skills/prince_mage_force_field.lua
+
+		-	Spell + Instant + AoE			: data/ps3/scripts/skills/faerie_celest.lua
+
+		-	Cooldown								: data/ps3/scripts/skills/faerie_celest.lua
+		-	Passive Buff						: data/ps3/scripts/skills/prince_warrior_guardian_stability.lua
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	Trace("OnSkillUpdate called");
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	Trace("OnSkillCheck called");
+	return true, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	Trace("OnPreSkill called");
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	Trace("OnSkill called");
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	Trace("OnPostSkill called");
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_()
+	Trace("OnDelayedSkill called");
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_);

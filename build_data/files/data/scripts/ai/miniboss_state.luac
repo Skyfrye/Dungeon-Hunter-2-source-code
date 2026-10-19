@@ -1,0 +1,98 @@
+
+
+-- ------------------------------------
+-- ----- STATE CALLBACK FUNCTIONS -----
+-- ------------------------------------
+
+
+-- UPDATE --
+function StateBasicUpdate(timestamp)
+end
+
+-- CONDITIONS --
+function StateBasicConditions()
+end
+
+-- INIT --
+function StateBasicInit()
+	PushVFTable();
+	AddToVFTable("OnTimer",			"StateBasicOnTimer");
+ 	AddToVFTable("OnTargetInRangedRange", "StateBasicInRangedRange");
+	AddToVFTable("OnTargetInMeleeRange", "StateBasicInMeleeRange");			
+ 	AddToVFTable("OnTargetOutOfRange", "StateBasicOnTargetOutOfRange");			
+-- 	AddToVFTable("OnInitFinal", "StateBasicOnInitFinal");
+
+	StateBasicTimerID = -2;
+end
+
+-- POST --
+function StateBasicPost()
+	PopVFTable();
+end
+
+-- ------------------------------------
+-- ------- VF TABLE ASSIGNMENT --------
+-- ------------------------------------
+function StateBasicOnTimer(timerId)
+
+	if (timerId == StateBasicTimerID) then
+		StateBasicTimerID = -1;		-- Timer expires
+	end
+end
+
+function StateBasicInMeleeRange()
+	local state = GetState();
+	
+	if(CanAttackInMelee()) then
+		if(StateBasicTimerID == -2) then
+			StateBasicTimerID = StartTimer(5000);
+		else if(StateBasicTimerID == -1 and state == GetPyCst("AIStates", "Idle") ) then 
+--				DoSkill(GetRand(0, 1));
+				StateBasicTimerID = StartTimer(5000);
+			else
+				Attack(GetTarget());
+			end
+		end
+	end	
+end
+
+function StateBasicInRangedRange()
+	local state = GetState();
+	
+	if(CanAttackFromRange()) then
+		if(StateBasicTimerID == -2) then
+			StateBasicTimerID = StartTimer(GetRand(3000, 7000));
+		end
+		if(StateBasicTimerID == -1 and state == GetPyCst("AIStates", "Idle") ) then 
+			DoSkill(0);
+			StateBasicTimerID = StartTimer(GetRand(3000, 7000));
+		else
+			Attack(GetTarget());
+		end
+	end	
+end
+
+function StateBasicOnTargetOutOfRange()
+	local state = GetState();
+
+	if(	state == GetPyCst("AIStates", "Idle")
+		or	state == GetPyCst("AIStates", "Attack")
+		or	not HasPath())
+	then
+		--TODO:	check if we can melee or range attack. If not, then we should "stay" or "flee"
+		--TODO:	check if we can melee or range attack. If both, pick the preferred one
+		
+--		PlayActorAnim(GetPyOID("AnimDict", "balrog_idle_02"));
+		
+		StateBasicTimerID = -2;
+		MoveTo(GetTarget());
+	end
+end
+
+function StateBasicOnInitFinal()
+	RegisterActorAnim(GetPyOID("AnimDict", "balrog_idle_02"));
+end
+
+
+
+	

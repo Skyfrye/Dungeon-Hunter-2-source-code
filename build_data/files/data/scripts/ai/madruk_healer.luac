@@ -1,0 +1,109 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Madruk Healer behavior: 
+-- 
+-- - Spawns and automatically spots Madruk, gets to him and heals him at regular intervals.
+-- - Skill 1 : Heal a customizable amount in %.
+-- - Respawns after 30 seconds after death.
+-- - Teleports away if below 50% HP: TODO.
+-- - Apply a temporary debuff (taking 30% more damage) when casting the healing spell: TODO.
+-- ----------------------------------------------------------------------------------------------------
+
+local TIMER_DELAY		= 9000;
+local skill_check		= true;
+local g_heal_timer 		= -1;
+
+
+local function InitVars()
+	skill_check		= true;
+	g_heal_timer 	= -1;
+end
+
+
+function madruk_healer_OnFriendSpotted(friend)
+	if(not HasMaster()) then
+		SetMaster(friend);
+		if (friend) then
+			--Trace ("My master is:"..friend:GetName());
+		end
+		g_master = friend;	-- Caching the master
+	else
+		--Trace ("My friend is:"..friend:GetName().." but I have a master now:"..g_master:GetName());
+		if (friend:GetName()~=g_master:GetName()) then
+			Kill(friend);
+		end
+	end
+end
+AddToVFTable("OnFriendSpotted", "madruk_healer_OnFriendSpotted");
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+function madruk_healer_OnMasterOutOfSight()
+	WarpBehind(g_master);
+end
+AddToVFTable("OnMasterOutOfSight", "madruk_healer_OnMasterOutOfSight");
+
+
+-- ----------------------------------------------------------------------------------------------------
+local function Do_Healing()
+	DoSkill(0);
+	skill_check = true;
+	g_heal_timer = -1;
+end
+
+function madruk_healer_OnInit()
+	InitVars();
+end
+AddToVFTable("OnInitFinal", "madruk_healer_OnInit");
+
+function madruk_healer_OnMasterOutOfRange()
+	MoveTo(g_master);
+end
+AddToVFTable("OnMasterOutOfRange", "madruk_healer_OnMasterOutOfRange");
+
+
+function madruk_healer_OnMasterInRangedRange()
+end
+AddToVFTable("OnMasterInRangedRange", "madruk_healer_OnMasterInRangedRange");
+
+
+function madruk_healer_OnMasterInCloseRange()
+end
+AddToVFTable("OnMasterInCloseRange", "madruk_healer_OnMasterInCloseRange");
+
+
+function madruk_healer_OnMasterInMeleeRange()
+	if(skill_check == true) then
+		Stop();
+		skill_check = false;
+		g_heal_timer = StartTimerCB(TIMER_DELAY, false, Do_Healing);
+	end
+end
+AddToVFTable("OnMasterInMeleeRange", "madruk_healer_OnMasterInMeleeRange");
+
+
+function madruk_healer_OnDied(killer)
+	if (g_heal_timer ~= -1 and g_heal_timer ~= nil) then
+		StopTimerCB(g_heal_timer);
+		g_heal_timer = nil;
+	end
+end
+AddToVFTable("OnDied", "madruk_healer_OnDied");
+
+
+function madruk_healer_OnTerminate(killer)
+	if (g_heal_timer ~= -1 and g_heal_timer ~= nil) then
+		StopTimerCB(g_heal_timer);
+		g_heal_timer = nil;
+	end
+end
+AddToVFTable("OnTerminate", "madruk_healer_OnTerminate");
+
+
+function madruk_healer_OnMasterDied()
+	Kill();
+end
+AddToVFTable("OnMasterDied", "madruk_healer_OnMasterDied");

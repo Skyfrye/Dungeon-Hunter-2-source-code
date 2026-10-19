@@ -1,0 +1,266 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Wind Dragon Breath Sweep Skill: 
+-- 
+-- - Cone attack that moves from side to side in a pre-defined pattern.
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE 				= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMaxDistance")));
+local ATTACK_RANGE 			= 1000.0;
+local ANGLE_INIT			= 315.0;
+local ANGLE					= ANGLE_INIT;
+local ANGLE_INC				= 7.5;
+local ANGLE_MIN				= 270.0;
+local ANGLE_MAX				= 90.0;
+
+local CLASS_ID				= GetPyOID("ClassTable", "WindDragon_BreathSweep");
+
+-- Cached values
+local timer_time 			= 140;
+local timer_id 				= -1;
+local flag 					= false;
+local target_list 			= {};
+local target_list_size		= 0;
+local sweep_tick_inc		= 0;
+local attacked_targets		= {};
+local hasPassedZero			= false;
+local hasPassed360			= false
+
+local traces				= true;
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function searchForNewTarget()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	
+	TargetListSearch(RANGE, ANGLE_MAX);
+	TargetListBackup("breath_sweep");
+
+	if(not IsTargetListEmpty()) then
+		target_list = {};
+		
+		repeat
+			local target = GetTargetListTop()
+			table.insert(target_list, target);
+			PopTargetList();
+		until(IsTargetListEmpty())
+		
+		else
+			target_list = {};
+	end
+	
+	target_list_size = #target_list;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function searchForTargetAtAngle()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	
+	TargetListSearch(ATTACK_RANGE, ANGLE, "breath_sweep");
+	
+	if (not IsTargetListEmpty()) then
+		repeat
+		
+			local temp_target = GetTargetListTop();
+			local temp_target_ID = temp_target:GetID();
+			
+			if(#target_list > 1) then
+				for index, object in ipairs(target_list) do
+					local target_ID = object:GetID();
+					if (temp_target_ID == target_ID) then
+						table.remove(target_list, index);
+					end
+				end
+			elseif (#target_list == 1) then
+				
+				local target_ID = target_list[1]:GetID();
+				if (temp_target_ID == target_ID) then
+					target_list = {};
+				end
+			end
+			PopTargetList();
+		until(IsTargetListEmpty())
+	end
+	
+	target_list_size = #target_list;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function DoDamage()
+
+	Trace("ANGLE IS :" .. ANGLE);
+	searchForNewTarget();
+	Trace("Target is in Range!");
+	
+	if (target_list_size > 0) then
+		Trace("Target List Size is Greater Than 0!");
+		searchForTargetAtAngle();
+	
+		if (target_list_size > 0) then
+		Trace("Target List Size is STILL Greater Than 0!");
+		
+			if (sweep_tick_inc == 0) then
+				Trace("Sweep Tick is 0!");
+		
+				for i, object in pairs(target_list) do
+			
+					Trace("Looking at object: " .. object:GetName());
+					if (object:GetID()~=nil) then
+						
+						if (#attacked_targets > 0) then
+							
+							Trace("Attacked Targets is greater than 0!");
+							local gonnaAttackIt = true;
+							for index, attackedObject in pairs(attacked_targets) do
+							
+								if (object:GetName() == attackedObject:GetName()) then
+									gonnaAttackIt = false;
+								end
+							end
+							if(gonnaAttackIt) then
+							
+								Trace("ATTACKING!! ATTACKING!!");
+								SkillCombatRoll(object);
+								object:PlayFX(GetPyOID("AnimatedEffectTable", "spell_wind_hurt"));
+								table.insert(attacked_targets, object);
+							end
+						elseif (#attacked_targets == 0) then
+							
+							Trace("PERFORMING ATTACK HERE BECAUSE ITS SINGLE PLAYER!");
+							SkillCombatRoll(object);
+							object:PlayFX(GetPyOID("AnimatedEffectTable", "spell_wind_hurt"));
+							table.insert(attacked_targets, object);
+						end
+					end
+				end
+			elseif (sweep_tick_inc == 1) then
+						
+				Trace("Sweep Tick is 1!  Angle is: " .. ANGLE);
+				
+				for i, object in pairs(target_list) do
+				
+					Trace("Target is at this Angle: " .. ANGLE);
+					if (object:GetID()~=nil) then
+						
+						if (#attacked_targets > 0) then
+				
+							Trace("Attack Object is greater than 0!!");
+							local gonnaAttackItReverse = true;
+							for index, attackedObject in pairs(attacked_targets) do
+									
+								Trace("Looking at Attack Object: " .. attackedObject:GetName());
+								if (object:GetName() == attackedObject:GetName()) then
+							
+									gonnaAttackItReverse = false;	
+								end
+								if (gonnaAttackItReverse) then
+									
+									Trace("ATTACKING!! ATTACKING!!");
+									SkillCombatRoll(object);
+									object:PlayFX(GetPyOID("AnimatedEffectTable", "spell_wind_hurt"));
+									table.insert(attacked_targets, object);
+								end
+							end
+						elseif (#attacked_targets == 0) then
+						
+							Trace("PERFORMING ATTACK HERE BECAUSE ITS SINGLE PLAYER!");
+							SkillCombatRoll(object);
+							object:PlayFX(GetPyOID("AnimatedEffectTable", "spell_wind_hurt"));
+							table.insert(attacked_targets, object);
+						end
+					end
+				end
+			end
+		end
+		
+		if (ANGLE >= ANGLE_MAX and sweep_tick_inc == 0 and hasPassed360) then
+			sweep_tick_inc = 1;
+			attacked_targets = {};
+		end
+		if (sweep_tick_inc == 0) then
+			ANGLE = ANGLE + ANGLE_INC;
+			if (ANGLE >= 360) then
+				ANGLE = 0;
+				hasPassed360 = true;
+			end
+		end
+		if (sweep_tick_inc == 1) then
+			ANGLE = ANGLE - ANGLE_INC;
+			if (ANGLE <= 0) then
+				ANGLE = 360;
+				hasPassedZero = true;
+			end
+		end
+		if (ANGLE <= ANGLE_MIN and sweep_tick_inc == 1 and hasPassedZero) then
+			ANGLE = ANGLE_MIN;
+			sweep_tick_inc = 2;
+		end
+	else
+		StopTimerCB(timer_id);
+		flag = false;
+	end
+	
+	target_list_size = 0;
+	target_list = {};
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	sweep_tick_inc = 0;
+	ANGLE = ANGLE_INIT;
+	attacked_targets = {};
+	hasPassed360 = false;
+	hasPassedZero = false;
+	
+	TargetListSearch(RANGE, ANGLE_MAX);
+	TargetListBackup("breath_sweep");
+	
+	searchForNewTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if (traces) then Trace ("Dragon BreathSweep!"); end
+	ApplyPropClass(CLASS_ID);
+	if( not flag ) then
+		flag = true;
+   	timer_id = StartSkillTimerCB(timer_time, true, DoDamage);
+	end	
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	if( flag ) then
+		StopTimerCB(timer_id);
+		target_list_size = 0;
+		flag = false;
+		ANGLE	= ANGLE_INIT;
+		sweep_tick_inc = 0;
+	end	
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_);

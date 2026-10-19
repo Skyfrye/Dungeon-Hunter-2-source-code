@@ -1,0 +1,17 @@
+--[[	Trigger Object Example Script
+
+	Example of what a trigger object script would looks like.
+
+--]]
+
+
+-- 0 : actor represents what triggered the container to get opened
+function OnTrigger(actor)
+	if(actor) then
+		Trace(GetName().." was triggered by "..actor:GetName());
+
+		-- Do stuff here...
+	else
+		Trace(GetName().." was triggered miraculously");
+	end
+end

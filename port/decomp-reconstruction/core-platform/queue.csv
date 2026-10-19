@@ -1,0 +1,654 @@
+elf_address,body_bytes,owner,name,demangled
+30ee60,4,<global>,_Z8ObjToStrPcRSt6vectorI7Point3DIfESaIS2_EE,"ObjToStr(char*, std::vector<Point3D<float>, std::allocator<Point3D<float> > >&)"
+30ee84,24,<global>,_Z8ObjToStrPcR7Point2DIiE,"ObjToStr(char*, Point2D<int>&)"
+30eea0,16,<global>,_Z8ObjToStrPcRi,"ObjToStr(char*, int&)"
+30eeb4,16,<global>,_Z8ObjToStrPcRb,"ObjToStr(char*, bool&)"
+30eec8,48,<global>,_Z8ObjToStrPcRf,"ObjToStr(char*, float&)"
+30eefc,80,<global>,_Z8ObjToStrPcRN6glitch4core11dimension2dIfEE,"ObjToStr(char*, glitch::core::dimension2d<float>&)"
+30ef50,92,<global>,_Z8ObjToStrPcRN6glitch4core8vector3dIfEE,"ObjToStr(char*, glitch::core::vector3d<float>&)"
+30efb0,92,<global>,_Z8ObjToStrPcR7Point3DIfE,"ObjToStr(char*, Point3D<float>&)"
+30f010,12,<global>,_Z8StrToObjPKcRSt6vectorI7Point3DIfESaIS3_EE,"StrToObj(char const*, std::vector<Point3D<float>, std::allocator<Point3D<float> > >&)"
+30f020,28,<global>,_Z8StrToObjPKcRb,"StrToObj(char const*, bool&)"
+30f03c,20,<global>,_Z8StrToObjPKcRi,"StrToObj(char const*, int&)"
+30f050,112,<global>,_Z8StrToObjPKcR7Point2DIiE,"StrToObj(char const*, Point2D<int>&)"
+30f0c8,104,<global>,_Z8StrToObjPKcRN6glitch4core11dimension2dIiEE,"StrToObj(char const*, glitch::core::dimension2d<int>&)"
+30f140,148,<global>,_Z8StrToObjPKcR7Point3DIiE,"StrToObj(char const*, Point3D<int>&)"
+30f1dc,164,<global>,_Z8StrToObjPKcR7Point3DIfE,"StrToObj(char const*, Point3D<float>&)"
+30f288,28,<global>,_Z8StrToObjPKcRf,"StrToObj(char const*, float&)"
+30f2a4,128,<global>,_Z8StrToObjPKcRN6glitch4core11dimension2dIfEE,"StrToObj(char const*, glitch::core::dimension2d<float>&)"
+30f334,164,<global>,_Z8StrToObjPKcRN6glitch4core8vector3dIfEE,"StrToObj(char const*, glitch::core::vector3d<float>&)"
+30fdd0,108,<global>,_ZlsRSoRKN6glitch4core8vector3dIfEE,"operator<<(std::basic_ostream<char, std::char_traits<char> >&, glitch::core::vector3d<float> const&)"
+30ff48,68,<global>,_ZlsRSoRKN6glitch4core8vector3dIiEE,"operator<<(std::basic_ostream<char, std::char_traits<char> >&, glitch::core::vector3d<int> const&)"
+310178,68,<global>,_ZlsRSoRKN6glitch5video6SColorE,"operator<<(std::basic_ostream<char, std::char_traits<char> >&, glitch::video::SColor const&)"
+31026c,72,<global>,_ZrsRSiRN6glitch4core11dimension2dIiEE,"operator>>(std::basic_istream<char, std::char_traits<char> >&, glitch::core::dimension2d<int>&)"
+3102b4,120,<global>,_ZrsRSiRN6glitch5video6SColorE,"operator>>(std::basic_istream<char, std::char_traits<char> >&, glitch::video::SColor&)"
+31032c,84,<global>,_ZrsRSiRN6glitch4core8vector3dIiEE,"operator>>(std::basic_istream<char, std::char_traits<char> >&, glitch::core::vector3d<int>&)"
+310380,84,<global>,_ZrsRSiRN6glitch4core8vector3dIfEE,"operator>>(std::basic_istream<char, std::char_traits<char> >&, glitch::core::vector3d<float>&)"
+310414,4,<global>,_Z10InitMemoryv,InitMemory()
+310418,4,<global>,_Z9UnInitMemv,UnInitMem()
+31041c,4,<global>,_Z15ShowMemoryStatsPKc,ShowMemoryStats(char const*)
+31044c,4,<global>,_Z7SwfFreePv,SwfFree(void*)
+310450,4,<global>,_Z10GlitchFreePv,GlitchFree(void*)
+310454,136,<global>,_Z11CustomAllocj,CustomAlloc(unsigned int)
+310564,4,<global>,_Z8SwfAllocjN3swf7MemHintE,"SwfAlloc(unsigned int, swf::MemHint)"
+310568,4,<global>,_Z11GlitchAllocjN6glitch6memory13E_MEMORY_HINTE,"GlitchAlloc(unsigned int, glitch::memory::E_MEMORY_HINT)"
+310574,56,<global>,_Z13CustomReallocPvj,"CustomRealloc(void*, unsigned int)"
+3105b4,124,<global>,_Z14CustomMemalignjj,"CustomMemalign(unsigned int, unsigned int)"
+310660,4,<global>,_Z11CustomAllocjPKcjS0_,"CustomAlloc(unsigned int, char const*, unsigned int, char const*)"
+310698,16,<global>,_Z8SwfAllocjN3swf7MemHintEPKci,"SwfAlloc(unsigned int, swf::MemHint, char const*, int)"
+3106a8,16,<global>,_Z11GlitchAllocjN6glitch6memory13E_MEMORY_HINTEiPKci,"GlitchAlloc(unsigned int, glitch::memory::E_MEMORY_HINT, int, char const*, int)"
+3106b8,12,<global>,_Z11GlitchAllocjN6glitch6memory13E_MEMORY_HINTEiPKciS3_,"GlitchAlloc(unsigned int, glitch::memory::E_MEMORY_HINT, int, char const*, int, char const*)"
+3106c4,16,<global>,_Znaj15MemoryHintStatePKcjS1_,"operator new[](unsigned int, MemoryHintState, char const*, unsigned int, char const*)"
+3106d4,16,<global>,_Znwj15MemoryHintStatePKcjS1_,"operator new(unsigned int, MemoryHintState, char const*, unsigned int, char const*)"
+310750,28,<global>,_ZdvRK8Vector3Df,"operator/(Vector3D const&, float)"
+3133e0,96,<global>,_ZlsRSoRKSt6vectorI7Point3DIfESaIS2_EE,"operator<<(std::basic_ostream<char, std::char_traits<char> >&, std::vector<Point3D<float>, std::allocator<Point3D<float> > > const&)"
+313498,540,<global>,_ZrsRSiRSt6vectorI7Point3DIfESaIS2_EE,"operator>>(std::basic_istream<char, std::char_traits<char> >&, std::vector<Point3D<float>, std::allocator<Point3D<float> > >&)"
+317a04,44,<global>,_Z7strrstrPKcS0_,"strrstr(char const*, char const*)"
+317bb0,4,<global>,_Z16UnInitUnitMemoryv,UnInitUnitMemory()
+317bb4,4,<global>,_Z23ShowUnitHeapMemoryStatsPKc,ShowUnitHeapMemoryStats(char const*)
+317bb8,12,<global>,_Z17UnlockMemoryMutexv,UnlockMemoryMutex()
+317bc8,12,<global>,_Z15LockMemoryMutexv,LockMemoryMutex()
+317bd8,4,<global>,_Z13internal_freePv,internal_free(void*)
+317bdc,36,<global>,_Z7FreeMemPv,FreeMem(void*)
+317c00,124,<global>,_Z23internal_malloc_alignedjjPKcjS0_,"internal_malloc_aligned(unsigned int, unsigned int, char const*, unsigned int, char const*)"
+317c94,4,<global>,_Z15internal_mallocjPKcjS0_,"internal_malloc(unsigned int, char const*, unsigned int, char const*)"
+317c98,256,<global>,_Z11AllocateMemjjPKcjS0_,"AllocateMem(unsigned int, unsigned int, char const*, unsigned int, char const*)"
+317f90,36,<global>,_Z10threadfun3Pv,threadfun3(void*)
+317fbc,16,<global>,_Z10threadfun2Pv,threadfun2(void*)
+320550,64,<global>,_Z7TimeNowv,TimeNow()
+324114,148,<global>,_Z10_DEBUG_OUTPKcz,"_DEBUG_OUT(char const*, ...)"
+3301f0,116,<global>,_Z25HideAllIrrlicheNodeExceptPN6glitch5scene10ISceneNodeE,HideAllIrrlicheNodeExcept(glitch::scene::ISceneNode*)
+33971c,204,<global>,ClearSubtitles,ClearSubtitles
+339830,1416,<global>,LoadSubtitles,LoadSubtitles
+340154,72,<global>,_Z21DBG_DisplayPointAsBoxRKN6glitch4core8vector3dIfEERKNS_5video6SColorEi,"DBG_DisplayPointAsBox(glitch::core::vector3d<float> const&, glitch::video::SColor const&, int)"
+342478,64,<global>,_ZlsRSoR12ObjectHandle,"operator<<(std::basic_ostream<char, std::char_traits<char> >&, ObjectHandle&)"
+34b170,64,<global>,_ZrsRSiR12ObjectHandle,"operator>>(std::basic_istream<char, std::char_traits<char> >&, ObjectHandle&)"
+34e024,108,<global>,_Z11ToLowerCaseRSsii,"ToLowerCase(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int, int)"
+34e090,108,<global>,_Z11ToLowerCaseRSbIcSt11char_traitsIcEN6glitch4core10SAllocatorIcLNS1_6memory13E_MEMORY_HINTE0EEEEii,"ToLowerCase(std::basic_string<char, std::char_traits<char>, glitch::core::SAllocator<char, (glitch::memory::E_MEMORY_HINT)0> >&, int, int)"
+381a10,196,<global>,_Z48TabarnakDeNodeHierarchyAvecDesEmptyNodeDuCalissePN6glitch5scene10ISceneNodeE,TabarnakDeNodeHierarchyAvecDesEmptyNodeDuCalisse(glitch::scene::ISceneNode*)
+3cb46c,48,<global>,_Z10SafeDeleteI17CharAISkillScriptEvRPT_,void SafeDelete<CharAISkillScript>(CharAISkillScript*&)
+3ef18c,36,<global>,_Z22DBG_GetLoadingStepNamei,DBG_GetLoadingStepName(int)
+3ef1b8,24,<global>,_Z12Color255To01R7Point3DIfE,Color255To01(Point3D<float>&)
+3ef9fc,72,<global>,_Z25DBG_DisplayLoadLevelStatsPKc,DBG_DisplayLoadLevelStats(char const*)
+3fda1c,4,<global>,_ZltRKN13ItemInventory4ItemES2_,"operator<(ItemInventory::Item const&, ItemInventory::Item const&)"
+4122bc,8,<global>,_Z13FlushCallbackRN7gameswf12render_stateEPv,"FlushCallback(gameswf::render_state&, void*)"
+41f834,172,<global>,_Z18playerClassAsStrIDi,playerClassAsStrID(int)
+4218e4,136,<global>,_Z16playerClassAsStrv,playerClassAsStr()
+429c10,4,<global>,_Z24DisplayBuildInfoOnSplashv,DisplayBuildInfoOnSplash()
+429c14,4,<global>,_Z21HideBuildInfoOnSplashv,HideBuildInfoOnSplash()
+42b0c0,8,<global>,_Z13fs_write_funcPKviPv,"fs_write_func(void const*, int, void*)"
+42b0c8,48,<global>,_Z12fs_seek_funciPv,"fs_seek_func(int, void*)"
+42b0f8,36,<global>,_Z19fs_seek_to_end_funcPv,fs_seek_to_end_func(void*)
+42b11c,16,<global>,_Z12fs_tell_funcPKv,fs_tell_func(void const*)
+42b12c,36,<global>,_Z15fs_get_eof_funcPv,fs_get_eof_func(void*)
+42b150,60,<global>,_Z12fs_read_funcPviS_,"fs_read_func(void*, int, void*)"
+42b1a4,56,<global>,_Z13fs_close_funcPv,fs_close_func(void*)
+42b260,156,<global>,_Z12fs_open_funcPKcS0_,"fs_open_func(char const*, char const*)"
+42b38c,88,<global>,_Z12get_fontfilePKcbbPci,"get_fontfile(char const*, bool, bool, char*, int)"
+42d734,8,<global>,_Z17FlushTextCallbackRN7gameswf12render_stateEPv,"FlushTextCallback(gameswf::render_state&, void*)"
+433d00,36,<global>,_Z15ParsePlayerNameRKSs,"ParsePlayerName(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)"
+43a8f0,52,<global>,_Z17UpdateSavedValuesv,UpdateSavedValues()
+43acb4,32,<global>,_Z21NatvieResumeAllSoundsRKN7gameswf7fn_callE,NatvieResumeAllSounds(gameswf::fn_call const&)
+441dcc,936,<global>,_Z15fillLeaderBoardv,fillLeaderBoard()
+47f6c8,44,<global>,_Z22DBG_GetStateNameFromIDi,DBG_GetStateNameFromID(int)
+47fa34,68,<global>,_Z26TempHackScriptIDAreStringsPKc,TempHackScriptIDAreStrings(char const*)
+48bbbc,40,<global>,tolower,tolower
+50e228,136,<global>,_Z36DBG_TraceAllLoadedResfileInformationv,DBG_TraceAllLoadedResfileInformation()
+50e2b8,208,<global>,_Z36DBG_TraceAllLoadedTextureInformationv,DBG_TraceAllLoadedTextureInformation()
+50e3d8,68,<global>,_Z14RecursiveCountPN6glitch5scene10ISceneNodeE,RecursiveCount(glitch::scene::ISceneNode*)
+50e46c,24,<global>,_Z19setOnAnimateEnabledPN6glitch5scene10ISceneNodeEb,"setOnAnimateEnabled(glitch::scene::ISceneNode*, bool)"
+50e484,76,<global>,_Z22RecursiveSetBoolOnNodePN6glitch5scene10ISceneNodeEbPFvS2_bE,"RecursiveSetBoolOnNode(glitch::scene::ISceneNode*, bool, void (*)(glitch::scene::ISceneNode*, bool))"
+50e4d0,68,<global>,_Z21NodeRemoveAllChildrenPN6glitch5scene10ISceneNodeE,NodeRemoveAllChildren(glitch::scene::ISceneNode*)
+50e6a0,284,<global>,_Z29DBG_DrawGlitchNodeBoundingBoxPN6glitch5scene10ISceneNodeE,DBG_DrawGlitchNodeBoundingBox(glitch::scene::ISceneNode*)
+50e7c4,108,<global>,_Z18DBG_TraceSceneNodePN6glitch5scene10ISceneNodeEiPFbS2_E,"DBG_TraceSceneNode(glitch::scene::ISceneNode*, int, bool (*)(glitch::scene::ISceneNode*))"
+50e8a4,724,<global>,_Z45TraceEveryGlitchRefCountingShitKnownToManKindPKc,TraceEveryGlitchRefCountingShitKnownToManKind(char const*)
+50eb90,112,<global>,_Z15ChangeMaterialsPN6glitch5scene10ISceneNodeENS_5video15E_MATERIAL_TYPEE,"ChangeMaterials(glitch::scene::ISceneNode*, glitch::video::E_MATERIAL_TYPE)"
+50ec18,112,<global>,_Z15ChangeMaterialsPN6glitch5scene10ISceneNodeENS_5video15E_MATERIAL_TYPEES4_,"ChangeMaterials(glitch::scene::ISceneNode*, glitch::video::E_MATERIAL_TYPE, glitch::video::E_MATERIAL_TYPE)"
+50eca0,212,<global>,_Z25DBG_TraverseAllGlitchNodePN6glitch5scene10ISceneNodeEPFvS2_EPFbS2_E,"DBG_TraverseAllGlitchNode(glitch::scene::ISceneNode*, void (*)(glitch::scene::ISceneNode*), bool (*)(glitch::scene::ISceneNode*))"
+50f220,176,<global>,_Z14OptimizeStaticPN6glitch5scene10ISceneNodeE,OptimizeStatic(glitch::scene::ISceneNode*)
+50f2d0,260,<global>,_Z13AddToSceneMgrPN6glitch5scene10ISceneNodeES2_,"AddToSceneMgr(glitch::scene::ISceneNode*, glitch::scene::ISceneNode*)"
+50f3d4,592,<global>,_Z19PrintNodePropertiesPN6glitch5scene10ISceneNodeEbi,"PrintNodeProperties(glitch::scene::ISceneNode*, bool, int)"
+50f644,144,<global>,_Z9CleanNodePN6glitch5scene10ISceneNodeE,CleanNode(glitch::scene::ISceneNode*)
+50f744,52,<global>,_Z14setCullingModePN6glitch5scene10ISceneNodeEi,"setCullingMode(glitch::scene::ISceneNode*, int)"
+50f778,8,<global>,_Z18disableCullingModePN6glitch5scene10ISceneNodeE,disableCullingMode(glitch::scene::ISceneNode*)
+50f7fc,160,<global>,_Z13findSceneNodePN6glitch5scene10ISceneNodeEPKc,"findSceneNode(glitch::scene::ISceneNode*, char const*)"
+50fadc,204,<global>,_Z18Draw3DWireFrameBoxRKN6glitch4core8aabbox3dIfEERKNS_5video6SColorE,"Draw3DWireFrameBox(glitch::core::aabbox3d<float> const&, glitch::video::SColor const&)"
+50fbd0,648,<global>,_Z17OptimizeHierarchyPN6glitch5scene10ISceneNodeEb,"OptimizeHierarchy(glitch::scene::ISceneNode*, bool)"
+50fe78,928,<global>,_Z16FlushMeshBuffersPN6glitch5scene5IMeshEbbb,"FlushMeshBuffers(glitch::scene::IMesh*, bool, bool, bool)"
+51049c,148,<global>,_Z23DBG_GetDetailedNodeNamePN6glitch5scene10ISceneNodeE,DBG_GetDetailedNodeName(glitch::scene::ISceneNode*)
+51073c,464,<global>,_Z27DBG_TraceSceneNodePolyStatsPN6glitch5scene10ISceneNodeEiPFbS2_E,"DBG_TraceSceneNodePolyStats(glitch::scene::ISceneNode*, int, bool (*)(glitch::scene::ISceneNode*))"
+516004,64,<global>,_ZrsRSiR9TiXmlNode,"operator>>(std::basic_istream<char, std::char_traits<char> >&, TiXmlNode&)"
+5175e0,164,<global>,_ZlsRSoRK9TiXmlNode,"operator<<(std::basic_ostream<char, std::char_traits<char> >&, TiXmlNode const&)"
+517870,168,<global>,_ZlsRSsRK9TiXmlNode,"operator<<(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, TiXmlNode const&)"
+52f0dc,4,<global>,appTrackBall,appTrackBall
+52f0e4,4,<global>,nativepauseAllMusic,nativepauseAllMusic
+52f0e8,8,<global>,getState,getState
+52f0f0,32,<global>,appKeyPressed,appKeyPressed
+52f11c,284,<global>,appOnTouch,appOnTouch
+52f24c,392,<global>,pressNOInConfirmation,pressNOInConfirmation
+52f3ec,468,<global>,pressNOInExitConfirmation,pressNOInExitConfirmation
+52f5d4,252,<global>,pressMainMenuInMutiIGM,pressMainMenuInMutiIGM
+52f6e4,1128,<global>,pressMainMenuInIGM,pressMainMenuInIGM
+52fb78,968,<global>,pressExitButtonInMainMenu,pressExitButtonInMainMenu
+52ff54,468,<global>,pressOKButtonInGLive,pressOKButtonInGLive
+53013c,304,<global>,pressContinueInIGM,pressContinueInIGM
+530280,236,<global>,pressBackButtonInGame,pressBackButtonInGame
+530380,564,<global>,pressPauseButtonInGame,pressPauseButtonInGame
+5305cc,872,<global>,appKeyReleased,appKeyReleased
+530974,84,<global>,appResume,appResume
+5309d8,56,<global>,appPause,appPause
+530a1c,64,<global>,appDestroy,appDestroy
+530ba8,652,<global>,appInit,appInit
+530fc8,188,<global>,appUpdate,appUpdate
+531150,4,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeGameRenderer,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeGameRenderer
+531154,4,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeConfig,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeConfig
+531158,4,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeOnDrawFrame,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeOnDrawFrame
+53115c,24,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeGetJNIEnv,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeGetJNIEnv
+53117c,16,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeResize,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeResize
+531190,12,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeOnSurfaceChanged,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeOnSurfaceChanged
+53119c,4,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeDone,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeDone
+5311a0,32,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeRender,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeRender
+5311c8,64,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeInit,Java_com_gameloft_android_GAND_GloftD2SS_GameRenderer_nativeInit
+531214,8,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GLMediaPlayer_nativeGetTotalSounds,Java_com_gameloft_android_GAND_GloftD2SS_GLMediaPlayer_nativeGetTotalSounds
+53121c,8,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GLMediaPlayer_nativeGetTotalSoundsOfSameInstance,Java_com_gameloft_android_GAND_GloftD2SS_GLMediaPlayer_nativeGetTotalSoundsOfSameInstance
+531224,4,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GLMediaPlayer_nativeSetStopOnMusic,Java_com_gameloft_android_GAND_GloftD2SS_GLMediaPlayer_nativeSetStopOnMusic
+531230,80,<global>,nativeLoadSound,nativeLoadSound
+53128c,64,<global>,nativeLoadSoundBig,nativeLoadSoundBig
+5312d8,100,<global>,nativePlaySound,nativePlaySound
+531348,112,<global>,nativePlaySoundBig,nativePlaySoundBig
+5313c4,80,<global>,nativePauseSound,nativePauseSound
+531420,64,<global>,nativePauseSoundBig,nativePauseSoundBig
+53146c,80,<global>,nativeResumeSound,nativeResumeSound
+5314c8,64,<global>,nativeResumeSoundBig,nativeResumeSoundBig
+531514,80,<global>,nativeStopSound,nativeStopSound
+531570,64,<global>,nativeStopSoundBig,nativeStopSoundBig
+5315bc,80,<global>,nativeUnloadSound,nativeUnloadSound
+531618,64,<global>,nativeUnloadSoundBig,nativeUnloadSoundBig
+531664,80,<global>,nativeIsSoundLoaded,nativeIsSoundLoaded
+5316c0,64,<global>,nativeIsSoundLoadedBig,nativeIsSoundLoadedBig
+53170c,100,<global>,nativeSetVolume,nativeSetVolume
+53177c,104,<global>,nativeSetVolumeBig,nativeSetVolumeBig
+5317f0,64,<global>,nativeResetSound,nativeResetSound
+53183c,100,<global>,nativeSetPitch,nativeSetPitch
+5318ac,60,<global>,nativeStopAllSounds,nativeStopAllSounds
+5318f4,64,<global>,nativeStopAllSoundPool,nativeStopAllSoundPool
+531940,64,<global>,nativeStopAllBigSound,nativeStopAllBigSound
+53198c,60,<global>,nativeDestroySoundPool,nativeDestroySoundPool
+5319d4,60,<global>,nativeInitSoundPoolArray,nativeInitSoundPoolArray
+531a1c,60,<global>,nativeGetWidth,nativeGetWidth
+531a64,64,<global>,nativeIsMediaPlaying,nativeIsMediaPlaying
+531ab0,60,<global>,nativeDetectPhoneLang,nativeDetectPhoneLang
+531af8,168,<global>,nativeGetSdFolderPath,nativeGetSdFolderPath
+531bac,216,<global>,nativeLoadMovie,nativeLoadMovie
+531ca4,1272,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GLMediaPlayer_nativeInit,Java_com_gameloft_android_GAND_GloftD2SS_GLMediaPlayer_nativeInit
+53224c,32,<global>,JNI_OnLoad,JNI_OnLoad
+5324c0,216,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GLResLoader_nativeInit,Java_com_gameloft_android_GAND_GloftD2SS_GLResLoader_nativeInit
+5325c4,1092,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeInit,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeInit
+532a8c,60,<global>,nativeSendAppBackground,nativeSendAppBackground
+532ad4,64,<global>,nativeOpenIGP,nativeOpenIGP
+532b20,64,<global>,nativeOpenGLive,nativeOpenGLive
+532b6c,64,<global>,NotifyTrophy,NotifyTrophy
+532bb8,60,<global>,nativeExit,nativeExit
+532c00,60,<global>,nativeIsWifiAlive,nativeIsWifiAlive
+532c48,116,<global>,nativeOpenBrowser,nativeOpenBrowser
+532cc8,60,<global>,nativeGet_PhoneLanguage,nativeGet_PhoneLanguage
+532d10,60,<global>,nativeGet_PhoneManufacturer,nativeGet_PhoneManufacturer
+532d58,60,<global>,nativeGet_PhoneModel,nativeGet_PhoneModel
+532da0,60,<global>,nativeUnlockDemo,nativeUnlockDemo
+532de8,60,<global>,nativeLockDemo,nativeLockDemo
+532e30,60,<global>,nativeDisableLaunchGame,nativeDisableLaunchGame
+532e78,36,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeSetPhone,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeSetPhone
+532ea8,24,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeCanInterrupt,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeCanInterrupt
+532ec8,60,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeAccelerometer,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeAccelerometer
+532f68,60,<global>,nativeIncreaseLaunchTimes,nativeIncreaseLaunchTimes
+533400,28,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeOpenIGM,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeOpenIGM
+533424,4,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativePause,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativePause
+533428,8,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeKeyUp,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeKeyUp
+533430,8,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeonTrackballEvent,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeonTrackballEvent
+533438,8,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeKeyDown,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeKeyDown
+533440,148,<global>,Java_com_gameloft_android_GAND_GloftD2SS_GameGLSurfaceView_nativeOnTouch,Java_com_gameloft_android_GAND_GloftD2SS_GameGLSurfaceView_nativeOnTouch
+5334dc,28,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeResume,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeResume
+533500,72,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeSetOrientation,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeSetOrientation
+533554,4,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeGetGameMusicVolume,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeGetGameMusicVolume
+533558,8,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativegetState,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativegetState
+533560,16,<global>,appDebugLog,appDebugLog
+533570,80,<global>,nativeIsSupportMM,nativeIsSupportMM
+5335d4,132,<global>,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeGetInfo,Java_com_gameloft_android_GAND_GloftD2SS_DungeonHunter2_nativeGetInfo
+533658,440,<global>,Java_com_gameloft_android_GAND_GloftD2SS_Musicplayer_nativeInitplayer,Java_com_gameloft_android_GAND_GloftD2SS_Musicplayer_nativeInitplayer
+533850,64,<global>,nativeSetPlaylist,nativeSetPlaylist
+53389c,64,<global>,nativeChangeStep,nativeChangeStep
+5338e8,60,<global>,nativeResumeMusicBG,nativeResumeMusicBG
+533930,60,<global>,nativeStopMusicBG,nativeStopMusicBG
+533978,8,<global>,nativeGetisplaying,nativeGetisplaying
+533980,60,<global>,nativePauseMusicBG,nativePauseMusicBG
+5339c8,60,<global>,nativePlayBGMusic,nativePlayBGMusic
+533a10,60,<global>,nativeGetNumPlaylists,nativeGetNumPlaylists
+533a58,200,<global>,nativeGetPlaylistName,nativeGetPlaylistName
+533b2c,164,<global>,Java_com_gameloft_android_GAND_GloftD2SS_Musicplayer_nativeDisplayMusicTitle,Java_com_gameloft_android_GAND_GloftD2SS_Musicplayer_nativeDisplayMusicTitle
+534178,4,<global>,_ZdaPvN6glitch6memory13E_MEMORY_HINTEiPKci,"operator delete[](void*, glitch::memory::E_MEMORY_HINT, int, char const*, int)"
+53417c,4,<global>,_ZdlPvN6glitch6memory13E_MEMORY_HINTEiPKci,"operator delete(void*, glitch::memory::E_MEMORY_HINT, int, char const*, int)"
+534190,4,<global>,_ZdaPvN6glitch6memory13E_MEMORY_HINTE,"operator delete[](void*, glitch::memory::E_MEMORY_HINT)"
+534194,4,<global>,_ZdlPvN6glitch6memory13E_MEMORY_HINTE,"operator delete(void*, glitch::memory::E_MEMORY_HINT)"
+534198,4,<global>,_ZnajN6glitch6memory13E_MEMORY_HINTEiPKci,"operator new[](unsigned int, glitch::memory::E_MEMORY_HINT, int, char const*, int)"
+53419c,4,<global>,_ZnwjN6glitch6memory13E_MEMORY_HINTEiPKci,"operator new(unsigned int, glitch::memory::E_MEMORY_HINT, int, char const*, int)"
+5341a8,4,<global>,_ZnajN6glitch6memory13E_MEMORY_HINTE,"operator new[](unsigned int, glitch::memory::E_MEMORY_HINT)"
+5341ac,4,<global>,_ZnwjN6glitch6memory13E_MEMORY_HINTE,"operator new(unsigned int, glitch::memory::E_MEMORY_HINT)"
+58a75c,96,<global>,_ZN12_GLOBAL__N_16SStats5resetEPN6glitch2io11IAttributesE.clone.3,(anonymous namespace)::SStats::reset(glitch::io::IAttributes*)
+69f54c,36,<global>,_Z22util_number_is_power_2j,util_number_is_power_2(unsigned int)
+752b44,4,<global>,_ZnajN3swf7MemHintEPKci,"operator new[](unsigned int, swf::MemHint, char const*, int)"
+752b48,4,<global>,_ZnwjN3swf7MemHintEPKci,"operator new(unsigned int, swf::MemHint, char const*, int)"
+752ba4,4,<global>,_ZnajN3swf7MemHintE,"operator new[](unsigned int, swf::MemHint)"
+752ba8,4,<global>,_ZnwjN3swf7MemHintE,"operator new(unsigned int, swf::MemHint)"
+7a7c30,4,<global>,_ZL11fs_callbackPN7gameswf9characterEPKcS3_,"fs_callback(gameswf::character*, char const*, char const*)"
+7a8420,68,<global>,_ZL11message_logPKc,message_log(char const*)
+7a846c,80,<global>,_ZL12log_callbackbPKc,"log_callback(bool, char const*)"
+7a8c6c,104,<global>,_Z19CanHandleMouseEventPN7gameswf9characterE,CanHandleMouseEvent(gameswf::character*)
+7a8cd8,4,<global>,_Z38sprite_can_handle_mouse_event_callbackPN7gameswf9characterE,sprite_can_handle_mouse_event_callback(gameswf::character*)
+7a9954,48,<global>,_ZL11file_openerPKc,file_opener(char const*)
+7ad81c,108,<global>,_ZL26fscommand_callback_handlerPN7gameswf9characterEPKcS3_,"fscommand_callback_handler(gameswf::character*, char const*, char const*)"
+7d3c24,28,<global>,_Z5crossPfS_S_,"cross(float*, float*, float*)"
+7d4584,28,<global>,_Z9normalizePf,normalize(float*)
+7dcb6c,220,<global>,_ZL8LongAxisPd,LongAxis(double*)
+7decbc,156,<global>,_ZL13TopLeftRegionP12ActiveRegion,TopLeftRegion(ActiveRegion*)
+7f5038,40,<global>,_ZL17ClipSegmentToLineP10ClipVertexS0_RK6b2Vec2f,"ClipSegmentToLine(ClipVertex*, ClipVertex*, b2Vec2 const&, float)"
+7f5234,68,<global>,_ZL14EdgeSeparationPK14b2PolygonShapeRK7b2XFormiS1_S4_,"EdgeSeparation(b2PolygonShape const*, b2XForm const&, int, b2PolygonShape const*, b2XForm const&)"
+7f5544,48,<global>,_ZL17FindMaxSeparationPiPK14b2PolygonShapeRK7b2XFormS2_S5_,"FindMaxSeparation(int*, b2PolygonShape const*, b2XForm const&, b2PolygonShape const*, b2XForm const&)"
+7f8018,80,<global>,_ZL12ProcessThreeP6b2Vec2S0_S0_S0_S0_,"ProcessThree(b2Vec2*, b2Vec2*, b2Vec2*, b2Vec2*, b2Vec2*)"
+7f881c,76,<global>,_ZL8InPointsRK6b2Vec2PS0_i,"InPoints(b2Vec2 const&, b2Vec2 const*, int)"
+7f89e0,60,<global>,_ZL10ProcessTwoP6b2Vec2S0_S0_S0_S0_,"ProcessTwo(b2Vec2*, b2Vec2*, b2Vec2*, b2Vec2*, b2Vec2*)"
+7f8bec,44,<global>,_Z15DistanceGenericI14b2PolygonShapeS0_EfP6b2Vec2S2_PKT_RK7b2XFormPKT0_S8_,"float DistanceGeneric<b2PolygonShape, b2PolygonShape>(b2Vec2*, b2Vec2*, b2PolygonShape const*, b2XForm const&, b2PolygonShape const*, b2XForm const&)"
+7f91d4,52,<global>,_ZL10DistancePCP6b2Vec2S0_PK14b2PolygonShapeRK7b2XFormPK13b2CircleShapeS6_,"DistancePC(b2Vec2*, b2Vec2*, b2PolygonShape const*, b2XForm const&, b2CircleShape const*, b2XForm const&)"
+8212d0,40,<global>,_ZL15PrintDatapacketP10DataPacket,PrintDatapacket(DataPacket*)
+827970,80,<global>,_Z9TransToIpRPc,TransToIp(char*&)
+8279d8,196,<global>,_Z24ParseDedicatedServerInfoR21_tDedicatedServerInfoP10DataPacket,"ParseDedicatedServerInfo(_tDedicatedServerInfo&, DataPacket*)"
+828b64,160,<global>,_Z8_DBG_OUTPKcz,"_DBG_OUT(char const*, ...)"
+82a788,224,<global>,_Z20ConvertUnicodeToUTF8PcPKti,"ConvertUnicodeToUTF8(char*, unsigned short const*, int)"
+82a868,208,<global>,_Z20ConvertUTF8ToUnicodePtPKci,"ConvertUTF8ToUnicode(unsigned short*, char const*, int)"
+82a938,216,<global>,_Z17UTF8ToUnicode_OldPtPKc,"UTF8ToUnicode_Old(unsigned short*, char const*)"
+82aa10,452,<global>,_Z24ConvertUnicodeToUTF8_OldPcPKt,"ConvertUnicodeToUTF8_Old(char*, unsigned short const*)"
+82b6cc,92,<global>,_Z21TranslateUtf82UnicodePPtPcii,"TranslateUtf82Unicode(unsigned short**, char*, int, int)"
+82b728,92,<global>,_Z21TranslateUnicode2Utf8PPcPtii,"TranslateUnicode2Utf8(char**, unsigned short*, int, int)"
+840000,140,<global>,_Z8in_cksumPti,"in_cksum(unsigned short*, int)"
+841ba8,92,<global>,_Z26threadGetHostByNameProcessPv,threadGetHostByNameProcess(void*)
+843b2c,76,<global>,_Z11trimHTMLstrSs,"trimHTMLstr(std::basic_string<char, std::char_traits<char>, std::allocator<char> >)"
+8456e4,16,<global>,_Z9threadfunPv,threadfun(void*)
+862bf4,88,<global>,_Z8_GetTimev,_GetTime()
+876364,124,<global>,_ZL11bit_reversej,bit_reverse(unsigned int)
+8763e0,220,<global>,_ZL4ilogi,ilog(int)
+8764d8,32,<global>,_ZL14uint32_comparePKvS0_,"uint32_compare(void const*, void const*)"
+8764f8,32,<global>,_Z13point_comparePKvS0_,"point_compare(void const*, void const*)"
+876518,52,<global>,_ZL22imdct_step3_iter0_loopiPfiiS_,"imdct_step3_iter0_loop(int, float*, int, int, float*)"
+8767cc,112,<global>,_ZL24imdct_step3_inner_r_loopiPfiiS_i,"imdct_step3_inner_r_loop(int, float*, int, int, float*, int)"
+876b34,28,<global>,_ZL7iter_54Pf,iter_54(float*)
+876e8c,696,<global>,_ZL21convert_samples_shortiPPsiiPPfii,"convert_samples_short(int, short**, int, int, float**, int, int)"
+8771bc,760,<global>,_ZL34convert_channels_short_interleavediPsiPPfii,"convert_channels_short_interleaved(int, short*, int, float**, int, int)"
+8784f4,52,<global>,_Z11dct_iv_slowPfi,"dct_iv_slow(float*, int)"
+89c29c,48,<global>,LC_API_STRCHRFIND,LC_API_STRCHRFIND
+89c2f8,4,<global>,LC_API_STRCHR,LC_API_STRCHR
+89c2fc,4,<global>,LC_DEBUG_INIT,LC_DEBUG_INIT
+89c300,4,<global>,LC_DEBUG_FINALIZE,LC_DEBUG_FINALIZE
+89c304,12,<global>,LC_DEBUG_OUT,LC_DEBUG_OUT
+89c310,4,<global>,LC_API_FTOA,LC_API_FTOA
+89c314,180,<global>,LC_API_ITOA,LC_API_ITOA
+89c42c,232,<global>,_Z22ConvertUnicodeToUTF8LCPcPKti,"ConvertUnicodeToUTF8LC(char*, unsigned short const*, int)"
+89c514,200,<global>,_Z22ConvertUTF8ToUnicodeLCPtPKci,"ConvertUTF8ToUnicodeLC(unsigned short*, char const*, int)"
+89c5dc,64,<global>,_Z19UTF8ToUnicode_OldLCPtPKc,"UTF8ToUnicode_OldLC(unsigned short*, char const*)"
+89c6ac,444,<global>,_Z26ConvertUnicodeToUTF8_OldLCPcPKt,"ConvertUnicodeToUTF8_OldLC(char*, unsigned short const*)"
+89c88c,132,<global>,LC_API_PARSE_DATA,LC_API_PARSE_DATA
+89c99c,4,<global>,_Z21LC_API_GetNationalityPc,LC_API_GetNationality(char*)
+89c9a0,116,<global>,getValueLC,getValueLC
+89ca14,104,<global>,_Z14LC_API_TOLOWERPKcPc,"LC_API_TOLOWER(char const*, char*)"
+89ca7c,32,<global>,_Z26LC_DEBUG_SAVE_RECVDATA_LOGPKci,"LC_DEBUG_SAVE_RECVDATA_LOG(char const*, int)"
+89caa4,32,<global>,_Z26LC_DEBUG_SAVE_SENDDATA_LOGPKci,"LC_DEBUG_SAVE_SENDDATA_LOG(char const*, int)"
+89cacc,36,<global>,LC_API_FILE_WRITE,LC_API_FILE_WRITE
+89caf8,24,<global>,_Z27LC_DEBUG_CLOSE_RECVDATA_LOGv,LC_DEBUG_CLOSE_RECVDATA_LOG()
+89cb18,24,<global>,_Z27LC_DEBUG_CLOSE_SENDDATA_LOGv,LC_DEBUG_CLOSE_SENDDATA_LOG()
+89cb38,44,<global>,LC_API_FILE_CLOSE,LC_API_FILE_CLOSE
+89cb6c,48,<global>,_Z26LC_DEBUG_OPEN_RECVDATA_LOGv,LC_DEBUG_OPEN_RECVDATA_LOG()
+89cbac,48,<global>,_Z26LC_DEBUG_OPEN_SENDDATA_LOGv,LC_DEBUG_OPEN_SENDDATA_LOG()
+89cbec,88,<global>,LC_API_FILE_OPEN,LC_API_FILE_OPEN
+89cc4c,72,<global>,LC_API_IP_INT2STR,LC_API_IP_INT2STR
+89cc98,4,<global>,LC_API_STRLEN,LC_API_STRLEN
+89cc9c,52,<global>,LC_API_GET_RANDOM,LC_API_GET_RANDOM
+89cd00,12,<global>,LC_API_STRTRIM,LC_API_STRTRIM
+89ce28,104,<global>,LC_API_FILE_GET_LENGTH,LC_API_FILE_GET_LENGTH
+89ce98,36,<global>,LC_API_FILE_READ,LC_API_FILE_READ
+89cec4,8,<global>,LC_API_ATOF,LC_API_ATOF
+89cecc,4,<global>,LC_API_ATOI,LC_API_ATOI
+89ced0,4,<global>,LC_API_STRSTR,LC_API_STRSTR
+89ced4,4,<global>,LC_API_STRCAT,LC_API_STRCAT
+89ced8,4,<global>,LC_API_STRNCPY,LC_API_STRNCPY
+89cedc,4,<global>,LC_API_STRCPY,LC_API_STRCPY
+89cee0,4,<global>,LC_API_STRCASECMP,LC_API_STRCASECMP
+89cee4,4,<global>,LC_API_STRNCMP,LC_API_STRNCMP
+89cee8,4,<global>,LC_API_STRCMP,LC_API_STRCMP
+89ceec,12,<global>,LC_API_MEMCPY,LC_API_MEMCPY
+89cf00,4,<global>,LC_API_MEMSET,LC_API_MEMSET
+89d264,92,<global>,_Z23TranslateUtf82UnicodeLCPPtPcii,"TranslateUtf82UnicodeLC(unsigned short**, char*, int, int)"
+89d2c0,92,<global>,_Z23TranslateUnicode2Utf8LCPPcPtii,"TranslateUnicode2Utf8LC(char**, unsigned short*, int, int)"
+89d368,60,<global>,_Z10OS_GetTimev,OS_GetTime()
+89f8a0,48,<global>,_Z28threadGetHostByNameProcessLCPv,threadGetHostByNameProcessLC(void*)
+52eaa8,32,ADevice,_ZN7ADevice15CallJNIFuncBoolEP7_jclassP10_jmethodID,"ADevice::CallJNIFuncBool(_jclass*, _jmethodID*)"
+52eac8,36,ADevice,_ZN7ADevice12isWifiEnableEv,ADevice::isWifiEnable()
+52eb2c,40,ADevice,_ZN7ADevice18CallJNIFuncSendIntEP7_jclassP10_jmethodIDi,"ADevice::CallJNIFuncSendInt(_jclass*, _jmethodID*, int)"
+52eb54,40,ADevice,_ZN7ADevice13setUniqueCodeEi,ADevice::setUniqueCode(int)
+52eb88,88,ADevice,_ZN7ADevice19CallJNIFuncSendCharEP7_jclassP10_jmethodIDPc,"ADevice::CallJNIFuncSendChar(_jclass*, _jmethodID*, char*)"
+52ebe0,196,ADevice,_ZN7ADevice15CallJNIFuncCharEP7_jclassP10_jmethodIDPciS4_,"ADevice::CallJNIFuncChar(_jclass*, _jmethodID*, char*, int, char*)"
+52eca4,148,ADevice,_ZN7ADevice15CallJNIFuncCharEP7_jclassP10_jmethodIDPci,"ADevice::CallJNIFuncChar(_jclass*, _jmethodID*, char*, int)"
+52ed38,44,ADevice,_ZN7ADevice12getUserAgentEPc,ADevice::getUserAgent(char*)
+52ed70,52,ADevice,_ZN7ADevice11getHostNameEPci,"ADevice::getHostName(char*, int)"
+52edb0,8,ADevice,_ZN7ADevice11getHostNameEPc,ADevice::getHostName(char*)
+52edb8,52,ADevice,_ZN7ADevice14getGameVersionEPci,"ADevice::getGameVersion(char*, int)"
+52edf8,8,ADevice,_ZN7ADevice14getGameVersionEPc,ADevice::getGameVersion(char*)
+52ee00,44,ADevice,_ZN7ADevice13getLineNumberEPc,ADevice::getLineNumber(char*)
+52ee38,44,ADevice,_ZN7ADevice15getOperatorNameEPc,ADevice::getOperatorName(char*)
+52ee70,44,ADevice,_ZN7ADevice7getIMEIEPc,ADevice::getIMEI(char*)
+52eea8,64,ADevice,_ZN7ADevice11currentTimeEv,ADevice::currentTime()
+52eee8,412,ADevice,_ZN7ADevice4InitEP7_JNIEnvP7_jclass,"ADevice::Init(_JNIEnv*, _jclass*)"
+33d718,4,AccelerometerBase,_ZN17AccelerometerBaseD2Ev,AccelerometerBase::~AccelerometerBase()
+33d71c,4,AccelerometerBase,_ZN17AccelerometerBaseD1Ev,AccelerometerBase::~AccelerometerBase()
+33d720,36,AccelerometerBase,_ZN17AccelerometerBase5clearEv,AccelerometerBase::clear()
+33d744,4,AccelerometerBase,_ZN17AccelerometerBase6updateEd,AccelerometerBase::update(double)
+33d77c,20,AccelerometerBase,_ZN17AccelerometerBaseD0Ev,AccelerometerBase::~AccelerometerBase()
+33d798,48,AccelerometerBase,_ZN17AccelerometerBase11_calcAnglesEv,AccelerometerBase::_calcAngles()
+33d8dc,48,AccelerometerBase,_ZN17AccelerometerBase5movedEfff,"AccelerometerBase::moved(float, float, float)"
+33da0c,80,AccelerometerBase,_ZN17AccelerometerBaseC1Ev,AccelerometerBase::AccelerometerBase()
+33da64,80,AccelerometerBase,_ZN17AccelerometerBaseC2Ev,AccelerometerBase::AccelerometerBase()
+33db64,16,AccelerometerIPhone,_ZN19AccelerometerIPhone5movedEfff,"AccelerometerIPhone::moved(float, float, float)"
+33db74,44,AccelerometerIPhone,_ZN19AccelerometerIPhoneD1Ev,AccelerometerIPhone::~AccelerometerIPhone()
+33dba8,20,AccelerometerIPhone,_ZN19AccelerometerIPhoneD0Ev,AccelerometerIPhone::~AccelerometerIPhone()
+33dbc4,44,AccelerometerIPhone,_ZN19AccelerometerIPhoneD2Ev,AccelerometerIPhone::~AccelerometerIPhone()
+33dbf8,44,AccelerometerIPhone,_ZN19AccelerometerIPhoneC1Ev,AccelerometerIPhone::AccelerometerIPhone()
+33dc2c,44,AccelerometerIPhone,_ZN19AccelerometerIPhoneC2Ev,AccelerometerIPhone::AccelerometerIPhone()
+487bb0,552,Array2d,_ZN7Array2dIPN3rnd4TileEE5ClearEv,Array2d<rnd::Tile*>::Clear()
+487dd8,172,Array2d,_ZN7Array2dIPN3rnd4TileEEC1Ev,Array2d<rnd::Tile*>::Array2d()
+48b578,644,Array2d,_ZN7Array2dIPN3rnd4TileEE14EnsurePositionEii,"Array2d<rnd::Tile*>::EnsurePosition(int, int)"
+48b7fc,96,Array2d,_ZN7Array2dIPN3rnd4TileEEclEii,"Array2d<rnd::Tile*>::operator()(int, int)"
+89bed0,4,ConfigFile,_ZN10ConfigFileC2Ev,ConfigFile::ConfigFile()
+89bed4,4,ConfigFile,_ZN10ConfigFileC1Ev,ConfigFile::ConfigFile()
+89bed8,4,ConfigFile,_ZN10ConfigFileD2Ev,ConfigFile::~ConfigFile()
+89bedc,4,ConfigFile,_ZN10ConfigFileD1Ev,ConfigFile::~ConfigFile()
+89bee0,8,ConfigFile,_ZN10ConfigFile6EncodeEPKcS1_S1_Pc,"ConfigFile::Encode(char const*, char const*, char const*, char*)"
+89bee8,8,ConfigFile,_ZN10ConfigFile4SeedEv,ConfigFile::Seed()
+89bef0,52,ConfigFile,_ZN10ConfigFile3XOREPKcS1_Pc,"ConfigFile::XOR(char const*, char const*, char*)"
+89bfb4,152,ConfigFile,_ZN10ConfigFile6DecodeEPKcPcS2_S2_,"ConfigFile::Decode(char const*, char*, char*, char*)"
+32fdc0,104,Console,_ZN7Console12_destroyListEv,Console::_destroyList()
+32fe28,868,Console,_ZN7Console11_createListERSt6vectorISsSaISsEEPc,"Console::_createList(std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, char*)"
+330198,40,Console,_ZN7Console10_addToListEPKc,Console::_addToList(char const*)
+3301c4,16,Console,_ZN7Console17_setMenuLevelListEv,Console::_setMenuLevelList()
+3301d8,4,Console,_ZN7Console15_setMenuCamerasEv,Console::_setMenuCameras()
+3301dc,16,Console,_ZN7Console25_setMenuLoadQuestProgressEv,Console::_setMenuLoadQuestProgress()
+33026c,4,Console,_ZN7Console24SetShowRoomDisplayedAnimEi,Console::SetShowRoomDisplayedAnim(int)
+330270,68,Console,_ZN7Console6UpdateEd,Console::Update(double)
+3306a8,140,Console,_ZN7Console19CreateQuestSaveFileEv,Console::CreateQuestSaveFile()
+3307ac,508,Console,_ZNK7Console19_getMaxNumberOfItemEv,Console::_getMaxNumberOfItem() const
+3309d4,96,Console,_ZN7Console15_cmdReloadLevelEv,Console::_cmdReloadLevel()
+330b6c,60,Console,_ZN7Console28_setMenuLoadModuleFolderListEv,Console::_setMenuLoadModuleFolderList()
+330bf0,192,Console,_ZN7Console16_setMenuAnimListEv,Console::_setMenuAnimList()
+330cc0,160,Console,_ZN7Console18_setMenuVFXSetListEv,Console::_setMenuVFXSetList()
+330d70,160,Console,_ZN7Console15_setMenuVFXListEv,Console::_setMenuVFXList()
+330e20,172,Console,_ZN7Console17_setLootTableListEv,Console::_setLootTableList()
+330ee0,268,Console,_ZN7Console19_setMenuCharModulesEv,Console::_setMenuCharModules()
+330ff8,312,Console,_ZN7Console15_setMenuScriptsEv,Console::_setMenuScripts()
+331140,348,Console,_ZN7Console13_setMenuMenusEv,Console::_setMenuMenus()
+3312bc,296,Console,_ZN7Console17_setMenuListenersEv,Console::_setMenuListeners()
+3313f8,316,Console,_ZN7Console16_setMenuWorldMapEv,Console::_setMenuWorldMap()
+331548,320,Console,_ZN7Console23_setMenuLevelListPyDataEv,Console::_setMenuLevelListPyData()
+33169c,244,Console,_ZN7Console13_setMenuStatsEv,Console::_setMenuStats()
+33179c,396,Console,_ZN7Console20DBG_TryStartingLevelEPKc,Console::DBG_TryStartingLevel(char const*)
+331944,96,Console,_ZN7ConsoleD1Ev,Console::~Console()
+331a10,20,Console,_ZN7ConsoleD0Ev,Console::~Console()
+331a2c,96,Console,_ZN7ConsoleD2Ev,Console::~Console()
+331b68,152,Console,_ZN7Console21InitShowRoomCameraPosEv,Console::InitShowRoomCameraPos()
+331cfc,100,Console,_ZN7Console23UpdateToggleDisplayListEv,Console::UpdateToggleDisplayList()
+331f7c,100,Console,_ZN7Console23UpdateCharacterShowRoomEv,Console::UpdateCharacterShowRoom()
+3320ec,324,Console,_ZN7Console17_setMenuQuestListEv,Console::_setMenuQuestList()
+332488,112,Console,_ZN7Console16_setMenuCommandsEv,Console::_setMenuCommands()
+3325cc,84,Console,_ZN7Console17LoadQuestSaveFileEPKc,Console::LoadQuestSaveFile(char const*)
+33271c,2464,Console,_ZN7Console16onEventNotOpenedEPK6IEventPK12EventManager,"Console::onEventNotOpened(IEvent const*, EventManager const*)"
+33394c,96,Console,_ZN7Console22_setMenuLoadModuleListEj,Console::_setMenuLoadModuleList(unsigned int)
+333a4c,164,Console,_ZN7ConsoleC1Ev,Console::Console()
+33401c,164,Console,_ZN7ConsoleC2Ev,Console::Console()
+334764,464,Console,_ZN7Console20_setMenuDebugModulesEv,Console::_setMenuDebugModules()
+334940,464,Console,_ZN7Console21_setMenuDebugSwitchesEv,Console::_setMenuDebugSwitches()
+334b1c,188,Console,_ZN7Console8_setMenuEv,Console::_setMenu()
+334bd8,300,Console,_ZN7Console6ToggleEv,Console::Toggle()
+334d1c,3344,Console,_ZN7Console11_selectItemEi,Console::_selectItem(int)
+335b14,1144,Console,_ZN7Console7onEventEPK6IEventPK12EventManager,"Console::onEvent(IEvent const*, EventManager const*)"
+381668,56,Device,_ZN6Device15IsFixedPipelineEv,Device::IsFixedPipeline()
+3816a8,128,Device,_ZN6Device22IsProgrammablePipelineEv,Device::IsProgrammablePipeline()
+38173c,8,Device,_ZN6Device8GetModelEv,Device::GetModel()
+381744,8,Device,_ZN6Device21IsiOSVersionSupportedEPKc,Device::IsiOSVersionSupported(char const*)
+38174c,4,Device,_ZN6Device17IsHighPerformanceEv,Device::IsHighPerformance()
+381750,8,Device,_ZN6Device15IsIphoneHighRezEv,Device::IsIphoneHighRez()
+381758,20,Device,_ZN6Device19GetScreenResolutionEv,Device::GetScreenResolution()
+38176c,8,Device,_ZN6Device20IsMultitaskSupportedEv,Device::IsMultitaskSupported()
+381774,8,Device,_ZN6Device21IsGameCenterSupportedEv,Device::IsGameCenterSupported()
+38177c,8,Device,_ZN6Device20IsBluetoothSupportedEv,Device::IsBluetoothSupported()
+381954,176,Device,_ZN6Device21GetPreferredLanguagesEv,Device::GetPreferredLanguages()
+33d714,4,EvAcceleration,_ZN14EvAccelerationD1Ev,EvAcceleration::~EvAcceleration()
+33d748,36,EvAcceleration,_ZN14EvAccelerationD0Ev,EvAcceleration::~EvAcceleration()
+31d8f4,4,EvGamepad,_ZN9EvGamepadD1Ev,EvGamepad::~EvGamepad()
+31fc88,36,EvGamepad,_ZN9EvGamepadD0Ev,EvGamepad::~EvGamepad()
+40691c,4,EvGamepadAxis,_ZN13EvGamepadAxisD1Ev,EvGamepadAxis::~EvGamepadAxis()
+406928,36,EvGamepadAxis,_ZN13EvGamepadAxisD0Ev,EvGamepadAxis::~EvGamepadAxis()
+31d8e4,4,EvKeyboard,_ZN10EvKeyboardD1Ev,EvKeyboard::~EvKeyboard()
+31fc54,36,EvKeyboard,_ZN10EvKeyboardD0Ev,EvKeyboard::~EvKeyboard()
+31d8ec,4,EvMouseButton,_ZN13EvMouseButtonD1Ev,EvMouseButton::~EvMouseButton()
+31fd24,36,EvMouseButton,_ZN13EvMouseButtonD0Ev,EvMouseButton::~EvMouseButton()
+31d8e8,4,EvMouseMove,_ZN11EvMouseMoveD1Ev,EvMouseMove::~EvMouseMove()
+31fcbc,36,EvMouseMove,_ZN11EvMouseMoveD0Ev,EvMouseMove::~EvMouseMove()
+31d8f0,4,EvMouseWheel,_ZN12EvMouseWheelD1Ev,EvMouseWheel::~EvMouseWheel()
+31fcf0,36,EvMouseWheel,_ZN12EvMouseWheelD0Ev,EvMouseWheel::~EvMouseWheel()
+33a9a0,4,EvTouchScreenMove,_ZN17EvTouchScreenMoveD1Ev,EvTouchScreenMove::~EvTouchScreenMove()
+33b43c,36,EvTouchScreenMove,_ZN17EvTouchScreenMoveD0Ev,EvTouchScreenMove::~EvTouchScreenMove()
+33a99c,4,EvTouchScreenPress,_ZN18EvTouchScreenPressD1Ev,EvTouchScreenPress::~EvTouchScreenPress()
+33b470,36,EvTouchScreenPress,_ZN18EvTouchScreenPressD0Ev,EvTouchScreenPress::~EvTouchScreenPress()
+34df94,76,FileSystemBase,_ZN14FileSystemBase14doesFileExistsEPKc,FileSystemBase::doesFileExists(char const*)
+34dfe0,68,FileSystemBase,_ZN14FileSystemBase18doesResourceExistsEPKc,FileSystemBase::doesResourceExists(char const*)
+34e0fc,84,FileSystemBase,_ZN14FileSystemBase20decodeObfuscatedDataEiPviS0_,"FileSystemBase::decodeObfuscatedData(int, void*, int, void*)"
+34e150,92,FileSystemBase,_ZN14FileSystemBase18doesSavefileExistsEPKc,FileSystemBase::doesSavefileExists(char const*)
+34e1ac,40,FileSystemBase,_ZNK14FileSystemBase14formatFilePathERKSbIcSt11char_traitsIcEN6glitch4core10SAllocatorIcLNS2_6memory13E_MEMORY_HINTE0EEEE,"FileSystemBase::formatFilePath(std::basic_string<char, std::char_traits<char>, glitch::core::SAllocator<char, (glitch::memory::E_MEMORY_HINT)0> > const&) const"
+34e1d4,64,FileSystemBase,_ZN14FileSystemBase24changeWorkingDirectoryToEPKc,FileSystemBase::changeWorkingDirectoryTo(char const*)
+34e480,44,FileSystemBase,_ZN14FileSystemBaseD1Ev,FileSystemBase::~FileSystemBase()
+34e4b4,20,FileSystemBase,_ZN14FileSystemBaseD0Ev,FileSystemBase::~FileSystemBase()
+34e4d0,44,FileSystemBase,_ZN14FileSystemBaseD2Ev,FileSystemBase::~FileSystemBase()
+34e504,44,FileSystemBase,_ZN14FileSystemBaseC1Ev,FileSystemBase::FileSystemBase()
+34e538,44,FileSystemBase,_ZN14FileSystemBaseC2Ev,FileSystemBase::FileSystemBase()
+34e5f4,140,FileSystemBase,_ZNK14FileSystemBase15getAbsolutePathERKSbIcSt11char_traitsIcEN6glitch4core10SAllocatorIcLNS2_6memory13E_MEMORY_HINTE0EEEE,"FileSystemBase::getAbsolutePath(std::basic_string<char, std::char_traits<char>, glitch::core::SAllocator<char, (glitch::memory::E_MEMORY_HINT)0> > const&) const"
+34e688,592,FileSystemBase,_ZN14FileSystemBase17createAndOpenFileEPKc,FileSystemBase::createAndOpenFile(char const*)
+34e96c,96,FileSystemBase,_ZNK14FileSystemBase18ApplyFilenameHacksEPKc,FileSystemBase::ApplyFilenameHacks(char const*) const
+34eb94,8,FileSystemWin32,_ZNK15FileSystemWin3211_FileHandle7canReadEv,FileSystemWin32::_FileHandle::canRead() const
+34eb9c,8,FileSystemWin32,_ZNK15FileSystemWin3211_FileHandle8canWriteEv,FileSystemWin32::_FileHandle::canWrite() const
+34eba4,8,FileSystemWin32,_ZNK15FileSystemWin3211getRootPathEv,FileSystemWin32::getRootPath() const
+34ebac,8,FileSystemWin32,_ZNK15FileSystemWin3216getResourcesPathEv,FileSystemWin32::getResourcesPath() const
+34ebb4,12,FileSystemWin32,_ZNK15FileSystemWin3216getSavefilesPathEv,FileSystemWin32::getSavefilesPath() const
+34ebc0,4,FileSystemWin32,_ZN15FileSystemWin3212copySavefileEPKc,FileSystemWin32::copySavefile(char const*)
+34ebc4,8,FileSystemWin32,_ZNK15FileSystemWin3212_getFileInfoEPKcS1_Pv,"FileSystemWin32::_getFileInfo(char const*, char const*, void*) const"
+34ebcc,48,FileSystemWin32,_ZN15FileSystemWin329closeFileERP11IFileStream,FileSystemWin32::closeFile(IFileStream*&)
+34ebfc,4,FileSystemWin32,_ZNK15FileSystemWin3210getFoldersEPKcRSt6vectorISsSaISsEE,"FileSystemWin32::getFolders(char const*, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) const"
+34ec00,4,FileSystemWin32,_ZNK15FileSystemWin3215isFileNewerThanEPKcS1_,"FileSystemWin32::isFileNewerThan(char const*, char const*) const"
+34edf0,32,FileSystemWin32,_ZNK15FileSystemWin3211_FileHandle4tellEv,FileSystemWin32::_FileHandle::tell() const
+34ee10,16,FileSystemWin32,_ZN15FileSystemWin3211_FileHandle4seekEy,FileSystemWin32::_FileHandle::seek(unsigned long long)
+34ee20,84,FileSystemWin32,_ZNK15FileSystemWin3211_FileHandle4sizeEv,FileSystemWin32::_FileHandle::size() const
+34ee74,84,FileSystemWin32,_ZN15FileSystemWin3211_FileHandle5writeEPKvy,"FileSystemWin32::_FileHandle::write(void const*, unsigned long long)"
+34eec8,144,FileSystemWin32,_ZN15FileSystemWin3211_FileHandle4readEPvy,"FileSystemWin32::_FileHandle::read(void*, unsigned long long)"
+34ef58,172,FileSystemWin32,_ZNK15FileSystemWin3211_FileHandle4peekEPvy,"FileSystemWin32::_FileHandle::peek(void*, unsigned long long) const"
+34f068,148,FileSystemWin32,_ZN15FileSystemWin329_getPathsEv,FileSystemWin32::_getPaths()
+34f10c,332,FileSystemWin32,_ZNK15FileSystemWin3214backupSavefileEPKcS1_,"FileSystemWin32::backupSavefile(char const*, char const*) const"
+34f274,192,FileSystemWin32,_ZNK15FileSystemWin3214deleteSavefileEPKc,FileSystemWin32::deleteSavefile(char const*) const
+34f34c,16,FileSystemWin32,_ZN15FileSystemWin3212makeFullPathEPKcS1_Pci,"FileSystemWin32::makeFullPath(char const*, char const*, char*, int)"
+34f35c,104,FileSystemWin32,_ZN15FileSystemWin3212makeFullPathEPKwS1_Pwi,"FileSystemWin32::makeFullPath(wchar_t const*, wchar_t const*, wchar_t*, int)"
+34f670,44,FileSystemWin32,_ZN15FileSystemWin32D1Ev,FileSystemWin32::~FileSystemWin32()
+34f6a4,20,FileSystemWin32,_ZN15FileSystemWin32D0Ev,FileSystemWin32::~FileSystemWin32()
+34f6c0,44,FileSystemWin32,_ZN15FileSystemWin32D2Ev,FileSystemWin32::~FileSystemWin32()
+34f6f4,140,FileSystemWin32,_ZN15FileSystemWin32C1Ev,FileSystemWin32::FileSystemWin32()
+34f788,140,FileSystemWin32,_ZN15FileSystemWin32C2Ev,FileSystemWin32::FileSystemWin32()
+34f8a4,676,FileSystemWin32,_ZNK15FileSystemWin3214formatFilePathERKSbIcSt11char_traitsIcEN6glitch4core10SAllocatorIcLNS2_6memory13E_MEMORY_HINTE0EEEE,"FileSystemWin32::formatFilePath(std::basic_string<char, std::char_traits<char>, glitch::core::SAllocator<char, (glitch::memory::E_MEMORY_HINT)0> > const&) const"
+34fb7c,56,FileSystemWin32,_ZN15FileSystemWin3211_FileHandleD1Ev,FileSystemWin32::_FileHandle::~_FileHandle()
+34fbbc,20,FileSystemWin32,_ZN15FileSystemWin3211_FileHandleD0Ev,FileSystemWin32::_FileHandle::~_FileHandle()
+34fbd8,56,FileSystemWin32,_ZN15FileSystemWin3211_FileHandleD2Ev,FileSystemWin32::_FileHandle::~_FileHandle()
+34fc18,528,FileSystemWin32,_ZN15FileSystemWin3211_FileHandleC1EPKcS2_bb,"FileSystemWin32::_FileHandle::_FileHandle(char const*, char const*, bool, bool)"
+34fe50,148,FileSystemWin32,_ZN15FileSystemWin3213_createHandleEPKcS1_bb,"FileSystemWin32::_createHandle(char const*, char const*, bool, bool)"
+34fee4,68,FileSystemWin32,_ZN15FileSystemWin3212openSavefileEPKcb,"FileSystemWin32::openSavefile(char const*, bool)"
+34ff28,92,FileSystemWin32,_ZN15FileSystemWin3212openResourceEPKc,FileSystemWin32::openResource(char const*)
+34ff84,44,FileSystemWin32,_ZN15FileSystemWin3213openTraceFileEPKc,FileSystemWin32::openTraceFile(char const*)
+34ffb0,128,FileSystemWin32,_ZN15FileSystemWin328openFileEPKcbb,"FileSystemWin32::openFile(char const*, bool, bool)"
+35003c,528,FileSystemWin32,_ZN15FileSystemWin3211_FileHandleC2EPKcS2_bb,"FileSystemWin32::_FileHandle::_FileHandle(char const*, char const*, bool, bool)"
+35041c,380,FileSystemWin32,_ZNK15FileSystemWin3216getFilesMatchingEPKcS1_RSt6vectorISsSaISsEE,"FileSystemWin32::getFilesMatching(char const*, char const*, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) const"
+3505a0,248,FileSystemWin32,_ZNK15FileSystemWin328getFilesEPKcRSt6vectorISsSaISsEE,"FileSystemWin32::getFiles(char const*, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) const"
+31f78c,4,GCSingleton,_ZN11GCSingletonI10GameCenterED1Ev,GCSingleton<GameCenter>::~GCSingleton()
+31fbec,36,GCSingleton,_ZN11GCSingletonI10GameCenterED0Ev,GCSingleton<GameCenter>::~GCSingleton()
+32bd08,164,GCSingleton,_ZN11GCSingletonI10GameCenterE11GetInstanceEv,GCSingleton<GameCenter>::GetInstance()
+34eb5c,4,IFileStream,_ZN11IFileStreamD1Ev,IFileStream::~IFileStream()
+34eb60,52,IFileStream,_ZN11IFileStream4skipEy,IFileStream::skip(unsigned long long)
+34f004,36,IFileStream,_ZN11IFileStreamD0Ev,IFileStream::~IFileStream()
+33dca4,4,ISerializable,_ZN13ISerializableD1Ev,ISerializable::~ISerializable()
+33dca8,4,ISerializable,_ZN13ISerializable9SerializeEP11IStreamBase,ISerializable::Serialize(IStreamBase*)
+33dcac,4,ISerializable,_ZN13ISerializable11DeserializeEP11IStreamBase,ISerializable::Deserialize(IStreamBase*)
+33e2bc,36,ISerializable,_ZN13ISerializableD0Ev,ISerializable::~ISerializable()
+33dca0,4,NonCopyable,_ZN11NonCopyableD1Ev,NonCopyable::~NonCopyable()
+33e324,36,NonCopyable,_ZN11NonCopyableD0Ev,NonCopyable::~NonCopyable()
+3110c4,84,PerfCounters,_ZN12PerfCountersC2Ev,PerfCounters::PerfCounters()
+311118,84,PerfCounters,_ZN12PerfCountersC1Ev,PerfCounters::PerfCounters()
+3115c4,84,PerfCounters,_ZN12PerfCountersD1Ev,PerfCounters::~PerfCounters()
+311620,84,PerfCounters,_ZN12PerfCountersD2Ev,PerfCounters::~PerfCounters()
+311730,76,PerfCounters,_ZN12PerfCounters12CounterEntryC1ERKS0_,PerfCounters::CounterEntry::CounterEntry(PerfCounters::CounterEntry const&)
+31177c,372,PerfCounters,_ZN12PerfCounters6UpdateEf,PerfCounters::Update(float)
+311914,644,PerfCounters,_ZN12PerfCounters4DrawEv,PerfCounters::Draw()
+312584,128,PerfCounters,_ZN12PerfCounters8GetEntryERKSs,"PerfCounters::GetEntry(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)"
+312734,224,PerfCounters,_ZN12PerfCounters15SetCounterValueERKSsfff,"PerfCounters::SetCounterValue(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, float, float, float)"
+33b438,4,Rct,_ZN3RctIsED1Ev,Rct<short>::~Rct()
+33b4a4,36,Rct,_ZN3RctIsED0Ev,Rct<short>::~Rct()
+317a8c,20,TimerUtil,_ZN9TimerUtilC2Ev,TimerUtil::TimerUtil()
+317aa0,20,TimerUtil,_ZN9TimerUtilC1Ev,TimerUtil::TimerUtil()
+317ab4,16,TimerUtil,_ZN9TimerUtil5StartEj,TimerUtil::Start(unsigned int)
+317ac4,12,TimerUtil,_ZN9TimerUtil5PauseEv,TimerUtil::Pause()
+317ad0,12,TimerUtil,_ZN9TimerUtil7UnpauseEv,TimerUtil::Unpause()
+317adc,8,TimerUtil,_ZNK9TimerUtil16GetRemainingTimeEv,TimerUtil::GetRemainingTime() const
+317ae4,60,TimerUtil,_ZN9TimerUtil6UpdateEv,TimerUtil::Update()
+33a9a4,24,TouchScreenBase,_ZNK15TouchScreenBase13_IsQueueEmptyEv,TouchScreenBase::_IsQueueEmpty() const
+33a9bc,284,TouchScreenBase,_ZN15TouchScreenBase11_AddToQueueENS_10TouchEventERK7Point2DIfEl,"TouchScreenBase::_AddToQueue(TouchScreenBase::TouchEvent, Point2D<float> const&, long)"
+33aad8,220,TouchScreenBase,_ZNK15TouchScreenBase12getDimensionEv,TouchScreenBase::getDimension() const
+33abbc,104,TouchScreenBase,_ZNK15TouchScreenBase12getDimensionER3RctIsE,TouchScreenBase::getDimension(Rct<short>&) const
+33ac24,260,TouchScreenBase,_ZN15TouchScreenBase10touchBeganERK7Point2DIsEl,"TouchScreenBase::touchBegan(Point2D<short> const&, long)"
+33ad28,276,TouchScreenBase,_ZN15TouchScreenBase10touchMovedERK7Point2DIsEl,"TouchScreenBase::touchMoved(Point2D<short> const&, long)"
+33ae3c,124,TouchScreenBase,_ZN15TouchScreenBase14touchCancelledERK7Point2DIsEl,"TouchScreenBase::touchCancelled(Point2D<short> const&, long)"
+33aeb8,4,TouchScreenBase,_ZN15TouchScreenBase10touchEndedERK7Point2DIsEl,"TouchScreenBase::touchEnded(Point2D<short> const&, long)"
+33aebc,192,TouchScreenBase,_ZNK15TouchScreenBase15isRegionPressedERKN6glitch4core4rectIfEE,TouchScreenBase::isRegionPressed(glitch::core::rect<float> const&) const
+33b02c,188,TouchScreenBase,_ZNK15TouchScreenBase27getTouchIDInitiatedInRegionERKN6glitch4core4rectIfEE,TouchScreenBase::getTouchIDInitiatedInRegion(glitch::core::rect<float> const&) const
+33b0e8,188,TouchScreenBase,_ZNK15TouchScreenBase18getTouchIDInRegionERKN6glitch4core4rectIfEE,TouchScreenBase::getTouchIDInRegion(glitch::core::rect<float> const&) const
+33b1a4,60,TouchScreenBase,_ZN15TouchScreenBase13getTouchPointEl,TouchScreenBase::getTouchPoint(long)
+33b1e0,60,TouchScreenBase,_ZN15TouchScreenBase18getFirstTouchPointEl,TouchScreenBase::getFirstTouchPoint(long)
+33b21c,160,TouchScreenBase,_ZNK15TouchScreenBase20getTouchDisplacementEl,TouchScreenBase::getTouchDisplacement(long) const
+33b2bc,48,TouchScreenBase,_ZNK15TouchScreenBase17getSwipeDirectionEl,TouchScreenBase::getSwipeDirection(long) const
+33b2ec,72,TouchScreenBase,_ZN15TouchScreenBase8hasTouchEv,TouchScreenBase::hasTouch()
+33b334,168,TouchScreenBase,_ZN15TouchScreenBase6updateEd,TouchScreenBase::update(double)
+33b3dc,92,TouchScreenBase,_ZN15TouchScreenBase5getIDEl,TouchScreenBase::getID(long)
+33b4d8,52,TouchScreenBase,_ZN15TouchScreenBase5clearEv,TouchScreenBase::clear()
+33b510,152,TouchScreenBase,_ZN15TouchScreenBase13_PopFromQueueEv,TouchScreenBase::_PopFromQueue()
+33b5c0,144,TouchScreenBase,_ZNK15TouchScreenBase20_GetNextEventInQueueEv,TouchScreenBase::_GetNextEventInQueue() const
+33bd2c,128,TouchScreenBase,_ZNK15TouchScreenBase14getTouchIDListEv,TouchScreenBase::getTouchIDList() const
+33be08,56,TouchScreenBase,_ZN15TouchScreenBaseD1Ev,TouchScreenBase::~TouchScreenBase()
+33be48,20,TouchScreenBase,_ZN15TouchScreenBaseD0Ev,TouchScreenBase::~TouchScreenBase()
+33be64,56,TouchScreenBase,_ZN15TouchScreenBaseD2Ev,TouchScreenBase::~TouchScreenBase()
+33c298,312,TouchScreenBase,_ZN15TouchScreenBaseC2Ess,"TouchScreenBase::TouchScreenBase(short, short)"
+33c3d8,312,TouchScreenBase,_ZN15TouchScreenBaseC1Ess,"TouchScreenBase::TouchScreenBase(short, short)"
+33c568,304,TouchScreenBase,_ZN15TouchScreenBase13ProcessEventsEv,TouchScreenBase::ProcessEvents()
+33cc58,12,TouchScreenIPhone,_ZNK17TouchScreenIPhone12getLeftBoundEv,TouchScreenIPhone::getLeftBound() const
+33cc64,12,TouchScreenIPhone,_ZNK17TouchScreenIPhone13getRightBoundEv,TouchScreenIPhone::getRightBound() const
+33cc70,12,TouchScreenIPhone,_ZNK17TouchScreenIPhone11getTopBoundEv,TouchScreenIPhone::getTopBound() const
+33cc7c,12,TouchScreenIPhone,_ZNK17TouchScreenIPhone14getBottomBoundEv,TouchScreenIPhone::getBottomBound() const
+33cca8,4,TouchScreenIPhone,_ZNK17TouchScreenIPhone18getTouchIDInRegionERKN6glitch4core4rectIfEE,TouchScreenIPhone::getTouchIDInRegion(glitch::core::rect<float> const&) const
+33ccac,4,TouchScreenIPhone,_ZNK17TouchScreenIPhone15isRegionPressedERKN6glitch4core4rectIfEE,TouchScreenIPhone::isRegionPressed(glitch::core::rect<float> const&) const
+33ccb0,44,TouchScreenIPhone,_ZN17TouchScreenIPhoneD1Ev,TouchScreenIPhone::~TouchScreenIPhone()
+33cce4,20,TouchScreenIPhone,_ZN17TouchScreenIPhoneD0Ev,TouchScreenIPhone::~TouchScreenIPhone()
+33cd00,44,TouchScreenIPhone,_ZN17TouchScreenIPhoneD2Ev,TouchScreenIPhone::~TouchScreenIPhone()
+33cd34,144,TouchScreenIPhone,_ZN17TouchScreenIPhoneC1Efffff,"TouchScreenIPhone::TouchScreenIPhone(float, float, float, float, float)"
+33cdcc,144,TouchScreenIPhone,_ZN17TouchScreenIPhoneC2Efffff,"TouchScreenIPhone::TouchScreenIPhone(float, float, float, float, float)"
+33ceb4,124,TouchScreenIPhone,_ZN17TouchScreenIPhone10touchEndedEffdiffl,"TouchScreenIPhone::touchEnded(float, float, double, int, float, float, long)"
+33cf84,124,TouchScreenIPhone,_ZN17TouchScreenIPhone14touchCancelledEffdiffl,"TouchScreenIPhone::touchCancelled(float, float, double, int, float, float, long)"
+33d054,124,TouchScreenIPhone,_ZN17TouchScreenIPhone10touchBeganEffdiffl,"TouchScreenIPhone::touchBegan(float, float, double, int, float, float, long)"
+33d124,124,TouchScreenIPhone,_ZN17TouchScreenIPhone10touchMovedEffdiffl,"TouchScreenIPhone::touchMoved(float, float, double, int, float, float, long)"
+33d1f4,8,TouchScreenPS3,_ZNK14TouchScreenPS312getLeftBoundEv,TouchScreenPS3::getLeftBound() const
+33d1fc,8,TouchScreenPS3,_ZNK14TouchScreenPS313getRightBoundEv,TouchScreenPS3::getRightBound() const
+33d204,8,TouchScreenPS3,_ZNK14TouchScreenPS311getTopBoundEv,TouchScreenPS3::getTopBound() const
+33d20c,8,TouchScreenPS3,_ZNK14TouchScreenPS314getBottomBoundEv,TouchScreenPS3::getBottomBound() const
+33d21c,240,TouchScreenPS3,_ZN14TouchScreenPS37onEventERKN6glitch6SEventE,TouchScreenPS3::onEvent(glitch::SEvent const&)
+33d340,60,TouchScreenPS3,_ZN14TouchScreenPS3D1Ev,TouchScreenPS3::~TouchScreenPS3()
+33d390,20,TouchScreenPS3,_ZN14TouchScreenPS3D0Ev,TouchScreenPS3::~TouchScreenPS3()
+33d3ac,60,TouchScreenPS3,_ZN14TouchScreenPS3D2Ev,TouchScreenPS3::~TouchScreenPS3()
+33d3f4,68,TouchScreenPS3,_ZN14TouchScreenPS3C1Ev,TouchScreenPS3::TouchScreenPS3()
+33d440,68,TouchScreenPS3,_ZN14TouchScreenPS3C2Ev,TouchScreenPS3::TouchScreenPS3()
+33d48c,8,TouchScreenWin32,_ZNK16TouchScreenWin3212getLeftBoundEv,TouchScreenWin32::getLeftBound() const
+33d494,8,TouchScreenWin32,_ZNK16TouchScreenWin3213getRightBoundEv,TouchScreenWin32::getRightBound() const
+33d49c,8,TouchScreenWin32,_ZNK16TouchScreenWin3211getTopBoundEv,TouchScreenWin32::getTopBound() const
+33d4a4,8,TouchScreenWin32,_ZNK16TouchScreenWin3214getBottomBoundEv,TouchScreenWin32::getBottomBound() const
+33d4b4,240,TouchScreenWin32,_ZN16TouchScreenWin327onEventERKN6glitch6SEventE,TouchScreenWin32::onEvent(glitch::SEvent const&)
+33d5d8,60,TouchScreenWin32,_ZN16TouchScreenWin32D1Ev,TouchScreenWin32::~TouchScreenWin32()
+33d628,20,TouchScreenWin32,_ZN16TouchScreenWin32D0Ev,TouchScreenWin32::~TouchScreenWin32()
+33d644,60,TouchScreenWin32,_ZN16TouchScreenWin32D2Ev,TouchScreenWin32::~TouchScreenWin32()
+33d68c,60,TouchScreenWin32,_ZN16TouchScreenWin32C1Ess,"TouchScreenWin32::TouchScreenWin32(short, short)"
+33d6d0,60,TouchScreenWin32,_ZN16TouchScreenWin32C2Ess,"TouchScreenWin32::TouchScreenWin32(short, short)"
+3fab74,44,VarArgs,_ZN7VarArgsD1Ev,VarArgs::~VarArgs()
+3faba8,44,VarArgs,_ZN7VarArgsD0Ev,VarArgs::~VarArgs()
+52ea74,52,_JNIEnv,_ZN7_JNIEnv23CallStaticBooleanMethodEP7_jclassP10_jmethodIDz,"_JNIEnv::CallStaticBooleanMethod(_jclass*, _jmethodID*, ...)"
+52eaf8,52,_JNIEnv,_ZN7_JNIEnv22CallStaticObjectMethodEP7_jclassP10_jmethodIDz,"_JNIEnv::CallStaticObjectMethod(_jclass*, _jmethodID*, ...)"
+88ed78,20,_JNIEnv,_ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_,"_JNIEnv::GetMethodID(_jclass*, char const*, char const*)"
+88ee94,52,_JNIEnv,_ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz,"_JNIEnv::NewObject(_jclass*, _jmethodID*, ...)"
+88eec8,56,_JNIEnv,_ZN7_JNIEnv24CallNonvirtualVoidMethodEP8_jobjectP7_jclassP10_jmethodIDz,"_JNIEnv::CallNonvirtualVoidMethod(_jobject*, _jclass*, _jmethodID*, ...)"
+88ef00,56,_JNIEnv,_ZN7_JNIEnv23CallNonvirtualIntMethodEP8_jobjectP7_jclassP10_jmethodIDz,"_JNIEnv::CallNonvirtualIntMethod(_jobject*, _jclass*, _jmethodID*, ...)"
+88ef38,4,_JNIEnv,_ZN7_JNIEnv19CallStaticIntMethodEP7_jclassP10_jmethodIDz,"_JNIEnv::CallStaticIntMethod(_jclass*, _jmethodID*, ...)"
+89acc8,52,_JNIEnv,_ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz,"_JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)"
+89aea0,52,_JNIEnv,_ZN7_JNIEnv20CallStaticVoidMethodEP7_jclassP10_jmethodIDz,"_JNIEnv::CallStaticVoidMethod(_jclass*, _jmethodID*, ...)"
+8e4,60,lib-libnativeinterface,entry,entry
+920,4,lib-libnativeinterface,Java_com_samsung_zirconia_NativeInterface_checkLicenseFile2,Java_com_samsung_zirconia_NativeInterface_checkLicenseFile2
+924,116,lib-libnativeinterface,FUN_00010924,FUN_00010924
+9a0,46,lib-libnativeinterface,FUN_000109a0,FUN_000109a0
+9d0,296,lib-libnativeinterface,Java_com_samsung_zirconia_NativeInterface_storeLicenseKey,Java_com_samsung_zirconia_NativeInterface_storeLicenseKey
+af8,76,lib-libnativeinterface,FUN_00010af8,FUN_00010af8
+b48,1,lib-libnativeinterface,FUN_00010b48,FUN_00010b48
+c60,190,lib-libnativeinterface,Java_com_samsung_zirconia_NativeInterface_doPassphraseTest,Java_com_samsung_zirconia_NativeInterface_doPassphraseTest
+d20,268,lib-libnativeinterface,CheckLicenseFile,CheckLicenseFile
+e2c,176,lib-libnativeinterface,Java_com_samsung_zirconia_NativeInterface_checkLicenseFile,Java_com_samsung_zirconia_NativeInterface_checkLicenseFile
+edc,56,lib-libnativeinterface,SHA1Reset,SHA1Reset
+f14,532,lib-libnativeinterface,SHA1ProcessMessageBlock,SHA1ProcessMessageBlock
+1128,98,lib-libnativeinterface,SHA1Input,SHA1Input
+118c,176,lib-libnativeinterface,SHA1PadMessage,SHA1PadMessage
+123c,36,lib-libnativeinterface,SHA1Result,SHA1Result
+842464,4,rss,_ZNK3rss5writeEPN4slim7XmlNodeE,rss::write(slim::XmlNode*) const
+844050,280,rss,_ZN3rss4readEPKN4slim7XmlNodeE,rss::read(slim::XmlNode const*)
+844180,8,slim,_ZN4slim11XmlDocument14loadFromStreamERSi,"slim::XmlDocument::loadFromStream(std::basic_istream<char, std::char_traits<char> >&)"
+844188,8,slim,_ZNK4slim11XmlDocument4saveEPKcNS_6EncodeE,"slim::XmlDocument::save(char const*, slim::Encode) const"
+844190,224,slim,_ZN4slim11utf8toutf16EPKcjPwj,"slim::utf8toutf16(char const*, unsigned int, wchar_t*, unsigned int)"
+844270,248,slim,_ZN4slim11utf16toutf8EPKwjPcj,"slim::utf16toutf8(wchar_t const*, unsigned int, char*, unsigned int)"
+844368,252,slim,_ZN4slim10detectUtf8EPKcj,"slim::detectUtf8(char const*, unsigned int)"
+844464,272,slim,_ZN4slim11XmlDocument9findLabelERPKcjS3_Rj,"slim::XmlDocument::findLabel(char const*&, unsigned int, char const*&, unsigned int&)"
+844574,60,slim,_ZN4slim11XmlDocument12loadFromFileEPKc,slim::XmlDocument::loadFromFile(char const*)
+8445bc,152,slim,_ZNK4slim7XmlNode13findAttributeEPKc,slim::XmlNode::findAttribute(char const*) const
+844660,196,slim,_ZNK4slim7XmlNode13findNextChildEPKcRNSt4priv14_List_iteratorIPS0_St13_Const_traitsIS5_EEE,"slim::XmlNode::findNextChild(char const*, std::priv::_List_iterator<slim::XmlNode*, std::_Const_traits<slim::XmlNode*> >&) const"
+84473c,212,slim,_ZNK4slim7XmlNode14findFirstChildEPKcRNSt4priv14_List_iteratorIPS0_St13_Const_traitsIS5_EEE,"slim::XmlNode::findFirstChild(char const*, std::priv::_List_iterator<slim::XmlNode*, std::_Const_traits<slim::XmlNode*> >&) const"
+844828,196,slim,_ZNK4slim7XmlNode9findChildEPKc,slim::XmlNode::findChild(char const*) const
+844908,68,slim,_ZN4slim7XmlBaseC2Ev,slim::XmlBase::XmlBase()
+84494c,60,slim,_ZN4slim7XmlNodeC1ENS_8NodeTypeEPS0_,"slim::XmlNode::XmlNode(slim::NodeType, slim::XmlNode*)"
+844988,60,slim,_ZN4slim7XmlNodeC2ENS_8NodeTypeEPS0_,"slim::XmlNode::XmlNode(slim::NodeType, slim::XmlNode*)"
+8449c4,28,slim,_ZN4slim11XmlDocumentC1Ev,slim::XmlDocument::XmlDocument()
+8449e0,28,slim,_ZN4slim11XmlDocumentC2Ev,slim::XmlDocument::XmlDocument()
+8449fc,200,slim,_ZN4slim7XmlNode14clearAttributeEv,slim::XmlNode::clearAttribute()
+844acc,108,slim,_ZN4slim7XmlBaseD2Ev,slim::XmlBase::~XmlBase()
+844b44,148,slim,_ZN4slim7XmlNodeD1Ev,slim::XmlNode::~XmlNode()
+844bd8,164,slim,_ZN4slim7XmlNode10clearChildEv,slim::XmlNode::clearChild()
+844c8c,148,slim,_ZN4slim7XmlNodeD2Ev,slim::XmlNode::~XmlNode()
+844d20,28,slim,_ZN4slim7XmlNode12addAttributeEPKcS2_,"slim::XmlNode::addAttribute(char const*, char const*)"
+844db8,396,slim,_ZN4slim11XmlDocument10parseLabelEPNS_7XmlNodeEPKcj,"slim::XmlDocument::parseLabel(slim::XmlNode*, char const*, unsigned int)"
+844f44,56,slim,_ZN4slim7XmlNode8addChildEPKcNS_8NodeTypeE,"slim::XmlNode::addChild(char const*, slim::NodeType)"
+844fdc,488,slim,_ZN4slim11XmlDocument5parseEPKcj,"slim::XmlDocument::parse(char const*, unsigned int)"
+8451dc,140,slim,_ZN4slim11XmlDocument14loadFromMemoryEPKcj,"slim::XmlDocument::loadFromMemory(char const*, unsigned int)"
+845268,524,slim,_ZNK4slim7XmlNode9writeNodeERSsi,"slim::XmlNode::writeNode(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int) const"
+845518,120,slim,_ZNK4slim7XmlNode15writeChildNodesERSsi,"slim::XmlNode::writeChildNodes(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int) const"
+8902fc,4,switchD_008a02e8,switchD_008a02e8::caseD_3,switchD_008a02e8::caseD_3
+897b64,4,switchD_008a7b5c,switchD_008a7b5c::caseD_ffffffef,switchD_008a7b5c::caseD_ffffffef
+897bbc,4,switchD_008a7b5c,switchD_008a7b5c::caseD_5,switchD_008a7b5c::caseD_5
+317848,4,sys,_ZN3sys13printNoFormatEPKc,sys::printNoFormat(char const*)
+31784c,188,sys,_ZN3sys5printEPKcz,"sys::print(char const*, ...)"
+317914,200,sys,_ZN3sys7printlnEPKcz,"sys::println(char const*, ...)"

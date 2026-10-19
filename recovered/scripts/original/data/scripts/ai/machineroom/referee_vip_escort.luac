@@ -1,0 +1,2 @@
+Include("machineroom/vip_core");	-- Including vip_core for pre-defined pathing behaviors
+Include("machineroom/referee");

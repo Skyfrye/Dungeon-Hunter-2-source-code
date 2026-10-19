@@ -1,0 +1,352 @@
+-- Example of a "precb" callback
+local function PreCB(wave_id, data)
+end
+
+-- Example of a "postcb" callback
+local function PostCB(wave_id, extra_time, data)
+end
+
+
+-- Must be global
+WAVES = {
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Swamp_LizadMan_Type1")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Swamp_LizadMan_Type2")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Swamp_Moth_Type1")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Troll")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Witch")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Slime")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Darkwood_Ugly_Dog")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Darkwood_Ghost")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Darkwood_MeleeBandit")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "RD_RangedBandit")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "RD_ThugBandit")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "InfectedVillager")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Darklin")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "EarthTemple_Goblin_Rogue")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "EarthTemple_Goblin_Slinger")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "EarthTemple_Goblin_Shaman")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "EarthTemple_SmallPlant")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "EarthTemple_LargePlant")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "RootTroll")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Assassin")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Lighthouse_Emissary")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "WindTemplar")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Wind_Vulture")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "SKYGUARDIAN")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "WT_Skeleton1")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Balrog")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "SandWorm")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "DT_DarkGuardian")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "DT_Cherub")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "ResurrectingGod")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "DarkQueenForm1")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "DarkQueenForm2")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "Yeti")},
+				},
+			},
+		},
+	},
+	{	delay = 10000,
+		delay_keep = 10000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{mtype="normal", oid=GetPyOID("CharacterTable", "SwampKing")},
+				},
+			},
+		},
+	},
+}

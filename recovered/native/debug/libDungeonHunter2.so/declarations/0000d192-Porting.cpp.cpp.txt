@@ -1,0 +1,265 @@
+DWARF-derived C++ declaration sketches. These are NOT original source files,
+not compilation-ready headers, and contain NO recovered function bodies.
+Qualified names are printed verbatim; arrays/function pointers, templates,
+access defaults, static methods, and ABI-only entries may require manual repair.
+Exact DWARF attributes and type references are preserved in dies.jsonl.gz.
+Source paths refer to original debug metadata; those files are not bundled.
+
+Compilation unit: P:/Template/Android/ALC/jni/../LCXPlayer/src/Online/Porting.cpp
+Evidence category: license_and_online_glue
+
+// DIE 0xd1bb, byte_size=None, declaration=False
+// P:/Template/Android/ALC/jni/../LCXPlayer/src/Online/../../include/XPlayer_defines.h:36
+typedef short unsigned int Unicode2Bytes;
+
+// DIE 0xd2cf, byte_size=None, declaration=False
+// C:/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/../include/stddef.h:211
+typedef unsigned int size_t;
+
+// DIE 0xd31e, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:18
+typedef long int __kernel_off_t;
+
+// DIE 0xd329, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:26
+typedef long int __kernel_time_t;
+
+// DIE 0xd334, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:27
+typedef long int __kernel_suseconds_t;
+
+// DIE 0xd345, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/sys/types.h:67
+typedef __kernel_off_t off_t;
+
+// DIE 0xd350, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/sys/types.h:99
+typedef __kernel_suseconds_t suseconds_t;
+
+// DIE 0xd35b, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/sys/types.h:100
+typedef __kernel_time_t time_t;
+
+// DIE 0xd366, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/stdio.h:78
+typedef off_t fpos_t;
+
+// DIE 0xd371, byte_size=8, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/stdio.h:87
+struct __sbuf {
+    unsigned char* _base; // byte offset: 0, access: None, artificial: False
+    int _size; // byte offset: 4, access: None, artificial: False
+};
+
+// DIE 0xd3a0, byte_size=84, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/stdio.h:119
+struct __sFILE {
+    unsigned char* _p; // byte offset: 0, access: None, artificial: False
+    int _r; // byte offset: 4, access: None, artificial: False
+    int _w; // byte offset: 8, access: None, artificial: False
+    short int _flags; // byte offset: 12, access: None, artificial: False
+    short int _file; // byte offset: 14, access: None, artificial: False
+    __sbuf _bf; // byte offset: 16, access: None, artificial: False
+    int _lbfsize; // byte offset: 24, access: None, artificial: False
+    void* _cookie; // byte offset: 28, access: None, artificial: False
+    int (void*)* _close; // byte offset: 32, access: None, artificial: False
+    int (void*, char*, int)* _read; // byte offset: 36, access: None, artificial: False
+    fpos_t (void*, fpos_t, int)* _seek; // byte offset: 40, access: None, artificial: False
+    int (void*, char const*, int)* _write; // byte offset: 44, access: None, artificial: False
+    __sbuf _ext; // byte offset: 48, access: None, artificial: False
+    unsigned char* _up; // byte offset: 56, access: None, artificial: False
+    int _ur; // byte offset: 60, access: None, artificial: False
+    unsigned char[3] _ubuf; // byte offset: 64, access: None, artificial: False
+    unsigned char[1] _nbuf; // byte offset: 67, access: None, artificial: False
+    __sbuf _lb; // byte offset: 68, access: None, artificial: False
+    int _blksize; // byte offset: 76, access: None, artificial: False
+    fpos_t _offset; // byte offset: 80, access: None, artificial: False
+};
+
+// DIE 0xd55f, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/stdio.h:151
+typedef __sFILE FILE;
+
+// DIE 0xd56a, byte_size=None, declaration=False
+// P:/Template/Android/ALC/jni/../LCXPlayer/src/Online/../../include/LCPorting.h:78
+typedef unsigned char BYTE;
+
+// DIE 0xd575, byte_size=8, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/linux/time.h:25
+struct timeval {
+    time_t tv_sec; // byte offset: 0, access: None, artificial: False
+    suseconds_t tv_usec; // byte offset: 4, access: None, artificial: False
+};
+
+
+// Functions outside record declarations
+// DIE 0xd5a4, ranges: []
+void clearerr(FILE*);
+// DIE 0xd5bd, ranges: []
+int fclose(FILE*);
+// DIE 0xd5d4, ranges: []
+int feof(FILE*);
+// DIE 0xd5eb, ranges: []
+int ferror(FILE*);
+// DIE 0xd602, ranges: []
+int fflush(FILE*);
+// DIE 0xd619, ranges: []
+int fgetc(FILE*);
+// DIE 0xd630, ranges: []
+int fgetpos(FILE*, fpos_t*);
+// DIE 0xd652, ranges: []
+char* fgets(char*, int, FILE*);
+// DIE 0xd673, ranges: []
+FILE* fopen(char const*, char const*);
+// DIE 0xd68f, ranges: []
+size_t fread(void*, size_t, size_t, FILE*);
+// DIE 0xd6b5, ranges: []
+FILE* freopen(char const*, char const*, FILE*);
+// DIE 0xd6d6, ranges: []
+int fseek(FILE*, long int, int);
+// DIE 0xd6f7, ranges: []
+int fsetpos(FILE*, fpos_t const*);
+// DIE 0xd71e, ranges: []
+long int ftell(FILE*);
+// DIE 0xd735, ranges: []
+int getc(FILE*);
+// DIE 0xd74c, ranges: []
+int getchar();
+// DIE 0xd759, ranges: []
+char* gets(char*);
+// DIE 0xd770, ranges: []
+void perror(char const*);
+// DIE 0xd783, ranges: []
+int remove(char const*);
+// DIE 0xd79b, ranges: []
+int rename(char const*, char const*);
+// DIE 0xd7b8, ranges: []
+void rewind(FILE*);
+// DIE 0xd7cc, ranges: []
+void setbuf(FILE*, char*);
+// DIE 0xd7e5, ranges: []
+FILE* tmpfile();
+// DIE 0xd7f3, ranges: []
+char* tmpnam(char*);
+// DIE 0xd80b, ranges: []
+int setvbuf(FILE*, char*, int, size_t);
+// DIE 0xd832, ranges: []
+int ungetc(int, FILE*);
+// DIE 0xd84f, ranges: []
+void srand(unsigned int __s);
+// DIE 0xd867, ranges: []
+int rand();
+// DIE 0xd873, ranges: []
+double atof(char const* nptr);
+// DIE 0xd896, ranges: [{'begin': 9028252, 'end': 9028344, 'source': 'low/high_pc'}]
+char* LC_API_STRCHRFIND(char* src, char const subchar, int count);
+// DIE 0xd8fe, ranges: [{'begin': 9028344, 'end': 9028348, 'source': 'low/high_pc'}]
+char* LC_API_STRCHR(char const* src, char const subchar, int bFromLeft2Right);
+// DIE 0xd943, ranges: [{'begin': 9028348, 'end': 9028352, 'source': 'low/high_pc'}]
+void LC_DEBUG_INIT();
+// DIE 0xd957, ranges: [{'begin': 9028352, 'end': 9028356, 'source': 'low/high_pc'}]
+void LC_DEBUG_FINALIZE();
+// DIE 0xd96b, ranges: [{'begin': 9028356, 'end': 9028368, 'source': 'low/high_pc'}]
+void LC_DEBUG_OUT(char const* format, ...);
+// DIE 0xd995, ranges: [{'begin': 9028368, 'end': 9028372, 'source': 'low/high_pc'}]
+char* LC_API_FTOA(float num, char* str, int digits);
+// DIE 0xd9e5, ranges: [{'begin': 9028372, 'end': 9028652, 'source': 'low/high_pc'}]
+char* LC_API_ITOA(int num, char* str, int radix);
+// DIE 0xdaad, ranges: [{'begin': 9028652, 'end': 9028884, 'source': 'low/high_pc'}]
+int ConvertUnicodeToUTF8LC(char* output, Unicode2Bytes const* input, int const lenInput);
+// DIE 0xdb33, ranges: [{'begin': 9028884, 'end': 9029084, 'source': 'low/high_pc'}]
+int ConvertUTF8ToUnicodeLC(Unicode2Bytes* output, char const* input, int const lenInput);
+// DIE 0xdbaf, ranges: [{'begin': 9029084, 'end': 9029292, 'source': 'low/high_pc'}]
+void UTF8ToUnicode_OldLC(short unsigned int* strsrc, char const* pUTF8);
+// DIE 0xdc24, ranges: [{'begin': 9029292, 'end': 9029772, 'source': 'low/high_pc'}]
+int ConvertUnicodeToUTF8_OldLC(char* strdest, short unsigned int const* strsrc);
+// DIE 0xdd15, ranges: [{'begin': 9029772, 'end': 9029904, 'source': 'low/high_pc'}]
+int LC_API_PARSE_DATA(char const* src, char* dst, int pos, char seperator);
+// DIE 0xdd9b, ranges: [{'begin': 9029904, 'end': 9029976, 'source': 'low/high_pc'}]
+char SSEncDec_GetCharFromKeyByIndexLC(int nKeyIndex);
+// DIE 0xddcc, ranges: [{'begin': 9029976, 'end': 9030044, 'source': 'low/high_pc'}]
+char SSEncDec_GetKeyFromCharLC(char nChar);
+// DIE 0xddfd, ranges: [{'begin': 9030044, 'end': 9030048, 'source': 'low/high_pc'}]
+void LC_API_GetNationality(char* data);
+// DIE 0xde28, ranges: [{'begin': 9030048, 'end': 9030164, 'source': 'low/high_pc'}]
+int getValueLC(char const* src, char* dst, int pos, char label);
+// DIE 0xdea0, ranges: [{'begin': 9030164, 'end': 9030268, 'source': 'low/high_pc'}]
+void LC_API_TOLOWER(char const* src, char* dest);
+// DIE 0xdeee, ranges: [{'begin': 9030268, 'end': 9030308, 'source': 'low/high_pc'}]
+void LC_DEBUG_SAVE_RECVDATA_LOG(char const* data, int length);
+// DIE 0xdf2b, ranges: [{'begin': 9030308, 'end': 9030348, 'source': 'low/high_pc'}]
+void LC_DEBUG_SAVE_SENDDATA_LOG(char const* data, int length);
+// DIE 0xdf68, ranges: [{'begin': 9030348, 'end': 9030392, 'source': 'low/high_pc'}]
+int LC_API_FILE_WRITE(void* src, int element_size, int count, int handle);
+// DIE 0xdfc6, ranges: [{'begin': 9030392, 'end': 9030424, 'source': 'low/high_pc'}]
+void LC_DEBUG_CLOSE_RECVDATA_LOG();
+// DIE 0xdfde, ranges: [{'begin': 9030424, 'end': 9030456, 'source': 'low/high_pc'}]
+void LC_DEBUG_CLOSE_SENDDATA_LOG();
+// DIE 0xdff6, ranges: [{'begin': 9030456, 'end': 9030508, 'source': 'low/high_pc'}]
+void LC_API_FILE_CLOSE(int handle);
+// DIE 0xe020, ranges: [{'begin': 9030508, 'end': 9030572, 'source': 'low/high_pc'}]
+void LC_DEBUG_OPEN_RECVDATA_LOG();
+// DIE 0xe039, ranges: [{'begin': 9030572, 'end': 9030636, 'source': 'low/high_pc'}]
+void LC_DEBUG_OPEN_SENDDATA_LOG();
+// DIE 0xe052, ranges: [{'begin': 9030636, 'end': 9030732, 'source': 'low/high_pc'}]
+int LC_API_FILE_OPEN(char const* filename, char const* flag);
+// DIE 0xe0b2, ranges: [{'begin': 9030732, 'end': 9030808, 'source': 'low/high_pc'}]
+char* LC_API_IP_INT2STR(int ip, char* buffer);
+// DIE 0xe125, ranges: [{'begin': 9030808, 'end': 9030812, 'source': 'low/high_pc'}]
+int LC_API_STRLEN(char const* string);
+// DIE 0xe150, ranges: [{'begin': 9030812, 'end': 9030912, 'source': 'low/high_pc'}]
+int LC_API_GET_RANDOM(char* name);
+// DIE 0xe1e8, ranges: [{'begin': 9030912, 'end': 9031008, 'source': 'low/high_pc'}]
+char* LC_API_STRTRIM(char* src);
+// DIE 0xe262, ranges: [{'begin': 9031008, 'end': 9031208, 'source': 'low/high_pc'}]
+int SSEncDec_Blob2ByteArrayLC(BYTE** arr, char* blob);
+// DIE 0xe322, ranges: [{'begin': 9031208, 'end': 9031320, 'source': 'low/high_pc'}]
+int LC_API_FILE_GET_LENGTH(int handle);
+// DIE 0xe372, ranges: [{'begin': 9031320, 'end': 9031364, 'source': 'low/high_pc'}]
+int LC_API_FILE_READ(void* dest, int element_size, int count, int handle);
+// DIE 0xe3d0, ranges: [{'begin': 9031364, 'end': 9031372, 'source': 'low/high_pc'}]
+double LC_API_ATOF(char* str);
+// DIE 0xe413, ranges: [{'begin': 9031372, 'end': 9031376, 'source': 'low/high_pc'}]
+int LC_API_ATOI(char const* data);
+// DIE 0xe440, ranges: [{'begin': 9031376, 'end': 9031380, 'source': 'low/high_pc'}]
+char* LC_API_STRSTR(char const* src, char const* substr);
+// DIE 0xe47a, ranges: [{'begin': 9031380, 'end': 9031384, 'source': 'low/high_pc'}]
+char* LC_API_STRCAT(char* dest, char const* src);
+// DIE 0xe4b4, ranges: [{'begin': 9031384, 'end': 9031388, 'source': 'low/high_pc'}]
+char* LC_API_STRNCPY(char* dest, char const* src, int count);
+// DIE 0xe4fd, ranges: [{'begin': 9031388, 'end': 9031392, 'source': 'low/high_pc'}]
+char* LC_API_STRCPY(char* dest, char const* src);
+// DIE 0xe537, ranges: [{'begin': 9031392, 'end': 9031396, 'source': 'low/high_pc'}]
+int LC_API_STRCASECMP(char const* p1, char const* p2);
+// DIE 0xe56f, ranges: [{'begin': 9031396, 'end': 9031400, 'source': 'low/high_pc'}]
+int LC_API_STRNCMP(char const* p1, char const* p2, int size);
+// DIE 0xe5b6, ranges: [{'begin': 9031400, 'end': 9031404, 'source': 'low/high_pc'}]
+int LC_API_STRCMP(char const* p1, char const* p2);
+// DIE 0xe5ee, ranges: [{'begin': 9031404, 'end': 9031424, 'source': 'low/high_pc'}]
+void* LC_API_MEMCPY(void* data, void const* src, int size);
+// DIE 0xe63f, ranges: [{'begin': 9031424, 'end': 9031428, 'source': 'low/high_pc'}]
+void LC_API_MEMSET(void* data, int value, int size);
+// DIE 0xe684, ranges: [{'begin': 9031428, 'end': 9031732, 'source': 'low/high_pc'}]
+int LC_API_IP_STR2INT(char* ip);
+// DIE 0xe728, ranges: [{'begin': 9031732, 'end': 9032036, 'source': 'low/high_pc'}]
+char* SSEncDec_ByteArray2BlobLC(BYTE* s, int len);
+// DIE 0xe7ca, ranges: [{'begin': 9032036, 'end': 9032064, 'source': 'low/high_pc'}]
+char* SSEncDec_String2BlobLC(char* s);
+// DIE 0xe7fa, ranges: [{'begin': 9032064, 'end': 9032144, 'source': 'low/high_pc'}]
+char* SSEncDec_Blob2StringLC(char* blob);
+// DIE 0xe84f, ranges: [{'begin': 9032144, 'end': 9032292, 'source': 'low/high_pc'}]
+int LC_API_PARSE_DATA_NEW(char const* src, char** dst, int pos, char seperator);
+// DIE 0xe8df, ranges: [{'begin': 9032292, 'end': 9032384, 'source': 'low/high_pc'}]
+int TranslateUtf82UnicodeLC(Unicode2Bytes** nameOutput, char* nameInput, int lenInput, int bNeedNewMEM);
+// DIE 0xe959, ranges: [{'begin': 9032384, 'end': 9032476, 'source': 'low/high_pc'}]
+int TranslateUnicode2Utf8LC(char** nameOutput, Unicode2Bytes* nameInput, int lenInput, int bNeedNewMEM);
+// DIE 0xe9cd, ranges: [{'begin': 9032476, 'end': 9032544, 'source': 'low/high_pc'}]
+char* LC_API_STRNEW(char const* string);
+// DIE 0xea1d, ranges: [{'begin': 9032544, 'end': 9032548, 'source': 'low/high_pc'}]
+void LC_API_FREE(void* p);
+// DIE 0xea42, ranges: [{'begin': 9032548, 'end': 9032552, 'source': 'low/high_pc'}]
+void* LC_API_MALLOC(int size);
+// DIE 0xea6d, ranges: [{'begin': 9032552, 'end': 9032616, 'source': 'low/high_pc'}]
+unsigned int OS_GetTime();
+// DIE 0xeaa2, ranges: [{'begin': 9032616, 'end': 9032620, 'source': 'low/high_pc'}]
+long unsigned int LC_API_GET_TIME();

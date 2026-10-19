@@ -1,0 +1,101 @@
+elf_address,symbol,status,source_file,notes
+0x6e51a0,_ZN6glitch5scene16CCameraSceneNodeD2Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,camera code belongs to the other session (gameplay list)
+0x6e5238,_ZN6glitch7collada16CCameraSceneNode19onRegisterSceneNodeEv,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,camera code belongs to the other session (gameplay list)
+0x6e5418,_ZN6glitch7collada16CCameraSceneNodeD1Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,camera code belongs to the other session (gameplay list)
+0x6e54a4,_ZN6glitch7collada16CCameraSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6e54c0,_ZN6glitch7collada16CCameraSceneNodeD2Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,camera code belongs to the other session (gameplay list)
+0x6e5550,_ZN6glitch7collada16CCameraSceneNodeC1ERKNS0_16CColladaDatabaseERNS0_7SCameraE,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,camera code belongs to the other session (gameplay list)
+0x6e57b0,_ZN6glitch7collada16CCameraSceneNodeC2ERKNS0_16CColladaDatabaseERNS0_7SCameraE,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,camera code belongs to the other session (gameplay list)
+0x6e5a40,_ZN6glitch7collada17CCoronasSceneNode7setSizeERKNS_4core11dimension2dIfEE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CCoronasSceneNode has no layout in layouts
+0x6e5bc8,_ZN6glitch7collada17CCoronasSceneNode9isBlockedEv,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x6e5c40,_ZN6glitch7collada17CCoronasSceneNode19onRegisterSceneNodeEv,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x6e5d14,_ZN6glitch7collada17CCoronasSceneNode6renderEPv,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x6e703c,_ZN6glitch7collada17CCoronasSceneNodeD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CCoronasSceneNode has no layout in layouts
+0x6e70c8,_ZN6glitch7collada17CCoronasSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6e70e4,_ZN6glitch7collada17CCoronasSceneNodeD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CCoronasSceneNode has no layout in layouts
+0x6e7164,_ZN6glitch7collada17CCoronasSceneNodeC1EPNS_5video12IVideoDriverEiRKNS_4core8vector3dIfEEN5boost13intrusive_ptrINS2_9CMaterialEEERKNS5_11dimension2dIfEENS2_6SColorE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CCoronasSceneNode has no layout in layouts
+0x6e7488,_ZN6glitch7collada17CCoronasSceneNodeC2EPNS_5video12IVideoDriverEiRKNS_4core8vector3dIfEEN5boost13intrusive_ptrINS2_9CMaterialEEERKNS5_11dimension2dIfEENS2_6SColorE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CCoronasSceneNode has no layout in layouts
+0x6e7778,_ZN6glitch7collada17CCoronasSceneNodeC1ERKNS0_16CColladaDatabaseEPNS_5video12IVideoDriverERNS0_8SCoronasEPNS0_14CRootSceneNodeE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CCoronasSceneNode has no layout in layouts
+0x6e7a80,_ZN6glitch7collada17CCoronasSceneNodeC2ERKNS0_16CColladaDatabaseEPNS_5video12IVideoDriverERNS0_8SCoronasEPNS0_14CRootSceneNodeE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CCoronasSceneNode has no layout in layouts
+0x6f5fa8,_ZNK6glitch5scene22CAnimatedMeshSceneNode7getMeshEv,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f5fd8,_ZN6glitch5scene22CAnimatedMeshSceneNode12buildFrameNrEj,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,animation code belongs to the other session (gameplay list)
+0x6f61e0,_ZN6glitch5scene22CAnimatedMeshSceneNode12setFrameLoopEii,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,animation code belongs to the other session (gameplay list)
+0x6f630c,_ZNK6glitch5scene22CAnimatedMeshSceneNode14getBoundingBoxEv,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f6328,_ZNK6glitch5scene22CAnimatedMeshSceneNode11getMaterialEj,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f6384,_ZNK6glitch5scene22CAnimatedMeshSceneNode16getMaterialCountEv,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f63b8,_ZN6glitch5scene22CAnimatedMeshSceneNode23setAnimationEndCallbackEPNS0_21IAnimationEndCallBackE,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,animation code belongs to the other session (gameplay list)
+0x6f63ec,_ZN6glitch5scene22CAnimatedMeshSceneNode7setMeshERKN5boost13intrusive_ptrINS0_13IAnimatedMeshEEE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f6540,_ZN6glitch5scene22CAnimatedMeshSceneNode9onAnimateEj,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,animation code belongs to the other session (gameplay list)
+0x6f6564,_ZN6glitch5scene22CAnimatedMeshSceneNode11removeChildEPNS0_10ISceneNodeE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f65ac,_ZN6glitch5scene22IAnimatedMeshSceneNodeD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f6618,_ZN6glitch5scene22CAnimatedMeshSceneNodeD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f66dc,_ZN6glitch5scene22CAnimatedMeshSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6f66f8,_ZN6glitch5scene22CAnimatedMeshSceneNodeD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f6818,_ZN6glitch5scene22CAnimatedMeshSceneNode24addShadowVolumeSceneNodeERKN5boost13intrusive_ptrIKNS0_5IMeshEEEibf,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x6f6958,_ZN6glitch5scene22CAnimatedMeshSceneNode19onRegisterSceneNodeEv,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x6f6af8,_ZN6glitch5scene22CAnimatedMeshSceneNode15setCurrentFrameEf,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,animation code belongs to the other session (gameplay list)
+0x6f6b7c,_ZN6glitch5scene22CAnimatedMeshSceneNodeC1ERKN5boost13intrusive_ptrINS0_13IAnimatedMeshEEEiRKNS_4core8vector3dIfEERKNS8_10quaternionESC_,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f6ca0,_ZN6glitch5scene22CAnimatedMeshSceneNodeC2ERKN5boost13intrusive_ptrINS0_13IAnimatedMeshEEEiRKNS_4core8vector3dIfEERKNS8_10quaternionESC_,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f71cc,_ZN6glitch5scene22CAnimatedMeshSceneNode5cloneEv,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CAnimatedMeshSceneNode has no layout in layouts/scene.hpp
+0x6f72bc,_ZN6glitch5scene22IAnimatedMeshSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6f7330,_ZN6glitch5scene22CAnimatedMeshSceneNode6renderEPv,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x6f7848,_ZN6glitch5scene16IParticleEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6f789c,_ZN6glitch5scene37CParticleAnimatedMeshSceneNodeEmitterD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: particle emitter and affector classes have no layout
+0x6f7934,_ZN6glitch5scene37CParticleAnimatedMeshSceneNodeEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6f7a20,_ZN6glitch5scene37IParticleAnimatedMeshSceneNodeEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6f7ddc,_ZN6glitch5scene37CParticleAnimatedMeshSceneNodeEmitter24setAnimatedMeshSceneNodeEPNS0_22IAnimatedMeshSceneNodeE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: particle emitter and affector classes have no layout
+0x6f8678,_ZN6glitch5scene17IParticleAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6f8840,_ZN6glitch5scene27IParticleAttractionAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6f88b4,_ZN6glitch5scene27CParticleAttractionAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6f8f98,_ZN6glitch5scene19CParticleBoxEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6f997c,_ZN6glitch5scene19IParticleBoxEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6f9e90,_ZN6glitch5scene24CParticleCylinderEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fa408,_ZN6glitch5scene24IParticleCylinderEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fa8d8,_ZN6glitch5scene24IParticleFadeOutAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fa94c,_ZN6glitch5scene24CParticleFadeOutAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6faeb0,_ZN6glitch5scene24IParticleGravityAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6faf24,_ZN6glitch5scene24CParticleGravityAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fb184,_ZN6glitch5scene20CParticleMeshEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fb270,_ZN6glitch5scene20IParticleMeshEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fc340,_ZN6glitch5scene21CParticlePointEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fc7d8,_ZN6glitch5scene20CParticleRingEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fcc8c,_ZN6glitch5scene20IParticleRingEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fd0d8,_ZN6glitch5scene25IParticleRotationAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fd14c,_ZN6glitch5scene25CParticleRotationAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fd7d8,_ZN6glitch5scene21IParticleSizeAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fd84c,_ZN6glitch5scene21CParticleSizeAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fdcec,_ZN6glitch5scene22CParticleSphereEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fe238,_ZN6glitch5scene22IParticleSphereEmitterD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fe738,_ZN6glitch5scene21IParticleSpinAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fe7ac,_ZN6glitch5scene21CParticleSpinAffectorD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x6fe860,_ZN6glitch5scene22CShadowVolumeSceneNode13SShadowVolumeC2Ev,reconstructed,glitch-scene-collada-gui/src/recon/slice_29.cpp,SShadowVolume default ctor; header member initializers hold the values
+0x6fe8cc,_ZN6glitch5scene22CShadowVolumeSceneNode13SShadowVolumeC1Ev,reconstructed,glitch-scene-collada-gui/src/recon/slice_29.cpp,twin of 0x6fe860 (C1 and C2 identical); shared definition
+0x6fe938,_ZN6glitch5scene22CShadowVolumeSceneNode13setShadowMeshERKN5boost13intrusive_ptrIKNS0_5IMeshEEE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CShadowVolumeSceneNode members not in layouts/scene.hpp
+0x6fe98c,_ZN6glitch5scene22CShadowVolumeSceneNode13SShadowVolumeC1ERKS2_,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: SShadowVolume copy ctor needs refcount helper type not in deps
+0x6feaa0,_ZN6glitch5scene22CShadowVolumeSceneNode18getProjectedVertexERKNS_4core8vector3dIfEES6_NS_5video12E_LIGHT_TYPEEb,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x6fec78,_ZN6glitch5scene22CShadowVolumeSceneNode26createFacingTriangleVolumeERKNS_5video16CPrimitiveStream10SMapBufferIKtEEjRKNS_4core8vector3dIfEENS2_12E_LIGHT_TYPEEPNS1_13SShadowVolumeEb,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x6ff948,_ZN6glitch21intrusive_ptr_releaseEPKNS_24ISharedMemoryBlockHeaderINS_5video14CVertexStreamsEEE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: ISharedMemoryBlockHeader<CVertexStreams> layout not in layouts; release at count 1 not rebuilt
+0x6ffa1c,_ZN6glitch5scene22CShadowVolumeSceneNode4saveEPcbRKNS_4core8CMatrix4IfEE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CShadowVolumeSceneNode members not in layouts/scene.hpp
+0x6ffa7c,_ZN6glitch5scene22CShadowVolumeSceneNode19onRegisterSceneNodeEv,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x6ffd88,_ZN6glitch5scene22CShadowVolumeSceneNode11SSilhouetteD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: base CMeshConnectivity dtor not in slice 29; member releases only
+0x6ffdc0,_ZN6glitch5scene22CShadowVolumeSceneNode11SSilhouetteD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: base CMeshConnectivity dtor not in slice 29; member releases only
+0x6ffdf8,_ZN6glitch5scene22CShadowVolumeSceneNode11SSilhouetteC1ERKN5boost13intrusive_ptrIKNS0_11CMeshBufferEEE,reconstructed,glitch-scene-collada-gui/src/recon/slice_29.cpp,SSilhouette ctor; base ctor then zeroed words
+0x6ffe20,_ZN6glitch5scene22CShadowVolumeSceneNode11SSilhouetteC2ERKN5boost13intrusive_ptrIKNS0_11CMeshBufferEEE,reconstructed,glitch-scene-collada-gui/src/recon/slice_29.cpp,twin of 0x6ffdf8 (C1 and C2 identical); shared definition
+0x6ffee4,_ZN6glitch5scene22CShadowVolumeSceneNode4saveEPNS_2io10IWriteFileEbRKNS_4core8CMatrix4IfEENS_2os8E_ENDIANE,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CShadowVolumeSceneNode members not in layouts/scene.hpp
+0x700ad4,_ZN6glitch5scene22CShadowVolumeSceneNode6renderEPv,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x700ce4,_ZN6glitch5scene22CShadowVolumeSceneNode13SShadowVolumeaSERKS2_,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: SShadowVolume copy-assign or dtor; refcounted and array members need helper types not in deps
+0x700e44,_ZN6glitch5scene22CShadowVolumeSceneNode13SShadowVolumeD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: SShadowVolume copy-assign or dtor; refcounted and array members need helper types not in deps
+0x700fd4,_ZN6glitch5scene22CShadowVolumeSceneNodeD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CShadowVolumeSceneNode members not in layouts/scene.hpp
+0x701094,_ZN6glitch5scene22CShadowVolumeSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,D0 deleting destructor; compiler thunk
+0x7010b0,_ZN6glitch5scene22CShadowVolumeSceneNodeD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: CShadowVolumeSceneNode members not in layouts/scene.hpp
+0x7012a4,_ZN6glitch5scene22CShadowVolumeSceneNode13SShadowVolumeD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_29.cpp,unattached: SShadowVolume copy-assign or dtor; refcounted and array members need helper types not in deps
+0x701998,_ZN6glitch5scene22CShadowVolumeSceneNode22createSilhouetteVolumeERKN5boost13intrusive_ptrIKNS0_11CMeshBufferEEERKNS_5video16CPrimitiveStream10SMapBufferIKtEEjRKNS_4core8vector3dIfEENS9_12E_LIGHT_TYPEEPNS1_13SShadowVolumeEb,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x70225c,_ZN6glitch5scene22CShadowVolumeSceneNode18createShadowVolumeERKN5boost13intrusive_ptrIKNS0_11CMeshBufferEEERKNS_4core8vector3dIfEENS_5video12E_LIGHT_TYPEE,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x7029d4,_ZN6glitch5scene22CShadowVolumeSceneNode19updateShadowVolumesEv,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,renderer code belongs to the other session (gameplay list)
+0x7030f8,glitch_free,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,thunk forwarding to GlitchFree; not reimplemented
+0x7030fc,glitch_malloc,skipped,glitch-scene-collada-gui/src/recon/slice_29.cpp,forwarder to GlitchAlloc; not reimplemented
+0x703104,compressBound,upstream,glitch-scene-collada-gui/src/recon/slice_29.cpp,zlib compressBound (library code)
+0x703114,compress2,upstream,glitch-scene-collada-gui/src/recon/slice_29.cpp,zlib compress2 1.2.3 (library code)
+0x7031bc,compress,upstream,glitch-scene-collada-gui/src/recon/slice_29.cpp,zlib compress (library code)
+0x7031d8,_ZN6glitch5scene17CMeshConnectivityC2ERKN5boost13intrusive_ptrIKNS0_11CMeshBufferEEE,reconstructed,glitch-scene-collada-gui/src/recon/slice_29.cpp,CMeshConnectivity ctor; takes a reference on the buffer
+0x70320c,_ZN6glitch5scene17CMeshConnectivityC1ERKN5boost13intrusive_ptrIKNS0_11CMeshBufferEEE,reconstructed,glitch-scene-collada-gui/src/recon/slice_29.cpp,twin of 0x7031d8 (C1 and C2 identical); shared definition

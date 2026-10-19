@@ -1,0 +1,56 @@
+[
+  {
+    "name": ".debug_aranges",
+    "file_offset": 10101744,
+    "size": 12200,
+    "sha256": "c672c0cb2c1c96eb93bd26799d7c6cbb76f1043ca7e85f50b915f0038b144160"
+  },
+  {
+    "name": ".debug_pubnames",
+    "file_offset": 10113944,
+    "size": 89644,
+    "sha256": "b704d45b35297365da51b40ae39b9cffa9ba6bc7d381282c5035a879667a1aef"
+  },
+  {
+    "name": ".debug_info",
+    "file_offset": 10203588,
+    "size": 1319016,
+    "sha256": "e7c5534c4fca0b16a5db88d7738bf35011ac00877bdc9ce6bbda215ada6c8c57"
+  },
+  {
+    "name": ".debug_abbrev",
+    "file_offset": 11522604,
+    "size": 56021,
+    "sha256": "b48005818a8ca32583bdc70c8f6f0afb29160c01287e52b8697364e541c77a95"
+  },
+  {
+    "name": ".debug_line",
+    "file_offset": 11578625,
+    "size": 135611,
+    "sha256": "83a0d1baaabba747234c2399f8a67c48c602c9b8507554fd50565959c4ea22ed"
+  },
+  {
+    "name": ".debug_frame",
+    "file_offset": 11714236,
+    "size": 45904,
+    "sha256": "fd417af77eaa0cfbb7c910ca385952704fc399a02678ca3dea1bc7079888f2fa"
+  },
+  {
+    "name": ".debug_str",
+    "file_offset": 11760140,
+    "size": 298437,
+    "sha256": "b2a5ca980caca43b55b8f3e05feb6e47a82eae6c7bc3539a7e9adedab572e4d2"
+  },
+  {
+    "name": ".debug_loc",
+    "file_offset": 12058577,
+    "size": 194627,
+    "sha256": "b01abde811327a6ec501bf52b58b4af7fced113c3997fce4feb299ef0f29ad97"
+  },
+  {
+    "name": ".debug_ranges",
+    "file_offset": 12253204,
+    "size": 142048,
+    "sha256": "5eea362eb93c8a1e6fa874b92373c1398f5bb8ecadf6524130bef5ee3835e789"
+  }
+]

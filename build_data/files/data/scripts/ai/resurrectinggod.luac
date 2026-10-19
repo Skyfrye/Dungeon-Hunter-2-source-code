@@ -1,0 +1,143 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Resurrecting God behavior: 
+-- 
+-- - Virtually invincible while casting a huge ass kicking summon
+-- - Skill 1 : No damage aoe knockback
+-- - 5 seconds pass : Tablet 1 starts to bleed
+-- - 10 seconds pass : Tablet 2 starts to bleed
+-- - 15 seconds pass : Tablet 2 starts to bleed
+-- - 20 seconds pass : The boss dies.
+-- - Ondied : Performs Skill 1 + Change phase (spawns Madruk, boss #2)
+-- ----------------------------------------------------------------------------------------------------
+
+local g_timer				= 1000;
+local g_isTime				= 0;
+local hasTimerStarted		= false;
+local m_timerID;
+ 
+local MADRUK_OID			= GetPyOID("CharacterTable", "Madruk_A");
+
+local musicStarted_flag		= false; -- checks if the boss music has started or not.
+local hasKilledSelf			= false;
+
+local traces				= false;
+-- ----------------------------------------------------------------------------------------------------
+RegisterSummon(MADRUK_OID);
+-- ----------------------------------------------------------------------------------------------------
+local function InitVars()
+	g_timer				= 1000;
+	g_isTime			= 0;
+	hasTimerStarted		= false;
+	m_timerID			= nil;
+
+	musicStarted_flag	= false; -- checks if the boss music has started or not.
+	hasKilledSelf		= false;
+
+	traces				= false;
+end
+
+
+
+local function  ResurrectingGodTimer()
+	g_isTime = g_isTime + 1;
+	if (traces) then Trace("Time is now:"..g_isTime); end
+	if(g_isTime == 5) then
+		CallPyScript("start_phase_01_event_01");
+	elseif(g_isTime == 10) then
+		CallPyScript("start_phase_01_event_02");
+	elseif(g_isTime == 15) then
+		CallPyScript("start_phase_01_event_03");
+	elseif(g_isTime == 20) then
+		Stop(); -- Want to stop all state the aI is in so the skill can be done
+	elseif(g_isTime > 20) then
+		g_isTime = 0;
+		StopTimerCB(m_timerID);
+		m_timerID = nil;
+		hasKilledSelf = true;
+		hasTimerStarted	= false;
+		DoSkill(0);
+		if (traces) then Trace("Hey, the god should ressurect now!"); end
+	end
+	
+end
+
+-- INIT --
+function ResurrectingGod_OnInit()
+	OnInit();
+	InitVars();
+end
+AddToVFTable("OnInitFinal", "ResurrectingGod_OnInit");
+
+
+
+-- -------------------------------------------------------------------------------
+function ResurrectingGod_OnEnemySpotted(enemy)
+	if (not musicStarted_flag) then
+		musicStarted_flag = true;
+		PlayMusic("HellKingOneLoopMusic", 500);
+	end
+end
+AddToVFTable("OnEnemySpotted", "ResurrectingGod_OnEnemySpotted");
+
+
+
+-- -------------------------------------------------------------------------------
+function ResurrectingGod_OnUpdate(timestamp)
+	OnUpdate(timestamp);
+	
+	if (not hasTimerStarted) then
+		if (m_timerID) then
+			StopTimer(m_timerID);
+			Trace("Timer is not nil!  Let's set it to nil!!");
+			m_timerID = nil;
+		end
+		
+		Trace("Starting Timer!!");
+		m_timerID = StartTimerCB(g_timer, true, ResurrectingGodTimer);
+		hasTimerStarted = true;
+	end
+	
+	
+	local HPCurr, HPMax, HPPercentCurr = GetPropHP();
+
+	if(HPPercentCurr < 100 ) then
+	   SetProp(GetPyStruct("CharacterProperties", "HP"), ToFixed(HPMax));
+	end
+end
+AddToVFTable("OnUpdate", "ResurrectingGod_OnUpdate");
+
+function ResurrectingGod_OnTargetHit(attacker, defender)
+	if (traces) then Trace("The god is being hit!"); end
+	if (defender:GetID() == GetID()) then
+		local HPCurr, HPMax, HPPercentCurr = GetPropHP();
+		if(HPPercentCurr < 100 ) then
+   		SetProp(GetPyStruct("CharacterProperties", "HP"), ToFixed(HPMax));
+   	end
+	end		
+end
+AddToVFTable("OnTargetHit", "ResurrectingGod_OnTargetHit");
+
+
+-- -------------------------------------------------------------------------------
+function ResurrectingGod_OnDied(killer)
+	if (not hasKilledSelf) then
+		CallPyScript("end_MadrukPhase1");
+	end
+	
+	if (m_timerID) then
+		StopTimerCB(m_timerID);
+		m_timerID = nil;
+		hasTimerStarted	= false;
+	end
+end
+AddToVFTable("OnDied", "ResurrectingGod_OnDied");
+
+
+-- -------------------------------------------------------------------------------
+function ResurrectingGod_OnTerminate()
+	if (m_timerID) then
+		StopTimerCB(m_timerID);
+		m_timerID = nil;
+	end
+end
+AddToVFTable("OnTerminate", "ResurrectingGod_OnTerminate");

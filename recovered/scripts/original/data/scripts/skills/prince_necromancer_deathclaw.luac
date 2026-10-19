@@ -1,0 +1,104 @@
+--[[	Death Claw -> HARROWING GRASP
+
+	A giant death reaper hand that appear and hit an enemy
+	--> Changed 10/01/2010, Now can inflict damage to multiples enemies, in a 135 degree radius in front of the MC
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 680.0; -- Moved back from 40 unit, so + 40 added here
+local ANGLE				= 135.0;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Necromancer_DeathClaw");
+
+local USE_COOLDOWN	= true;			-- Cooldown method enabled
+local COOLDOWN_BASE	= 1500;			-- 1.5 sec of cooldown time
+local COOLDOWN_PLVL	= 0;
+local COOLDOWN_SLVL	= 0
+
+-- Cached values
+
+local skill_level		= -1;
+local mana_cost;
+local cooldown;
+local target;
+local traces			= false;
+
+-- ----------------------------------------------------------------------------------------------
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+	return cooldown;
+end	
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+		-- Cooldown define	
+	cooldown	= COOLDOWN_BASE + COOLDOWN_PLVL * FromFixed(plvl) + COOLDOWN_SLVL * slvl;
+	if(cooldown < 0) then
+		cooldown = 0;
+	end
+end
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return (not HasSkillCooldown() and HasMana(mana_cost)), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	-- We only target enemies
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	-- We only target destructible objects
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	-- Look for target in front of us prior to looking for the distance
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(RANGE);
+	SetSkillCooldown(cooldown);
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+	else
+		target = nil;
+	end
+
+	if (traces) then Trace("[Skills | DeathClaw] Consumes "..FromFixed(mana_cost).." mana..."); end
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	ApplyPropClass(CLASS_ID);
+	TargetListSearch(RANGE, ANGLE, 0 , -40, 0, true);
+	repeat
+		if(not IsTargetListEmpty()) then
+			local target,_,_, character = GetTargetListTop();
+			PopTargetList();
+			local dmg = SkillCombatRoll(target);
+			if (dmg == nil) then dmg = 0; end
+			if (traces) then Trace("[Skills | Deathclaw] caused "..FromFixed(dmg).." damage!"); end
+			if(character) and (dmg > 0) then
+				target:SetKnockBackState(true);
+				--target:PlayFX(GetPyOID("AnimatedEffectTable", "spell_dh2_prince_necromancer_deathclaw"));
+			end
+		end
+	until (IsTargetListEmpty())
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

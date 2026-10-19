@@ -1,0 +1,117 @@
+--[[	Figments
+
+	Casts figments that torment up to 3 enemies, deal damage and prevent them to attack 
+	Mana Cost: 15
+	Cast time: 1.5 sec
+	Cool down: 3 sec
+
+	DoT: 5/sec 
+	DoT Duration: 5 sec
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 1000.0;
+local ANGLE				= 360.0;
+--local MAX_ENNEMY		= 1;
+
+
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Illusionist_Figments");
+local BUFF_ID			= 	GetPyOID("ClassTable", "Skill_Illusionist_Figments_buff");
+local BUFF_FX			=	GetPyOID("AnimatedEffectTable", "spell_dh2_prince_illusionist_figments");
+local BUFF_DURATION	= FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Dot_Duration"), true));
+
+local STUN_DURATION = 2000;
+local MIN_STUN_DURATION = 1500;
+local MAX_STUN_DURATION = 4000;
+
+
+-- Cached values
+local skill_level		= 0;
+local mana_cost;
+
+-- Cooldown variables
+local cooldown	=	FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Cooldown"), true));
+local traces			= 	false;
+
+-- Buff Variables
+local buff;
+
+-- ----------------------------------------------------------------------------------------------
+--	CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+	return cooldown;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local plvl = GetProp(GetPyStruct("CharacterProperties", "Level"));
+	local slvl = GetCurrentSkillInfo();
+	
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	BUFF_DURATION	= FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Dot_Duration"), true));
+	cooldown	=	FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Cooldown"), true));
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return (not HasSkillCooldown() and HasMana(mana_cost)), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	UseMana(mana_cost);
+	SetSkillCooldown(cooldown);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+	
+	TargetListSearch(RANGE, ANGLE);
+	PlaySound("sfx_skill_mage_ilu_nightmare",false,0,false);
+  	if(not IsTargetListEmpty()) then
+  		local num_enemy = 1;
+        	
+		repeat
+			local target = GetTargetListTop();
+			PopTargetList();
+				ApplyPropClass(CLASS_ID);
+				SkillCombatRoll(target);
+			--if (num_enemy <= MAX_ENNEMY) then
+				-- Bosses or mini-bosses won't be stunned.
+				if (not IsBoss(target) and not IsMiniBoss(target)) then
+				  --- make stun duration random
+					STUN_DURATION = GetRand(MIN_STUN_DURATION, MAX_STUN_DURATION);   
+					target:SetStunState(STUN_DURATION,true);
+				end
+				-- The buff doesnt have nothing, only for the FX
+				local buff = target:CreateBuff(BUFF_ID, BUFF_DURATION, false, skill_level, BUFF_FX);
+				target:ApplyBuff(BUFF_ID, buff);
+				-- This one applies the Poison on the monster (from the character classes)
+				
+			--end
+			
+			num_enemy = num_enemy + 1;
+		until(IsTargetListEmpty())
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

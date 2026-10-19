@@ -1,0 +1,209 @@
+--[[	Pestilence (active)
+
+	Short distance cast (almost at melee range)
+	DOT and
+	if enemy die from the effect;  explode and affect targets around
+	Mana Cost: 15
+	Cast time: 1.5 sec
+	Cool down: 3 sec
+	DoT Duration: 5 sec
+	Explode Radius: 200
+	
+--]]
+
+ 
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 1000.0;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Necromancer_Pestilence");
+local FX 				= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_necromancer_pestilence");
+-- Cached values
+
+local skill_level		= 0;
+local mana_cost;
+local current_time		= 0;
+local timeofdot;		-- Contain the time of dot in millisecond
+
+local radius			= 200;
+local skill_time		= 0;
+local attackedTargets	= {};
+local traces			= false;
+local timer				= nil;
+
+
+-- ----------------------------------------------------------------------------------------------
+local function RemoveTarget(timerID, victim)
+	if (#attackedTargets > 0) then
+	
+		for index, object in pairs(attackedTargets) do
+			if (victim:GetID() == object:GetID()) then
+				table.remove(attackedTargets, index);
+				return
+			end
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function DamageNearbyTargets(victim)
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	ApplyPropClass(CLASS_ID);
+	if (traces) then Trace ("[Skills |Pestilence Breath] Cause the NPC to explode! Timer id:"..id); end
+	
+	-- redo a target search from the victim position
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+	
+	TargetListSearch(radius, 360, victim);
+
+	if (traces) then Trace("[Skills | Pestilence Breath] Explosion start! Potential victims:"..GetTargetListSize()); end
+	
+	victim:PlayFX(FX);
+	PlaySound("sfx_skill_mage_doppelganger_statue_explode",false,0,false);
+	
+	repeat
+		if (traces) then Trace("[Skills | Pestilence Breath] Explosion start! Potential victims:"..GetTargetListSize()); end
+		
+		if(not IsTargetListEmpty()) then
+			local target = GetTargetListTop();
+			PopTargetList();
+			
+			if (traces) then Trace("[Skills | Pestilence Breath] Explosion damage!"); end
+			local dmg = SkillCombatRoll(target);
+		end
+	until(IsTargetListEmpty())
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function UpdateAttackedTargets()
+	if (traces) then Trace("Pestilence breath -- check the death"); end
+	if (#attackedTargets > 0) then
+		for index, object in pairs(attackedTargets) do
+			if (object:IsDead()) then
+				DamageNearbyTargets(object);
+				if (traces) then Trace("Removing target: " .. object:GetName()); end
+				table.remove(attackedTargets, index);
+			end
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, skill_level);
+	timeofdot = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Dot_Duration"), true));
+	RANGE = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"), true));
+	
+	if (RANGE==0) then
+		-- Fallback if the range is not set
+		RANGE = 400 + (skill_level * 20);
+	end
+	
+	if (skill_level ~= 0) then
+		if (timer) then
+			StopTimerCB(timer);
+		end
+		-- main timer for the skill, activated when the user add the first point in it
+		timer = StartSkillTimerCB(500, true, UpdateAttackedTargets);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	-- Only to align the player to the enemy
+	TargetListSearch(RANGE,240);
+	
+	if(not IsTargetListEmpty()) then
+		local target,_,_, character = GetTargetListTop();
+		LookAt(target);
+	end
+
+	if (traces) then Trace("[Skills/Pestilence Breath] consumes "..FromFixed(mana_cost).." mana..."); end
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	ApplyPropClass(CLASS_ID);
+	
+	if(not IsTargetListEmpty()) then
+
+		repeat
+			local isTargetInList = false;
+			
+			if(not IsTargetListEmpty()) then
+				local target,_,_, character = GetTargetListTop();
+				PopTargetList();
+				
+				-- If the target is a character, then check if he was not infected before and add it to the list
+				if (not target:IsPlayer()) then
+				
+					if(character) then
+					
+						-- Do list check anc compare the victim with the list
+						if (#attackedTargets > 0) then
+							for index, object in pairs(attackedTargets) do
+								if (target:GetName() == object:GetName()) then
+									-- He was infected, do not add it to the list
+									isTargetInList = true;
+									if (traces) then Trace("A victim is in the list, dont add it"); end
+								end
+							end
+						end
+						
+						if(not isTargetInList) then
+							if (traces) then Trace("A victim is there, infect and add it to the list:"..timeofdot); end
+							-- He is not infected, infect him and add it to the list
+							local dmg = SkillCombatRoll(target);
+							if (traces) then Trace("[Skills | Pestilence Breath] caused "..FromFixed(dmg).." damage!"); end
+							
+							table.insert(attackedTargets, target);
+							-- Here is a timer that will remove the victime after the DOT is done
+							StartSkillTimerCB((timeofdot + 1000), false, RemoveTarget, target );
+						end
+					else
+						-- this is an object, not a character
+						SkillCombatRoll(target);
+					end
+				end
+			end
+		until (IsTargetListEmpty())
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnCheckDead_, OnSkillInfo_);

@@ -1,0 +1,101 @@
+elf_address,symbol,status,source_file,notes
+54e138,_ZN6glitch3gui11CGUISpinBox8setValueEf,partial,,setValue swprintf varargs and vtable refresh not rebuilt; format arguments unclear
+54e194,_ZN6glitch3gui11IGUISpinBoxC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,,IGUISpinBox base ctor layout not reconstructed; base vtable and string blocks only
+54e4d8,_ZN6glitch3gui11CGUISpinBoxC2EPKwPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiRKNS_4core4rectIiEE,partial,,CGUISpinBox ctor layout dependent; child edit box and buttons not rebuilt
+54eaac,_ZN6glitch3gui11CGUISpinBoxC1EPKwPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiRKNS_4core4rectIiEE,partial,,CGUISpinBox ctor alternate variant; same gap as 0x54e4d8
+54f188,_ZNK6glitch3gui11CGUISpinBox8getValueEv,reconstructed,src/recon/slice_03.cpp,Hex-Rays labels int but value is float bits in r0 soft-float ABI so float; fast_atof replaced by strtof
+54f228,_ZN6glitch3gui11CGUISpinBox7onEventERKNS_6SEventE,partial,,event dispatch via vtable slots and parent callback not rebuilt
+54f3d8,_ZN6glitch3gui11CGUISpinBoxD1Ev,partial,,full destructor; not rebuilt
+54f4c4,_ZN6glitch3gui11CGUISpinBoxD0Ev,skipped,,D0 deleting destructor thunk; compiler-generated
+54f4e0,_ZN6glitch3gui11CGUISpinBoxD2Ev,partial,,base-object destructor variant; layout dependent not rebuilt
+54f5bc,_ZN6glitch3gui11IGUISpinBoxD0Ev,partial,,IGUISpinBox destructor; base IGUIElement dtor call not rebuilt
+54f638,_ZN6glitch3gui11CGUISpinBox16setDecimalPlacesEi,partial,src/recon/slice_03.cpp,format string built from decimal places; setValue(getValue()) refresh via vtable slots +0x80 +0x84 not called
+54f790,_ZN6glitch3gui14CGUISpriteBankC2EPNS0_15IGUIEnvironmentE,reconstructed,src/recon/slice_03.cpp,CGUISpriteBank ctor; environment texture grabbed
+54f820,_ZN6glitch3gui14CGUISpriteBankC1EPNS0_15IGUIEnvironmentE,reconstructed,src/recon/slice_03.cpp,alias body identical to 0x54f790 (C1/C2)
+54f8d4,_ZNK6glitch3gui14CGUISpriteBank10getTextureEj,reconstructed,src/recon/slice_03.cpp,returns new reference when in range; null otherwise
+54f930,_ZN6glitch3gui14CGUISpriteBank12draw2DSpriteEjRKNS_4core10position2dIiEEPKNS2_4rectIiEERKNS_5video6SColorEjjbb,partial,,draw2DImage path and rect math depend on C2DDriver layout; not rebuilt
+54fbc0,_ZN6glitch3gui14CGUISpriteBankD1Ev,partial,src/recon/slice_03.cpp,texture drop and driver texture drop reconstructed; sprite and position buffer release not modelled
+54fc68,_ZN6glitch3gui14CGUISpriteBankD2Ev,partial,src/recon/slice_03.cpp,alias of 0x54fbc0; same gap
+54fd10,_ZN6glitch3gui14CGUISpriteBankD0Ev,skipped,,D0 deleting destructor thunk; compiler-generated
+54fd2c,_ZN6glitch3gui14IGUISpriteBankD0Ev,skipped,,D0 deleting destructor thunk; compiler-generated
+54fe14,_ZN6glitch3gui14CGUISpriteBank10addTextureERKN5boost13intrusive_ptrINS_5video8ITextureEEE,reconstructed,src/recon/slice_03.cpp,push_back then grab
+54fe5c,_ZN6glitch3gui14CGUISpriteBank10setTextureEjRKN5boost13intrusive_ptrINS_5video8ITextureEEE,reconstructed,src/recon/slice_03.cpp,grows with nulls then replaces entry and drops old
+54ffcc,_ZNK6glitch3gui14CGUIStaticText13getTextHeightEv,partial,,text height uses font vtable metrics and multiline scale; not rebuilt
+55009c,_ZNK6glitch3gui14CGUIStaticText12getTextWidthEv,partial,,text width uses font vtable and per-line loop; not rebuilt
+550354,_ZN6glitch3gui14IGUIStaticTextC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,,IGUIStaticText base ctor; layout dependent
+55061c,_ZN6glitch3gui14CGUIStaticTextC1EPKwbPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiRKNS_4core4rectIiEEb,partial,,CGUIStaticText ctor; font and string setup partly visible; not rebuilt
+550f98,_ZN6glitch3gui14CGUIStaticTextD1Ev,partial,,full destructor; font drop and string vector release not rebuilt
+55102c,_ZN6glitch3gui14CGUIStaticTextD0Ev,skipped,,D0 deleting destructor thunk; compiler-generated
+551048,_ZN6glitch3gui14CGUIStaticTextD2Ev,partial,,base-object destructor variant; not rebuilt
+5510cc,_ZN6glitch3gui14IGUIStaticTextD0Ev,partial,,IGUIStaticText destructor; base dtor call not rebuilt
+551204,_ZN6glitch3gui14CGUIStaticText9breakTextEv,partial,,line wrap over 12 KB body with font metrics; not rebuilt
+551820,_ZN6glitch3gui14CGUIStaticText22updateAbsolutePositionEv,partial,,calls IGUIElement updateAbsolutePosition and breakText; not rebuilt
+551840,_ZN6glitch3gui14CGUIStaticText15setOverrideFontEPNS0_8IGUIFontE,partial,,font swap with reference counts; breakText call not rebuilt
+551888,_ZN6glitch3gui14CGUIStaticText4drawEv,partial,,draw over font and clip; not rebuilt
+551e34,_ZN6glitch3gui14CGUIStaticText7setTextEPKw,partial,,string assign reconstructed in principle; breakText call not rebuilt
+551e64,_ZN6glitch3gui14CGUIStaticTextC2EPKwbPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiRKNS_4core4rectIiEEb,partial,,alternate ctor variant; same gap as 0x55061c
+552244,_ZN6glitch3gui14CGUITabControl17needScrollControlEib,partial,,scroll width accumulation via font vtable; not rebuilt
+552378,_ZN6glitch3gui14CGUITabControl9selectTabENS_4core10position2dIiEE,partial,,tab hit test with font metrics; not rebuilt
+55251c,_ZN6glitch3gui14CGUITabControl20recalculateScrollBarEv,partial,,scroll bar recalculation; not rebuilt
+5525bc,_ZN6glitch3gui14CGUITabControl16setTabExtraWidthEi,partial,,clamps extra width then calls recalculateScrollBar; not rebuilt
+5525c8,_ZN6glitch3gui14CGUITabControl12setTabHeightEi,partial,,sets tab height and recalculates; not rebuilt
+5525dc,_ZN6glitch3gui14CGUITabControl10scrollLeftEv,partial,,scroll offset decrement then recalculate; not rebuilt
+5525f0,_ZN6glitch3gui14CGUITabControl11scrollRightEv,partial,,scroll offset increment guarded by needScrollControl; not rebuilt
+55263c,_ZN6glitch3gui14CGUITabControl23setTabVerticalAlignmentENS0_14EGUI_ALIGNMENTE,partial,,vertical alignment of tabs; not rebuilt
+552810,_ZN6glitch3gui14CGUITabControl12setActiveTabEi,partial,,active tab index set and selected flags via vtable; not rebuilt
+5528d4,_ZN6glitch3gui14CGUITabControl12setActiveTabEPNS0_11IGUIElementE,partial,,linear search then setActiveTab(int) via vtable; not rebuilt
+552944,_ZN6glitch3gui14CGUITabControl22updateAbsolutePositionEv,partial,,calls IGUIElement updateAbsolutePosition and recalculateScrollBar; not rebuilt
+552a60,_ZN6glitch3gui14CGUITabControl11removeChildEPNS0_11IGUIElementE,partial,,child removal and active tab fix-up; not rebuilt
+552c24,_ZN6glitch3gui11IGUIElementC2ENS0_17EGUI_ELEMENT_TYPEEPNS0_15IGUIEnvironmentEPS1_iNS_4core4rectIiEE,partial,,IGUIElement base ctor; layout dependent
+552ec0,_ZN6glitch3gui14IGUITabControlC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,,IGUITabControl base ctor; not rebuilt
+552f44,_ZN6glitch3gui14CGUITabControlC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementERKNS_4core4rectIiEEbbi,partial,,CGUITabControl ctor; not rebuilt
+5533b0,_ZN6glitch3gui14CGUITabControlC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementERKNS_4core4rectIiEEbbi,partial,,alternate CGUITabControl ctor; same gap as 0x552f44
+5537cc,_ZN6glitch3gui7IGUITabC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,,IGUITab base ctor; not rebuilt
+553850,_ZN6glitch3gui7CGUITabC1EiPNS0_15IGUIEnvironmentEPNS0_11IGUIElementERKNS_4core4rectIiEEi,partial,,CGUITab ctor; not rebuilt
+553994,_ZN6glitch3gui7CGUITabC2EiPNS0_15IGUIEnvironmentEPNS0_11IGUIElementERKNS_4core4rectIiEEi,partial,,alternate CGUITab ctor; same gap as 0x553850
+553a94,_ZN6glitch3gui14CGUITabControl6addTabEPNS0_7CGUITabE,partial,,adds tab with vector growth; not rebuilt
+553fa4,_ZN6glitch3gui7CGUITabD1Ev,partial,,full destructor; not rebuilt
+554034,_ZN6glitch3gui7CGUITabD0Ev,skipped,,D0 deleting destructor thunk; compiler-generated
+5540e4,_ZN6glitch3gui14CGUITabControlD1Ev,partial,,CGUITabControl destructor; not rebuilt
+5541f4,_ZN6glitch3gui14CGUITabControlD0Ev,skipped,,D0 deleting destructor thunk; compiler-generated
+554210,_ZN6glitch3gui14CGUITabControlD2Ev,partial,,CGUITabControl base-object destructor; not rebuilt
+554310,_ZN6glitch3gui14CGUITabControl7onEventERKNS_6SEventE,partial,,event handling via tab vtable; not rebuilt
+5543ec,_ZN6glitch3gui14CGUITabControl6addTabEPKwi,partial,,creates tab from text then addTab; not rebuilt
+554598,_ZN6glitch3gui7IGUITabD0Ev,partial,,IGUITab destructor; not rebuilt
+554614,_ZN6glitch3gui14IGUITabControlD0Ev,partial,,IGUITabControl destructor; not rebuilt
+554690,_ZN6glitch3gui7CGUITab4drawEv,partial,,tab draw; not rebuilt
+554738,_ZN6glitch3gui14CGUITabControl4drawEv,partial,,tab control draw over 1960 byte body; not rebuilt
+554fa8,_ZN6glitch3gui9CGUITable15setActiveColumnEib,partial,,active column change with ordering; not rebuilt
+555348,_ZN6glitch3gui9CGUITable17recalculateWidthsEv,partial,,column width recalculation; not rebuilt
+5553b8,_ZN6glitch3gui9CGUITable18recalculateHeightsEv,partial,,row height recalculation; not rebuilt
+5554f0,_ZN6glitch3gui9CGUITable15checkScrollbarsEv,partial,,scroll bar range checks over 956 byte body; not rebuilt
+5558ac,_ZN6glitch3gui9CGUITable15refreshControlsEv,partial,,control refresh loop; not rebuilt
+555944,_ZN6glitch3gui9CGUITable15dragColumnStartEii,partial,,column drag start; not rebuilt
+555a3c,_ZN6glitch3gui9CGUITable16dragColumnUpdateEi,partial,,column drag update; not rebuilt
+555ac8,_ZN6glitch3gui9CGUITable18selectColumnHeaderEii,partial,,column header selection; not rebuilt
+555bb0,_ZN6glitch3gui9CGUITable9selectNewEib,partial,,row selection; not rebuilt
+555cc4,_ZN6glitch3gui9CGUITable12selectColumnEib,partial,,column selection; not rebuilt
+555de8,_ZN6glitch3gui9CGUITable12getRowColumnEjjRiS2_,partial,,row and column lookup by position; not rebuilt
+556090,_ZN6glitch3gui9CGUITable4CellC1ERKS2_,partial,,Cell copy ctor; string member copy not modelled
+556134,_ZN6glitch3gui9IGUITableC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,,IGUITable base ctor; not rebuilt
+5563fc,_ZN6glitch3gui9CGUITableC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEbbb,partial,,CGUITable ctor; not rebuilt
+55664c,_ZN6glitch3gui9CGUITableC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEbbb,partial,,alternate CGUITable ctor; same gap as 0x5563fc
+556850,_ZN6glitch3gui9CGUITable4CellC1Ev,partial,,Cell default ctor; not rebuilt
+5568a0,_ZN6glitch3gui9CGUITable7onEventERKNS_6SEventE,partial,,table event handling; not rebuilt
+556ea0,_ZN6glitch3gui9CGUITable4drawEv,partial,,table draw over 2548 byte body; not rebuilt
+557b14,_ZN6glitch3gui9IGUITableD0Ev,partial,,IGUITable destructor; not rebuilt
+557b90,_ZN6glitch3gui9CGUITable4CellD1Ev,partial,,Cell destructor; not rebuilt
+557c90,_ZN6glitch3gui9CGUITableD1Ev,partial,,CGUITable destructor; not rebuilt
+557d64,_ZN6glitch3gui9CGUITableD0Ev,skipped,,D0 deleting destructor thunk; compiler-generated
+557d80,_ZN6glitch3gui9CGUITableD2Ev,partial,,CGUITable base-object destructor; not rebuilt
+5583e0,_ZN6glitch3gui9CGUITable4CellaSERKS2_,partial,,Cell copy assignment; not rebuilt
+558770,_ZN6glitch3gui9CGUITable9clearRowsEv,partial,,clears rows; not rebuilt
+5587c8,_ZN6glitch3gui9CGUITable5clearEv,partial,,clears rows and columns; not rebuilt
+5588d8,_ZN6glitch3gui9CGUITable9removeRowEj,partial,,row removal; not rebuilt
+558968,_ZN6glitch3gui9CGUITable8swapRowsEjj,partial,,row swap; not rebuilt
+558a18,_ZN6glitch3gui9CGUITable9orderRowsEiNS0_18EGUI_ORDERING_MODEE,partial,,row ordering; not rebuilt
+558e28,_ZN6glitch3gui9CGUITable9breakTextERKSbIwSt11char_traitsIwENS_4core10SAllocatorIwLNS_6memory13E_MEMORY_HINTE0EEEERS9_j,partial,,wide string line break over 672 byte body; not rebuilt
+5590d4,_ZN6glitch3gui9CGUITable11setCellTextEjjPKwNS_5video6SColorE,partial,,cell text with colour; not rebuilt
+5591dc,_ZN6glitch3gui9CGUITable11setCellTextEjjPKw,partial,,cell text; not rebuilt
+5592f0,_ZN6glitch3gui9CGUITable14setColumnWidthEjj,partial,,column width set; not rebuilt
+5596c0,_ZN6glitch3gui9CGUITable12removeColumnEj,partial,,column removal; not rebuilt

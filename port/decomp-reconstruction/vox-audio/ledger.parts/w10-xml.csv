@@ -1,0 +1,10 @@
+elf_address,symbol,status,source_file,notes
+0x889e98,_ZN3vox11SoundXMLDefD1Ev,reconstructed,vox-audio/src/w10-xml/xml_def_records.cpp,"Sound loader record destructor. Owned label, file name and custom strings are freed by the member destructors, as the binary frees its three blocks"
+0x88a090,_ZN3vox11EventXMLDefD1Ev,reconstructed,vox-audio/src/w10-xml/xml_def_records.cpp,"Event loader record destructor; the list, the uid vector, the name and the custom strings are members and free themselves"
+0x88b104,_ZN3vox11EventXMLDefaSERKS0_,reconstructed,vox-audio/src/w10-xml/xml_def_records.cpp,"Event loader record copy assignment, deep: the custom strings are copied with the record, so the shallow +0x28 double free is gone"
+0x88b1fc,_ZN3vox11EventXMLDefC1ERKS0_,reconstructed,vox-audio/src/w10-xml/xml_def_records.cpp,"Event loader record copy constructor, deep (see the assignment at 88b104). List nodes and vector copied by value"
+0x88c2cc,_ZN3vox15VoxSoundPackXMLD1Ev,reconstructed,vox-audio/src/w10-xml/sound_pack_xml_load.cpp,"Pack destructor D1. The record vectors, the uid map, the group masks and the shared loader tables are members that free themselves"
+0x88c36c,_ZN3vox15VoxSoundPackXMLD2Ev,reconstructed,vox-audio/src/w10-xml/sound_pack_xml_load.cpp,"Pack destructor D2, same body as D1 (see 88c2cc)"
+0x88d344,_ZN3vox15VoxSoundPackXML7LoadXMLEPKc,partial,vox-audio/src/w10-xml/sound_pack_xml_load.cpp,"LoadXML: file read (seek end, tell, read, close) then the full sound, group, mask, bank and event chunk loop through a TinyXML subset (vox-audio/vendor/tixml_dh.hpp). Partial: an element with no uid is skipped (the binary reuses a stale uid); the sound label is not kept at +0x08; the record priority/emitter word is the open question in NOTES.md; a bad custom count gives no strings"
+0x88ec4c,_ZN3vox15VoxSoundPackXMLC1EPKc,reconstructed,vox-audio/src/w10-xml/sound_pack_xml_load.cpp,"Pack constructor C1: member defaults, then LoadXML (see 88d344 for its partial status)"
+0x88ecc4,_ZN3vox15VoxSoundPackXMLC2EPKc,reconstructed,vox-audio/src/w10-xml/sound_pack_xml_load.cpp,"Pack constructor C2, same body as C1"

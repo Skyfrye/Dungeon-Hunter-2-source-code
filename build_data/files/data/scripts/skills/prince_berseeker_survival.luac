@@ -1,0 +1,88 @@
+--[[	Survival
+
+	when HP is 35% or lower, damage dealt is greatly increased
+
+--]]
+
+-- Cached values
+local BUFF_ID			= GetPyOID("ClassTable", "Skill_Berserk_Survival");
+local BUFF_FX			= GetPyOID("AnimatedEffectTable", "skill_dh2_prince_warrior_berseker_survival");
+local BUFF_TIMER		= 8000;
+
+local TIMER_DELAY		= 3000;
+local PCT_VALUE			= 35;
+local timer_flag		= true;
+
+-- Cached values
+local skill_level		= 0;
+local timer_survival;
+local buff_survival;
+local traces			= false;
+
+-- ----------------------------------------------------------------------------------------------
+local function StopBuffTimer()
+	if (traces) then Trace("[Skills | Survival] Setting Buff to Nil!"); end
+	buff_survival = nil;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnTargetHit_Skill()
+	local HPCurr, HPMax, HPPercentCurr = GetHP();
+	
+	if (skill_level > 0) then
+	
+		if (HPPercentCurr < PCT_VALUE and not buff_survival) then
+			SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+			
+			buff_survival = CreateBuff(BUFF_ID, BUFF_TIMER, false, skill_level, BUFF_FX);
+			ApplyBuff(BUFF_ID, buff_survival);
+			StartTimerCB(BUFF_TIMER, false, StopBuffTimer);
+			
+			PlaySound("sfx_passive_skill_activate_3", false, 0, false);
+			if (traces) then Trace("[Skills | Survival] Activating Survival mode"); end
+		end
+		
+		if (HPPercentCurr >= PCT_VALUE and buff_survival) then
+			RemoveBuff(BUFF_ID, buff_survival);
+			buff_survival = nil;
+			
+			if (traces) then Trace("De-Activating Survival mode"); end
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill);
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(BUFF_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level = slvl;
+	end
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+end
+
+local function OnSkillCheck_()
+	return false, skill_level > 0;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

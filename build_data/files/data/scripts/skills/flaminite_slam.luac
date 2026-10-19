@@ -1,0 +1,71 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Flaminite Slam down Skill: 
+-- 
+-- - Normal melee attack (Bash down).
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 300.0;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Flaminite_Slam");
+
+-- Cached values
+local target;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	-- Do a target search in front of 120 degree, for a 500 unit distance. And the origin of the "pie" is starting from 40 unit back of monster
+	-- doing the search from the back of the monster should take the player when it's face to face with it.
+	TargetListSearch(500,120,0,-40,0,true);
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+		PlayFX(GetPyOID("AnimatedEffectTable", "Root_Slam"));
+	else
+		target = nil;
+		Trace("there is nobody to attack here!!!")
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(target) then
+		ApplyPropClass(CLASS_ID);
+		local dmg = SkillCombatRoll(target);
+		if(dmg > 0) then
+			target:PlayFX(GetPyOID("AnimatedEffectTable", "elem_dmg_01_fire"));
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

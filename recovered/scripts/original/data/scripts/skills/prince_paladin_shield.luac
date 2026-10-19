@@ -1,0 +1,191 @@
+--[[	Guardian Shield (Passive) - Spiritual Armor
+	Each hit had a chance to push or stun the attacker.	
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Paladin_GuardianShield");
+
+-- Cached values
+local skill_level	= 0;
+local buff			= nil;
+local KNOCKBACK	= 0;
+local traces		= false;
+local timer			= 0;
+local timer2		= 0;
+
+function getAIState(object, traces) -- Debug function -- to be removed
+	local state = object:GetState();
+	if( state == GetPyCst("AIStates", "Dead")) then
+		if (traces) then Trace("--> State: Dead"); end
+		return "Dead";
+	end
+	if( state == GetPyCst("AIStates", "Idle")) then
+		if (traces) then Trace("--> State: Idle"); end
+		return "Idle";
+	end
+	if( state == GetPyCst("AIStates", "Limbus")) then
+		if (traces) then Trace("--> State: Limbus"); end
+		return "Limbus";
+	end
+	if( state == GetPyCst("AIStates", "Spawn")) then
+		if (traces) then Trace("--> State: Spawn"); end
+		return "Spawn";
+	end
+	if( state == GetPyCst("AIStates", "Despawn")) then
+		if (traces) then Trace("--> State: Despawn"); end
+		return "Despawn";
+	end
+	if( state == GetPyCst("AIStates", "Move")) then
+		if (traces) then Trace("--> State: Move"); end
+		return "Move";
+	end
+	if( state == GetPyCst("AIStates", "Attack")) then
+		if (traces) then Trace("--> State: Attack"); end
+		return "Attack";
+	end
+	if( state == GetPyCst("AIStates", "Skill")) then
+		if (traces) then Trace("--> State: Skill"); end
+		return "Skill";
+	end
+	if( state == GetPyCst("AIStates", "Cast")) then
+		if (traces) then Trace("--> State: Cast"); end
+		return "Cast";
+	end
+	if( state == GetPyCst("AIStates", "Scared")) then
+		if (traces) then Trace("--> State: Scared"); end
+		return "Scared";
+	end
+	if( state == GetPyCst("AIStates", "Stunned")) then
+		if (traces) then Trace("--> State: Stunned"); end
+		return "Stunned";
+	end
+	if( state == GetPyCst("AIStates", "KnockedBack")) then
+		if (traces) then Trace("--> State: KnockedBack"); end
+		return "KnockedBack";
+	end
+
+	if( state == GetPyCst("AIStates", "Injured")) then
+		if (traces) then Trace("--> State: Injured"); end
+		return "Injured";
+	end
+	if( state == GetPyCst("AIStates", "Interact")) then
+		if (traces) then Trace("--> State: Interact"); end
+		return "Interact";
+	end
+	if( state == GetPyCst("AIStates", "Anim")) then
+		if (traces) then Trace("--> State: Anim"); end
+		return "Anim";
+	end
+	if( state == GetPyCst("AIStates", "Reviving")) then
+		if (traces) then Trace("--> State: Reviving"); end
+		return "Reviving";
+	end
+	if( state == GetPyCst("AIStates", "Revived")) then
+		if (traces) then Trace("--> State: Revived"); end
+		return "Revived";
+	end
+	if( state == GetPyCst("AIStates", "PreSpawn")) then
+		if (traces) then Trace("--> State: PreSpawn"); end
+		return "PreSpawn";
+	end
+	return "No state";
+end
+
+local function check(timeq,attacker)
+	attacker:SetKnockBackState(false);
+	local state = getAIState(attacker, false);
+	if (state~="Attack") then
+		StopTimerCB(timeq);
+		attacker:Stop();
+		if (traces) then Trace ("The character is attacking and doesnt want to knockback!"); end
+	end
+	if (state=="KnockedBack") then
+		if (traces) then Trace("Knockback was applied to "..attacker:GetName().."!!!"); end
+		StopTimerCB(timeq);
+	end
+end
+
+local function check2(timeq,attacker)
+	attacker:SetStunState(3000, true);
+	local state = getAIState(attacker, false);
+	if (state~="Attack") then
+		StopTimerCB(timeq);
+		attacker:Stop();
+		if (traces) then Trace ("The character is attacking and doesnt want to stun!"); end
+	end
+	if (state=="Stunned") then
+		if (traces) then Trace("Knockback was applied to "..attacker:GetName().."!!!"); end
+		StopTimerCB(timeq);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+-- FUNCTIONS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnTargetHit_Skill(attacker, defender)
+	if (skill_level > 0) then
+		if (defender:GetID() == GetID() and attacker:TargetInMeleeRange()) then
+			if (traces) then Trace("Being Attacked!!!"); end
+			local proc_chance = GetRand(0,100);
+			local proc_chance2 = GetRand(0,100);
+			if (traces) then Trace (" Chances are "..KNOCKBACK..":"..proc_chance); end
+			if (proc_chance < KNOCKBACK) then
+				timer = StartSkillTimerCB(500, true, check, attacker);
+			end
+			if (proc_chance2 < STUN) then
+				timer2 = StartSkillTimerCB(500, true, check2, attacker);
+			end
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local plvl = GetProp(GetPyStruct("CharacterProperties", "Level"));
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		if (traces) then Trace("Skill Shield active"); end
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	local mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	KNOCKBACK 	= 	FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Push_Target_Chance"), true));
+	STUN			=	FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Stun_Target_Chance"), true));
+end
+
+
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return false, skill_level > 0;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

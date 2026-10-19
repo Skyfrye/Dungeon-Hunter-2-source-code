@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/crypt"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\007_crypt_01.pyscript"
+	camera_znear="900"
+	camera_zfar="5000"
+	music="CryptOneAmbientMusic"
+	ambiant_music="sfx_catacomb_ambiance"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	light_set="data/3D/Light/crypt.lightset_xml"
+	fixed_light_set="data/3D/Light/crypt_es1_1.lightset_xml"
+	prog_vertex_buffer_size="235920"
+	prog_index_buffer_size="60600"
+	fix_vertex_buffer_size="1100268"
+	fix_index_buffer_size="88020"
+>
+
+	<list name="deadends" random="true">
+		<elem name="deadend_e" gameplay="crypt_deadend_e_01.mgp" visual="crypt_deadend_e_01.mvp"/>
+		<elem name="deadend_w" gameplay="crypt_deadend_w_01.mgp" visual="crypt_deadend_w_01.mvp"/>
+		<elem name="deadend_n" gameplay="crypt_deadend_n_01.mgp" visual="crypt_deadend_n_01.mvp"/>
+	</list>
+	
+	<list name="tmodules" random="true">
+		<elem name="t_sew" gameplay="crypt_t_sew_01.mgp" visual="crypt_t_sew_01.mvp"/>
+		<!--elem name="t_nse" gameplay="Debug_t_nse_01.mgp" visual="crypt_t_nse_01.mvp"/-->		
+	</list>	
+
+	<list name="objective_rooms" random="true">
+		<elem name="kings_chamber_s" gameplay="crypt_kings_chamber_s_01.mgp" visual="crypt_kings_chamber_s_01.mvp"/>
+		<elem name="entrance_s" gameplay="crypt_entrance_s_01.mgp" visual="crypt_entrance_s_01.mvp"/>
+		<elem name="straight_c_ns" gameplay="crypt_straight_c_ns_01.mgp" visual="crypt_straight_c_ns_01.mvp"/>
+		<elem name="cemetery_entrance" gameplay="crypt_cemetery_entrance_01.mgp" visual="crypt_cemetery_entrance_01.mvp"/>
+	</list>
+
+	<list name="finalroom" random="true">
+		<elem name="straight_c_ns" gameplay="crypt_straight_c_ns_01.mgp" visual="crypt_straight_c_ns_01.mvp"/>
+		<elem name="straight_c_ns" gameplay="crypt_straight_c_ns_02.mgp" visual="crypt_straight_c_ns_01.mvp"/>
+		<elem name="straight_c_ns" gameplay="crypt_straight_c_ns_03.mgp" visual="crypt_straight_c_ns_01.mvp"/>
+	</list>
+
+	<list name="path" random="true">
+		<elem name="corner_se" gameplay="crypt_corner_se_01.mgp" visual="crypt_corner_se_01.mvp"/>
+		<elem name="corner_se" gameplay="crypt_corner_se_02.mgp" visual="crypt_corner_se_01.mvp"/>
+		<elem name="corner_se" gameplay="crypt_corner_se_03.mgp" visual="crypt_corner_se_01.mvp"/>
+		<elem name="corner_ne" gameplay="crypt_corner_ne_01.mgp" visual="crypt_corner_ne_01.mvp"/>
+		<elem name="corner_ne" gameplay="crypt_corner_ne_02.mgp" visual="crypt_corner_ne_01.mvp"/>
+		<elem name="corner_ne" gameplay="crypt_corner_ne_03.mgp" visual="crypt_corner_ne_01.mvp"/>
+		<elem name="corner_nw" gameplay="crypt_corner_nw_01.mgp" visual="crypt_corner_nw_01.mvp"/>
+		<elem name="corner_nw" gameplay="crypt_corner_nw_02.mgp" visual="crypt_corner_nw_02.mvp"/>
+		<elem name="corner_sw" gameplay="crypt_corner_sw_01.mgp" visual="crypt_corner_sw_01.mvp"/>
+		<elem name="corner_sw" gameplay="crypt_corner_sw_02.mgp" visual="crypt_corner_sw_01.mvp"/>
+	</list>
+	
+	<list name="hallway" random="true">
+		<elem name="straight_ns" gameplay="crypt_straight_ns_01.mgp" visual="crypt2_straight_ns_01.mvp"/>
+	</list>
+
+<RootRule name="#objective_rooms[3]">
+	<ForceBlock name="#hallway">
+		<Path name="#path" length="2,3" dontgoback=false>
+				<ForceBlock name="#tmodules[0]">
+					<Path name="#path" length="1,2" dontgoback=false>
+						<ForceBlock name="#finalroom"/>
+					</Path>
+					<ForceBlock name="#deadends"/>
+				</ForceBlock>
+			</Path>
+	</ForceBlock>
+</RootRule>
+</rules>

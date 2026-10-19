@@ -1,0 +1,534 @@
+DWARF-derived C++ declaration sketches. These are NOT original source files,
+not compilation-ready headers, and contain NO recovered function bodies.
+Qualified names are printed verbatim; arrays/function pointers, templates,
+access defaults, static methods, and ABI-only entries may require manual repair.
+Exact DWARF attributes and type references are preserved in dies.jsonl.gz.
+Source paths refer to original debug metadata; those files are not bundled.
+
+Compilation unit: /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp
+Evidence category: cxx_runtime_stlport
+
+// DIE 0xac228, byte_size=None, declaration=True
+struct std::__true_type;
+
+// DIE 0xac22e, byte_size=None, declaration=True
+struct std::__false_type;
+
+// DIE 0xac24d, byte_size=None, declaration=True
+class std::priv::_Pthread_alloc;
+
+// DIE 0xac253, byte_size=None, declaration=True
+struct std::priv::_Pthread_alloc_per_thread_state;
+
+// DIE 0xac25d, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:767
+enum std::priv::_Pthread_alloc_per_thread_state::<anonymous enum> {
+    _S_NFREELISTS = 16,
+};
+
+// DIE 0xac26e, byte_size=None, declaration=True
+union std::priv::_Pthread_alloc_obj;
+
+// DIE 0xac274, byte_size=None, declaration=True
+class std::priv::_Pthread_alloc_impl;
+
+// DIE 0xac27a, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:795
+enum std::priv::_Pthread_alloc_impl::<anonymous enum> {
+    _S_ALIGN = 8,
+};
+
+// DIE 0xac28e, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:826
+class std::priv::_Pthread_alloc_impl::_M_lock {
+    std::priv::_Pthread_alloc_impl::_M_lock::_M_lock(); // method DIE 0xac297
+    std::priv::_Pthread_alloc_impl::_M_lock::~_M_lock(); // method DIE 0xac2b0
+};
+
+// DIE 0xac3a7, byte_size=None, declaration=True
+class std::__malloc_alloc;
+
+// DIE 0xac3ad, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_alloc.h:60
+typedef void ()* std::__oom_handler_type;
+
+// DIE 0xac3b8, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_alloc.h:141
+enum std::<anonymous enum> {
+    _MAX_BYTES = 128,
+};
+
+// DIE 0xac3cc, byte_size=None, declaration=True
+class std::__node_alloc;
+
+// DIE 0xac3d2, byte_size=None, declaration=True
+struct std::_STLP_mutex_base;
+
+// DIE 0xac3d8, byte_size=None, declaration=True
+class std::_STLP_mutex;
+
+// DIE 0xac3de, byte_size=None, declaration=True
+struct std::_STLP_auto_lock;
+
+// DIE 0xac3e4, byte_size=None, declaration=True
+class std::_Node_Alloc_Lock;
+
+// DIE 0xac3ea, byte_size=None, declaration=True
+struct std::_Node_alloc_obj;
+
+// DIE 0xac3f0, byte_size=None, declaration=True
+class std::__node_alloc_impl;
+
+// DIE 0xac456, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/../include/stddef.h:211
+typedef unsigned int size_t;
+
+// DIE 0xac4ac, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/asm/posix_types.h:18
+typedef long int __kernel_off_t;
+
+// DIE 0xac4b7, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/asm/posix_types.h:26
+typedef long int __kernel_time_t;
+
+// DIE 0xac4c2, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/asm/posix_types.h:28
+typedef long int __kernel_clock_t;
+
+// DIE 0xac4d3, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/sys/types.h:54
+typedef __kernel_clock_t clock_t;
+
+// DIE 0xac4de, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/sys/types.h:67
+typedef __kernel_off_t off_t;
+
+// DIE 0xac4e9, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/sys/types.h:100
+typedef __kernel_time_t time_t;
+
+// DIE 0xac4f4, byte_size=44, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/time.h:45
+struct tm {
+    int tm_sec; // byte offset: 0, access: None, artificial: False
+    int tm_min; // byte offset: 4, access: None, artificial: False
+    int tm_hour; // byte offset: 8, access: None, artificial: False
+    int tm_mday; // byte offset: 12, access: None, artificial: False
+    int tm_mon; // byte offset: 16, access: None, artificial: False
+    int tm_year; // byte offset: 20, access: None, artificial: False
+    int tm_wday; // byte offset: 24, access: None, artificial: False
+    int tm_yday; // byte offset: 28, access: None, artificial: False
+    int tm_isdst; // byte offset: 32, access: None, artificial: False
+    long int tm_gmtoff; // byte offset: 36, access: None, artificial: False
+    char const* tm_zone; // byte offset: 40, access: None, artificial: False
+};
+
+// DIE 0xac6b6, byte_size=8, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdlib.h:144
+struct div_t {
+    int quot; // byte offset: 0, access: None, artificial: False
+    int rem; // byte offset: 4, access: None, artificial: False
+};
+
+// DIE 0xac6df, byte_size=8, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdlib.h:151
+struct ldiv_t {
+    long int quot; // byte offset: 0, access: None, artificial: False
+    long int rem; // byte offset: 4, access: None, artificial: False
+};
+
+// DIE 0xac708, byte_size=16, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdlib.h:158
+struct lldiv_t {
+    long long int quot; // byte offset: 0, access: None, artificial: False
+    long long int rem; // byte offset: 8, access: None, artificial: False
+};
+
+// DIE 0xacd1a, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/type_manips.h:23
+struct std::__true_type {
+};
+
+// DIE 0xacd22, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/type_manips.h:24
+struct std::__false_type {
+};
+
+// DIE 0xacd30, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdio.h:78
+typedef off_t fpos_t;
+
+// DIE 0xacd3b, byte_size=8, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdio.h:87
+struct __sbuf {
+    unsigned char* _base; // byte offset: 0, access: None, artificial: False
+    int _size; // byte offset: 4, access: None, artificial: False
+};
+
+// DIE 0xacd6a, byte_size=84, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdio.h:119
+struct __sFILE {
+    unsigned char* _p; // byte offset: 0, access: None, artificial: False
+    int _r; // byte offset: 4, access: None, artificial: False
+    int _w; // byte offset: 8, access: None, artificial: False
+    short int _flags; // byte offset: 12, access: None, artificial: False
+    short int _file; // byte offset: 14, access: None, artificial: False
+    __sbuf _bf; // byte offset: 16, access: None, artificial: False
+    int _lbfsize; // byte offset: 24, access: None, artificial: False
+    void* _cookie; // byte offset: 28, access: None, artificial: False
+    int (void*)* _close; // byte offset: 32, access: None, artificial: False
+    int (void*, char*, int)* _read; // byte offset: 36, access: None, artificial: False
+    fpos_t (void*, fpos_t, int)* _seek; // byte offset: 40, access: None, artificial: False
+    int (void*, char const*, int)* _write; // byte offset: 44, access: None, artificial: False
+    __sbuf _ext; // byte offset: 48, access: None, artificial: False
+    unsigned char* _up; // byte offset: 56, access: None, artificial: False
+    int _ur; // byte offset: 60, access: None, artificial: False
+    unsigned char[3] _ubuf; // byte offset: 64, access: None, artificial: False
+    unsigned char[1] _nbuf; // byte offset: 67, access: None, artificial: False
+    __sbuf _lb; // byte offset: 68, access: None, artificial: False
+    int _blksize; // byte offset: 76, access: None, artificial: False
+    fpos_t _offset; // byte offset: 80, access: None, artificial: False
+};
+
+// DIE 0xacf1e, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdio.h:151
+typedef __sFILE FILE;
+
+// DIE 0xad1da, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_alloc.h:63
+class std::__malloc_alloc {
+    void* std::__malloc_alloc::allocate(size_t); // method DIE 0xad1e6
+    void std::__malloc_alloc::deallocate(void*, size_t); // method DIE 0xad201
+    std::__oom_handler_type std::__malloc_alloc::set_malloc_handler(std::__oom_handler_type); // method DIE 0xad21d
+};
+
+// DIE 0xad235, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_alloc.h:148
+class std::__node_alloc {
+    void* std::__node_alloc::_M_allocate(size_t&); // method DIE 0xad241
+    void std::__node_alloc::_M_deallocate(void*, size_t); // method DIE 0xad25d
+    void* std::__node_alloc::allocate(size_t&); // method DIE 0xad27a
+    void std::__node_alloc::deallocate(void*, size_t); // method DIE 0xad295
+};
+
+// DIE 0xad2b4, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_pthread_alloc.h:66
+class std::priv::_Pthread_alloc {
+    std::priv::_Pthread_alloc_per_thread_state* std::priv::_Pthread_alloc::_S_get_per_thread_state(); // method DIE 0xad2c0
+    void* std::priv::_Pthread_alloc::allocate(size_t&); // method DIE 0xad2d1
+    void std::priv::_Pthread_alloc::deallocate(void*, size_t); // method DIE 0xad2ec
+    void* std::priv::_Pthread_alloc::allocate(size_t&, std::priv::_Pthread_alloc_per_thread_state*); // method DIE 0xad308
+    void std::priv::_Pthread_alloc::deallocate(void*, size_t, std::priv::_Pthread_alloc_per_thread_state*); // method DIE 0xad328
+    void* std::priv::_Pthread_alloc::reallocate(void*, size_t, size_t&); // method DIE 0xad349
+};
+
+// DIE 0xad371, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/pthread.h:41
+struct pthread_mutex_t {
+    int volatile value; // byte offset: 0, access: None, artificial: False
+};
+
+// DIE 0xad391, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/pthread.h:80
+typedef int pthread_key_t;
+
+// DIE 0xad39c, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_threads.h:275
+struct std::_STLP_mutex_base {
+    pthread_mutex_t _M_lock; // byte offset: 0, access: None, artificial: False
+    void std::_STLP_mutex_base::_M_initialize(); // method DIE 0xad3b8
+    void std::_STLP_mutex_base::_M_destroy(); // method DIE 0xad3d1
+    void std::_STLP_mutex_base::_M_acquire_lock(); // method DIE 0xad3ea
+    void std::_STLP_mutex_base::_M_release_lock(); // method DIE 0xad403
+    std::_STLP_mutex_base::_STLP_mutex_base(); // method DIE 0xad41c
+};
+
+// DIE 0xad436, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_threads.h:408
+class std::_STLP_mutex : std::_STLP_mutex_base {
+    std::_STLP_mutex::_STLP_mutex(); // method DIE 0xad44c
+    std::_STLP_mutex::~_STLP_mutex(); // method DIE 0xad465
+    std::_STLP_mutex::_STLP_mutex(std::_STLP_mutex const&); // method DIE 0xad484
+    void std::_STLP_mutex::operator=(std::_STLP_mutex const&); // method DIE 0xad4a3
+};
+
+// DIE 0xad4d0, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_threads.h:423
+struct std::_STLP_auto_lock {
+    std::_STLP_mutex_base& const _M_lock; // byte offset: 0, access: 3, artificial: False
+    std::_STLP_auto_lock::_STLP_auto_lock(std::_STLP_mutex_base&); // method DIE 0xad4ed
+    std::_STLP_auto_lock::~_STLP_auto_lock(); // method DIE 0xad50b
+    void std::_STLP_auto_lock::operator=(std::_STLP_auto_lock const&); // method DIE 0xad52a
+    std::_STLP_auto_lock::_STLP_auto_lock(std::_STLP_auto_lock const&); // method DIE 0xad549
+};
+
+// DIE 0xad581, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:117
+enum <anonymous enum> {
+    _ALIGN = 8,
+    _ALIGN_SHIFT = 3,
+};
+
+// DIE 0xad59a, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:210
+class std::_Node_Alloc_Lock {
+    std::_STLP_mutex_base& std::_Node_Alloc_Lock::_S_Mutex(); // method DIE 0xad5a6
+    std::_Node_Alloc_Lock::_Node_Alloc_Lock(); // method DIE 0xad5b8
+    std::_Node_Alloc_Lock::~_Node_Alloc_Lock(); // method DIE 0xad5d0
+};
+
+// DIE 0xad5f1, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:241
+struct std::_Node_alloc_obj {
+    std::_Node_alloc_obj* _M_next; // byte offset: 0, access: None, artificial: False
+};
+
+// DIE 0xad612, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:246
+class std::__node_alloc_impl {
+    size_t std::__node_alloc_impl::_S_round_up(size_t); // method DIE 0xad66a
+    std::_Node_alloc_obj* std::__node_alloc_impl::_S_refill(size_t); // method DIE 0xad686
+    char* std::__node_alloc_impl::_S_chunk_alloc(size_t, int&); // method DIE 0xad6a3
+    void* std::__node_alloc_impl::_M_allocate(size_t&); // method DIE 0xad6c5
+    void std::__node_alloc_impl::_M_deallocate(void*, size_t); // method DIE 0xad6e1
+};
+
+// DIE 0xad71b, byte_size=8, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:756
+union std::priv::_Pthread_alloc_obj {
+    std::priv::_Pthread_alloc_obj* __free_list_link; // byte offset: None, access: None, artificial: False
+    char[8] __client_data; // byte offset: None, access: None, artificial: False
+};
+
+// DIE 0xad757, byte_size=72, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:765
+struct std::priv::_Pthread_alloc_per_thread_state {
+    std::priv::_Pthread_alloc_obj*[16] volatile __free_list; // byte offset: 0, access: None, artificial: False
+    std::priv::_Pthread_alloc_per_thread_state* __next; // byte offset: 64, access: None, artificial: False
+    std::_STLP_mutex _M_lock; // byte offset: 68, access: None, artificial: False
+    std::priv::_Pthread_alloc_per_thread_state::_Pthread_alloc_per_thread_state(); // method DIE 0xad791
+    void* std::priv::_Pthread_alloc_per_thread_state::_M_refill(size_t); // method DIE 0xad7aa
+};
+
+// DIE 0xad7e4, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:786
+class std::priv::_Pthread_alloc_impl {
+    char* std::priv::_Pthread_alloc_impl::_S_chunk_alloc(size_t, size_t&, std::priv::_Pthread_alloc_per_thread_state*); // method DIE 0xad876
+    size_t std::priv::_Pthread_alloc_impl::_S_round_up(size_t); // method DIE 0xad89c
+    size_t std::priv::_Pthread_alloc_impl::_S_freelist_index(size_t); // method DIE 0xad8b8
+    void std::priv::_Pthread_alloc_impl::_S_destructor(void*); // method DIE 0xad8d4
+    std::priv::_Pthread_alloc_per_thread_state* std::priv::_Pthread_alloc_impl::_S_new_per_thread_state(); // method DIE 0xad8ed
+    std::priv::_Pthread_alloc_per_thread_state* std::priv::_Pthread_alloc_impl::_S_get_per_thread_state(); // method DIE 0xad900
+    void* std::priv::_Pthread_alloc_impl::allocate(size_t&); // method DIE 0xad912
+    void std::priv::_Pthread_alloc_impl::deallocate(void*, size_t); // method DIE 0xad92e
+    void* std::priv::_Pthread_alloc_impl::allocate(size_t&, std::priv::_Pthread_alloc_per_thread_state*); // method DIE 0xad94b
+    void std::priv::_Pthread_alloc_impl::deallocate(void*, size_t, std::priv::_Pthread_alloc_per_thread_state*); // method DIE 0xad96c
+    void* std::priv::_Pthread_alloc_impl::reallocate(void*, size_t, size_t&); // method DIE 0xad98e
+};
+
+// DIE 0xadc93, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:1060
+typedef std::priv::_Pthread_alloc_obj __obj;
+
+// DIE 0xae3a6, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:1015
+typedef std::priv::_Pthread_alloc_obj __obj;
+
+// DIE 0xae54f, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:936
+typedef std::priv::_Pthread_alloc_obj __obj;
+
+// DIE 0xae6af, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:854
+typedef std::priv::_Pthread_alloc_obj __obj;
+
+// DIE 0xae770, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:1035
+typedef std::priv::_Pthread_alloc_obj __obj;
+
+// DIE 0xae8a9, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/allocators.cpp:991
+typedef std::priv::_Pthread_alloc_obj __obj;
+
+
+// Functions outside record declarations
+// DIE 0xac3f6, ranges: []
+void* std::__stl_new(size_t);
+// DIE 0xac5ae, ranges: []
+clock_t clock();
+// DIE 0xac5bb, ranges: []
+char* asctime(tm const*);
+// DIE 0xac5dd, ranges: []
+char* ctime(time_t const*);
+// DIE 0xac5ff, ranges: []
+tm* gmtime(time_t const*);
+// DIE 0xac61c, ranges: []
+double difftime(time_t, time_t);
+// DIE 0xac63f, ranges: []
+time_t mktime(tm*);
+// DIE 0xac656, ranges: []
+tm* localtime(time_t const*);
+// DIE 0xac66d, ranges: []
+size_t strftime(char*, size_t, char const*, tm const*);
+// DIE 0xac693, ranges: []
+time_t time(time_t*);
+// DIE 0xac734, ranges: []
+char* getenv(char const*);
+// DIE 0xac74b, ranges: []
+int mblen(char const*, size_t);
+// DIE 0xac767, ranges: []
+int mbtowc(wchar_t*, char const*, size_t);
+// DIE 0xac795, ranges: []
+int system(char const*);
+// DIE 0xac7ac, ranges: []
+void* bsearch(void const*, void const*, size_t, size_t, int (void const*, void const*)*);
+// DIE 0xac7f8, ranges: []
+int atexit(void ()*);
+// DIE 0xac816, ranges: []
+double atof(char const*);
+// DIE 0xac82c, ranges: []
+int atoi(char const*);
+// DIE 0xac843, ranges: []
+long int atol(char const*);
+// DIE 0xac85a, ranges: []
+size_t mbstowcs(wchar_t*, char const*, size_t);
+// DIE 0xac87b, ranges: []
+double strtod(char const*, char**);
+// DIE 0xac89d, ranges: []
+long int strtol(char const*, char**, int);
+// DIE 0xac8be, ranges: []
+long unsigned int strtoul(char const*, char**, int);
+// DIE 0xac8df, ranges: []
+size_t wcstombs(char*, wchar_t const*, size_t);
+// DIE 0xac90b, ranges: []
+int wctomb(char*, wchar_t);
+// DIE 0xac927, ranges: []
+void qsort(void*, size_t, size_t, int (void const*, void const*)*);
+// DIE 0xac949, ranges: []
+long int labs(long int);
+// DIE 0xac95f, ranges: []
+ldiv_t ldiv(long int, long int);
+// DIE 0xac97b, ranges: []
+long long int llabs(long long int);
+// DIE 0xac991, ranges: []
+lldiv_t lldiv(long long int, long long int);
+// DIE 0xac9ad, ranges: []
+int rand();
+// DIE 0xac9b9, ranges: []
+void srand(unsigned int);
+// DIE 0xac9d2, ranges: []
+long double abs(long double);
+// DIE 0xac9f5, ranges: []
+long double acos(long double);
+// DIE 0xaca11, ranges: []
+long double asin(long double);
+// DIE 0xaca2d, ranges: []
+long double atan(long double);
+// DIE 0xaca49, ranges: []
+long double atan2(long double, long double);
+// DIE 0xaca6a, ranges: []
+long double ceil(long double);
+// DIE 0xaca86, ranges: []
+long double cos(long double);
+// DIE 0xacaa2, ranges: []
+long double cosh(long double);
+// DIE 0xacabe, ranges: []
+long double exp(long double);
+// DIE 0xacada, ranges: []
+long double fabs(long double);
+// DIE 0xacaf6, ranges: []
+long double floor(long double);
+// DIE 0xacb12, ranges: []
+long double fmod(long double, long double);
+// DIE 0xacb33, ranges: []
+long double frexp(long double, int*);
+// DIE 0xacb5a, ranges: []
+long double ldexp(long double, int);
+// DIE 0xacb7b, ranges: []
+long double log(long double);
+// DIE 0xacb97, ranges: []
+long double log10(long double);
+// DIE 0xacbb3, ranges: []
+long double modf(long double, long double*);
+// DIE 0xacbda, ranges: []
+long double pow(long double, int);
+// DIE 0xacbfb, ranges: []
+long double sin(long double);
+// DIE 0xacc17, ranges: []
+long double sinh(long double);
+// DIE 0xacc33, ranges: []
+long double sqrt(long double);
+// DIE 0xacc4f, ranges: []
+long double tan(long double);
+// DIE 0xacc6b, ranges: []
+long double tanh(long double);
+// DIE 0xacc87, ranges: []
+lldiv_t div(long long int, long long int);
+// DIE 0xaccaa, ranges: []
+int strcoll(char const*, char const*);
+// DIE 0xaccc6, ranges: []
+char* strerror(int);
+// DIE 0xaccdd, ranges: []
+size_t strxfrm(char*, char const*, size_t);
+// DIE 0xaccfe, ranges: []
+char* strtok(char*, char const*);
+// DIE 0xacf2f, ranges: []
+void clearerr(FILE*);
+// DIE 0xacf48, ranges: []
+int fclose(FILE*);
+// DIE 0xacf5f, ranges: []
+int feof(FILE*);
+// DIE 0xacf76, ranges: []
+int ferror(FILE*);
+// DIE 0xacf8d, ranges: []
+int fflush(FILE*);
+// DIE 0xacfa4, ranges: []
+int fgetc(FILE*);
+// DIE 0xacfbb, ranges: []
+int fgetpos(FILE*, fpos_t*);
+// DIE 0xacfdd, ranges: []
+char* fgets(char*, int, FILE*);
+// DIE 0xacffe, ranges: []
+FILE* fopen(char const*, char const*);
+// DIE 0xad01a, ranges: []
+size_t fread(void*, size_t, size_t, FILE*);
+// DIE 0xad040, ranges: []
+FILE* freopen(char const*, char const*, FILE*);
+// DIE 0xad061, ranges: []
+int fseek(FILE*, long int, int);
+// DIE 0xad082, ranges: []
+int fsetpos(FILE*, fpos_t const*);
+// DIE 0xad0a9, ranges: []
+long int ftell(FILE*);
+// DIE 0xad0c0, ranges: []
+int getc(FILE*);
+// DIE 0xad0d7, ranges: []
+int getchar();
+// DIE 0xad0e4, ranges: []
+char* gets(char*);
+// DIE 0xad0fb, ranges: []
+void perror(char const*);
+// DIE 0xad10e, ranges: []
+int remove(char const*);
+// DIE 0xad126, ranges: []
+int rename(char const*, char const*);
+// DIE 0xad143, ranges: []
+void rewind(FILE*);
+// DIE 0xad157, ranges: []
+void setbuf(FILE*, char*);
+// DIE 0xad170, ranges: []
+FILE* tmpfile();
+// DIE 0xad17e, ranges: []
+char* tmpnam(char*);
+// DIE 0xad196, ranges: []
+int setvbuf(FILE*, char*, int, size_t);
+// DIE 0xad1bd, ranges: []
+int ungetc(int, FILE*);
+// DIE 0xadb55, ranges: []
+void* std::__stl_new(size_t __n);
+// DIE 0xadb81, ranges: []
+char* __stlp_new_chunk(size_t __bytes);
+// DIE 0xadbcf, ranges: []
+void __static_initialization_and_destruction_0(int __initialize_p, int __priority);
+// DIE 0xaea02, ranges: [{'begin': 9136048, 'end': 9136100, 'source': 'low/high_pc'}]
+void _GLOBAL__I_allocators.cpp();

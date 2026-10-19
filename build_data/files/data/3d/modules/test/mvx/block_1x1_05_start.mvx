@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module
+>	
+	<GameObject alphatest="1"
+		condition="-1"
+		condition_desc="Invalid"
+		dae="data/3d/modules/test/block_1x1_05.bdae"
+		dimensions="200,200,200"
+		gametype="Decor"
+		name="block"
+		position="0,0,0"
+		roomname="Environments"
+		scale="1.0,1.0,1.0"
+		type="Block"
+		visible="1"
+		xrefmax="data/debug/3d/modules/test/block_1x1_05.max"
+		xrefobject="block"/>
+</Module>

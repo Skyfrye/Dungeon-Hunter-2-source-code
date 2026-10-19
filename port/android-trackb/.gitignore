@@ -1,0 +1,11 @@
+# Everything below is produced by tools/trackb/java/import_resources.py from the user's own APK; never committed.
+.gradle/
+.idea/
+build/
+local.properties
+**/__pycache__/
+app/src/main/res/
+app/src/main/assets/
+app/src/main/resources/
+app/src/main/jniLibs/
+gradle/wrapper/gradle-wrapper.jar

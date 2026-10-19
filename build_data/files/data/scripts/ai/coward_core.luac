@@ -1,0 +1,123 @@
+
+function coward_OnInit()
+	monster_OnInit();
+
+	FleeTimerId = -2;
+	FleeUpdateTimerId = -2;
+	HPLastUpdate = GetPropHP();
+end
+AddToVFTable("OnInit", "coward_OnInit");
+
+
+function coward_OnUpdate(timestamp)
+	OnUpdate(timestamp);
+
+	local HPCurr, test, HPPCTCurr = GetPropHP();
+	local chance = 0;
+	local result = 100;
+
+	if(FleeUpdateTimerId == -1 and HasTarget()) then
+	 	Flee( GetTarget() );
+	 	FleeUpdateTimerId = StartTimer(200);
+	end;
+
+	if(HPLastUpdate > HPCurr) then
+		if( FleeTimerId == -2 ) then
+	   	chance = 100 - HPPCTCurr;
+	   	if( chance < 5 ) then
+	   		chance = 5;
+	   	else
+	   		if(chance > 60 ) then
+	   			chance = 60;
+	   		end
+	   	end
+	   	result = GetRand(0,100);
+		  	Trace("Plic");
+	   	if( result <= chance ) then
+	   		Flee( GetTarget() );
+	   		ClearAggro(GetTarget());
+				--ClearTarget();
+	   		--Trace("ploc");
+	   		FleeTimerId = StartTimer(15000);
+	   		FleeUpdateTimerId = StartTimer(200);
+	   	end
+		end
+	end
+
+	if( FleeTimerId == -1 ) then
+  		--Trace("plac");
+		FleeTimerId = -2;
+		FleeUpdateTimerId = -2;
+		Stop();
+	end
+	HPLastUpdate = HPCurr;
+end
+AddToVFTable("OnUpdate", "coward_OnUpdate");
+
+
+function coward_OnTimer(timerId)
+	if (timerId == FleeTimerId) then
+		FleeTimerId = -1;		-- Timer expires
+	end
+	if(timerId == FleeUpdateTimerId) then
+	  FleeUpdateTimerId = -1;   -- Timer expires
+	end
+end
+AddToVFTable("OnTimer", "coward_OnTimer");
+
+
+-- --------------------------------------------------
+
+
+function coward_OnEnemySpotted(enemy)
+	if( FleeTimerId == -2 ) then
+		monster_OnEnemySpotted(enemy);
+	end
+end
+AddToVFTable("OnEnemySpotted", "coward_OnEnemySpotted");
+
+
+-- --------------------------------------------------
+
+
+function coward_OnTargetOutOfRange()
+	if( FleeTimerId == -2 ) then
+		monster_OnTargetOutOfRange();
+	end
+end
+AddToVFTable("OnTargetOutOfRange", "coward_OnTargetOutOfRange");
+
+
+function coward_TargetInRangedRange()
+	if( FleeTimerId == -2 ) then
+		monster_OnTargetInRangedRange();
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "coward_TargetInRangedRange");
+
+
+function coward_OnTargetInCloseRange()
+	if( FleeTimerId == -2 ) then
+		monster_OnTargetInCloseRange()
+	end
+end
+AddToVFTable("OnTargetInCloseRange", "coward_OnTargetInCloseRange");
+
+
+function coward_TargetInMeleeRange()
+	if( FleeTimerId == -2 ) then
+		monster_OnTargetInMeleeRange();
+	end
+end
+AddToVFTable("OnTargetInMeleeRange", "coward_TargetInMeleeRange");
+
+
+-- --------------------------------------------------
+
+
+function coward_OnTargetHit()
+	if( FleeTimerId == -2 ) then
+		Flee( GetTarget() );
+	end
+end
+AddToVFTable("OnTargetHit", "coward_OnTargetHit");

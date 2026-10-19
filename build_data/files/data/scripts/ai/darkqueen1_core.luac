@@ -1,0 +1,533 @@
+-- FLAGS
+local attack_flag				= false; -- checks if the character is ready to attack.
+local range_attack_flag			= false;
+local musicStarted_flag 		= false; -- checks if the boss music has started.
+local sp_attack_flag			= false;
+
+-- CONSTANTS
+local STATE_SKILL				= GetPyCst("AIStates", "Skill");
+local STATE_IDLE				= GetPyCst("AIStates", "Idle");
+local TELEPORT_FX				= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_mage_stone_escape_magefx");
+local MOVE_RANGE				= 650.0;		-- Teleportation range
+local MOVE_DELAY 				= 14000.0;		-- Delay between teleports
+local RANGE_ATTACK_DELAY 		=  4000.0;
+
+-- CACHED VALUES
+local timer_attack_flag;
+local timer_spot_targeting;
+local timer_sp_attack_flag;
+local timer_teleport_flag;
+local timer_rangeattack_flag;
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- EVENTS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+local function InitVars()
+	attack_flag				= false; -- checks if the character is ready to attack.
+	range_attack_flag		= false;
+	musicStarted_flag 		= false; -- checks if the boss music has started.
+	sp_attack_flag			= false;
+end
+
+local function isAttackReady()
+	attack_flag = true;
+end
+
+local function isRangeAttackReady()
+	range_attack_flag = true;
+end
+
+local function Do_SpecialAttack()
+	sp_attack_flag = true;
+end
+
+local function Do_RangedAttack()
+	local state = GetState(); 
+	
+	if (state ~= STATE_SKILL) then
+		if (range_attack_flag) then
+			if (sp_attack_flag) then
+				if (isUsingSkills) then
+					DoSkill(2);
+				else
+					DoSkill(1);
+				end
+				sp_attack_flag = false;
+			else
+				if (firstRangedSkill_prob == -1) then
+					DoSkill(1);
+				else
+					local rnd_roll = GetRand(1,100);
+					if (rnd_roll < firstRangedSkill_prob) then
+						DoSkill(1);
+					else
+						if (not timed_specialAttack) then
+							DoSkill(4);
+						else
+							DoSkill(3);
+						end
+					end
+				end
+			end
+			range_attack_flag = false;
+		end
+	end
+end
+
+local function Do_MeleeAttack()
+	local state = GetState(); 
+	
+	if (state ~= STATE_SKILL) then
+		if (attack_flag) then
+			if ( sp_attack_flag ) then
+				if (isUsingSkills) then
+					DoSkill(2);
+				else
+					DoSkill(0);
+				end
+				sp_attack_flag = false;
+			else 
+				if (firstMeleeSkill_prob == -1) then
+					DoSkill(0);
+				else
+					local rnd_roll = GetRand(1,100);
+					if (rnd_roll < firstMeleeSkill_prob) then
+						DoSkill(0);
+					else
+						if (not timed_specialAttack) then
+							DoSkill(2);
+						else
+							DoSkill(3);
+						end
+					end
+				end
+			end
+			attack_flag = false;
+		end
+	end
+end
+
+
+local function DoTeleport()
+	x, y, z = GetPosition();
+	-- Hack to validate the path... if it doesn't work, we will have to add a method in PFWorld
+	-- Trying moving forward
+	Stop();
+	PlayFX(TELEPORT_FX, x, y, z);
+	PlaySound("sfx_teleport",false,0,false);
+	MoveTo(0.0, MOVE_RANGE, 0.0, true);
+	if(HasPath()) then
+		WarpTo(0.0, MOVE_RANGE, 0.0, true);
+-- 		Trace("Yes, there is a path in front!");
+	else -- Trying backward
+		MoveTo(0.0, -MOVE_RANGE, 0.0, true);
+		if(HasPath()) then
+			WarpTo(0.0, -MOVE_RANGE, 0.0, true);
+-- 			Trace("There is a path, but it is backward!");
+		else -- Trying right
+		MoveTo(MOVE_RANGE, 0.0, 0.0, true);
+			if(HasPath()) then
+				WarpTo(MOVE_RANGE, 0.0, 0.0, true);
+-- 				Trace("There is a path, but it is right!");
+			else -- Trying left
+				MoveTo(-MOVE_RANGE, 0.0, 0.0, true);
+				if(HasPath()) then
+					WarpTo(-MOVE_RANGE, 0.0, 0.0, true);
+-- 					Trace("There is a path, but it is left!");
+				else
+					x=nil; y=nil; z=nil;
+				end
+			end
+		end
+	end
+	x1, y1, z1 = GetPosition();
+	PlayFX(TELEPORT_FX, x1, y1, z1);
+end
+-- -------------------------------------------------------------------------------
+
+
+
+
+-- -------------------------------------------------------------------------------
+-- Search functions
+-- -------------------------------------------------------------------------------
+function searchForEfficientTarget()
+	local t_targetList		= {};
+	local t_rndTargetList	= {};
+	
+	if (HasTarget()) then
+		ClearAggro(GetTarget());
+		ClearTarget();
+	end
+	
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	
+	TargetListSearch(RANGED_RANGE);
+	TargetListBackup();
+	
+	local listSize = GetTargetListSize();
+	
+	if(not IsTargetListEmpty()) then
+		if (listSize == 1) then
+			local target = GetTargetListTop();
+		 	SetTarget(target);
+		 	
+		 	AddAggro(target, 10);
+			LookAt(target);
+		else
+			
+			-- Checking every targets in the list for possible master --
+			repeat
+				local target = GetTargetListTop();
+				
+				if (target:HasMaster()) then
+					table.insert(t_targetList, target);
+					table.insert(t_rndTargetList, target);
+					table.insert(t_rndTargetList, target:GetMaster());
+				else
+					table.insert(t_targetList, target);
+					table.insert(t_rndTargetList, target);
+				end
+				
+				PopTargetList();
+			until(IsTargetListEmpty())
+			-- ------------------------------------------------------ --
+			
+			
+			
+			-- Searching for the target with the lowest MaxHP/CurrHP  --
+			local lowerMaxHP			= 0;
+			local lowerMaxHPtarget	= 0;
+			local lowerCurrHP			= 0;
+			local lowerCurrHPtarget	= 0;
+			
+			for i, obj in pairs(t_targetList) do
+				local HPCurr, HPMax, HPPercentCurr = obj:GetPropHP();
+				
+				if (lowerMaxHPtarget == 0) then
+					lowerMaxHP = HPMax;
+					lowerMaxHPtarget = obj;
+				else
+					if (HPMax < lowerMaxHP) then
+						lowerMaxHP = HPMax;
+						lowerMaxHPtarget = obj;
+					end
+				end
+				
+				if (lowerCurrHPtarget == 0) then
+					lowerCurrHP = HPCurr;
+					lowerCurrHPtarget = obj;
+				else
+					if (HPCurr < lowerCurrHP) then
+						lowerCurrHP = HPCurr;
+						lowerCurrHPtarget = obj;
+					end
+				end
+			end
+			
+			table.insert(t_rndTargetList, lowerMaxHPtarget);
+			table.insert(t_rndTargetList, lowerCurrHPtarget);
+			-- ------------------------------------------------------ --
+			
+			local listCount = #t_rndTargetList;
+			local targetlistCount = #t_targetList;
+						
+			for i,v in pairs(t_rndTargetList) do print(i,v) end
+			
+			local myTarget = t_rndTargetList[GetRand(1, #t_rndTargetList)];
+			
+		 	SetTarget(myTarget);
+		 	AddAggro(myTarget, 10);
+			LookAt(myTarget);
+			
+		end
+	else
+		target = nil;
+	end
+	
+end
+
+-- -------------------------------------------------------------------------------
+function searchForClosestTarget()
+	ClearTarget();
+
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+	
+	TargetListSearch(MELEE_RANGE);
+	
+	if(not IsTargetListEmpty()) then
+		local target = GetTargetListTop();
+		
+		SetTarget(target);
+		AddAggro(target, 10);
+		LookAt(target);
+	else
+		target = nil;
+	end
+end
+
+-- -------------------------------------------------------------------------------
+function searchForFarthestTarget()
+	ClearTarget();
+	
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	
+	TargetListSearch(RANGED_RANGE);
+	
+	local closestTarget	= 0;
+	local closestDist		= 0;
+	
+	if(not IsTargetListEmpty()) then
+		if (listSize == 1) then
+			local target = GetTargetListTop();
+		 	SetTarget(target);
+		 	AddAggro(target, 10);
+			LookAt(target);
+		else
+			repeat
+				local target = GetTargetListTop();
+				
+				if (closestTarget == 0) then
+					closestDist = FromFixed(GetDistanceBetween(GetName(), target:GetName()));
+					closestTarget = target;
+				else
+					local distance = FromFixed(GetDistanceBetween(GetName(), target:GetName()));
+					if (distance > closestDist) then
+						closestDist = distance;
+						closestTarget = target;
+					end
+				end
+				
+				PopTargetList();
+			until(IsTargetListEmpty())
+			
+	 		SetTarget(closestTarget);
+	 		AddAggro(closestTarget, 10);
+			LookAt(closestTarget);
+		end
+	else
+		target = nil;
+	end
+end
+-- -------------------------------------------------------------------------------
+
+
+
+
+-- -------------------------------------------------------------------------------
+-- CALLBACKS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+function darkqueen1_OnInit()
+
+
+----------------------------------------------------------------------------------------
+-- Dynamic level for monster. Monster must have there LevelMax param set to use dynamic level
+----------------------------------------------------------------------------------------
+	local m_lvl = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMin")));
+	local m_lvl_offset = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelOffset")));
+	local pl_diff = GetHostPlayerDifficulty();
+
+--	Trace("........ CURRENT DIFFICULTY IS ...................");
+--	Trace(pl_diff);
+--	Trace("..................................................");
+
+	if(pl_diff == 1) then
+	    m_lvl = m_lvl + m_lvl_offset;
+--	Trace("difficulty  = 1");
+	elseif (pl_diff == 2) then
+	    m_lvl = m_lvl + m_lvl_offset + m_lvl_offset;
+--	Trace("difficulty  = 2");
+--	elseif (pl_diff == 3) then
+--	Trace("difficulty  = 3");
+	end
+
+	SetLevel(ToFixed(m_lvl));
+----------------------------------------------------------------------------------------
+-- End Dynamic level for monster
+----------------------------------------------------------------------------------------
+	if (timer_attack_flag ~= nil) then
+		timer_attack_flag = nil;
+	end	
+	if (timer_teleport_flag ~= nil) then
+		timer_teleport_flag = nil;
+	end
+	if (timer_rangeattack_flag ~= nil) then
+		timer_rangeattack_flag = nil;
+	end
+	if (timer_spot_targeting ~= nil) then
+		timer_spot_targeting = nil;
+	end
+	if (timer_sp_attack_flag ~= nil) then
+		timer_sp_attack_flag = nil;
+	end
+	
+	
+	InitVars();
+	
+	timer_attack_flag = StartTimerCB(ATTACK_DELAY, true, isAttackReady);
+	timer_teleport_flag = StartTimerCB(MOVE_DELAY, true, DoTeleport);
+	timer_rangeattack_flag = StartTimerCB(RANGE_ATTACK_DELAY, true, isRangeAttackReady);
+	
+	if (timed_spotTargeting) then
+		timer_spot_targeting = StartTimerCB(SEARCH_DELAY, true, searchForEfficientTarget);
+	end
+	
+	if (timed_specialAttack) then
+		timer_sp_attack_flag = StartTimerCB(SP_ATTACK_DELAY, true, Do_SpecialAttack);
+	end	
+end
+AddToVFTable("OnInitFinal", "darkqueen1_OnInit");
+
+
+
+-- -------------------------------------------------------------------------------
+local function darkqueen1_EndGameCleanUp()
+	if (BOSS_MUSIC ~= "") then
+		if (LEVEL_MUSIC ~= "") then
+			PlayMusic(LEVEL_MUSIC, 1000);
+		else
+			CallPyScript("ResumeLevelMusic");
+		end
+		musicStarted_flag = false;
+	end
+
+
+	if (timer_attack_flag) then
+		StopTimerCB(timer_attack_flag);
+		timer_attack_flag = nil;
+	end
+	if (timer_teleport_flag ~= nil) then
+		StopTimerCB(timer_teleport_flag);
+		timer_teleport_flag = nil;
+	end
+	if (timer_rangeattack_flag ~= nil) then
+		StopTimerCB(timer_rangeattack_flag);
+		timer_rangeattack_flag = nil;
+	end
+	if (timed_spotTargeting ~= nil) then
+		StopTimerCB(timed_spotTargeting);
+		timed_spotTargeting = nil;
+	end
+	if (timed_specialAttack ~= nil) then
+		StopTimerCB(timed_specialAttack);
+		timed_specialAttack = nil;
+	end
+end
+
+
+-- -------------------------------------------------------------------------------
+function darkqueen1_OnDied(killer)
+	darkqueen1_EndGameCleanUp();
+end
+AddToVFTable("OnDied", "darkqueen1_OnDied");
+
+
+-- -------------------------------------------------------------------------------
+function darkqueen1_OnTerminate()
+	darkqueen1_EndGameCleanUp();
+end
+AddToVFTable("OnTerminate", "darkqueen1_OnTerminate");
+
+
+-- -------------------------------------------------------------------------------
+function darkqueen1_OnEnemySpotted(enemy)
+	if (BOSS_MUSIC ~= "") then
+		local state = GetState();
+		if (not musicStarted_flag and state == STATE_IDLE) then
+			musicStarted_flag = true;
+			PlayMusic(BOSS_MUSIC, 500);
+		end
+	else
+		Trace("No Boss music set for that boss! will be flagged by QA testers!!");
+	end
+
+	if(not HasTarget()) then
+		searchForEfficientTarget();
+	end
+end
+AddToVFTable("OnEnemySpotted", "darkqueen1_OnEnemySpotted");
+
+
+
+-- -------------------------------------------------------------------------------
+function darkqueen1_OnTargetOutOfSight()
+	Stop();
+	ClearAggro(GetTarget());
+	ClearTarget();
+	musicStarted_flag = false;
+end
+AddToVFTable("OnTargetOutOfSight", "darkqueen1_OnTargetOutOfSight");
+
+
+
+-- -------------------------------------------------------------------------------
+function darkqueen1_OnTargetInSight()
+end
+AddToVFTable("OnTargetInSight", "darkqueen1_OnTargetInSight");
+
+
+
+-- -------------------------------------------------------------------------------
+function darkqueen1_OnTargetOutOfRange()
+	if (HasTarget()) then
+		MoveTo(GetTarget());
+	else
+		searchForEfficientTarget();
+		MoveTo(GetTarget());
+	end
+end
+AddToVFTable("OnTargetOutOfRange", "darkqueen1_OnTargetOutOfRange");
+
+
+
+-- -------------------------------------------------------------------------------
+-- RANGED CALLBACKS
+-- -------------------------------------------------------------------------------
+function darkqueen1_OnTargetInRangedRange()
+	if (isUsingSkills) then
+		local target = GetTarget();
+		LookAt( target );
+		Do_RangedAttack();
+		MoveTo(target);
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "darkqueen1_OnTargetInRangedRange");
+-- -------------------------------------------------------------------------------
+function darkqueen1_OnTargetInCloseRange()
+	if (isUsingSkills) then
+		Do_MeleeAttack();
+	else
+		Stop();
+		Attack(GetTarget());
+	end
+end
+AddToVFTable("OnTargetInCloseRange", "darkqueen1_OnTargetInCloseRange");
+-- -------------------------------------------------------------------------------
+
+
+
+-- -------------------------------------------------------------------------------
+-- MELEE CALLBACKS
+-- -------------------------------------------------------------------------------
+function darkqueen1_OnTargetInMeleeRange()
+	if (isUsingSkills) then
+		Do_MeleeAttack();
+	else
+		Stop();
+		Attack(GetTarget());
+	end
+end
+AddToVFTable("OnTargetInMeleeRange", "darkqueen1_OnTargetInMeleeRange");
+-- -------------------------------------------------------------------------------

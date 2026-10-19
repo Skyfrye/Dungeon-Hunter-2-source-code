@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\PyData\scripts\001_CATACOMBS_gvmerge.pyscript"
+	camera_znear="900"
+	camera_zfar="5000"
+	music="CatacombsMusic"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+>
+	<list name="scripted_rooms" replacement="false">
+		<elem name="block_2x1_18" gameplay="test/miniboss00.gameplay_xml" chances="50"/>
+		<elem name="block_2x1_18" gameplay="test/miniboss01.gameplay_xml" chances="50"/>
+		<elem name="block_2x1_18" gameplay="test/miniboss02.gameplay_xml" chances="50"/>
+		<elem name="block_2x1_18" gameplay="test/miniboss03.gameplay_xml" chances="50"/>
+	</list>
+	<list name="corridors" replacement="true">
+		<elem name="_23_templates" gameplay="test/gameplay_test03.gameplay_xml"/>
+		<elem name="_24_templates" gameplay="test/gameplay_test03.gameplay_xml"/>
+		<elem name="_25_templates" gameplay="test/gameplay_test03.gameplay_xml"/>
+		<elem name="_26_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_27_templates" gameplay="test/gameplay_test03.gameplay_xml"/>
+		<elem name="_28_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_29_templates" gameplay="test/gameplay_test03.gameplay_xml"/>
+		<elem name="_30_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_31_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_32_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_33_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_34_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_35_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_36_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_37_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_38_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_39_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_40_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_41_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_42_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_43_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_44_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_45_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_46_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_47_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_48_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_49_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_50_templates" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_h800_templates01" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="_h800_templates02" gameplay="test/gameplay_test02.gameplay_xml"/>
+	</list>
+	<list name="deadends" random="true">
+		<elem name="block_1x1_01" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="block_1x1_02" gameplay="test/gameplay_test03.gameplay_xml"/>
+		<elem name="block_1x1_04" gameplay="test/gameplay_test02.gameplay_xml"/>
+		<elem name="block_1x1_08" gameplay="test/gameplay_test03.gameplay_xml"/>
+	</list>
+	
+	<list name="scripted07block" random="true">
+		<elem name="block_1x1_07" gameplay="test/miniboss00.gameplay_xml" chances="50"/>
+		<elem name="block_1x1_07" gameplay="test/miniboss01.gameplay_xml" chances="50"/>
+		<elem name="block_1x1_07" gameplay="test/miniboss02.gameplay_xml" chances="50"/>
+		<elem name="block_1x1_07" gameplay="test/miniboss00.gameplay_xml" chances="50"/>
+	</list>
+
+	<list name="scripted15block" random="true">
+		<elem name="block_1x1_15" gameplay="test/miniboss00.gameplay_xml" chances="50"/>
+		<elem name="block_1x1_15" gameplay="test/miniboss01.gameplay_xml" chances="50"/>
+		<elem name="block_1x1_15" gameplay="test/miniboss02.gameplay_xml" chances="50"/>
+		<elem name="block_1x1_15" gameplay="test/miniboss00.gameplay_xml" chances="50"/>
+	</list>
+  <list name="start" random="true">
+		<elem name="_30_templates" gameplay="test/test_master.gameplay_xml" chances="50"/>
+	</list>	
+
+<RootRule seed="12345" folder="data/3d/modules/test" start="#start[0]">
+  <ForceBlock name="#corridors">
+		<Path length="4,6" dontGoBack="True">
+			<ForceBlock name="#corridors" random="true">
+				<Path length="4,6" dontGoBack="True">
+					<ForceBlock name="#corridors"/>
+				</Path>
+				<Path length="5,8"/>
+				<Path length="5,8"/>
+				<Path length="5,8"/>
+			</ForceBlock>
+		</Path>
+		<Path length="5,15" dontGoBack="True"/>
+		<Path length="5,15" dontGoBack="True"/>
+		<Path length="5,8"/>
+	</ForceBlock>
+	<ForceBlock name="#corridors">
+		<ForceBlock name="#corridors">
+			<ForceBlock name="#corridors"/>
+		</ForceBlock>
+	</ForceBlock>
+</RootRule>
+</rules>

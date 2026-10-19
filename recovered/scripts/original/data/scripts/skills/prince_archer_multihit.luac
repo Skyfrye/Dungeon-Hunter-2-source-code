@@ -1,0 +1,120 @@
+--[[	Multi-hit Arrows
+
+	select up to 3 targets (knock back when 3 arrows on one target) 
+	cone wave of arrows
+	Choose 3 closest targets
+	Only 2 targets in short range: 2X damage and knockback on 1 of the 2 targets
+	Only 1 target in short range: 3X damage and great knockback
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local MANA_BASE	= ToFixed(10);	-- Base mana cost
+local MANA_PLVL	= ToFixed(0);	-- Mana cost per player level
+local MANA_SLVL	= ToFixed(3);	-- Mana cost per skill level
+
+local RANGE			= 600.0;
+local ANGLE			= 220.0;
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Archer_MultiHitArrow");
+local AIR_PROJECTILE_ID	= GetPyOID("ProjectileTable", "ArrowDefault");
+
+-- Cached values
+local skill_level		= 0;
+local mana_cost;
+local pot_targets		= 0;
+local hit				= 0;
+local traces			= false;
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	if(not HasBow()) then
+		return false, false
+	end
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	TargetListSearch(RANGE,ANGLE);
+	pot_targets = 0;
+	if(not IsTargetListEmpty()) then
+		local target = GetTargetListTop();
+		pot_targets = GetTargetListSize();
+		LookAt(target);
+		if (traces) then Trace ("[Skills | multihit] Initial check: "..pot_targets.." Potential target(s)"); end
+	end
+	UseMana(mana_cost);
+	hit=0;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+-- There are 3 animation events calling the OnSkill function. So it's doing this
+-- 3 times in a row. So the player is aligning with the "target" from the list and
+-- shoot at each animation event.
+
+	if(not IsTargetListEmpty()) then 
+		PopTargetList();
+	end	
+	SpawnSkillProjectile(AIR_PROJECTILE_ID);	
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target)
+	if (target) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+		-- Knockback calc
+		hit=hit+1; -- Increment the hit counter (3 arrows sents)
+		if (hit==3 and pot_targets==1) then
+			target:SetKnockBackState(true); -- Only one target, big knockback
+			if (traces) then Trace("Good hit! Great Knockback!"); end
+		end
+		if (hit<3 and pot_targets==2) then 
+			target:SetKnockBackState(false); -- Only two target, std knockback
+			if (traces) then Trace("Good hit! a standard knockback!"); end
+		end
+		local dmg = SkillCombatRoll(target);
+		if (dmg~=nil) then
+			if (traces) then Trace ("A target got "..FromFixed(dmg).." damage"); end
+		end
+	end
+end
+
+
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_, OnSkillInfo_);

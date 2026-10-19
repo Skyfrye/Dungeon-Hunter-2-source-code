@@ -1,0 +1,558 @@
+[
+  {
+    "class_group": "ColorBlock",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "ExplicitAlphaBlock",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "ExplicitBlock",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "InterporatedAlphaBlock",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "InterporatedBlock",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "_mesa_glsl_extension",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "_mesa_glsl_parse_state",
+    "unique_function_ranges": 8
+  },
+  {
+    "class_group": "array_sizing_visitor",
+    "unique_function_ranges": 5
+  },
+  {
+    "class_group": "ast_aggregate_initializer",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "ast_array_specifier",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "ast_case_label",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_case_label_list",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_case_statement",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_case_statement_list",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_compound_statement",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_cs_input_layout",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "ast_declaration",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "ast_declarator_list",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_expression",
+    "unique_function_ranges": 6
+  },
+  {
+    "class_group": "ast_expression_bin",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "ast_expression_statement",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_fully_specified_type",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_function",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_function_definition",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "ast_function_expression",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "ast_gs_input_layout",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "ast_interface_block",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "ast_iteration_statement",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ast_jump_statement",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_node",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ast_parameter_declarator",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_selection_statement",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_struct_specifier",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_switch_body",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ast_switch_statement",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ast_type_qualifier",
+    "unique_function_ranges": 8
+  },
+  {
+    "class_group": "ast_type_specifier",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "brw_lower_offset_array_visitor",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "examine_rhs",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "exec_list",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "exec_node",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "fixup_ir_call_visitor",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "global-functions",
+    "unique_function_ranges": 690
+  },
+  {
+    "class_group": "global_print_tracker_metal",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "glsl_symbol_table",
+    "unique_function_ranges": 17
+  },
+  {
+    "class_group": "glsl_type",
+    "unique_function_ranges": 38
+  },
+  {
+    "class_group": "glslopt_ctx",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "glslopt_shader",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "interface_block_usage_visitor",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "ir_array_splitting_visitor",
+    "unique_function_ranges": 5
+  },
+  {
+    "class_group": "ir_assignment",
+    "unique_function_ranges": 9
+  },
+  {
+    "class_group": "ir_builder",
+    "unique_function_ranges": 80
+  },
+  {
+    "class_group": "ir_builder::deref",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "ir_builder::ir_factory",
+    "unique_function_ranges": 5
+  },
+  {
+    "class_group": "ir_builder::operand",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "ir_call",
+    "unique_function_ranges": 7
+  },
+  {
+    "class_group": "ir_constant",
+    "unique_function_ranges": 30
+  },
+  {
+    "class_group": "ir_control_flow_visitor",
+    "unique_function_ranges": 12
+  },
+  {
+    "class_group": "ir_decl_removal_visitor",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "ir_dereference",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "ir_dereference_array",
+    "unique_function_ranges": 10
+  },
+  {
+    "class_group": "ir_dereference_record",
+    "unique_function_ranges": 8
+  },
+  {
+    "class_group": "ir_dereference_variable",
+    "unique_function_ranges": 9
+  },
+  {
+    "class_group": "ir_discard",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ir_emit_vertex",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ir_end_primitive",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ir_expression",
+    "unique_function_ranges": 14
+  },
+  {
+    "class_group": "ir_expression_flattening_visitor",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "ir_function",
+    "unique_function_ranges": 9
+  },
+  {
+    "class_group": "ir_function_can_inline_visitor",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "ir_function_signature",
+    "unique_function_ranges": 12
+  },
+  {
+    "class_group": "ir_hierarchical_visitor",
+    "unique_function_ranges": 39
+  },
+  {
+    "class_group": "ir_if",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ir_instruction",
+    "unique_function_ranges": 5
+  },
+  {
+    "class_group": "ir_loop",
+    "unique_function_ranges": 5
+  },
+  {
+    "class_group": "ir_loop_jump",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ir_precision_statement",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ir_print_glsl_visitor",
+    "unique_function_ranges": 32
+  },
+  {
+    "class_group": "ir_print_metal_visitor",
+    "unique_function_ranges": 30
+  },
+  {
+    "class_group": "ir_print_visitor",
+    "unique_function_ranges": 27
+  },
+  {
+    "class_group": "ir_return",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ir_rvalue",
+    "unique_function_ranges": 16
+  },
+  {
+    "class_group": "ir_rvalue_base_visitor",
+    "unique_function_ranges": 11
+  },
+  {
+    "class_group": "ir_rvalue_enter_visitor",
+    "unique_function_ranges": 11
+  },
+  {
+    "class_group": "ir_rvalue_visitor",
+    "unique_function_ranges": 11
+  },
+  {
+    "class_group": "ir_stats_counter_visitor",
+    "unique_function_ranges": 7
+  },
+  {
+    "class_group": "ir_struct_usage_visitor",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ir_swizzle",
+    "unique_function_ranges": 13
+  },
+  {
+    "class_group": "ir_texture",
+    "unique_function_ranges": 9
+  },
+  {
+    "class_group": "ir_typedecl_statement",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "ir_variable",
+    "unique_function_ranges": 10
+  },
+  {
+    "class_group": "ir_variable_refcount_entry",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "ir_variable_refcount_visitor",
+    "unique_function_ranges": 9
+  },
+  {
+    "class_group": "ir_variable_replacement_visitor",
+    "unique_function_ranges": 8
+  },
+  {
+    "class_group": "ir_vector_splitting_visitor",
+    "unique_function_ranges": 5
+  },
+  {
+    "class_group": "ir_visitor",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "link_uniform_block_active_visitor",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "linker",
+    "unique_function_ranges": 7
+  },
+  {
+    "class_group": "loop_state",
+    "unique_function_ranges": 7
+  },
+  {
+    "class_group": "loop_unroll_count",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "loop_variable",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "loop_variable_state",
+    "unique_function_ranges": 6
+  },
+  {
+    "class_group": "lower_noise_visitor",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "lower_packed_varyings_gs_splicer",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "metal_print_context",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "parcel_out_uniform_storage",
+    "unique_function_ranges": 5
+  },
+  {
+    "class_group": "program_resource_visitor",
+    "unique_function_ranges": 5
+  },
+  {
+    "class_group": "rg_etc1",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "rg_etc1::etc1_block",
+    "unique_function_ranges": 15
+  },
+  {
+    "class_group": "rg_etc1::etc1_optimizer",
+    "unique_function_ranges": 4
+  },
+  {
+    "class_group": "s_expression",
+    "unique_function_ranges": 5
+  },
+  {
+    "class_group": "s_float",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "s_int",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "s_list",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "s_number",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "s_pattern",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "s_symbol",
+    "unique_function_ranges": 3
+  },
+  {
+    "class_group": "std",
+    "unique_function_ranges": 6
+  },
+  {
+    "class_group": "std::__Named_exception",
+    "unique_function_ranges": 5
+  },
+  {
+    "class_group": "std::__malloc_alloc",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "std::__node_alloc",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "std::basic_string<char, std::char_traits<char>, std::allocator<char> >",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "std::domain_error",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "std::invalid_argument",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "std::length_error",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "std::logic_error",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "std::out_of_range",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "std::overflow_error",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "std::priv::_Pthread_alloc",
+    "unique_function_ranges": 6
+  },
+  {
+    "class_group": "std::range_error",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "std::runtime_error",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "std::underflow_error",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "std::vector<tagINLINEHOOKINFO*, std::allocator<tagINLINEHOOKINFO*> >",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "string_buffer",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "string_to_uint_map",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "symbol_table_entry",
+    "unique_function_ranges": 1
+  },
+  {
+    "class_group": "tfeedback_candidate_generator",
+    "unique_function_ranges": 2
+  },
+  {
+    "class_group": "tfeedback_decl",
+    "unique_function_ranges": 6
+  },
+  {
+    "class_group": "unsigned int* rg_etc1",
+    "unique_function_ranges": 1
+  }
+]

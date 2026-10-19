@@ -1,0 +1,304 @@
+DWARF-derived C++ declaration sketches. These are NOT original source files,
+not compilation-ready headers, and contain NO recovered function bodies.
+Qualified names are printed verbatim; arrays/function pointers, templates,
+access defaults, static methods, and ABI-only entries may require manual repair.
+Exact DWARF attributes and type references are preserved in dies.jsonl.gz.
+Source paths refer to original debug metadata; those files are not bundled.
+
+Compilation unit: /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/c_locale.c
+Evidence category: cxx_runtime_stlport
+
+// DIE 0xaebb2, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/../include/stddef.h:211
+typedef unsigned int size_t;
+
+// DIE 0xaebbd, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/../include/stddef.h:323
+typedef unsigned char wchar_t;
+
+// DIE 0xaebda, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/wchar.h:53
+typedef int wint_t;
+
+// DIE 0xaebe5, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/wchar.h:54
+struct <anonymous-DIE-0xaebe5> {
+    int dummy; // byte offset: 0, access: None, artificial: False
+};
+
+// DIE 0xaebfc, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/wchar.h:54
+typedef <anonymous-DIE-0xaebe5> mbstate_t;
+
+// DIE 0xaec07, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/c_locale.h:47
+typedef int nl_catd_type;
+
+// DIE 0xaec12, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/c_locale.h:63
+typedef short unsigned int _Locale_mask_t;
+
+// DIE 0xaedb0, byte_size=None, declaration=True
+struct _Locale_ctype;
+
+// DIE 0xaee07, byte_size=None, declaration=True
+struct _Locale_name_hint;
+
+// DIE 0xaee13, byte_size=None, declaration=True
+struct _Locale_codecvt;
+
+// DIE 0xaee6a, byte_size=None, declaration=True
+struct _Locale_numeric;
+
+// DIE 0xaeec1, byte_size=None, declaration=True
+struct _Locale_time;
+
+// DIE 0xaef18, byte_size=None, declaration=True
+struct _Locale_collate;
+
+// DIE 0xaef6f, byte_size=None, declaration=True
+struct _Locale_monetary;
+
+// DIE 0xaefc6, byte_size=None, declaration=True
+struct _Locale_messages;
+
+
+// Functions outside record declarations
+// DIE 0xaec1d, ranges: []
+char const* _Locale_extract_name(char const* name, int* __err_code);
+// DIE 0xaec4b, ranges: []
+int toupper(int c);
+// DIE 0xaec67, ranges: []
+int tolower(int c);
+// DIE 0xaec83, ranges: []
+int isalpha(int c);
+// DIE 0xaec9f, ranges: []
+int iscntrl(int c);
+// DIE 0xaecbb, ranges: []
+int isprint(int c);
+// DIE 0xaecd7, ranges: []
+int ispunct(int c);
+// DIE 0xaecf3, ranges: []
+int isspace(int c);
+// DIE 0xaed0f, ranges: []
+int isxdigit(int c);
+// DIE 0xaed2b, ranges: []
+int isupper(int c);
+// DIE 0xaed47, ranges: []
+int islower(int c);
+// DIE 0xaed63, ranges: [{'begin': 9136100, 'end': 9136102, 'source': 'low/high_pc'}]
+void _Locale_final();
+// DIE 0xaed77, ranges: [{'begin': 9136104, 'end': 9136128, 'source': 'low/high_pc'}]
+void* _Locale_create(char const* name, int* __err_code);
+// DIE 0xaedb6, ranges: [{'begin': 9136128, 'end': 9136138, 'source': 'low/high_pc'}]
+_Locale_ctype* _Locale_ctype_create(char const* name, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaee19, ranges: [{'begin': 9136140, 'end': 9136150, 'source': 'low/high_pc'}]
+_Locale_codecvt* _Locale_codecvt_create(char const* name, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaee70, ranges: [{'begin': 9136152, 'end': 9136162, 'source': 'low/high_pc'}]
+_Locale_numeric* _Locale_numeric_create(char const* name, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaeec7, ranges: [{'begin': 9136164, 'end': 9136174, 'source': 'low/high_pc'}]
+_Locale_time* _Locale_time_create(char const* name, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaef1e, ranges: [{'begin': 9136176, 'end': 9136186, 'source': 'low/high_pc'}]
+_Locale_collate* _Locale_collate_create(char const* name, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaef75, ranges: [{'begin': 9136188, 'end': 9136198, 'source': 'low/high_pc'}]
+_Locale_monetary* _Locale_monetary_create(char const* name, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaefcc, ranges: [{'begin': 9136200, 'end': 9136210, 'source': 'low/high_pc'}]
+_Locale_messages* _Locale_messages_create(char const* name, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaf01d, ranges: [{'begin': 9136212, 'end': 9136224, 'source': 'low/high_pc'}]
+char const* _Locale_ctype_default(char* buf);
+// DIE 0xaf049, ranges: [{'begin': 9136224, 'end': 9136236, 'source': 'low/high_pc'}]
+char const* _Locale_numeric_default(char* buf);
+// DIE 0xaf075, ranges: [{'begin': 9136236, 'end': 9136248, 'source': 'low/high_pc'}]
+char const* _Locale_time_default(char* buf);
+// DIE 0xaf0a1, ranges: [{'begin': 9136248, 'end': 9136260, 'source': 'low/high_pc'}]
+char const* _Locale_collate_default(char* buf);
+// DIE 0xaf0cd, ranges: [{'begin': 9136260, 'end': 9136272, 'source': 'low/high_pc'}]
+char const* _Locale_monetary_default(char* buf);
+// DIE 0xaf0f9, ranges: [{'begin': 9136272, 'end': 9136284, 'source': 'low/high_pc'}]
+char const* _Locale_messages_default(char* buf);
+// DIE 0xaf125, ranges: [{'begin': 9136284, 'end': 9136296, 'source': 'low/high_pc'}]
+char const* _Locale_ctype_name(_Locale_ctype const* lctype, char* buf);
+// DIE 0xaf16d, ranges: [{'begin': 9136296, 'end': 9136308, 'source': 'low/high_pc'}]
+char const* _Locale_codecvt_name(_Locale_codecvt const* lcodecvt, char* buf);
+// DIE 0xaf1b5, ranges: [{'begin': 9136308, 'end': 9136320, 'source': 'low/high_pc'}]
+char const* _Locale_numeric_name(_Locale_numeric const* lnum, char* buf);
+// DIE 0xaf1fd, ranges: [{'begin': 9136320, 'end': 9136332, 'source': 'low/high_pc'}]
+char const* _Locale_time_name(_Locale_time const* ltime, char* buf);
+// DIE 0xaf245, ranges: [{'begin': 9136332, 'end': 9136344, 'source': 'low/high_pc'}]
+char const* _Locale_collate_name(_Locale_collate const* lcol, char* buf);
+// DIE 0xaf28d, ranges: [{'begin': 9136344, 'end': 9136356, 'source': 'low/high_pc'}]
+char const* _Locale_monetary_name(_Locale_monetary const* lmon, char* buf);
+// DIE 0xaf2d5, ranges: [{'begin': 9136356, 'end': 9136368, 'source': 'low/high_pc'}]
+char const* _Locale_messages_name(_Locale_messages const* lmes, char* buf);
+// DIE 0xaf31d, ranges: [{'begin': 9136368, 'end': 9136370, 'source': 'low/high_pc'}]
+void _Locale_ctype_destroy(_Locale_ctype* lctype);
+// DIE 0xaf343, ranges: [{'begin': 9136372, 'end': 9136374, 'source': 'low/high_pc'}]
+void _Locale_codecvt_destroy(_Locale_codecvt* lcodecvt);
+// DIE 0xaf369, ranges: [{'begin': 9136376, 'end': 9136378, 'source': 'low/high_pc'}]
+void _Locale_numeric_destroy(_Locale_numeric* lnum);
+// DIE 0xaf38f, ranges: [{'begin': 9136380, 'end': 9136382, 'source': 'low/high_pc'}]
+void _Locale_time_destroy(_Locale_time* ltime);
+// DIE 0xaf3b5, ranges: [{'begin': 9136384, 'end': 9136386, 'source': 'low/high_pc'}]
+void _Locale_collate_destroy(_Locale_collate* lcol);
+// DIE 0xaf3db, ranges: [{'begin': 9136388, 'end': 9136390, 'source': 'low/high_pc'}]
+void _Locale_monetary_destroy(_Locale_monetary* lmon);
+// DIE 0xaf401, ranges: [{'begin': 9136392, 'end': 9136394, 'source': 'low/high_pc'}]
+void _Locale_messages_destroy(_Locale_messages* lmes);
+// DIE 0xaf427, ranges: [{'begin': 9136396, 'end': 9136432, 'source': 'low/high_pc'}]
+char const* _Locale_extract_ctype_name(char const* name, char* buf, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaf498, ranges: [{'begin': 9136432, 'end': 9136468, 'source': 'low/high_pc'}]
+char const* _Locale_extract_numeric_name(char const* name, char* buf, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaf509, ranges: [{'begin': 9136468, 'end': 9136504, 'source': 'low/high_pc'}]
+char const* _Locale_extract_time_name(char const* name, char* buf, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaf57a, ranges: [{'begin': 9136504, 'end': 9136540, 'source': 'low/high_pc'}]
+char const* _Locale_extract_collate_name(char const* name, char* buf, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaf5eb, ranges: [{'begin': 9136540, 'end': 9136576, 'source': 'low/high_pc'}]
+char const* _Locale_extract_monetary_name(char const* name, char* buf, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaf65c, ranges: [{'begin': 9136576, 'end': 9136612, 'source': 'low/high_pc'}]
+char const* _Locale_extract_messages_name(char const* name, char* buf, _Locale_name_hint* hint, int* __err_code);
+// DIE 0xaf6cd, ranges: [{'begin': 9136612, 'end': 9136616, 'source': 'low/high_pc'}]
+_Locale_name_hint* _Locale_get_ctype_hint(_Locale_ctype* ctype);
+// DIE 0xaf6f9, ranges: [{'begin': 9136616, 'end': 9136620, 'source': 'low/high_pc'}]
+_Locale_name_hint* _Locale_get_numeric_hint(_Locale_numeric* numeric);
+// DIE 0xaf725, ranges: [{'begin': 9136620, 'end': 9136624, 'source': 'low/high_pc'}]
+_Locale_name_hint* _Locale_get_time_hint(_Locale_time* time);
+// DIE 0xaf751, ranges: [{'begin': 9136624, 'end': 9136628, 'source': 'low/high_pc'}]
+_Locale_name_hint* _Locale_get_collate_hint(_Locale_collate* collate);
+// DIE 0xaf77d, ranges: [{'begin': 9136628, 'end': 9136632, 'source': 'low/high_pc'}]
+_Locale_name_hint* _Locale_get_monetary_hint(_Locale_monetary* monetary);
+// DIE 0xaf7a9, ranges: [{'begin': 9136632, 'end': 9136636, 'source': 'low/high_pc'}]
+_Locale_name_hint* _Locale_get_messages_hint(_Locale_messages* messages);
+// DIE 0xaf7d5, ranges: [{'begin': 9136636, 'end': 9136648, 'source': 'low/high_pc'}]
+_Locale_mask_t const* _Locale_ctype_table(_Locale_ctype* lctype);
+// DIE 0xaf80c, ranges: [{'begin': 9136648, 'end': 9136680, 'source': 'low/high_pc'}]
+int _Locale_toupper(_Locale_ctype* lctype, int c);
+// DIE 0xaf85a, ranges: [{'begin': 9136680, 'end': 9136712, 'source': 'low/high_pc'}]
+int _Locale_tolower(_Locale_ctype* lctype, int c);
+// DIE 0xaf8a8, ranges: [{'begin': 9136712, 'end': 9136716, 'source': 'low/high_pc'}]
+int _WLocale_mb_cur_max(_Locale_codecvt* lcodecvt);
+// DIE 0xaf8d4, ranges: [{'begin': 9136716, 'end': 9136720, 'source': 'low/high_pc'}]
+int _WLocale_mb_cur_min(_Locale_codecvt* lcodecvt);
+// DIE 0xaf900, ranges: [{'begin': 9136720, 'end': 9136724, 'source': 'low/high_pc'}]
+int _WLocale_is_stateless(_Locale_codecvt* lcodecvt);
+// DIE 0xaf92c, ranges: [{'begin': 9136724, 'end': 9136732, 'source': 'low/high_pc'}]
+size_t _WLocale_mbtowc(_Locale_codecvt* lcodecvt, wchar_t* to, char const* from, size_t n, mbstate_t* st);
+// DIE 0xaf997, ranges: [{'begin': 9136732, 'end': 9136738, 'source': 'low/high_pc'}]
+size_t _WLocale_wctomb(_Locale_codecvt* lcodecvt, char* to, size_t n, wchar_t const c, mbstate_t* st);
+// DIE 0xaf9fd, ranges: [{'begin': 9136740, 'end': 9136748, 'source': 'low/high_pc'}]
+size_t _WLocale_unshift(_Locale_codecvt* lcodecvt, mbstate_t* st, char* buf, size_t n, char** next);
+// DIE 0xafa69, ranges: [{'begin': 9136748, 'end': 9136752, 'source': 'low/high_pc'}]
+char _Locale_decimal_point(_Locale_numeric* lnum);
+// DIE 0xafa97, ranges: [{'begin': 9136752, 'end': 9136756, 'source': 'low/high_pc'}]
+char _Locale_thousands_sep(_Locale_numeric* lnum);
+// DIE 0xafac5, ranges: [{'begin': 9136756, 'end': 9136768, 'source': 'low/high_pc'}]
+char const* _Locale_grouping(_Locale_numeric* lnum);
+// DIE 0xafaf3, ranges: [{'begin': 9136768, 'end': 9136780, 'source': 'low/high_pc'}]
+char const* _Locale_true(_Locale_numeric* lnum);
+// DIE 0xafb21, ranges: [{'begin': 9136780, 'end': 9136792, 'source': 'low/high_pc'}]
+char const* _Locale_false(_Locale_numeric* lnum);
+// DIE 0xafb4f, ranges: [{'begin': 9136792, 'end': 9136796, 'source': 'low/high_pc'}]
+wchar_t _WLocale_decimal_point(_Locale_numeric* lnum);
+// DIE 0xafb7d, ranges: [{'begin': 9136796, 'end': 9136800, 'source': 'low/high_pc'}]
+wchar_t _WLocale_thousands_sep(_Locale_numeric* lnum);
+// DIE 0xafbab, ranges: [{'begin': 9136800, 'end': 9136812, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_true(_Locale_numeric* lnum, wchar_t* buf, size_t bufSize);
+// DIE 0xafbfb, ranges: [{'begin': 9136812, 'end': 9136824, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_false(_Locale_numeric* lnum, wchar_t* buf, size_t bufSize);
+// DIE 0xafc45, ranges: [{'begin': 9136824, 'end': 9136836, 'source': 'low/high_pc'}]
+char const* _Locale_int_curr_symbol(_Locale_monetary* lmon);
+// DIE 0xafc73, ranges: [{'begin': 9136836, 'end': 9136848, 'source': 'low/high_pc'}]
+char const* _Locale_currency_symbol(_Locale_monetary* lmon);
+// DIE 0xafca1, ranges: [{'begin': 9136848, 'end': 9136852, 'source': 'low/high_pc'}]
+char _Locale_mon_decimal_point(_Locale_monetary* lmon);
+// DIE 0xafccf, ranges: [{'begin': 9136852, 'end': 9136856, 'source': 'low/high_pc'}]
+char _Locale_mon_thousands_sep(_Locale_monetary* lmon);
+// DIE 0xafcfd, ranges: [{'begin': 9136856, 'end': 9136868, 'source': 'low/high_pc'}]
+char const* _Locale_mon_grouping(_Locale_monetary* lmon);
+// DIE 0xafd2b, ranges: [{'begin': 9136868, 'end': 9136880, 'source': 'low/high_pc'}]
+char const* _Locale_positive_sign(_Locale_monetary* lmon);
+// DIE 0xafd59, ranges: [{'begin': 9136880, 'end': 9136892, 'source': 'low/high_pc'}]
+char const* _Locale_negative_sign(_Locale_monetary* lmon);
+// DIE 0xafd87, ranges: [{'begin': 9136892, 'end': 9136896, 'source': 'low/high_pc'}]
+char _Locale_int_frac_digits(_Locale_monetary* lmon);
+// DIE 0xafdb5, ranges: [{'begin': 9136896, 'end': 9136900, 'source': 'low/high_pc'}]
+char _Locale_frac_digits(_Locale_monetary* lmon);
+// DIE 0xafde3, ranges: [{'begin': 9136900, 'end': 9136904, 'source': 'low/high_pc'}]
+int _Locale_p_cs_precedes(_Locale_monetary* lmon);
+// DIE 0xafe11, ranges: [{'begin': 9136904, 'end': 9136908, 'source': 'low/high_pc'}]
+int _Locale_p_sep_by_space(_Locale_monetary* lmon);
+// DIE 0xafe3f, ranges: [{'begin': 9136908, 'end': 9136912, 'source': 'low/high_pc'}]
+int _Locale_p_sign_posn(_Locale_monetary* lmon);
+// DIE 0xafe6d, ranges: [{'begin': 9136912, 'end': 9136916, 'source': 'low/high_pc'}]
+int _Locale_n_cs_precedes(_Locale_monetary* lmon);
+// DIE 0xafe9b, ranges: [{'begin': 9136916, 'end': 9136920, 'source': 'low/high_pc'}]
+int _Locale_n_sep_by_space(_Locale_monetary* lmon);
+// DIE 0xafec9, ranges: [{'begin': 9136920, 'end': 9136924, 'source': 'low/high_pc'}]
+int _Locale_n_sign_posn(_Locale_monetary* lmon);
+// DIE 0xafef7, ranges: [{'begin': 9136924, 'end': 9136936, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_int_curr_symbol(_Locale_monetary* lmon, wchar_t* buf, size_t bufSize);
+// DIE 0xaff41, ranges: [{'begin': 9136936, 'end': 9136948, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_currency_symbol(_Locale_monetary* lmon, wchar_t* buf, size_t bufSize);
+// DIE 0xaff8b, ranges: [{'begin': 9136948, 'end': 9136952, 'source': 'low/high_pc'}]
+wchar_t _WLocale_mon_decimal_point(_Locale_monetary* lmon);
+// DIE 0xaffb9, ranges: [{'begin': 9136952, 'end': 9136956, 'source': 'low/high_pc'}]
+wchar_t _WLocale_mon_thousands_sep(_Locale_monetary* lmon);
+// DIE 0xaffe7, ranges: [{'begin': 9136956, 'end': 9136968, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_positive_sign(_Locale_monetary* lmon, wchar_t* buf, size_t bufSize);
+// DIE 0xb0031, ranges: [{'begin': 9136968, 'end': 9136980, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_negative_sign(_Locale_monetary* lmon, wchar_t* buf, size_t bufSize);
+// DIE 0xb007b, ranges: [{'begin': 9136980, 'end': 9136996, 'source': 'low/high_pc'}]
+char const* _Locale_full_monthname(_Locale_time* ltime, int n);
+// DIE 0xb00b7, ranges: [{'begin': 9136996, 'end': 9137012, 'source': 'low/high_pc'}]
+char const* _Locale_abbrev_monthname(_Locale_time* ltime, int n);
+// DIE 0xb00f3, ranges: [{'begin': 9137012, 'end': 9137028, 'source': 'low/high_pc'}]
+char const* _Locale_full_dayofweek(_Locale_time* ltime, int n);
+// DIE 0xb012f, ranges: [{'begin': 9137028, 'end': 9137044, 'source': 'low/high_pc'}]
+char const* _Locale_abbrev_dayofweek(_Locale_time* ltime, int n);
+// DIE 0xb016b, ranges: [{'begin': 9137044, 'end': 9137056, 'source': 'low/high_pc'}]
+char const* _Locale_d_t_fmt(_Locale_time* ltime);
+// DIE 0xb0199, ranges: [{'begin': 9137056, 'end': 9137068, 'source': 'low/high_pc'}]
+char const* _Locale_d_fmt(_Locale_time* ltime);
+// DIE 0xb01c7, ranges: [{'begin': 9137068, 'end': 9137080, 'source': 'low/high_pc'}]
+char const* _Locale_t_fmt(_Locale_time* ltime);
+// DIE 0xb01f5, ranges: [{'begin': 9137080, 'end': 9137092, 'source': 'low/high_pc'}]
+char const* _Locale_long_d_t_fmt(_Locale_time* ltime);
+// DIE 0xb0223, ranges: [{'begin': 9137092, 'end': 9137104, 'source': 'low/high_pc'}]
+char const* _Locale_long_d_fmt(_Locale_time* ltime);
+// DIE 0xb0251, ranges: [{'begin': 9137104, 'end': 9137116, 'source': 'low/high_pc'}]
+char const* _Locale_am_str(_Locale_time* ltime);
+// DIE 0xb027f, ranges: [{'begin': 9137116, 'end': 9137128, 'source': 'low/high_pc'}]
+char const* _Locale_pm_str(_Locale_time* ltime);
+// DIE 0xb02ad, ranges: [{'begin': 9137128, 'end': 9137144, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_full_monthname(_Locale_time* ltime, int n, wchar_t* buf, size_t bufSize);
+// DIE 0xb0307, ranges: [{'begin': 9137144, 'end': 9137160, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_abbrev_monthname(_Locale_time* ltime, int n, wchar_t* buf, size_t bufSize);
+// DIE 0xb0361, ranges: [{'begin': 9137160, 'end': 9137176, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_full_dayofweek(_Locale_time* ltime, int n, wchar_t* buf, size_t bufSize);
+// DIE 0xb03bb, ranges: [{'begin': 9137176, 'end': 9137192, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_abbrev_dayofweek(_Locale_time* ltime, int n, wchar_t* buf, size_t bufSize);
+// DIE 0xb0415, ranges: [{'begin': 9137192, 'end': 9137204, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_am_str(_Locale_time* ltime, wchar_t* buf, size_t bufSize);
+// DIE 0xb045f, ranges: [{'begin': 9137204, 'end': 9137216, 'source': 'low/high_pc'}]
+wchar_t const* _WLocale_pm_str(_Locale_time* ltime, wchar_t* buf, size_t bufSize);
+// DIE 0xb04a9, ranges: [{'begin': 9137216, 'end': 9137222, 'source': 'low/high_pc'}]
+nl_catd_type _Locale_catopen(_Locale_messages* lmes, char const* name);
+// DIE 0xb04e5, ranges: [{'begin': 9137224, 'end': 9137226, 'source': 'low/high_pc'}]
+void _Locale_catclose(_Locale_messages* lmes, nl_catd_type cat);
+// DIE 0xb051b, ranges: [{'begin': 9137228, 'end': 9137232, 'source': 'low/high_pc'}]
+char const* _Locale_catgets(_Locale_messages* lmes, nl_catd_type cat, int setid, int msgid, char const* dfault);
+// DIE 0xb0582, ranges: [{'begin': 9137232, 'end': 9137264, 'source': 'low/high_pc'}]
+size_t _WLocale_strxfrm(_Locale_collate* lcol, wchar_t* dest, size_t dest_n, wchar_t const* src, size_t src_n);
+// DIE 0xb05f0, ranges: [{'begin': 9137264, 'end': 9137296, 'source': 'low/high_pc'}]
+size_t _Locale_strxfrm(_Locale_collate* lcol, char* dest, size_t dest_n, char const* src, size_t src_n);
+// DIE 0xb065e, ranges: [{'begin': 9137296, 'end': 9137488, 'source': 'low/high_pc'}]
+int _WLocale_strcmp(_Locale_collate* lcol, wchar_t const* s1, size_t n1, wchar_t const* s2, size_t n2);
+// DIE 0xb072f, ranges: [{'begin': 9137488, 'end': 9137680, 'source': 'low/high_pc'}]
+int _Locale_strcmp(_Locale_collate* lcol, char const* s1, size_t n1, char const* s2, size_t n2);
+// DIE 0xb07fc, ranges: [{'begin': 9137680, 'end': 9137690, 'source': 'low/high_pc'}]
+wint_t _WLocale_toupper(_Locale_ctype* lctype, wint_t wc);
+// DIE 0xb0837, ranges: [{'begin': 9137692, 'end': 9137702, 'source': 'low/high_pc'}]
+wint_t _WLocale_tolower(_Locale_ctype* lctype, wint_t wc);
+// DIE 0xb0872, ranges: [{'begin': 9137704, 'end': 9137922, 'source': 'low/high_pc'}]
+_Locale_mask_t _WLocale_ctype(_Locale_ctype* lctype, wint_t wc, _Locale_mask_t mask);
+// DIE 0xb08cb, ranges: [{'begin': 9137924, 'end': 9138184, 'source': 'low/high_pc'}]
+void _Locale_init();

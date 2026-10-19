@@ -1,0 +1,676 @@
+<?xml version="1.0" ?>
+<soundpack>
+	<sounds size="578">
+		<sound bank="6" filename="sfx_menu_spending.wav" format="pcm" group="4" label="MenuSpending" loadingflags="none" loop="no" priority="2" uid="0"/>
+		<sound bank="6" filename="sfx_menu_back.wav" format="pcm" group="4" label="MenuBack" loadingflags="none" loop="no" priority="2" uid="1"/>
+		<sound bank="6" filename="sfx_menu_confirm.wav" format="pcm" group="4" label="MenuConfirm" loadingflags="none" loop="no" priority="2" uid="2"/>
+		<sound bank="6" filename="sfx_menu_select.wav" format="pcm" group="4" label="MenuSelect" loadingflags="none" loop="no" priority="2" uid="3"/>
+		<sound bank="6" filename="sfx_menu_tab.wav" format="pcm" group="4" label="MenuTab" loadingflags="none" loop="no" priority="2" uid="4"/>
+		<sound bank="6" filename="sfx_menu_shop_deal.wav" format="pcm" group="4" label="MenuShopSuccess" loadingflags="none" loop="no" priority="2" uid="5"/>
+		<sound bank="6" filename="sfx_menu_shop_nodeal.wav" format="pcm" group="4" label="MenuShopFail" loadingflags="none" loop="no" priority="2" uid="6"/>
+		<sound bank="6" filename="sfx_tutorial_popup.wav" format="pcm" group="4" label="MenuTutoPopup" loadingflags="none" loop="no" priority="2" uid="7"/>
+		<sound bank="6" filename="sfx_potion_drink.wav" format="pcm" group="4" label="MenuPotion" loadingflags="none" loop="no" priority="2" uid="8"/>
+		<sound bank="6" filename="sfx_level_up.wav" format="pcm" group="4" label="LevelUp" loadingflags="none" loop="no" priority="2" uid="9"/>
+		<sound bank="6" filename="sfx_quest_new.wav" format="pcm" group="4" label="QuestNew" loadingflags="none" loop="no" priority="2" uid="10"/>
+		<sound bank="6" filename="sfx_quest_complete.wav" format="pcm" group="4" label="QuestUpdate" loadingflags="none" loop="no" priority="2" uid="11"/>
+		<sound bank="6" filename="sfx_quest_complete.wav" format="pcm" group="4" label="QuestComplete" loadingflags="none" loop="no" priority="2" uid="12"/>
+		<sound bank="6" filename="sfx_quest_panel_up.wav" format="pcm" group="4" label="sfx_quest_panel_up" loadingflags="none" loop="no" priority="2" uid="13"/>
+		<sound bank="6" filename="sfx_checkpoint_activated.wav" format="pcm" group="4" label="sfx_checkpoint_activated" loadingflags="none" loop="no" priority="2" uid="14"/>
+		<sound bank="6" filename="sfx_mc_low_hp.wav" format="pcm" group="4" label="sfx_mc_low_hp" loadingflags="none" loop="no" priority="2" uid="15"/>
+		<sound bank="6" filename="sfx_act_completed.wav" format="pcm" group="4" label="sfx_act_completed" loadingflags="none" loop="no" priority="2" uid="16"/>
+		<sound bank="6" filename="sfx_tap_dialog.wav" format="pcm" group="4" label="sfx_tap_dialog" loadingflags="none" loop="no" priority="2" uid="17"/>
+		<sound bank="2" filename="sfx_friend_death.wav" format="pcm" group="4" label="sfx_friend_death" loadingflags="none" loop="no" priority="2" uid="18"/>
+		<sound bank="2" filename="sfx_friend_left_game.wav" format="pcm" group="4" label="sfx_friend_left_game" loadingflags="none" loop="no" priority="2" uid="19"/>
+		<sound bank="2" filename="sfx_friend_low_hp.wav" format="pcm" group="4" label="sfx_friend_low_hp" loadingflags="none" loop="no" priority="2" uid="20"/>
+		<sound bank="2" filename="sfx_friend_revive.wav" format="pcm" group="4" label="sfx_friend_revive" loadingflags="none" loop="no" priority="2" uid="21"/>
+		<sound bank="2" filename="sfx_swoosh_sword_1.wav" format="pcm" group="8" label="WeaponSwoosh1" loadingflags="load and decode" loop="no" priority="2" uid="22"/>
+		<sound bank="2" filename="sfx_swoosh_sword_2.wav" format="pcm" group="8" label="WeaponSwoosh2" loadingflags="load and decode" loop="no" priority="2" uid="23"/>
+		<sound bank="2" filename="sfx_swoosh_dagger_1.wav" format="pcm" group="8" label="sfx_swoosh_dagger_1" loadingflags="load and decode" loop="no" priority="2" uid="24"/>
+		<sound bank="2" filename="sfx_swoosh_dagger_2.wav" format="pcm" group="8" label="sfx_swoosh_dagger_2" loadingflags="load and decode" loop="no" priority="2" uid="25"/>
+		<sound bank="2" filename="sfx_swoosh_staff_1.wav" format="pcm" group="8" label="sfx_swoosh_staff_1" loadingflags="load and decode" loop="no" priority="2" uid="26"/>
+		<sound bank="2" filename="sfx_swoosh_staff_2.wav" format="pcm" group="8" label="sfx_swoosh_staff_2" loadingflags="load and decode" loop="no" priority="2" uid="27"/>
+		<sound bank="2" filename="sfx_mc_shoot_arrow.wav" format="pcm" group="8" label="sfx_mc_shoot_arrow" loadingflags="load and decode" loop="no" priority="2" uid="28"/>
+		<sound bank="2" filename="sfx_mage_staff_elemental_fire.wav" format="pcm" group="6" label="sfx_mage_staff_elemental_fire" loadingflags="load and decode" loop="no" priority="2" uid="29"/>
+		<sound bank="2" filename="sfx_mage_staff_elemental_ice.wav" format="pcm" group="6" label="sfx_mage_staff_elemental_ice" loadingflags="load and decode" loop="no" priority="2" uid="30"/>
+		<sound bank="2" filename="sfx_mage_staff_elemental_earth.wav" format="pcm" group="6" label="sfx_mage_staff_elemental_earth" loadingflags="load and decode" loop="no" priority="2" uid="31"/>
+		<sound bank="2" filename="sfx_mage_staff_elemental_wind.wav" format="pcm" group="6" label="sfx_mage_staff_elemental_wind" loadingflags="load and decode" loop="no" priority="2" uid="32"/>
+		<sound bank="2" filename="sfx_mage_staff_elemental_thunder.wav" format="pcm" group="6" label="sfx_mage_staff_elemental_lightning" loadingflags="load and decode" loop="no" priority="2" uid="33"/>
+		<sound bank="2" filename="sfx_npc_priest_hurt_1.wav" format="pcm" group="6" label="sfx_npc_priest_hurt_1" loadingflags="load and decode" loop="no" priority="2" uid="34"/>
+		<sound bank="2" filename="sfx_npc_priest_hurt_2.wav" format="pcm" group="6" label="sfx_npc_priest_hurt_2" loadingflags="load and decode" loop="no" priority="2" uid="35"/>
+		<sound bank="2" filename="sfx_npc_priest_hurt_3.wav" format="pcm" group="6" label="sfx_npc_priest_hurt_3" loadingflags="load and decode" loop="no" priority="2" uid="36"/>
+		<sound bank="2" filename="sfx_critical_hit.wav" format="pcm" group="6" label="CriticalHit1" loadingflags="none" loop="no" priority="2" uid="37"/>
+		<sound bank="2" filename="sfx_character_hurt_1.wav" format="pcm" group="6" label="CharacterHurt1" loadingflags="load and decode" loop="no" priority="2" uid="38"/>
+		<sound bank="2" filename="sfx_character_hurt_2.wav" format="pcm" group="6" label="CharacterHurt2" loadingflags="load and decode" loop="no" priority="2" uid="39"/>
+		<sound bank="2" filename="sfx_character_hurt_3.wav" format="pcm" group="6" label="CharacterHurt3" loadingflags="load and decode" loop="no" priority="2" uid="40"/>
+		<sound bank="2" filename="sfx_impact_metal_metal_1.wav" format="pcm" group="8" label="ImpactMetal1" loadingflags="load and decode" loop="no" priority="2" uid="41"/>
+		<sound bank="2" filename="sfx_impact_metal_metal_2.wav" format="pcm" group="8" label="ImpactMetal2" loadingflags="load and decode" loop="no" priority="2" uid="42"/>
+		<sound bank="2" filename="sfx_impact_metal_metal_3.wav" format="pcm" group="8" label="ImpactMetal3" loadingflags="load and decode" loop="no" priority="2" uid="43"/>
+		<sound bank="2" filename="sfx_impact_metal_flesh_1.wav" format="pcm" group="8" label="ImpactMetalFlesh1" loadingflags="load and decode" loop="no" priority="2" uid="44"/>
+		<sound bank="2" filename="sfx_impact_metal_flesh_2.wav" format="pcm" group="8" label="ImpactMetalFlesh2" loadingflags="load and decode" loop="no" priority="2" uid="45"/>
+		<sound bank="2" filename="sfx_impact_metal_flesh_3.wav" format="pcm" group="8" label="ImpactMetalFlesh3" loadingflags="load and decode" loop="no" priority="2" uid="46"/>
+		<sound bank="2" filename="sfx_impact_metal_flesh_medium_1.wav" format="pcm" group="8" label="sfx_impact_metal_flesh_medium_1" loadingflags="load and decode" loop="no" priority="2" uid="47"/>
+		<sound bank="2" filename="sfx_impact_metal_flesh_medium_2.wav" format="pcm" group="8" label="sfx_impact_metal_flesh_medium_2" loadingflags="load and decode" loop="no" priority="2" uid="48"/>
+		<sound bank="2" filename="sfx_impact_metal_flesh_medium_3.wav" format="pcm" group="8" label="sfx_impact_metal_flesh_medium_3" loadingflags="load and decode" loop="no" priority="2" uid="49"/>
+		<sound bank="2" filename="sfx_character_death.wav" format="pcm" group="6" label="CharacterDie" loadingflags="none" loop="no" priority="2" uid="50"/>
+		<sound bank="2" filename="sfx_impact_block_1.wav" format="pcm" group="8" label="sfx_impact_block_1" loadingflags="load and decode" loop="no" priority="2" uid="51"/>
+		<sound bank="2" filename="sfx_impact_block_2.wav" format="pcm" group="8" label="sfx_impact_block_2" loadingflags="load and decode" loop="no" priority="2" uid="52"/>
+		<sound bank="2" filename="sfx_impact_arrow_flesh_1.wav" format="pcm" group="8" label="sfx_impact_arrow_flesh_1" loadingflags="load and decode" loop="no" priority="2" uid="53"/>
+		<sound bank="2" filename="sfx_impact_arrow_flesh_2.wav" format="pcm" group="8" label="sfx_impact_arrow_flesh_2" loadingflags="load and decode" loop="no" priority="2" uid="54"/>
+		<sound bank="2" filename="sfx_impact_arrow_flesh_3.wav" format="pcm" group="8" label="sfx_impact_arrow_flesh_3" loadingflags="load and decode" loop="no" priority="2" uid="55"/>
+		<sound bank="2" filename="sfx_impact_arrow_object_1.wav" format="pcm" group="8" label="sfx_impact_arrow_object_1" loadingflags="load and decode" loop="no" priority="2" uid="56"/>
+		<sound bank="2" filename="sfx_impact_arrow_object_2.wav" format="pcm" group="8" label="sfx_impact_arrow_object_2" loadingflags="load and decode" loop="no" priority="2" uid="57"/>
+		<sound bank="2" filename="sfx_impact_elemental_earth.wav" format="pcm" group="6" label="sfx_impact_elemental_earth" loadingflags="none" loop="no" priority="2" uid="58"/>
+		<sound bank="2" filename="sfx_impact_elemental_fire.wav" format="pcm" group="6" label="sfx_impact_elemental_fire" loadingflags="none" loop="no" priority="2" uid="59"/>
+		<sound bank="2" filename="sfx_impact_elemental_ice.wav" format="pcm" group="6" label="sfx_impact_elemental_ice" loadingflags="none" loop="no" priority="2" uid="60"/>
+		<sound bank="2" filename="sfx_impact_elemental_thunder.wav" format="pcm" group="6" label="sfx_impact_elemental_thunder" loadingflags="none" loop="no" priority="2" uid="61"/>
+		<sound bank="2" filename="sfx_impact_elemental_wind.wav" format="pcm" group="6" label="sfx_impact_elemental_wind" loadingflags="none" loop="no" priority="2" uid="62"/>
+		<sound bank="2" filename="sfx_impact_burst_shot.wav" format="pcm" group="6" label="sfx_impact_burst_shot" loadingflags="none" loop="no" priority="2" uid="63"/>
+		<sound bank="2" filename="sfx_fs_walk_grass_1.wav" format="pcm" group="8" label="sfx_fs_walk_grass_1" loadingflags="load and decode" loop="no" priority="1" uid="64"/>
+		<sound bank="2" filename="sfx_fs_walk_grass_2.wav" format="pcm" group="8" label="sfx_fs_walk_grass_2" loadingflags="load and decode" loop="no" priority="1" uid="65"/>
+		<sound bank="2" filename="sfx_fs_walk_grass_3.wav" format="pcm" group="8" label="sfx_fs_walk_grass_3" loadingflags="load and decode" loop="no" priority="1" uid="66"/>
+		<sound bank="2" filename="sfx_fs_walk_grass_4.wav" format="pcm" group="8" label="sfx_fs_walk_grass_4" loadingflags="load and decode" loop="no" priority="1" uid="67"/>
+		<sound bank="2" filename="sfx_fs_walk_metal_1.wav" format="pcm" group="8" label="sfx_fs_walk_metal_1" loadingflags="load and decode" loop="no" priority="1" uid="68"/>
+		<sound bank="2" filename="sfx_fs_walk_metal_2.wav" format="pcm" group="8" label="sfx_fs_walk_metal_2" loadingflags="load and decode" loop="no" priority="1" uid="69"/>
+		<sound bank="2" filename="sfx_fs_walk_metal_3.wav" format="pcm" group="8" label="sfx_fs_walk_metal_3" loadingflags="load and decode" loop="no" priority="1" uid="70"/>
+		<sound bank="2" filename="sfx_fs_walk_metal_4.wav" format="pcm" group="8" label="sfx_fs_walk_metal_4" loadingflags="load and decode" loop="no" priority="1" uid="71"/>
+		<sound bank="2" filename="sfx_fs_walk_stone_1.wav" format="pcm" group="8" label="FootstepWalkStone1" loadingflags="load and decode" loop="no" priority="1" uid="72"/>
+		<sound bank="2" filename="sfx_fs_walk_stone_2.wav" format="pcm" group="8" label="FootstepWalkStone2" loadingflags="load and decode" loop="no" priority="1" uid="73"/>
+		<sound bank="2" filename="sfx_fs_walk_stone_3.wav" format="pcm" group="8" label="FootstepWalkStone3" loadingflags="load and decode" loop="no" priority="1" uid="74"/>
+		<sound bank="2" filename="sfx_fs_walk_stone_4.wav" format="pcm" group="8" label="FootstepWalkStone4" loadingflags="load and decode" loop="no" priority="1" uid="75"/>
+		<sound bank="2" filename="sfx_fs_walk_water_1.wav" format="pcm" group="8" label="FootstepWalkWater1" loadingflags="load and decode" loop="no" priority="1" uid="76"/>
+		<sound bank="2" filename="sfx_fs_walk_water_2.wav" format="pcm" group="8" label="FootstepWalkWater2" loadingflags="load and decode" loop="no" priority="1" uid="77"/>
+		<sound bank="2" filename="sfx_fs_walk_water_3.wav" format="pcm" group="8" label="FootstepWalkWater3" loadingflags="load and decode" loop="no" priority="1" uid="78"/>
+		<sound bank="2" filename="sfx_fs_walk_water_4.wav" format="pcm" group="8" label="FootstepWalkWater4" loadingflags="load and decode" loop="no" priority="1" uid="79"/>
+		<sound bank="2" filename="sfx_fs_walk_wet_floor_1.wav" format="pcm" group="8" label="sfx_fs_walk_wet_floor_1" loadingflags="load and decode" loop="no" priority="1" uid="80"/>
+		<sound bank="2" filename="sfx_fs_walk_wet_floor_2.wav" format="pcm" group="8" label="sfx_fs_walk_wet_floor_2" loadingflags="load and decode" loop="no" priority="1" uid="81"/>
+		<sound bank="2" filename="sfx_fs_walk_wet_floor_3.wav" format="pcm" group="8" label="sfx_fs_walk_wet_floor_3" loadingflags="load and decode" loop="no" priority="1" uid="82"/>
+		<sound bank="2" filename="sfx_fs_walk_wet_floor_4.wav" format="pcm" group="8" label="sfx_fs_walk_wet_floor_4" loadingflags="load and decode" loop="no" priority="1" uid="83"/>
+		<sound bank="2" filename="sfx_fs_walk_wood_1.wav" format="pcm" group="8" label="sfx_fs_walk_wood_1" loadingflags="load and decode" loop="no" priority="1" uid="84"/>
+		<sound bank="2" filename="sfx_fs_walk_wood_2.wav" format="pcm" group="8" label="sfx_fs_walk_wood_2" loadingflags="load and decode" loop="no" priority="1" uid="85"/>
+		<sound bank="2" filename="sfx_fs_walk_wood_3.wav" format="pcm" group="8" label="sfx_fs_walk_wood_3" loadingflags="load and decode" loop="no" priority="1" uid="86"/>
+		<sound bank="2" filename="sfx_fs_walk_wood_4.wav" format="pcm" group="8" label="sfx_fs_walk_wood_4" loadingflags="load and decode" loop="no" priority="1" uid="87"/>
+		<sound bank="2" filename="sfx_faerie_lightning_small.wav" format="pcm" group="6" label="sfx_spell_lightning_small" loadingflags="none" loop="no" priority="2" uid="88"/>
+		<sound bank="2" filename="sfx_faerie_lightning_medium.wav" format="pcm" group="6" label="sfx_spell_lightning_medium" loadingflags="none" loop="no" priority="2" uid="89"/>
+		<sound bank="2" filename="sfx_faerie_lightning_big.wav" format="pcm" group="6" label="sfx_spell_lightning_big" loadingflags="none" loop="no" priority="2" uid="90"/>
+		<sound bank="2" filename="sfx_faerie_lightning_medium.wav" format="pcm" group="6" label="CelestLightningSpell" loadingflags="none" loop="no" priority="2" uid="91"/>
+		<sound bank="2" filename="sfx_faerie_ice.wav" format="pcm" group="6" label="WettyWaterSpell" loadingflags="none" loop="no" priority="2" uid="92"/>
+		<sound bank="2" filename="sfx_faerie_wind.wav" format="pcm" group="6" label="WindyWhirlwindSpell" loadingflags="none" loop="no" priority="2" uid="93"/>
+		<sound bank="2" filename="sfx_faerie_earth.wav" format="pcm" group="6" label="RockyEarthSpell" loadingflags="none" loop="no" priority="2" uid="94"/>
+		<sound bank="2" filename="sfx_faerie_fire_small.wav" format="pcm" group="6" label="sfx_spell_fire_small" loadingflags="none" loop="no" priority="2" uid="95"/>
+		<sound bank="2" filename="sfx_faerie_fire_medium.wav" format="pcm" group="6" label="sfx_spell_fire_medium" loadingflags="none" loop="no" priority="2" uid="96"/>
+		<sound bank="2" filename="sfx_faerie_fire_big.wav" format="pcm" group="6" label="sfx_spell_fire_big" loadingflags="none" loop="no" priority="2" uid="97"/>
+		<sound bank="2" filename="sfx_faerie_water_small.wav" format="pcm" group="6" label="sfx_spell_water_small" loadingflags="none" loop="no" priority="2" uid="98"/>
+		<sound bank="2" filename="sfx_faerie_water_medium.wav" format="pcm" group="6" label="sfx_spell_water_medium" loadingflags="none" loop="no" priority="2" uid="99"/>
+		<sound bank="2" filename="sfx_faerie_water_big.wav" format="pcm" group="6" label="sfx_spell_water_big" loadingflags="none" loop="no" priority="2" uid="100"/>
+		<sound bank="7" filename="sfx_skill_warrior_headsplitter.wav" format="pcm" group="6" label="SlamSkill" loadingflags="none" loop="no" priority="2" uid="101"/>
+		<sound bank="7" filename="sfx_skill_warrior_shield_rush.wav" format="pcm" group="6" label="DashSkill" loadingflags="none" loop="no" priority="2" uid="102"/>
+		<sound bank="7" filename="sfx_skill_warrior_earthstrike.wav" format="pcm" group="6" label="ShockwaveSkill" loadingflags="none" loop="no" priority="2" uid="103"/>
+		<sound bank="7" filename="sfx_skill_warrior_pld_alastor_blessing.wav" format="pcm" group="6" label="sfx_skill_warrior_pld_alastor_blessing" loadingflags="none" loop="no" priority="2" uid="104"/>
+		<sound bank="7" filename="sfx_skill_warrior_pld_crusade.wav" format="pcm" group="6" label="sfx_skill_warrior_pld_crusade" loadingflags="none" loop="no" priority="2" uid="105"/>
+		<sound bank="7" filename="sfx_skill_warrior_pld_spiritual_sight.wav" format="pcm" group="6" label="sfx_skill_warrior_pld_spiritual_sight" loadingflags="none" loop="no" priority="2" uid="106"/>
+		<sound bank="7" filename="sfx_skill_warrior_pld_condemnation.wav" format="pcm" group="6" label="sfx_skill_warrior_pld_condemnation" loadingflags="none" loop="no" priority="2" uid="107"/>
+		<sound bank="7" filename="sfx_skill_warrior_bsk_crippling_strike.wav" format="pcm" group="6" label="sfx_skill_warrior_bsk_crippling_strike" loadingflags="none" loop="no" priority="2" uid="108"/>
+		<sound bank="7" filename="sfx_skill_warrior_bsk_bloodmoon_howl.wav" format="pcm" group="6" label="sfx_skill_warrior_bsk_bloodmoon_howl" loadingflags="none" loop="no" priority="2" uid="109"/>
+		<sound bank="7" filename="sfx_skill_warrior_bsk_bloodmoon_howl_hit_fear.wav" format="pcm" group="6" label="sfx_skill_warrior_bsk_bloodmoon_howl_hit_fear" loadingflags="none" loop="no" priority="2" uid="110"/>
+		<sound bank="7" filename="sfx_skill_warrior_bsk_bloodmoon_howl_hit_stun.wav" format="pcm" group="6" label="sfx_skill_warrior_bsk_bloodmoon_howl_hit_stun" loadingflags="none" loop="no" priority="2" uid="111"/>
+		<sound bank="7" filename="sfx_skill_warrior_bsk_annihilating_spin.wav" format="pcm" group="6" label="sfx_skill_warrior_bsk_annihilating_spin" loadingflags="none" loop="no" priority="2" uid="112"/>
+		<sound bank="7" filename="sfx_skill_mage_cold_ray.wav" format="pcm" group="6" label="WaterMasterySkill" loadingflags="none" loop="no" priority="2" uid="113"/>
+		<sound bank="7" filename="sfx_skill_mage_doppelganger.wav" format="pcm" group="6" label="sfx_skill_mage_doppelganger" loadingflags="none" loop="no" priority="2" uid="114"/>
+		<sound bank="7" filename="sfx_skill_mage_doppelganger_statue_explode.wav" format="pcm" group="6" label="sfx_skill_mage_doppelganger_statue_explode" loadingflags="none" loop="no" priority="2" uid="115"/>
+		<sound bank="7" filename="sfx_skill_mage_thunder_braid.wav" format="pcm" group="6" label="sfx_skill_mage_thunder_braid" loadingflags="none" loop="no" priority="2" uid="116"/>
+		<sound bank="7" filename="sfx_skill_mage_thunder_braid_add_1.wav" format="pcm" group="6" label="sfx_skill_mage_thunder_braid_add_1" loadingflags="none" loop="no" priority="2" uid="117"/>
+		<sound bank="7" filename="sfx_skill_mage_thunder_braid_add_2,wav" format="pcm" group="6" label="sfx_skill_mage_thunder_braid_add_2" loadingflags="none" loop="no" priority="2" uid="118"/>
+		<sound bank="7" filename="sfx_skill_mage_thunder_braid_loop.wav" format="pcm" group="6" label="sfx_skill_mage_thunder_braid_loop" loadingflags="none" loop="yes" priority="2" uid="119"/>
+		<sound bank="7" filename="sfx_skill_mage_stormslave.wav" format="pcm" group="6" label="sfx_skill_mage_stormslave" loadingflags="none" loop="no" priority="2" uid="120"/>
+		<sound bank="7" filename="sfx_skill_mage_ilu_eclipse.wav" format="pcm" group="6" label="sfx_skill_mage_ilu_eclipse" loadingflags="none" loop="no" priority="2" uid="121"/>
+		<sound bank="7" filename="sfx_skill_mage_ilu_terror.wav" format="pcm" group="6" label="sfx_skill_mage_ilu_terror" loadingflags="none" loop="no" priority="2" uid="122"/>
+		<sound bank="7" filename="sfx_skill_mage_ilu_nightmare.wav" format="pcm" group="6" label="sfx_skill_mage_ilu_nightmare" loadingflags="none" loop="no" priority="2" uid="123"/>
+		<sound bank="7" filename="sfx_skill_mage_ilu_hold_time.wav" format="pcm" group="6" label="sfx_skill_mage_ilu_hold_time" loadingflags="none" loop="no" priority="2" uid="124"/>
+		<sound bank="7" filename="sfx_skill_mage_ilu_hold_time_hit.wav" format="pcm" group="6" label="sfx_skill_mage_ilu_hold_time_hit" loadingflags="none" loop="no" priority="2" uid="125"/>
+		<sound bank="7" filename="sfx_skill_mage_nec_harrowing_grasp.wav" format="pcm" group="6" label="sfx_skill_mage_nec_harrowing_grasp" loadingflags="none" loop="no" priority="2" uid="126"/>
+		<sound bank="7" filename="sfx_skill_mage_nec_reaperstorm.wav" format="pcm" group="6" label="sfx_skill_mage_nec_reaperstorm" loadingflags="none" loop="no" priority="2" uid="127"/>
+		<sound bank="7" filename="sfx_skill_mage_nec_raise.wav" format="pcm" group="6" label="sfx_skill_mage_nec_raise" loadingflags="none" loop="no" priority="2" uid="128"/>
+		<sound bank="7" filename="sfx_skill_mage_nec_pestilence_breath.wav" format="pcm" group="6" label="sfx_skill_mage_nec_pestilence_breath" loadingflags="none" loop="no" priority="2" uid="129"/>
+		<sound bank="7" filename="sfx_skill_rogue_vicious_strike.wav" format="pcm" group="6" label="ViciousStrikeSkill" loadingflags="none" loop="no" priority="2" uid="130"/>
+		<sound bank="7" filename="sfx_skill_rogue_heel_strike.wav" format="pcm" group="6" label="JumpAttackSkill" loadingflags="none" loop="no" priority="2" uid="131"/>
+		<sound bank="7" filename="sfx_skill_rogue_featherfoot.wav" format="pcm" group="6" label="sfx_skill_rogue_featherfoot" loadingflags="none" loop="no" priority="2" uid="132"/>
+		<sound bank="7" filename="sfx_skill_rogue_desert_pinwheel.wav" format="pcm" group="6" label="sfx_skill_rogue_desert_pinwheel" loadingflags="none" loop="no" priority="2" uid="133"/>
+		<sound bank="7" filename="sfx_skill_rogue_arc_rain_of_arrows.wav" format="pcm" group="6" label="sfx_skill_rogue_arc_rain_of_arrows" loadingflags="none" loop="no" priority="2" uid="134"/>
+		<sound bank="7" filename="sfx_skill_rogue_arc_pierce_shot.wav" format="pcm" group="6" label="sfx_skill_rogue_arc_pierce_shot" loadingflags="none" loop="no" priority="2" uid="135"/>
+		<sound bank="7" filename="sfx_skill_rogue_arc_maim_shot.wav" format="pcm" group="6" label="sfx_skill_rogue_arc_maim_shot" loadingflags="none" loop="no" priority="2" uid="136"/>
+		<sound bank="7" filename="sfx_skill_rogue_arc_burst_shot.wav" format="pcm" group="6" label="sfx_skill_rogue_arc_burst_shot" loadingflags="none" loop="no" priority="2" uid="137"/>
+		<sound bank="7" filename="sfx_skill_rogue_arc_venom_shot.wav" format="pcm" group="6" label="sfx_skill_rogue_arc_venom_shot" loadingflags="none" loop="no" priority="2" uid="138"/>
+		<sound bank="7" filename="sfx_skill_rogue_ass_throw_knife.wav" format="pcm" group="6" label="sfx_skill_rogue_ass_throwing_knife" loadingflags="none" loop="no" priority="2" uid="139"/>
+		<sound bank="7" filename="sfx_skill_rogue_ass_concealing_cloud.wav" format="pcm" group="6" label="sfx_skill_rogue_ass_concealing_cloud" loadingflags="none" loop="no" priority="2" uid="140"/>
+		<sound bank="7" filename="sfx_skill_rogue_ass_plague_edge.wav" format="pcm" group="6" label="sfx_skill_rogue_ass_plague_edge" loadingflags="none" loop="no" priority="2" uid="141"/>
+		<sound bank="7" filename="sfx_skill_rogue_ass_assassinate.wav" format="pcm" group="6" label="sfx_skill_rogue_ass_assasinate" loadingflags="none" loop="no" priority="2" uid="142"/>
+		<sound bank="7" filename="sfx_passive_skill_activate_1.wav" format="pcm" group="6" label="sfx_passive_skill_activate_1" loadingflags="none" loop="no" priority="2" uid="143"/>
+		<sound bank="7" filename="sfx_passive_skill_activate_2.wav" format="pcm" group="6" label="sfx_passive_skill_activate_2" loadingflags="none" loop="no" priority="2" uid="144"/>
+		<sound bank="7" filename="sfx_passive_skill_activate_3.wav" format="pcm" group="6" label="sfx_passive_skill_activate_3" loadingflags="none" loop="no" priority="2" uid="145"/>
+		<sound bank="7" filename="sfx_passive_skill_activate_4.wav" format="pcm" group="6" label="sfx_passive_skill_activate_4" loadingflags="none" loop="no" priority="2" uid="146"/>
+		<sound bank="6" filename="sfx_potion_drink.wav" format="pcm" group="9" label="PotionDrink" loadingflags="none" loop="no" priority="2" uid="147"/>
+		<sound bank="3" filename="sfx_drop_armor.wav" format="pcm" group="7" label="DropArmor" loadingflags="none" loop="no" priority="1" uid="148"/>
+		<sound bank="3" filename="sfx_drop_potion.wav" format="pcm" group="7" label="DropPotion" loadingflags="none" loop="no" priority="1" uid="149"/>
+		<sound bank="3" filename="sfx_drop_weapon.wav" format="pcm" group="7" label="DropSword" loadingflags="none" loop="no" priority="1" uid="150"/>
+		<sound bank="3" filename="sfx_drop_gold.wav" format="pcm" group="7" label="DropGold" loadingflags="none" loop="no" priority="1" uid="151"/>
+		<sound bank="3" filename="sfx_pickup_armor.wav" format="pcm" group="7" label="PickupArmor" loadingflags="none" loop="no" priority="1" uid="152"/>
+		<sound bank="3" filename="sfx_pickup_potion.wav" format="pcm" group="7" label="PickupPotion" loadingflags="none" loop="no" priority="1" uid="153"/>
+		<sound bank="3" filename="sfx_pickup_weapon.wav" format="pcm" group="7" label="PickupWeapon" loadingflags="none" loop="no" priority="1" uid="154"/>
+		<sound bank="3" filename="sfx_pickup_gold.wav" format="pcm" group="7" label="PickupGold" loadingflags="none" loop="no" priority="1" uid="155"/>
+		<sound bank="3" filename="sfx_lever_activate.wav" format="pcm" group="5" label="LeverActivate" loadingflags="none" loop="no" priority="1" uid="156"/>
+		<sound bank="3" filename="sfx_metal_gate_open.wav" format="pcm" group="5" label="DoorOpening" loadingflags="none" loop="no" priority="1" uid="157"/>
+		<sound bank="3" filename="sfx_giant_wood_door_open.wav" format="pcm" group="5" label="sfx_giant_wood_door_open" loadingflags="none" loop="no" priority="1" uid="158"/>
+		<sound bank="3" filename="sfx_door_opening.wav" format="pcm" group="5" label="sfx_door_opening" loadingflags="none" loop="no" priority="1" uid="159"/>
+		<sound bank="3" filename="sfx_magical_wall_up.wav" format="pcm" group="5" label="sfx_magical_wall_up" loadingflags="none" loop="no" priority="1" uid="160"/>
+		<sound bank="3" filename="sfx_magical_wall_down.wav" format="pcm" group="5" label="sfx_magical_wall_down" loadingflags="none" loop="no" priority="1" uid="161"/>
+		<sound bank="3" filename="sfx_chest_opening.wav" format="pcm" group="5" label="ChestOpen" loadingflags="none" loop="no" priority="1" uid="162"/>
+		<sound bank="3" filename="sfx_barrel_breaking.wav" format="pcm" group="7" label="BarrelBreak" loadingflags="none" loop="no" priority="1" uid="163"/>
+		<sound bank="3" filename="sfx_crystal_hitting.wav" format="pcm" group="7" label="CrystalHitting" loadingflags="none" loop="no" priority="1" uid="164"/>
+		<sound bank="3" filename="sfx_crystal_breaking.wav" format="pcm" group="7" label="CrystalBreaking" loadingflags="none" loop="no" priority="1" uid="165"/>
+		<sound bank="3" filename="sfx_break_vase.wav" format="pcm" group="7" label="sfx_break_vase" loadingflags="none" loop="no" priority="1" uid="166"/>
+		<sound bank="3" filename="sfx_spikes_trap_activating.wav" format="pcm" group="5" label="SpikeTrapActivate" loadingflags="none" loop="no" priority="1" uid="167"/>
+		<sound bank="3" filename="sfx_spikes_trap_disabling.wav" format="pcm" group="5" label="SpikeTrapDeactivate" loadingflags="none" loop="no" priority="1" uid="168"/>
+		<sound bank="3" filename="sfx_magical_shrine_power_down.wav" format="pcm" group="5" label="sfx_magical_shrine_power_down" loadingflags="none" loop="no" priority="1" uid="169"/>
+		<sound bank="3" filename="sfx_orb_deactivate.wav" format="pcm" group="5" label="sfx_orb_deactivate" loadingflags="none" loop="no" priority="1" uid="170"/>
+		<sound bank="3" filename="sfx_trap_armed.wav" format="pcm" group="5" label="sfx_trap_armed" loadingflags="none" loop="no" priority="1" uid="171"/>
+		<sound bank="3" filename="sfx_magic_portal_spawn.wav" format="pcm" group="5" label="sfx_magic_circle_activated" loadingflags="none" loop="no" priority="1" uid="172"/>
+		<sound bank="3" filename="sfx_iron_gate.wav" format="pcm" group="5" label="sfx_iron_gate" loadingflags="none" loop="no" priority="1" uid="173"/>
+		<sound bank="3" filename="sfx_teleport.wav" format="pcm" group="5" label="sfx_teleport" loadingflags="none" loop="no" priority="1" uid="174"/>
+		<sound bank="3" filename="sfx_energy_orb_popup.wav" format="pcm" group="5" label="sfx_energy_orb_popup" loadingflags="none" loop="no" priority="1" uid="175"/>
+		<sound bank="4" filename="sfx_magic_portal_loop.wav" format="pcm" group="5" label="sfx_magic_portal_loop" loadingflags="none" loop="yes" priority="1" uid="176"/>
+		<sound bank="4" filename="sfx_telepoint_loop.wav" format="pcm" group="5" label="sfx_telepoint_loop" loadingflags="none" loop="yes" priority="1" uid="177"/>
+		<sound bank="4" filename="sfx_fire_loop.wav" format="pcm" group="5" label="sfx_fire_loop" loadingflags="none" loop="yes" priority="1" uid="178"/>
+		<sound bank="4" filename="sfx_catacomb_wind_loop.wav" format="pcm" group="5" label="CatacombWindLoop" loadingflags="none" loop="yes" priority="1" uid="179"/>
+		<sound bank="4" filename="sfx_southroad_river_loop.wav" format="pcm" group="5" label="SouthroadRiverLoop" loadingflags="none" loop="yes" priority="1" uid="180"/>
+		<sound bank="4" filename="sfx_bandit_lair_river_loop.wav" format="pcm" group="5" label="BanditLairRiverLoop" loadingflags="none" loop="yes" priority="1" uid="181"/>
+		<sound bank="4" filename="sfx_southroad_waterfall_loop_1.wav" format="pcm" group="5" label="SouthroadWaterfallLoop1" loadingflags="none" loop="yes" priority="1" uid="182"/>
+		<sound bank="4" filename="sfx_southroad_waterfall_loop_2.wav" format="pcm" group="5" label="SouthroadWaterfallLoop2" loadingflags="none" loop="yes" priority="1" uid="183"/>
+		<sound bank="4" filename="sfx_magical_shrine_loop.wav" format="pcm" group="5" label="sfx_magical_shrine_loop" loadingflags="none" loop="yes" priority="1" uid="184"/>
+		<sound bank="4" filename="sfx_orb_loop.wav" format="pcm" group="5" label="sfx_orb_loop" loadingflags="none" loop="yes" priority="1" uid="185"/>
+		<sound bank="4" filename="sfx_magical_wall_loop.wav" format="pcm" group="5" label="sfx_magical_wall_loop" loadingflags="none" loop="yes" priority="1" uid="186"/>
+		<sound bank="4" filename="sfx_steam_loop.wav" format="pcm" group="5" label="sfx_steam_loop" loadingflags="none" loop="yes" priority="1" uid="187"/>
+		<sound bank="4" filename="sfx_cave_mouth_loop.wav" format="pcm" group="5" label="sfx_cave_wind_loop" loadingflags="none" loop="yes" priority="1" uid="188"/>
+		<sound bank="4" filename="sfx_energy_source_loop.wav" format="pcm" group="5" label="sfx_energy_source_loop" loadingflags="none" loop="yes" priority="1" uid="189"/>
+		<sound bank="4" filename="sfx_cultitst_group_chant_loop" format="pcm" group="5" label="sfx_cultitst_group_chant_loop" loadingflags="none" loop="yes" priority="1" uid="190"/>
+		<sound bank="4" filename="sfx_well_scream_loop.wav" format="pcm" group="5" label="sfx_well_scream_loop" loadingflags="none" loop="yes" priority="1" uid="191"/>
+		<sound bank="4" filename="sfx_unnamed_one_fire_loop.wav" format="pcm" group="5" label="sfx_unnamed_one_fire_loop" loadingflags="none" loop="yes" priority="1" uid="192"/>
+		<sound bank="4" filename="sfx_unnamed_one_vortex_loop.wav" format="pcm" group="5" label="sfx_unnamed_one_vortex_loop" loadingflags="none" loop="yes" priority="1" uid="193"/>
+		<sound bank="4" filename="sfx_unnamed_one_vortex_fire_loop.wav" format="pcm" group="5" label="sfx_unnamed_one_vortex_fire_loop" loadingflags="none" loop="yes" priority="1" uid="194"/>
+		<sound bank="5" filename="sfx_npc_out.wav" format="pcm" group="7" label="GroundBurst" loadingflags="none" loop="no" priority="-1" uid="195"/>
+		<sound bank="5" filename="sfx_npc_archer.wav" format="pcm" group="7" label="npc_arrow_shoot" loadingflags="none" loop="no" priority="-1" uid="196"/>
+		<sound bank="5" filename="sfx_dead_body_vanish.wav" format="pcm" group="7" label="sfx_dead_body_vanish" loadingflags="none" loop="no" priority="-1" uid="197"/>
+		<sound bank="5" filename="sfx_zombie_spawn.wav" format="pcm" group="5" label="ZombieSpawn" loadingflags="none" loop="no" priority="-1" uid="198"/>
+		<sound bank="5" filename="sfx_zombie_hurt.wav" format="pcm" group="5" label="ZombieHurt" loadingflags="none" loop="no" priority="-1" uid="199"/>
+		<sound bank="5" filename="sfx_zombie_killed.wav" format="pcm" group="5" label="ZombieDie" loadingflags="none" loop="no" priority="-1" uid="200"/>
+		<sound bank="5" filename="sfx_zombie_attack.wav" format="pcm" group="5" label="ZombieAttack" loadingflags="none" loop="no" priority="-1" uid="201"/>
+		<sound bank="5" filename="sfx_skeleton_spawn.wav" format="pcm" group="5" label="SkeletonSpawn" loadingflags="none" loop="no" priority="-1" uid="202"/>
+		<sound bank="5" filename="sfx_skeleton_hurt.wav" format="pcm" group="5" label="SkeletonHurt" loadingflags="none" loop="no" priority="-1" uid="203"/>
+		<sound bank="5" filename="sfx_skeleton_killed.wav" format="pcm" group="5" label="SkeletonKilled" loadingflags="none" loop="no" priority="-1" uid="204"/>
+		<sound bank="5" filename="sfx_skeleton_attack.wav" format="pcm" group="5" label="SkeletonAttack" loadingflags="none" loop="no" priority="-1" uid="205"/>
+		<sound bank="5" filename="sfx_balrog_out.wav" format="pcm" group="5" label="BalrogOut" loadingflags="none" loop="no" priority="1" uid="206"/>
+		<sound bank="5" filename="sfx_balrog_idle.wav" format="pcm" group="5" label="BalrogIdle" loadingflags="none" loop="no" priority="1" uid="207"/>
+		<sound bank="5" filename="sfx_balrog_hurt.wav" format="pcm" group="5" label="BalrogHurt" loadingflags="none" loop="no" priority="1" uid="208"/>
+		<sound bank="5" filename="sfx_balrog_killed.wav" format="pcm" group="5" label="BalrogKilled" loadingflags="none" loop="no" priority="1" uid="209"/>
+		<sound bank="5" filename="sfx_balrog_attack.wav" format="pcm" group="5" label="BalrogAttack" loadingflags="none" loop="no" priority="1" uid="210"/>
+		<sound bank="5" filename="sfx_balrog_attack_2.wav" format="pcm" group="5" label="BalrogAttack2" loadingflags="none" loop="no" priority="1" uid="211"/>
+		<sound bank="5" filename="sfx_balrog_shockwave_attack.wav" format="pcm" group="5" label="sfx_balrog_shockwave_attack" loadingflags="none" loop="no" priority="1" uid="212"/>
+		<sound bank="5" filename="sfx_spider_spawn.wav" format="pcm" group="5" label="SpiderSpawn" loadingflags="none" loop="no" priority="-1" uid="213"/>
+		<sound bank="5" filename="sfx_spider_hurt.wav" format="pcm" group="5" label="SpiderHurt" loadingflags="none" loop="no" priority="-1" uid="214"/>
+		<sound bank="5" filename="sfx_spider_killed.wav" format="pcm" group="5" label="SpiderKilled" loadingflags="none" loop="no" priority="-1" uid="215"/>
+		<sound bank="5" filename="sfx_spider_attack.wav" format="pcm" group="5" label="SpiderAttack" loadingflags="none" loop="no" priority="-1" uid="216"/>
+		<sound bank="5" filename="sfx_bandit_hurt.wav" format="pcm" group="5" label="BanditHurt" loadingflags="none" loop="no" priority="-1" uid="217"/>
+		<sound bank="5" filename="sfx_bandit_killed.wav" format="pcm" group="5" label="BanditKilled" loadingflags="none" loop="no" priority="-1" uid="218"/>
+		<sound bank="5" filename="sfx_bandit_attack.wav" format="pcm" group="5" label="BanditAttack" loadingflags="none" loop="no" priority="-1" uid="219"/>
+		<sound bank="5" filename="sfx_soldier_hurt.wav" format="pcm" group="5" label="SoldierHurt" loadingflags="none" loop="no" priority="-1" uid="220"/>
+		<sound bank="5" filename="sfx_soldier_killed.wav" format="pcm" group="5" label="SoldierKilled" loadingflags="none" loop="no" priority="-1" uid="221"/>
+		<sound bank="5" filename="sfx_soldier_attack.wav" format="pcm" group="5" label="SoldierAttack" loadingflags="none" loop="no" priority="-1" uid="222"/>
+		<sound bank="5" filename="sfx_slime_spawn.wav" format="pcm" group="5" label="SlimeSpawn" loadingflags="none" loop="no" priority="-1" uid="223"/>
+		<sound bank="5" filename="sfx_slime_hurt.wav" format="pcm" group="5" label="SlimeHurt" loadingflags="none" loop="no" priority="-1" uid="224"/>
+		<sound bank="5" filename="sfx_slime_killed.wav" format="pcm" group="5" label="SlimeKilled" loadingflags="none" loop="no" priority="-1" uid="225"/>
+		<sound bank="5" filename="sfx_slime_attack.wav" format="pcm" group="5" label="SlimeAttack" loadingflags="none" loop="no" priority="-1" uid="226"/>
+		<sound bank="5" filename="sfx_mother_slime_spawn.wav" format="pcm" group="5" label="MotherSlimeSpawn" loadingflags="none" loop="no" priority="-1" uid="227"/>
+		<sound bank="5" filename="sfx_mother_slime_hurt.wav" format="pcm" group="5" label="MotherSlimeHurt" loadingflags="none" loop="no" priority="-1" uid="228"/>
+		<sound bank="5" filename="sfx_mother_slime_killed.wav" format="pcm" group="5" label="MotherSlimeKilled" loadingflags="none" loop="no" priority="-1" uid="229"/>
+		<sound bank="5" filename="sfx_mother_slime_attack.wav" format="pcm" group="5" label="MotherSlimeAttack" loadingflags="none" loop="no" priority="-1" uid="230"/>
+		<sound bank="5" filename="sfx_static_ball_spawn.wav" format="pcm" group="5" label="StaticBallSpawn" loadingflags="none" loop="no" priority="-1" uid="231"/>
+		<sound bank="5" filename="sfx_static_ball_hurt.wav" format="pcm" group="5" label="StaticBallHurt" loadingflags="none" loop="no" priority="-1" uid="232"/>
+		<sound bank="5" filename="sfx_static_ball_killed.wav" format="pcm" group="5" label="StaticBallKilled" loadingflags="none" loop="no" priority="-1" uid="233"/>
+		<sound bank="5" filename="sfx_static_ball_attack.wav" format="pcm" group="5" label="StaticBallAttack" loadingflags="none" loop="no" priority="-1" uid="234"/>
+		<sound bank="5" filename="sfx_drake_spawn.wav" format="pcm" group="5" label="DrakeSpawn" loadingflags="none" loop="no" priority="-1" uid="235"/>
+		<sound bank="5" filename="sfx_drake_hurt.wav" format="pcm" group="5" label="DrakeHurt" loadingflags="none" loop="no" priority="-1" uid="236"/>
+		<sound bank="5" filename="sfx_drake_killed.wav" format="pcm" group="5" label="DrakeKilled" loadingflags="none" loop="no" priority="-1" uid="237"/>
+		<sound bank="5" filename="sfx_drake_attack.wav" format="pcm" group="5" label="DrakeAttack" loadingflags="none" loop="no" priority="-1" uid="238"/>
+		<sound bank="5" filename="sfx_mad_priest_spawn.wav" format="pcm" group="5" label="MadPriestSpawn" loadingflags="none" loop="no" priority="1" uid="239"/>
+		<sound bank="5" filename="sfx_mad_priest_hurt.wav" format="pcm" group="5" label="MadPriestHurt" loadingflags="none" loop="no" priority="1" uid="240"/>
+		<sound bank="5" filename="sfx_mad_priest_killed.wav" format="pcm" group="5" label="MadPriestKilled" loadingflags="none" loop="no" priority="1" uid="241"/>
+		<sound bank="5" filename="sfx_mad_priest_attack.wav" format="pcm" group="5" label="MadPriestAttack" loadingflags="none" loop="no" priority="1" uid="242"/>
+		<sound bank="5" filename="sfx_gargoyle_spawn.wav" format="pcm" group="5" label="GargoyleSpawn" loadingflags="none" loop="no" priority="-1" uid="243"/>
+		<sound bank="5" filename="sfx_gargoyle_hurt.wav" format="pcm" group="5" label="GargoyleHurt" loadingflags="none" loop="no" priority="-1" uid="244"/>
+		<sound bank="5" filename="sfx_gargoyle_killed.wav" format="pcm" group="5" label="GargoyleKilled" loadingflags="none" loop="no" priority="-1" uid="245"/>
+		<sound bank="5" filename="sfx_gargoyle_attack.wav" format="pcm" group="5" label="GargoyleAttack" loadingflags="none" loop="no" priority="-1" uid="246"/>
+		<sound bank="5" filename="sfx_cave_troll_hurt_1.wav" format="pcm" group="5" label="CaveTrollHurt" loadingflags="none" loop="no" priority="-1" uid="247"/>
+		<sound bank="5" filename="sfx_cave_troll_hurt_2.wav" format="pcm" group="5" label="sfx_cave_troll_hurt_2" loadingflags="none" loop="no" priority="-1" uid="248"/>
+		<sound bank="5" filename="sfx_cave_troll_death.wav" format="pcm" group="5" label="CaveTrollKilled" loadingflags="none" loop="no" priority="-1" uid="249"/>
+		<sound bank="5" filename="sfx_cave_troll_attack.wav" format="pcm" group="5" label="CaveTrollAttack" loadingflags="none" loop="no" priority="-1" uid="250"/>
+		<sound bank="5" filename="sfx_cave_troll_mace_attack.wav" format="pcm" group="5" label="sfx_cave_troll_mace_attack" loadingflags="none" loop="no" priority="-1" uid="251"/>
+		<sound bank="5" filename="sfx_cave_troll_smash_ground.wav" format="pcm" group="5" label="sfx_cave_troll_smash_ground" loadingflags="none" loop="no" priority="-1" uid="252"/>
+		<sound bank="5" filename="sfx_doom_knight_idle_1.wav" format="pcm" group="5" label="DoomKnightIdle1" loadingflags="none" loop="no" priority="-1" uid="253"/>
+		<sound bank="5" filename="sfx_doom_knight_idle_2.wav" format="pcm" group="5" label="DoomKnightIdle2" loadingflags="none" loop="no" priority="-1" uid="254"/>
+		<sound bank="5" filename="sfx_doom_knight_idle_3.wav" format="pcm" group="5" label="DoomKnightIdle3" loadingflags="none" loop="no" priority="-1" uid="255"/>
+		<sound bank="5" filename="sfx_doom_knight_idle_4.wav" format="pcm" group="5" label="DoomKnightIdle4" loadingflags="none" loop="no" priority="-1" uid="256"/>
+		<sound bank="5" filename="sfx_doom_knight_hurt.wav" format="pcm" group="5" label="DoomKnightHurt" loadingflags="none" loop="no" priority="-1" uid="257"/>
+		<sound bank="5" filename="sfx_doom_knight_killed.wav" format="pcm" group="5" label="DoomKnightKilled" loadingflags="none" loop="no" priority="-1" uid="258"/>
+		<sound bank="5" filename="sfx_doom_knight_attack.wav" format="pcm" group="5" label="DoomKnightAttack" loadingflags="none" loop="no" priority="-1" uid="259"/>
+		<sound bank="5" filename="sfx_dark_queen_hurt.wav" format="pcm" group="5" label="QueenHurt" loadingflags="none" loop="no" priority="1" uid="260"/>
+		<sound bank="5" filename="sfx_dark_queen_killed.wav" format="pcm" group="5" label="QueenKilled" loadingflags="none" loop="no" priority="1" uid="261"/>
+		<sound bank="5" filename="sfx_dark_queen_attack.wav" format="pcm" group="5" label="QueenAttack" loadingflags="none" loop="no" priority="1" uid="262"/>
+		<sound bank="5" filename="sfx_barbarian_hurt.wav" format="pcm" group="5" label="BarbarianHurt" loadingflags="none" loop="no" priority="-1" uid="263"/>
+		<sound bank="5" filename="sfx_barbarian_killed.wav" format="pcm" group="5" label="BarbarianKilled" loadingflags="none" loop="no" priority="-1" uid="264"/>
+		<sound bank="5" filename="sfx_barbarian_attack.wav" format="pcm" group="5" label="BarbarianAttack" loadingflags="none" loop="no" priority="-1" uid="265"/>
+		<sound bank="5" filename="sfx_goblin_archer_die.wav" format="pcm" group="5" label="sfx_goblin_archer_die" loadingflags="none" loop="no" priority="-1" uid="266"/>
+		<sound bank="5" filename="sfx_goblin_shaman_die.wav" format="pcm" group="5" label="sfx_goblin_shaman_die" loadingflags="none" loop="no" priority="-1" uid="267"/>
+		<sound bank="5" filename="sfx_goblin_sword_die.wav" format="pcm" group="5" label="sfx_goblin_sword_die" loadingflags="none" loop="no" priority="-1" uid="268"/>
+		<sound bank="5" filename="sfx_goblin_archer_shoot_1.wav" format="pcm" group="5" label="sfx_goblin_archer_shoot_1" loadingflags="none" loop="no" priority="-1" uid="269"/>
+		<sound bank="5" filename="sfx_goblin_archer_shoot_2.wav" format="pcm" group="5" label="sfx_goblin_archer_shoot_2" loadingflags="none" loop="no" priority="-1" uid="270"/>
+		<sound bank="5" filename="sfx_goblin_shaman_attack_1.wav" format="pcm" group="5" label="sfx_goblin_shaman_attack_1" loadingflags="none" loop="no" priority="-1" uid="271"/>
+		<sound bank="5" filename="sfx_goblin_shaman_attack_2.wav" format="pcm" group="5" label="sfx_goblin_shaman_attack_2" loadingflags="none" loop="no" priority="-1" uid="272"/>
+		<sound bank="5" filename="sfx_goblin_sword_attack_1.wav" format="pcm" group="5" label="sfx_goblin_sword_attack_1" loadingflags="none" loop="no" priority="-1" uid="273"/>
+		<sound bank="5" filename="sfx_goblin_sword_attack_2.wav" format="pcm" group="5" label="sfx_goblin_sword_attack_2" loadingflags="none" loop="no" priority="-1" uid="274"/>
+		<sound bank="5" filename="sfx_green_ghost_attack_1.wav" format="pcm" group="5" label="sfx_green_ghost_attack_1" loadingflags="none" loop="no" priority="-1" uid="275"/>
+		<sound bank="5" filename="sfx_green_ghost_attack_2.wav" format="pcm" group="5" label="sfx_green_ghost_attack_2" loadingflags="none" loop="no" priority="-1" uid="276"/>
+		<sound bank="5" filename="sfx_green_ghost_attack_3.wav" format="pcm" group="5" label="sfx_green_ghost_attack_3" loadingflags="none" loop="no" priority="-1" uid="277"/>
+		<sound bank="5" filename="sfx_green_ghost_die.wav" format="pcm" group="5" label="sfx_green_ghost_die" loadingflags="none" loop="no" priority="-1" uid="278"/>
+		<sound bank="5" filename="sfx_green_ghost_hurt_1.wav" format="pcm" group="5" label="sfx_green_ghost_hurt_1" loadingflags="none" loop="no" priority="-1" uid="279"/>
+		<sound bank="5" filename="sfx_green_ghost_hurt_2.wav" format="pcm" group="5" label="sfx_green_ghost_hurt_2" loadingflags="none" loop="no" priority="-1" uid="280"/>
+		<sound bank="5" filename="sfx_green_ghost_spawn.wav" format="pcm" group="5" label="sfx_green_ghost_spawn" loadingflags="none" loop="no" priority="-1" uid="281"/>
+		<sound bank="5" filename="sfx_lizardman_attack_1.wav" format="pcm" group="5" label="sfx_lizardman_attack_1" loadingflags="none" loop="no" priority="-1" uid="282"/>
+		<sound bank="5" filename="sfx_lizardman_attack_2.wav" format="pcm" group="5" label="sfx_lizardman_attack_2" loadingflags="none" loop="no" priority="-1" uid="283"/>
+		<sound bank="5" filename="sfx_lizardman_hurt.wav" format="pcm" group="5" label="sfx_lizardman_hurt" loadingflags="none" loop="no" priority="-1" uid="284"/>
+		<sound bank="5" filename="sfx_lizardman_die.wav" format="pcm" group="5" label="sfx_lizardman_die" loadingflags="none" loop="no" priority="-1" uid="285"/>
+		<sound bank="5" filename="sfx_moth_attack_1.wav" format="pcm" group="5" label="sfx_moth_attack_1" loadingflags="none" loop="no" priority="-1" uid="286"/>
+		<sound bank="5" filename="sfx_moth_attack_2.wav" format="pcm" group="5" label="sfx_moth_attack_2" loadingflags="none" loop="no" priority="-1" uid="287"/>
+		<sound bank="5" filename="sfx_moth_hurt_1.wav" format="pcm" group="5" label="sfx_moth_hurt_1" loadingflags="none" loop="no" priority="-1" uid="288"/>
+		<sound bank="5" filename="sfx_moth_hurt_2.wav" format="pcm" group="5" label="sfx_moth_hurt_2" loadingflags="none" loop="no" priority="-1" uid="289"/>
+		<sound bank="5" filename="sfx_moth_die.wav" format="pcm" group="5" label="sfx_moth_die" loadingflags="none" loop="no" priority="-1" uid="290"/>
+		<sound bank="5" filename="sfx_plant_spawn.wav" format="pcm" group="5" label="sfx_plant_spawn" loadingflags="none" loop="no" priority="-1" uid="291"/>
+		<sound bank="5" filename="sfx_plant_attack_1.wav" format="pcm" group="5" label="sfx_plant_attack_1" loadingflags="none" loop="no" priority="-1" uid="292"/>
+		<sound bank="5" filename="sfx_plant_attack_2.wav" format="pcm" group="5" label="sfx_plant_attack_2" loadingflags="none" loop="no" priority="-1" uid="293"/>
+		<sound bank="5" filename="sfx_plant_hurt_1.wav" format="pcm" group="5" label="sfx_plant_hurt_1" loadingflags="none" loop="no" priority="-1" uid="294"/>
+		<sound bank="5" filename="sfx_plant_hurt_2.wav" format="pcm" group="5" label="sfx_plant_hurt_2" loadingflags="none" loop="no" priority="-1" uid="295"/>
+		<sound bank="5" filename="sfx_plant_die.wav" format="pcm" group="5" label="sfx_plant_die" loadingflags="none" loop="no" priority="-1" uid="296"/>
+		<sound bank="5" filename="sfx_yeti_attack_1.wav" format="pcm" group="5" label="sfx_yeti_attack_1" loadingflags="none" loop="no" priority="-1" uid="297"/>
+		<sound bank="5" filename="sfx_yeti_attack_2.wav" format="pcm" group="5" label="sfx_yeti_attack_2" loadingflags="none" loop="no" priority="-1" uid="298"/>
+		<sound bank="5" filename="sfx_yeti_die.wav" format="pcm" group="5" label="sfx_yeti_die" loadingflags="none" loop="no" priority="-1" uid="299"/>
+		<sound bank="5" filename="sfx_yeti_hurt_1.wav" format="pcm" group="5" label="sfx_yeti_hurt_1" loadingflags="none" loop="no" priority="-1" uid="300"/>
+		<sound bank="5" filename="sfx_yeti_hurt_2.wav" format="pcm" group="5" label="sfx_yeti_hurt_2" loadingflags="none" loop="no" priority="-1" uid="301"/>
+		<sound bank="5" filename="sfx_statue_attack.wav" format="pcm" group="5" label="sfx_statue_attack" loadingflags="none" loop="no" priority="1" uid="302"/>
+		<sound bank="5" filename="sfx_statue_heat_attack.wav" format="pcm" group="5" label="sfx_statue_heat_attack" loadingflags="none" loop="no" priority="1" uid="303"/>
+		<sound bank="5" filename="sfx_statue_frost_attack.wav" format="pcm" group="5" label="sfx_statue_frost_attack" loadingflags="none" loop="no" priority="1" uid="304"/>
+		<sound bank="5" filename="sfx_mother_statue_summon.wav" format="pcm" group="5" label="sfx_mother_statue_summon" loadingflags="none" loop="no" priority="1" uid="305"/>
+		<sound bank="5" filename="sfx_statue_cherub_attack.wav" format="pcm" group="5" label="sfx_statue_cherub_attack" loadingflags="none" priority="-1" uid="306"/>
+		<sound bank="5" filename="sfx_statue_cherub_die.wav" format="pcm" group="5" label="sfx_statue_cherub_die" loadingflags="none" priority="-1" uid="307"/>
+		<sound bank="5" filename="sfx_statue_cherub_hurt_1.wav" format="pcm" group="5" label="sfx_statue_cherub_hurt_1" loadingflags="none" priority="-1" uid="308"/>
+		<sound bank="5" filename="sfx_statue_cherub_hurt_2.wav" format="pcm" group="5" label="sfx_statue_cherub_hurt_2" loadingflags="none" priority="-1" uid="309"/>
+		<sound bank="5" filename="sfx_serpent_spawn.wav" format="pcm" group="5" label="sfx_serpent_spawn" loadingflags="none" loop="no" priority="1" uid="310"/>
+		<sound bank="5" filename="sfx_serpent_spit_water.wav" format="pcm" group="5" label="sfx_serpent_spit_water" loadingflags="none" loop="no" priority="1" uid="311"/>
+		<sound bank="5" filename="sfx_serpent_spit_water_explosion.wav" format="pcm" group="5" label="sfx_serpent_spit_water_explosion" loadingflags="none" loop="no" priority="1" uid="312"/>
+		<sound bank="5" filename="sfx_serpent_shockwave.wav" format="pcm" group="5" label="sfx_serpent_shockwave" loadingflags="none" loop="no" priority="1" uid="313"/>
+		<sound bank="5" filename="sfx_serpent_attack.wav" format="pcm" group="5" label="sfx_serpent_attack" loadingflags="none" loop="no" priority="1" uid="314"/>
+		<sound bank="5" filename="sfx_serpent_hurt.wav" format="pcm" group="5" label="sfx_serpent_hurt" loadingflags="none" loop="no" priority="1" uid="315"/>
+		<sound bank="5" filename="sfx_serpent_collapse.wav" format="pcm" group="5" label="sfx_serpent_collapse" loadingflags="none" loop="no" priority="1" uid="316"/>
+		<sound bank="5" filename="sfx_serpent_collapse.wav" format="pcm" group="5" label="sfx_serpent_die" loadingflags="none" loop="no" priority="1" uid="317"/>
+		<sound bank="5" filename="sfx_serpent_intimidate_1.wav" format="pcm" group="5" label="sfx_serpent_intimidate_1" loadingflags="none" loop="no" priority="1" uid="318"/>
+		<sound bank="5" filename="sfx_serpent_intimidate_2.wav" format="pcm" group="5" label="sfx_serpent_intimidate_2" loadingflags="none" loop="no" priority="1" uid="319"/>
+		<sound bank="5" filename="sfx_serpent_intimidate_3.wav" format="pcm" group="5" label="sfx_serpent_intimidate_3" loadingflags="none" loop="no" priority="1" uid="320"/>
+		<sound bank="5" filename="sfx_serpent_submerge.wav" format="pcm" group="5" label="sfx_serpent_submerge" loadingflags="none" loop="no" priority="1" uid="321"/>
+		<sound bank="5" filename="sfx_assassin_spawn.wav" format="pcm" group="5" label="sfx_assassin_spawn" loadingflags="none" loop="no" priority="1" uid="322"/>
+		<sound bank="5" filename="sfx_assassin_knife_throw1.wav" format="pcm" group="5" label="sfx_assassin_knife_throw_1" loadingflags="none" loop="no" priority="1" uid="323"/>
+		<sound bank="5" filename="sfx_assassin_knife_throw_2.wav" format="pcm" group="5" label="sfx_assassin_knife_throw_2" loadingflags="none" loop="no" priority="1" uid="324"/>
+		<sound bank="5" filename="sfx_assassin_knife_melee.wav" format="pcm" group="5" label="sfx_assassin_knife_melee" loadingflags="none" loop="no" priority="1" uid="325"/>
+		<sound bank="5" filename="sfx_assassin_bomb_throw.wav" format="pcm" group="5" label="sfx_assassin_bomb_throw" loadingflags="none" loop="no" priority="1" uid="326"/>
+		<sound bank="5" filename="sfx_assassin_hurt.wav" format="pcm" group="5" label="sfx_assassin_hurt" loadingflags="none" loop="no" priority="1" uid="327"/>
+		<sound bank="5" filename="sfx_assassin_laugh.wav" format="pcm" group="5" label="sfx_assassin_laugh" loadingflags="none" loop="no" priority="1" uid="328"/>
+		<sound bank="5" filename="sfx_assassin_die.wav" format="pcm" group="5" label="sfx_assassin_die" loadingflags="none" loop="no" priority="1" uid="329"/>
+		<sound bank="5" filename="sfx_witch_spawn.wav" format="pcm" group="5" label="sfx_witch_spawn" loadingflags="none" loop="no" priority="1" uid="330"/>
+		<sound bank="5" filename="sfx_witch_attack.wav" format="pcm" group="5" label="sfx_witch_attack" loadingflags="none" loop="no" priority="1" uid="331"/>
+		<sound bank="5" filename="sfx_witch_magic_explosion.wav" format="pcm" group="5" label="sfx_witch_attack_impact" loadingflags="none" loop="no" priority="1" uid="332"/>
+		<sound bank="5" filename="sfx_witch_hurt_1.wav" format="pcm" group="5" label="sfx_witch_hurt_1" loadingflags="none" loop="no" priority="1" uid="333"/>
+		<sound bank="5" filename="sfx_witch_hurt_2.wav" format="pcm" group="5" label="sfx_witch_hurt_2" loadingflags="none" loop="no" priority="1" uid="334"/>
+		<sound bank="5" filename="sfx_witch_death.wav" format="pcm" group="5" label="sfx_witch_die" loadingflags="none" loop="no" priority="1" uid="335"/>
+		<sound bank="5" filename="sfx_wolf_spawn.wav" format="pcm" group="5" label="sfx_wolf_spawn" loadingflags="none" loop="no" priority="-1" uid="336"/>
+		<sound bank="5" filename="sfx_wolf_hurt.wav" format="pcm" group="5" label="sfx_wolf_hurt" loadingflags="none" loop="no" priority="-1" uid="337"/>
+		<sound bank="5" filename="sfx_wolf_attack.wav" format="pcm" group="5" label="sfx_wolf_attack" loadingflags="none" loop="no" priority="-1" uid="338"/>
+		<sound bank="5" filename="sfx_wolf_die.wav" format="pcm" group="5" label="sfx_wolf_die" loadingflags="none" loop="no" priority="-1" uid="339"/>
+		<sound bank="5" filename="sfx_wolf_howl.wav" format="pcm" group="5" label="sfx_wolf_howl" loadingflags="none" loop="no" priority="-1" uid="340"/>
+		<sound bank="5" filename="sfx_worm_spawn.wav" format="pcm" group="5" label="sfx_worm_spawn" loadingflags="none" loop="no" priority="-1" uid="341"/>
+		<sound bank="5" filename="sfx_worm_hurt_1.wav" format="pcm" group="5" label="sfx_worm_hurt_1" loadingflags="none" loop="no" priority="-1" uid="342"/>
+		<sound bank="5" filename="sfx_worm_hurt_2.wav" format="pcm" group="5" label="sfx_worm_hurt_2" loadingflags="none" loop="no" priority="-1" uid="343"/>
+		<sound bank="5" filename="sfx_worm_attack_1.wav" format="pcm" group="5" label="sfx_worm_attack_1" loadingflags="none" loop="no" priority="-1" uid="344"/>
+		<sound bank="5" filename="sfx_worm_attack_2.wav" format="pcm" group="5" label="sfx_worm_attack_2" loadingflags="none" loop="no" priority="-1" uid="345"/>
+		<sound bank="5" filename="sfx_worm_die.wav" format="pcm" group="5" label="sfx_worm_die" loadingflags="none" loop="no" priority="-1" uid="346"/>
+		<sound bank="5" filename="sfx_unnamed_one_attack.wav" format="pcm" group="5" label="sfx_unnamed_one_attack" loadingflags="none" loop="no" priority="1" uid="347"/>
+		<sound bank="5" filename="sfx_unnamed_one_die.wav" format="pcm" group="5" label="sfx_unnamed_one_die" loadingflags="none" loop="no" priority="1" uid="348"/>
+		<sound bank="5" filename="sfx_demon_spawn.wav" format="pcm" group="5" label="sfx_demon_spawn" loadingflags="none" loop="no" priority="1" uid="349"/>
+		<sound bank="5" filename="sfx_demon_hurt.wav" format="pcm" group="5" label="sfx_demon_hurt" loadingflags="none" loop="no" priority="1" uid="350"/>
+		<sound bank="5" filename="sfx_demon_attack.wav" format="pcm" group="5" label="sfx_demon_attack" loadingflags="none" loop="no" priority="1" uid="351"/>
+		<sound bank="5" filename="sfx_demon_rain_attack.wav" format="pcm" group="5" label="sfx_demon_rain" loadingflags="none" loop="yes" priority="1" uid="352"/>
+		<sound bank="5" filename="sfx_demon_attack.wav" format="pcm" group="5" label="sfx_demon_water_pre_cast" loadingflags="none" loop="no" priority="1" uid="353"/>
+		<sound bank="5" filename="sfx_demon_steam_burst_attack" format="pcm" group="5" label="sfx_demon_steam_burst_attack" loadingflags="none" loop="no" priority="1" uid="354"/>
+		<sound bank="5" filename="sfx_demon_die.wav" format="pcm" group="5" label="sfx_demon_die" loadingflags="none" loop="no" priority="1" uid="355"/>
+		<sound bank="5" filename="sfx_demon_howl.wav" format="pcm" group="5" label="sfx_demon_howl" loadingflags="none" loop="no" priority="1" uid="356"/>
+		<sound bank="5" filename="sfx_cultist_hurt_1.wav" format="pcm" group="5" label="sfx_cultist_hurt_1" loadingflags="none" loop="no" priority="-1" uid="357"/>
+		<sound bank="5" filename="sfx_cultist_hurt_2.wav" format="pcm" group="5" label="sfx_cultist_hurt_2" loadingflags="none" loop="no" priority="-1" uid="358"/>
+		<sound bank="5" filename="sfx_cultist_attack_1.wav" format="pcm" group="5" label="sfx_cultist_attack_1" loadingflags="none" loop="no" priority="-1" uid="359"/>
+		<sound bank="5" filename="sfx_cultist_attack_2.wav" format="pcm" group="5" label="sfx_cultist_attack_2" loadingflags="none" loop="no" priority="-1" uid="360"/>
+		<sound bank="5" filename="sfx_cultist_die_1.wav" format="pcm" group="5" label="sfx_cultist_die_1" loadingflags="none" loop="no" priority="-1" uid="361"/>
+		<sound bank="5" filename="sfx_cultist_die_2.wav" format="pcm" group="5" label="sfx_cultist_die_2" loadingflags="none" loop="no" priority="-1" uid="362"/>
+		<sound bank="5" filename="sfx_edward_hurt_1.wav" format="pcm" group="5" label="sfx_edward_hurt_1" loadingflags="none" loop="no" priority="1" uid="363"/>
+		<sound bank="5" filename="sfx_edward_hurt_2.wav" format="pcm" group="5" label="sfx_edward_hurt_2" loadingflags="none" loop="no" priority="1" uid="364"/>
+		<sound bank="5" filename="sfx_edward_attack.wav" format="pcm" group="5" label="sfx_edward_attack" loadingflags="none" loop="no" priority="1" uid="365"/>
+		<sound bank="5" filename="sfx_edward_die.wav" format="pcm" group="5" label="sfx_edward_die" loadingflags="none" loop="no" priority="1" uid="366"/>
+		<sound bank="5" filename="sfx_dragon_hurt.wav" format="pcm" group="5" label="sfx_dragon_hurt" loadingflags="none" loop="no" priority="1" uid="367"/>
+		<sound bank="5" filename="sfx_dragon_attack_wind.wav" format="pcm" group="5" label="sfx_dragon_wind_attack_charge" loadingflags="none" loop="no" priority="1" uid="368"/>
+		<sound bank="5" filename="sfx_dragon_attack.wav" format="pcm" group="5" label="sfx_dragon_wind_attack" loadingflags="none" loop="no" priority="1" uid="369"/>
+		<sound bank="5" filename="sfx_dragon_reaperstorm.wav" format="pcm" group="5" label="sfx_dragon_reaperstorm" loadingflags="none" loop="no" priority="1" uid="370"/>
+		<sound bank="5" filename="sfx_dragon_die.wav" format="pcm" group="5" label="sfx_dragon_die" loadingflags="none" loop="no" priority="1" uid="371"/>
+		<sound bank="5" filename="sfx_dragon_spawn.wav" format="pcm" group="5" label="sfx_dragon_spawn" loadingflags="none" loop="no" priority="1" uid="372"/>
+		<sound bank="5" filename="sfx_dark_queen_spawn.wav" format="pcm" group="5" label="sfx_dark_queen_spawn" loadingflags="none" loop="no" priority="1" uid="373"/>
+		<sound bank="5" filename="sfx_dark_queen_intimidate_1.wav" format="pcm" group="5" label="sfx_dark_queen_intimidate_1" loadingflags="none" loop="no" priority="1" uid="374"/>
+		<sound bank="5" filename="sfx_dark_queen_intimidate_2.wav" format="pcm" group="5" label="sfx_dark_queen_intimidate_2" loadingflags="none" loop="no" priority="1" uid="375"/>
+		<sound bank="5" filename="sfx_dark_queen_intimidate_3.wav" format="pcm" group="5" label="sfx_dark_queen_intimidate_3" loadingflags="none" loop="no" priority="1" uid="376"/>
+		<sound bank="5" filename="sfx_dark_queen_hurt.wav" format="pcm" group="5" label="QueenHurt" loadingflags="none" loop="no" priority="1" uid="377"/>
+		<sound bank="5" filename="sfx_dark_queen_critical_hurt.wav" format="pcm" group="5" label="sfx_dark_queen_critical_hurt" loadingflags="none" loop="no" priority="1" uid="378"/>
+		<sound bank="5" filename="sfx_dark_queen_die.wav" format="pcm" group="5" label="QueenKilled" loadingflags="none" loop="no" priority="1" uid="379"/>
+		<sound bank="5" filename="sfx_dark_queen_attack.wav" format="pcm" group="5" label="QueenAttack" loadingflags="none" loop="no" priority="1" uid="380"/>
+		<sound bank="5" filename="sfx_king_of_hell_attack.wav" format="pcm" group="5" label="sfx_king_of_hell_attack" loadingflags="none" loop="no" priority="1" uid="381"/>
+		<sound bank="5" filename="sfx_king_of_hell_magic_attack.wav" format="pcm" group="5" label="sfx_king_of_hell_magic_attack" loadingflags="none" loop="no" priority="1" uid="382"/>
+		<sound bank="5" filename="sfx_king_of_hell_magic_attack_hit.wav" format="pcm" group="5" label="sfx_king_of_hell_magic_attack_hit" loadingflags="none" loop="no" priority="1" uid="383"/>
+		<sound bank="5" filename="sfx_king_of_hell_laser_attack.wav" format="pcm" group="5" label="sfx_king_of_hell_laser_attack" loadingflags="none" loop="no" priority="1" uid="384"/>
+		<sound bank="5" filename="sfx_king_of_hell_hurt_1.wav" format="pcm" group="5" label="sfx_king_of_hell_hurt_1" loadingflags="none" loop="no" priority="1" uid="385"/>
+		<sound bank="5" filename="sfx_king_of_hell_hurt_2.wav" format="pcm" group="5" label="sfx_king_of_hell_hurt_2" loadingflags="none" loop="no" priority="1" uid="386"/>
+		<sound bank="5" filename="sfx_king_of_hell_die.wav" format="pcm" group="5" label="sfx_king_of_hell_die" loadingflags="none" loop="no" priority="1" uid="387"/>
+		<sound bank="5" filename="sfx_specter_attack_light_explosion.wav" format="pcm" group="5" label="sfx_specter_light_beam_attack" loadingflags="none" loop="no" priority="1" uid="388"/>
+		<sound bank="5" filename="sfx_specter_attack_light_cast.wav" format="pcm" group="5" label="sfx_specter_light_beam_attack_pre" loadingflags="none" loop="no" priority="1" uid="389"/>
+		<sound bank="5" filename="sfx_specter_attack_rock.wav" format="pcm" group="5" label="sfx_specter_rock_attack" loadingflags="none" loop="no" priority="1" uid="390"/>
+		<sound bank="5" filename="sfx_specter_attack_energyball_cast.wav" format="pcm" group="5" label="sfx_specter_attack_energyball_cast" loadingflags="none" loop="no" priority="1" uid="391"/>
+		<sound bank="5" filename="sfx_specter_attack_energyball_explosion" format="pcm" group="5" label="sfx_specter_attack_energyball_explosion" loadingflags="none" loop="no" priority="1" uid="392"/>
+		<sound bank="5" filename="sfx_earth_troll_spawn.wav" format="pcm" group="5" label="sfx_earth_troll_spawn" loadingflags="none" loop="no" priority="1" uid="393"/>
+		<sound bank="5" filename="sfx_earth_troll_dash_attack.wav" format="pcm" group="5" label="sfx_earth_troll_dash_attack" loadingflags="none" loop="no" priority="1" uid="394"/>
+		<sound bank="5" filename="sfx_earth_troll_ground_attack.wav" format="pcm" group="5" label="sfx_earth_troll_ground_attack" loadingflags="none" loop="no" priority="1" uid="395"/>
+		<sound bank="5" filename="sfx_earth_troll_hurt.wav" format="pcm" group="5" label="sfx_earth_troll_hurt" loadingflags="none" loop="no" priority="1" uid="396"/>
+		<sound bank="5" filename="sfx_earth_troll_die.wav" format="pcm" group="5" label="sfx_earth_troll_die" loadingflags="none" loop="no" priority="1" uid="397"/>
+		<sound bank="5" filename="sfx_assassin_demon_spawn.wav" format="pcm" group="5" label="sfx_assassin_demon_spawn" loadingflags="none" loop="no" priority="1" uid="398"/>
+		<sound bank="5" filename="sfx_assassin_demon_sword_attack.wav" format="pcm" group="5" label="sfx_assassin_demon_sword_attack" loadingflags="none" loop="no" priority="1" uid="399"/>
+		<sound bank="5" filename="sfx_assassin_demon_spin_attack.wav" format="pcm" group="5" label="sfx_assassin_demon_spin_attack" loadingflags="none" loop="no" priority="1" uid="400"/>
+		<sound bank="5" filename="sfx_assassin_demon_hurt_1.wav" format="pcm" group="5" label="sfx_assassin_demon_hurt_1" loadingflags="none" loop="no" priority="1" uid="401"/>
+		<sound bank="5" filename="sfx_assassin_demon_hurt_2.wav" format="pcm" group="5" label="sfx_assassin_demon_hurt_2" loadingflags="none" loop="no" priority="1" uid="402"/>
+		<sound bank="5" filename="sfx_assassin_demon_die.wav" format="pcm" group="5" label="sfx_assassin_demon_die" loadingflags="none" loop="no" priority="1" uid="403"/>
+		<sound bank="5" filename="sfx_hound_attack_1.wav" format="pcm" group="5" label="sfx_hound_attack_1" loadingflags="none" loop="no" priority="-1" uid="404"/>
+		<sound bank="5" filename="sfx_hound_attack_2.wav" format="pcm" group="5" label="sfx_hound_attack_2" loadingflags="none" loop="no" priority="-1" uid="405"/>
+		<sound bank="5" filename="sfx_hound_hurt_1.wav" format="pcm" group="5" label="sfx_hound_hurt_1" loadingflags="none" loop="no" priority="-1" uid="406"/>
+		<sound bank="5" filename="sfx_hound_hurt_2.wav" format="pcm" group="5" label="sfx_hound_hurt_2" loadingflags="none" loop="no" priority="-1" uid="407"/>
+		<sound bank="5" filename="sfx_hound_killed_1.wav" format="pcm" group="5" label="sfx_hound_killed_1" loadingflags="none" loop="no" priority="-1" uid="408"/>
+		<sound bank="5" filename="sfx_hound_killed_2.wav" format="pcm" group="5" label="sfx_hound_killed_2" loadingflags="none" loop="no" priority="-1" uid="409"/>
+		<sound bank="5" filename="sfx_skydevil_attack_1.wav" format="pcm" group="5" label="sfx_skydevil_attack_1" loadingflags="none" loop="no" priority="-1" uid="410"/>
+		<sound bank="5" filename="sfx_skydevil_attack_2.wav" format="pcm" group="5" label="sfx_skydevil_attack_2" loadingflags="none" loop="no" priority="-1" uid="411"/>
+		<sound bank="5" filename="sfx_skydevil_attack_3.wav" format="pcm" group="5" label="sfx_skydevil_attack_3" loadingflags="none" loop="no" priority="-1" uid="412"/>
+		<sound bank="5" filename="sfx_skydevil_death_1.wav" format="pcm" group="5" label="sfx_skydevil_death_1" loadingflags="none" loop="no" priority="-1" uid="413"/>
+		<sound bank="5" filename="sfx_skydevil_death_2.wav" format="pcm" group="5" label="sfx_skydevil_death_2" loadingflags="none" loop="no" priority="-1" uid="414"/>
+		<sound bank="5" filename="sfx_skydevil_hurt_1.wav" format="pcm" group="5" label="sfx_skydevil_hurt_1" loadingflags="none" loop="no" priority="-1" uid="415"/>
+		<sound bank="5" filename="sfx_skydevil_hurt_2.wav" format="pcm" group="5" label="sfx_skydevil_hurt_2" loadingflags="none" loop="no" priority="-1" uid="416"/>
+		<sound bank="5" filename="sfx_soulcrusher_attack_1.wav" format="pcm" group="5" label="sfx_soulcrusher_attack_1" loadingflags="none" loop="no" priority="-1" uid="417"/>
+		<sound bank="5" filename="sfx_soulcrusher_attack_2.wav" format="pcm" group="5" label="sfx_soulcrusher_attack_2" loadingflags="none" loop="no" priority="-1" uid="418"/>
+		<sound bank="5" filename="sfx_soulcrusher_attack_3.wav" format="pcm" group="5" label="sfx_soulcrusher_attack_3" loadingflags="none" loop="no" priority="-1" uid="419"/>
+		<sound bank="5" filename="sfx_soulcrusher_death_1.wav" format="pcm" group="5" label="sfx_soulcrusher_death_1" loadingflags="none" loop="no" priority="-1" uid="420"/>
+		<sound bank="5" filename="sfx_soulcrusher_death_2.wav" format="pcm" group="5" label="sfx_soulcrusher_death_2" loadingflags="none" loop="no" priority="-1" uid="421"/>
+		<sound bank="5" filename="sfx_soulcrusher_hurt_1.wav" format="pcm" group="5" label="sfx_soulcrusher_hurt_1" loadingflags="none" loop="no" priority="-1" uid="422"/>
+		<sound bank="5" filename="sfx_soulcrusher_hurt_2.wav" format="pcm" group="5" label="sfx_soulcrusher_hurt_2" loadingflags="none" loop="no" priority="-1" uid="423"/>
+		<sound bank="5" filename="sfx_corrupted_root_attack_1.wav" format="pcm" group="5" label="sfx_corrupted_root_attack_1" loadingflags="none" loop="no" priority="-1" uid="424"/>
+		<sound bank="5" filename="sfx_corrupted_root_attack_2.wav" format="pcm" group="5" label="sfx_corrupted_root_attack_2" loadingflags="none" loop="no" priority="-1" uid="425"/>
+		<sound bank="5" filename="sfx_corrupted_root_death_1.wav" format="pcm" group="5" label="sfx_corrupted_root_death_1" loadingflags="none" loop="no" priority="-1" uid="426"/>
+		<sound bank="5" filename="sfx_corrupted_root_death_2.wav" format="pcm" group="5" label="sfx_corrupted_root_death_2" loadingflags="none" loop="no" priority="-1" uid="427"/>
+		<sound bank="5" filename="sfx_corrupted_root_hurt_1.wav" format="pcm" group="5" label="sfx_corrupted_root_hurt_1" loadingflags="none" loop="no" priority="-1" uid="428"/>
+		<sound bank="5" filename="sfx_corrupted_root_hurt_2.wav" format="pcm" group="5" label="sfx_corrupted_root_hurt_2" loadingflags="none" loop="no" priority="-1" uid="429"/>
+		<sound bank="5" filename="sfx_corrupted_root_spawn.wav" format="pcm" group="5" label="sfx_corrupted_root_spawn" loadingflags="none" loop="no" priority="-1" uid="430"/>
+		<sound bank="5" filename="sfx_cutscene_earth_quake.wav" format="pcm" group="5" label="sfx_cs_swampking_intro_earth_quake" loadingflags="none" loop="no" priority="1" uid="431"/>
+		<sound bank="5" filename="sfx_cutscene_soldier_enter.wav" format="pcm" group="5" label="sfx_cs_soldier_enter" loadingflags="none" loop="no" priority="1" uid="432"/>
+		<sound bank="5" filename="sfx_cutscene_witch_spawn.wav" format="pcm" group="5" label="sfx_cs_witch_intro_spawn" loadingflags="none" loop="no" priority="1" uid="433"/>
+		<sound bank="5" filename="sfx_cutscene_earth_troll_spawn.wav" format="pcm" group="5" label="sfx_cs_earth_troll_intro_spawn" loadingflags="none" loop="no" priority="1" uid="434"/>
+		<sound bank="5" filename="sfx_cutscene_swamp_king_die.wav" format="pcm" group="5" label="sfx_cs_swampking_death" loadingflags="none" loop="no" priority="1" uid="435"/>
+		<sound bank="5" filename="sfx_cutscene_swamp_intro_cave_troll_1.wav" format="pcm" group="5" label="sfx_cutscene_swamp_intro_cave_troll_1" loadingflags="none" loop="no" priority="1" uid="436"/>
+		<sound bank="5" filename="sfx_cutscene_swamp_intro_cave_troll_2.wav" format="pcm" group="5" label="sfx_cutscene_swamp_intro_cave_troll_2" loadingflags="none" loop="no" priority="1" uid="437"/>
+		<sound bank="5" filename="sfx_cutscene_swamp_intro_faerie.wav" format="pcm" group="5" label="sfx_cutscene_swamp_intro_faerie" loadingflags="none" loop="no" priority="1" uid="438"/>
+		<sound bank="5" filename="sfx_cutscene_swamp_intro_rene_thunder.wav" format="pcm" group="5" label="sfx_cutscene_swamp_intro_rene_thunder" loadingflags="none" loop="no" priority="1" uid="439"/>
+		<sound bank="5" filename="sfx_cutscene_assassin_die.wav" format="pcm" group="5" label="sfx_cutscene_assassin_die" loadingflags="none" loop="no" priority="1" uid="440"/>
+		<sound bank="5" filename="sfx_cutscene_earth_troll_die.wav" format="pcm" group="5" label="sfx_cutscene_earth_troll_die" loadingflags="none" loop="no" priority="1" uid="441"/>
+		<sound bank="5" filename="sfx_cutscene_fire_temple_1.wav" format="pcm" group="5" label="sfx_cutscene_fire_temple_1" loadingflags="none" loop="no" priority="1" uid="442"/>
+		<sound bank="5" filename="sfx_cutscene_forbidden_seal_cast_loop.wav" format="pcm" group="5" label="sfx_cutscene_forbidden_seal_cast_loop" loadingflags="none" loop="yes" priority="1" uid="443"/>
+		<sound bank="5" filename="sfx_cutscene_forbidden_seal_1.wav" format="pcm" group="5" label="sfx_cutscene_forbidden_seal_1" loadingflags="none" loop="no" priority="1" uid="444"/>
+		<sound bank="5" filename="sfx_cutscene_forbidden_seal_2.wav" format="pcm" group="5" label="sfx_cutscene_forbidden_seal_2" loadingflags="none" loop="no" priority="1" uid="445"/>
+		<sound bank="5" filename="sfx_cutscene_gothicus_edward_1.wav" format="pcm" group="5" label="sfx_cutscene_gothicus_edward_1" loadingflags="none" loop="yes" priority="1" uid="446"/>
+		<sound bank="5" filename="sfx_cutscene_gothicus_edward_2.wav" format="pcm" group="5" label="sfx_cutscene_gothicus_edward_2" loadingflags="none" loop="no" priority="1" uid="447"/>
+		<sound bank="5" filename="sfx_cutscene_ruins.wav" format="pcm" group="5" label="sfx_cutscene_ruins" loadingflags="none" loop="no" priority="1" uid="448"/>
+		<sound bank="5" filename="sfx_cutscene_water_temple_1.wav" format="pcm" group="5" label="sfx_cutscene_water_temple_1" loadingflags="none" loop="no" priority="1" uid="449"/>
+		<sound bank="5" filename="sfx_cutscene_water_temple_2.wav" format="pcm" group="5" label="sfx_cutscene_water_temple_2" loadingflags="none" loop="no" priority="1" uid="450"/>
+		<sound bank="5" filename="sfx_cutscene_wind_temple_1.wav" format="pcm" group="5" label="sfx_cutscene_wind_temple_1" loadingflags="none" loop="no" priority="1" uid="451"/>
+		<sound bank="5" filename="sfx_cutscene_wind_temple_2.wav" format="pcm" group="5" label="sfx_cutscene_wind_temple_2" loadingflags="none" loop="no" priority="1" uid="452"/>
+		<sound bank="5" filename="sfx_cutscene_wind_temple_3.wav" format="pcm" group="5" label="sfx_cutscene_wind_temple_3" loadingflags="none" loop="no" priority="1" uid="453"/>
+		<sound bank="5" filename="sfx_cutscene_escape_castle.wav" format="pcm" group="5" label="sfx_cutscene_escape_castle" loadingflags="none" loop="no" priority="1" uid="454"/>
+		<sound bank="4" filename="sfx_cutscene_final_loop.wav" format="pcm" group="5" label="sfx_cutscene_final_loop" loadingflags="none" loop="yes" priority="1" uid="455"/>
+		<sound bank="5" filename="sfx_cutscene_final_intro.wav" format="pcm" group="5" label="sfx_cutscene_final_intro" loadingflags="none" loop="no" priority="1" uid="456"/>
+		<sound bank="5" filename="sfx_cutscene_glowing_rene.wav" format="pcm" group="5" label="sfx_cs_glowing_rene" loadingflags="none" loop="no" priority="1" uid="457"/>
+		<sound bank="5" filename="sfx_cutscene_final_outro.wav" format="pcm" group="5" label="sfx_cutscene_final_outro" loadingflags="none" loop="no" priority="1" uid="458"/>
+		<sound bank="5" filename="sfx_cutscene_moth.wav" format="pcm" group="5" label="sfx_cutscene_moth" loadingflags="none" loop="no" priority="1" uid="459"/>
+		<sound bank="2" filename="vfx_mp_follow.wav" format="adpcm" group="5" label="vfx_mp_follow" loadingflags="none" loop="no" priority="3" uid="460"/>
+		<sound bank="2" filename="vfx_mp_help.wav" format="adpcm" group="5" label="vfx_mp_help" loadingflags="none" loop="no" priority="3" uid="461"/>
+		<sound bank="2" filename="vfx_mp_attack.wav" format="adpcm" group="5" label="vfx_mp_attack" loadingflags="none" loop="no" priority="3" uid="462"/>
+		<sound bank="2" filename="vfx_mp_retreat.wav" format="adpcm" group="5" label="vfx_mp_retreat" loadingflags="none" loop="no" priority="3" uid="463"/>
+		<sound bank="1" filename="m_title.vxn" format="vxn" group="1" label="TitleMusic" loadingflags="none" loop="yes" priority="1" uid="464"/>
+		<sound bank="1" filename="m_world_map.wav" format="adpcm" group="1" label="WorldMapMusic" loadingflags="none" loop="yes" priority="1" uid="465"/>
+		<sound bank="1" filename="m_lose.wav" format="adpcm" group="1" label="Lose" loadingflags="none" loop="no" priority="1" uid="466"/>
+		<sound bank="1" filename="m_level_swamp_sfx_swamp.vxn" format="vxn" group="2" label="SwampHubAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="467"/>
+		<sound bank="1" filename="m_level_swamp_sfx_witch.vxn" format="vxn" group="2" label="SwampWitchCaveAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="468"/>
+		<sound bank="1" filename="m_level_swamp_sfx_swamp.vxn" format="vxn" group="2" label="SwampTrollCaveAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="469"/>
+		<sound bank="1" filename="m_level_swamp_sfx_water.vxn" format="vxn" group="2" label="WaterTempleCaveAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="470"/>
+		<sound bank="1" filename="m_level_darkwood_sfx_darkwood.vxn" format="vxn" group="2" label="DarkWoodHubAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="471"/>
+		<sound bank="1" filename="m_level_darkwood_sfx_root_den.vxn" format="vxn" group="2" label="RootDenOneAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="472"/>
+		<sound bank="1" filename="m_level_darkwood_sfx_root_den.vxn" format="vxn" group="2" label="RootDenTwoAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="473"/>
+		<sound bank="1" filename="m_level_darkwood_sfx_void_maze.vxn" format="vxn" group="2" label="EarthTempleAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="474"/>
+		<sound bank="1" filename="m_level_darkwood_sfx_infected.vxn" format="vxn" group="2" label="InfectedVillageAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="475"/>
+		<sound bank="1" filename="m_level_darkwood_sfx_darkwood.vxn" format="vxn" group="2" label="SecretBasementAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="476"/>
+		<sound bank="1" filename="m_level_gothicus_no_ambiance.vxn" format="vxn" group="2" label="GothicusCastleHubAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="477"/>
+		<sound bank="1" filename="m_level_gothicus_no_ambiance.vxn" format="vxn" group="2" label="FireTowerAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="478"/>
+		<sound bank="1" filename="m_level_gothicus_no_ambiance.vxn" format="vxn" group="2" label="EartheTowerAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="479"/>
+		<sound bank="1" filename="m_level_gothicus_no_ambiance.vxn" format="vxn" group="2" label="WaterTowerAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="480"/>
+		<sound bank="1" filename="m_level_gothicus_no_ambiance.vxn" format="vxn" group="2" label="AirTowerAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="481"/>
+		<sound bank="1" filename="m_level_gothicus_no_ambiance.vxn" format="vxn" group="2" label="LightTowerAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="482"/>
+		<sound bank="1" filename="m_level_darkwood_sfx_darkwood.vxn" format="vxn" group="2" label="GarveyardAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="483"/>
+		<sound bank="1" filename="m_level_cathedral_sfx_catacomb.vxn" format="vxn" group="2" label="AbbeyRuinsOneAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="484"/>
+		<sound bank="1" filename="m_level_cathedral_sfx_catacomb.vxn" format="vxn" group="2" label="PortalRoomAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="485"/>
+		<sound bank="1" filename="m_level_cathedral_sfx_catacomb.vxn" format="vxn" group="2" label="CryptOneAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="486"/>
+		<sound bank="1" filename="m_level_cathedral_sfx_catacomb.vxn" format="vxn" group="2" label="SecretCryptAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="487"/>
+		<sound bank="1" filename="m_level_red_desert_sfx_red_desert.vxn" format="vxn" group="2" label="RedDesertHubAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="488"/>
+		<sound bank="1" filename="m_level_red_desert_sfx_red_desert.vxn" format="vxn" group="2" label="RedDesertCaveOneAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="489"/>
+		<sound bank="1" filename="m_level_red_desert_sfx_red_desert.vxn" format="vxn" group="2" label="RedDesertCaveTwoAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="490"/>
+		<sound bank="1" filename="m_level_red_desert_sfx_red_desert.vxn" format="vxn" group="2" label="RedDesertThreeAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="491"/>
+		<sound bank="1" filename="m_level_red_desert_no_ambiance.vxn" format="vxn" group="2" label="LighthouseTempleAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="492"/>
+		<sound bank="1" filename="m_level_red_desert_sfx_fire.vxn" format="vxn" group="2" label="FireTempleAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="493"/>
+		<sound bank="1" filename="m_level_icy_cliff_sfx_ice_hub.vxn" format="vxn" group="2" label="IcyCliffHubAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="494"/>
+		<sound bank="1" filename="m_level_icy_cliff_sfx_ice_cavern.vxn" format="vxn" group="2" label="CliffSideOneAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="495"/>
+		<sound bank="1" filename="m_level_icy_cliff_sfx_ice_cavern.vxn" format="vxn" group="2" label="IcyCaveTwoAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="496"/>
+		<sound bank="1" filename="m_level_icy_cliff_sfx_ice_cavern.vxn" format="vxn" group="2" label="IcyCaveThreeAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="497"/>
+		<sound bank="1" filename="m_level_icy_cliff_sfx_ice_cavern.vxn" format="vxn" group="2" label="IcyCliffOneOneAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="498"/>
+		<sound bank="1" filename="m_level_icy_cliff_sfx_ice_cavern.vxn" format="vxn" group="2" label="IcyCaveOneTwoAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="499"/>
+		<sound bank="1" filename="m_level_icy_cliff_sfx_ice_cavern.vxn" format="vxn" group="2" label="IcyCliffOneTwoAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="500"/>
+		<sound bank="1" filename="m_level_icy_cliff_sfx_wind.vxn" format="vxn" group="2" label="WindTempleAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="501"/>
+		<sound bank="1" filename="m_level_hell_sfx_dark.vxn" format="vxn" group="2" label="UnderworldHubAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="502"/>
+		<sound bank="1" filename="m_level_hell_sfx_dark.vxn" format="vxn" group="2" label="MachineRoomsAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="503"/>
+		<sound bank="1" filename="m_level_hell_sfx_dark.vxn" format="vxn" group="2" label="DarkDungeonTempleAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="504"/>
+		<sound bank="1" filename="m_safe_zone_01_sfx_swamp.wav" format="adpcm" group="2" label="SwampMerchantCampMusic" loadingflags="none" loop="yes" priority="1" uid="505"/>
+		<sound bank="1" filename="m_safe_zone_01_sfx_red_desert.wav" format="adpcm" group="2" label="BloodSandsMusic" loadingflags="none" loop="yes" priority="1" uid="506"/>
+		<sound bank="1" filename="m_safe_zone_01_sfx_dark_temple.wav" format="adpcm" group="2" label="KingsGraveMusic" loadingflags="none" loop="yes" priority="1" uid="507"/>
+		<sound bank="1" filename="m_safe_zone_02_sfx_darkwood.wav" format="adpcm" group="2" label="GatedCastleVillageMusic" loadingflags="none" loop="yes" priority="1" uid="508"/>
+		<sound bank="1" filename="m_safe_zone_02_sfx_ice_hub.wav" format="adpcm" group="2" label="NortherlandMusic" loadingflags="none" loop="yes" priority="1" uid="509"/>
+		<sound bank="1" filename="m_boss_intro_intense.wav" format="adpcm" group="3" label="BossIntroIntenseMusic" loadingflags="none" loop="yes" priority="1" uid="510"/>
+		<sound bank="1" filename="m_boss_monster.wav" format="adpcm" group="3" label="SwampKingMusic" loadingflags="none" loop="yes" priority="1" uid="511"/>
+		<sound bank="1" filename="m_boss_monster.wav" format="adpcm" group="3" label="EarthTrollMusic" loadingflags="none" loop="yes" priority="1" uid="512"/>
+		<sound bank="1" filename="m_boss_monster.wav" format="adpcm" group="3" label="GiantBalrogMusic" loadingflags="none" loop="yes" priority="1" uid="513"/>
+		<sound bank="1" filename="m_boss_monster.wav" format="adpcm" group="3" label="TwoHeadedDragonMusic" loadingflags="none" loop="yes" priority="1" uid="514"/>
+		<sound bank="1" filename="m_boss_monster.wav" format="adpcm" group="3" label="CherubMotherStatueMusic" loadingflags="none" loop="yes" priority="1" uid="515"/>
+		<sound bank="1" filename="m_boss_monster.wav" format="adpcm" group="3" label="CorruptedCherubMusic" loadingflags="none" loop="yes" priority="1" uid="516"/>
+		<sound bank="1" filename="m_boss_monster.wav" format="adpcm" group="3" label="GiantSunkenStatueMusic" loadingflags="none" loop="yes" priority="1" uid="517"/>
+		<sound bank="1" filename="m_boss_assassin.wav" format="adpcm" group="3" label="AssassinFloodedCastleMusic" loadingflags="none" loop="yes" priority="1" uid="518"/>
+		<sound bank="1" filename="m_boss_assassin.wav" format="adpcm" group="3" label="AssassinAbbeyRuinsMusic" loadingflags="none" loop="yes" priority="1" uid="519"/>
+		<sound bank="1" filename="m_boss_assassin.wav" format="adpcm" group="3" label="AssassinVoidMazeMusic" loadingflags="none" loop="yes" priority="1" uid="520"/>
+		<sound bank="1" filename="m_boss_assassin.wav" format="adpcm" group="3" label="WraithMusic" loadingflags="none" loop="yes" priority="1" uid="521"/>
+		<sound bank="1" filename="m_boss_assassin.wav" format="adpcm" group="3" label="HeadCultistMusic" loadingflags="none" loop="yes" priority="1" uid="522"/>
+		<sound bank="1" filename="m_boss_assassin.wav" format="adpcm" group="3" label="FireSpritesMusic" loadingflags="none" loop="yes" priority="1" uid="523"/>
+		<sound bank="1" filename="m_boss_dark_queen.wav" format="adpcm" group="3" label="DarkQueenOneMusic" loadingflags="none" loop="yes" priority="1" uid="524"/>
+		<sound bank="1" filename="m_boss_dark_queen.wav" format="adpcm" group="3" label="DarkQueenTwoMusic" loadingflags="none" loop="yes" priority="1" uid="525"/>
+		<sound bank="1" filename="m_boss_hell_king_step1_loop.wav" format="adpcm" group="3" label="HellKingOneLoopMusic" loadingflags="none" loop="yes" priority="1" uid="526"/>
+		<sound bank="1" filename="m_boss_hell_king_step2_loop.wav" format="adpcm" group="3" label="HellKingTwoLoopMusic" loadingflags="none" loop="yes" priority="1" uid="527"/>
+		<sound bank="1" filename="m_boss_hell_king_step3_intro.wav" format="adpcm" group="3" label="HellKingThreeIntroMusic" loadingflags="none" loop="no" priority="1" uid="528"/>
+		<sound bank="1" filename="m_boss_hell_king_step3_loop.wav" format="adpcm" group="3" label="HellKingThreeLoopMusic" loadingflags="none" loop="yes" priority="1" uid="529"/>
+		<sound bank="1" filename="m_combat_big_enemy.wav" format="adpcm" group="3" label="QueenBossMusic" loadingflags="none" loop="yes" priority="1" uid="530"/>
+		<sound bank="1" filename="m_boss_hell_king.wav" format="adpcm" group="3" label="HellKingOneMusic" loadingflags="none" loop="yes" priority="1" uid="531"/>
+		<sound bank="1" filename="m_boss_hell_king.wav" format="adpcm" group="3" label="HellKingTwoMusic" loadingflags="none" loop="yes" priority="1" uid="532"/>
+		<sound bank="1" filename="m_cutscene_01.wav" format="adpcm" group="2" label="m_cutscene_01" loadingflags="none" loop="yes" priority="1" uid="533"/>
+		<sound bank="1" filename="m_title_intro.wav" format="adpcm" group="1" label="TitleIntroMusic" loadingflags="none" loop="yes" priority="1" uid="534"/>
+		<sound bank="1" filename="m_title_loop.wav" format="adpcm" group="1" label="TitleLoopMusic" loadingflags="none" loop="yes" priority="1" uid="535"/>
+		<sound bank="1" filename="m_level_gothicus.vxn" format="vxn" group="2" label="FloodedCastleAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="536"/>
+		<sound bank="1" filename="m_level_gothicus.vxn" format="vxn" group="2" label="FloodedCastleCombatMusic" loadingflags="none" loop="yes" priority="1" uid="537"/>
+		<sound bank="1" filename="m_level_hell.vxn" format="vxn" group="2" label="VoidMazeAmbientMusic" loadingflags="none" loop="yes" priority="1" uid="538"/>
+		<sound bank="1" filename="m_level_hell.vxn" format="vxn" group="2" label="VoidMazeCombatMusic" loadingflags="none" loop="yes" priority="1" uid="539"/>
+		<sound bank="1" filename="m_level_swamp.vxn" format="vxn" group="2" label="SwampHubCombatMusic" loadingflags="none" loop="yes" priority="1" uid="540"/>
+		<sound bank="1" filename="m_level_swamp.vxn" format="vxn" group="2" label="SwampWitchCaveComabatMusic" loadingflags="none" loop="yes" priority="1" uid="541"/>
+		<sound bank="1" filename="m_level_swamp.vxn" format="vxn" group="2" label="SwampTrollCaveComabatMusic" loadingflags="none" loop="yes" priority="1" uid="542"/>
+		<sound bank="1" filename="m_level_darkwood.vxn" format="vxn" group="2" label="DarkWoodHubCombatMusic" loadingflags="none" loop="yes" priority="1" uid="543"/>
+		<sound bank="1" filename="m_level_darkwood.vxn" format="vxn" group="2" label="RootDenOneCombatMusic" loadingflags="none" loop="yes" priority="1" uid="544"/>
+		<sound bank="1" filename="m_level_darkwood.vxn" format="vxn" group="2" label="RootDenTwoCombatMusic" loadingflags="none" loop="yes" priority="1" uid="545"/>
+		<sound bank="1" filename="m_level_darkwood.vxn" format="vxn" group="2" label="EarthTempleCombatMusic" loadingflags="none" loop="yes" priority="1" uid="546"/>
+		<sound bank="1" filename="m_level_darkwood.vxn" format="vxn" group="2" label="InfectedVillageCombatMusic" loadingflags="none" loop="yes" priority="1" uid="547"/>
+		<sound bank="1" filename="m_level_darkwood.vxn" format="vxn" group="2" label="SecretBasementCombatMusic" loadingflags="none" loop="yes" priority="1" uid="548"/>
+		<sound bank="1" filename="m_level_gothicus.vxn" format="vxn" group="2" label="GothicusCastleHub" loadingflags="none" loop="yes" priority="1" uid="549"/>
+		<sound bank="1" filename="m_level_gothicus.vxn" format="vxn" group="2" label="FireTowerCombatMusic" loadingflags="none" loop="yes" priority="1" uid="550"/>
+		<sound bank="1" filename="m_level_gothicus.vxn" format="vxn" group="2" label="EartheTowerCombatMusic" loadingflags="none" loop="yes" priority="1" uid="551"/>
+		<sound bank="1" filename="m_level_gothicus.vxn" format="vxn" group="2" label="WaterTowerCombatMusic" loadingflags="none" loop="yes" priority="1" uid="552"/>
+		<sound bank="1" filename="m_level_gothicus.vxn" format="vxn" group="2" label="AirTowerCombatMusic" loadingflags="none" loop="yes" priority="1" uid="553"/>
+		<sound bank="1" filename="m_level_gothicus.vxn" format="vxn" group="2" label="LightTowerCombatMusic" loadingflags="none" loop="yes" priority="1" uid="554"/>
+		<sound bank="1" filename="m_level_cathedral.vxn" format="vxn" group="2" label="GarveyardCombatMusic" loadingflags="none" loop="yes" priority="1" uid="555"/>
+		<sound bank="1" filename="m_level_cathedral.vxn" format="vxn" group="2" label="AbbeyRuinsOneCombatMusic" loadingflags="none" loop="yes" priority="1" uid="556"/>
+		<sound bank="1" filename="m_level_cathedral.vxn" format="vxn" group="2" label="PortalRoomCombatMusic" loadingflags="none" loop="yes" priority="1" uid="557"/>
+		<sound bank="1" filename="m_level_cathedral.vxn" format="vxn" group="2" label="CryptOneCombatMusic" loadingflags="none" loop="yes" priority="1" uid="558"/>
+		<sound bank="1" filename="m_level_cathedral.vxn" format="vxn" group="2" label="SecretCryptCombatMusic" loadingflags="none" loop="yes" priority="1" uid="559"/>
+		<sound bank="1" filename="m_level_red_desert.vxn" format="vxn" group="2" label="RedDesertHubCombatMusic" loadingflags="none" loop="yes" priority="1" uid="560"/>
+		<sound bank="1" filename="m_level_red_desert.vxn" format="vxn" group="2" label="RedDesertCaveOneCombatMusic" loadingflags="none" loop="yes" priority="1" uid="561"/>
+		<sound bank="1" filename="m_level_red_desert.vxn" format="vxn" group="2" label="RedDesertCaveTwoCombatMusic" loadingflags="none" loop="yes" priority="1" uid="562"/>
+		<sound bank="1" filename="m_level_red_desert.vxn" format="vxn" group="2" label="RedDesertThreeCombatMusic" loadingflags="none" loop="yes" priority="1" uid="563"/>
+		<sound bank="1" filename="m_level_red_desert.vxn" format="vxn" group="2" label="LighthouseTempleCombatMusic" loadingflags="none" loop="yes" priority="1" uid="564"/>
+		<sound bank="1" filename="m_level_red_desert.vxn" format="vxn" group="2" label="FireTempleCombatMusic" loadingflags="none" loop="yes" priority="1" uid="565"/>
+		<sound bank="1" filename="m_level_icy_cliff.vxn" format="vxn" group="2" label="IcyCliffHubCombatMusic" loadingflags="none" loop="yes" priority="1" uid="566"/>
+		<sound bank="1" filename="m_level_icy_cliff.vxn" format="vxn" group="2" label="CliffSideOneCombatMusic" loadingflags="none" loop="yes" priority="1" uid="567"/>
+		<sound bank="1" filename="m_level_icy_cliff.vxn" format="vxn" group="2" label="IcyCaveTwoCombatMusic" loadingflags="none" loop="yes" priority="1" uid="568"/>
+		<sound bank="1" filename="m_level_icy_cliff.vxn" format="vxn" group="2" label="IcyCaveThreeCombatMusic" loadingflags="none" loop="yes" priority="1" uid="569"/>
+		<sound bank="1" filename="m_level_icy_cliff.vxn" format="vxn" group="2" label="IcyCliffOneOneCombatMusic" loadingflags="none" loop="yes" priority="1" uid="570"/>
+		<sound bank="1" filename="m_level_icy_cliff.vxn" format="vxn" group="2" label="IcyCaveOneTwoCombatMusic" loadingflags="none" loop="yes" priority="1" uid="571"/>
+		<sound bank="1" filename="m_level_icy_cliff.vxn" format="vxn" group="2" label="IcyCliffOneTwoCombatMusic" loadingflags="none" loop="yes" priority="1" uid="572"/>
+		<sound bank="1" filename="m_level_icy_cliff.vxn" format="vxn" group="2" label="WindTempleCombatMusic" loadingflags="none" loop="yes" priority="1" uid="573"/>
+		<sound bank="1" filename="m_level_hell.vxn" format="vxn" group="2" label="UnderworldHubCombatMusic" loadingflags="none" loop="yes" priority="1" uid="574"/>
+		<sound bank="1" filename="m_level_hell.vxn" format="vxn" group="2" label="MachineRoomsCombatMusic" loadingflags="none" loop="yes" priority="1" uid="575"/>
+		<sound bank="1" filename="m_level_hell.vxn" format="vxn" group="2" label="DarkDungeonTempleCombatMusic" loadingflags="none" loop="yes" priority="1" uid="576"/>
+		<sound bank="1" filename="m_boss_hell_king_step2_intro.wav" format="adpcm" group="3" label="HellKingTwoIntroMusic" loadingflags="none" loop="no" priority="1" uid="577"/>
+	</sounds>
+	<groups size="12">
+		<group bus="Music" name="m_int" pos3d="no" uid="1" volumeslider="MUSIC"/>
+		<group bus="Music" name="m_env" pos3d="no" uid="2" volumeslider="MUSIC"/>
+		<group bus="Music" name="m_boss" pos3d="no" uid="3" volumeslider="MUSIC"/>
+		<group bus="sfx_int" name="sfx_int" pos3d="no" uid="4" volumeslider="SFX"/>
+		<group bus="SFX" name="sfx_3D" pos3d="yes" uid="5" volumeslider="SFX"/>
+		<group bus="SFX" name="sfx_3D_relative" pos3d="relative" uid="6" volumeslider="SFX"/>
+		<group bus="SFX" name="sfx_3D_pitched" pos3d="yes" uid="7" volumeslider="SFX"/>
+		<group bus="SFX" name="sfx_3D_pitched_relative" pos3d="relative" uid="8" volumeslider="SFX"/>
+		<group bus="sfx_prod" name="sfx_prod_elements" pos3d="no" uid="9" volumeslider="SFX"/>
+		<group bus="Amb_loop_omni" name="sfx_amb_loop_omni" pos3d="no" uid="10" volumeslider="SFX"/>
+		<group bus="SFX" name="sfx_amb_oneshot" pos3d="no" uid="11" volumeslider="SFX"/>
+		<group bus="VFX" name="voices" pos3d="no" uid="12" volumeslider="VFX"/>
+	</groups>
+	<groupmasks size="3">
+		<groupmask label="MUSIC" mask="14"/>
+		<groupmask label="SFX" mask="4080"/>
+		<groupmask label="VFX" mask="4096"/>
+	</groupmasks>
+	<banks size="7">
+		<bank behaviour="do nothing" maxplaybacks="2" name="MUSIC" uid="1"/>
+		<bank behaviour="steal low. prio. or old. same prio" maxplaybacks="6" name="MC" uid="2"/>
+		<bank behaviour="steal oldest" maxplaybacks="4" name="OBJECT" uid="3"/>
+		<bank behaviour="do nothing" maxplaybacks="2" name="AMBIANCE" uid="4"/>
+		<bank behaviour="do nothing" maxplaybacks="3" name="NPC" uid="5"/>
+		<bank behaviour="steal oldest" maxplaybacks="3" name="INT" uid="6"/>
+		<bank behaviour="steal oldest" maxplaybacks="6" name="SKILLS" uid="7"/>
+	</banks>
+	<events size="63">
+		<event label="env_character_hurt" params="2" type="random" uid="0" value="38,39,40"/>
+		<event label="env_character_block" params="1" type="random" uid="1" value="51,52"/>
+		<event label="env_priest_hurt" params="2" type="random" uid="2" value="34,35,36"/>
+		<event label="env_impact_metal_metal" params="2" type="random" uid="3" value="41,42,43"/>
+		<event label="env_impact_metal_flesh_small" params="2" type="random" uid="4" value="44,45,46"/>
+		<event label="env_impact_metal_flesh_medium" params="3" type="random" uid="5" value="47,48,49"/>
+		<event label="env_weapon_1h" params="2" type="random" uid="6" value="22,23"/>
+		<event label="env_weapon_2h" params="2" type="random" uid="7" value="22,23"/>
+		<event label="env_weapon_dual" params="2" type="random" uid="8" value="24,25"/>
+		<event label="env_weapon_staff" params="2" type="random" uid="9" value="26,27"/>
+		<event label="env_weapon_arrow_hit" params="2" type="random" uid="10" value="53,54,55"/>
+		<event label="env_weapon_arrow_miss" params="2" type="random" uid="11" value="56,57"/>
+		<event label="env_goblin_ranged_attack" params="2" type="random" uid="12" value="269,270"/>
+		<event label="env_goblin_melee_attack" params="2" type="random" uid="13" value="273,274"/>
+		<event label="env_swampking_intimidate" params="2" type="random" uid="14" value="318,319,320"/>
+		<event label="env_cs_swampking_spawn" params="2" type="playlist" uid="15" value="310,320"/>
+		<event label="env_yeti_attack" params="2" type="random" uid="16" value="297,298"/>
+		<event label="env_yeti_hurt" params="2" type="random" uid="17" value="300,301"/>
+		<event label="env_ghost_attack" params="2" type="random" uid="18" value="275,276,277"/>
+		<event label="env_skydevil_attack" params="2" type="random" uid="19" value="410,411,412"/>
+		<event label="env_skydevil_death" params="2" type="random" uid="20" value="413,414"/>
+		<event label="env_skydevil_hurt" params="2" type="random" uid="21" value="415,416"/>
+		<event label="env_soulcrusher_attack" params="2" type="random" uid="22" value="417,418,419"/>
+		<event label="env_soulcrusher_death" params="2" type="random" uid="23" value="420,421"/>
+		<event label="env_soulcrusher_hurt" params="2" type="random" uid="24" value="422,423"/>
+		<event label="env_corruptedroots_attack" params="2" type="random" uid="25" value="424,425"/>
+		<event label="env_corruptedroots_death" params="2" type="random" uid="26" value="426,427"/>
+		<event label="env_corruptedroots_hurt" params="2" type="random" uid="27" value="428,429"/>
+		<event label="env_fs_walk_grass" params="2" type="random" uid="28" value="64,65,66,67"/>
+		<event label="env_fs_walk_metal" params="2" type="random" uid="29" value="68,69,70,71"/>
+		<event label="env_fs_walk_stone" params="2" type="random" uid="30" value="72,73,74,75"/>
+		<event label="env_fs_walk_water" params="2" type="random" uid="31" value="76,77,78,79"/>
+		<event label="env_fs_walk_wet_floor" params="2" type="random" uid="32" value="80,81,82,83"/>
+		<event label="env_fs_walk_wood" params="2" type="random" uid="33" value="84,85,86,87"/>
+		<event label="env_cave_trol_hurt" params="2" type="random" uid="34" value="247,248"/>
+		<event label="env_cave_green_ghost_hurt" params="2" type="random" uid="35" value="279,280"/>
+		<event label="env_plant_attack" params="2" type="random" uid="36" value="292,293"/>
+		<event label="env_plant_hurt" params="2" type="random" uid="37" value="294,295"/>
+		<event label="env_witch_hurt" params="2" type="random" uid="38" value="333,334"/>
+		<event label="env_worm_hurt" params="2" type="random" uid="39" value="342,343"/>
+		<event label="env_worm_attack" params="2" type="random" uid="40" value="344,345"/>
+		<event label="env_moth_attack" params="2" type="random" uid="41" value="286,287"/>
+		<event label="env_moth_hurt" params="2" type="random" uid="42" value="288,289"/>
+		<event label="env_madruk_hurt" params="2" type="random" uid="43" value="385,386"/>
+		<event label="env_assassin_demon_hurt" params="2" type="random" uid="44" value="401,402"/>
+		<event label="env_hound_hurt" params="2" type="random" uid="45" value="406,407"/>
+		<event label="env_hound_attack" params="2" type="random" uid="46" value="404,405"/>
+		<event label="env_hound_killed" params="2" type="random" uid="47" value="408,409"/>
+		<event label="env_cherub_hurt" params="2" type="random" uid="48" value="308,309"/>
+		<event label="env_assassin_knive_throw" params="2" type="random" uid="49" value="323,324"/>
+		<event label="env_edward_hurt" params="2" type="random" uid="50" value="363,364"/>
+		<event label="env_mage_staff_elemental_fire" params="1" type="random" uid="51" value="29"/>
+		<event label="env_mage_staff_elemental_ice" params="1" type="random" uid="52" value="30"/>
+		<event label="env_mage_staff_elemental_earth" params="1" type="random" uid="53" value="31"/>
+		<event label="env_mage_staff_elemental_wind" params="1" type="random" uid="54" value="32"/>
+		<event label="env_mage_staff_elemental_lightning" params="1" type="random" uid="55" value="33"/>
+		<event label="preload_sfx" params="3" type="playlist" uid="56" value="38,39,40"/>
+		<event label="preload_fs_grass" params="4" type="playlist" uid="57" value="64,65,66,67"/>
+		<event label="preload_fs_metal" params="4" type="playlist" uid="58" value="68,69,70,71"/>
+		<event label="preload_fs_stone" params="4" type="playlist" uid="59" value="72,73,74,75"/>
+		<event label="preload_fs_water" params="4" type="playlist" uid="60" value="76,77,78,79"/>
+		<event label="preload_fs_wet_floor" params="4" type="playlist" uid="61" value="80,81,82,83"/>
+		<event label="preload_fs_wood" params="4" type="playlist" uid="62" value="84,85,86,87"/>
+	</events>
+</soundpack>

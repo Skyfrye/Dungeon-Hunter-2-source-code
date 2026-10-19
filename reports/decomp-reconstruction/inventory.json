@@ -1,0 +1,2253 @@
+{
+ "functions_total": 35159,
+ "functions_claimed": 2500,
+ "claim_sources": {
+  "source": 4517,
+  "manifest": 327
+ },
+ "claimed_addresses_in_manifests": 2525,
+ "buckets": {
+  "engine-glitch": {
+   "total": 7772,
+   "claimed": 477,
+   "bytes": 1220712
+  },
+  "game": {
+   "total": 10632,
+   "claimed": 1547,
+   "bytes": 1509852
+  },
+  "lib-box2d": {
+   "total": 318,
+   "claimed": 266,
+   "bytes": 29816
+  },
+  "lib-gameswf": {
+   "total": 2474,
+   "claimed": 14,
+   "bytes": 439512
+  },
+  "lib-image-zip-font": {
+   "total": 1495,
+   "claimed": 0,
+   "bytes": 494068
+  },
+  "lib-libnativeinterface": {
+   "total": 15,
+   "claimed": 0,
+   "bytes": 2131
+  },
+  "lib-lua": {
+   "total": 577,
+   "claimed": 63,
+   "bytes": 100188
+  },
+  "lib-online-glx": {
+   "total": 914,
+   "claimed": 9,
+   "bytes": 136810
+  },
+  "lib-vox-audio": {
+   "total": 1314,
+   "claimed": 0,
+   "bytes": 120216
+  },
+  "runtime-stl": {
+   "total": 5917,
+   "claimed": 123,
+   "bytes": 713094
+  },
+  "thunk": {
+   "total": 398,
+   "claimed": 1,
+   "bytes": 4708
+  },
+  "wrapper-stormgloft": {
+   "total": 3333,
+   "claimed": 0,
+   "bytes": 458258
+  }
+ },
+ "game_owners": {
+  "Structs": {
+   "total": 1862,
+   "claimed": 33
+  },
+  "<global>": {
+   "total": 975,
+   "claimed": 57
+  },
+  "Arrays": {
+   "total": 392,
+   "claimed": 32
+  },
+  "Character": {
+   "total": 391,
+   "claimed": 229
+  },
+  "CharAI": {
+   "total": 180,
+   "claimed": 120
+  },
+  "rnd": {
+   "total": 156,
+   "claimed": 0
+  },
+  "GameObject": {
+   "total": 141,
+   "claimed": 92
+  },
+  "PlayerSavegame": {
+   "total": 104,
+   "claimed": 38
+  },
+  "MenuBase": {
+   "total": 96,
+   "claimed": 2
+  },
+  "ItemInventory": {
+   "total": 84,
+   "claimed": 44
+  },
+  "CharProperties": {
+   "total": 80,
+   "claimed": 47
+  },
+  "Level": {
+   "total": 71,
+   "claimed": 11
+  },
+  "Application": {
+   "total": 66,
+   "claimed": 12
+  },
+  "ObjectManager": {
+   "total": 63,
+   "claimed": 10
+  },
+  "PlayerManager": {
+   "total": 61,
+   "claimed": 24
+  },
+  "VisualObject": {
+   "total": 61,
+   "claimed": 21
+  },
+  "SceneManager": {
+   "total": 60,
+   "claimed": 4
+  },
+  "ObjectSearcher": {
+   "total": 58,
+   "claimed": 22
+  },
+  "SimpleTypeProperty": {
+   "total": 57,
+   "claimed": 0
+  },
+  "CConnectionManager": {
+   "total": 56,
+   "claimed": 0
+  },
+  "CharStateMachine": {
+   "total": 54,
+   "claimed": 26
+  },
+  "AISDefault": {
+   "total": 52,
+   "claimed": 16
+  },
+  "LuaScript": {
+   "total": 51,
+   "claimed": 47
+  },
+  "CNetPlayerManager": {
+   "total": 51,
+   "claimed": 1
+  },
+  "NetStructByteArray": {
+   "total": 50,
+   "claimed": 8
+  },
+  "MenuManager": {
+   "total": 50,
+   "claimed": 0
+  },
+  "PFWorld": {
+   "total": 50,
+   "claimed": 20
+  },
+  "DataPacketLobby": {
+   "total": 50,
+   "claimed": 0
+  },
+  "ConnectionLobby": {
+   "total": 48,
+   "claimed": 0
+  },
+  "Quest": {
+   "total": 45,
+   "claimed": 9
+  },
+  "CMessage": {
+   "total": 44,
+   "claimed": 0
+  },
+  "Console": {
+   "total": 43,
+   "claimed": 0
+  },
+  "NetStructMemberType": {
+   "total": 43,
+   "claimed": 5
+  },
+  "CMessaging": {
+   "total": 43,
+   "claimed": 0
+  },
+  "DefaultDataPacket": {
+   "total": 42,
+   "claimed": 0
+  },
+  "CharAnimator": {
+   "total": 41,
+   "claimed": 24
+  },
+  "FileSystemWin32": {
+   "total": 39,
+   "claimed": 0
+  },
+  "MenuFX": {
+   "total": 38,
+   "claimed": 0
+  },
+  "VisualFXManager": {
+   "total": 37,
+   "claimed": 1
+  },
+  "TiXmlNode": {
+   "total": 37,
+   "claimed": 0
+  },
+  "TiXmlElement": {
+   "total": 37,
+   "claimed": 0
+  },
+  "Container": {
+   "total": 36,
+   "claimed": 5
+  },
+  "ItemObject": {
+   "total": 36,
+   "claimed": 0
+  },
+  "ObjectiveTemplate_InteractWith": {
+   "total": 36,
+   "claimed": 10
+  },
+  "CAndroidSocket": {
+   "total": 36,
+   "claimed": 0
+  },
+  "LCAndroidSocket": {
+   "total": 36,
+   "claimed": 0
+  },
+  "MenuMessageManager": {
+   "total": 35,
+   "claimed": 0
+  },
+  "sfc": {
+   "total": 35,
+   "claimed": 12
+  },
+  "CRoomAttributes": {
+   "total": 35,
+   "claimed": 0
+  },
+  "CTransportManager": {
+   "total": 35,
+   "claimed": 0
+  },
+  "Connection": {
+   "total": 35,
+   "claimed": 0
+  },
+  "TriggerTrap": {
+   "total": 33,
+   "claimed": 3
+  },
+  "AISExternal": {
+   "total": 33,
+   "claimed": 10
+  },
+  "CEventQueue": {
+   "total": 33,
+   "claimed": 0
+  },
+  "CPacketManager": {
+   "total": 33,
+   "claimed": 0
+  },
+  "Door": {
+   "total": 32,
+   "claimed": 1
+  },
+  "ItemInstance": {
+   "total": 32,
+   "claimed": 17
+  },
+  "PhysicalObject": {
+   "total": 31,
+   "claimed": 16
+  },
+  "v2Controllable": {
+   "total": 31,
+   "claimed": 2
+  },
+  "v2MixedController": {
+   "total": 31,
+   "claimed": 0
+  },
+  "HUDMinimap": {
+   "total": 31,
+   "claimed": 0
+  },
+  "SavegameManager": {
+   "total": 31,
+   "claimed": 5
+  },
+  "StringManager": {
+   "total": 31,
+   "claimed": 1
+  },
+  "CBluetoothReliable": {
+   "total": 30,
+   "claimed": 0
+  },
+  "CBluetoothUnreliable": {
+   "total": 30,
+   "claimed": 0
+  },
+  "ObjectBase": {
+   "total": 29,
+   "claimed": 12
+  },
+  "IStreamBase": {
+   "total": 28,
+   "claimed": 11
+  },
+  "GameCenter": {
+   "total": 28,
+   "claimed": 0
+  },
+  "TouchScreenBase": {
+   "total": 28,
+   "claimed": 0
+  },
+  "v2Controller": {
+   "total": 28,
+   "claimed": 5
+  },
+  "MenuCharMenu_Map": {
+   "total": 28,
+   "claimed": 0
+  },
+  "NetBitStream": {
+   "total": 28,
+   "claimed": 0
+  },
+  "NetStruct": {
+   "total": 28,
+   "claimed": 5
+  },
+  "slim": {
+   "total": 28,
+   "claimed": 0
+  },
+  "QuestSavegame": {
+   "total": 27,
+   "claimed": 9
+  },
+  "PropertyMap": {
+   "total": 26,
+   "claimed": 0
+  },
+  "CConnection": {
+   "total": 26,
+   "claimed": 0
+  },
+  "NetStructInt": {
+   "total": 25,
+   "claimed": 1
+  },
+  "LiftableObject": {
+   "total": 25,
+   "claimed": 3
+  },
+  "PlayerInfo": {
+   "total": 24,
+   "claimed": 15
+  },
+  "ObjectiveList": {
+   "total": 24,
+   "claimed": 16
+  },
+  "ObjectiveTemplate_KillCharacter": {
+   "total": 24,
+   "claimed": 4
+  },
+  "MultiplayerCallback": {
+   "total": 24,
+   "claimed": 0
+  },
+  "CSocket": {
+   "total": 24,
+   "claimed": 0
+  },
+  "CNetPlayerInfo": {
+   "total": 23,
+   "claimed": 12
+  },
+  "PlayerStatManager": {
+   "total": 23,
+   "claimed": 1
+  },
+  "AnimatedFX": {
+   "total": 23,
+   "claimed": 0
+  },
+  "CNetworkEmulation": {
+   "total": 23,
+   "claimed": 0
+  },
+  "RootSceneNode": {
+   "total": 22,
+   "claimed": 11
+  },
+  "AnimationSet": {
+   "total": 22,
+   "claimed": 3
+  },
+  "StreamReader": {
+   "total": 21,
+   "claimed": 14
+  },
+  "StreamBuffer": {
+   "total": 21,
+   "claimed": 0
+  },
+  "StateMachine": {
+   "total": 21,
+   "claimed": 4
+  },
+  "AnimatorBlender": {
+   "total": 21,
+   "claimed": 13
+  },
+  "Trigger": {
+   "total": 21,
+   "claimed": 5
+  },
+  "ScriptManager": {
+   "total": 21,
+   "claimed": 3
+  },
+  "LevelSavegame": {
+   "total": 21,
+   "claimed": 3
+  },
+  "AnimController": {
+   "total": 21,
+   "claimed": 2
+  },
+  "CBluetoothSocket": {
+   "total": 21,
+   "claimed": 0
+  },
+  "LightSetManager": {
+   "total": 20,
+   "claimed": 0
+  },
+  "AnimatorSynchronizedBlender": {
+   "total": 20,
+   "claimed": 0
+  },
+  "NetStructUInt": {
+   "total": 20,
+   "claimed": 0
+  },
+  "TrophyManager": {
+   "total": 20,
+   "claimed": 1
+  },
+  "Projectile": {
+   "total": 20,
+   "claimed": 0
+  },
+  "MenuMainMenu": {
+   "total": 20,
+   "claimed": 0
+  },
+  "AssetManager": {
+   "total": 20,
+   "claimed": 1
+  },
+  "CTcp": {
+   "total": 20,
+   "claimed": 0
+  },
+  "PhysicalWorld": {
+   "total": 19,
+   "claimed": 10
+  },
+  "RoomZone": {
+   "total": 19,
+   "claimed": 5
+  },
+  "TriggerPlate": {
+   "total": 19,
+   "claimed": 0
+  },
+  "LightBase": {
+   "total": 19,
+   "claimed": 0
+  },
+  "FlashAnimManager": {
+   "total": 19,
+   "claimed": 0
+  },
+  "HUDControls": {
+   "total": 19,
+   "claimed": 1
+  },
+  "MenuWorldMap": {
+   "total": 19,
+   "claimed": 0
+  },
+  "TiXmlDeclaration": {
+   "total": 19,
+   "claimed": 0
+  },
+  "CRoomSearchFilter": {
+   "total": 19,
+   "claimed": 0
+  },
+  "Savegame": {
+   "total": 18,
+   "claimed": 3
+  },
+  "NetStructString": {
+   "total": 18,
+   "claimed": 1
+  },
+  "TriggerObject": {
+   "total": 18,
+   "claimed": 1
+  },
+  "ProjectileTrap": {
+   "total": 18,
+   "claimed": 0
+  },
+  "OpenableContainer": {
+   "total": 18,
+   "claimed": 0
+  },
+  "GameSWFUtils": {
+   "total": 18,
+   "claimed": 0
+  },
+  "AnimatorSet": {
+   "total": 17,
+   "claimed": 12
+  },
+  "DestructibleContainer": {
+   "total": 17,
+   "claimed": 0
+  },
+  "CharAIScript": {
+   "total": 17,
+   "claimed": 13
+  },
+  "Objective": {
+   "total": 17,
+   "claimed": 8
+  },
+  "TiXmlDocument": {
+   "total": 17,
+   "claimed": 0
+  },
+  "PFFloor": {
+   "total": 17,
+   "claimed": 10
+  },
+  "ADevice": {
+   "total": 17,
+   "claimed": 0
+  },
+  "CSignInGLLiveObserver": {
+   "total": 17,
+   "claimed": 0
+  },
+  "NetStructMember": {
+   "total": 16,
+   "claimed": 1
+  },
+  "TimerTrap": {
+   "total": 16,
+   "claimed": 0
+  },
+  "CharAISkillScript": {
+   "total": 16,
+   "claimed": 7
+  },
+  "CharTimers": {
+   "total": 16,
+   "claimed": 11
+  },
+  "CameraBase": {
+   "total": 16,
+   "claimed": 0
+  },
+  "TiXmlAttribute": {
+   "total": 16,
+   "claimed": 0
+  },
+  "CUdp": {
+   "total": 16,
+   "claimed": 0
+  },
+  "TouchScreenIPhone": {
+   "total": 15,
+   "claimed": 0
+  },
+  "GSLevel": {
+   "total": 15,
+   "claimed": 3
+  },
+  "NetStructRangedFloat": {
+   "total": 15,
+   "claimed": 0
+  },
+  "CameraTarget": {
+   "total": 15,
+   "claimed": 0
+  },
+  "MenuCharacterSelect": {
+   "total": 15,
+   "claimed": 0
+  },
+  "MenuDebugHUD": {
+   "total": 15,
+   "claimed": 0
+  },
+  "AnimSetManager": {
+   "total": 15,
+   "claimed": 3
+  },
+  "PFObject": {
+   "total": 15,
+   "claimed": 7
+  },
+  "DebugSwitches": {
+   "total": 14,
+   "claimed": 7
+  },
+  "InputManager": {
+   "total": 14,
+   "claimed": 8
+  },
+  "FileSystemBase": {
+   "total": 14,
+   "claimed": 0
+  },
+  "TriggerZone": {
+   "total": 14,
+   "claimed": 4
+  },
+  "InfoHUDManager": {
+   "total": 14,
+   "claimed": 0
+  },
+  "BlendedAnimSetController": {
+   "total": 14,
+   "claimed": 4
+  },
+  "GameEventManager": {
+   "total": 14,
+   "claimed": 0
+  },
+  "SWFAnim": {
+   "total": 14,
+   "claimed": 0
+  },
+  "TiXmlBase": {
+   "total": 14,
+   "claimed": 0
+  },
+  "CSignInGLLive": {
+   "total": 14,
+   "claimed": 0
+  },
+  "updateJob_thread": {
+   "total": 13,
+   "claimed": 0
+  },
+  "EventManager": {
+   "total": 13,
+   "claimed": 0
+  },
+  "ColladaFactory": {
+   "total": 13,
+   "claimed": 1
+  },
+  "BaseMeshSceneNode": {
+   "total": 13,
+   "claimed": 1
+  },
+  "XrayModularSkinnedMeshSceneNode": {
+   "total": 13,
+   "claimed": 0
+  },
+  "PFRoom": {
+   "total": 13,
+   "claimed": 5
+  },
+  "Zone": {
+   "total": 13,
+   "claimed": 5
+  },
+  "SpawnSpot": {
+   "total": 13,
+   "claimed": 0
+  },
+  "batch": {
+   "total": 13,
+   "claimed": 0
+  },
+  "CameraLevel": {
+   "total": 13,
+   "claimed": 2
+  },
+  "MenuMinimap": {
+   "total": 13,
+   "claimed": 0
+  },
+  "MultiMenuManager": {
+   "total": 13,
+   "claimed": 0
+  },
+  "TiXmlPrinter": {
+   "total": 13,
+   "claimed": 0
+  },
+  "TiXmlComment": {
+   "total": 13,
+   "claimed": 0
+  },
+  "Random": {
+   "total": 12,
+   "claimed": 12
+  },
+  "ShadowModularSkinnedMeshSceneNode": {
+   "total": 12,
+   "claimed": 0
+  },
+  "AnimApplicator": {
+   "total": 12,
+   "claimed": 8
+  },
+  "GSKeyboard": {
+   "total": 12,
+   "claimed": 0
+  },
+  "SpawnPoint": {
+   "total": 12,
+   "claimed": 0
+  },
+  "MenuMerchant": {
+   "total": 12,
+   "claimed": 0
+  },
+  "MenuCharMenu_InvMain": {
+   "total": 12,
+   "claimed": 0
+  },
+  "AnimSetController": {
+   "total": 12,
+   "claimed": 1
+  },
+  "GameEvent": {
+   "total": 12,
+   "claimed": 0
+  },
+  "Vector3DFList": {
+   "total": 12,
+   "claimed": 0
+  },
+  "SWFAnimManager": {
+   "total": 12,
+   "claimed": 0
+  },
+  "TiXmlText": {
+   "total": 12,
+   "claimed": 0
+  },
+  "BufferedRenderer": {
+   "total": 12,
+   "claimed": 0
+  },
+  "NetStructArray": {
+   "total": 12,
+   "claimed": 0
+  },
+  "ObjectHandle": {
+   "total": 11,
+   "claimed": 4
+  },
+  "ShadowSkinnedMeshSceneNode": {
+   "total": 11,
+   "claimed": 0
+  },
+  "Animator": {
+   "total": 11,
+   "claimed": 2
+  },
+  "Device": {
+   "total": 11,
+   "claimed": 0
+  },
+  "StateBase": {
+   "total": 11,
+   "claimed": 0
+  },
+  "GSConsole": {
+   "total": 11,
+   "claimed": 0
+  },
+  "GSInit": {
+   "total": 11,
+   "claimed": 1
+  },
+  "Billboard": {
+   "total": 11,
+   "claimed": 0
+  },
+  "Module": {
+   "total": 11,
+   "claimed": 3
+  },
+  "SoundEmitter": {
+   "total": 11,
+   "claimed": 0
+  },
+  "ZoneEx": {
+   "total": 11,
+   "claimed": 0
+  },
+  "AISPlayer": {
+   "total": 11,
+   "claimed": 3
+  },
+  "ProjectileManager": {
+   "total": 11,
+   "claimed": 0
+  },
+  "LightPoint": {
+   "total": 11,
+   "claimed": 0
+  },
+  "DragAndDrop": {
+   "total": 11,
+   "claimed": 0
+  },
+  "FSCommandParamTokenizer": {
+   "total": 11,
+   "claimed": 0
+  },
+  "RewardList": {
+   "total": 11,
+   "claimed": 8
+  },
+  "SWFAnimToolTip": {
+   "total": 11,
+   "claimed": 0
+  },
+  "CEvent": {
+   "total": 11,
+   "claimed": 0
+  },
+  "CSignIn": {
+   "total": 11,
+   "claimed": 0
+  },
+  "TouchScreenPS3": {
+   "total": 10,
+   "claimed": 0
+  },
+  "TouchScreenWin32": {
+   "total": 10,
+   "claimed": 0
+  },
+  "ZoomHandler": {
+   "total": 10,
+   "claimed": 2
+  },
+  "GSLevelMap": {
+   "total": 10,
+   "claimed": 0
+  },
+  "SlotContainer": {
+   "total": 10,
+   "claimed": 0
+  },
+  "LaserTypeProjectile": {
+   "total": 10,
+   "claimed": 0
+  },
+  "SpawnGroupManager": {
+   "total": 10,
+   "claimed": 0
+  },
+  "GS_InterruptLoading": {
+   "total": 10,
+   "claimed": 0
+  },
+  "MenuEnterName": {
+   "total": 10,
+   "claimed": 0
+  },
+  "AnchorGroup": {
+   "total": 10,
+   "claimed": 0
+  },
+  "TiXmlVisitor": {
+   "total": 10,
+   "claimed": 0
+  },
+  "PyDataArrays": {
+   "total": 10,
+   "claimed": 4
+  },
+  "TiXmlUnknown": {
+   "total": 10,
+   "claimed": 0
+  },
+  "CEventQueueBase": {
+   "total": 10,
+   "claimed": 0
+  },
+  "PerfCounters": {
+   "total": 9,
+   "claimed": 0
+  },
+  "Point3D": {
+   "total": 9,
+   "claimed": 6
+  },
+  "UserProperties": {
+   "total": 9,
+   "claimed": 0
+  },
+  "CMsgDropLoot": {
+   "total": 9,
+   "claimed": 0
+  },
+  "AccelerometerBase": {
+   "total": 9,
+   "claimed": 0
+  },
+  "ConditionData": {
+   "total": 9,
+   "claimed": 0
+  },
+  "InputManagerWin32": {
+   "total": 9,
+   "claimed": 6
+  },
+  "GSEndGame": {
+   "total": 9,
+   "claimed": 0
+  },
+  "GSFlashMenu": {
+   "total": 9,
+   "claimed": 0
+  },
+  "GSTest": {
+   "total": 9,
+   "claimed": 0
+  },
+  "GSViewer": {
+   "total": 9,
+   "claimed": 0
+  },
+  "AISFaery": {
+   "total": 9,
+   "claimed": 0
+  },
+  "ItemManager": {
+   "total": 9,
+   "claimed": 0
+  },
+  "LevelConfig": {
+   "total": 9,
+   "claimed": 0
+  },
+  "LevelMap": {
+   "total": 9,
+   "claimed": 0
+  },
+  "CameraOverview": {
+   "total": 9,
+   "claimed": 0
+  },
+  "MenuMultiplayerLobbyMulti": {
+   "total": 9,
+   "claimed": 0
+  },
+  "MenuCharMenu_InvDetails": {
+   "total": 9,
+   "claimed": 0
+  },
+  "Objective_GatherLoot": {
+   "total": 9,
+   "claimed": 2
+  },
+  "Objective_EventReceiver": {
+   "total": 9,
+   "claimed": 0
+  },
+  "TiXmlHandle": {
+   "total": 9,
+   "claimed": 0
+  },
+  "PyDataConstants": {
+   "total": 9,
+   "claimed": 3
+  },
+  "OnScreenKeyboard": {
+   "total": 9,
+   "claimed": 0
+  },
+  "_JNIEnv": {
+   "total": 9,
+   "claimed": 0
+  },
+  "CReadWriteLock": {
+   "total": 9,
+   "claimed": 0
+  },
+  "CBluetoothSocketAbstract": {
+   "total": 9,
+   "claimed": 0
+  },
+  "CTransportManagerImpl": {
+   "total": 9,
+   "claimed": 0
+  },
+  "CMsgRaisedEvent": {
+   "total": 8,
+   "claimed": 0
+  },
+  "CMsgQuestsSync": {
+   "total": 8,
+   "claimed": 0
+  },
+  "DialogMsg": {
+   "total": 8,
+   "claimed": 0
+  },
+  "DataReloaderManager": {
+   "total": 8,
+   "claimed": 0
+  },
+  "ModularSkinnedMeshSceneNode": {
+   "total": 8,
+   "claimed": 0
+  },
+  "SkinnedMeshSceneNode": {
+   "total": 8,
+   "claimed": 0
+  },
+  "SkyBoxMeshSceneNode": {
+   "total": 8,
+   "claimed": 0
+  },
+  "TriggerZoneExitLevel": {
+   "total": 8,
+   "claimed": 0
+  },
+  "NetStructInterpolatedRangedFloat": {
+   "total": 8,
+   "claimed": 0
+  },
+  "POCharacter": {
+   "total": 8,
+   "claimed": 1
+  },
+  "CSIdle": {
+   "total": 8,
+   "claimed": 5
+  },
+  "CSMove": {
+   "total": 8,
+   "claimed": 6
+  },
+  "AISMonster": {
+   "total": 8,
+   "claimed": 3
+  },
+  "v2EmuController": {
+   "total": 8,
+   "claimed": 0
+  },
+  "MenuDebug": {
+   "total": 8,
+   "claimed": 0
+  },
+  "MenuLeaderboard": {
+   "total": 8,
+   "claimed": 0
+  },
+  "Reward": {
+   "total": 8,
+   "claimed": 5
+  },
+  "TiXmlAttributeSet": {
+   "total": 8,
+   "claimed": 0
+  },
+  "CLobbyParameterAndQuery": {
+   "total": 8,
+   "claimed": 0
+  },
+  "DataPacket": {
+   "total": 8,
+   "claimed": 0
+  },
+  "ConfigFile": {
+   "total": 8,
+   "claimed": 0
+  },
+  "CMutex": {
+   "total": 7,
+   "claimed": 0
+  },
+  "TimerUtil": {
+   "total": 7,
+   "claimed": 0
+  },
+  "AnimatorSynchronizedSet": {
+   "total": 7,
+   "claimed": 0
+  },
+  "LuaManager": {
+   "total": 7,
+   "claimed": 7
+  },
+  "TestUD": {
+   "total": 7,
+   "claimed": 0
+  },
+  "AnimatedDecor": {
+   "total": 7,
+   "claimed": 1
+  },
+  "CSLimbus": {
+   "total": 7,
+   "claimed": 5
+  },
+  "CSSpawn": {
+   "total": 7,
+   "claimed": 5
+  },
+  "CSDespawn": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CSAttack": {
+   "total": 7,
+   "claimed": 5
+  },
+  "CSSkill": {
+   "total": 7,
+   "claimed": 5
+  },
+  "CSCast": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CSScared": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CSStunned": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CSKnockedBack": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CSInjured": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CSDead": {
+   "total": 7,
+   "claimed": 5
+  },
+  "CSAnim": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CSReviving": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CSRevived": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CSPreSpawn": {
+   "total": 7,
+   "claimed": 2
+  },
+  "CSLiftingIdle": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CSLiftingMove": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CSInteract": {
+   "total": 7,
+   "claimed": 0
+  },
+  "Dragable": {
+   "total": 7,
+   "claimed": 0
+  },
+  "Dropable": {
+   "total": 7,
+   "claimed": 0
+  },
+  "FSCommandParam": {
+   "total": 7,
+   "claimed": 0
+  },
+  "MenuConfirmBase": {
+   "total": 7,
+   "claimed": 0
+  },
+  "AnchorBase": {
+   "total": 7,
+   "claimed": 0
+  },
+  "AnchorForward": {
+   "total": 7,
+   "claimed": 0
+  },
+  "Condition": {
+   "total": 7,
+   "claimed": 6
+  },
+  "ConditionList": {
+   "total": 7,
+   "claimed": 6
+  },
+  "Objective_Automatic": {
+   "total": 7,
+   "claimed": 2
+  },
+  "MultiplayerStateMachine": {
+   "total": 7,
+   "claimed": 0
+  },
+  "CNetworkId": {
+   "total": 7,
+   "claimed": 0
+  },
+  "NetBitStreamArray": {
+   "total": 7,
+   "claimed": 0
+  },
+  "Buffer": {
+   "total": 6,
+   "claimed": 0
+  },
+  "Thread": {
+   "total": 6,
+   "claimed": 0
+  },
+  "CMsgControllerAction": {
+   "total": 6,
+   "claimed": 0
+  },
+  "CMsgAttackResult": {
+   "total": 6,
+   "claimed": 0
+  },
+  "CMsgInitialSetup": {
+   "total": 6,
+   "claimed": 0
+  },
+  "CMsgSpawnObject": {
+   "total": 6,
+   "claimed": 0
+  },
+  "UnderlaySceneNode": {
+   "total": 6,
+   "claimed": 0
+  },
+  "GamepadTweaker": {
+   "total": 6,
+   "claimed": 0
+  },
+  "AccelerometerIPhone": {
+   "total": 6,
+   "claimed": 0
+  },
+  "Dummy": {
+   "total": 6,
+   "claimed": 0
+  },
+  "Decor": {
+   "total": 6,
+   "claimed": 1
+  },
+  "ColBox": {
+   "total": 6,
+   "claimed": 0
+  },
+  "CheckpointZone": {
+   "total": 6,
+   "claimed": 0
+  },
+  "QuestMoveInZone": {
+   "total": 6,
+   "claimed": 0
+  },
+  "AISPlayerIPhone": {
+   "total": 6,
+   "claimed": 2
+  },
+  "v2GamepadController": {
+   "total": 6,
+   "claimed": 0
+  },
+  "v2NetController": {
+   "total": 6,
+   "claimed": 0
+  },
+  "v2PS3MoveController": {
+   "total": 6,
+   "claimed": 0
+  },
+  "DebugCachedCharacter": {
+   "total": 6,
+   "claimed": 0
+  },
+  "MenuHUDConfirm": {
+   "total": 6,
+   "claimed": 0
+  },
+  "MenuConfirm": {
+   "total": 6,
+   "claimed": 0
+  },
+  "MenuFlash2DCamera": {
+   "total": 6,
+   "claimed": 3
+  },
+  "POZone": {
+   "total": 6,
+   "claimed": 0
+  },
+  "Objective_MoveInZone": {
+   "total": 6,
+   "claimed": 2
+  },
+  "Objective_TalkToNPC": {
+   "total": 6,
+   "claimed": 2
+  },
+  "ObjectiveTemplate_KillEnemies": {
+   "total": 6,
+   "claimed": 4
+  },
+  "CSemaphore": {
+   "total": 6,
+   "claimed": 0
+  },
+  "CNetMutex": {
+   "total": 6,
+   "claimed": 0
+  },
+  "CTransport": {
+   "total": 6,
+   "claimed": 0
+  },
+  "item": {
+   "total": 6,
+   "claimed": 0
+  },
+  "channel": {
+   "total": 6,
+   "claimed": 0
+  },
+  "CMsgStartGame": {
+   "total": 5,
+   "claimed": 0
+  },
+  "CMsgMenuReady": {
+   "total": 5,
+   "claimed": 0
+  },
+  "CMsgScriptCmd": {
+   "total": 5,
+   "claimed": 0
+  },
+  "CMsgIsHost": {
+   "total": 5,
+   "claimed": 0
+  },
+  "CMsgAskResendAttributes": {
+   "total": 5,
+   "claimed": 0
+  },
+  "PlayerLightTweaker": {
+   "total": 5,
+   "claimed": 0
+  },
+  "Gamepad": {
+   "total": 5,
+   "claimed": 3
+  },
+  "MeshSceneNode": {
+   "total": 5,
+   "claimed": 0
+  },
+  "TestUD2": {
+   "total": 5,
+   "claimed": 0
+  },
+  "Floor": {
+   "total": 5,
+   "claimed": 0
+  },
+  "PODecor": {
+   "total": 5,
+   "claimed": 2
+  },
+  "v2HudController": {
+   "total": 5,
+   "claimed": 1
+  },
+  "AbstractTableModel": {
+   "total": 5,
+   "claimed": 0
+  },
+  "POItem": {
+   "total": 5,
+   "claimed": 0
+  },
+  "POProjectile": {
+   "total": 5,
+   "claimed": 0
+  },
+  "Objective_SavedQty": {
+   "total": 5,
+   "claimed": 2
+  },
+  "Reward_Gold": {
+   "total": 5,
+   "claimed": 4
+  },
+  "Reward_XP": {
+   "total": 5,
+   "claimed": 4
+  },
+  "Reward_CharacterProps": {
+   "total": 5,
+   "claimed": 3
+  },
+  "Reward_Loot": {
+   "total": 5,
+   "claimed": 3
+  },
+  "Reward_ConsumeLoot": {
+   "total": 5,
+   "claimed": 3
+  },
+  "CDataStats": {
+   "total": 5,
+   "claimed": 0
+  },
+  "CSignInDummy": {
+   "total": 5,
+   "claimed": 0
+  },
+  "CMsgGlobalDeath": {
+   "total": 4,
+   "claimed": 0
+  },
+  "ISerializable": {
+   "total": 4,
+   "claimed": 0
+  },
+  "InputManagerEventReceiver": {
+   "total": 4,
+   "claimed": 0
+  },
+  "IrrFactory": {
+   "total": 4,
+   "claimed": 0
+  },
+  "NetStructBool": {
+   "total": 4,
+   "claimed": 0
+  },
+  "ScriptCmdImpl": {
+   "total": 4,
+   "claimed": 0
+  },
+  "Script_MarkCharacterAsScripted": {
+   "total": 4,
+   "claimed": 0
+  },
+  "Condition_IsLevelInState": {
+   "total": 4,
+   "claimed": 2
+  },
+  "Condition_IsPlayerAtLevel": {
+   "total": 4,
+   "claimed": 2
+  },
+  "Condition_IsQuestInStateGeneric": {
+   "total": 4,
+   "claimed": 3
+  },
+  "Condition_IsEventInState": {
+   "total": 4,
+   "claimed": 2
+  },
+  "Condition_IsPlayerInLevel": {
+   "total": 4,
+   "claimed": 3
+  },
+  "Array2d": {
+   "total": 4,
+   "claimed": 0
+  },
+  "PFGInnerEdge": {
+   "total": 4,
+   "claimed": 3
+  },
+  "PFGInnerDirectEdge": {
+   "total": 4,
+   "claimed": 2
+  },
+  "NetStructNetworkId": {
+   "total": 4,
+   "claimed": 0
+  },
+  "CNetLog": {
+   "total": 4,
+   "claimed": 0
+  },
+  "CSignInCredentials": {
+   "total": 4,
+   "claimed": 0
+  },
+  "AdpcmState": {
+   "total": 4,
+   "claimed": 0
+  },
+  "Point2D": {
+   "total": 3,
+   "claimed": 1
+  },
+  "sys": {
+   "total": 3,
+   "claimed": 0
+  },
+  "IEvent": {
+   "total": 3,
+   "claimed": 0
+  },
+  "GCSingleton": {
+   "total": 3,
+   "claimed": 0
+  },
+  "Keyboard": {
+   "total": 3,
+   "claimed": 3
+  },
+  "Mouse": {
+   "total": 3,
+   "claimed": 3
+  },
+  "IFileStream": {
+   "total": 3,
+   "claimed": 0
+  },
+  "AchievementMsg": {
+   "total": 3,
+   "claimed": 0
+  },
+  "NetStructInterpolation": {
+   "total": 3,
+   "claimed": 0
+  },
+  "SlideEventCharacter": {
+   "total": 3,
+   "claimed": 0
+  },
+  "CharPropTextField": {
+   "total": 3,
+   "claimed": 0
+  },
+  "CharMenuTutorialMsg": {
+   "total": 3,
+   "claimed": 0
+  },
+  "Script_StartDialog": {
+   "total": 3,
+   "claimed": 0
+  },
+  "Script_PlayEffect": {
+   "total": 3,
+   "claimed": 0
+  },
+  "Script_ShowFlash": {
+   "total": 3,
+   "claimed": 0
+  },
+  "Script_HideFlash": {
+   "total": 3,
+   "claimed": 0
+  },
+  "Script_Wait": {
+   "total": 3,
+   "claimed": 3
+  },
+  "Script_PutCharacterInIdle": {
+   "total": 3,
+   "claimed": 0
+  },
+  "Script_PlayActorAnim": {
+   "total": 3,
+   "claimed": 0
+  },
+  "QE_KillEnemies": {
+   "total": 3,
+   "claimed": 0
+  },
+  "QE_ClearEnemies": {
+   "total": 3,
+   "claimed": 0
+  },
+  "QE_KillEnemyTemplate": {
+   "total": 3,
+   "claimed": 0
+  },
+  "QE_ClearEnemyTemplate": {
+   "total": 3,
+   "claimed": 0
+  },
+  "QE_InteractWith": {
+   "total": 3,
+   "claimed": 0
+  },
+  "QE_GatherLoot": {
+   "total": 3,
+   "claimed": 0
+  },
+  "QE_MoveInZone": {
+   "total": 3,
+   "claimed": 0
+  },
+  "VectorSet": {
+   "total": 3,
+   "claimed": 0
+  },
+  "TiXmlPrinterDH": {
+   "total": 3,
+   "claimed": 0
+  },
+  "PFGInnerGraph": {
+   "total": 3,
+   "claimed": 0
+  },
+  "CBluetoothNetRoomInfo": {
+   "total": 3,
+   "claimed": 0
+  },
+  "tFriendInfo": {
+   "total": 3,
+   "claimed": 0
+  },
+  "CTransportFactory": {
+   "total": 3,
+   "claimed": 0
+  },
+  "CSocketAbstract": {
+   "total": 3,
+   "claimed": 0
+  },
+  "EvKeyboard": {
+   "total": 2,
+   "claimed": 0
+  },
+  "EvMouseMove": {
+   "total": 2,
+   "claimed": 0
+  },
+  "EvMouseButton": {
+   "total": 2,
+   "claimed": 0
+  },
+  "EvMouseWheel": {
+   "total": 2,
+   "claimed": 0
+  },
+  "EvGamepad": {
+   "total": 2,
+   "claimed": 0
+  },
+  "IEventReceiver": {
+   "total": 2,
+   "claimed": 0
+  },
+  "EvTouchScreenPress": {
+   "total": 2,
+   "claimed": 0
+  },
+  "EvTouchScreenMove": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Rct": {
+   "total": 2,
+   "claimed": 0
+  },
+  "EvAcceleration": {
+   "total": 2,
+   "claimed": 0
+  },
+  "NonCopyable": {
+   "total": 2,
+   "claimed": 0
+  },
+  "InputDevice": {
+   "total": 2,
+   "claimed": 2
+  },
+  "TrophyData": {
+   "total": 2,
+   "claimed": 0
+  },
+  "POColmap": {
+   "total": 2,
+   "claimed": 0
+  },
+  "QuestEvent": {
+   "total": 2,
+   "claimed": 0
+  },
+  "QE_TriggerOn": {
+   "total": 2,
+   "claimed": 0
+  },
+  "QE_TriggerPlate": {
+   "total": 2,
+   "claimed": 0
+  },
+  "QE_DestroyGameObject": {
+   "total": 2,
+   "claimed": 0
+  },
+  "QE_OpenGameObject": {
+   "total": 2,
+   "claimed": 0
+  },
+  "QE_TalkToNPC": {
+   "total": 2,
+   "claimed": 0
+  },
+  "POVillager": {
+   "total": 2,
+   "claimed": 0
+  },
+  "POPlayer": {
+   "total": 2,
+   "claimed": 0
+  },
+  "POFollower": {
+   "total": 2,
+   "claimed": 0
+  },
+  "POFaerie": {
+   "total": 2,
+   "claimed": 0
+  },
+  "POMonster": {
+   "total": 2,
+   "claimed": 0
+  },
+  "CharState": {
+   "total": 2,
+   "claimed": 0
+  },
+  "QE_PickedUpLiftable": {
+   "total": 2,
+   "claimed": 0
+  },
+  "VarArgs": {
+   "total": 2,
+   "claimed": 0
+  },
+  "EvGamepadAxis": {
+   "total": 2,
+   "claimed": 0
+  },
+  "FlashAnimContext": {
+   "total": 2,
+   "claimed": 0
+  },
+  "tRoomInfo": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_EmptyImpl": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_EnterCutSceneMode": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_ExitCutSceneMode": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_CONSOLE": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_PlaySound": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_StopSound": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_PlayLevelMusic": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_EnterSafeZone": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_LeaveSafeZone": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SetCamera": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SetCameraClip": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_StartDialogID": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_PlayAnimById": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_PlayAnimByName": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_StopEffect": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_LockCharacter": {
+   "total": 2,
+   "claimed": 1
+  },
+  "Script_UnlockCharacter": {
+   "total": 2,
+   "claimed": 1
+  },
+  "Script_SetFaeryState": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_IncFaeryLevel": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_PutCharacterInLimbus": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SpawnCharacter": {
+   "total": 2,
+   "claimed": 1
+  },
+  "Script_AIEnableTimer": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_AIResetTimer": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_AIDoSkill": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_AISetHP": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_AIChangeScript": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_AISetInt": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_StopActor": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_DropLoot": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_AutoEquip": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_UnEquipItemFromSlot": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_UnEquipHands": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_ReEquipHands": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SetStatic": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_LookActor": {
+   "total": 2,
+   "claimed": 1
+  },
+  "Script_ShowActor": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_HideActor": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_KillActor": {
+   "total": 2,
+   "claimed": 1
+  },
+  "Script_SetActorPosition": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SetActorMaster": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_OpenDoor": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_CloseDoor": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_ActivateProjectileTrap": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_DeactivateProjectileTrap": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_ActivateTriggerPlate": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_DeactivateTriggerPlate": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SpawnContainer": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SetLevelState": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SetWorldMapLocationState": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_RestartLevel": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_ChangeLevel": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_ShowTrophies": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_EndGame": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_AwardEndGameTrophies": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_AwardTrophy": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SaveGame": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_BlockSaveGame": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_EnqueueTutorialMessage": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SkipTutorialMessage": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SkipAllTutorialMessages": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_EnqueueCharMenuTutorialMessage": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SkipCharMenuTutorialMessage": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SkipAllCharMenuTutorialMessages": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_LockTutorial": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_DoTutorial": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_FlushMessages": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_ExecScript": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_SetCameraTarget": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_WaitCamera": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_PlayCamera": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Script_MoveActor": {
+   "total": 2,
+   "claimed": 1
+  },
+  "Script_WaitDialog": {
+   "total": 2,
+   "claimed": 0
+  },
+  "PhysicalBaseObject": {
+   "total": 2,
+   "claimed": 0
+  },
+  "Condition_IsQuestStateHigher": {
+   "total": 2,
+   "claimed": 2
+  },
+  "Condition_IsQuestStateLower": {
+   "total": 2,
+   "claimed": 2
+  },
+  "Condition_IsQuestInState": {
+   "total": 2,
+   "claimed": 2
+  },
+  "Objective_Qty": {
+   "total": 2,
+   "claimed": 0
+  },
+  "IDataReloader": {
+   "total": 2,
+   "claimed": 0
+  },
+  "PFGInnerNode": {
+   "total": 2,
+   "claimed": 0
+  },
+  "PFGOuterGraph": {
+   "total": 2,
+   "claimed": 0
+  },
+  "PFInnerTest_PathValidity": {
+   "total": 2,
+   "claimed": 2
+  },
+  "PFInnerTest_PFObject": {
+   "total": 2,
+   "claimed": 2
+  },
+  "rss": {
+   "total": 2,
+   "claimed": 0
+  },
+  "switchD_008a7b5c": {
+   "total": 2,
+   "claimed": 0
+  },
+  "unsigned int StreamReader": {
+   "total": 1,
+   "claimed": 1
+  },
+  "lstr": {
+   "total": 1,
+   "claimed": 0
+  },
+  "unsigned char StreamReader": {
+   "total": 1,
+   "claimed": 1
+  },
+  "SortModuleByDistance": {
+   "total": 1,
+   "claimed": 0
+  },
+  "Animation": {
+   "total": 1,
+   "claimed": 0
+  },
+  "ByteArray": {
+   "total": 1,
+   "claimed": 1
+  },
+  "Property": {
+   "total": 1,
+   "claimed": 0
+  },
+  "SortByValueAndClass": {
+   "total": 1,
+   "claimed": 0
+  },
+  "SortByEquipability": {
+   "total": 1,
+   "claimed": 0
+  },
+  "BufferedStream": {
+   "total": 1,
+   "claimed": 0
+  },
+  "TestCharTemplate": {
+   "total": 1,
+   "claimed": 0
+  },
+  "TestCharPropId": {
+   "total": 1,
+   "claimed": 0
+  },
+  "PolyStat": {
+   "total": 1,
+   "claimed": 0
+  },
+  "PropertyInstance": {
+   "total": 1,
+   "claimed": 0
+  },
+  "TiXmlParsingData": {
+   "total": 1,
+   "claimed": 0
+  },
+  "PFInnerTest_BasicIdentity": {
+   "total": 1,
+   "claimed": 1
+  },
+  "SearchFailCache": {
+   "total": 1,
+   "claimed": 1
+  },
+  "MaterialData": {
+   "total": 1,
+   "claimed": 0
+  },
+  "GameCenterInfo": {
+   "total": 1,
+   "claimed": 0
+  },
+  "tGLRoomInfo": {
+   "total": 1,
+   "claimed": 0
+  },
+  "tMemberInfo": {
+   "total": 1,
+   "claimed": 0
+  },
+  "_LiveFeed": {
+   "total": 1,
+   "claimed": 0
+  },
+  "switchD_008a02e8": {
+   "total": 1,
+   "claimed": 0
+  }
+ }
+}

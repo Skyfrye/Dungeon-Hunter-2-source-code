@@ -1,0 +1,113 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Energy Spawner behavior: 
+-- 
+-- - Shoots an energy projectile towards the Resurrecting God
+-- ----------------------------------------------------------------------------------------------------
+local m_timer_attack_min = 1000;
+local m_timer_attack_max = 3500;
+local m_timer_attack = GetRand(m_timer_attack_min, m_timer_attack_max);
+
+local t_timer = -1;
+
+function energyspawner_OnInitFinal()
+	m_attack_flag = false;
+
+	SetIsActorTargetable(false);
+	EnableCollisions(false);
+end
+AddToVFTable("OnInitFinal", "energyspawner_OnInitFinal");
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+function energyspawner_OnEnemySpotted(enemy)
+		if(not HasTarget()) then
+	 		AddAggro(enemy, 0);
+	 		SetTarget(enemy);
+	 	end
+end
+AddToVFTable("OnEnemySpotted", "energyspawner_OnEnemySpotted");
+
+
+
+-- -------------------------------------------------------------------------------
+function energyspawner_OnTargetDied()
+	Stop();
+	ClearTarget();
+end
+AddToVFTable("OnTargetDied", "energyspawner_OnTargetDied");
+
+
+
+-- -------------------------------------------------------------------------------
+function energyspawner_OnTargetOutOfSight()
+end
+AddToVFTable("OnTargetOutOfSight", "energyspawner_OnTargetOutOfSight");
+
+
+
+-- -------------------------------------------------------------------------------
+function energyspawner_OnTargetInSight()
+end
+AddToVFTable("OnTargetInSight", "energyspawner_OnTargetInSight");
+
+
+
+-- -------------------------------------------------------------------------------
+function energyspawner_OnTargetOutOfRange()
+end
+AddToVFTable("OnTargetOutOfRange", "energyspawner_OnTargetOutOfRange");
+
+
+
+-- -------------------------------------------------------------------------------
+function energyspawner_DoDamage()
+	StopTimerCB(t_timer);
+	t_timer = -1;
+	DoSkill(0);
+	m_timer_attack = GetRand(m_timer_attack_min, m_timer_attack_max);
+	m_attack_flag = false;
+end
+
+function energyspawner_OnTargetInRangedRange()
+	if(CanAttackFromRange()) then
+	local state = GetState();
+
+		if(	state == GetPyCst("AIStates", "Idle")) then
+			if( not m_attack_flag ) then
+				Stop();
+				m_attack_flag = true;
+				t_timer = StartTimerCB(m_timer_attack, false, energyspawner_DoDamage);
+			end
+		end
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "energyspawner_OnTargetInRangedRange");
+
+
+
+-- -------------------------------------------------------------------------------
+function energyspawner_OnDied()
+	if (t_timer ~= -1) then
+		StopTimerCB(t_timer);
+	end
+end
+AddToVFTable("OnDied", "energyspawner_OnDied");
+
+
+
+-- -------------------------------------------------------------------------------
+function energyspawner_OnTargetInCloseRange()
+end
+AddToVFTable("OnTargetInCloseRange", "energyspawner_OnTargetInCloseRange");
+
+
+
+-- -------------------------------------------------------------------------------
+function energyspawner_OnTargetInMeleeRange()
+end
+AddToVFTable("OnTargetInMeleeRange", "energyspawner_OnTargetInMeleeRange");

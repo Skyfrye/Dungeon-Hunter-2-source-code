@@ -1,0 +1,13 @@
+boss_firetemple_s_00.mgx
+corner_firetemple_ne_00.mgx
+corner_firetemple_nw_00.mgx
+corner_firetemple_se_00.mgx
+corner_firetemple_sw_00.mgx
+entrance_firetemple_en_00.mgx
+fallentowerrepeat_firetemple_ns_00.mgx
+fallentowertop_firetemple_ns_00.mgx
+straight_firetemple_ns_00.mgx
+straight_firetemple_we_00.mgx
+towerknockdown_firetemple_ns_00.mgx
+t_firetemple_nse_00.mgx
+t_firetemple_nsw_00.mgx

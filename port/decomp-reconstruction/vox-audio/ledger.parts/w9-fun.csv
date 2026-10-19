@@ -1,0 +1,4 @@
+elf_address,symbol,status,source_file,notes
+0x890364,FUN_008a0364,partial,vox-audio/src/w9-fun/fun_008a0364_copy_slot24.cpp,"Copies three 32-bit words into the object field at +0x24..+0x2c; owning class not identified, so the caller passes that field. Ghidra body only; no IDA label in the asm listing. Test: tests/w9_fun_copy_slot24_test.cpp"
+0x892330,FUN_008a2330,skipped,,"ARM thunk: tail-branches to __aeabi_fsub (soft-float subtract, 0x30e3ac); forwarding thunk, not reimplemented. Ghidra body only; no IDA label in the asm listing"
+0x897e90,FUN_008a7e90,skipped,,"Musepack-range register-aliased state machine (about 7 KB Ghidra pseudocode, self-jumps through FUN_008a7e90, table reads via mpc_bits_read, mpc_random_int fill). Entry is not an IDA label (asm lookup fails), and the struct layouts behind r4/r5/r11 are not identified, so no port. Needs IDA asm review first"

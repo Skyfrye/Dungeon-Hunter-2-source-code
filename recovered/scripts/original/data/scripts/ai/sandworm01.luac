@@ -1,0 +1,75 @@
+-- -----------------------------------------------------------------------------
+-- SANDWORM 1 DEFINITION
+-- -----------------------------------------------------------------------------
+
+-- Since this script call the "core" with all the functions
+-- It contain only the variable definitions that define it behavior
+-- HACK! HACK! Using global variable because of a scope issue
+
+Include("sandworm_core.lua");
+
+-- FLAGS
+debugTrace_flag		= false;	
+attack_flag				= false; -- checks if the character is ready to attack.
+first_melee_flag		= true; 	-- checks if the first melee attack can be initialized.
+fa_phase1_flag			= true; 	-- checks if a first action can be performed when switching to phase 1.
+fa_phase2_flag			= true; 	-- checks if a first action can be performed when switching to phase 2.
+SE_event1_flag			= true; 	-- checks if special event 1 can be performed (Enters weakness state at HP < 75%).
+SE_event2_flag			= true; 	-- checks if special event 2 can be performed (Enters weakness state at HP < 50%).
+
+diveAnim_flag			= false; -- checks if the OnEndOfAnim event can be used to check the dive anim status.
+
+intimidateAnim_flag	= 0; -- checks if the OnEndOfAnim event can be used to check the intimidate anim status and which action to take after.
+								--	= 1; -- Do nothing, return to idle.
+								--	= 2; -- Perform DoSkill(2).
+								
+timer_attack_flag			= nil;
+timer_outOfRange_flag	= nil;
+timer_dive_flag			= nil;
+timer_intimidate_flag	= nil;
+
+
+-- CONSTANTS
+ST_IDLE			= 0;
+ST_INTIMIDATE	= 1;
+ST_DIVE			= 2;
+ST_WEAK			= 3;
+
+SK_STATE			= ST_IDLE;
+
+SK_PHASE_ID		= -1;
+
+DEBUFF_ID		= GetPyOID("ClassTable", "Swampking_Debuff"); 
+
+MELEE_RANGE		= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMinDistance")));
+RANGED_RANGE	= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMaxDistance")));
+
+-- DATA
+normalRangedAttack_prob		= 35;					-- chances in PCT to perform a regular ranged attack.
+normalMeleeAttack1_prob 	= 50; 				-- chances in PCT to perform a regular melee attack in phase 1.
+normalMeleeAttack2_prob		= {20, 20, 60};	-- chances in PCT to perform one of the 3 regular melee/ranged attacks in phase 2 - !Cumulative values - MUST MATCH 100%.
+																	--  {Atk 1, Atk 2, Atk 4} - HARDCODED table for phase 2 probs.
+											
+firstMeleeAttack2_prob 		= 50; 				-- chances in PCT to perform a first regular melee attack in phase 2.
+
+phase2_initPct					= 75;					-- HP PCT of the character at when to init phase 2.
+sk_spawn_points				= {					-- Spawn point names table for the Dive attack.
+												"_prim_SandWormSpawnPoint_03", -- HARDCODED - First one is the phase 2 only SawnPoint.
+												"_prim_SandWormSpawnPoint_02", 
+												"_prim_SandWormSpawnPoint_01", 
+												"_prim_SandWormSpawnPoint_04", 
+												"_prim_SandWormSpawnPoint_05"
+												};
+
+
+-- TIMERS
+ATTACK_DELAY 				= 1000; 	-- Timer attack delay.
+WEAK_DELAY					= 6000;	-- Timer for weak state.
+DIVE_DELAY					= 2000;	-- Timer for dive state.
+INTIMIDATE_DELAY			= 3000;	-- Timer for intimidate state.
+OUTOFRANGE_MIN_DELAY		= 500;	-- Timer for out of range minimum reaction delay.
+OUTOFRANGE_MAX_DELAY		= 2000;	-- Timer for out of range maximum reaction delay.
+
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------

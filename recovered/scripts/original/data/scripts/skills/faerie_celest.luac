@@ -1,0 +1,309 @@
+--[[	Celest Faerie Spell
+
+	Multiple targets; lightning strikes
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local MANA_BASE		= {ToFixed(10), ToFixed(20)};		-- Base mana cost
+local MANA_PLVL		= {ToFixed(0.2), ToFixed(0.2)};	-- Mana cost per player level
+local MANA_SLVL		= {ToFixed(0), ToFixed(0)};		-- Mana cost per skill level
+
+local RANGE				= {600, 800};
+
+local CLASS_ID			= GetPyOID("ClassTable", "Spell_Lightning_1");
+local LIGHTNING_BUFF_ID		= GetPyOID("ClassTable", "Celeste_LightningResistance");
+local FIRE_BUFF_ID			= GetPyOID("ClassTable", "Avalon_FireResistance");
+local EARTH_BUFF_ID			= GetPyOID("ClassTable", "Primula_EarthResistance");
+local WATER_BUFF_ID			= GetPyOID("ClassTable", "Maria_WaterResistance");
+local WIND_BUFF_ID			= GetPyOID("ClassTable", "Sylph_WindResistance");
+
+local AW_LIGHTNING_BUFF_ID		= GetPyOID("ClassTable", "AW_Celeste_LightningResistance");
+local AW_FIRE_BUFF_ID			= GetPyOID("ClassTable", "AW_Avalon_FireResistance");
+local AW_EARTH_BUFF_ID			= GetPyOID("ClassTable", "AW_Primula_EarthResistance");
+local AW_WATER_BUFF_ID			= GetPyOID("ClassTable", "AW_Maria_WaterResistance");
+local AW_WIND_BUFF_ID			= GetPyOID("ClassTable", "AW_Sylph_WindResistance");
+
+local cooldown		= 0;
+
+local TARGET_LOW		= 1;
+local TARGET_MED		= 3;
+local TARGET_HIGH		= 6;
+
+-- Cached values
+local skill_level;
+local mana_cost;
+local target;
+
+local Init			= false;
+local fire_buff	= nil;
+local water_buff	= nil;
+local earth_buff	= nil;
+local	wind_buff	= nil;
+local	lightning_buff = nil;
+local PreviousEquip = "None";
+local oldbuff		= nil;
+local oldlevel		= 0;
+
+local traces		= false;
+
+-- ----------------------------------------------------------------------------------------------
+-- UTILS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function removeOldBuff(element)
+	if (traces) then Trace("Removal asked for "..element); end
+	if (element=="Fire") then
+		RemoveBuff(oldbuff,fire_buff);
+		fire_buff=nil;
+		return
+	end
+	if (element=="Water") then
+		RemoveBuff(oldbuff, water_buff);
+		water_buff=nil;
+		return
+	end
+	if (element=="Wind") then
+		RemoveBuff(oldbuff, wind_buff);
+		wind_buff=nil;
+		return
+	end
+	if (element=="Earth") then
+		RemoveBuff(oldbuff, earth_buff);
+		earth_buff=nil;
+		return
+	end
+	if (element=="Lightning") then
+		RemoveBuff(oldbuff, lightning_buff);
+		lightning_buff=nil;
+		return
+	end
+end
+-- Will check for the Faeries type and level and activate the proper buff
+local function CheckFaeries()
+	if (GetEquippedFaeryElement()==GetPyCst("Elemental", "Fire")) then
+		local level = GetCurrentEquippedFaeryLevel();
+		if (PreviousEquip~="Fire" or oldlevel~=level) then 
+			-- --------------------------------------------------------------------
+			if (traces) then Trace("Here is the faerie level now:"..level); end
+			local change=false;
+			removeOldBuff(PreviousEquip);
+			if (level==1) then 
+				FIRE_BUFF_ID = AW_FIRE_BUFF_ID;
+			else
+				FIRE_BUFF_ID = GetPyOID("ClassTable", "Avalon_FireResistance");
+			end
+			-- --------------------------------------------------------------------
+			fire_buff = CreateBuff(FIRE_BUFF_ID, 0, false, 1);
+			ApplyBuff(FIRE_BUFF_ID, fire_buff);
+			if (traces) then Trace("Fire Faerie used now"); end
+			PreviousEquip = "Fire";
+			oldbuff = FIRE_BUFF_ID;
+			oldlevel=level;
+		end
+	elseif (GetEquippedFaeryElement()==GetPyCst("Elemental", "Water")) then
+		local level = GetCurrentEquippedFaeryLevel(); 
+		if (PreviousEquip~="Water" or oldlevel~=level) then 
+			-- --------------------------------------------------------------------
+			if (traces) then Trace("Here is the faerie level now:"..level); end
+			removeOldBuff(PreviousEquip);
+			if (level==1) then 
+				WATER_BUFF_ID = AW_WATER_BUFF_ID;
+			else
+				WATER_BUFF_ID = GetPyOID("ClassTable", "Maria_WaterResistance");
+			end
+			-- --------------------------------------------------------------------
+			water_buff = CreateBuff(WATER_BUFF_ID, 0, false, 1);
+			ApplyBuff(WATER_BUFF_ID, water_buff);
+			if (traces) then Trace("Water Faerie used now"); end
+			PreviousEquip = "Water";
+			oldbuff = WATER_BUFF_ID;
+			oldlevel=level;
+		end
+	elseif (GetEquippedFaeryElement()==GetPyCst("Elemental", "Air")) then 
+		local level = GetCurrentEquippedFaeryLevel();
+		if (PreviousEquip~="Air" or oldlevel~=level) then 
+			-- --------------------------------------------------------------------
+			
+			if (traces) then Trace("Here is the faerie level now:"..level); end
+			removeOldBuff(PreviousEquip);
+			if (level==1) then 
+				WIND_BUFF_ID = AW_WIND_BUFF_ID;
+			else
+				WIND_BUFF_ID = GetPyOID("ClassTable", "Sylph_WindResistance");
+			end
+			-- --------------------------------------------------------------------
+			wind_buff = CreateBuff(WIND_BUFF_ID, 0, false, 1);
+			ApplyBuff(WIND_BUFF_ID, wind_buff);
+			if (traces) then Trace("Air Faerie used now"); end
+			PreviousEquip = "Wind";
+			oldbuff = WIND_BUFF_ID;
+			oldlevel=level;
+		end
+	elseif (GetEquippedFaeryElement()==GetPyCst("Elemental", "Earth")) then
+		local level = GetCurrentEquippedFaeryLevel();
+		if (PreviousEquip~="Earth" or oldlevel~=level) then 
+			-- --------------------------------------------------------------------
+			if (traces) then Trace("Here is the faerie level now:"..level); end
+			removeOldBuff(PreviousEquip);
+			if (level==1) then 
+				EARTH_BUFF_ID = AW_EARTH_BUFF_ID;
+			else
+				EARTH_BUFF_ID = GetPyOID("ClassTable", "Primula_EarthResistance");
+			end
+			-- --------------------------------------------------------------------
+			earth_buff = CreateBuff(EARTH_BUFF_ID, 0, false, 1);
+			ApplyBuff(EARTH_BUFF_ID, earth_buff);
+			if (traces) then Trace("Earth Faerie used now"); end
+			PreviousEquip = "Earth";
+			oldbuff = EARTH_BUFF_ID;
+			oldlevel=level;
+		end
+	elseif (GetEquippedFaeryElement()==GetPyCst("Elemental", "Lightning")) then
+		local level = GetCurrentEquippedFaeryLevel();
+		if (PreviousEquip~="Lightning" or oldlevel~=level) then 
+			-- --------------------------------------------------------------------
+			if (traces) then Trace("Here is the faerie level now:"..level); end
+			removeOldBuff(PreviousEquip);
+			if (level==1) then 
+				LIGHTNING_BUFF_ID = AW_LIGHTNING_BUFF_ID;
+			else
+				LIGHTNING_BUFF_ID = GetPyOID("ClassTable", "Celeste_LightningResistance");
+			end
+			-- --------------------------------------------------------------------
+			lightning_buff = CreateBuff(LIGHTNING_BUFF_ID, 0, false, 1);
+			ApplyBuff(LIGHTNING_BUFF_ID, lightning_buff);
+			if (traces) then Trace("Lighting Faerie used now"); end
+			PreviousEquip = "Lightning";
+			oldbuff = LIGHTNING_BUFF_ID;
+			oldlevel=level;
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local plvl = GetProp(GetPyStruct("CharacterProperties", "Level"));
+	local slvl = GetCurrentSpellInfo();
+	-- Check in case the faerie would go to another level (level 0 and 1 only)
+	if (slvl>1) then slvl=1; end
+	
+	skill_level		= slvl;
+	mana_cost		= MANA_BASE[slvl+1] + MulFixed(MANA_PLVL[slvl+1], plvl) + MANA_SLVL[slvl+1] * slvl;
+	
+	cooldown = GetInt("Faery_Cooldown");
+	if (cooldown==0) then
+		cooldown = 5000;
+	end
+	if (traces) then Trace("Lighting Faerie check her skillused now"); end
+	
+	CheckFaeries();
+	if (traces) then 
+		if (lightning_buff) then Trace("Buff for Celeste is up and running!"); end
+		if (earth_buff) then Trace("Buff for Primula is up and running!"); end
+		if (wind_buff) then Trace("Buff for Sylph is up and running!"); end
+		if (water_buff) then Trace("Buff for Maria is up and running!"); end
+		if (fire_buff) then Trace("Buff for Avalon is up and running!"); end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return (not HasSpellCooldown() and HasMana(mana_cost)), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+
+	TargetListSearch(RANGE[skill_level+1]);
+
+	local target_count = GetTargetListSize();
+
+	UseMana(mana_cost);
+ 	SetSpellCooldown(cooldown);
+	
+	if (traces) then Trace("Celest have a cooldown of "..cooldown_time.." ms"); end
+	PlayFX(GetPyOID("AnimatedEffectTable", "Celest_Level_1_Player"));
+	
+	if (target_count > 0 and target_count < 3) then
+		PlaySound3D("sfx_spell_lightning_small");
+	elseif (target_count < 6) then
+		PlaySound3D("sfx_spell_lightning_medium");
+	else
+		PlaySound3D("sfx_spell_lightning_big");
+	end
+	
+	if(IsTargetListEmpty()) then
+		Trace("No Target, FAIL SOUND!");
+		PlaySound3D("StaticBallKilled");
+	end
+	
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+
+	local target_num = 0;
+	
+	if(not IsTargetListEmpty()) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID + skill_level);
+	
+		repeat
+			local target, _, _, gameobject = GetTargetListTop();
+			PopTargetList();
+			
+			if(gameobject) then
+				local dmg = SpellCombatRoll(target);
+	
+	 			if(dmg > 0) then
+	 				target:PlayFX(GetPyOID("AnimatedEffectTable", "Celest_Level_1_Main"));
+	 				target_num = target_num + 1;
+	 			end
+			end
+			
+			if(not gameobject) then
+				SpellCombatRoll(target);
+				SpellCombatRoll(target);
+	 			target:PlayFX(GetPyOID("AnimatedEffectTable", "Celest_Level_1_Main"));
+	 			target_num = target_num + 1;
+			end
+			
+		until(IsTargetListEmpty())
+		
+-- 		Trace("target_num: "..target_num);
+-- 		
+-- 		if (target_num >= TARGET_LOW and target_num < TARGET_MED) then
+-- 			PlaySound("sfx_spell_lightning_small",false,0,false);
+-- 			Trace("SMALL SOUND");
+-- 		end 
+-- 		if (target_num >= TARGET_MED and target_num < TARGET_HIGH) then
+-- 			PlaySound("sfx_spell_lightning_medium",false,0,false);
+-- 			Trace("MEDIUM SOUND");
+-- 		end
+-- 		if (target_num >= TARGET_HIGH) then
+-- 			PlaySound("sfx_spell_lightning_big",false,0,false);
+-- 			Trace("HIGH SOUND");
+-- 		elseif (target_num == 0) then
+-- 			PlaySound("StaticBallKilled",false,0,false);
+-- 			Trace("NO HIT' FAIL SOUND!");
+-- 		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

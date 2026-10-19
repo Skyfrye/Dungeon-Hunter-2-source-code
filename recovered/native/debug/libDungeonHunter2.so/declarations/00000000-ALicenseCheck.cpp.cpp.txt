@@ -1,0 +1,1569 @@
+DWARF-derived C++ declaration sketches. These are NOT original source files,
+not compilation-ready headers, and contain NO recovered function bodies.
+Qualified names are printed verbatim; arrays/function pointers, templates,
+access defaults, static methods, and ABI-only entries may require manual repair.
+Exact DWARF attributes and type references are preserved in dies.jsonl.gz.
+Source paths refer to original debug metadata; those files are not bundled.
+
+Compilation unit: P:/Template/Android/ALC/jni/../LCXPlayer/../jni/ALicenseCheck.cpp
+Evidence category: license_and_online_glue
+
+// DIE 0x1e1, byte_size=None, declaration=True
+struct std::__true_type;
+
+// DIE 0x1e7, byte_size=None, declaration=True
+struct std::__false_type;
+
+// DIE 0x206, byte_size=None, declaration=True
+struct std::priv::_String_reserve_t;
+
+// DIE 0x20c, byte_size=None, declaration=True
+class std::priv::_String_base<char, std::allocator<char> >;
+
+// DIE 0x216, byte_size=16, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_string_base.h:54
+union std::priv::_String_base<char, std::allocator<char> >::_Buffers {
+    char* _M_end_of_storage; // byte offset: None, access: None, artificial: False
+    char[16] _M_static_buf; // byte offset: None, access: None, artificial: False
+};
+
+// DIE 0x236, byte_size=None, declaration=True
+class std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >;
+
+// DIE 0x47b, byte_size=None, declaration=True
+struct std::__stlport_class<std::allocator<char> >;
+
+// DIE 0x481, byte_size=None, declaration=True
+class std::allocator<char>;
+
+// DIE 0x487, byte_size=None, declaration=True
+class std::__move_source<std::allocator<char> >;
+
+// DIE 0x48d, byte_size=None, declaration=True
+class std::__move_source<std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> > >;
+
+// DIE 0x493, byte_size=None, declaration=True
+class std::__move_source<std::priv::_String_base<char, std::allocator<char> > >;
+
+// DIE 0x499, byte_size=None, declaration=True
+struct std::basic_string<char, std::char_traits<char>, std::allocator<char> >;
+
+// DIE 0x49f, byte_size=None, declaration=True
+class std::reverse_iterator<const char*>;
+
+// DIE 0x4a5, byte_size=None, declaration=True
+class std::reverse_iterator<char*>;
+
+// DIE 0x4ab, byte_size=None, declaration=True
+class std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >;
+
+// DIE 0x4b1, byte_size=None, declaration=True
+struct std::_STLP_mutex_base;
+
+// DIE 0x512, byte_size=None, declaration=True
+class std::locale;
+
+// DIE 0x51c, byte_size=4, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_locale.h:101
+class std::locale::id {
+    size_t _M_index; // byte offset: 0, access: None, artificial: False
+};
+
+// DIE 0x544, byte_size=None, declaration=True
+struct std::_Locale_impl;
+
+// DIE 0x54a, byte_size=None, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_string_fwd.h:40
+typedef std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::string;
+
+// DIE 0x555, byte_size=4, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_limits.h:41
+enum std::float_round_style {
+    round_indeterminate = -1,
+    round_toward_zero = 0,
+    round_to_nearest = 1,
+    round_toward_infinity = 2,
+    round_toward_neg_infinity = 3,
+};
+
+// DIE 0x580, byte_size=4, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_limits.h:49
+enum std::float_denorm_style {
+    denorm_indeterminate = -1,
+    denorm_absent = 0,
+    denorm_present = 1,
+};
+
+// DIE 0x5c0, byte_size=None, declaration=False
+// C:/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/../include/stdarg.h:40
+typedef __va_list __gnuc_va_list;
+
+// DIE 0x5cb, byte_size=4, declaration=False
+struct __va_list {
+    void* __ap; // byte offset: 0, access: None, artificial: True
+};
+
+// DIE 0x5e5, byte_size=None, declaration=False
+// C:/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/../include/stdarg.h:102
+typedef __gnuc_va_list va_list;
+
+// DIE 0x5f0, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:28
+typedef unsigned char jboolean;
+
+// DIE 0x602, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:29
+typedef signed char jbyte;
+
+// DIE 0x614, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:30
+typedef short unsigned int jchar;
+
+// DIE 0x626, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:31
+typedef short int jshort;
+
+// DIE 0x638, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:32
+typedef int jint;
+
+// DIE 0x64a, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:33
+typedef long long int jlong;
+
+// DIE 0x65c, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:34
+typedef float jfloat;
+
+// DIE 0x66e, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:35
+typedef double jdouble;
+
+// DIE 0x680, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:39
+typedef jint jsize;
+
+// DIE 0x68b, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:45
+class _jobject {
+};
+
+// DIE 0x693, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:46
+class _jclass : _jobject {
+};
+
+// DIE 0x6a9, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:47
+class _jstring : _jobject {
+};
+
+// DIE 0x6bf, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:48
+class _jarray : _jobject {
+};
+
+// DIE 0x6d5, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:49
+class _jobjectArray : _jarray {
+};
+
+// DIE 0x6eb, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:50
+class _jbooleanArray : _jarray {
+};
+
+// DIE 0x701, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:51
+class _jbyteArray : _jarray {
+};
+
+// DIE 0x717, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:52
+class _jcharArray : _jarray {
+};
+
+// DIE 0x72d, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:53
+class _jshortArray : _jarray {
+};
+
+// DIE 0x743, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:54
+class _jintArray : _jarray {
+};
+
+// DIE 0x759, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:55
+class _jlongArray : _jarray {
+};
+
+// DIE 0x76f, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:56
+class _jfloatArray : _jarray {
+};
+
+// DIE 0x785, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:57
+class _jdoubleArray : _jarray {
+};
+
+// DIE 0x79b, byte_size=1, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:58
+class _jthrowable : _jobject {
+};
+
+// DIE 0x7b1, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:60
+typedef _jobject* jobject;
+
+// DIE 0x7c2, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:61
+typedef _jclass* jclass;
+
+// DIE 0x7d3, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:62
+typedef _jstring* jstring;
+
+// DIE 0x7e4, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:63
+typedef _jarray* jarray;
+
+// DIE 0x7f5, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:64
+typedef _jobjectArray* jobjectArray;
+
+// DIE 0x806, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:65
+typedef _jbooleanArray* jbooleanArray;
+
+// DIE 0x817, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:66
+typedef _jbyteArray* jbyteArray;
+
+// DIE 0x828, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:67
+typedef _jcharArray* jcharArray;
+
+// DIE 0x839, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:68
+typedef _jshortArray* jshortArray;
+
+// DIE 0x84a, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:69
+typedef _jintArray* jintArray;
+
+// DIE 0x85b, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:70
+typedef _jlongArray* jlongArray;
+
+// DIE 0x86c, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:71
+typedef _jfloatArray* jfloatArray;
+
+// DIE 0x87d, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:72
+typedef _jdoubleArray* jdoubleArray;
+
+// DIE 0x88e, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:73
+typedef _jthrowable* jthrowable;
+
+// DIE 0x89f, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:74
+typedef _jobject* jweak;
+
+// DIE 0x8aa, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:101
+typedef _jfieldID* jfieldID;
+
+// DIE 0x8bb, byte_size=None, declaration=True
+struct _jfieldID;
+
+// DIE 0x8c1, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:104
+typedef _jmethodID* jmethodID;
+
+// DIE 0x8d2, byte_size=None, declaration=True
+struct _jmethodID;
+
+// DIE 0x8d8, byte_size=8, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:108
+union jvalue {
+    jboolean z; // byte offset: None, access: None, artificial: False
+    jbyte b; // byte offset: None, access: None, artificial: False
+    jchar c; // byte offset: None, access: None, artificial: False
+    jshort s; // byte offset: None, access: None, artificial: False
+    jint i; // byte offset: None, access: None, artificial: False
+    jlong j; // byte offset: None, access: None, artificial: False
+    jfloat f; // byte offset: None, access: None, artificial: False
+    jdouble d; // byte offset: None, access: None, artificial: False
+    jobject l; // byte offset: None, access: None, artificial: False
+};
+
+// DIE 0x936, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:118
+typedef jvalue jvalue;
+
+// DIE 0x941, byte_size=4, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:120
+enum jobjectRefType {
+    JNIInvalidRefType = 0,
+    JNILocalRefType = 1,
+    JNIGlobalRefType = 2,
+    JNIWeakGlobalRefType = 3,
+};
+
+// DIE 0x966, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:125
+typedef jobjectRefType jobjectRefType;
+
+// DIE 0x971, byte_size=12, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:127
+struct JNINativeMethod {
+    char const* name; // byte offset: 0, access: None, artificial: False
+    char const* signature; // byte offset: 4, access: None, artificial: False
+    void* fnPtr; // byte offset: 8, access: None, artificial: False
+};
+
+// DIE 0x9c5, byte_size=932, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:148
+struct JNINativeInterface {
+    void* reserved0; // byte offset: 0, access: None, artificial: False
+    void* reserved1; // byte offset: 4, access: None, artificial: False
+    void* reserved2; // byte offset: 8, access: None, artificial: False
+    void* reserved3; // byte offset: 12, access: None, artificial: False
+    jint (JNIEnv*)* GetVersion; // byte offset: 16, access: None, artificial: False
+    jclass (JNIEnv*, char const*, jobject, jbyte const*, jsize)* DefineClass; // byte offset: 20, access: None, artificial: False
+    jclass (JNIEnv*, char const*)* FindClass; // byte offset: 24, access: None, artificial: False
+    jmethodID (JNIEnv*, jobject)* FromReflectedMethod; // byte offset: 28, access: None, artificial: False
+    jfieldID (JNIEnv*, jobject)* FromReflectedField; // byte offset: 32, access: None, artificial: False
+    jobject (JNIEnv*, jclass, jmethodID, jboolean)* ToReflectedMethod; // byte offset: 36, access: None, artificial: False
+    jclass (JNIEnv*, jclass)* GetSuperclass; // byte offset: 40, access: None, artificial: False
+    jboolean (JNIEnv*, jclass, jclass)* IsAssignableFrom; // byte offset: 44, access: None, artificial: False
+    jobject (JNIEnv*, jclass, jfieldID, jboolean)* ToReflectedField; // byte offset: 48, access: None, artificial: False
+    jint (JNIEnv*, jthrowable)* Throw; // byte offset: 52, access: None, artificial: False
+    jint (JNIEnv*, jclass, char const*)* ThrowNew; // byte offset: 56, access: None, artificial: False
+    jthrowable (JNIEnv*)* ExceptionOccurred; // byte offset: 60, access: None, artificial: False
+    void (JNIEnv*)* ExceptionDescribe; // byte offset: 64, access: None, artificial: False
+    void (JNIEnv*)* ExceptionClear; // byte offset: 68, access: None, artificial: False
+    void (JNIEnv*, char const*)* FatalError; // byte offset: 72, access: None, artificial: False
+    jint (JNIEnv*, jint)* PushLocalFrame; // byte offset: 76, access: None, artificial: False
+    jobject (JNIEnv*, jobject)* PopLocalFrame; // byte offset: 80, access: None, artificial: False
+    jobject (JNIEnv*, jobject)* NewGlobalRef; // byte offset: 84, access: None, artificial: False
+    void (JNIEnv*, jobject)* DeleteGlobalRef; // byte offset: 88, access: None, artificial: False
+    void (JNIEnv*, jobject)* DeleteLocalRef; // byte offset: 92, access: None, artificial: False
+    jboolean (JNIEnv*, jobject, jobject)* IsSameObject; // byte offset: 96, access: None, artificial: False
+    jobject (JNIEnv*, jobject)* NewLocalRef; // byte offset: 100, access: None, artificial: False
+    jint (JNIEnv*, jint)* EnsureLocalCapacity; // byte offset: 104, access: None, artificial: False
+    jobject (JNIEnv*, jclass)* AllocObject; // byte offset: 108, access: None, artificial: False
+    jobject (JNIEnv*, jclass, jmethodID, ...)* NewObject; // byte offset: 112, access: None, artificial: False
+    jobject (JNIEnv*, jclass, jmethodID, va_list)* NewObjectV; // byte offset: 116, access: None, artificial: False
+    jobject (JNIEnv*, jclass, jmethodID, jvalue*)* NewObjectA; // byte offset: 120, access: None, artificial: False
+    jclass (JNIEnv*, jobject)* GetObjectClass; // byte offset: 124, access: None, artificial: False
+    jboolean (JNIEnv*, jobject, jclass)* IsInstanceOf; // byte offset: 128, access: None, artificial: False
+    jmethodID (JNIEnv*, jclass, char const*, char const*)* GetMethodID; // byte offset: 132, access: None, artificial: False
+    jobject (JNIEnv*, jobject, jmethodID, ...)* CallObjectMethod; // byte offset: 136, access: None, artificial: False
+    jobject (JNIEnv*, jobject, jmethodID, va_list)* CallObjectMethodV; // byte offset: 140, access: None, artificial: False
+    jobject (JNIEnv*, jobject, jmethodID, jvalue*)* CallObjectMethodA; // byte offset: 144, access: None, artificial: False
+    jboolean (JNIEnv*, jobject, jmethodID, ...)* CallBooleanMethod; // byte offset: 148, access: None, artificial: False
+    jboolean (JNIEnv*, jobject, jmethodID, va_list)* CallBooleanMethodV; // byte offset: 152, access: None, artificial: False
+    jboolean (JNIEnv*, jobject, jmethodID, jvalue*)* CallBooleanMethodA; // byte offset: 156, access: None, artificial: False
+    jbyte (JNIEnv*, jobject, jmethodID, ...)* CallByteMethod; // byte offset: 160, access: None, artificial: False
+    jbyte (JNIEnv*, jobject, jmethodID, va_list)* CallByteMethodV; // byte offset: 164, access: None, artificial: False
+    jbyte (JNIEnv*, jobject, jmethodID, jvalue*)* CallByteMethodA; // byte offset: 168, access: None, artificial: False
+    jchar (JNIEnv*, jobject, jmethodID, ...)* CallCharMethod; // byte offset: 172, access: None, artificial: False
+    jchar (JNIEnv*, jobject, jmethodID, va_list)* CallCharMethodV; // byte offset: 176, access: None, artificial: False
+    jchar (JNIEnv*, jobject, jmethodID, jvalue*)* CallCharMethodA; // byte offset: 180, access: None, artificial: False
+    jshort (JNIEnv*, jobject, jmethodID, ...)* CallShortMethod; // byte offset: 184, access: None, artificial: False
+    jshort (JNIEnv*, jobject, jmethodID, va_list)* CallShortMethodV; // byte offset: 188, access: None, artificial: False
+    jshort (JNIEnv*, jobject, jmethodID, jvalue*)* CallShortMethodA; // byte offset: 192, access: None, artificial: False
+    jint (JNIEnv*, jobject, jmethodID, ...)* CallIntMethod; // byte offset: 196, access: None, artificial: False
+    jint (JNIEnv*, jobject, jmethodID, va_list)* CallIntMethodV; // byte offset: 200, access: None, artificial: False
+    jint (JNIEnv*, jobject, jmethodID, jvalue*)* CallIntMethodA; // byte offset: 204, access: None, artificial: False
+    jlong (JNIEnv*, jobject, jmethodID, ...)* CallLongMethod; // byte offset: 208, access: None, artificial: False
+    jlong (JNIEnv*, jobject, jmethodID, va_list)* CallLongMethodV; // byte offset: 212, access: None, artificial: False
+    jlong (JNIEnv*, jobject, jmethodID, jvalue*)* CallLongMethodA; // byte offset: 216, access: None, artificial: False
+    jfloat (JNIEnv*, jobject, jmethodID, ...)* CallFloatMethod; // byte offset: 220, access: None, artificial: False
+    jfloat (JNIEnv*, jobject, jmethodID, va_list)* CallFloatMethodV; // byte offset: 224, access: None, artificial: False
+    jfloat (JNIEnv*, jobject, jmethodID, jvalue*)* CallFloatMethodA; // byte offset: 228, access: None, artificial: False
+    jdouble (JNIEnv*, jobject, jmethodID, ...)* CallDoubleMethod; // byte offset: 232, access: None, artificial: False
+    jdouble (JNIEnv*, jobject, jmethodID, va_list)* CallDoubleMethodV; // byte offset: 236, access: None, artificial: False
+    jdouble (JNIEnv*, jobject, jmethodID, jvalue*)* CallDoubleMethodA; // byte offset: 240, access: None, artificial: False
+    void (JNIEnv*, jobject, jmethodID, ...)* CallVoidMethod; // byte offset: 244, access: None, artificial: False
+    void (JNIEnv*, jobject, jmethodID, va_list)* CallVoidMethodV; // byte offset: 248, access: None, artificial: False
+    void (JNIEnv*, jobject, jmethodID, jvalue*)* CallVoidMethodA; // byte offset: 252, access: None, artificial: False
+    jobject (JNIEnv*, jobject, jclass, jmethodID, ...)* CallNonvirtualObjectMethod; // byte offset: 256, access: None, artificial: False
+    jobject (JNIEnv*, jobject, jclass, jmethodID, va_list)* CallNonvirtualObjectMethodV; // byte offset: 260, access: None, artificial: False
+    jobject (JNIEnv*, jobject, jclass, jmethodID, jvalue*)* CallNonvirtualObjectMethodA; // byte offset: 264, access: None, artificial: False
+    jboolean (JNIEnv*, jobject, jclass, jmethodID, ...)* CallNonvirtualBooleanMethod; // byte offset: 268, access: None, artificial: False
+    jboolean (JNIEnv*, jobject, jclass, jmethodID, va_list)* CallNonvirtualBooleanMethodV; // byte offset: 272, access: None, artificial: False
+    jboolean (JNIEnv*, jobject, jclass, jmethodID, jvalue*)* CallNonvirtualBooleanMethodA; // byte offset: 276, access: None, artificial: False
+    jbyte (JNIEnv*, jobject, jclass, jmethodID, ...)* CallNonvirtualByteMethod; // byte offset: 280, access: None, artificial: False
+    jbyte (JNIEnv*, jobject, jclass, jmethodID, va_list)* CallNonvirtualByteMethodV; // byte offset: 284, access: None, artificial: False
+    jbyte (JNIEnv*, jobject, jclass, jmethodID, jvalue*)* CallNonvirtualByteMethodA; // byte offset: 288, access: None, artificial: False
+    jchar (JNIEnv*, jobject, jclass, jmethodID, ...)* CallNonvirtualCharMethod; // byte offset: 292, access: None, artificial: False
+    jchar (JNIEnv*, jobject, jclass, jmethodID, va_list)* CallNonvirtualCharMethodV; // byte offset: 296, access: None, artificial: False
+    jchar (JNIEnv*, jobject, jclass, jmethodID, jvalue*)* CallNonvirtualCharMethodA; // byte offset: 300, access: None, artificial: False
+    jshort (JNIEnv*, jobject, jclass, jmethodID, ...)* CallNonvirtualShortMethod; // byte offset: 304, access: None, artificial: False
+    jshort (JNIEnv*, jobject, jclass, jmethodID, va_list)* CallNonvirtualShortMethodV; // byte offset: 308, access: None, artificial: False
+    jshort (JNIEnv*, jobject, jclass, jmethodID, jvalue*)* CallNonvirtualShortMethodA; // byte offset: 312, access: None, artificial: False
+    jint (JNIEnv*, jobject, jclass, jmethodID, ...)* CallNonvirtualIntMethod; // byte offset: 316, access: None, artificial: False
+    jint (JNIEnv*, jobject, jclass, jmethodID, va_list)* CallNonvirtualIntMethodV; // byte offset: 320, access: None, artificial: False
+    jint (JNIEnv*, jobject, jclass, jmethodID, jvalue*)* CallNonvirtualIntMethodA; // byte offset: 324, access: None, artificial: False
+    jlong (JNIEnv*, jobject, jclass, jmethodID, ...)* CallNonvirtualLongMethod; // byte offset: 328, access: None, artificial: False
+    jlong (JNIEnv*, jobject, jclass, jmethodID, va_list)* CallNonvirtualLongMethodV; // byte offset: 332, access: None, artificial: False
+    jlong (JNIEnv*, jobject, jclass, jmethodID, jvalue*)* CallNonvirtualLongMethodA; // byte offset: 336, access: None, artificial: False
+    jfloat (JNIEnv*, jobject, jclass, jmethodID, ...)* CallNonvirtualFloatMethod; // byte offset: 340, access: None, artificial: False
+    jfloat (JNIEnv*, jobject, jclass, jmethodID, va_list)* CallNonvirtualFloatMethodV; // byte offset: 344, access: None, artificial: False
+    jfloat (JNIEnv*, jobject, jclass, jmethodID, jvalue*)* CallNonvirtualFloatMethodA; // byte offset: 348, access: None, artificial: False
+    jdouble (JNIEnv*, jobject, jclass, jmethodID, ...)* CallNonvirtualDoubleMethod; // byte offset: 352, access: None, artificial: False
+    jdouble (JNIEnv*, jobject, jclass, jmethodID, va_list)* CallNonvirtualDoubleMethodV; // byte offset: 356, access: None, artificial: False
+    jdouble (JNIEnv*, jobject, jclass, jmethodID, jvalue*)* CallNonvirtualDoubleMethodA; // byte offset: 360, access: None, artificial: False
+    void (JNIEnv*, jobject, jclass, jmethodID, ...)* CallNonvirtualVoidMethod; // byte offset: 364, access: None, artificial: False
+    void (JNIEnv*, jobject, jclass, jmethodID, va_list)* CallNonvirtualVoidMethodV; // byte offset: 368, access: None, artificial: False
+    void (JNIEnv*, jobject, jclass, jmethodID, jvalue*)* CallNonvirtualVoidMethodA; // byte offset: 372, access: None, artificial: False
+    jfieldID (JNIEnv*, jclass, char const*, char const*)* GetFieldID; // byte offset: 376, access: None, artificial: False
+    jobject (JNIEnv*, jobject, jfieldID)* GetObjectField; // byte offset: 380, access: None, artificial: False
+    jboolean (JNIEnv*, jobject, jfieldID)* GetBooleanField; // byte offset: 384, access: None, artificial: False
+    jbyte (JNIEnv*, jobject, jfieldID)* GetByteField; // byte offset: 388, access: None, artificial: False
+    jchar (JNIEnv*, jobject, jfieldID)* GetCharField; // byte offset: 392, access: None, artificial: False
+    jshort (JNIEnv*, jobject, jfieldID)* GetShortField; // byte offset: 396, access: None, artificial: False
+    jint (JNIEnv*, jobject, jfieldID)* GetIntField; // byte offset: 400, access: None, artificial: False
+    jlong (JNIEnv*, jobject, jfieldID)* GetLongField; // byte offset: 404, access: None, artificial: False
+    jfloat (JNIEnv*, jobject, jfieldID)* GetFloatField; // byte offset: 408, access: None, artificial: False
+    jdouble (JNIEnv*, jobject, jfieldID)* GetDoubleField; // byte offset: 412, access: None, artificial: False
+    void (JNIEnv*, jobject, jfieldID, jobject)* SetObjectField; // byte offset: 416, access: None, artificial: False
+    void (JNIEnv*, jobject, jfieldID, jboolean)* SetBooleanField; // byte offset: 420, access: None, artificial: False
+    void (JNIEnv*, jobject, jfieldID, jbyte)* SetByteField; // byte offset: 424, access: None, artificial: False
+    void (JNIEnv*, jobject, jfieldID, jchar)* SetCharField; // byte offset: 428, access: None, artificial: False
+    void (JNIEnv*, jobject, jfieldID, jshort)* SetShortField; // byte offset: 432, access: None, artificial: False
+    void (JNIEnv*, jobject, jfieldID, jint)* SetIntField; // byte offset: 436, access: None, artificial: False
+    void (JNIEnv*, jobject, jfieldID, jlong)* SetLongField; // byte offset: 440, access: None, artificial: False
+    void (JNIEnv*, jobject, jfieldID, jfloat)* SetFloatField; // byte offset: 444, access: None, artificial: False
+    void (JNIEnv*, jobject, jfieldID, jdouble)* SetDoubleField; // byte offset: 448, access: None, artificial: False
+    jmethodID (JNIEnv*, jclass, char const*, char const*)* GetStaticMethodID; // byte offset: 452, access: None, artificial: False
+    jobject (JNIEnv*, jclass, jmethodID, ...)* CallStaticObjectMethod; // byte offset: 456, access: None, artificial: False
+    jobject (JNIEnv*, jclass, jmethodID, va_list)* CallStaticObjectMethodV; // byte offset: 460, access: None, artificial: False
+    jobject (JNIEnv*, jclass, jmethodID, jvalue*)* CallStaticObjectMethodA; // byte offset: 464, access: None, artificial: False
+    jboolean (JNIEnv*, jclass, jmethodID, ...)* CallStaticBooleanMethod; // byte offset: 468, access: None, artificial: False
+    jboolean (JNIEnv*, jclass, jmethodID, va_list)* CallStaticBooleanMethodV; // byte offset: 472, access: None, artificial: False
+    jboolean (JNIEnv*, jclass, jmethodID, jvalue*)* CallStaticBooleanMethodA; // byte offset: 476, access: None, artificial: False
+    jbyte (JNIEnv*, jclass, jmethodID, ...)* CallStaticByteMethod; // byte offset: 480, access: None, artificial: False
+    jbyte (JNIEnv*, jclass, jmethodID, va_list)* CallStaticByteMethodV; // byte offset: 484, access: None, artificial: False
+    jbyte (JNIEnv*, jclass, jmethodID, jvalue*)* CallStaticByteMethodA; // byte offset: 488, access: None, artificial: False
+    jchar (JNIEnv*, jclass, jmethodID, ...)* CallStaticCharMethod; // byte offset: 492, access: None, artificial: False
+    jchar (JNIEnv*, jclass, jmethodID, va_list)* CallStaticCharMethodV; // byte offset: 496, access: None, artificial: False
+    jchar (JNIEnv*, jclass, jmethodID, jvalue*)* CallStaticCharMethodA; // byte offset: 500, access: None, artificial: False
+    jshort (JNIEnv*, jclass, jmethodID, ...)* CallStaticShortMethod; // byte offset: 504, access: None, artificial: False
+    jshort (JNIEnv*, jclass, jmethodID, va_list)* CallStaticShortMethodV; // byte offset: 508, access: None, artificial: False
+    jshort (JNIEnv*, jclass, jmethodID, jvalue*)* CallStaticShortMethodA; // byte offset: 512, access: None, artificial: False
+    jint (JNIEnv*, jclass, jmethodID, ...)* CallStaticIntMethod; // byte offset: 516, access: None, artificial: False
+    jint (JNIEnv*, jclass, jmethodID, va_list)* CallStaticIntMethodV; // byte offset: 520, access: None, artificial: False
+    jint (JNIEnv*, jclass, jmethodID, jvalue*)* CallStaticIntMethodA; // byte offset: 524, access: None, artificial: False
+    jlong (JNIEnv*, jclass, jmethodID, ...)* CallStaticLongMethod; // byte offset: 528, access: None, artificial: False
+    jlong (JNIEnv*, jclass, jmethodID, va_list)* CallStaticLongMethodV; // byte offset: 532, access: None, artificial: False
+    jlong (JNIEnv*, jclass, jmethodID, jvalue*)* CallStaticLongMethodA; // byte offset: 536, access: None, artificial: False
+    jfloat (JNIEnv*, jclass, jmethodID, ...)* CallStaticFloatMethod; // byte offset: 540, access: None, artificial: False
+    jfloat (JNIEnv*, jclass, jmethodID, va_list)* CallStaticFloatMethodV; // byte offset: 544, access: None, artificial: False
+    jfloat (JNIEnv*, jclass, jmethodID, jvalue*)* CallStaticFloatMethodA; // byte offset: 548, access: None, artificial: False
+    jdouble (JNIEnv*, jclass, jmethodID, ...)* CallStaticDoubleMethod; // byte offset: 552, access: None, artificial: False
+    jdouble (JNIEnv*, jclass, jmethodID, va_list)* CallStaticDoubleMethodV; // byte offset: 556, access: None, artificial: False
+    jdouble (JNIEnv*, jclass, jmethodID, jvalue*)* CallStaticDoubleMethodA; // byte offset: 560, access: None, artificial: False
+    void (JNIEnv*, jclass, jmethodID, ...)* CallStaticVoidMethod; // byte offset: 564, access: None, artificial: False
+    void (JNIEnv*, jclass, jmethodID, va_list)* CallStaticVoidMethodV; // byte offset: 568, access: None, artificial: False
+    void (JNIEnv*, jclass, jmethodID, jvalue*)* CallStaticVoidMethodA; // byte offset: 572, access: None, artificial: False
+    jfieldID (JNIEnv*, jclass, char const*, char const*)* GetStaticFieldID; // byte offset: 576, access: None, artificial: False
+    jobject (JNIEnv*, jclass, jfieldID)* GetStaticObjectField; // byte offset: 580, access: None, artificial: False
+    jboolean (JNIEnv*, jclass, jfieldID)* GetStaticBooleanField; // byte offset: 584, access: None, artificial: False
+    jbyte (JNIEnv*, jclass, jfieldID)* GetStaticByteField; // byte offset: 588, access: None, artificial: False
+    jchar (JNIEnv*, jclass, jfieldID)* GetStaticCharField; // byte offset: 592, access: None, artificial: False
+    jshort (JNIEnv*, jclass, jfieldID)* GetStaticShortField; // byte offset: 596, access: None, artificial: False
+    jint (JNIEnv*, jclass, jfieldID)* GetStaticIntField; // byte offset: 600, access: None, artificial: False
+    jlong (JNIEnv*, jclass, jfieldID)* GetStaticLongField; // byte offset: 604, access: None, artificial: False
+    jfloat (JNIEnv*, jclass, jfieldID)* GetStaticFloatField; // byte offset: 608, access: None, artificial: False
+    jdouble (JNIEnv*, jclass, jfieldID)* GetStaticDoubleField; // byte offset: 612, access: None, artificial: False
+    void (JNIEnv*, jclass, jfieldID, jobject)* SetStaticObjectField; // byte offset: 616, access: None, artificial: False
+    void (JNIEnv*, jclass, jfieldID, jboolean)* SetStaticBooleanField; // byte offset: 620, access: None, artificial: False
+    void (JNIEnv*, jclass, jfieldID, jbyte)* SetStaticByteField; // byte offset: 624, access: None, artificial: False
+    void (JNIEnv*, jclass, jfieldID, jchar)* SetStaticCharField; // byte offset: 628, access: None, artificial: False
+    void (JNIEnv*, jclass, jfieldID, jshort)* SetStaticShortField; // byte offset: 632, access: None, artificial: False
+    void (JNIEnv*, jclass, jfieldID, jint)* SetStaticIntField; // byte offset: 636, access: None, artificial: False
+    void (JNIEnv*, jclass, jfieldID, jlong)* SetStaticLongField; // byte offset: 640, access: None, artificial: False
+    void (JNIEnv*, jclass, jfieldID, jfloat)* SetStaticFloatField; // byte offset: 644, access: None, artificial: False
+    void (JNIEnv*, jclass, jfieldID, jdouble)* SetStaticDoubleField; // byte offset: 648, access: None, artificial: False
+    jstring (JNIEnv*, jchar const*, jsize)* NewString; // byte offset: 652, access: None, artificial: False
+    jsize (JNIEnv*, jstring)* GetStringLength; // byte offset: 656, access: None, artificial: False
+    jchar const* (JNIEnv*, jstring, jboolean*)* GetStringChars; // byte offset: 660, access: None, artificial: False
+    void (JNIEnv*, jstring, jchar const*)* ReleaseStringChars; // byte offset: 664, access: None, artificial: False
+    jstring (JNIEnv*, char const*)* NewStringUTF; // byte offset: 668, access: None, artificial: False
+    jsize (JNIEnv*, jstring)* GetStringUTFLength; // byte offset: 672, access: None, artificial: False
+    char const* (JNIEnv*, jstring, jboolean*)* GetStringUTFChars; // byte offset: 676, access: None, artificial: False
+    void (JNIEnv*, jstring, char const*)* ReleaseStringUTFChars; // byte offset: 680, access: None, artificial: False
+    jsize (JNIEnv*, jarray)* GetArrayLength; // byte offset: 684, access: None, artificial: False
+    jobjectArray (JNIEnv*, jsize, jclass, jobject)* NewObjectArray; // byte offset: 688, access: None, artificial: False
+    jobject (JNIEnv*, jobjectArray, jsize)* GetObjectArrayElement; // byte offset: 692, access: None, artificial: False
+    void (JNIEnv*, jobjectArray, jsize, jobject)* SetObjectArrayElement; // byte offset: 696, access: None, artificial: False
+    jbooleanArray (JNIEnv*, jsize)* NewBooleanArray; // byte offset: 700, access: None, artificial: False
+    jbyteArray (JNIEnv*, jsize)* NewByteArray; // byte offset: 704, access: None, artificial: False
+    jcharArray (JNIEnv*, jsize)* NewCharArray; // byte offset: 708, access: None, artificial: False
+    jshortArray (JNIEnv*, jsize)* NewShortArray; // byte offset: 712, access: None, artificial: False
+    jintArray (JNIEnv*, jsize)* NewIntArray; // byte offset: 716, access: None, artificial: False
+    jlongArray (JNIEnv*, jsize)* NewLongArray; // byte offset: 720, access: None, artificial: False
+    jfloatArray (JNIEnv*, jsize)* NewFloatArray; // byte offset: 724, access: None, artificial: False
+    jdoubleArray (JNIEnv*, jsize)* NewDoubleArray; // byte offset: 728, access: None, artificial: False
+    jboolean* (JNIEnv*, jbooleanArray, jboolean*)* GetBooleanArrayElements; // byte offset: 732, access: None, artificial: False
+    jbyte* (JNIEnv*, jbyteArray, jboolean*)* GetByteArrayElements; // byte offset: 736, access: None, artificial: False
+    jchar* (JNIEnv*, jcharArray, jboolean*)* GetCharArrayElements; // byte offset: 740, access: None, artificial: False
+    jshort* (JNIEnv*, jshortArray, jboolean*)* GetShortArrayElements; // byte offset: 744, access: None, artificial: False
+    jint* (JNIEnv*, jintArray, jboolean*)* GetIntArrayElements; // byte offset: 748, access: None, artificial: False
+    jlong* (JNIEnv*, jlongArray, jboolean*)* GetLongArrayElements; // byte offset: 752, access: None, artificial: False
+    jfloat* (JNIEnv*, jfloatArray, jboolean*)* GetFloatArrayElements; // byte offset: 756, access: None, artificial: False
+    jdouble* (JNIEnv*, jdoubleArray, jboolean*)* GetDoubleArrayElements; // byte offset: 760, access: None, artificial: False
+    void (JNIEnv*, jbooleanArray, jboolean*, jint)* ReleaseBooleanArrayElements; // byte offset: 764, access: None, artificial: False
+    void (JNIEnv*, jbyteArray, jbyte*, jint)* ReleaseByteArrayElements; // byte offset: 768, access: None, artificial: False
+    void (JNIEnv*, jcharArray, jchar*, jint)* ReleaseCharArrayElements; // byte offset: 772, access: None, artificial: False
+    void (JNIEnv*, jshortArray, jshort*, jint)* ReleaseShortArrayElements; // byte offset: 776, access: None, artificial: False
+    void (JNIEnv*, jintArray, jint*, jint)* ReleaseIntArrayElements; // byte offset: 780, access: None, artificial: False
+    void (JNIEnv*, jlongArray, jlong*, jint)* ReleaseLongArrayElements; // byte offset: 784, access: None, artificial: False
+    void (JNIEnv*, jfloatArray, jfloat*, jint)* ReleaseFloatArrayElements; // byte offset: 788, access: None, artificial: False
+    void (JNIEnv*, jdoubleArray, jdouble*, jint)* ReleaseDoubleArrayElements; // byte offset: 792, access: None, artificial: False
+    void (JNIEnv*, jbooleanArray, jsize, jsize, jboolean*)* GetBooleanArrayRegion; // byte offset: 796, access: None, artificial: False
+    void (JNIEnv*, jbyteArray, jsize, jsize, jbyte*)* GetByteArrayRegion; // byte offset: 800, access: None, artificial: False
+    void (JNIEnv*, jcharArray, jsize, jsize, jchar*)* GetCharArrayRegion; // byte offset: 804, access: None, artificial: False
+    void (JNIEnv*, jshortArray, jsize, jsize, jshort*)* GetShortArrayRegion; // byte offset: 808, access: None, artificial: False
+    void (JNIEnv*, jintArray, jsize, jsize, jint*)* GetIntArrayRegion; // byte offset: 812, access: None, artificial: False
+    void (JNIEnv*, jlongArray, jsize, jsize, jlong*)* GetLongArrayRegion; // byte offset: 816, access: None, artificial: False
+    void (JNIEnv*, jfloatArray, jsize, jsize, jfloat*)* GetFloatArrayRegion; // byte offset: 820, access: None, artificial: False
+    void (JNIEnv*, jdoubleArray, jsize, jsize, jdouble*)* GetDoubleArrayRegion; // byte offset: 824, access: None, artificial: False
+    void (JNIEnv*, jbooleanArray, jsize, jsize, jboolean const*)* SetBooleanArrayRegion; // byte offset: 828, access: None, artificial: False
+    void (JNIEnv*, jbyteArray, jsize, jsize, jbyte const*)* SetByteArrayRegion; // byte offset: 832, access: None, artificial: False
+    void (JNIEnv*, jcharArray, jsize, jsize, jchar const*)* SetCharArrayRegion; // byte offset: 836, access: None, artificial: False
+    void (JNIEnv*, jshortArray, jsize, jsize, jshort const*)* SetShortArrayRegion; // byte offset: 840, access: None, artificial: False
+    void (JNIEnv*, jintArray, jsize, jsize, jint const*)* SetIntArrayRegion; // byte offset: 844, access: None, artificial: False
+    void (JNIEnv*, jlongArray, jsize, jsize, jlong const*)* SetLongArrayRegion; // byte offset: 848, access: None, artificial: False
+    void (JNIEnv*, jfloatArray, jsize, jsize, jfloat const*)* SetFloatArrayRegion; // byte offset: 852, access: None, artificial: False
+    void (JNIEnv*, jdoubleArray, jsize, jsize, jdouble const*)* SetDoubleArrayRegion; // byte offset: 856, access: None, artificial: False
+    jint (JNIEnv*, jclass, JNINativeMethod const*, jint)* RegisterNatives; // byte offset: 860, access: None, artificial: False
+    jint (JNIEnv*, jclass)* UnregisterNatives; // byte offset: 864, access: None, artificial: False
+    jint (JNIEnv*, jobject)* MonitorEnter; // byte offset: 868, access: None, artificial: False
+    jint (JNIEnv*, jobject)* MonitorExit; // byte offset: 872, access: None, artificial: False
+    jint (JNIEnv*, JavaVM**)* GetJavaVM; // byte offset: 876, access: None, artificial: False
+    void (JNIEnv*, jstring, jsize, jsize, jchar*)* GetStringRegion; // byte offset: 880, access: None, artificial: False
+    void (JNIEnv*, jstring, jsize, jsize, char*)* GetStringUTFRegion; // byte offset: 884, access: None, artificial: False
+    void* (JNIEnv*, jarray, jboolean*)* GetPrimitiveArrayCritical; // byte offset: 888, access: None, artificial: False
+    void (JNIEnv*, jarray, void*, jint)* ReleasePrimitiveArrayCritical; // byte offset: 892, access: None, artificial: False
+    jchar const* (JNIEnv*, jstring, jboolean*)* GetStringCritical; // byte offset: 896, access: None, artificial: False
+    void (JNIEnv*, jstring, jchar const*)* ReleaseStringCritical; // byte offset: 900, access: None, artificial: False
+    jweak (JNIEnv*, jobject)* NewWeakGlobalRef; // byte offset: 904, access: None, artificial: False
+    void (JNIEnv*, jweak)* DeleteWeakGlobalRef; // byte offset: 908, access: None, artificial: False
+    jboolean (JNIEnv*)* ExceptionCheck; // byte offset: 912, access: None, artificial: False
+    jobject (JNIEnv*, void*, jlong)* NewDirectByteBuffer; // byte offset: 916, access: None, artificial: False
+    void* (JNIEnv*, jobject)* GetDirectBufferAddress; // byte offset: 920, access: None, artificial: False
+    jlong (JNIEnv*, jobject)* GetDirectBufferCapacity; // byte offset: 924, access: None, artificial: False
+    jobjectRefType (JNIEnv*, jobject)* GetObjectRefType; // byte offset: 928, access: None, artificial: False
+};
+
+// DIE 0x17f6, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:138
+typedef _JNIEnv JNIEnv;
+
+// DIE 0x1801, byte_size=4, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:489
+struct _JNIEnv {
+    JNINativeInterface const* functions; // byte offset: 0, access: None, artificial: False
+    jint _JNIEnv::GetVersion(); // method DIE 0x181d
+    jclass _JNIEnv::DefineClass(char const*, jobject, jbyte const*, jsize); // method DIE 0x183a
+    jclass _JNIEnv::FindClass(char const*); // method DIE 0x186b
+    jmethodID _JNIEnv::FromReflectedMethod(jobject); // method DIE 0x188d
+    jfieldID _JNIEnv::FromReflectedField(jobject); // method DIE 0x18af
+    jobject _JNIEnv::ToReflectedMethod(jclass, jmethodID, jboolean); // method DIE 0x18d1
+    jclass _JNIEnv::GetSuperclass(jclass); // method DIE 0x18fd
+    jboolean _JNIEnv::IsAssignableFrom(jclass, jclass); // method DIE 0x191f
+    jobject _JNIEnv::ToReflectedField(jclass, jfieldID, jboolean); // method DIE 0x1946
+    jint _JNIEnv::Throw(jthrowable); // method DIE 0x1972
+    jint _JNIEnv::ThrowNew(jclass, char const*); // method DIE 0x1994
+    jthrowable _JNIEnv::ExceptionOccurred(); // method DIE 0x19bb
+    void _JNIEnv::ExceptionDescribe(); // method DIE 0x19d8
+    void _JNIEnv::ExceptionClear(); // method DIE 0x19f1
+    void _JNIEnv::FatalError(char const*); // method DIE 0x1a0a
+    jint _JNIEnv::PushLocalFrame(jint); // method DIE 0x1a28
+    jobject _JNIEnv::PopLocalFrame(jobject); // method DIE 0x1a4a
+    jobject _JNIEnv::NewGlobalRef(jobject); // method DIE 0x1a6c
+    void _JNIEnv::DeleteGlobalRef(jobject); // method DIE 0x1a8e
+    void _JNIEnv::DeleteLocalRef(jobject); // method DIE 0x1aac
+    jboolean _JNIEnv::IsSameObject(jobject, jobject); // method DIE 0x1aca
+    jobject _JNIEnv::NewLocalRef(jobject); // method DIE 0x1af1
+    jint _JNIEnv::EnsureLocalCapacity(jint); // method DIE 0x1b13
+    jobject _JNIEnv::AllocObject(jclass); // method DIE 0x1b35
+    jobject _JNIEnv::NewObject(jclass, jmethodID, ...); // method DIE 0x1b57
+    jobject _JNIEnv::NewObjectV(jclass, jmethodID, va_list); // method DIE 0x1b7f
+    jobject _JNIEnv::NewObjectA(jclass, jmethodID, jvalue*); // method DIE 0x1bab
+    jclass _JNIEnv::GetObjectClass(jobject); // method DIE 0x1bd7
+    jboolean _JNIEnv::IsInstanceOf(jobject, jclass); // method DIE 0x1bf9
+    jmethodID _JNIEnv::GetMethodID(jclass, char const*, char const*); // method DIE 0x1c20
+    jobject _JNIEnv::CallObjectMethod(jobject, jmethodID, ...); // method DIE 0x1c4c
+    jobject _JNIEnv::CallObjectMethodV(jobject, jmethodID, va_list); // method DIE 0x1c74
+    jobject _JNIEnv::CallObjectMethodA(jobject, jmethodID, jvalue*); // method DIE 0x1ca0
+    jboolean _JNIEnv::CallBooleanMethod(jobject, jmethodID, ...); // method DIE 0x1ccc
+    jboolean _JNIEnv::CallBooleanMethodV(jobject, jmethodID, va_list); // method DIE 0x1cf4
+    jboolean _JNIEnv::CallBooleanMethodA(jobject, jmethodID, jvalue*); // method DIE 0x1d20
+    jbyte _JNIEnv::CallByteMethod(jobject, jmethodID, ...); // method DIE 0x1d4c
+    jbyte _JNIEnv::CallByteMethodV(jobject, jmethodID, va_list); // method DIE 0x1d74
+    jbyte _JNIEnv::CallByteMethodA(jobject, jmethodID, jvalue*); // method DIE 0x1da0
+    jchar _JNIEnv::CallCharMethod(jobject, jmethodID, ...); // method DIE 0x1dcc
+    jchar _JNIEnv::CallCharMethodV(jobject, jmethodID, va_list); // method DIE 0x1df4
+    jchar _JNIEnv::CallCharMethodA(jobject, jmethodID, jvalue*); // method DIE 0x1e20
+    jshort _JNIEnv::CallShortMethod(jobject, jmethodID, ...); // method DIE 0x1e4c
+    jshort _JNIEnv::CallShortMethodV(jobject, jmethodID, va_list); // method DIE 0x1e74
+    jshort _JNIEnv::CallShortMethodA(jobject, jmethodID, jvalue*); // method DIE 0x1ea0
+    jint _JNIEnv::CallIntMethod(jobject, jmethodID, ...); // method DIE 0x1ecc
+    jint _JNIEnv::CallIntMethodV(jobject, jmethodID, va_list); // method DIE 0x1ef4
+    jint _JNIEnv::CallIntMethodA(jobject, jmethodID, jvalue*); // method DIE 0x1f20
+    jlong _JNIEnv::CallLongMethod(jobject, jmethodID, ...); // method DIE 0x1f4c
+    jlong _JNIEnv::CallLongMethodV(jobject, jmethodID, va_list); // method DIE 0x1f74
+    jlong _JNIEnv::CallLongMethodA(jobject, jmethodID, jvalue*); // method DIE 0x1fa0
+    jfloat _JNIEnv::CallFloatMethod(jobject, jmethodID, ...); // method DIE 0x1fcc
+    jfloat _JNIEnv::CallFloatMethodV(jobject, jmethodID, va_list); // method DIE 0x1ff4
+    jfloat _JNIEnv::CallFloatMethodA(jobject, jmethodID, jvalue*); // method DIE 0x2020
+    jdouble _JNIEnv::CallDoubleMethod(jobject, jmethodID, ...); // method DIE 0x204c
+    jdouble _JNIEnv::CallDoubleMethodV(jobject, jmethodID, va_list); // method DIE 0x2074
+    jdouble _JNIEnv::CallDoubleMethodA(jobject, jmethodID, jvalue*); // method DIE 0x20a0
+    void _JNIEnv::CallVoidMethod(jobject, jmethodID, ...); // method DIE 0x20cc
+    void _JNIEnv::CallVoidMethodV(jobject, jmethodID, va_list); // method DIE 0x20f0
+    void _JNIEnv::CallVoidMethodA(jobject, jmethodID, jvalue*); // method DIE 0x2118
+    jobject _JNIEnv::CallNonvirtualObjectMethod(jobject, jclass, jmethodID, ...); // method DIE 0x2140
+    jobject _JNIEnv::CallNonvirtualObjectMethodV(jobject, jclass, jmethodID, va_list); // method DIE 0x216d
+    jobject _JNIEnv::CallNonvirtualObjectMethodA(jobject, jclass, jmethodID, jvalue*); // method DIE 0x219e
+    jboolean _JNIEnv::CallNonvirtualBooleanMethod(jobject, jclass, jmethodID, ...); // method DIE 0x21cf
+    jboolean _JNIEnv::CallNonvirtualBooleanMethodV(jobject, jclass, jmethodID, va_list); // method DIE 0x21fc
+    jboolean _JNIEnv::CallNonvirtualBooleanMethodA(jobject, jclass, jmethodID, jvalue*); // method DIE 0x222d
+    jbyte _JNIEnv::CallNonvirtualByteMethod(jobject, jclass, jmethodID, ...); // method DIE 0x225e
+    jbyte _JNIEnv::CallNonvirtualByteMethodV(jobject, jclass, jmethodID, va_list); // method DIE 0x228b
+    jbyte _JNIEnv::CallNonvirtualByteMethodA(jobject, jclass, jmethodID, jvalue*); // method DIE 0x22bc
+    jchar _JNIEnv::CallNonvirtualCharMethod(jobject, jclass, jmethodID, ...); // method DIE 0x22ed
+    jchar _JNIEnv::CallNonvirtualCharMethodV(jobject, jclass, jmethodID, va_list); // method DIE 0x231a
+    jchar _JNIEnv::CallNonvirtualCharMethodA(jobject, jclass, jmethodID, jvalue*); // method DIE 0x234b
+    jshort _JNIEnv::CallNonvirtualShortMethod(jobject, jclass, jmethodID, ...); // method DIE 0x237c
+    jshort _JNIEnv::CallNonvirtualShortMethodV(jobject, jclass, jmethodID, va_list); // method DIE 0x23a9
+    jshort _JNIEnv::CallNonvirtualShortMethodA(jobject, jclass, jmethodID, jvalue*); // method DIE 0x23da
+    jint _JNIEnv::CallNonvirtualIntMethod(jobject, jclass, jmethodID, ...); // method DIE 0x240b
+    jint _JNIEnv::CallNonvirtualIntMethodV(jobject, jclass, jmethodID, va_list); // method DIE 0x2438
+    jint _JNIEnv::CallNonvirtualIntMethodA(jobject, jclass, jmethodID, jvalue*); // method DIE 0x2469
+    jlong _JNIEnv::CallNonvirtualLongMethod(jobject, jclass, jmethodID, ...); // method DIE 0x249a
+    jlong _JNIEnv::CallNonvirtualLongMethodV(jobject, jclass, jmethodID, va_list); // method DIE 0x24c7
+    jlong _JNIEnv::CallNonvirtualLongMethodA(jobject, jclass, jmethodID, jvalue*); // method DIE 0x24f8
+    jfloat _JNIEnv::CallNonvirtualFloatMethod(jobject, jclass, jmethodID, ...); // method DIE 0x2529
+    jfloat _JNIEnv::CallNonvirtualFloatMethodV(jobject, jclass, jmethodID, va_list); // method DIE 0x2556
+    jfloat _JNIEnv::CallNonvirtualFloatMethodA(jobject, jclass, jmethodID, jvalue*); // method DIE 0x2587
+    jdouble _JNIEnv::CallNonvirtualDoubleMethod(jobject, jclass, jmethodID, ...); // method DIE 0x25b8
+    jdouble _JNIEnv::CallNonvirtualDoubleMethodV(jobject, jclass, jmethodID, va_list); // method DIE 0x25e5
+    jdouble _JNIEnv::CallNonvirtualDoubleMethodA(jobject, jclass, jmethodID, jvalue*); // method DIE 0x2616
+    void _JNIEnv::CallNonvirtualVoidMethod(jobject, jclass, jmethodID, ...); // method DIE 0x2647
+    void _JNIEnv::CallNonvirtualVoidMethodV(jobject, jclass, jmethodID, va_list); // method DIE 0x2670
+    void _JNIEnv::CallNonvirtualVoidMethodA(jobject, jclass, jmethodID, jvalue*); // method DIE 0x269d
+    jfieldID _JNIEnv::GetFieldID(jclass, char const*, char const*); // method DIE 0x26ca
+    jobject _JNIEnv::GetObjectField(jobject, jfieldID); // method DIE 0x26f6
+    jboolean _JNIEnv::GetBooleanField(jobject, jfieldID); // method DIE 0x271d
+    jbyte _JNIEnv::GetByteField(jobject, jfieldID); // method DIE 0x2744
+    jchar _JNIEnv::GetCharField(jobject, jfieldID); // method DIE 0x276b
+    jshort _JNIEnv::GetShortField(jobject, jfieldID); // method DIE 0x2792
+    jint _JNIEnv::GetIntField(jobject, jfieldID); // method DIE 0x27b9
+    jlong _JNIEnv::GetLongField(jobject, jfieldID); // method DIE 0x27e0
+    jfloat _JNIEnv::GetFloatField(jobject, jfieldID); // method DIE 0x2807
+    jdouble _JNIEnv::GetDoubleField(jobject, jfieldID); // method DIE 0x282e
+    void _JNIEnv::SetObjectField(jobject, jfieldID, jobject); // method DIE 0x2855
+    void _JNIEnv::SetBooleanField(jobject, jfieldID, jboolean); // method DIE 0x287d
+    void _JNIEnv::SetByteField(jobject, jfieldID, jbyte); // method DIE 0x28a5
+    void _JNIEnv::SetCharField(jobject, jfieldID, jchar); // method DIE 0x28cd
+    void _JNIEnv::SetShortField(jobject, jfieldID, jshort); // method DIE 0x28f5
+    void _JNIEnv::SetIntField(jobject, jfieldID, jint); // method DIE 0x291d
+    void _JNIEnv::SetLongField(jobject, jfieldID, jlong); // method DIE 0x2945
+    void _JNIEnv::SetFloatField(jobject, jfieldID, jfloat); // method DIE 0x296d
+    void _JNIEnv::SetDoubleField(jobject, jfieldID, jdouble); // method DIE 0x2995
+    jmethodID _JNIEnv::GetStaticMethodID(jclass, char const*, char const*); // method DIE 0x29bd
+    jobject _JNIEnv::CallStaticObjectMethod(jclass, jmethodID, ...); // method DIE 0x29e9
+    jobject _JNIEnv::CallStaticObjectMethodV(jclass, jmethodID, va_list); // method DIE 0x2a11
+    jobject _JNIEnv::CallStaticObjectMethodA(jclass, jmethodID, jvalue*); // method DIE 0x2a3d
+    jboolean _JNIEnv::CallStaticBooleanMethod(jclass, jmethodID, ...); // method DIE 0x2a69
+    jboolean _JNIEnv::CallStaticBooleanMethodV(jclass, jmethodID, va_list); // method DIE 0x2a91
+    jboolean _JNIEnv::CallStaticBooleanMethodA(jclass, jmethodID, jvalue*); // method DIE 0x2abd
+    jbyte _JNIEnv::CallStaticByteMethod(jclass, jmethodID, ...); // method DIE 0x2ae9
+    jbyte _JNIEnv::CallStaticByteMethodV(jclass, jmethodID, va_list); // method DIE 0x2b11
+    jbyte _JNIEnv::CallStaticByteMethodA(jclass, jmethodID, jvalue*); // method DIE 0x2b3d
+    jchar _JNIEnv::CallStaticCharMethod(jclass, jmethodID, ...); // method DIE 0x2b69
+    jchar _JNIEnv::CallStaticCharMethodV(jclass, jmethodID, va_list); // method DIE 0x2b91
+    jchar _JNIEnv::CallStaticCharMethodA(jclass, jmethodID, jvalue*); // method DIE 0x2bbd
+    jshort _JNIEnv::CallStaticShortMethod(jclass, jmethodID, ...); // method DIE 0x2be9
+    jshort _JNIEnv::CallStaticShortMethodV(jclass, jmethodID, va_list); // method DIE 0x2c11
+    jshort _JNIEnv::CallStaticShortMethodA(jclass, jmethodID, jvalue*); // method DIE 0x2c3d
+    jint _JNIEnv::CallStaticIntMethod(jclass, jmethodID, ...); // method DIE 0x2c69
+    jint _JNIEnv::CallStaticIntMethodV(jclass, jmethodID, va_list); // method DIE 0x2c91
+    jint _JNIEnv::CallStaticIntMethodA(jclass, jmethodID, jvalue*); // method DIE 0x2cbd
+    jlong _JNIEnv::CallStaticLongMethod(jclass, jmethodID, ...); // method DIE 0x2ce9
+    jlong _JNIEnv::CallStaticLongMethodV(jclass, jmethodID, va_list); // method DIE 0x2d11
+    jlong _JNIEnv::CallStaticLongMethodA(jclass, jmethodID, jvalue*); // method DIE 0x2d3d
+    jfloat _JNIEnv::CallStaticFloatMethod(jclass, jmethodID, ...); // method DIE 0x2d69
+    jfloat _JNIEnv::CallStaticFloatMethodV(jclass, jmethodID, va_list); // method DIE 0x2d91
+    jfloat _JNIEnv::CallStaticFloatMethodA(jclass, jmethodID, jvalue*); // method DIE 0x2dbd
+    jdouble _JNIEnv::CallStaticDoubleMethod(jclass, jmethodID, ...); // method DIE 0x2de9
+    jdouble _JNIEnv::CallStaticDoubleMethodV(jclass, jmethodID, va_list); // method DIE 0x2e11
+    jdouble _JNIEnv::CallStaticDoubleMethodA(jclass, jmethodID, jvalue*); // method DIE 0x2e3d
+    void _JNIEnv::CallStaticVoidMethod(jclass, jmethodID, ...); // method DIE 0x2e69
+    void _JNIEnv::CallStaticVoidMethodV(jclass, jmethodID, va_list); // method DIE 0x2e8d
+    void _JNIEnv::CallStaticVoidMethodA(jclass, jmethodID, jvalue*); // method DIE 0x2eb5
+    jfieldID _JNIEnv::GetStaticFieldID(jclass, char const*, char const*); // method DIE 0x2edd
+    jobject _JNIEnv::GetStaticObjectField(jclass, jfieldID); // method DIE 0x2f09
+    jboolean _JNIEnv::GetStaticBooleanField(jclass, jfieldID); // method DIE 0x2f30
+    jbyte _JNIEnv::GetStaticByteField(jclass, jfieldID); // method DIE 0x2f57
+    jchar _JNIEnv::GetStaticCharField(jclass, jfieldID); // method DIE 0x2f7e
+    jshort _JNIEnv::GetStaticShortField(jclass, jfieldID); // method DIE 0x2fa5
+    jint _JNIEnv::GetStaticIntField(jclass, jfieldID); // method DIE 0x2fcc
+    jlong _JNIEnv::GetStaticLongField(jclass, jfieldID); // method DIE 0x2ff3
+    jfloat _JNIEnv::GetStaticFloatField(jclass, jfieldID); // method DIE 0x301a
+    jdouble _JNIEnv::GetStaticDoubleField(jclass, jfieldID); // method DIE 0x3041
+    void _JNIEnv::SetStaticObjectField(jclass, jfieldID, jobject); // method DIE 0x3068
+    void _JNIEnv::SetStaticBooleanField(jclass, jfieldID, jboolean); // method DIE 0x3090
+    void _JNIEnv::SetStaticByteField(jclass, jfieldID, jbyte); // method DIE 0x30b8
+    void _JNIEnv::SetStaticCharField(jclass, jfieldID, jchar); // method DIE 0x30e0
+    void _JNIEnv::SetStaticShortField(jclass, jfieldID, jshort); // method DIE 0x3108
+    void _JNIEnv::SetStaticIntField(jclass, jfieldID, jint); // method DIE 0x3130
+    void _JNIEnv::SetStaticLongField(jclass, jfieldID, jlong); // method DIE 0x3158
+    void _JNIEnv::SetStaticFloatField(jclass, jfieldID, jfloat); // method DIE 0x3180
+    void _JNIEnv::SetStaticDoubleField(jclass, jfieldID, jdouble); // method DIE 0x31a8
+    jstring _JNIEnv::NewString(jchar const*, jsize); // method DIE 0x31d0
+    jsize _JNIEnv::GetStringLength(jstring); // method DIE 0x31f7
+    jchar const* _JNIEnv::GetStringChars(jstring, jboolean*); // method DIE 0x3219
+    void _JNIEnv::ReleaseStringChars(jstring, jchar const*); // method DIE 0x3240
+    jstring _JNIEnv::NewStringUTF(char const*); // method DIE 0x3263
+    jsize _JNIEnv::GetStringUTFLength(jstring); // method DIE 0x3285
+    char const* _JNIEnv::GetStringUTFChars(jstring, jboolean*); // method DIE 0x32a7
+    void _JNIEnv::ReleaseStringUTFChars(jstring, char const*); // method DIE 0x32ce
+    jsize _JNIEnv::GetArrayLength(jarray); // method DIE 0x32f1
+    jobjectArray _JNIEnv::NewObjectArray(jsize, jclass, jobject); // method DIE 0x3313
+    jobject _JNIEnv::GetObjectArrayElement(jobjectArray, jsize); // method DIE 0x333f
+    void _JNIEnv::SetObjectArrayElement(jobjectArray, jsize, jobject); // method DIE 0x3366
+    jbooleanArray _JNIEnv::NewBooleanArray(jsize); // method DIE 0x338e
+    jbyteArray _JNIEnv::NewByteArray(jsize); // method DIE 0x33b0
+    jcharArray _JNIEnv::NewCharArray(jsize); // method DIE 0x33d2
+    jshortArray _JNIEnv::NewShortArray(jsize); // method DIE 0x33f4
+    jintArray _JNIEnv::NewIntArray(jsize); // method DIE 0x3416
+    jlongArray _JNIEnv::NewLongArray(jsize); // method DIE 0x3438
+    jfloatArray _JNIEnv::NewFloatArray(jsize); // method DIE 0x345a
+    jdoubleArray _JNIEnv::NewDoubleArray(jsize); // method DIE 0x347c
+    jboolean* _JNIEnv::GetBooleanArrayElements(jbooleanArray, jboolean*); // method DIE 0x349e
+    jbyte* _JNIEnv::GetByteArrayElements(jbyteArray, jboolean*); // method DIE 0x34c5
+    jchar* _JNIEnv::GetCharArrayElements(jcharArray, jboolean*); // method DIE 0x34ec
+    jshort* _JNIEnv::GetShortArrayElements(jshortArray, jboolean*); // method DIE 0x3513
+    jint* _JNIEnv::GetIntArrayElements(jintArray, jboolean*); // method DIE 0x353a
+    jlong* _JNIEnv::GetLongArrayElements(jlongArray, jboolean*); // method DIE 0x3561
+    jfloat* _JNIEnv::GetFloatArrayElements(jfloatArray, jboolean*); // method DIE 0x3588
+    jdouble* _JNIEnv::GetDoubleArrayElements(jdoubleArray, jboolean*); // method DIE 0x35af
+    void _JNIEnv::ReleaseBooleanArrayElements(jbooleanArray, jboolean*, jint); // method DIE 0x35d6
+    void _JNIEnv::ReleaseByteArrayElements(jbyteArray, jbyte*, jint); // method DIE 0x35fe
+    void _JNIEnv::ReleaseCharArrayElements(jcharArray, jchar*, jint); // method DIE 0x3626
+    void _JNIEnv::ReleaseShortArrayElements(jshortArray, jshort*, jint); // method DIE 0x364e
+    void _JNIEnv::ReleaseIntArrayElements(jintArray, jint*, jint); // method DIE 0x3676
+    void _JNIEnv::ReleaseLongArrayElements(jlongArray, jlong*, jint); // method DIE 0x369e
+    void _JNIEnv::ReleaseFloatArrayElements(jfloatArray, jfloat*, jint); // method DIE 0x36c6
+    void _JNIEnv::ReleaseDoubleArrayElements(jdoubleArray, jdouble*, jint); // method DIE 0x36ee
+    void _JNIEnv::GetBooleanArrayRegion(jbooleanArray, jsize, jsize, jboolean*); // method DIE 0x3716
+    void _JNIEnv::GetByteArrayRegion(jbyteArray, jsize, jsize, jbyte*); // method DIE 0x3743
+    void _JNIEnv::GetCharArrayRegion(jcharArray, jsize, jsize, jchar*); // method DIE 0x3770
+    void _JNIEnv::GetShortArrayRegion(jshortArray, jsize, jsize, jshort*); // method DIE 0x379d
+    void _JNIEnv::GetIntArrayRegion(jintArray, jsize, jsize, jint*); // method DIE 0x37ca
+    void _JNIEnv::GetLongArrayRegion(jlongArray, jsize, jsize, jlong*); // method DIE 0x37f7
+    void _JNIEnv::GetFloatArrayRegion(jfloatArray, jsize, jsize, jfloat*); // method DIE 0x3824
+    void _JNIEnv::GetDoubleArrayRegion(jdoubleArray, jsize, jsize, jdouble*); // method DIE 0x3851
+    void _JNIEnv::SetBooleanArrayRegion(jbooleanArray, jsize, jsize, jboolean const*); // method DIE 0x387e
+    void _JNIEnv::SetByteArrayRegion(jbyteArray, jsize, jsize, jbyte const*); // method DIE 0x38ab
+    void _JNIEnv::SetCharArrayRegion(jcharArray, jsize, jsize, jchar const*); // method DIE 0x38d8
+    void _JNIEnv::SetShortArrayRegion(jshortArray, jsize, jsize, jshort const*); // method DIE 0x3905
+    void _JNIEnv::SetIntArrayRegion(jintArray, jsize, jsize, jint const*); // method DIE 0x3932
+    void _JNIEnv::SetLongArrayRegion(jlongArray, jsize, jsize, jlong const*); // method DIE 0x395f
+    void _JNIEnv::SetFloatArrayRegion(jfloatArray, jsize, jsize, jfloat const*); // method DIE 0x398c
+    void _JNIEnv::SetDoubleArrayRegion(jdoubleArray, jsize, jsize, jdouble const*); // method DIE 0x39b9
+    jint _JNIEnv::RegisterNatives(jclass, JNINativeMethod const*, jint); // method DIE 0x39e6
+    jint _JNIEnv::UnregisterNatives(jclass); // method DIE 0x3a12
+    jint _JNIEnv::MonitorEnter(jobject); // method DIE 0x3a34
+    jint _JNIEnv::MonitorExit(jobject); // method DIE 0x3a56
+    jint _JNIEnv::GetJavaVM(JavaVM**); // method DIE 0x3a78
+    void _JNIEnv::GetStringRegion(jstring, jsize, jsize, jchar*); // method DIE 0x3a9a
+    void _JNIEnv::GetStringUTFRegion(jstring, jsize, jsize, char*); // method DIE 0x3ac7
+    void* _JNIEnv::GetPrimitiveArrayCritical(jarray, jboolean*); // method DIE 0x3af4
+    void _JNIEnv::ReleasePrimitiveArrayCritical(jarray, void*, jint); // method DIE 0x3b1b
+    jchar const* _JNIEnv::GetStringCritical(jstring, jboolean*); // method DIE 0x3b43
+    void _JNIEnv::ReleaseStringCritical(jstring, jchar const*); // method DIE 0x3b6a
+    jweak _JNIEnv::NewWeakGlobalRef(jobject); // method DIE 0x3b8d
+    void _JNIEnv::DeleteWeakGlobalRef(jweak); // method DIE 0x3baf
+    jboolean _JNIEnv::ExceptionCheck(); // method DIE 0x3bcd
+    jobject _JNIEnv::NewDirectByteBuffer(void*, jlong); // method DIE 0x3bea
+    void* _JNIEnv::GetDirectBufferAddress(jobject); // method DIE 0x3c11
+    jlong _JNIEnv::GetDirectBufferCapacity(jobject); // method DIE 0x3c33
+    jobjectRefType _JNIEnv::GetObjectRefType(jobject); // method DIE 0x3c55
+};
+
+// DIE 0x3c74, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:139
+typedef _JavaVM JavaVM;
+
+// DIE 0x3c7f, byte_size=4, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:1051
+struct _JavaVM {
+    JNIInvokeInterface const* functions; // byte offset: 0, access: None, artificial: False
+    jint _JavaVM::DestroyJavaVM(); // method DIE 0x3c9b
+    jint _JavaVM::AttachCurrentThread(JNIEnv**, void*); // method DIE 0x3cb8
+    jint _JavaVM::DetachCurrentThread(); // method DIE 0x3cdf
+    jint _JavaVM::GetEnv(void**, jint); // method DIE 0x3cfc
+    jint _JavaVM::AttachCurrentThreadAsDaemon(JNIEnv**, void*); // method DIE 0x3d23
+};
+
+// DIE 0x599d, byte_size=32, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/jni.h:1036
+struct JNIInvokeInterface {
+    void* reserved0; // byte offset: 0, access: None, artificial: False
+    void* reserved1; // byte offset: 4, access: None, artificial: False
+    void* reserved2; // byte offset: 8, access: None, artificial: False
+    jint (JavaVM*)* DestroyJavaVM; // byte offset: 12, access: None, artificial: False
+    jint (JavaVM*, JNIEnv**, void*)* AttachCurrentThread; // byte offset: 16, access: None, artificial: False
+    jint (JavaVM*)* DetachCurrentThread; // byte offset: 20, access: None, artificial: False
+    jint (JavaVM*, void**, jint)* GetEnv; // byte offset: 24, access: None, artificial: False
+    jint (JavaVM*, JNIEnv**, void*)* AttachCurrentThreadAsDaemon; // byte offset: 28, access: None, artificial: False
+};
+
+// DIE 0x5a93, byte_size=None, declaration=False
+// C:/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/../include/stddef.h:211
+typedef unsigned int size_t;
+
+// DIE 0x5ac3, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:18
+typedef long int __kernel_off_t;
+
+// DIE 0x5ace, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:26
+typedef long int __kernel_time_t;
+
+// DIE 0x5ad9, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:27
+typedef long int __kernel_suseconds_t;
+
+// DIE 0x5ae4, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:28
+typedef long int __kernel_clock_t;
+
+// DIE 0x5aff, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/sys/types.h:54
+typedef __kernel_clock_t clock_t;
+
+// DIE 0x5b0a, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/sys/types.h:67
+typedef __kernel_off_t off_t;
+
+// DIE 0x5b15, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/sys/types.h:99
+typedef __kernel_suseconds_t suseconds_t;
+
+// DIE 0x5b20, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/sys/types.h:100
+typedef __kernel_time_t time_t;
+
+// DIE 0x5b2b, byte_size=8, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/stdlib.h:145
+struct div_t {
+    int quot; // byte offset: 0, access: None, artificial: False
+    int rem; // byte offset: 4, access: None, artificial: False
+};
+
+// DIE 0x5b54, byte_size=8, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/stdlib.h:152
+struct ldiv_t {
+    long int quot; // byte offset: 0, access: None, artificial: False
+    long int rem; // byte offset: 4, access: None, artificial: False
+};
+
+// DIE 0x5b7d, byte_size=16, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/stdlib.h:159
+struct lldiv_t {
+    long long int quot; // byte offset: 0, access: None, artificial: False
+    long long int rem; // byte offset: 8, access: None, artificial: False
+};
+
+// DIE 0x618e, byte_size=1, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/type_manips.h:23
+struct std::__true_type {
+};
+
+// DIE 0x6196, byte_size=1, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/type_manips.h:24
+struct std::__false_type {
+};
+
+// DIE 0x61a4, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/stdio.h:78
+typedef off_t fpos_t;
+
+// DIE 0x61af, byte_size=8, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/stdio.h:87
+struct __sbuf {
+    unsigned char* _base; // byte offset: 0, access: None, artificial: False
+    int _size; // byte offset: 4, access: None, artificial: False
+};
+
+// DIE 0x61de, byte_size=84, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/stdio.h:119
+struct __sFILE {
+    unsigned char* _p; // byte offset: 0, access: None, artificial: False
+    int _r; // byte offset: 4, access: None, artificial: False
+    int _w; // byte offset: 8, access: None, artificial: False
+    short int _flags; // byte offset: 12, access: None, artificial: False
+    short int _file; // byte offset: 14, access: None, artificial: False
+    __sbuf _bf; // byte offset: 16, access: None, artificial: False
+    int _lbfsize; // byte offset: 24, access: None, artificial: False
+    void* _cookie; // byte offset: 28, access: None, artificial: False
+    int (void*)* _close; // byte offset: 32, access: None, artificial: False
+    int (void*, char*, int)* _read; // byte offset: 36, access: None, artificial: False
+    fpos_t (void*, fpos_t, int)* _seek; // byte offset: 40, access: None, artificial: False
+    int (void*, char const*, int)* _write; // byte offset: 44, access: None, artificial: False
+    __sbuf _ext; // byte offset: 48, access: None, artificial: False
+    unsigned char* _up; // byte offset: 56, access: None, artificial: False
+    int _ur; // byte offset: 60, access: None, artificial: False
+    unsigned char[3] _ubuf; // byte offset: 64, access: None, artificial: False
+    unsigned char[1] _nbuf; // byte offset: 67, access: None, artificial: False
+    __sbuf _lb; // byte offset: 68, access: None, artificial: False
+    int _blksize; // byte offset: 76, access: None, artificial: False
+    fpos_t _offset; // byte offset: 80, access: None, artificial: False
+};
+
+// DIE 0x6392, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/stdio.h:151
+typedef __sFILE FILE;
+
+// DIE 0x6654, byte_size=8, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/linux/time.h:25
+struct timeval {
+    time_t tv_sec; // byte offset: 0, access: None, artificial: False
+    suseconds_t tv_usec; // byte offset: 4, access: None, artificial: False
+};
+
+// DIE 0x667d, byte_size=44, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/time.h:45
+struct tm {
+    int tm_sec; // byte offset: 0, access: None, artificial: False
+    int tm_min; // byte offset: 4, access: None, artificial: False
+    int tm_hour; // byte offset: 8, access: None, artificial: False
+    int tm_mday; // byte offset: 12, access: None, artificial: False
+    int tm_mon; // byte offset: 16, access: None, artificial: False
+    int tm_year; // byte offset: 20, access: None, artificial: False
+    int tm_wday; // byte offset: 24, access: None, artificial: False
+    int tm_yday; // byte offset: 28, access: None, artificial: False
+    int tm_isdst; // byte offset: 32, access: None, artificial: False
+    long int tm_gmtoff; // byte offset: 36, access: None, artificial: False
+    char const* tm_zone; // byte offset: 40, access: None, artificial: False
+};
+
+// DIE 0x6723, byte_size=None, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/wchar.h:53
+typedef int wint_t;
+
+// DIE 0x672e, byte_size=4, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/wchar.h:54
+struct mbstate_t {
+    int dummy; // byte offset: 0, access: None, artificial: False
+};
+
+// DIE 0x6c76, byte_size=1, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_string.h:99
+struct std::priv::_String_reserve_t {
+};
+
+// DIE 0x6c8e, byte_size=1, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/type_traits.h:572
+struct std::__stlport_class<std::allocator<char> > {
+};
+
+// DIE 0x6c97, byte_size=1, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_alloc.h:275
+class std::allocator<char> : std::__stlport_class<std::allocator<char> > {
+    std::allocator<char>* std::allocator<char>::allocator(); // method DIE 0x6cad
+    std::allocator<char>* std::allocator<char>::allocator(std::allocator<char> const&); // method DIE 0x6cc6
+    std::allocator<char>* std::allocator<char>::allocator(std::__move_source<std::allocator<char> >); // method DIE 0x6ce4
+    void* std::allocator<char>::~allocator(); // method DIE 0x6d02
+    char* std::allocator<char>::address(char&); // method DIE 0x6d21
+    char const* std::allocator<char>::address(char const&); // method DIE 0x6d43
+    char* std::allocator<char>::allocate(unsigned int, void const*); // method DIE 0x6d65
+    void std::allocator<char>::deallocate(char*, unsigned int); // method DIE 0x6d8c
+    void std::allocator<char>::deallocate(char*); // method DIE 0x6daf
+    size_t std::allocator<char>::max_size(); // method DIE 0x6dcd
+    void std::allocator<char>::construct(char*, char const&); // method DIE 0x6dea
+    void std::allocator<char>::destroy(char*); // method DIE 0x6e0d
+    char* std::allocator<char>::_M_allocate(unsigned int, size_t&); // method DIE 0x6e2b
+};
+
+// DIE 0x6e66, byte_size=4, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_alloc.h:472
+class std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> > : std::allocator<char> {
+    char* _M_data; // byte offset: 0, access: None, artificial: False
+    std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_STLP_alloc_proxy(std::allocator<char> const&, char*); // method DIE 0x6e8b
+    std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_STLP_alloc_proxy(std::__move_source<std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> > >); // method DIE 0x6eae
+    std::allocator<char>& std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_M_base(); // method DIE 0x6ecc
+    void std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_M_swap_alloc(std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >&, std::__true_type const&); // method DIE 0x6ee9
+    void std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_M_swap_alloc(std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >&, std::__false_type const&); // method DIE 0x6f0d
+    void std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_M_swap_alloc(std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >&); // method DIE 0x6f31
+    void std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::swap(std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >&); // method DIE 0x6f4f
+    char* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::allocate(unsigned int, size_t&); // method DIE 0x6f6d
+    char* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::allocate(unsigned int); // method DIE 0x6f94
+    char* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::allocate(unsigned int, size_t&, std::__true_type const&); // method DIE 0x6fb6
+    char* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::allocate(unsigned int, size_t&, std::__false_type const&); // method DIE 0x6fe3
+};
+
+// DIE 0x7035, byte_size=24, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_string_base.h:41
+class std::priv::_String_base<char, std::allocator<char> > {
+    std::priv::_String_base<char, std::allocator<char> >::_Buffers _M_buffers; // byte offset: 0, access: 3, artificial: False
+    char* _M_finish; // byte offset: 16, access: 2, artificial: False
+    std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> > _M_start_of_storage; // byte offset: 20, access: 2, artificial: False
+    bool std::priv::_String_base<char, std::allocator<char> >::_M_using_static_buf(); // method DIE 0x706e
+    char const* std::priv::_String_base<char, std::allocator<char> >::_M_Start(); // method DIE 0x708b
+    char* std::priv::_String_base<char, std::allocator<char> >::_M_Start(); // method DIE 0x70a8
+    char const* std::priv::_String_base<char, std::allocator<char> >::_M_End(); // method DIE 0x70c5
+    char* std::priv::_String_base<char, std::allocator<char> >::_M_End(); // method DIE 0x70e2
+    size_t std::priv::_String_base<char, std::allocator<char> >::_M_capacity(); // method DIE 0x70ff
+    size_t std::priv::_String_base<char, std::allocator<char> >::_M_rest(); // method DIE 0x711c
+    char const* std::priv::_String_base<char, std::allocator<char> >::_M_Finish(); // method DIE 0x7139
+    char* std::priv::_String_base<char, std::allocator<char> >::_M_Finish(); // method DIE 0x7156
+    void std::priv::_String_base<char, std::allocator<char> >::_M_allocate_block(unsigned int); // method DIE 0x7173
+    void std::priv::_String_base<char, std::allocator<char> >::_M_deallocate_block(); // method DIE 0x7191
+    size_t std::priv::_String_base<char, std::allocator<char> >::max_size(); // method DIE 0x71aa
+    std::priv::_String_base<char, std::allocator<char> >* std::priv::_String_base<char, std::allocator<char> >::_String_base(std::allocator<char> const&); // method DIE 0x71c7
+    std::priv::_String_base<char, std::allocator<char> >* std::priv::_String_base<char, std::allocator<char> >::_String_base(std::allocator<char> const&, unsigned int); // method DIE 0x71e5
+    void std::priv::_String_base<char, std::allocator<char> >::_M_move_src(std::priv::_String_base<char, std::allocator<char> >&); // method DIE 0x7208
+    std::priv::_String_base<char, std::allocator<char> >* std::priv::_String_base<char, std::allocator<char> >::_String_base(std::__move_source<std::priv::_String_base<char, std::allocator<char> > >); // method DIE 0x7226
+    void* std::priv::_String_base<char, std::allocator<char> >::~_String_base(); // method DIE 0x7244
+    void std::priv::_String_base<char, std::allocator<char> >::_M_reset(char*, char*, char*); // method DIE 0x7263
+    void std::priv::_String_base<char, std::allocator<char> >::_M_swap(std::priv::_String_base<char, std::allocator<char> >&); // method DIE 0x728b
+    void std::priv::_String_base<char, std::allocator<char> >::_M_throw_length_error(); // method DIE 0x72a9
+    void std::priv::_String_base<char, std::allocator<char> >::_M_throw_out_of_range(); // method DIE 0x72c2
+};
+
+// DIE 0x72ef, byte_size=24, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_string_fwd.h:32
+struct std::basic_string<char, std::char_traits<char>, std::allocator<char> > : std::priv::_String_base<char, std::allocator<char> > {
+    std::allocator<char> std::basic_string<char, std::char_traits<char>, std::allocator<char> >::get_allocator(); // method DIE 0x7314
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::allocator<char> const&); // method DIE 0x7330
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::priv::_String_reserve_t, unsigned int, std::allocator<char> const&); // method DIE 0x734d
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0x7374
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int, std::allocator<char> const&); // method DIE 0x7391
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned int, std::allocator<char> const&); // method DIE 0x73bd
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&); // method DIE 0x73e4
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(unsigned int, char, std::allocator<char> const&); // method DIE 0x7406
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >); // method DIE 0x742d
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_compute_next_size(unsigned int); // method DIE 0x744a
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0x746d
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(char const*); // method DIE 0x748f
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(char); // method DIE 0x74b1
+    char std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_null(); // method DIE 0x74d3
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct_null(char*); // method DIE 0x74e6
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_terminate_string(); // method DIE 0x7505
+    bool std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_inside(char const*); // method DIE 0x751f
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_range_initialize(char const*, char const*); // method DIE 0x7542
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::begin(); // method DIE 0x7566
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::end(); // method DIE 0x7583
+    char const* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::begin(); // method DIE 0x75a0
+    char const* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::end(); // method DIE 0x75bd
+    std::reverse_iterator<char*> std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rbegin(); // method DIE 0x75da
+    std::reverse_iterator<char*> std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rend(); // method DIE 0x75f7
+    std::reverse_iterator<const char*> std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rbegin(); // method DIE 0x7614
+    std::reverse_iterator<const char*> std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rend(); // method DIE 0x7631
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::size(); // method DIE 0x764e
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::length(); // method DIE 0x766b
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::max_size(); // method DIE 0x7688
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::resize(unsigned int, char); // method DIE 0x76a5
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::resize(unsigned int); // method DIE 0x76c8
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_reserve(unsigned int); // method DIE 0x76e6
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::reserve(unsigned int); // method DIE 0x7705
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::capacity(); // method DIE 0x7723
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::clear(); // method DIE 0x7740
+    bool std::basic_string<char, std::char_traits<char>, std::allocator<char> >::empty(); // method DIE 0x7759
+    char const& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned int); // method DIE 0x7776
+    char& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned int); // method DIE 0x7798
+    char const& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::at(unsigned int); // method DIE 0x77ba
+    char& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::at(unsigned int); // method DIE 0x77db
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0x77fc
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(char const*); // method DIE 0x781e
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(char); // method DIE 0x7840
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, char const*); // method DIE 0x7862
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0x788a
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int); // method DIE 0x78ac
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned int); // method DIE 0x78d8
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*); // method DIE 0x78ff
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(unsigned int, char); // method DIE 0x7921
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::push_back(char); // method DIE 0x7948
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::pop_back(); // method DIE 0x7966
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0x797f
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int); // method DIE 0x79a1
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned int); // method DIE 0x79cd
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*); // method DIE 0x79f4
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(unsigned int, char); // method DIE 0x7a16
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(char const*, char const*); // method DIE 0x7a3d
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0x7a65
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int); // method DIE 0x7a8c
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned int, char const*, unsigned int); // method DIE 0x7abd
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned int, char const*); // method DIE 0x7ae9
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned int, unsigned int, char); // method DIE 0x7b10
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(char*, char); // method DIE 0x7b3c
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(char*, unsigned int, char); // method DIE 0x7b63
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_insert(char*, char const*, char const*, bool); // method DIE 0x7b8b
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_insert_aux(char*, char); // method DIE 0x7bb9
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_copy(char const*, char const*, char*); // method DIE 0x7be1
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_move(char const*, char const*, char*); // method DIE 0x7c0a
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_copyT(char const*, char const*, char*); // method DIE 0x7c33
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(char*, char const*, char const*); // method DIE 0x7c5c
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::erase(unsigned int, unsigned int); // method DIE 0x7c84
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::erase(char*); // method DIE 0x7cab
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::erase(char*, char*); // method DIE 0x7ccd
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned int, unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0x7cf4
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned int, unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int); // method DIE 0x7d20
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned int, unsigned int, char const*, unsigned int); // method DIE 0x7d56
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned int, unsigned int, char const*); // method DIE 0x7d87
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned int, unsigned int, unsigned int, char); // method DIE 0x7db3
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(char*, char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0x7de4
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(char*, char*, char const*, unsigned int); // method DIE 0x7e10
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(char*, char*, char const*); // method DIE 0x7e41
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(char*, char*, unsigned int, char); // method DIE 0x7e6d
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(char*, char*, char const*, char const*, bool); // method DIE 0x7e9e
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(char*, char*, char const*, char const*); // method DIE 0x7ed5
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::copy(char*, unsigned int, unsigned int); // method DIE 0x7f06
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::swap(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&); // method DIE 0x7f32
+    char const* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str(); // method DIE 0x7f50
+    char const* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::data(); // method DIE 0x7f6d
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0x7f8a
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char const*, unsigned int); // method DIE 0x7fb1
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char const*, unsigned int, unsigned int); // method DIE 0x7fd8
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char); // method DIE 0x8004
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char, unsigned int); // method DIE 0x8026
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rfind(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0x804d
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rfind(char const*, unsigned int); // method DIE 0x8074
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rfind(char const*, unsigned int, unsigned int); // method DIE 0x809b
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rfind(char, unsigned int); // method DIE 0x80c7
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_of(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0x80ee
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_of(char const*, unsigned int); // method DIE 0x8115
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_of(char const*, unsigned int, unsigned int); // method DIE 0x813c
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_of(char, unsigned int); // method DIE 0x8168
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_of(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0x818f
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_of(char const*, unsigned int); // method DIE 0x81b6
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_of(char const*, unsigned int, unsigned int); // method DIE 0x81dd
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_of(char, unsigned int); // method DIE 0x8209
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_not_of(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0x8230
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_not_of(char const*, unsigned int); // method DIE 0x8257
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_not_of(char const*, unsigned int, unsigned int); // method DIE 0x827e
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_not_of(char, unsigned int); // method DIE 0x82aa
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_not_of(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0x82d1
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_not_of(char const*, unsigned int); // method DIE 0x82f8
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_not_of(char const*, unsigned int, unsigned int); // method DIE 0x831f
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_not_of(char, unsigned int); // method DIE 0x834b
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::basic_string<char, std::char_traits<char>, std::allocator<char> >::substr(unsigned int, unsigned int); // method DIE 0x8372
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0x8399
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(unsigned int, unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0x83bb
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(unsigned int, unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int); // method DIE 0x83e7
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*); // method DIE 0x841d
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(unsigned int, unsigned int, char const*); // method DIE 0x843f
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(unsigned int, unsigned int, char const*, unsigned int); // method DIE 0x846b
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_compare(char const*, char const*, char const*, char const*); // method DIE 0x849c
+};
+
+// DIE 0x84e6, byte_size=4, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/../include/pthread.h:41
+struct pthread_mutex_t {
+    int volatile value; // byte offset: 0, access: None, artificial: False
+};
+
+// DIE 0x8506, byte_size=4, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_threads.h:275
+struct std::_STLP_mutex_base {
+    pthread_mutex_t _M_lock; // byte offset: 0, access: None, artificial: False
+    void std::_STLP_mutex_base::_M_initialize(); // method DIE 0x8522
+    void std::_STLP_mutex_base::_M_destroy(); // method DIE 0x853b
+    void std::_STLP_mutex_base::_M_acquire_lock(); // method DIE 0x8554
+    void std::_STLP_mutex_base::_M_release_lock(); // method DIE 0x856d
+};
+
+// DIE 0x8682, byte_size=4, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_locale.h:75
+class std::locale {
+    std::_Locale_impl* _M_impl; // byte offset: 0, access: 2, artificial: False
+    std::locale::locale(); // method DIE 0x8737
+    std::locale::locale(std::locale const&); // method DIE 0x874f
+    std::locale::locale(char const*); // method DIE 0x876c
+    std::locale::locale(std::locale const&, char const*, int); // method DIE 0x8789
+    std::locale::locale(std::_Locale_impl*); // method DIE 0x87b0
+    std::locale::locale(std::locale const&, std::locale const&, int); // method DIE 0x87ce
+    std::locale const& std::locale::operator=(std::locale const&); // method DIE 0x87f5
+    std::locale::~locale(); // method DIE 0x8816
+    std::string std::locale::name(); // method DIE 0x8834
+    bool std::locale::operator==(std::locale const&); // method DIE 0x8850
+    bool std::locale::operator!=(std::locale const&); // method DIE 0x8871
+    std::locale std::locale::global(std::locale const&); // method DIE 0x8892
+    std::locale const& std::locale::classic(); // method DIE 0x88ad
+    std::locale::facet* std::locale::_M_get_facet(std::locale::id const&); // method DIE 0x88be
+    std::locale::facet* std::locale::_M_use_facet(std::locale::id const&); // method DIE 0x88df
+    void std::locale::_M_throw_on_combine_error(std::string const&); // method DIE 0x8900
+    void std::locale::_M_throw_on_null_name(); // method DIE 0x8917
+    void std::locale::_M_throw_on_creation_failure(int, char const*, char const*); // method DIE 0x8924
+    void std::locale::_M_insert(std::locale::facet*, std::locale::id&); // method DIE 0x8945
+    std::_Locale_impl* std::locale::_M_get_impl(); // method DIE 0x8967
+};
+
+// DIE 0x8731, byte_size=None, declaration=True
+class std::locale::facet;
+
+// DIE 0x89c0, byte_size=4, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_move_construct_fwk.h:35
+class std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > {
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& const _M_data; // byte offset: 0, access: 3, artificial: False
+    std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::__move_source(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&); // method DIE 0x89db
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::get(); // method DIE 0x89f8
+    std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >& std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator=(std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&); // method DIE 0x8a14
+};
+
+// DIE 0x8a64, byte_size=1, declaration=False
+// P:/Template/Android/ALC/jni/../LCXPlayer/../jni/ConfigFile.h:16
+class ConfigFile {
+    ConfigFile::ConfigFile(); // method DIE 0x8a81
+    ConfigFile::~ConfigFile(); // method DIE 0x8a99
+    int ConfigFile::Decode(char const*, char*, char*, char*); // method DIE 0x8ab7
+    int ConfigFile::Encode(char const*, char const*, char const*, char*); // method DIE 0x8ae7
+    void ConfigFile::XOR(char const*, char const*, char*); // method DIE 0x8b17
+    unsigned int ConfigFile::Seed(); // method DIE 0x8b3f
+};
+
+// DIE 0x8b75, byte_size=1, declaration=False
+// P:/Template/Android/ALC/jni/../LCXPlayer/../jni/ALicenseCheck.h:9
+class ALicenseCheck {
+    void ALicenseCheck::Init(JNIEnv*, jclass); // method DIE 0x8ca1
+    void ALicenseCheck::Destroy(); // method DIE 0x8cbd
+    void ALicenseCheck::ValidateNative(); // method DIE 0x8cca
+    void ALicenseCheck::ValidateServer(bool); // method DIE 0x8cd7
+    void ALicenseCheck::SetRMS_PATH(char const*); // method DIE 0x8cee
+    void ALicenseCheck::SaveRMS(bool); // method DIE 0x8d05
+    bool ALicenseCheck::LoadRMS(); // method DIE 0x8d1c
+    void ALicenseCheck::BuildIK(char*, int*); // method DIE 0x8d2d
+    void ALicenseCheck::UpperCase(char*, char*); // method DIE 0x8d4a
+    int ALicenseCheck::createUniqueCode(); // method DIE 0x8d67
+    unsigned int ALicenseCheck::currentTime(); // method DIE 0x8d79
+    void ALicenseCheck::LOGGER(char const*, ...); // method DIE 0x8d8b
+    void ALicenseCheck::XOR(char const*, char const*, char*); // method DIE 0x8da4
+    void ALicenseCheck::CallJNIFuncVoid(jclass, jmethodID); // method DIE 0x8dc6
+    void ALicenseCheck::CallJNIFuncChar(jclass, jmethodID, char*, int); // method DIE 0x8de3
+    void ALicenseCheck::CallJNIFuncChar(jclass, jmethodID, char*, int, char*); // method DIE 0x8e0a
+    void ALicenseCheck::getIMEI(char*, int); // method DIE 0x8e36
+    char* ALicenseCheck::getHost(char*); // method DIE 0x8e53
+    char* ALicenseCheck::getPhpAddress(char*); // method DIE 0x8e6f
+    void ALicenseCheck::initXPlayer(); // method DIE 0x8e8b
+    void ALicenseCheck::sendRequestByGet(); // method DIE 0x8e99
+    void ALicenseCheck::validateResponse(char*); // method DIE 0x8ea7
+    void ALicenseCheck::LoadConfig(); // method DIE 0x8ebf
+};
+
+// DIE 0x8eef, byte_size=None, declaration=True
+class LCXPlayerHttp;
+
+// DIE 0x8efb, byte_size=4, declaration=False
+// C:/android-ndk-r5b/platforms/android-8/arch-arm/usr/include/android/log.h:79
+enum android_LogPriority {
+    ANDROID_LOG_UNKNOWN = 0,
+    ANDROID_LOG_DEFAULT = 1,
+    ANDROID_LOG_VERBOSE = 2,
+    ANDROID_LOG_DEBUG = 3,
+    ANDROID_LOG_INFO = 4,
+    ANDROID_LOG_WARN = 5,
+    ANDROID_LOG_ERROR = 6,
+    ANDROID_LOG_FATAL = 7,
+    ANDROID_LOG_SILENT = 8,
+};
+
+// DIE 0x8f3e, byte_size=4, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_move_construct_fwk.h:35
+class std::__move_source<std::priv::_String_base<char, std::allocator<char> > > {
+    std::priv::_String_base<char, std::allocator<char> >& const _M_data; // byte offset: 0, access: 3, artificial: False
+    std::__move_source<std::priv::_String_base<char, std::allocator<char> > >* std::__move_source<std::priv::_String_base<char, std::allocator<char> > >::__move_source(std::priv::_String_base<char, std::allocator<char> >&); // method DIE 0x8f59
+    std::priv::_String_base<char, std::allocator<char> >& std::__move_source<std::priv::_String_base<char, std::allocator<char> > >::get(); // method DIE 0x8f76
+    std::__move_source<std::priv::_String_base<char, std::allocator<char> > >& std::__move_source<std::priv::_String_base<char, std::allocator<char> > >::operator=(std::__move_source<std::priv::_String_base<char, std::allocator<char> > > const&); // method DIE 0x8f92
+};
+
+// DIE 0x8fd3, byte_size=4, declaration=False
+// C:/android-ndk-r5b/sources/cxx-stl/stlport/stlport/stl/_move_construct_fwk.h:35
+class std::__move_source<std::allocator<char> > {
+    std::allocator<char>& const _M_data; // byte offset: 0, access: 3, artificial: False
+    std::__move_source<std::allocator<char> >* std::__move_source<std::allocator<char> >::__move_source(std::allocator<char>&); // method DIE 0x8fee
+    std::allocator<char>& std::__move_source<std::allocator<char> >::get(); // method DIE 0x900b
+    std::__move_source<std::allocator<char> >& std::__move_source<std::allocator<char> >::operator=(std::__move_source<std::allocator<char> > const&); // method DIE 0x9027
+};
+
+
+// Functions outside record declarations
+// DIE 0x5ba9, ranges: []
+char* getenv(char const*);
+// DIE 0x5bc0, ranges: []
+int mblen(char const*, size_t);
+// DIE 0x5bdc, ranges: []
+int mbtowc(wchar_t*, char const*, size_t);
+// DIE 0x5c0a, ranges: []
+int system(char const*);
+// DIE 0x5c21, ranges: []
+void* bsearch(void const*, void const*, size_t, size_t, int (void const*, void const*)*);
+// DIE 0x5c6d, ranges: []
+int atexit(void ()*);
+// DIE 0x5c8b, ranges: []
+double atof(char const*);
+// DIE 0x5ca1, ranges: []
+int atoi(char const*);
+// DIE 0x5cb8, ranges: []
+long int atol(char const*);
+// DIE 0x5ccf, ranges: []
+size_t mbstowcs(wchar_t*, char const*, size_t);
+// DIE 0x5cf0, ranges: []
+double strtod(char const*, char**);
+// DIE 0x5d12, ranges: []
+long int strtol(char const*, char**, int);
+// DIE 0x5d33, ranges: []
+long unsigned int strtoul(char const*, char**, int);
+// DIE 0x5d54, ranges: []
+size_t wcstombs(char*, wchar_t const*, size_t);
+// DIE 0x5d80, ranges: []
+int wctomb(char*, wchar_t);
+// DIE 0x5d9c, ranges: []
+void qsort(void*, size_t, size_t, int (void const*, void const*)*);
+// DIE 0x5dbe, ranges: []
+long int labs(long int);
+// DIE 0x5dd4, ranges: []
+ldiv_t ldiv(long int, long int);
+// DIE 0x5df0, ranges: []
+long long int llabs(long long int);
+// DIE 0x5e06, ranges: []
+lldiv_t lldiv(long long int, long long int);
+// DIE 0x5e22, ranges: []
+int rand();
+// DIE 0x5e2e, ranges: []
+void srand(unsigned int __s);
+// DIE 0x5e46, ranges: []
+long double abs(long double);
+// DIE 0x5e69, ranges: []
+long double acos(long double);
+// DIE 0x5e85, ranges: []
+long double asin(long double);
+// DIE 0x5ea1, ranges: []
+long double atan(long double);
+// DIE 0x5ebd, ranges: []
+long double atan2(long double, long double);
+// DIE 0x5ede, ranges: []
+long double ceil(long double);
+// DIE 0x5efa, ranges: []
+long double cos(long double);
+// DIE 0x5f16, ranges: []
+long double cosh(long double);
+// DIE 0x5f32, ranges: []
+long double exp(long double);
+// DIE 0x5f4e, ranges: []
+long double fabs(long double);
+// DIE 0x5f6a, ranges: []
+long double floor(long double);
+// DIE 0x5f86, ranges: []
+long double fmod(long double, long double);
+// DIE 0x5fa7, ranges: []
+long double frexp(long double, int*);
+// DIE 0x5fce, ranges: []
+long double ldexp(long double, int);
+// DIE 0x5fef, ranges: []
+long double log(long double);
+// DIE 0x600b, ranges: []
+long double log10(long double);
+// DIE 0x6027, ranges: []
+long double modf(long double, long double*);
+// DIE 0x604e, ranges: []
+long double pow(long double, int);
+// DIE 0x606f, ranges: []
+long double sin(long double);
+// DIE 0x608b, ranges: []
+long double sinh(long double);
+// DIE 0x60a7, ranges: []
+long double sqrt(long double);
+// DIE 0x60c3, ranges: []
+long double tan(long double);
+// DIE 0x60df, ranges: []
+long double tanh(long double);
+// DIE 0x60fb, ranges: []
+lldiv_t div(long long int, long long int);
+// DIE 0x611e, ranges: []
+int strcoll(char const*, char const*);
+// DIE 0x613a, ranges: []
+char* strerror(int);
+// DIE 0x6151, ranges: []
+size_t strxfrm(char*, char const*, size_t);
+// DIE 0x6172, ranges: []
+char* strtok(char*, char const*);
+// DIE 0x63a3, ranges: []
+void clearerr(FILE*);
+// DIE 0x63bc, ranges: []
+int fclose(FILE*);
+// DIE 0x63d3, ranges: []
+int feof(FILE*);
+// DIE 0x63ea, ranges: []
+int ferror(FILE*);
+// DIE 0x6401, ranges: []
+int fflush(FILE*);
+// DIE 0x6418, ranges: []
+int fgetc(FILE*);
+// DIE 0x642f, ranges: []
+int fgetpos(FILE*, fpos_t*);
+// DIE 0x6451, ranges: []
+char* fgets(char*, int, FILE*);
+// DIE 0x6472, ranges: []
+FILE* fopen(char const*, char const*);
+// DIE 0x648e, ranges: []
+size_t fread(void*, size_t, size_t, FILE*);
+// DIE 0x64b4, ranges: []
+FILE* freopen(char const*, char const*, FILE*);
+// DIE 0x64d5, ranges: []
+int fseek(FILE*, long int, int);
+// DIE 0x64f6, ranges: []
+int fsetpos(FILE*, fpos_t const*);
+// DIE 0x651d, ranges: []
+long int ftell(FILE*);
+// DIE 0x6534, ranges: []
+int getc(FILE*);
+// DIE 0x654b, ranges: []
+int getchar();
+// DIE 0x6558, ranges: []
+char* gets(char*);
+// DIE 0x656f, ranges: []
+void perror(char const*);
+// DIE 0x6582, ranges: []
+int remove(char const*);
+// DIE 0x659a, ranges: []
+int rename(char const*, char const*);
+// DIE 0x65b7, ranges: []
+void rewind(FILE*);
+// DIE 0x65cb, ranges: []
+void setbuf(FILE*, char*);
+// DIE 0x65e4, ranges: []
+FILE* tmpfile();
+// DIE 0x65f2, ranges: []
+char* tmpnam(char*);
+// DIE 0x660a, ranges: []
+int setvbuf(FILE*, char*, int, size_t);
+// DIE 0x6631, ranges: []
+int ungetc(int, FILE*);
+// DIE 0x674f, ranges: []
+wint_t fgetwc(FILE*);
+// DIE 0x6766, ranges: []
+wchar_t* fgetws(wchar_t*, int, FILE*);
+// DIE 0x6787, ranges: []
+wint_t fputwc(wchar_t, FILE*);
+// DIE 0x67a3, ranges: []
+int fputws(wchar_t const*, FILE*);
+// DIE 0x67bf, ranges: []
+int fwide(FILE*, int);
+// DIE 0x67db, ranges: []
+int fwprintf(FILE*, wchar_t const*, ...);
+// DIE 0x67f8, ranges: []
+int fwscanf(FILE*, wchar_t const*, ...);
+// DIE 0x6815, ranges: []
+wint_t getwchar();
+// DIE 0x6822, ranges: []
+wint_t getwc(FILE*);
+// DIE 0x6839, ranges: []
+wint_t ungetwc(wint_t, FILE*);
+// DIE 0x6855, ranges: []
+wint_t putwc(wchar_t, FILE*);
+// DIE 0x6871, ranges: []
+wint_t putwchar(wchar_t);
+// DIE 0x6888, ranges: []
+int swprintf(wchar_t*, size_t, wchar_t const*, ...);
+// DIE 0x68aa, ranges: []
+int vswprintf(wchar_t*, size_t, wchar_t const*, va_list);
+// DIE 0x68d0, ranges: []
+int swscanf(wchar_t const*, wchar_t const*, ...);
+// DIE 0x68ed, ranges: []
+int vfwprintf(FILE*, wchar_t const*, va_list);
+// DIE 0x690e, ranges: []
+int vwprintf(wchar_t const*, va_list);
+// DIE 0x692a, ranges: []
+size_t wcsftime(wchar_t*, size_t, wchar_t const*, tm const*);
+// DIE 0x695b, ranges: []
+wchar_t* wcstok(wchar_t*, wchar_t const*, wchar_t**);
+// DIE 0x6982, ranges: []
+int wcscoll(wchar_t const*, wchar_t const*);
+// DIE 0x699e, ranges: []
+size_t wcsxfrm(wchar_t*, wchar_t const*, size_t);
+// DIE 0x69bf, ranges: []
+wchar_t* wcscat(wchar_t*, wchar_t const*);
+// DIE 0x69db, ranges: []
+wchar_t* wcsrchr(wchar_t const*, wchar_t);
+// DIE 0x69f7, ranges: []
+int wcscmp(wchar_t const*, wchar_t const*);
+// DIE 0x6a13, ranges: []
+wchar_t* wcscpy(wchar_t*, wchar_t const*);
+// DIE 0x6a2f, ranges: []
+size_t wcscspn(wchar_t const*, wchar_t const*);
+// DIE 0x6a4b, ranges: []
+size_t wcslen(wchar_t const*);
+// DIE 0x6a62, ranges: []
+wchar_t* wcsncat(wchar_t*, wchar_t const*, size_t);
+// DIE 0x6a83, ranges: []
+int wcsncmp(wchar_t const*, wchar_t const*, size_t);
+// DIE 0x6aa4, ranges: []
+wchar_t* wcsncpy(wchar_t*, wchar_t const*, size_t);
+// DIE 0x6ac5, ranges: []
+wchar_t* wcspbrk(wchar_t const*, wchar_t const*);
+// DIE 0x6ae1, ranges: []
+wchar_t* wcschr(wchar_t const*, wchar_t);
+// DIE 0x6afd, ranges: []
+size_t wcsspn(wchar_t const*, wchar_t const*);
+// DIE 0x6b19, ranges: []
+double wcstod(wchar_t const*, wchar_t**);
+// DIE 0x6b35, ranges: []
+long int wcstol(wchar_t const*, wchar_t**, int);
+// DIE 0x6b56, ranges: []
+wchar_t* wcsstr(wchar_t const*, wchar_t const*);
+// DIE 0x6b72, ranges: []
+wchar_t* wmemchr(wchar_t const*, wchar_t, size_t);
+// DIE 0x6b93, ranges: []
+int wctob(wint_t);
+// DIE 0x6baa, ranges: []
+int wmemcmp(wchar_t const*, wchar_t const*, size_t);
+// DIE 0x6bcb, ranges: []
+wchar_t* wmemmove(wchar_t*, wchar_t const*, size_t);
+// DIE 0x6bec, ranges: []
+int wprintf(wchar_t const*, ...);
+// DIE 0x6c04, ranges: []
+int wscanf(wchar_t const*, ...);
+// DIE 0x6c1c, ranges: []
+wchar_t* wmemcpy(wchar_t*, wchar_t const*, size_t);
+// DIE 0x6c3d, ranges: []
+wchar_t* wmemset(wchar_t*, wchar_t, size_t);
+// DIE 0x8592, ranges: []
+clock_t clock();
+// DIE 0x859f, ranges: []
+char* asctime(tm const*);
+// DIE 0x85b6, ranges: []
+char* ctime(time_t const*);
+// DIE 0x85d8, ranges: []
+tm* gmtime(time_t const*);
+// DIE 0x85f5, ranges: []
+double difftime(time_t, time_t);
+// DIE 0x8611, ranges: []
+time_t mktime(tm*);
+// DIE 0x8628, ranges: []
+tm* localtime(time_t const*);
+// DIE 0x863f, ranges: []
+size_t strftime(char*, size_t, char const*, tm const*);
+// DIE 0x8665, ranges: []
+time_t time(time_t*);
+// DIE 0x9068, ranges: []
+int toupper(int c);
+// DIE 0x98dd, ranges: [{'begin': 9022660, 'end': 9022664, 'source': 'low/high_pc'}]
+void ALicenseCheck_InitLicense(JNIEnv* env, jclass game);
+// DIE 0x9daf, ranges: [{'begin': 9024088, 'end': 9024092, 'source': 'low/high_pc'}]
+void ALicenseCheck_SetRMS_PATH(char const* path);
+// DIE 0xa421, ranges: [{'begin': 9027276, 'end': 9027280, 'source': 'low/high_pc'}]
+void ALicenseCheck_ValidateLicense(bool sendTracking);

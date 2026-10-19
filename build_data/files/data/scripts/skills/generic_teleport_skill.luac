@@ -1,0 +1,154 @@
+--[[	Generic Teleport for NPC, based on Stone Escape
+
+	Stone Escape : Teleport at start point
+	Teleports instantly in the direction he is facing. The NPC can pass
+	trough enemies and game objects but not trough doors. 
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local MOVE_RANGE	= 650.0;		-- Teleportation range
+local TNT_DELAY	= 2000.0;	-- Time before the hurt
+local RANGE			= 500.0;		-- Explosion radius
+local ANGLE			= 360.0;		-- Explosion area
+
+local TELEPORT_FX	= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_mage_stone_escape_magefx");
+local PROJECTILE_ID	= GetPyOID("ProjectileTable", "TeleportTool");
+
+-- Cached values
+local x,y,z;					-- the projectile coordinate
+local oldx, oldy, oldz;		-- Old positions of the mage
+local inc_x, inc_y, inc_z;	-- Incrementation in distance or offset from base
+local projectile;				-- The test projectile
+
+local traces		= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- FUNCTIONS
+-- ----------------------------------------------------------------------------------------------
+
+-- ----------------------------------------------------------------------------------------------
+local function DoTeleport()
+	-- Base path detection. Check if the character can walk there
+	-- Then send a projectile to check for doors.
+	if (traces) then Trace ("Do the teleport check"); end
+	x = nil; y = nil; z = nil;
+	MoveTo(0.0, MOVE_RANGE, 0.0, true);
+	if(HasPath()) then
+		inc_y=MOVE_RANGE;
+		projectile = SpawnSkillProjectile(PROJECTILE_ID, 0.0);
+		if (traces) then Trace ("Front seem to be good"); end
+	else
+		MoveTo(0.0, -MOVE_RANGE, 0.0, true);
+		if(HasPath()) then
+			inc_y=-MOVE_RANGE;
+			projectile = SpawnSkillProjectile(PROJECTILE_ID, 180.0);
+			if (traces) then Trace ("Back seem to be good"); end
+		else
+			MoveTo(MOVE_RANGE, 0.0, 0.0, true);
+			if(HasPath()) then
+				inc_x=MOVE_RANGE;
+				projectile = SpawnSkillProjectile(PROJECTILE_ID, 90.0);
+				if (traces) then Trace ("right seem to be good"); end
+			else
+				MoveTo(-MOVE_RANGE, 0.0, 0.0, true);
+				if(HasPath()) then
+					inc_x=-MOVE_RANGE;
+					projectile = SpawnSkillProjectile(PROJECTILE_ID, 270.0);
+					if (traces) then Trace ("left seem to be good"); end
+				else
+					projectile = SpawnSkillProjectile(PROJECTILE_ID, 0.0);
+				end
+			end
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	oldx, oldy, oldz = GetPosition();
+	--PlayFX(TELEPORT_FX, oldx, oldy, oldz);
+	--PlaySound("sfx_teleport",false,0,false);
+	inc_x = 0;	inc_y = 0;	inc_z = 0;
+	DoTeleport();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	-- Projectile had not the time to hit before the event was triggered
+	-- Should not happen, unless the teleport distance is very long.
+	if (not x) then
+		local hack = GetSelf();
+		hack._this = projectile;
+		x, y, z = hack:GetPosition();
+		Trace ("Failed to have a final destination");
+		WarpTo(x, y, z, false);
+		PlayFX(TELEPORT_FX, x, y, z);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target, projectile)
+	local hack = GetSelf();
+	hack._this = projectile;
+	x, y, z = hack:GetPosition();
+	if (target and target:IsDoor()) then
+		-- Move to the projectile position if the projectile hit a wall
+		WarpTo(x, y, z, false);
+		PlayFX(TELEPORT_FX, x, y, z);
+		if (traces) then Trace ("No there is wall in front."); end
+	else
+		-- Move the the PathTest position if the path is clear of door.
+		WarpTo(inc_x, inc_y, inc_z, true);
+		local x1, y1, z1 = GetPosition();
+		PlayFX(TELEPORT_FX, x1, y1, z1);
+		inc_x=0;	inc_y=0;	inc_z=0
+		if (traces) then Trace ("Confirmed!"); end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkillCheck_(target, projectile)
+	-- Wall detector, don't check for characters or decors when the projectile flies...
+	if(target and (target:IsDoor())) then
+		return true;
+	end
+	return false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkillEx({	update=OnSkillUpdate_,
+					check=OnSkillCheck_,
+					pre=OnPreSkill_,
+					skill=OnSkill_,
+					post=OnPostSkill_,
+					delayed=OnDelayedSkill_,
+					delayed_check=OnDelayedSkillCheck_,
+					info=OnSkillInfo_,
+					});

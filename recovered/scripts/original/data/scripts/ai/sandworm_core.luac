@@ -1,0 +1,484 @@
+-- -------------------------------------------------------------------------------
+-- Init Vars function
+-- -------------------------------------------------------------------------------
+local function InitVars()
+	SK_STATE = ST_IDLE;
+	debugTrace_flag		= false;	
+	attack_flag			= false; 	-- checks if the character is ready to attack.
+	first_melee_flag	= true; 	-- checks if the first melee attack can be initialized.
+	diveAnim_flag		= false; 	-- checks if the OnEndOfAnim event can be used to check the dive anim status.
+	intimidateAnim_flag	= 0;
+	
+	-- Reset ALL timers.
+	if (timer_attack_flag) then
+		StopTimerCB(timer_attack_flag);
+		timer_attack_flag = nil;
+	end
+	if (timer_outOfRange_flag) then
+		StopTimerCB(timer_outOfRange_flag);
+		timer_outOfRange_flag = nil;
+	end
+	if (timer_dive_flag) then
+		StopTimerCB(timer_dive_flag);
+		timer_Dive_flag = nil;
+	end
+	if (timer_intimidate_flag) then
+		StopTimerCB(timer_intimidate_flag);
+		timer_intimidate_flag = nil;
+	end	
+end
+
+
+-- -------------------------------------------------------------------------------
+-- Search functions
+-- -------------------------------------------------------------------------------
+function searchForEfficientTarget()
+	
+	if (HasTarget()) then	
+		ClearAggro(GetTarget());
+		ClearTarget();
+	end
+	
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+	
+	TargetListSearch(RANGED_RANGE);
+	
+	local target = nil;
+	local targetChosen = false;
+	
+	if (not IsTargetListEmpty()) then
+		repeat
+			target = GetTargetListTop();
+			
+			if (target:IsPlayer()) then
+				targetChosen = true;
+			end
+			
+			if (targetChosen) then
+				SetTarget(target);
+				AddAggro(target, 10);
+				LookAt(target);
+			end
+			
+			PopTargetList();
+		
+		until (IsTargetListEmpty() or targetChosen)
+	end
+end
+
+
+-- -------------------------------------------------------------------------------
+-- Attack timer reset function
+-- -------------------------------------------------------------------------------
+function isAttackReady()
+	local state = GetState();
+	
+	if (HasTarget()) then
+		LookAtTarget();
+	end
+	
+	if (SK_STATE == ST_IDLE and state ~= GetPyCst("AIStates", "Skill")) then
+		if (debugTrace_flag) then Trace("[SANDWORM] Attack is ready!"); end
+		attack_flag = true;
+	else
+		if (debugTrace_flag) then Trace("[SANDWORM] Preventing attack to be ready!"); end
+		attack_flag = false;
+	end
+end
+-- -------------------------------------------------------------------------------
+
+
+
+-- -------------------------------------------------------------------------------
+function RegisterAnims()
+	RegisterAnim(GetPyOID("AnimDict", "swampking_idle"));
+	RegisterAnim(GetPyOID("AnimDict", "sandworm_rewind_hole"));
+	RegisterAnim(GetPyOID("AnimDict", "sandworm_rewind_hole_idle"));
+	RegisterAnim(GetPyOID("AnimDict", "swampking_emerge"));
+end
+-- -------------------------------------------------------------------------------
+
+
+
+-- -------------------------------------------------------------------------------
+-- Attack function
+-- -------------------------------------------------------------------------------
+function Do_RangedAttackPhase1()
+	if (debugTrace_flag) then Trace("[SANDWORM] Ranged Attack phase 1, random roll on the attack..."); end
+	
+	local prob_pct = GetRand(1,100);
+	
+	attack_flag = false;
+	
+	if (prob_pct < normalRangedAttack_prob) then
+		SetSwampkingInIntimidateState(2);
+	else
+		if (debugTrace_flag) then Trace("[SANDWORM] Result is DoSkill(3) - Dive)"); end
+		SetSwampkingInDiveState();
+	end
+end
+
+function Do_RangedAttackPhase2()
+	if (debugTrace_flag) then Trace("[SANDWORM] Ranged Attack phase 2 - DoSkill(2) - Spit"); end
+	attack_flag = false;
+	
+	DoSkill(2);
+	
+end
+
+function Do_MeleeAttackPhase1()
+	if (debugTrace_flag) then Trace("[SANDWORM] Melee Attack phase 1, checking for initial melee attack..."); end
+	attack_flag = false;
+	
+	if (first_melee_flag) then
+		if (debugTrace_flag) then Trace("[SANDWORM] Result is - first melee attack - DoSkill(1) - Bite 2)"); end
+		DoSkill(1);
+	else
+		local prob_pct = GetRand(1,100);
+		
+		if (prob_pct < normalMeleeAttack1_prob) then
+			if (debugTrace_flag) then Trace("[SANDWORM] Result is DoSkill(1) - Bite 2)"); end
+			DoSkill(1);
+		else
+			if (debugTrace_flag) then Trace("[SANDWORM] Result is DoSkill(0) - Bite 1)"); end
+			DoSkill(0);
+		end
+	end
+end
+
+function Do_MeleeAttackPhase2()
+	if (debugTrace_flag) then Trace("[SANDWORM] Melee Attack phase 2, checking for initial melee attack..."); end
+	attack_flag = false;
+	
+	if (first_melee_flag) then
+		first_melee_flag = false;
+		local prob_pct = GetRand(1,100);
+		
+		if (prob_pct < firstMeleeAttack2_prob) then
+			DoSkill(0);
+		else
+			DoSkill(1);
+		end
+	else
+		local prob_pct = GetRand(1,100);
+		
+		if (prob_pct < normalMeleeAttack2_prob[1]) then
+			DoSkill(0);
+		elseif (prob_pct < (normalMeleeAttack2_prob[1] + normalMeleeAttack2_prob[2]) and prob_pct > normalMeleeAttack2_prob[1]) then
+			DoSkill(1);
+		elseif (prob_pct > (normalMeleeAttack2_prob[1] + normalMeleeAttack2_prob[2])) then
+			SetSwampkingInDiveState();	
+		end
+	end
+end
+-- -------------------------------------------------------------------------------
+
+
+
+-- -------------------------------------------------------------------------------
+-- Spawn point dive function
+-- -------------------------------------------------------------------------------
+function CheckForClosestSpawnPoint(target)
+	local t_distance = {};
+	local objectName;
+	-- By Default the "shortest route" is the first spawn point.
+	objectName = sk_spawn_points[1];
+	if (target) then
+		local short_distance = FromFixed(GetDistanceBetween(sk_spawn_points[1], target:GetName()));
+		for i, obj in pairs(sk_spawn_points) do
+			if (obj) then -- Strangely OBJ sometimes becomes "nil"
+				local distance = FromFixed(GetDistanceBetween(obj, target:GetName()));
+			
+				if (debugTrace_flag) then Trace("[SANDWORM] Player: "..target:GetName()); end
+				if (debugTrace_flag) then Trace("[SANDWORM] object: "..obj); end
+				if (debugTrace_flag) then Trace("[SANDWORM] Distance between: "..FromFixed(distance)); end
+		
+--				If the others spawnpoint route are shortest then they are the one taken
+				if (distance<short_distance) then 
+					short_distance = distance;
+					objectName = obj;
+				end
+			end
+		end
+	else
+		objectName = sk_spawn_points[1];
+		if (debugTrace_flag) then Trace("[SANDWORM] No Target. Fallback: "..sk_spawn_points[1]); end
+	end
+	if (objectName==nil) then Trace("WARNING!!! NOT WORKING!"); objectName = sk_spawn_points[3]; end
+	if (debugTrace_flag) then Trace("[SANDWORM] Choosen object is: "..objectName); end
+	return objectName;
+
+end
+
+
+-- -------------------------------------------------------------------------------
+-- State functions
+-- -------------------------------------------------------------------------------
+function SetSwampkingInIdleState()
+	if (debugTrace_flag) then Trace("[SANDWORM/STATES] Going back in IDLE state..."); end
+	
+	if (SK_STATE == ST_DIVE) then
+	
+		if (not HasTarget) then
+			searchForEfficientTarget();
+		end
+		
+		local target = GetTarget();
+		local targetSpot;
+		
+		if (SK_PHASE_ID == 1) then
+			targetSpot = CheckForClosestSpawnPoint(target);
+		elseif (SK_PHASE_ID == 2) then
+			targetSpot = CheckForClosestSpawnPoint(target);
+		end
+		
+		SetActorPosition(targetSpot);
+		
+		attack_flag = false;
+		
+		DoSkill(3);
+	end
+	
+	SK_STATE = ST_IDLE;
+	SetIsTargetable(true);
+end
+
+function SetSwampkingInDiveState()
+	if (debugTrace_flag) then Trace("Trying To Dive!"); end
+	
+	local state = GetState();
+	
+	if (SK_STATE == ST_IDLE and (state ~= GetPyCst("AIStates", "Skill"))) then
+		if (debugTrace_flag) then Trace("[SANDWORM/STATES] Going into DIVE state..."); end
+		
+		SetIsActorTargetable(false);
+		
+		if (HasTarget()) then
+			ClearAggro(GetTarget());
+		end
+		
+		SK_STATE = ST_DIVE;
+		diveAnim_flag = true;
+		
+		PlayAnim(GetPyOID("AnimDict", "sandworm_rewind_hole"));
+	end
+end
+
+function SetSwampkingInIntimidateState(nextAction)
+	if (SK_STATE ~= ST_INTIMIDATE) then
+		if (debugTrace_flag) then Trace("[SANDWORM/STATES] Going into INTIMIDATE state..."); end
+		
+		SK_STATE = ST_INTIMIDATE;
+		intimidateAnim_flag = nextAction;
+	end
+end
+-- -------------------------------------------------------------------------------
+
+
+
+
+
+-- -------------------------------------------------------------------------------
+-- CALLBACKS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+function sandworm_OnInit()
+
+----------------------------------------------------------------------------------------
+-- Dynamic level for monster. Monster must have there LevelMax param set to use dynamic level
+----------------------------------------------------------------------------------------
+	local m_lvl_max = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMax")));
+	local m_lvl_min = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMin")));
+	local m_lvl_offset = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelOffset")));
+	local pl_lvl = GetHostPlayerLevel();
+	local pl_diff = GetHostPlayerDifficulty();
+	local m_lvl = pl_lvl;
+	local m_level_min, m_level_max = GetCurrentLevelRange(pl_diff);
+
+	if(m_lvl_max > -1 ) then
+		if(m_level_max and m_level_max > -1 ) then
+			if( m_lvl <= m_level_min ) then
+				m_lvl = m_level_min;
+			else
+				if( m_lvl >= m_level_max ) then
+					m_lvl = m_level_max;
+				end
+			end
+		else
+			if( m_lvl <= m_lvl_min ) then
+				m_lvl = m_lvl_min;
+			else
+				if( m_lvl >= m_lvl_max ) then
+					m_lvl = m_lvl_max;
+				end
+			end
+		end
+		m_lvl = m_lvl + m_lvl_offset;
+	end
+	SetLevel(ToFixed(m_lvl));
+----------------------------------------------------------------------------------------
+-- End Dynamic level for monster
+----------------------------------------------------------------------------------------
+	if (timer_attack_flag ~= nil) then
+		timer_attack_flag = nil;
+	end
+	
+	InitVars();
+
+	MarkAsFlying(true);
+	
+	SK_PHASE_ID = 1;
+	
+	RegisterAnims();
+	
+	if (debugTrace_flag) then Trace("Starting attack timer..."); end
+	timer_attack_flag = StartTimerCB(ATTACK_DELAY, true, isAttackReady);
+end
+AddToVFTable("OnInitFinal", "sandworm_OnInit");
+
+-- -------------------------------------------------------------------------------
+function sandworm_OnEnemySpotted(enemy)
+	if(not HasTarget()) then
+ 		AddAggro(enemy, 0);
+ 		SetTarget(enemy);
+ 	end
+end
+AddToVFTable("OnEnemySpotted", "sandworm_OnEnemySpotted");
+
+-- -------------------------------------------------------------------------------
+function sandworm_OnTargetOutOfSight()
+	if (SK_PHASE_ID == 1) then
+		OUTOFRANGE_DELAY = GetRand(OUTOFRANGE_MIN_DELAY, OUTOFRANGE_MAX_DELAY);
+		timer_outOfRange_flag = StartTimerCB(OUTOFRANGE_DELAY, false, SetSwampkingInDiveState);
+	end
+end
+AddToVFTable("OnTargetOutOfSight", "sandworm_OnTargetOutOfSight");
+
+-- -------------------------------------------------------------------------------
+function sandworm_OnTargetInRangedRange()
+	first_melee_flag = true;
+
+	if (SK_PHASE_ID == 1) then
+		if (attack_flag) then
+			Do_RangedAttackPhase1();
+		end
+	elseif (SK_PHASE_ID == 2) then
+		if (attack_flag) then
+			Do_RangedAttackPhase2();
+		end
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "sandworm_OnTargetInRangedRange");
+
+-- -------------------------------------------------------------------------------
+function sandworm_OnTargetInCloseRange()
+	if (SK_PHASE_ID == 1) then
+		if (first_melee_flag and attack_flag) then
+			DoSkill(1);
+			first_melee_flag = false;
+			attack_flag = false;
+		elseif (attack_flag) then
+			Do_MeleeAttackPhase1();
+		end
+	elseif (SK_PHASE_ID == 2) then
+		if (attack_flag) then
+			Do_MeleeAttackPhase2();
+		end
+	end
+end
+AddToVFTable("OnTargetInCloseRange", "sandworm_OnTargetInCloseRange");
+
+-- -------------------------------------------------------------------------------
+function sandworm_OnUpdate(timestamp)
+	OnUpdate(timestamp);
+	
+	local HPCurr, HPMax, HPPercentCurr = GetPropHP();
+	
+	if(SK_PHASE_ID == 1 and HPPercentCurr <= phase2_initPct ) then
+		SK_PHASE_ID = 2;
+		
+		attack_flag = false;
+		
+		if (SK_STATE ~= ST_DIVE) then
+			SetSwampkingInDiveState();
+		end
+	end
+end
+AddToVFTable("OnUpdate", "sandworm_OnUpdate");
+
+function sandworm_OnTargetDied()
+	Stop();
+	if (HasTarget()) then
+		ClearAggro(GetTarget());
+		ClearTarget();
+	end
+end
+AddToVFTable("OnTargetDied", "sandworm_OnTargetDied");
+
+-- -------------------------------------------------------------------------------
+local function sandworm_OnEndGameCleanUp()
+	if (timer_attack_flag) then
+		StopTimerCB(timer_attack_flag);
+		timer_attack_flag = nil;
+	end
+		if (timer_outOfRange_flag) then
+		StopTimerCB(timer_outOfRange_flag);
+		timer_outOfRange_flag = nil;
+	end
+	if (timer_dive_flag) then
+		StopTimerCB(timer_dive_flag);
+		timer_Dive_flag = nil;
+	end
+	if (timer_intimidate_flag) then
+		StopTimerCB(timer_intimidate_flag);
+		timer_intimidate_flag = nil;
+	end	
+	
+	-- Clearing Aggro and the target in case of problem
+	if (GetTarget()~=nil) then 
+		ClearAggro(GetTarget());
+		ClearTarget();
+	end
+end
+
+-- -------------------------------------------------------------------------------
+function sandworm_OnDied(killer)
+	sandworm_OnEndGameCleanUp();
+end
+AddToVFTable("OnDied", "sandworm_OnDied");
+
+-- -------------------------------------------------------------------------------
+function sandworm_OnTerminate()
+	sandworm_OnEndGameCleanUp();
+end
+AddToVFTable("OnTerminate", "sandworm_OnTerminate");
+
+-- -------------------------------------------------------------------------------
+function sandworm_OnEndOfAnim()
+	if (SK_STATE == ST_DIVE and diveAnim_flag) then
+		diveAnim_flag = false;
+		
+		searchForEfficientTarget();
+		
+		timer_dive_flag = StartTimerCB(DIVE_DELAY, false, SetSwampkingInIdleState);
+	end
+	
+	if (SK_STATE == ST_INTIMIDATE and intimidateAnim_flag > 0) then
+	
+		if (intimidateAnim_flag == 1) then
+			SetSwampkingInIdleState();
+		elseif (intimidateAnim_flag == 2) then
+			if (debugTrace_flag) then Trace("[SANDWORM] Result is DoSkill(2) - Spit)"); end
+			
+			searchForEfficientTarget();
+			
+			timer_intimidate_flag = StartTimerCB(500, false, function() DoSkill(2); end);
+			SK_STATE = ST_IDLE;
+		end
+		
+		intimidateAnim_flag = 0;
+	end
+end
+AddToVFTable("OnEndOfAnim", "sandworm_OnEndOfAnim");

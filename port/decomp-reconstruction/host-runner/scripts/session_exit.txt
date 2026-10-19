@@ -1,0 +1,23 @@
+# (c) Doors, triggers and the real level exit of 001_swamp: `route` walks the level's checkpoint zones in order and then its enabled
+# TriggerZoneExitLevel (runner grid navigation + the game's own Cmd_MoveTo hops, fighting on the way). When the hero touches the exit zone the
+# game shows the fast-travel panel (TriggerZoneExitLevel::Update -> DisplayFastTravel); the bot clicks its level button (`route N worldmap`
+# clicks "world map" instead, see session_worldmap.txt). Then the loading screen is tapped through and the next level is played a little.
+60 tap 1000 700
+200 tap 2148 322
+300 tap 2136 368
+420 tap 1200 540
+700 auto 1
+700 levelstat start
+720 route 7000
+7700 levelstat after-exit
+7700 tap 1200 540
+7800 tap 1200 540
+7900 tap 1200 540
+8000 tap 1200 540
+8100 tap 1200 540
+8300 levelstat next-level-loaded
+8300 types
+8310 explore 600
+8910 hunt 900 3500
+9810 levelstat next-level-played
+9820 quit

@@ -1,0 +1,169 @@
+# ---- title -----------------------------------------------------------------------------------------------------------
+menu_splash/#0                               cover  amount=0.5  anchor=0.5,1
+menu_splash/ClickToContinue                  shape  grow
+menu_splash/MENU_COPYRIGHT                   shape  edge=bottom-left
+
+# ---- main menu: button column at the right edge, hero card at the left edge -------------------------------------------
+menu_MainMenu/#0                             shape  edge=right  grow
+menu_MainMenu/#6                             shape  edge=right  grow
+menu_MainMenu/btn_MENU_SINGLE_PLAYER         shape  edge=right  grow
+menu_MainMenu/btn_MENU_OPTIONS               shape  edge=right  grow
+menu_MainMenu/btn_MENU_INFO                  shape  edge=right  grow
+menu_MainMenu/#8                             shape  edge=left  grow
+menu_MainMenu/PlayerInfos                    shape  edge=left  grow
+menu_MainMenu/SlotText                       shape  edge=left  grow
+menu_MainMenu/flush_text                     shape  edge=left  grow
+menu_MainMenu/btnLeftArrow                   shape  edge=left  grow
+menu_MainMenu/btnRightArrow                  shape  edge=left  grow
+menu_MainMenu/btnLeftArrowDiff               shape  edge=left  grow
+menu_MainMenu/btnRightArrowDiff              shape  edge=left  grow
+menu_MainMenu/btnDelete                      shape  edge=left  grow
+menu_MainMenu/btn_GLLive                     shape  anchor=top-right  grow
+menu_MainMenu/btn_exit                       shape  anchor=bottom-left  grow
+menu_MainMenu/bgBack                         shape  anchor=bottom-left  grow
+
+# ---- start game ---------------------------------------------------------------------------------------------------------
+menu_StartGame/#0                            shape  edge=right  grow
+menu_StartGame/#2                            shape  edge=right  grow
+menu_StartGame/StartMenuButtons              shape  edge=right  grow
+menu_StartGame/#4                            shape  edge=left  grow
+menu_StartGame/PlayerInfos                   shape  edge=left  grow
+menu_StartGame/SlotText                      shape  edge=left  grow
+menu_StartGame/flush_text                    shape  edge=left  grow
+menu_StartGame/#9                            shape  anchor=top-left  grow
+menu_StartGame/btn_back                      shape  anchor=top-left  grow
+
+# ---- loading: the frame, its text and the bar keep their shape about the screen centre ---------------------------------------
+menu_Loading/#1                              shape  edge=center  grow
+menu_Loading/LoadingText                     shape  edge=center  grow
+menu_Loading/loading                         shape  edge=center  grow
+menu_Loading/loading_anim                    shape  edge=center  grow
+menu_Loading/continue_text                   shape  edge=center  grow
+menu_VerificationLoading/#1                  shape  edge=center  grow
+
+# ---- character menu frame: back button top-left, tab bar top-right ------------------------------------------------------
+menu_CharacterMenu/CharacterMenuTabs/btnBack            shape  anchor=top-left
+menu_CharacterMenu/CharacterMenuTabs/#0                 shape  edge=top-right
+menu_CharacterMenu/CharacterMenuTabs/btnCharacterSheet  shape  edge=top-right
+menu_CharacterMenu/CharacterMenuTabs/btnInventoryTab    shape  edge=top-right
+menu_CharacterMenu/CharacterMenuTabs/btnSkillTreeTab    shape  edge=top-right
+menu_CharacterMenu/CharacterMenuTabs/btnFaeriesTab      shape  edge=top-right
+menu_CharacterMenu/CharacterMenuTabs/btnQuestLogTab     shape  edge=top-right
+menu_CharacterMenu/CharacterMenuTabs/btnMapTab          shape  edge=top-right
+
+# ---- stats: attribute column at the left edge, category panel at the right edge (pivot on the header's lower edge) ---------------
+menu_CharacterSheetNew/Title                 shape  anchor=left
+menu_CharacterSheetNew/ClassIcon             shape  edge=0,0.31
+menu_CharacterSheetNew/player_name           shape  anchor=left
+menu_CharacterSheetNew/HpTextBox             shape  anchor=left
+menu_CharacterSheetNew/MpTextBox             shape  anchor=left
+menu_CharacterSheetNew/player_class          shape  anchor=right
+menu_CharacterSheetNew/ExpTextBox            shape  anchor=right
+menu_CharacterSheetNew/#0                    shape  edge=0,0.31
+menu_CharacterSheetNew/Stat_Points           shape  edge=0,0.31
+menu_CharacterSheetNew/PointsLeftText        shape  edge=0,0.31
+menu_CharacterSheetNew/btn_GAMEPLAYMENUS_STRENGTH  shape  edge=0,0.31
+menu_CharacterSheetNew/Strength              shape  edge=0,0.31
+menu_CharacterSheetNew/Dexterity             shape  edge=0,0.31
+menu_CharacterSheetNew/Endurance             shape  edge=0,0.31
+menu_CharacterSheetNew/Energy                shape  edge=0,0.31
+menu_CharacterSheetNew/buttons               shape  edge=1,0.31
+menu_CharacterSheetStats/*                   shape  edge=1,0.31
+menu_CharacterSheetMagic/*                   shape  edge=1,0.31
+menu_CharacterSheetOffense/*                 shape  edge=1,0.31
+menu_CharacterSheetDefense/*                 shape  edge=1,0.31
+menu_CharacterSheetDefence/*                 shape  edge=1,0.31
+menu_CharacterSheetRecovery/*                shape  edge=1,0.31
+
+# ---- inventory: the two slot columns at the edges, the hero in the middle --------------------------------------------------
+menu_InventorySheetMain/Title                shape  anchor=left
+menu_InventorySheetMain/inv_anim/btn_torso       shape  anchor=left
+menu_InventorySheetMain/inv_anim/btn_main_hand   shape  anchor=left
+menu_InventorySheetMain/inv_anim/btn_off_hand    shape  anchor=left
+menu_InventorySheetMain/inv_anim/btn_ring1       shape  anchor=left
+menu_InventorySheetMain/inv_anim/btn_ring2       shape  anchor=left
+menu_InventorySheetMain/inv_anim/btn_head        shape  anchor=right
+menu_InventorySheetMain/inv_anim/btn_hands       shape  anchor=right
+menu_InventorySheetMain/inv_anim/btn_waist       shape  anchor=right
+menu_InventorySheetMain/inv_anim/btn_feet        shape  anchor=right
+menu_InventorySheetMain/inv_anim/btn_potions     shape  anchor=right
+menu_InventorySheetMain/btn_GAMEPLAYMENUS_AUTOEQUIP_ALL  shape
+menu_InventorySheetMain/btn_Swap             shape
+menu_InventorySheetMain/#1                   shape
+menu_InventorySheetMain/#6                   shape
+menu_InventorySheetMain/player_gold          shape
+
+# ---- item detail: list column at the left edge, comparison at the right edge ------------------------------------------------
+menu_InventorySheetDetails/category_title    shape  anchor=left
+menu_InventorySheetDetails/btn_left          shape  edge=left
+menu_InventorySheetDetails/btn_right         shape  edge=left
+menu_InventorySheetDetails/SideList          shape  edge=left
+menu_InventorySheetDetails/btn_AutoEquip     shape
+menu_InventorySheetDetails/TotalGoldText     shape  anchor=left
+menu_InventorySheetDetails/player_gold       shape  anchor=left
+menu_InventorySheetDetails/#24               shape
+menu_InventorySheetDetails/#32               shape  edge=top-right
+menu_InventorySheetDetails/EquipedSwordIcon  shape
+menu_InventorySheetDetails/btn_Unequip       shape  anchor=right
+menu_InventorySheetDetails/btn_EquipItem     shape  anchor=right
+menu_InventorySheetDetails/EquipedItemName   shape  anchor=left
+menu_InventorySheetDetails/EquipedItemInfo1  shape  anchor=left
+menu_InventorySheetDetails/EquipedItemInfo2  shape  anchor=left
+menu_InventorySheetDetails/EquipedItemInfo3  shape  anchor=left
+menu_InventorySheetDetails/EquipedItemInfo4  shape  anchor=left
+menu_InventorySheetDetails/EquipedItemInfo5  shape  anchor=left
+menu_InventorySheetDetails/EquipedItemReq    shape  anchor=left
+menu_InventorySheetDetails/SelectedItemName  shape  anchor=left
+menu_InventorySheetDetails/ItemInfo1         shape  anchor=left
+menu_InventorySheetDetails/ItemInfo2         shape  anchor=left
+menu_InventorySheetDetails/ItemInfo3         shape  anchor=left
+menu_InventorySheetDetails/ItemInfo4         shape  anchor=left
+menu_InventorySheetDetails/ItemInfo5         shape  anchor=left
+menu_InventorySheetDetails/ItemReq           shape  anchor=left
+menu_InventorySheetDetails/avatarpane        shape
+
+# ---- faeries: the whole page as one block, centred, hanging from the top ------------------------------------------------------
+menu_FaerySheet/*                            shape  edge=top
+
+# ---- skills -------------------------------------------------------------------------------------------------------------------
+menu_SkillTreeSheetNew/TitleText             shape  anchor=left
+menu_SkillTreeSheetNew/MENU_CLASS_SKILL      shape
+menu_SkillTreeSheetNew/MENU_SPECIALISATION   shape
+menu_SkillTreeSheetNew/MENU_SKILL_BUTTONS    shape
+menu_SkillTreeSheetNew/SKILL_NAME            shape
+menu_SkillTreeSheetNew/GAMEPLAYMENUS_SKILL_POINTS  shape  anchor=left
+menu_SkillTreeSheetNew/cp_Skill_Points       shape
+menu_SkillTreeSheetNew/buttons/*             shape
+menu_SkillTreeSheetNew/skill_description     shape  anchor=left
+menu_SkillTreeSheetNew/current_skill_description  shape  anchor=left
+menu_SkillTreeSheetNew/next_skill_description     shape  anchor=left
+
+# ---- quest log ----------------------------------------------------------------------------------------------------------------
+menu_QuestLogSheetNEW/menu_title             shape  anchor=left
+menu_QuestLogSheetNEW/btnBack                shape  anchor=top-left
+menu_QuestLogSheetNEW/QuestPrio              shape
+menu_QuestLogSheetNEW/QuestMain              shape  anchor=left
+menu_QuestLogSheetNEW/QuestDetailsText       shape  anchor=left
+menu_QuestLogSheetNEW/QuestDesc              shape  anchor=left
+menu_QuestLogSheetNEW/btn_Activate           shape
+
+# ---- map ------------------------------------------------------------------------------------------------------------------------
+menu_MapSheet/menu_title                     shape  anchor=left
+menu_MapSheet/MapName                        shape
+menu_MapSheet/btn_Legend                     shape
+menu_MapSheet/btn_ResetZoom                  shape
+
+# ---- options -------------------------------------------------------------------------------------------------------------------
+menu_Options/#3                              shape  anchor=top-left
+menu_Options/btn_back                        shape  anchor=top-left
+menu_Options/#6                              shape
+menu_Options/MENU_OPTIONS                    shape
+menu_Options/LeftTabs                        shape  edge=left
+menu_Options/buttons                         shape  edge=right
+
+# ---- pause (HUD movie) --------------------------------------------------------------------------------------------------------
+menu_Ingame/#3                               shape  edge=center  grow
+menu_Ingame/buttons/btn_MENU_CONTINUE         shape  edge=center  grow
+menu_Ingame/buttons/btn_MENU_HELP             shape  edge=center  grow
+menu_Ingame/buttons/btn_MENU_OPTIONS          shape  edge=center  grow
+menu_Ingame/buttons/btn_MENU_MAIN_MENU        shape  edge=center  grow

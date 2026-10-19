@@ -1,0 +1,19 @@
+# A brand-new hero on a data folder without hero savegames (run_session.sh with BASE=none): title -> Start -> Single player -> name entry ("A")
+# -> class select (warrior) -> hero slot screen (Start game -> Single player) -> intro cut scene (skipped by `auto 1`) -> first level, then a little exploring.
+# On the very first run of a data folder (no achievements/settings savegames yet) the class select goes straight into the level and the
+# Start-game tap lands on the loading screen, which is harmless.
+60 tap 1000 700
+200 tap 2148 322
+300 tap 2136 368
+400 tap 220 750
+420 tap 1200 350
+520 tap 1200 956
+600 auto 1
+640 tap 2148 322
+740 tap 2136 368
+900 tap 1200 540
+1000 tap 1200 540
+1200 levelstat new-hero
+1210 explore 600
+1810 levelstat explored
+1820 quit

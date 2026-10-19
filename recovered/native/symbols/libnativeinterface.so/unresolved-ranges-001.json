@@ -1,0 +1,9 @@
+[
+{"section":".text","start":3846,"size":2,"reason":"capstone-undecoded","mode":"thumb","function":"SHA1Reset"},
+{"section":".plt","start":2064,"size":212,"reason":"outside-exported-function-ranges"},
+{"section":".text","start":2276,"size":60,"reason":"outside-exported-function-ranges"},
+{"section":".text","start":2340,"size":172,"reason":"outside-exported-function-ranges"},
+{"section":".text","start":2808,"size":360,"reason":"outside-exported-function-ranges"},
+{"section":".text","start":3358,"size":2,"reason":"outside-exported-function-ranges"},
+{"section":".text","start":4490,"size":2,"reason":"outside-exported-function-ranges"}
+]

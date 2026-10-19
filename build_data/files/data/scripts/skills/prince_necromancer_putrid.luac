@@ -1,0 +1,81 @@
+--[[	Putrid () Putrid Stench
+
+	Chance to add a DoT to any melee attacks
+	Chance of DoT: 5%
+
+--]]
+
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Necromancer_Putrid");
+local PROC_PCT			= 5; -- Proc percentage of applying a DOT when performing a melee attack.
+local PROC_PCT_SCALE	= 2; -- Proc percentage scaling with each new skill level.
+local BUFF_PERSIST	= GetPyOID("AnimatedEffectTable", "AUTO_DOT_00_NORMAL");
+local duration			= 0;
+local DOT				= 0;
+
+-- Cached values
+local skill_level = 0;
+local buff;
+local traces = false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+local function OnTargetHit_Skill(attacker, defender)
+	if (skill_level > 0) then
+		if (defender:GetID() == GetID() and attacker:TargetInMeleeRange()) then
+			if (traces) then Trace("Putrid touch: Being Attacked!!!"); end
+			local proc_chance = GetRand(0,100);
+			if (proc_chance < DOT) then
+				local buff = attacker:CreateBuff(CLASS_ID, duration, false, skill_level, BUFF_PERSIST);
+				attacker:ApplyBuff(CLASS_ID, buff);
+				if (traces) then Trace("Putrid touch: Dot will be applied!!!"); end
+			end
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	
+	if(slvl ~= skill_level) then
+		skill_level = slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	local mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	duration = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp2"), true));
+	DOT = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"), true));
+end
+
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return false, skill_level > 0;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

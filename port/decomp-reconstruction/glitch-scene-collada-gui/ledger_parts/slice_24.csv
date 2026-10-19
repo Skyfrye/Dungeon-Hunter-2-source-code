@@ -1,0 +1,101 @@
+elf_address,symbol,status,source_file,notes
+0x69ffe8,_ZN6glitch16CAndroidOSDevice14CCursorControlC1ERKNS_4core11dimension2dIiEEPS0_,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a00a8,_ZN6glitch16CAndroidOSDevice14CCursorControl11setPositionERKNS_4core10position2dIfEE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a00c4,_ZN6glitch16CAndroidOSDevice14CCursorControl11setPositionEff,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a011c,_ZN6glitch16CAndroidOSDevice14CCursorControl11setPositionERKNS_4core10position2dIiEE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0178,_ZN6glitch16CAndroidOSDevice14CCursorControl19getRelativePositionEv,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0228,_ZN6glitch16CAndroidOSDevice14CCursorControl16setReferenceRectEPNS_4core4rectIiEE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a02f0,_ZN6glitch16CAndroidOSDevice14CCursorControl11setPositionEii,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0374,_ZN6glitch16CAndroidOSDevice5sleepEjb,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0440,_ZN6glitch16CAndroidOSDevice7runImplEv,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a04ec,_ZN6glitch16CAndroidOSDevice14CCursorControlD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6a0500,_ZN6glitch3gui14ICursorControlD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6a0548,_ZN6glitch16CAndroidOSDeviceD1Ev,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; complete destructor needs member teardown layout; body not written
+0x6a05b0,_ZN6glitch16CAndroidOSDeviceD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6a05cc,_ZN6glitch16CAndroidOSDeviceD2Ev,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; complete destructor needs member teardown layout; body not written
+0x6a0634,_ZN6glitch16CAndroidOSDeviceC1ERKNS_19SCreationParametersE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0748,_ZN6glitch14createDeviceExERKNS_19SCreationParametersE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a079c,_ZN6glitch16CAndroidOSDeviceC2ERKNS_19SCreationParametersE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a08b4,_ZN6glitch7CLoggerC2EPNS_14IEventReceiverE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a08f0,_ZN6glitch7CLoggerC1EPNS_14IEventReceiverE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0968,_ZN6glitch7CLoggerD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6a097c,_ZN6glitch7ILoggerD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6a0990,_ZN6glitch7CLogger5vlogfENS_10ELOG_LEVELEPKcSt9__va_list,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0a48,_ZN6glitch7ILogger4logfENS_10ELOG_LEVELEPKcz,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0a7c,_ZN6glitch7CLogger3logEPKcS2_NS_10ELOG_LEVELE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0aac,_ZN6glitch7CLogger3logEPKcNS_10ELOG_LEVELE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0b0c,_ZN6glitch7CLogger3logEPKwNS_10ELOG_LEVELE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0ba8,_ZN6glitch7CLogger3logEPKwS2_NS_10ELOG_LEVELE,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0cc4,_ZN6glitch11IOSOperatorD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6a0cd8,_ZN6glitch11COSOperatorD0Ev,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; complete destructor needs member teardown layout; body not written
+0x6a0d2c,_ZN6glitch11COSOperatorD1Ev,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; complete destructor needs member teardown layout; body not written
+0x6a0d78,_ZN6glitch11COSOperatorC1EPKc,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0e20,_ZN6glitch11COSOperatorC2EPKc,partial,none,unattached: no layout header for glitch::CAndroidOSDevice / logger / OS operator classes; body not written
+0x6a0f08,_ZN6glitch22getInitializationStepsEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_24.cpp,getInitializationSteps returns the static step vector
+0x6a0f90,_ZN6glitch4exitEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_24.cpp,exit runs steps in reverse when count reaches 0
+0x6a1024,_ZN6glitch4initEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_24.cpp,init runs steps once on first call and returns 1 as char*
+0x6a10b0,_ZN6glitch16registerInitStepEPFvbE,reconstructed,glitch-scene-collada-gui/src/recon/slice_24.cpp,registerInitStep pushes the step and returns the count
+0x6a574c,_ZN6glitch3gui25CDefaultGUIElementFactory13addGUIElementENS0_17EGUI_ELEMENT_TYPEEPNS0_11IGUIElementE,partial,none,unattached: needs CDefaultGUIElementFactory declaration in layouts/gui.hpp; body not written
+0x6a5d44,_ZN6glitch3gui25CDefaultGUIElementFactoryD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6a5d58,_ZN6glitch3gui18IGUIElementFactoryD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6a5d6c,_ZNK6glitch3gui25CDefaultGUIElementFactory15getTypeFromNameEPKc,partial,none,unattached: needs CDefaultGUIElementFactory declaration in layouts/gui.hpp; body not written
+0x6a5dc4,_ZN6glitch3gui25CDefaultGUIElementFactory13addGUIElementEPKcPNS0_11IGUIElementE,partial,none,unattached: needs CDefaultGUIElementFactory declaration in layouts/gui.hpp; body not written
+0x6a5df8,_ZN6glitch3gui10CGUIButton13setSpriteBankEPNS0_14IGUISpriteBankE,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a5e28,_ZN6glitch3gui10CGUIButton9setSpriteENS0_17EGUI_BUTTON_STATEEiNS_5video6SColorEb,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a5e90,_ZN6glitch3gui10CGUIButton15setOverrideFontEPNS0_8IGUIFontE,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a5f14,_ZN6glitch3gui10CGUIButton10setPressedEb,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a5f3c,_ZNK6glitch3gui11IGUIElement14getNextElementEibbRPS1_S3_b.clone.2,partial,none,unattached: needs vtable slot +44 predicate and children node layout in layouts/gui.hpp; body not written
+0x6a6090,_ZN6glitch3gui11IGUIElement11setTabOrderEi.clone.3,partial,none,unattached: needs vtable slot +44 predicate and children node layout in layouts/gui.hpp; body not written
+0x6a6140,_ZN6glitch3gui10IGUIButtonC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a63fc,_ZN6glitch3gui10CGUIButtonC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEb,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a653c,_ZN6glitch3gui10CGUIButtonC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEb,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a67fc,_ZN6glitch3gui10CGUIButton8setImageERKN5boost13intrusive_ptrINS_5video8ITextureEEERKNS_4core4rectIiEE,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a687c,_ZN6glitch3gui10CGUIButton15setPressedImageERKN5boost13intrusive_ptrINS_5video8ITextureEEERKNS_4core4rectIiEE,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a68d4,_ZN6glitch3gui10CGUIButton8setImageERKN5boost13intrusive_ptrINS_5video8ITextureEEE,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a6958,_ZN6glitch3gui10CGUIButton15setPressedImageERKN5boost13intrusive_ptrINS_5video8ITextureEEE,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a6a2c,_ZN6glitch3gui10CGUIButtonD1Ev,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; complete destructor needs member teardown layout; body not written
+0x6a6ae8,_ZN6glitch3gui10CGUIButtonD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6a6b04,_ZN6glitch3gui10CGUIButtonD2Ev,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; complete destructor needs member teardown layout; body not written
+0x6a6e30,_ZN6glitch3gui10IGUIButtonD0Ev,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; complete destructor needs member teardown layout; body not written
+0x6a7224,_ZN6glitch3gui10CGUIButton4drawEv,partial,none,unattached: needs CGUIButton layout (sprite bank; font; timer) in layouts/gui.hpp; body not written
+0x6a7714,_ZNK6glitch3gui11IGUIElement14getNextElementEibbRPS1_S3_b.clone.2,partial,none,unattached: needs vtable slot +44 predicate and children node layout in layouts/gui.hpp; body not written
+0x6a7868,_ZN6glitch3gui11IGUIElement11setTabOrderEi.clone.3,partial,none,unattached: needs vtable slot +44 predicate and children node layout in layouts/gui.hpp; body not written
+0x6a7918,_ZN6glitch3gui12IGUICheckBoxC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,none,unattached: needs CGUICheckBox layout in layouts/gui.hpp; body not written
+0x6a7bd4,_ZN6glitch3gui12CGUICheckBoxC1EbPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,none,unattached: needs CGUICheckBox layout in layouts/gui.hpp; body not written
+0x6a7cb0,_ZN6glitch3gui12CGUICheckBoxC2EbPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,none,unattached: needs CGUICheckBox layout in layouts/gui.hpp; body not written
+0x6a7dc8,_ZN6glitch3gui12CGUICheckBoxD1Ev,partial,none,unattached: needs CGUICheckBox layout in layouts/gui.hpp; complete destructor needs member teardown layout; body not written
+0x6a7e58,_ZN6glitch3gui12CGUICheckBoxD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6a8100,_ZN6glitch3gui12IGUICheckBoxD0Ev,partial,none,unattached: needs CGUICheckBox layout in layouts/gui.hpp; complete destructor needs member teardown layout; body not written
+0x6a817c,_ZN6glitch3gui12CGUICheckBox4drawEv,partial,none,unattached: needs CGUICheckBox layout in layouts/gui.hpp; body not written
+0x6a86b4,_ZN6glitch3gui21CGUIColorSelectDialog17sendSelectedEventEv,partial,none,unattached: needs CGUIColorSelectDialog layout (and SEvent) in layouts/gui.hpp; body not written
+0x6a86f4,_ZN6glitch3gui21CGUIColorSelectDialog15sendCancelEventEv,partial,none,unattached: needs CGUIColorSelectDialog layout (and SEvent) in layouts/gui.hpp; body not written
+0x6a8754,_ZN6glitch3gui21CGUIColorSelectDialog14buildColorRingERKNS_4core11dimension2dIiEEiNS_5video6SColorE,partial,none,unattached: needs CGUIColorSelectDialog layout (and SEvent) in layouts/gui.hpp; body not written
+0x6a8cf4,_ZN6glitch3gui21IGUIColorSelectDialogC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,none,unattached: no layout for this function in the slice headers; body not written
+0x6a8fbc,_ZN6glitch3gui21CGUIColorSelectDialogC1EPKwPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEi,partial,none,unattached: needs CGUIColorSelectDialog layout (and SEvent) in layouts/gui.hpp; body not written
+0x6a98e4,_ZN6glitch3gui21CGUIColorSelectDialog7onEventERKNS_6SEventE,partial,none,unattached: needs CGUIColorSelectDialog layout (and SEvent) in layouts/gui.hpp; body not written
+0x6a9c04,_ZN6glitch3gui21CGUIColorSelectDialogD1Ev,partial,none,unattached: needs CGUIColorSelectDialog layout (and SEvent) in layouts/gui.hpp; complete destructor needs member teardown layout; body not written
+0x6a9d74,_ZN6glitch3gui21CGUIColorSelectDialogD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6a9d90,_ZN6glitch3gui21CGUIColorSelectDialogD2Ev,partial,none,unattached: needs CGUIColorSelectDialog layout (and SEvent) in layouts/gui.hpp; complete destructor needs member teardown layout; body not written
+0x6a9ef0,_ZN6glitch3gui21IGUIColorSelectDialogD0Ev,partial,none,unattached: no layout for this function in the slice headers; complete destructor needs member teardown layout; body not written
+0x6a9f6c,_ZN6glitch3gui21CGUIColorSelectDialog4drawEv,partial,none,unattached: needs CGUIColorSelectDialog layout (and SEvent) in layouts/gui.hpp; body not written
+0x6aa138,_ZN6glitch3gui21CGUIColorSelectDialogC2EPKwPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEi,partial,none,unattached: needs CGUIColorSelectDialog layout (and SEvent) in layouts/gui.hpp; body not written
+0x6aaa64,_ZN6glitch3gui12CGUIComboBox16setTextAlignmentENS0_14EGUI_ALIGNMENTES2_,partial,glitch-scene-collada-gui/src/recon/slice_24.cpp,partial: sets alignment fields; vtable slot +160 on textElement not declared in gui.hpp
+0x6aaafc,_ZNK6glitch3gui12CGUIComboBox7getTextEv,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6aab1c,_ZN6glitch3gui12CGUIComboBox11setSelectedEi,partial,glitch-scene-collada-gui/src/recon/slice_24.cpp,partial: bounds check and selected index set; vtable slot +68 text call not declared in gui.hpp
+0x6aabb4,_ZN6glitch3gui12CGUIComboBox25sendSelectionChangedEventEv,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6aac1c,_ZN6glitch3gui12CGUIComboBox13openCloseMenuEv,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6aae64,_ZN6glitch3gui12IGUIComboBoxC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6ab18c,_ZNK6glitch3gui11IGUIElement14getNextElementEibbRPS1_S3_b.clone.7,partial,none,unattached: needs vtable slot +44 predicate and children node layout in layouts/gui.hpp; body not written
+0x6ab2e0,_ZN6glitch3gui11IGUIElement11setTabOrderEi.clone.2,partial,none,unattached: needs vtable slot +44 predicate and children node layout in layouts/gui.hpp; body not written
+0x6ab38c,_ZN6glitch3gui12CGUIComboBoxC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6ab740,_ZN6glitch3gui12CGUIComboBoxC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6abb48,_ZN6glitch3gui12CGUIComboBox7onEventERKNS_6SEventE,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6ac368,_ZN6glitch3gui12CGUIComboBox4drawEv,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6ac760,_ZN6glitch3gui12CGUIComboBox5clearEv,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6ac7a4,_ZN6glitch3gui12CGUIComboBox7addItemEPKw,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6ac938,_ZN6glitch3gui12CGUIComboBox10removeItemEj,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6acc30,_ZN6glitch3gui12CGUIComboBoxD1Ev,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; complete destructor needs member teardown layout; body not written
+0x6accd4,_ZN6glitch3gui12CGUIComboBoxD0Ev,skipped,none,D0 deleting destructor compiler thunk; calls complete dtor then frees; not reimplemented
+0x6acd10,_ZN6glitch3gui12IGUIComboBoxD0Ev,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; complete destructor needs member teardown layout; body not written
+0x6acdd4,_ZN6glitch3gui15CGUIContextMenu10setSubMenuEjPS1_,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written
+0x6aced4,_ZN6glitch3gui15CGUIContextMenu12addSeparatorEv,partial,none,unattached: body needs vtable slots and item string vector not declared in layouts/gui.hpp; body not written

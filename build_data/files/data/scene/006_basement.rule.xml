@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/root_den"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\006_DRIEDWELL.pyscript"
+	camera_znear="900"
+	camera_zfar="5000"
+	music="SecretBasementAmbientMusic"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	light_set="data/3D/Light/rootden.lightset_xml"
+	fixed_light_set="data/3D/Light/rootden_es1_1.lightset_xml"
+	prog_vertex_buffer_size="234672"
+	prog_index_buffer_size="77796"
+	fix_vertex_buffer_size="837324"
+	fix_index_buffer_size="86142"
+>
+
+	<list name="deadends" random="true">
+		<elem name="deadend_rootden_e_" gameplay="basement_deadend_e_01.mgp" visual="basement_deadend_e_01.mvp"/>
+		<elem name="deadend_rootden_n_" gameplay="basement_deadend_n_01.mgp" visual="basement_deadend_n_01.mvp"/>
+		<elem name="deadend_rootden_s_" gameplay="basement_deadend_s_01.mgp" visual="basement_deadend_s_01.mvp"/>
+		<elem name="deadend_rootden_w_" gameplay="basement_deadend_w_01.mgp" visual="basement_deadend_w_01.mvp"/>
+	</list>
+	
+	<list name="objective" random="false">
+		<elem name="deadend_rootden_n_" gameplay="basement_obj_n_01.mgp" visual="basement_deadend_n_01.mvp"/>
+	</list>
+
+	<list name="tmodules" random="true">
+		<elem name="t_rootden_esw_" gameplay="basement_t_merchant_sew_01.mgp" visual="basement_t_sew_01.mvp"/>
+		<elem name="t_rootden_esw_" gameplay="basement_t_sew_01.mgp" visual="basement_t_sew_01.mvp"/>
+		<elem name="t_rootden_esw_" gameplay="basement_t_sew_01.mgp" visual="basement_t_sew_01.mvp"/>
+	</list>
+
+	<list name="path" random="true">
+		<elem name="corner_rootden_ne_" gameplay="basement_corner_ne_01.mgp" visual="basement_corner_ne_01.mvp"/>
+		<elem name="corner_rootden_nw_" gameplay="basement_corner_nw_01.mgp" visual="basement_corner_nw_01.mvp"/>
+		<elem name="corner_rootden_se_" gameplay="basement_corner_se_01.mgp" visual="basement_corner_se_01.mvp"/>
+		<elem name="corner_rootden_sw_" gameplay="basement_corner_sw_01.mgp" visual="basement_corner_sw_01.mvp"/>
+		<elem name="straight_rootden_ew_" gameplay="basement_straight_ew_01.mgp" visual="basement_straight_ew_01.mvp"/>
+		<elem name="straight_rootden_ns_" gameplay="basement_straight_ns_01.mgp" visual="basement_straight_ns_01.mvp"/>
+	</list>
+
+<RootRule name="#deadends[2]">
+	<Path name="#path" length="2" dontgoback=true>
+		<Forceblock name="#tmodules">
+			<ForceBlock name="#objective[0]"/>
+			<Path name="#path" length="2" dontgoback=true>
+				<ForceBlock name="#deadends[3]"/>			
+			</Path>
+			</Forceblock>
+		</Forceblock>
+	</Path>
+</RootRule>
+</rules>

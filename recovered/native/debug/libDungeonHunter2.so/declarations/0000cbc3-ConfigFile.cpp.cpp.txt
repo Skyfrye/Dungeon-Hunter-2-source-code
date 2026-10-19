@@ -1,0 +1,23 @@
+DWARF-derived C++ declaration sketches. These are NOT original source files,
+not compilation-ready headers, and contain NO recovered function bodies.
+Qualified names are printed verbatim; arrays/function pointers, templates,
+access defaults, static methods, and ABI-only entries may require manual repair.
+Exact DWARF attributes and type references are preserved in dies.jsonl.gz.
+Source paths refer to original debug metadata; those files are not bundled.
+
+Compilation unit: P:/Template/Android/ALC/jni/../LCXPlayer/../jni/ConfigFile.cpp
+Evidence category: license_and_online_glue
+
+// DIE 0xcbec, byte_size=1, declaration=False
+// P:/Template/Android/ALC/jni/../LCXPlayer/../jni/ConfigFile.h:16
+class ConfigFile {
+    ConfigFile::ConfigFile(); // method DIE 0xcc09
+    ConfigFile::~ConfigFile(); // method DIE 0xcc21
+    int ConfigFile::Decode(char const*, char*, char*, char*); // method DIE 0xcc3f
+    int ConfigFile::Encode(char const*, char const*, char const*, char*); // method DIE 0xcc6f
+    void ConfigFile::XOR(char const*, char const*, char*); // method DIE 0xcc9f
+    unsigned int ConfigFile::Seed(); // method DIE 0xccc7
+};
+
+
+// Functions outside record declarations

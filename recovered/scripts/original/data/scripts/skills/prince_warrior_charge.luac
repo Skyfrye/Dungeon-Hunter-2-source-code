@@ -1,0 +1,121 @@
+--[[	Charge (Active)
+
+	A charging attack against the nearest opponent (or in the direction the 
+	player is facing) which push all enemies caught in his path backwards. 
+	This attack deals melee damage based on the warrior level, the charge skill 
+	level and his endurance and strength stats. The warrior also gains bonus to 
+	damage for this skill if he has a shield equipped.
+	
+		Mana Cost: 7			|	+1 mana cost
+		Cast time: 0,5 sec	|
+		Cooldown: 1 sec		|
+									|
+		Distance: 200			|	+20 distance (same duration)
+		Shield Bonus:			|	Shield Bonus:
+  			Min Bonus Dam +2	|		Min Bonus Dam +2
+  			Max Bonus Dam +5	|		Max Bonus Dam +5
+  			
+  			20 may 2010,	Script is almost working 100%. Need only to have the base 
+  								values set in the character class table
+	
+			26 may 2010, 	Found the way to set the values for the skill from the character class table.
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+
+local RANGE			= 300.0; --Basic range of the skill
+local ANGLE			= 120.0; --90 deg was too small for all ennemies near the player. 180 should cover everybody in front.
+
+local CLASS_ID				= GetPyOID("ClassTable", "Skill_Warrior_Charge");
+local CLASS_ID_SHIELD	= GetPyOID("ClassTable", "Skill_Warrior_Charge_ShieldBonus");
+
+local USE_COOLDOWN	= true;
+
+-- Cached values
+local skill_level		= 0;
+local mana_cost;
+local cooldown;
+local traces			= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	if (HasShield()) then
+		SetTempProps(CLASS_ID_SHIELD, slvl);
+	else
+		SetTempProps(CLASS_ID, slvl);
+	end
+	return cooldown;
+end
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	cooldown = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Cooldown"), true));
+	if(cooldown < 0) then cooldown = 0; end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return (not HasSkillCooldown() and HasMana(mana_cost)), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(RANGE);
+
+	if(not IsTargetListEmpty()) then
+		LookAt(GetTargetListTop());
+	end
+
+	UseMana(mana_cost);
+	SetSkillCooldown(cooldown);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	TargetListSearch(RANGE, ANGLE);
+	
+	-- Extra damage if the player is equipped with a shield
+	if (HasShield()) then
+		ApplyPropClass(CLASS_ID_SHIELD);
+	else
+		ApplyPropClass(CLASS_ID);
+	end
+	
+	if(not IsTargetListEmpty()) then
+		repeat
+			local target = GetTargetListTop();
+			SkillCombatRoll(target);
+			PopTargetList();
+		until(IsTargetListEmpty())
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+  if (not TargetInMeleeRange()) then
+	 ClearTarget();
+	end 
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

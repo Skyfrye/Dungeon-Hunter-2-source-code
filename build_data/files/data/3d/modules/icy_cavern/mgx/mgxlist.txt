@@ -1,0 +1,13 @@
+bossroom_icycavern_w_00.mgx
+corner_icycavern_ne_00.mgx
+corner_icycavern_nw_00.mgx
+corner_icycavern_se_00.mgx
+corner_icycavern_sw_00.mgx
+deadend_icycavern_w_00.mgx
+entrance_icycavern_e_00.mgx
+monument_icycavern_we.mgx
+snakey_icycavern_we_00.mgx
+straight_icycavern_ns_00.mgx
+straight_icycavern_we_00.mgx
+t_icycavern_nse_00.mgx
+t_icycavern_nsw_00.mgx

@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "source_archive": "Dungeon-Hunter-2-Source-Recovery.zip",
+  "source_archive_sha256": "b3ff974e2b74f50387465d5665f60d56ac79c29a449c6299745461998045c4d8",
+  "description": "Exact Ghidra pseudocode, function indexes and summaries extracted from the verified historical recovery archive; non-compilable evidence, not original studio source.",
+  "files": [
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/function-index.jsonl",
+      "bytes": 11581321,
+      "sha256": "0fc0587ac5cb550472b02bf424b8da1254ad3075163fcaede86a458352abf1f0"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-000.pseudo.c",
+      "bytes": 1048620,
+      "sha256": "b4cd72975110aab1a8ee63d31c7b7c17688dedcc034b98b7b12e090347e22a47"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-001.pseudo.c",
+      "bytes": 1048692,
+      "sha256": "cd1cd6cd970b2f7036a044375860806a917e186d5203164c4e130bf7d2b319de"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-002.pseudo.c",
+      "bytes": 1048992,
+      "sha256": "93821fa73abe1d58fea1232ba95b2b6a4ce3696b28704cd2dbbefe0a9d0230c0"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-003.pseudo.c",
+      "bytes": 1051183,
+      "sha256": "1abbf26fb7ea813c1f160dd95d088a7bd9a1e7eb5a88602c1e38aaa6d3c0741f"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-004.pseudo.c",
+      "bytes": 1051258,
+      "sha256": "ed5b73256f7cb55dd711e39b469db6c71ac0269eeeed2b05d02da9eb82a66a07"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-005.pseudo.c",
+      "bytes": 1053912,
+      "sha256": "35247e5d444c8a45e438e9e87ce9678d51be69fca263c2d9ff549ea8224a66e3"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-006.pseudo.c",
+      "bytes": 1048780,
+      "sha256": "79d9fda289bbf966c61d81032ea9378b7c88ab7c7dd9f8cee19eaeed03425dcc"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-007.pseudo.c",
+      "bytes": 1048953,
+      "sha256": "f0649f4e4a6f186ffb65610c8df7ae8f17488dd59333b133cbeb6d52e19c335f"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-008.pseudo.c",
+      "bytes": 1049698,
+      "sha256": "1dea7306d92957b2280c7509a30267e63b4da56e73316d2088781d232965bb34"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-009.pseudo.c",
+      "bytes": 1065180,
+      "sha256": "f04db660e852264d5d5b3af13f6b29efae54d33b901540932c71a3ed5223ec60"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-010.pseudo.c",
+      "bytes": 1083613,
+      "sha256": "14ad291f9dfdc05d3d501bc7d4670a568e6e0c994b5510a7c38ef8d94b8bf4ab"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-011.pseudo.c",
+      "bytes": 1048757,
+      "sha256": "c0a206dc9ee35b7dc8e5dbe8ddd0343083c8b160bb252da8685048a4555969c5"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-012.pseudo.c",
+      "bytes": 1053136,
+      "sha256": "a8d265f0818ce2bccf553234b8c2fa9af092e5108284b63cf8a4453ea1bfff7f"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-013.pseudo.c",
+      "bytes": 1049822,
+      "sha256": "b413bf32878df7224d4fd1366783bf7162b5b013fcbe3c63b422994f40fcd9c1"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-014.pseudo.c",
+      "bytes": 1051257,
+      "sha256": "8277ea54a0e4824a8e27597a630ae2958d2ca1f88752dd388160136f594e337d"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-015.pseudo.c",
+      "bytes": 1048699,
+      "sha256": "2850b813c41f871fda708ace0a5132bd0b10aded2b3a00e0efe43fcbaac6f347"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-016.pseudo.c",
+      "bytes": 1048681,
+      "sha256": "0d08911af07f6af6bb5f0ee52de41793ea9b0054b9e99338e6ec9bef1aebf6d9"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-017.pseudo.c",
+      "bytes": 1048634,
+      "sha256": "00617abef2ae21e8d7c8703f678ada7ff40180f15a66e97235fbab3bd0f1ad7e"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-018.pseudo.c",
+      "bytes": 1049667,
+      "sha256": "79135bd0e25089c76442e7be504081a4cf29e1400cfec331f4d5b6ead3302190"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-019.pseudo.c",
+      "bytes": 1049130,
+      "sha256": "88d05f7f9702234afd6e10c3d48159549f5cf0b986bf5b0d55a0a5f625ff6810"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-020.pseudo.c",
+      "bytes": 1048770,
+      "sha256": "ea834288cd8c616549fff4605dd6e200a4e35dfa0f31a58f0d6756c7b3635c94"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-021.pseudo.c",
+      "bytes": 1049519,
+      "sha256": "336ec10f3ca27dd39f47093f831036d7960eee8fdd69aaf7e5913f21e62c6749"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-022.pseudo.c",
+      "bytes": 1048776,
+      "sha256": "4027378e79c82825c9ab275772e53fc681429fde48b54edf74ae340f697828dd"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-023.pseudo.c",
+      "bytes": 1054063,
+      "sha256": "db241f0fec59a5750d46916eaac46bab6012a6900ddb72ba592eed32da7ee020"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-024.pseudo.c",
+      "bytes": 1063838,
+      "sha256": "dd22e4880824ef8dd41142a1d302cb8bd52e3ca0da58bbcc64464d64843a20de"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-025.pseudo.c",
+      "bytes": 1050877,
+      "sha256": "48e8b3369e29aa3a0d7823ebdea6dbdb3089e7909453c9b834a3400afcbcc7bb"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-026.pseudo.c",
+      "bytes": 1048851,
+      "sha256": "a4fc24423337fe4c915182692f7246139d87108d9a980b42aab95ca1303c18b3"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-027.pseudo.c",
+      "bytes": 1048707,
+      "sha256": "427eae98cb69b1dd709978e6996cc447152f55b6be1adff52d5d1f9270190a09"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-028.pseudo.c",
+      "bytes": 1048654,
+      "sha256": "5459e13484357af05ca61bc8f72edaf51de6ed6165e952d1a90b768c86eadc30"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-029.pseudo.c",
+      "bytes": 1050734,
+      "sha256": "b0a1c255cc1ed30499cb373e9b4490a548ae67a54be0e799d7b741c454ccfffa"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-030.pseudo.c",
+      "bytes": 1049193,
+      "sha256": "0873147de92b78d5fc8173d759b290555c657b3d5fd707850c768e4ea7657310"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-031.pseudo.c",
+      "bytes": 1049216,
+      "sha256": "fac7f40fff0cb48f6006beea2df6889bf43d330282dc0aeee5895e32c8f558c8"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/functions-032.pseudo.c",
+      "bytes": 204673,
+      "sha256": "520ecebea6feddd3ee16b718c6c02325e4db8d1635cc39e3b385a836661fbdc4"
+    },
+    {
+      "path": "recovered/native/decompiled/libDungeonHunter2.so/summary.json",
+      "bytes": 214,
+      "sha256": "efc36ca3940b58d5c89716a4e88987c66e972718c2fd9a7b564507bdff79d5e0"
+    },
+    {
+      "path": "recovered/native/decompiled/libStormGLOFT.so/function-index.jsonl",
+      "bytes": 1031939,
+      "sha256": "e2f401f5f0b1a1f30957d3cfa323fcde9ec0ec9da93dcccd9052a14e35e0211f"
+    },
+    {
+      "path": "recovered/native/decompiled/libStormGLOFT.so/functions-000.pseudo.c",
+      "bytes": 1054122,
+      "sha256": "2a50def0d9de95b16bbff05d1ffc4daa2142d73f76d48346719fc93590d2b7ec"
+    },
+    {
+      "path": "recovered/native/decompiled/libStormGLOFT.so/functions-001.pseudo.c",
+      "bytes": 1049290,
+      "sha256": "28d2d7003158cabfbed9bdccacf921d0e8c278acbe5261d702e9f5009f8aa74a"
+    },
+    {
+      "path": "recovered/native/decompiled/libStormGLOFT.so/functions-002.pseudo.c",
+      "bytes": 1053665,
+      "sha256": "3e28c7b84fb939c037aaee7ffecad862b7918225a01b662387225107f2f83e7c"
+    },
+    {
+      "path": "recovered/native/decompiled/libStormGLOFT.so/functions-003.pseudo.c",
+      "bytes": 585683,
+      "sha256": "e7f7ce6965cb8a6f417198d4221ad136401dca0211ddaefcaab480c1204297dc"
+    },
+    {
+      "path": "recovered/native/decompiled/libStormGLOFT.so/summary.json",
+      "bytes": 207,
+      "sha256": "7269ddaea850b4042237e6f02b3bfe9ff5f74f4bb14c5a1e879f31256255350a"
+    },
+    {
+      "path": "recovered/native/decompiled/libnativeinterface.so/function-index.jsonl",
+      "bytes": 8712,
+      "sha256": "a88cdb15c60fa9febad1e8574784cb63fbdf9896e2c67a43370ee26dc6e8a5ea"
+    },
+    {
+      "path": "recovered/native/decompiled/libnativeinterface.so/functions-000.pseudo.c",
+      "bytes": 20043,
+      "sha256": "3ef2b14c7fc60410e075a3cd538804fefd2ffe6d8999ab3b23f924473268bdc2"
+    },
+    {
+      "path": "recovered/native/decompiled/libnativeinterface.so/summary.json",
+      "bytes": 208,
+      "sha256": "ce4c258a6aa01876fbe86655e13f26c204e3ebdbfbda2fa558fd111ebf54f39b"
+    }
+  ]
+}

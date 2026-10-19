@@ -1,0 +1,123 @@
+--[[	Wetty Faerie Spell
+
+	Multiple targets; water stirkes
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local MANA_BASE		= {ToFixed(10), ToFixed(20)};		-- Base mana cost
+local MANA_PLVL		= {ToFixed(0.2), ToFixed(0.2)};	-- Mana cost per player level
+local MANA_SLVL		= {ToFixed(0), ToFixed(0)};		-- Mana cost per skill level
+
+local RANGE				= {600, 800};
+
+local CLASS_ID			= GetPyOID("ClassTable", "Spell_Water_1");
+
+local USE_COOLDOWN	= true;
+local COOLDOWN_BASE	= 5000;
+local COOLDOWN_PLVL	= 0;
+local COOLDOWN_SLVL	= 0;
+
+-- Cached values
+local skill_level;
+local mana_cost;
+local cooldown;
+local target;
+local traces = false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+	return cooldown;
+end
+
+local function OnSkillUpdate_()
+	local plvl = GetProp(GetPyStruct("CharacterProperties", "Level"));
+	local slvl = GetCurrentSpellInfo();
+	-- Check in case the faerie would go to another level (level 0 and 1 only)
+	if (slvl>1) then slvl=1; end
+	skill_level		= slvl;
+	mana_cost		= MANA_BASE[slvl+1] + MulFixed(MANA_PLVL[slvl+1], plvl) + MANA_SLVL[slvl+1] * slvl;
+	-- cooldown_time	= COOLDOWN_BASE + COOLDOWN_PLVL * FromFixed(plvl) + COOLDOWN_SLVL * slvl;
+	cooldown = GetInt("Faery_Cooldown");
+	if (cooldown==0) then
+		cooldown = 5000;
+	end
+	if(cooldown < 0) then cooldown = 0; end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return (not HasSpellCooldown() and HasMana(mana_cost)), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+
+	TargetListSearch(RANGE[skill_level+1]);
+
+	local target_count = GetTargetListSize();
+
+	UseMana(mana_cost);
+	if (traces) then Trace("Wetty have a cooldown of "..cooldown_time.." ms"); end
+	SetSpellCooldown(cooldown);
+	
+	if(not IsTargetListEmpty()) then
+		PlayFX(GetPyOID("AnimatedEffectTable", "Wetty_Level_1_Player_Pre"));
+		
+		if (target_count > 0 and target_count < 3) then
+			PlaySound3D("sfx_spell_water_small");
+		elseif (target_count < 6) then
+			PlaySound3D("sfx_spell_water_medium");
+		else
+			PlaySound3D("sfx_spell_water_big");
+		end
+	else
+		PlaySound3D("sfx_mage_staff_elemental_ice");
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(not IsTargetListEmpty()) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID + skill_level);
+
+		repeat
+			local target, _, _, gameobject = GetTargetListTop();
+			PopTargetList();
+			
+			if(gameobject) then
+				local dmg = SpellCombatRoll(target);
+	
+	 			if(dmg > 0) then
+	 				target:PlayFX(GetPyOID("AnimatedEffectTable", "Wetty_Level_1_Main"));
+	 			end
+			else
+				SpellCombatRoll(target);
+				SpellCombatRoll(target);
+				target:PlayFX(GetPyOID("AnimatedEffectTable", "Wetty_Level_1_Main"));
+			end
+			
+		until(IsTargetListEmpty())
+	end
+	PlaySound("sfx_faerie_ice",false,0,false);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

@@ -1,0 +1,88 @@
+--[[	Precision
+
+	Increase chance of a successful hit and critical hit
+	25/08/2010 changes in the design of the skill was not warned about it. Now the skill have a chance to stun with the weapons. 
+
+--]]
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Archer_Precision");
+
+-- Cached values
+local skill_level	= 0;
+local buff			= nil;
+
+local traces		= false;
+local timer			= -1;
+
+-- Paranoid check if the buff is there and the MC is not wearing a bow.
+local function checkbuff(timer_check)
+	if (not HasBow() and buff) then
+		RemoveBuff(CLASS_ID, buff);
+		StopTimerCB(timer_check);
+	end
+end
+
+local function OnTargetHit_Skill(attacker, defender)
+ 	if (skill_level > 0) then
+ 		if (traces) then Trace("[Skills/Archer Precision] is being checked"); end
+ 		if (attacker:GetID() == GetID()) then
+ 			-- Will create the buff only if the MC has a bow
+ 			if(HasBow()) then
+			 	if (not buff) then
+			 		timer = StartSkillTimerCB(1000, true, checkbuff);
+ 					buff = CreateBuff(CLASS_ID, 0, false, skill_level);
+					ApplyBuff(CLASS_ID, buff);
+				end
+ 			else
+ 				if (buff) then 
+ 					-- Will remove the buff if the MC doesnt have a bow
+	 				RemoveBuff(CLASS_ID, buff);
+	 				StopTimerCB(timer);
+	 			end
+ 			end
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	if (buff) then
+		RemoveBuff(CLASS_ID, buff);
+		StopTimerCB(timer);
+	end
+	if(HasBow() and slvl~=0) then
+		buff = CreateBuff(CLASS_ID, 0, false, slvl);
+		ApplyBuff(CLASS_ID, buff);
+		timer = StartSkillTimerCB(1000, true, checkbuff);
+	end
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

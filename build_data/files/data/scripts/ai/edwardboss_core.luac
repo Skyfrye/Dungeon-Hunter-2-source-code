@@ -1,0 +1,356 @@
+-- FLAGS
+local attack_flag				= false; -- checks if the character is ready to attack.
+local range_attack_flag			= false;
+local musicStarted_flag 		= false; -- checks if the boss music has started.
+local sp_attack_flag			= false;
+
+-- CONSTANTS
+local STATE_SKILL				= GetPyCst("AIStates", "Skill");
+local STATE_IDLE				= GetPyCst("AIStates", "Idle");
+local TELEPORT_FX				= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_mage_stone_escape_magefx");
+local MOVE_RANGE				= 900.0;		-- Teleportation range
+local MOVE_DELAY 				= 10000.0;		-- Delay between teleports
+local RANGE_ATTACK_DELAY 		=  4000.0;
+
+-- CACHED VALUES
+local timer_attack_flag;
+local timer_spot_targeting;
+local timer_sp_attack_flag;
+local timer_teleport_flag;
+local timer_rangeattack_flag;
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- EVENTS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+local function InitVars()
+	attack_flag			= false; -- checks if the character is ready to attack.
+	range_attack_flag	= false;
+	musicStarted_flag 	= false; -- checks if the boss music has started.
+	sp_attack_flag		= false;
+	
+	if (timer_attack_flag ~= nil) then
+		StopTimerCB(timer_attack_flag);
+		timer_attack_flag = nil;
+	end
+	if (timer_spot_targeting ~= nil) then
+		StopTimerCB(timer_spot_targeting);
+		timer_spot_targeting = nil;
+	end
+	if (timer_sp_attack_flag ~= nil) then
+		StopTimerCB(timer_sp_attack_flag);
+		timer_sp_attack_flag = nil;
+	end
+	if (timer_teleport_flag ~= nil) then
+		StopTimerCB(timer_teleport_flag);
+		timer_teleport_flag = nil;
+	end
+	if (timer_rangeattack_flag ~= nil) then
+		StopTimerCB(timer_rangeattack_flag);
+		timer_rangeattack_flag = nil;
+	end
+end
+
+-- -------------------------------------------------------------------------------
+local function isAttackReady()
+	attack_flag = true;
+end
+
+-- -------------------------------------------------------------------------------
+local function isRangeAttackReady()
+	range_attack_flag = true;
+end
+
+-- -------------------------------------------------------------------------------
+local function Do_SpecialAttack()
+	sp_attack_flag = true;
+end
+
+-- -------------------------------------------------------------------------------
+local function Do_RangedAttack()
+	local state = GetState(); 
+	
+	if (state ~= STATE_SKILL) then
+		if (range_attack_flag) then
+			
+			local rnd_roll = GetRand(1, 100);
+			
+			if (rnd_roll < firstRangedSkill_prob) then
+				DoSkill(1);
+			else
+				DoSkill(3);
+			end
+			
+			range_attack_flag = false;
+		end
+	end
+end
+
+-- -------------------------------------------------------------------------------
+local function Do_MeleeAttack()
+	local state = GetState(); 
+	
+	if (state ~= STATE_SKILL) then
+		if (attack_flag) then
+		
+			local rnd_roll = GetRand(1, 100);
+			
+			if (rnd_roll < firstMeleeSkill_prob) then
+				DoSkill(0);
+			else
+				DoSkill(3);
+			end
+			
+			attack_flag = false;
+		end
+	end
+end
+
+-- -------------------------------------------------------------------------------
+local function DoTeleport()
+	DoSkill(4);
+end
+-- -------------------------------------------------------------------------------
+
+local function DoRise()
+	DoSkill(2);
+end
+
+
+-- -------------------------------------------------------------------------------
+-- Search functions
+-- -------------------------------------------------------------------------------
+function searchForEfficientTarget()
+	local t_targetList		= {};
+	local t_rndTargetList	= {};
+	
+	if (HasTarget()) then
+		ClearAggro(GetTarget());
+		ClearTarget();
+	end
+	
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+	
+	TargetListSearch(RANGED_RANGE);
+	
+	local target = nil;
+	local targetChosen = false;
+	
+	if (not IsTargetListEmpty()) then
+		repeat
+			target = GetTargetListTop();
+			
+			if (target:IsPlayer()) then
+				targetChosen = true;
+			end
+			
+			if (targetChosen) then
+				SetTarget(target);
+				AddAggro(target, 10);
+				LookAt(target);
+			end
+			
+			PopTargetList();
+			
+		until (IsTargetListEmpty() or targetChosen)
+	end
+end
+
+
+-- -------------------------------------------------------------------------------
+-- CALLBACKS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+function edwardboss_OnInit()
+
+
+----------------------------------------------------------------------------------------
+-- Dynamic level for monster. Monster must have there LevelMax param set to use dynamic level
+----------------------------------------------------------------------------------------
+	local m_lvl_max = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMax")));
+	local m_lvl_min = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMin")));
+	local m_lvl_offset = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelOffset")));
+	local pl_lvl = GetHostPlayerLevel();
+	local pl_diff = GetHostPlayerDifficulty();
+	local m_lvl = pl_lvl;
+	local m_level_min, m_level_max = GetCurrentLevelRange(pl_diff);
+
+	if(m_lvl_max > -1 ) then
+		if(m_level_max and m_level_max > -1 ) then
+			if( m_lvl <= m_level_min ) then
+				m_lvl = m_level_min;
+			else
+				if( m_lvl >= m_level_max ) then
+					m_lvl = m_level_max;
+				end
+			end
+		else
+			if( m_lvl <= m_lvl_min ) then
+				m_lvl = m_lvl_min;
+			else
+				if( m_lvl >= m_lvl_max ) then
+					m_lvl = m_lvl_max;
+				end
+			end
+		end
+		m_lvl = m_lvl + m_lvl_offset;
+
+		SetLevel(ToFixed(m_lvl));
+	end
+----------------------------------------------------------------------------------------
+-- End Dynamic level for monster
+----------------------------------------------------------------------------------------
+	
+	
+	InitVars();
+	
+	timer_attack_flag = StartTimerCB(ATTACK_DELAY, true, isAttackReady);
+	timer_teleport_flag = StartTimerCB(MOVE_DELAY, true, DoTeleport);
+	timer_rangeattack_flag = StartTimerCB(RANGE_ATTACK_DELAY, true, isRangeAttackReady);
+	--timer_sp_attack_flag = StartTimerCB(SP_ATTACK_DELAY, true, DoRise);
+
+end
+AddToVFTable("OnInitFinal", "edwardboss_OnInit");
+
+
+-- -------------------------------------------------------------------------------
+local function edwardboss_OnEndGameCleanUp()
+	if (BOSS_MUSIC ~= "") then
+		if (LEVEL_MUSIC ~= "") then
+			PlayMusic(LEVEL_MUSIC, 1000);
+		else
+			CallPyScript("ResumeLevelMusic");
+		end
+		musicStarted_flag = false;
+	end
+
+	if (timer_attack_flag) then
+		StopTimerCB(timer_attack_flag);
+		timer_attack_flag = nil;
+	end
+	if (timer_spot_targeting ~= nil) then
+		StopTimerCB(timer_spot_targeting);
+		timer_spot_targeting = nil;
+	end
+	if (timer_sp_attack_flag ~= nil) then
+		StopTimerCB(timer_sp_attack_flag);
+		timer_sp_attack_flag = nil;
+	end
+	if (timer_teleport_flag ~= nil) then
+		StopTimerCB(timer_teleport_flag);
+		timer_teleport_flag = nil;
+	end
+	if (timer_rangeattack_flag ~= nil) then
+		StopTimerCB(timer_rangeattack_flag);
+		timer_rangeattack_flag = nil;
+	end
+end
+
+
+-- -------------------------------------------------------------------------------
+function edwardboss_OnDied(killer)
+	edwardboss_OnEndGameCleanUp();
+end
+AddToVFTable("OnDied", "edwardboss_OnDied");
+
+
+-- -------------------------------------------------------------------------------
+function edwardboss_OnTerminate()
+	edwardboss_OnEndGameCleanUp();
+end
+AddToVFTable("OnTerminate", "edwardboss_OnTerminate");
+
+-- -------------------------------------------------------------------------------
+function edwardboss_OnEnemySpotted(enemy)
+	if (BOSS_MUSIC ~= "") then
+		local state = GetState();
+		if (not musicStarted_flag and state == STATE_IDLE) then
+			musicStarted_flag = true;
+			PlayMusic(BOSS_MUSIC, 500);
+		end
+	end
+
+	if(not HasTarget()) then
+		searchForEfficientTarget();
+	end
+end
+AddToVFTable("OnEnemySpotted", "edwardboss_OnEnemySpotted");
+
+
+
+-- -------------------------------------------------------------------------------
+function edwardboss_OnTargetOutOfSight()
+	Stop();
+	ClearAggro(GetTarget());
+	ClearTarget();
+	musicStarted_flag = false;
+end
+AddToVFTable("OnTargetOutOfSight", "edwardboss_OnTargetOutOfSight");
+
+
+
+-- -------------------------------------------------------------------------------
+function edwardboss_OnTargetInSight()
+end
+AddToVFTable("OnTargetInSight", "edwardboss_OnTargetInSight");
+
+
+
+-- -------------------------------------------------------------------------------
+function edwardboss_OnTargetOutOfRange()
+	if (HasTarget()) then
+		MoveTo(GetTarget());
+	else
+		searchForEfficientTarget();
+		MoveTo(GetTarget());
+	end
+end
+AddToVFTable("OnTargetOutOfRange", "edwardboss_OnTargetOutOfRange");
+
+
+
+-- -------------------------------------------------------------------------------
+-- RANGED CALLBACKS
+-- -------------------------------------------------------------------------------
+function edwardboss_OnTargetInRangedRange()
+	if (isUsingSkills) then
+		local target = GetTarget();
+		LookAt( target );
+		Do_RangedAttack();
+		MoveTo(target);
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "edwardboss_OnTargetInRangedRange");
+-- -------------------------------------------------------------------------------
+function edwardboss_OnTargetInCloseRange()
+	if (isUsingSkills) then
+		Do_MeleeAttack();
+	else
+		Stop();
+		Attack(GetTarget());
+	end
+end
+AddToVFTable("OnTargetInCloseRange", "edwardboss_OnTargetInCloseRange");
+-- -------------------------------------------------------------------------------
+
+
+
+-- -------------------------------------------------------------------------------
+-- MELEE CALLBACKS
+-- -------------------------------------------------------------------------------
+function edwardboss_OnTargetInMeleeRange()
+	if (isUsingSkills) then
+		Do_MeleeAttack();
+	else
+		Stop();
+		Attack(GetTarget());
+	end
+end
+AddToVFTable("OnTargetInMeleeRange", "edwardboss_OnTargetInMeleeRange");
+-- -------------------------------------------------------------------------------

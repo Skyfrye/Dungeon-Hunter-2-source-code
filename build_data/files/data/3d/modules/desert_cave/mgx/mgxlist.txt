@@ -1,0 +1,17 @@
+corner_dsrtcave_ne_00.mgx
+corner_dsrtcave_se_00.mgx
+corner_dsrtcave_wn_00.mgx
+corner_dsrtcave_ws_00.mgx
+deadend_dsrtcave_e_00.mgx
+deadend_dsrtcave_n_00.mgx
+deadend_dsrtcave_s_00.mgx
+deadend_dsrtcave_w_00.mgx
+obj01_dsrtcave_e_00.mgx
+obj02_dsrtcave_ws_00.mgx
+obj03_dsrtcave_ns_00.mgx
+obj04_dsrtcave_ns_00.mgx
+obj05_dsrtcave_n_00.mgx
+straight_dsrtcave_ns_00.mgx
+straight_dsrtcave_we_00.mgx
+t_dsrtcave_nse_00.mgx
+t_dsrtcave_nsw_00.mgx

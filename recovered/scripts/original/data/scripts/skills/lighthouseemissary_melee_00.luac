@@ -1,0 +1,72 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Lighthouse Emissary Bashdown: 
+-- 
+-- - Normal melee attack (Bash down with an FX).
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 150.0;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Emissary_MeleeAttack");
+local FX 				= GetPyOID("AnimatedEffectTable", "skill_dh2_monster_lighthouse_melee");
+
+-- Cached values
+local target;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(RANGE);
+
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+	else
+		target = nil;
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	TargetListSearch(RANGE);
+	
+	if(not IsTargetListEmpty()) then
+		repeat
+			target = GetTargetListTop();
+			ApplyPropClass(CLASS_ID);
+			SkillCombatRoll(target);
+			PopTargetList();
+		until (IsTargetListEmpty())
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

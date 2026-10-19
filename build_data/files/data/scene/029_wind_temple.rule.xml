@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/wind_temple"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\029_wind_temple.pyscript"
+	camera_znear="900"
+	camera_zfar="10000"
+	music="WindTempleAmbientMusic"
+	ambiant_music="sfx_wind_temple_ambiance"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	clear_color="129, 209, 252"
+	gametype="LevelConfig"
+	skybox="data/3D/skybox/skybox_wind.bdae"
+	light_set="data/3D/Light/wind.lightset_xml"
+	fixed_light_set="data/3D/Light/wind_es1_1.lightset_xml"
+	prog_vertex_buffer_size="1739232"
+	prog_index_buffer_size="126450"
+	fix_vertex_buffer_size="1739232"
+	fix_index_buffer_size="126450"
+>
+
+	<list name="deadends" random="true">
+		<elem name="deadend_windtemp_e_" gameplay="deadend_windtemp_e_01.mgp" visual="deadend_windtemp_e_01.mvp"/>
+		<elem name="deadend_windtemp_w_" gameplay="deadend_windtemp_w_01.mgp" visual="deadend_windtemp_w_01.mvp"/>
+		<elem name="deadend_windtemp_s_" gameplay="deadend_windtemp_s_01.mgp" visual="deadend_windtemp_s_01.mvp"/>
+		<elem name="deadend_windtemp_n_" gameplay="deadend_windtemp_n_01.mgp" visual="deadend_windtemp_n_01.mvp"/>
+	</list>
+	
+	<list name="special_rooms" random="true">
+		<elem name="entry_windtemp_n_" gameplay="entry_windtemp_n_01.mgp" visual="entry_windtemp_n_01.mvp"/>
+		<elem name="midboss_windtemp_ws_" gameplay="midboss_windtemp_ws_01.mgp" visual="midboss_windtemp_ws_01.mvp"/>
+		<elem name="objboss_windtemp_e_" gameplay="objboss_windtemp_e_01.mgp" visual="objboss_windtemp_e_01.mvp"/>v
+	</list>
+
+	<list name="tmodules" random="true">
+		<elem name="t_windtemp_wne_" gameplay="t_windtemp_wne_01.mgp" visual="t_windtemp_wne_01.mvp"/>
+		<elem name="t_windtemp_esw_" gameplay="t_windtemp_esw_01.mgp" visual="t_windtemp_esw_01.mvp"/>
+		<elem name="t_windtemp_esw_" gameplay="t_windtemp_esw_02.mgp" visual="t_windtemp_esw_01.mvp"/>
+		<elem name="t_windtemp_esw_" gameplay="t_windtemp_esw_03.mgp" visual="t_windtemp_esw_01.mvp"/>
+	</list>
+
+	<list name="path" random="true">
+		<elem name="corner_windtemp_se_" gameplay="corner_windtemp_se_01.mgp" visual="corner_windtemp_se_01.mvp"/>
+		<elem name="corner_windtemp_sw_" gameplay="corner_windtemp_sw_01.mgp" visual="corner_windtemp_sw_01.mvp"/>
+		<elem name="corner_windtemp_nw_" gameplay="corner_windtemp_nw_01.mgp" visual="corner_windtemp_nw_01.mvp"/>
+		<elem name="corner_windtemp_ne_" gameplay="corner_windtemp_ne_01.mgp" visual="corner_windtemp_ne_01.mvp"/>
+		<elem name="straight_windtemp_ew_" gameplay="straight_windtemp_ew_01.mgp" visual="straight_windtemp_ew_01.mvp"/>
+		<elem name="straight_windtemp_ns_" gameplay="straight_windtemp_ns_01.mgp" visual="straight_windtemp_ns_01.mvp"/>
+		<elem name="corner_windtemp_nw_" gameplay="corner_windtemp_nw_02.mgp" visual="corner_windtemp_nw_01.mvp"/>
+	</list>
+
+<!-- 
+<EndPath exit=""/>
+<ForceBlock name="#special_rooms[1]">
+</ForceBlock>
+ -->
+<RootRule name="#special_rooms[0]">
+	<ForceBlock name="#path[0]">
+		<ForceBlock name="#path[1]">
+			<ForceBlock name="#path[3]">
+				<ForceBlock name="#path[2]">
+					<ForceBlock name="#path[5]">
+						<ForceBlock name="#path[1]">
+							<ForceBlock name="#path[4]">
+								<ForceBlock name="#tmodules[1]">
+									<ForceBlock name="#path[3]">
+										<ForceBlock name="#special_rooms[1]">
+											<ForceBlock name="#special_rooms[2]"/>
+										</ForceBlock>
+									</ForceBlock>
+									<EndPath exit="south"/>
+								</ForceBlock>
+							</ForceBlock>
+						</ForceBlock>
+					</ForceBlock>
+				</ForceBlock>
+			</ForceBlock>
+		</ForceBlock>
+	</ForceBlock>
+</RootRule>
+</rules>

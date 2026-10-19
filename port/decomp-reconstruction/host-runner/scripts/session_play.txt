@@ -1,0 +1,45 @@
+# Play session on a data folder that already has a hero (a savegame): continue -> fight everything in reach -> loot -> pause / hero screens (attributes,
+# inventory, skills, fairies, quests, map) -> save and quit to the main menu -> continue again -> seeded random play.
+# Coordinates are for a 2400x1080 surface. 'click' = down, move, up (the Flash buttons need it). The HUD answers from about frame 700.
+60 tap 1000 700
+200 log Start
+200 tap 2148 322
+300 log Single player (continue)
+300 tap 2136 368
+420 log tap to continue loading
+420 tap 1200 540
+700 log level state
+700 enemies
+700 objects
+710 log hunt
+710 hunt 1400 3500
+2150 log loot
+2150 loot 600 3000
+2800 log pause menu: continue
+2800 click 176 340
+2860 click 1190 340
+2920 log hero screens
+2920 click 260 140
+2980 click 1250 56
+3040 click 1490 56
+3100 click 1750 56
+3160 click 1990 56
+3220 click 2220 56
+3280 click 1030 56
+3340 click 1220 430
+3400 click 1490 430
+3460 click 1750 430
+3520 click 1980 430
+3580 click 2250 430
+3640 click 80 56
+3700 log pause -> main menu -> yes (writes the savegame)
+3700 click 176 340
+3760 click 1190 678
+3820 click 912 604
+4000 log main menu again: Start -> Single player -> continue
+4000 tap 2148 322
+4100 tap 2136 368
+4250 tap 1200 540
+4600 log seeded random play
+4600 rand 11 2500 3500
+7200 quit

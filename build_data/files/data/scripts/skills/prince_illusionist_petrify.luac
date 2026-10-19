@@ -1,0 +1,88 @@
+--[[	Petrify
+
+	Decreases the damage the target can do at each Illusionist's successful hit
+--]]
+
+local CLASS_ID						= GetPyOID("ClassTable", "Skill_Illusionist_Petrify");
+
+local MIN_BOSS_DAMAGE_VALUE			= 30;
+local MIN_MONSTER_DAMAGE_VALUE		= 10;
+
+local AMOUNT_OF_BUFFS_PER_MONSTER	= 5;
+
+-- Cached values
+local skill_level					= 0;
+local buff							= nil;
+local canApplyBuff					= false;
+
+local traces						= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+local function OnTargetHit_Skill(attacker, target)
+ 	if (skill_level > 0 and attacker:GetID() == GetID()) then
+	
+		local currentDamageRating = FromFixed(target:GetProp(GetPyStruct("CharacterProperties", "Damage_Min_Main_Hand")));
+		if (traces) then Trace("[Skills/Illusionist Withering Touch] is being checked"); end
+		if (traces) then Trace("The target's current max damage rating is: " .. currentDamageRating); end
+		
+		if (IsBoss(target) or IsMiniBoss(target)) then
+			if (currentDamageRating > MIN_BOSS_DAMAGE_VALUE) then
+				canApplyBuff = true;
+			end
+		else
+			if (currentDamageRating > MIN_MONSTER_DAMAGE_VALUE) then
+				canApplyBuff = true;
+			end
+		end
+		
+		if (canApplyBuff) then
+			if (traces) then Trace("The target's current max damage rating is: " .. currentDamageRating); end
+			
+			SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level), true);
+				
+			buff = target:CreateBuff(CLASS_ID, 0, AMOUNT_OF_BUFFS_PER_MONSTER, skill_level);
+			target:ApplyBuff(CLASS_ID, buff);
+			
+			local newDamageRating = FromFixed(target:GetProp(GetPyStruct("CharacterProperties", "Damage_Min_Main_Hand")));
+			if (traces) then Trace("The target's current max damage rating is now: " .. newDamageRating); end
+			
+			canApplyBuff = false;
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level), true);
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

@@ -1,0 +1,108 @@
+--[[	Vicious Strike (Active)
+
+	AoE
+	A quick stab or punch with the rogue offhand which has some chance to stun
+	quickly followed by a spinning attack using the rogue weapons then followed
+	with a scissor attack with both equipped weapons which attacks all enemies 
+	in a 180 degree angles in front of him.
+	
+		Mana Cost: 15		|	+1 mana cost
+		Cast time: 1 sec	|
+		Cooldown: na		|
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local SEARCH_RANGE		= 300.0;
+local RANGE				= 160.0;
+local ANGLE				= 180.0;
+
+local STUN_CLASS_ID	= GetPyOID("ClassTable", "Skill_Rogue_ViciousStrike_Stun");
+local LOW_CLASS_ID	= GetPyOID("ClassTable", "Skill_Rogue_ViciousStrike_LowHit");
+local HIGH_CLASS_ID	= GetPyOID("ClassTable", "Skill_Rogue_ViciousStrike_HighHit");
+
+local DISP_CLASS_ID	= GetPyOID("ClassTable", "Skill_Rogue_ViciousStrike");
+
+-- Cached values
+local skill_inc	= 0;
+local skill_level	= 0;
+local mana_cost;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(DISP_CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+		mana_cost	= CalcManaCost(STUN_CLASS_ID, slvl);
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	SetTempProps(DISP_CLASS_ID, skill_level);
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(SEARCH_RANGE);
+	TargetListBackup("MaxAngleSearch");
+
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+	else
+		target = nil;
+	end
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	
+	TargetListSearch(RANGE, ANGLE, "MaxAngleSearch");
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	
+	if(not IsTargetListEmpty()) then
+		ApplyPropClass(STUN_CLASS_ID);
+		repeat
+			local target,_,_, character = GetTargetListTop();
+			PopTargetList();
+			
+			if (target:IsCharacter()) then
+				SkillCombatRoll(target);
+			end
+		until(IsTargetListEmpty())
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

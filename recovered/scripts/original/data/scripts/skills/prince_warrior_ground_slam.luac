@@ -1,0 +1,105 @@
+--[[	Ground Slam (Active)
+
+	Warrior perform a hit on the ground that create a shockwave
+	high chance to knockback enemies
+		Mana Cost: 10					|	+1 mana cost
+
+		Cast time: 1 sec				|
+		Cooldown: 2 sec				|
+
+		Shockwave radius: 300		|	+5% Shockwave radius
+		20 may 2010, almost 100% working
+		24 may 2010, 	was able to incorportate the data from the character class table
+							now the range, and cooldown are taken from it.
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+
+local RANGE						= 300.0;
+local F_RANGE					= 0.0;
+local ForcedKnockback			= 120.0;
+
+local CLASS_ID					= GetPyOID("ClassTable", "Skill_Warrior_GroundSlam");
+local USE_COOLDOWN				= true;
+
+-- Cached values
+local skill_level				= 0;
+local mana_cost;
+local cooldown;
+local traces					= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+	return cooldown;
+end
+
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	
+	mana_cost	= CalcManaCost(CLASS_ID, skill_level);
+	RANGE 		= FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"), true));
+	cooldown 	= FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Cooldown"), true));
+	
+	-- 5% increase of the range per skill level
+	local RANGE2 = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp2"), true));
+	F_RANGE = RANGE + ((RANGE * RANGE2/100)* skill_level);
+	if(cooldown < 0) then cooldown = 0; end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return (not HasSkillCooldown() and HasMana(mana_cost)), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	if (traces) then Trace("[Skills | Ground Slam] consumes "..FromFixed(mana_cost).." mana..."); end
+	UseMana(mana_cost);
+	SetSkillCooldown(cooldown);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+   	local hasLookedAtTarget = false;
+	
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+	TargetListSearch(RANGE);
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	ApplyPropClass(CLASS_ID);
+	
+  	if(not IsTargetListEmpty()) then
+		repeat
+			local target = GetTargetListTop();
+			if (not hasLookedAtTarget) then
+				LookAt(target);
+				hasLookedAtTarget = true;
+			end
+			PopTargetList();
+			SkillCombatRoll(target);
+		until(IsTargetListEmpty())
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

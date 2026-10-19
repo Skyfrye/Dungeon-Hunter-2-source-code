@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/lighthousse"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\019_light_house_01.pyscript"
+	camera_znear="500"
+	camera_zfar="1000000"
+	music="LighthouseTempleAmbientMusic"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	light_set="data/3D/Light/lighthousse.lightset_xml"
+	fixed_light_set="data/3D/Light/lighthousse_es1_1.lightset_xml"
+	skybox="data/3D/skybox/skybox_wind.bdae"
+	prog_vertex_buffer_size="19764"
+	prog_index_buffer_size="1488"
+	fix_vertex_buffer_size="167652"
+	fix_index_buffer_size="10230"
+>
+	
+	<list name="start" random="true">
+		<elem name="startroom" gameplay="lh01_startroom_01.mgp" visual="lh01_startroom_01.mvp"/>
+	</list>
+	
+	<list name="level1" random="true">
+		<elem name="open_01" gameplay="lh01_lv01_open_01_01.mgp" visual="lh01_lv01_open_01_01.mvp"/>
+	</list>
+	
+	<list name="level2" random="true">
+		<elem name="close_01" gameplay="lh01_lv02_close_01_01.mgp" visual="lh01_lv02_close_01_01.mvp"/>
+	</list>
+	
+	<list name="level3" random="true">
+		<elem name="open_03" gameplay="lh01_lv03_open_03_01.mgp" visual="lh01_lv03_open_03_01.mvp"/>
+	</list>
+	
+	<list name="level4" random="true">
+		<elem name="open_01" gameplay="lh01_lv04_open_01_01.mgp" visual="lh01_lv04_open_01_01.mvp"/>
+		<elem name="close_01" gameplay="lh01_lv04_close_01_01.mgp" visual="lh01_lv04_close_01_01.mvp"/>
+		<elem name="open_03" gameplay="lh01_lv04_open_03_01.mgp" visual="lh01_lv04_open_03_01.mvp"/>
+	</list>
+	
+	<list name="level5" random="true">
+		<elem name="open_01" gameplay="lh01_lv05_open_01_01.mgp" visual="lh01_lv05_open_01_01.mvp"/>
+		<elem name="close_01" gameplay="lh01_lv05_close_01_01.mgp" visual="lh01_lv05_close_01_01.mvp"/>
+		<elem name="open_03" gameplay="lh01_lv05_open_03_01.mgp" visual="lh01_lv05_open_03_01.mvp"/>
+	</list>
+	
+	<list name="level6" random="true">
+		<elem name="close_02" gameplay="lh01_lv06_close_02_01.mgp" visual="lh01_lv06_close_02_01.mvp"/>
+	</list>
+	
+	<list name="level7" random="true">
+		<elem name="open_02" gameplay="lh01_lv07_open_02_01.mgp" visual="lh01_lv07_open_02_01.mvp"/>
+	</list>
+	
+	<list name="level8" random="true">
+		<elem name="close_03" gameplay="lh01_lv08_close_03_01.mgp" visual="lh01_lv08_close_03_01.mvp"/>
+	</list>
+	
+	<list name="level9" random="true">
+		<elem name="open_01" gameplay="lh01_lv09_open_01_01.mgp" visual="lh01_lv09_open_01_01.mvp"/>
+		<elem name="close_01" gameplay="lh01_lv09_close_01_01.mgp" visual="lh01_lv09_close_01_01.mvp"/>
+		<elem name="open_03" gameplay="lh01_lv09_open_03_01.mgp" visual="lh01_lv09_open_03_01.mvp"/>
+	</list>
+	
+	<list name="level10" random="true">
+		<elem name="open_02" gameplay="lh01_lv10_open_02_01.mgp" visual="lh01_lv10_open_02_01.mvp"/>
+		<elem name="close_03" gameplay="lh01_lv10_close_03_01.mgp" visual="lh01_lv10_close_03_01.mvp"/>
+	</list>
+	
+	<list name="end" random="true">
+		<elem name="bossroom" gameplay="lh01_bossroom_01.mgp" visual="lh01_bossroom_01.mvp"/>
+	</list>
+	
+<RootRule name="#end">
+	<EndPath exit="east"/>
+</RootRule>
+</rules>

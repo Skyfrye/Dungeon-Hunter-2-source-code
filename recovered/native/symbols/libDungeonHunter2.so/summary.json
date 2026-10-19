@@ -1,0 +1,140 @@
+{
+  "library": "libDungeonHunter2.so",
+  "sha256": "36498eb8180ffb74759e6305e9596db999f18583d460f3b8534abcb6022f5e80",
+  "file_size": 15938284,
+  "machine": "EM_ARM",
+  "elf_class": 32,
+  "entry_address": 3206656,
+  "sections": 31,
+  "symbol_table_rows": 115555,
+  "symbol_tables": {
+    ".dynsym": 32572,
+    ".symtab": 82983
+  },
+  "defined_function_symbol_rows": 59106,
+  "unique_defined_function_symbols": 31021,
+  "unique_function_ranges": 31018,
+  "exported_function_ranges": 31018,
+  "zero_size_function_ranges": 0,
+  "instruction_count_per_unique_range": 1467476,
+  "class_groups": 3482,
+  "assembly_files": 3482,
+  "imports_unique": 361,
+  "relocations": 54463,
+  "vtables": 1628,
+  "typeinfo_symbols": 0,
+  "mapping_symbol_rows_unique_addresses": 45100,
+  "arm_unwind_index_entries": 30992,
+  "extracted_strings": 94959,
+  "build_source_filenames": 867,
+  "coverage": [
+    {
+      "section": ".plt",
+      "address": 3202420,
+      "size": 4232,
+      "instruction_bytes": 0,
+      "mapped_data_bytes": 0,
+      "undecoded_bytes": 0,
+      "outside_function_ranges_bytes": 4232,
+      "instruction_byte_fraction": 0.0,
+      "accounted_byte_fraction": 0.0
+    },
+    {
+      "section": ".text",
+      "address": 3206656,
+      "size": 5961032,
+      "instruction_bytes": 5775142,
+      "mapped_data_bytes": 185292,
+      "undecoded_bytes": 0,
+      "outside_function_ranges_bytes": 598,
+      "instruction_byte_fraction": 0.9688158023644228,
+      "accounted_byte_fraction": 0.9998996818000642
+    }
+  ],
+  "unresolved_decoder_ranges": 0,
+  "outside_function_ranges": 291,
+  "gameplay_symbol_examples": [
+    "Character::AddCharOIDToCache(int, unsigned int)",
+    "Character::AddItemInstance(ItemInstance*, bool, bool)",
+    "Character::AddMultiplayerHighlight()",
+    "Character::CSM_AfterInteraction(int, void*, int, int&)",
+    "Character::CSM_Attack(int, void*, int, int&)",
+    "PlayerManager::AllClientsReadyToRoll()",
+    "PlayerManager::AllLoadingDone()",
+    "PlayerManager::AllPlayersDead()",
+    "PlayerManager::AllReadyToRoll()",
+    "PlayerManager::ClearLoadingInfo()",
+    "PlayerSavegame::PlayerSavegame()",
+    "PlayerSavegame::PlayerSavegame(unsigned int, int, bool)",
+    "PlayerSavegame::SG_DBG_TraceDetailedQuestInformation(__sFILE*, int, int)",
+    "PlayerSavegame::SG_Delete(char const*)",
+    "PlayerSavegame::SG_Delete(unsigned int)",
+    "Quest::AssignPyData(Structs::v2Quest*)",
+    "Quest::Compile()",
+    "Quest::DBG_GetCurrentStateName() const",
+    "Quest::DBG_IncState()",
+    "Quest::DBG_TraceDetailedQuestInformation(__sFILE*) const",
+    "ItemInventory::AddGold(int)",
+    "ItemInventory::AddItemInstance(ItemInstance*, bool, bool)",
+    "ItemInventory::AddLoot(int, int, int, int, bool)",
+    "ItemInventory::CalcLootItemValue(ItemInstance*, int)",
+    "ItemInventory::CanMeleeAttack() const",
+    "Level::AssignSteamToLoadDataFile(StreamBuffer&)",
+    "Level::CanMoveTowards(Point3D<float> const&, Point3D<float> const&)",
+    "Level::CheckpointSave(Point3D<float> const&, bool)",
+    "Level::CleanUpAllSkills()",
+    "Level::DisableFog(glitch::scene::ISceneNode*)"
+  ],
+  "source_filename_examples": [
+    "Character.cpp",
+    "Character_CSM.cpp",
+    "Character_CTRL.cpp",
+    "Character_Creators.cpp",
+    "Character_Faery.cpp",
+    "Character_Formulas.cpp",
+    "Character_Initialization.cpp",
+    "Character_LuaCallbacks.cpp",
+    "Character_SGProxy.cpp",
+    "Character_Skills.cpp",
+    "Character_Stats.cpp",
+    "GameObject.cpp",
+    "GameObject_LuaCallbacks.cpp",
+    "GameObject_MoveLookPath.cpp",
+    "GameObject_SubObjects.cpp",
+    "ItemInventory.cpp",
+    "ItemInventory_Equipment.cpp",
+    "ItemInventory_Loots.cpp",
+    "Level.cpp",
+    "LevelMap.cpp",
+    "LevelSavegame.cpp",
+    "Level_Players.cpp",
+    "PlayerLightTweaker.cpp",
+    "PlayerManager.cpp",
+    "PlayerSavegame.cpp",
+    "PlayerSavegame_Data.cpp",
+    "PlayerSavegame_LoadSave.cpp",
+    "PlayerStatManager.cpp",
+    "Quest.cpp",
+    "QuestEvent.cpp",
+    "QuestMoveInZone.cpp",
+    "QuestSavegame.cpp"
+  ],
+  "json_chunks": {
+    "symbols": [
+      "symbols-001.json",
+      "symbols-002.json"
+    ],
+    "relocations": [
+      "relocations-001.json"
+    ],
+    "vtables": [
+      "vtables-001.json"
+    ],
+    "strings": [
+      "strings-001.json"
+    ],
+    "function_index": [
+      "function-index-001.json"
+    ]
+  }
+}

@@ -1,0 +1,2250 @@
+elf_address,body_bytes,owner,name,demangled
+35df0,16,<global>,sub_35DF0,sub_35DF0
+35e00,56,<global>,sub_35E00,sub_35E00
+35e38,40,<global>,sub_35E38,sub_35E38
+35e60,4580,<global>,sub_35E60,sub_35E60
+37044,148,<global>,sub_37044,sub_37044
+370d8,48,<global>,sub_370D8,sub_370D8
+37108,12,<global>,sub_37108,sub_37108
+37114,32,<global>,sub_37114,sub_37114
+37134,8,<global>,_Z22posix_vm_get_page_sizev,posix_vm_get_page_size()
+3713c,168,<global>,JNI_OnLoad,JNI_OnLoad
+371e4,328,<global>,_Z20hook_import_functionPKcS0_Ph,"hook_import_function(char const*, char const*, unsigned char*)"
+3732c,2264,<global>,_Z17my_glShaderSourcejiPKPKcPKi,"my_glShaderSource(unsigned int, int, char const* const*, int const*)"
+37c04,220,<global>,_Z14my_glGetStringj,my_glGetString(unsigned int)
+37ce0,172,<global>,_Z18ChangePagePropertymj,"ChangePageProperty(unsigned long, unsigned int)"
+37d8c,320,<global>,_Z11SafeMemReadmjPc,"SafeMemRead(unsigned long, unsigned int, char*)"
+37ecc,320,<global>,_Z12SafeMemWritemjPc,"SafeMemWrite(unsigned long, unsigned int, char*)"
+3800c,464,<global>,_Z11PatchOpcodePKcm,"PatchOpcode(char const*, unsigned long)"
+381dc,288,<global>,_Z15DecompressPVRTCjijiiiPKv,"DecompressPVRTC(unsigned int, int, unsigned int, int, int, int, void const*)"
+382fc,956,<global>,_Z15my_glTexImage2DjiiiiijjPKv,"my_glTexImage2D(unsigned int, int, int, int, int, int, unsigned int, unsigned int, void const*)"
+386b8,232,<global>,_Z14DecompressS3TCjijiiiPKv,"DecompressS3TC(unsigned int, int, unsigned int, int, int, int, void const*)"
+387a0,184,<global>,_Z13DecompressATCjijiiiPKv,"DecompressATC(unsigned int, int, unsigned int, int, int, int, void const*)"
+38858,140,<global>,_Z13DecompressETCjijiiiPKv,"DecompressETC(unsigned int, int, unsigned int, int, int, int, void const*)"
+388e4,592,<global>,_Z25my_glCompressedTexImage2DjijiiiiPKv,"my_glCompressedTexImage2D(unsigned int, int, unsigned int, int, int, int, int, void const*)"
+38b34,92,<global>,_Z25convertRGBA8888ToRGBA4444PKhiPh,"convertRGBA8888ToRGBA4444(unsigned char const*, int, unsigned char*)"
+38b90,80,<global>,_Z21convertRGB888ToRGB565PKhiPh,"convertRGB888ToRGB565(unsigned char const*, int, unsigned char*)"
+38be0,28,<global>,_Z13my_glViewportiiii,"my_glViewport(int, int, int, int)"
+38bfc,28,<global>,_Z12my_glScissoriiii,"my_glScissor(int, int, int, int)"
+38c18,268,<global>,_Z19IsLowMemoryPlatformv,IsLowMemoryPlatform()
+38d24,404,<global>,_ZNSs10_M_replaceEPcS_PKcS1_b,"std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(char*, char*, char const*, char const*, bool)"
+38eb8,1032,<global>,_ZNSs9_M_insertEPcPKcS1_b,"std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_insert(char*, char const*, char const*, bool)"
+392c0,740,<global>,hook_export_function,hook_export_function
+395a4,236,<global>,storm_nativeSetPhone,storm_nativeSetPhone
+39690,196,<global>,storm_nativeResize,storm_nativeResize
+39754,148,<global>,storm_nativeGetWidth,storm_nativeGetWidth
+397e8,132,<global>,is_func_hooked,is_func_hooked
+3986c,104,<global>,add_hooked_info,add_hooked_info
+398d4,356,<global>,find_file_path_from_fd,find_file_path_from_fd
+39a38,8,<global>,get_id,get_id
+39a40,72,<global>,to_hex,to_hex
+39a88,292,<global>,array_to_string,array_to_string
+39bac,156,<global>,build_hook_info_list,build_hook_info_list
+39c48,1604,<global>,sub_39C48,sub_39C48
+3a28c,224,<global>,sub_3A28C,sub_3A28C
+3a36c,624,<global>,find_name,find_name
+3a5dc,656,<global>,sub_3A5DC,sub_3A5DC
+3a86c,244,<global>,sub_3A86C,sub_3A86C
+3a960,236,<global>,find_libbase,find_libbase
+3aa4c,348,<global>,sub_3AA4C,sub_3AA4C
+3aba8,48,<global>,hook_cacheflush,hook_cacheflush
+3abd8,396,<global>,hook_direct,hook_direct
+3ad64,956,<global>,hook,hook
+3b120,264,<global>,hook_precall,hook_precall
+3b228,264,<global>,hook_postcall,hook_postcall
+3b330,104,<global>,unhook,unhook
+3b398,2984,<global>,_Z19PVRTDecompressPVRTCPKviiiPh,"PVRTDecompressPVRTC(void const*, int, int, int, unsigned char*)"
+3bf40,40,<global>,_Z22util_number_is_power_2j,util_number_is_power_2(unsigned int)
+3bf68,196,<global>,_Z11modifyPixeliiiiimi,"modifyPixel(int, int, int, int, int, unsigned long, int)"
+3c02c,1756,<global>,_Z20ETCTextureDecompressPKvRKiS2_S0_S2_,"ETCTextureDecompress(void const*, int const&, int const&, void const*, int const&)"
+3c708,392,<global>,_Z17PVRTDecompressETCPKvRKjS2_PvRKi,"PVRTDecompressETC(void const*, unsigned int const&, unsigned int const&, void*, int const&)"
+3c890,556,<global>,sub_3C890,sub_3C890
+3cabc,324,<global>,_Z20PVRTTextureLoadTiledPhjjPKhjjjb,"PVRTTextureLoadTiled(unsigned char*, unsigned int, unsigned int, unsigned char const*, unsigned int, unsigned int, unsigned int, bool)"
+3cc00,88,<global>,_Z20PVRTTextureDeTwiddleRjS_j,"PVRTTextureDeTwiddle(unsigned int&, unsigned int&, unsigned int)"
+3cc58,376,<global>,_Z18PVRTTextureTwiddleRjjj,"PVRTTextureTwiddle(unsigned int&, unsigned int, unsigned int)"
+3cdd0,208,<global>,_Z17PVRTTextureCreatejjjjjb,"PVRTTextureCreate(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool)"
+3cea0,16,<global>,_Z8PackRGBAhhhh,"PackRGBA(unsigned char, unsigned char, unsigned char, unsigned char)"
+3ceb0,1008,<global>,_Z19DecompressBlockDXT1mmmPKhPm,"DecompressBlockDXT1(unsigned long, unsigned long, unsigned long, unsigned char const*, unsigned long*)"
+3d2a0,176,<global>,_Z24BlockDecompressImageDXT1mmPKhPm,"BlockDecompressImageDXT1(unsigned long, unsigned long, unsigned char const*, unsigned long*)"
+3d350,856,<global>,_Z19DecompressBlockDXT5mmmPKhPm,"DecompressBlockDXT5(unsigned long, unsigned long, unsigned long, unsigned char const*, unsigned long*)"
+3d6a8,176,<global>,_Z24BlockDecompressImageDXT5mmPKhPm,"BlockDecompressImageDXT5(unsigned long, unsigned long, unsigned char const*, unsigned long*)"
+3d758,176,<global>,_Z24BlockDecompressImageDXT3mmPKhPm,"BlockDecompressImageDXT3(unsigned long, unsigned long, unsigned char const*, unsigned long*)"
+3d808,312,<global>,_Z19DecompressBlockDXT3mmmPKhPm,"DecompressBlockDXT3(unsigned long, unsigned long, unsigned long, unsigned char const*, unsigned long*)"
+3d940,1256,<global>,_Z27DecompressBlockDXT1InternalPKhPmmS0_,"DecompressBlockDXT1Internal(unsigned char const*, unsigned long*, unsigned long, unsigned char const*)"
+3de28,64,<global>,_Z14Color1555To888tPm,"Color1555To888(unsigned short, unsigned long*)"
+3de68,52,<global>,_Z13Color565To888tPm,"Color565To888(unsigned short, unsigned long*)"
+3de9c,256,<global>,_Z9GetColorsttPm,"GetColors(unsigned short, unsigned short, unsigned long*)"
+3df9c,1164,<global>,_Z15DecompressATITCPKhPmmmj,"DecompressATITC(unsigned char const*, unsigned long*, unsigned long, unsigned long, unsigned int)"
+3e428,340,<global>,_ZNK13ExplicitBlock3GetEPm,ExplicitBlock::Get(unsigned long*) const
+3e57c,340,<global>,_ZNK17InterporatedBlock3GetEPm,InterporatedBlock::Get(unsigned long*) const
+3e6d0,352,<global>,_ZNK10ColorBlock3GetEPm,ColorBlock::Get(unsigned long*) const
+3e830,292,<global>,_ZNK18ExplicitAlphaBlock3GetEPm,ExplicitAlphaBlock::Get(unsigned long*) const
+3e954,372,<global>,_ZNK22InterporatedAlphaBlock3GetEPm,InterporatedAlphaBlock::Get(unsigned long*) const
+3eac8,432,<global>,_ZNK22InterporatedAlphaBlock22GetCompressedAlphaRampEPh,InterporatedAlphaBlock::GetCompressedAlphaRamp(unsigned char*) const
+3ec78,132,<global>,_ZN7rg_etc110etc1_block11pack_color5ERKNS_13color_quad_u8Ebj,"rg_etc1::etc1_block::pack_color5(rg_etc1::color_quad_u8 const&, bool, unsigned int)"
+3ecfc,124,<global>,_ZN7rg_etc110etc1_block11pack_color5Ejjjbj,"rg_etc1::etc1_block::pack_color5(unsigned int, unsigned int, unsigned int, bool, unsigned int)"
+3ed78,80,<global>,_ZN7rg_etc110etc1_block13unpack_color5Etbj,"rg_etc1::etc1_block::unpack_color5(unsigned short, bool, unsigned int)"
+3edc8,84,<global>,_ZN7rg_etc110etc1_block13unpack_color5ERjS1_S1_tb,"rg_etc1::etc1_block::unpack_color5(unsigned int&, unsigned int&, unsigned int&, unsigned short, bool)"
+3ee1c,240,<global>,_ZN7rg_etc110etc1_block13unpack_color5ERNS_13color_quad_u8Ettbj,"rg_etc1::etc1_block::unpack_color5(rg_etc1::color_quad_u8&, unsigned short, unsigned short, bool, unsigned int)"
+3ef0c,76,<global>,_ZN7rg_etc110etc1_block13unpack_delta3ERiS1_S1_t,"rg_etc1::etc1_block::unpack_delta3(int&, int&, int&, unsigned short)"
+3ef58,132,<global>,_ZN7rg_etc110etc1_block13unpack_color5ERjS1_S1_ttbj,"rg_etc1::etc1_block::unpack_color5(unsigned int&, unsigned int&, unsigned int&, unsigned short, unsigned short, bool, unsigned int)"
+3efdc,44,<global>,_ZN7rg_etc110etc1_block11pack_delta3Eiii,"rg_etc1::etc1_block::pack_delta3(int, int, int)"
+3f008,132,<global>,_ZN7rg_etc110etc1_block11pack_color4ERKNS_13color_quad_u8Ebj,"rg_etc1::etc1_block::pack_color4(rg_etc1::color_quad_u8 const&, bool, unsigned int)"
+3f08c,124,<global>,_ZN7rg_etc110etc1_block11pack_color4Ejjjbj,"rg_etc1::etc1_block::pack_color4(unsigned int, unsigned int, unsigned int, bool, unsigned int)"
+3f108,64,<global>,_ZN7rg_etc110etc1_block13unpack_color4Etbj,"rg_etc1::etc1_block::unpack_color4(unsigned short, bool, unsigned int)"
+3f148,68,<global>,_ZN7rg_etc110etc1_block13unpack_color4ERjS1_S1_tb,"rg_etc1::etc1_block::unpack_color4(unsigned int&, unsigned int&, unsigned int&, unsigned short, bool)"
+3f18c,396,<global>,_ZN7rg_etc110etc1_block24get_diff_subblock_colorsEPNS_13color_quad_u8Etj,"rg_etc1::etc1_block::get_diff_subblock_colors(rg_etc1::color_quad_u8*, unsigned short, unsigned int)"
+3f318,564,<global>,_ZN7rg_etc110etc1_block24get_diff_subblock_colorsEPNS_13color_quad_u8Ettj,"rg_etc1::etc1_block::get_diff_subblock_colors(rg_etc1::color_quad_u8*, unsigned short, unsigned short, unsigned int)"
+3f54c,396,<global>,_ZN7rg_etc110etc1_block23get_abs_subblock_colorsEPNS_13color_quad_u8Etj,"rg_etc1::etc1_block::get_abs_subblock_colors(rg_etc1::color_quad_u8*, unsigned short, unsigned int)"
+3f6d8,2176,<global>,_ZN7rg_etc117unpack_etc1_blockEPKvPjb,"rg_etc1::unpack_etc1_block(void const*, unsigned int*, bool)"
+3ff58,1572,<global>,_ZN7rg_etc114etc1_optimizer7computeEv,rg_etc1::etc1_optimizer::compute()
+4057c,1216,<global>,_ZN7rg_etc114etc1_optimizer17evaluate_solutionERKNS_25etc1_solution_coordinatesERNS0_18potential_solutionEPS4_,"rg_etc1::etc1_optimizer::evaluate_solution(rg_etc1::etc1_solution_coordinates const&, rg_etc1::etc1_optimizer::potential_solution&, rg_etc1::etc1_optimizer::potential_solution*)"
+40a3c,2356,<global>,_ZN7rg_etc114etc1_optimizer22evaluate_solution_fastERKNS_25etc1_solution_coordinatesERNS0_18potential_solutionEPS4_,"rg_etc1::etc1_optimizer::evaluate_solution_fast(rg_etc1::etc1_solution_coordinates const&, rg_etc1::etc1_optimizer::potential_solution&, rg_etc1::etc1_optimizer::potential_solution*)"
+41370,584,<global>,_ZN7rg_etc114etc1_optimizer4initERKNS0_6paramsERNS0_7resultsE,"rg_etc1::etc1_optimizer::init(rg_etc1::etc1_optimizer::params const&, rg_etc1::etc1_optimizer::results&)"
+415b8,1348,<global>,_ZN7rg_etc119indirect_radix_sortIjtEEPT_jS2_S2_PKT0_jjb,"unsigned int* rg_etc1::indirect_radix_sort<unsigned int, unsigned short>(unsigned int, unsigned int*, unsigned int*, unsigned short const*, unsigned int, unsigned int, bool)"
+41afc,1724,<global>,_ZN7rg_etc120pack_etc1_block_initEv,rg_etc1::pack_etc1_block_init()
+421b8,4584,<global>,_ZN7rg_etc115pack_etc1_blockEPvPKjRNS_16etc1_pack_paramsE,"rg_etc1::pack_etc1_block(void*, unsigned int const*, rg_etc1::etc1_pack_params&)"
+433a0,440,<global>,_Z14DecompressETC1PhS_ii,"DecompressETC1(unsigned char*, unsigned char*, int, int)"
+43558,64,<global>,_ZNSt6vectorIP17tagINLINEHOOKINFOSaIS1_EED2Ev,"std::vector<tagINLINEHOOKINFO*, std::allocator<tagINLINEHOOKINFO*> >::~vector()"
+43598,440,<global>,_Z10InlineHookPvPFvP7pt_regsE,"InlineHook(void*, void (*)(pt_regs*))"
+43750,228,<global>,_Z12UnInlineHookPv,UnInlineHook(void*)
+43834,96,<global>,_Z12RegisterHookP7pt_regs,RegisterHook(pt_regs*)
+43894,352,<global>,_Z20hook_inline_functionPKcib,"hook_inline_function(char const*, int, bool)"
+439f4,456,<global>,_ZNSt6vectorIP17tagINLINEHOOKINFOSaIS1_EE18_M_insert_overflowEPS1_RKS1_RKSt11__true_typejb,"std::vector<tagINLINEHOOKINFO*, std::allocator<tagINLINEHOOKINFO*> >::_M_insert_overflow(tagINLINEHOOKINFO**, tagINLINEHOOKINFO* const&, std::__true_type const&, unsigned int, bool)"
+43bbc,216,<global>,ChangePageProperty,ChangePageProperty
+43c94,468,<global>,GetModuleBaseAddr,GetModuleBaseAddr
+43e68,272,<global>,InitArmHookInfo,InitArmHookInfo
+43f78,1020,<global>,InitThumbHookInfo,InitThumbHookInfo
+44374,400,<global>,BuildStub,BuildStub
+44504,400,<global>,BuildStubThumb,BuildStubThumb
+44694,100,<global>,BuildArmJumpCode,BuildArmJumpCode
+446f8,144,<global>,BuildThumbJumpCode,BuildThumbJumpCode
+44788,468,<global>,BuildOldFunction,BuildOldFunction
+4495c,596,<global>,BuildOldFunctionThumb,BuildOldFunctionThumb
+44bb0,220,<global>,RebuildHookTarget,RebuildHookTarget
+44c8c,260,<global>,RebuildHookTargetThumb,RebuildHookTargetThumb
+44d90,280,<global>,HookArm,HookArm
+44ea8,280,<global>,HookThumb,HookThumb
+44fc0,472,<global>,lengthFixThumb32,lengthFixThumb32
+45198,44,<global>,lengthFixArm32,lengthFixArm32
+451c4,384,<global>,sub_451C4,sub_451C4
+45344,192,<global>,lengthFixThumb16,lengthFixThumb16
+45404,140,<global>,isThumb32,isThumb32
+45490,36,<global>,isTargetAddrInBackup,isTargetAddrInBackup
+454b4,592,<global>,fixPCOpcodeArm,fixPCOpcodeArm
+45704,1656,<global>,fixPCOpcodeArm32,fixPCOpcodeArm32
+45d7c,1096,<global>,fixPCOpcodeThumb,fixPCOpcodeThumb
+461c4,2392,<global>,fixPCOpcodeThumb32,fixPCOpcodeThumb32
+46b1c,1732,<global>,fixPCOpcodeThumb16,fixPCOpcodeThumb16
+471e0,22,<global>,getopt,getopt
+471f8,1564,<global>,sub_471F8,sub_471F8
+47814,26,<global>,getopt_long,getopt_long
+4782e,26,<global>,getopt_long_only,getopt_long_only
+47848,136,<global>,sub_47848,sub_47848
+478d0,636,<global>,sub_478D0,sub_478D0
+47b4c,7516,<global>,glcpp_lex,glcpp_lex
+498a8,140,<global>,sub_498A8,sub_498A8
+49934,116,<global>,glcpp__create_buffer,glcpp__create_buffer
+499a8,36,<global>,sub_499A8,sub_499A8
+499cc,156,<global>,sub_499CC,sub_499CC
+49a68,98,<global>,glcpp_restart,glcpp_restart
+49aca,78,<global>,sub_49ACA,sub_49ACA
+49b18,106,<global>,glcpp__switch_to_buffer,glcpp__switch_to_buffer
+49b82,4,<global>,glcpp_alloc,glcpp_alloc
+49b86,56,<global>,glcpp__delete_buffer,glcpp__delete_buffer
+49bbe,4,<global>,glcpp_free,glcpp_free
+49bc2,76,<global>,glcpp__flush_buffer,glcpp__flush_buffer
+49c0e,98,<global>,glcpp_push_buffer_state,glcpp_push_buffer_state
+49c70,80,<global>,glcpp_pop_buffer_state,glcpp_pop_buffer_state
+49cc0,140,<global>,glcpp__scan_buffer,glcpp__scan_buffer
+49d4c,26,<global>,glcpp__scan_string,glcpp__scan_string
+49d68,164,<global>,glcpp__scan_bytes,glcpp__scan_bytes
+49e0c,4,<global>,glcpp_get_extra,glcpp_get_extra
+49e10,20,<global>,glcpp_get_lineno,glcpp_get_lineno
+49e24,20,<global>,glcpp_get_column,glcpp_get_column
+49e38,4,<global>,glcpp_get_in,glcpp_get_in
+49e3c,4,<global>,glcpp_get_out,glcpp_get_out
+49e40,4,<global>,glcpp_get_leng,glcpp_get_leng
+49e44,4,<global>,glcpp_get_text,glcpp_get_text
+49e48,4,<global>,glcpp_set_extra,glcpp_set_extra
+49e4c,68,<global>,glcpp_set_lineno,glcpp_set_lineno
+49e90,68,<global>,glcpp_set_column,glcpp_set_column
+49ed4,4,<global>,glcpp_set_in,glcpp_set_in
+49ed8,4,<global>,glcpp_set_out,glcpp_set_out
+49edc,4,<global>,glcpp_get_debug,glcpp_get_debug
+49ee0,4,<global>,glcpp_set_debug,glcpp_set_debug
+49ee4,4,<global>,glcpp_get_lval,glcpp_get_lval
+49ee8,4,<global>,glcpp_set_lval,glcpp_set_lval
+49eec,4,<global>,glcpp_get_lloc,glcpp_get_lloc
+49ef0,4,<global>,glcpp_set_lloc,glcpp_set_lloc
+49ef4,50,<global>,glcpp_lex_init,glcpp_lex_init
+49f26,90,<global>,glcpp_lex_init_extra,glcpp_lex_init_extra
+49f80,74,<global>,glcpp_lex_destroy,glcpp_lex_destroy
+49fca,4,<global>,glcpp_realloc,glcpp_realloc
+49fce,28,<global>,glcpp_lex_set_source_string,glcpp_lex_set_source_string
+49fec,5648,<global>,glcpp_parser_parse,glcpp_parser_parse
+4b5fc,156,<global>,sub_4B5FC,sub_4B5FC
+4b698,104,<global>,sub_4B698,sub_4B698
+4b700,140,<global>,sub_4B700,sub_4B700
+4b78c,252,<global>,sub_4B78C,sub_4B78C
+4b888,32,<global>,glcpp_parser_resolve_implicit_version,glcpp_parser_resolve_implicit_version
+4b8a8,184,<global>,sub_4B8A8,sub_4B8A8
+4b960,1148,<global>,sub_4B960,sub_4B960
+4bddc,54,<global>,sub_4BDDC,sub_4BDDC
+4be12,50,<global>,sub_4BE12,sub_4BE12
+4be44,120,<global>,sub_4BE44,sub_4BE44
+4bebc,724,<global>,sub_4BEBC,sub_4BEBC
+4c190,108,<global>,sub_4C190,sub_4C190
+4c1fc,148,<global>,glcpp_parser_create,glcpp_parser_create
+4c290,28,<global>,glcpp_parser_destroy,glcpp_parser_destroy
+4c2ac,684,<global>,sub_4C2AC,sub_4C2AC
+4c558,36,<global>,sub_4C558,sub_4C558
+4c57c,284,<global>,sub_4C57C,sub_4C57C
+4c698,92,<global>,sub_4C698,sub_4C698
+4c6f4,948,<global>,sub_4C6F4,sub_4C6F4
+4caa8,928,<global>,sub_4CAA8,sub_4CAA8
+4ce48,60,<global>,sub_4CE48,sub_4CE48
+4ce84,220,<global>,sub_4CE84,sub_4CE84
+4cf60,132,<global>,sub_4CF60,sub_4CF60
+4cfe4,364,<global>,sub_4CFE4,sub_4CFE4
+4d150,80,<global>,sub_4D150,sub_4D150
+4d1a0,164,<global>,glcpp_error,glcpp_error
+4d244,164,<global>,glcpp_warning,glcpp_warning
+4d2e8,556,<global>,glcpp_preprocess,glcpp_preprocess
+4d514,4,<global>,glsl_strtod,glsl_strtod
+4d518,22,<global>,glsl_strtof,glsl_strtof
+4d52e,36,<global>,_mesa_align_malloc,_mesa_align_malloc
+4d552,38,<global>,_mesa_align_calloc,_mesa_align_calloc
+4d578,12,<global>,_mesa_align_free,_mesa_align_free
+4d584,84,<global>,_mesa_align_realloc,_mesa_align_realloc
+4d5d8,58,<global>,ffs,ffs
+4d612,32,<global>,ffsll,ffsll
+4d632,28,<global>,_mesa_bitcount,_mesa_bitcount
+4d64e,36,<global>,_mesa_bitcount_64,_mesa_bitcount_64
+4d672,110,<global>,_mesa_round_to_even,_mesa_round_to_even
+4d6e0,232,<global>,_mesa_float_to_half,_mesa_float_to_half
+4d7c8,136,<global>,_mesa_half_to_float,_mesa_half_to_float
+4d850,40,<global>,_mesa_strdup,_mesa_strdup
+4d878,22,<global>,_mesa_strtof,_mesa_strtof
+4d88e,58,<global>,_mesa_str_checksum,_mesa_str_checksum
+4d8c8,4,<global>,_mesa_vsnprintf,_mesa_vsnprintf
+4d8cc,76,<global>,_mesa_snprintf,_mesa_snprintf
+4d918,66,<global>,hash_table_ctor,hash_table_ctor
+4d95a,20,<global>,hash_table_dtor,hash_table_dtor
+4d96e,68,<global>,hash_table_clear,hash_table_clear
+4d9b2,64,<global>,hash_table_find,hash_table_find
+4d9f4,108,<global>,hash_table_insert,hash_table_insert
+4da60,124,<global>,hash_table_replace,hash_table_replace
+4dadc,82,<global>,hash_table_remove,hash_table_remove
+4db2e,70,<global>,hash_table_call_foreach,hash_table_call_foreach
+4db74,36,<global>,hash_table_string_hash,hash_table_string_hash
+4db98,4,<global>,hash_table_pointer_hash,hash_table_pointer_hash
+4db9c,12,<global>,hash_table_pointer_compare,hash_table_pointer_compare
+4dba8,48,<global>,_mesa_symbol_table_pop_scope,_mesa_symbol_table_pop_scope
+4dbd8,72,<global>,_mesa_symbol_table_push_scope,_mesa_symbol_table_push_scope
+4dc20,56,<global>,_mesa_symbol_table_symbol_scope,_mesa_symbol_table_symbol_scope
+4dc58,48,<global>,_mesa_symbol_table_find_symbol,_mesa_symbol_table_find_symbol
+4dc88,204,<global>,_mesa_symbol_table_add_symbol,_mesa_symbol_table_add_symbol
+4dd54,224,<global>,_mesa_symbol_table_add_global_symbol,_mesa_symbol_table_add_global_symbol
+4de34,56,<global>,_mesa_symbol_table_ctor,_mesa_symbol_table_ctor
+4de6c,68,<global>,_mesa_symbol_table_dtor,_mesa_symbol_table_dtor
+4deb0,84,<global>,_mesa_hash_table_create,_mesa_hash_table_create
+4df04,180,<global>,_mesa_hash_table_destroy,_mesa_hash_table_destroy
+4dfb8,56,<global>,_mesa_hash_table_next_entry,_mesa_hash_table_next_entry
+4dff0,4,<global>,_mesa_hash_table_set_deleted_key,_mesa_hash_table_set_deleted_key
+4dff4,106,<global>,_mesa_hash_table_search,_mesa_hash_table_search
+4e05e,190,<global>,_mesa_hash_table_insert,_mesa_hash_table_insert
+4e11c,232,<global>,sub_4E11C,sub_4E11C
+4e204,20,<global>,_mesa_hash_table_remove,_mesa_hash_table_remove
+4e218,132,<global>,_mesa_hash_table_random_entry,_mesa_hash_table_random_entry
+4e29c,42,<global>,_mesa_hash_data,_mesa_hash_data
+4e2c6,40,<global>,_mesa_hash_string,_mesa_hash_string
+4e2ee,20,<global>,_mesa_key_string_equal,_mesa_key_string_equal
+4e302,12,<global>,_mesa_key_pointer_equal,_mesa_key_pointer_equal
+4e30e,6,<global>,ralloc_context,ralloc_context
+4e314,48,<global>,ralloc_size,ralloc_size
+4e344,26,<global>,rzalloc_size,rzalloc_size
+4e35e,16,<global>,reralloc_size,reralloc_size
+4e36e,70,<global>,sub_4E36E,sub_4E36E
+4e3b4,52,<global>,ralloc_array_size,ralloc_array_size
+4e3e8,60,<global>,rzalloc_array_size,rzalloc_array_size
+4e424,72,<global>,reralloc_array_size,reralloc_array_size
+4e46c,28,<global>,ralloc_free,ralloc_free
+4e488,62,<global>,sub_4E488,sub_4E488
+4e4c6,42,<global>,sub_4E4C6,sub_4E4C6
+4e4f0,56,<global>,ralloc_steal,ralloc_steal
+4e528,18,<global>,ralloc_parent,ralloc_parent
+4e53c,64,<global>,ralloc_autofree_context,ralloc_autofree_context
+4e5a4,6,<global>,ralloc_set_destructor,ralloc_set_destructor
+4e5aa,58,<global>,ralloc_strdup,ralloc_strdup
+4e5e4,66,<global>,ralloc_strndup,ralloc_strndup
+4e626,28,<global>,ralloc_strcat,ralloc_strcat
+4e642,78,<global>,sub_4E642,sub_4E642
+4e690,44,<global>,ralloc_strncat,ralloc_strncat
+4e6bc,76,<global>,ralloc_asprintf,ralloc_asprintf
+4e708,108,<global>,ralloc_vasprintf,ralloc_vasprintf
+4e774,64,<global>,printf_length,printf_length
+4e7b4,76,<global>,ralloc_asprintf_append,ralloc_asprintf_append
+4e800,88,<global>,ralloc_vasprintf_append,ralloc_vasprintf_append
+4e858,156,<global>,ralloc_vasprintf_rewrite_tail,ralloc_vasprintf_rewrite_tail
+4e8f4,76,<global>,ralloc_asprintf_rewrite_tail,ralloc_asprintf_rewrite_tail
+4e940,88,<global>,_ZNK19ast_array_specifier5printEv,ast_array_specifier::print() const
+4e998,1044,<global>,_Z28_mesa_ast_array_index_to_hirPvP22_mesa_glsl_parse_stateP9ir_rvalueS3_R7YYLTYPES5_,"_mesa_ast_array_index_to_hir(void*, _mesa_glsl_parse_state*, ir_rvalue*, ir_rvalue*, YYLTYPE&, YYLTYPE&)"
+4edac,40,<global>,_ZNK9glsl_type8row_typeEv,glsl_type::row_type() const
+4edd4,2,<global>,_ZN9exec_node18_ralloc_destructorEPv,exec_node::_ralloc_destructor(void*)
+4edd8,16,<global>,_ZN14ast_expression15operator_stringE13ast_operators,ast_expression::operator_string(ast_operators)
+4ede8,36,<global>,_ZN18ast_expression_binC2EiP14ast_expressionS1_,"ast_expression_bin::ast_expression_bin(int, ast_expression*, ast_expression*)"
+4ee0c,52,<global>,_ZNK18ast_expression_bin5printEv,ast_expression_bin::print() const
+4ee40,184,<global>,_Z16prototype_stringPK9glsl_typePKcP9exec_list,"prototype_string(glsl_type const*, char const*, exec_list*)"
+4eef8,48,<global>,_Z23single_scalar_parameterP9exec_list,single_scalar_parameter(exec_list*)
+4ef28,1060,<global>,_Z30emit_inline_vector_constructorPK9glsl_typejP9exec_listS3_Pv,"emit_inline_vector_constructor(glsl_type const*, unsigned int, exec_list*, exec_list*, void*)"
+4f34c,220,<global>,_Z23assign_to_matrix_columnP11ir_variablejjP9ir_rvaluejjPv,"assign_to_matrix_column(ir_variable*, unsigned int, unsigned int, ir_rvalue*, unsigned int, unsigned int, void*)"
+4f428,2300,<global>,_Z30emit_inline_matrix_constructorPK9glsl_typeiP9exec_listS3_Pv,"emit_inline_matrix_constructor(glsl_type const*, int, exec_list*, exec_list*, void*)"
+4fd24,40,<global>,_ZNK9glsl_type11column_typeEv,glsl_type::column_type() const
+4fd4c,304,<global>,_Z30emit_inline_record_constructorPK9glsl_typeP9exec_listS3_Pv,"emit_inline_record_constructor(glsl_type const*, exec_list*, exec_list*, void*)"
+4fe7c,3852,<global>,_ZN23ast_function_expression3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_function_expression::hir(exec_list*, _mesa_glsl_parse_state*)"
+50d88,832,<global>,sub_50D88,sub_50D88
+510c8,440,<global>,sub_510C8,sub_510C8
+51280,640,<global>,sub_51280,sub_51280
+51500,100,<global>,sub_51500,sub_51500
+51564,1124,<global>,_ZN25ast_aggregate_initializer3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_aggregate_initializer::hir(exec_list*, _mesa_glsl_parse_state*)"
+519c8,128,<global>,sub_519C8,sub_519C8
+51a48,224,<global>,sub_51A48,sub_51A48
+51b28,128,<global>,_ZN7ir_callC2EP21ir_function_signatureP23ir_dereference_variableP9exec_list,"ir_call::ir_call(ir_function_signature*, ir_dereference_variable*, exec_list*)"
+51ba8,708,<global>,_Z16_mesa_ast_to_hirP9exec_listP22_mesa_glsl_parse_state,"_mesa_ast_to_hir(exec_list*, _mesa_glsl_parse_state*)"
+51e6c,244,<global>,sub_51E6C,sub_51E6C
+51f60,200,<global>,_Z25apply_implicit_conversionPK9glsl_typeRP9ir_rvalueP22_mesa_glsl_parse_state,"apply_implicit_conversion(glsl_type const*, ir_rvalue*&, _mesa_glsl_parse_state*)"
+52028,308,<global>,_Z19validate_assignmentP22_mesa_glsl_parse_state7YYLTYPEPK9glsl_typeP9ir_rvalueb,"validate_assignment(_mesa_glsl_parse_state*, YYLTYPE, glsl_type const*, ir_rvalue*, bool)"
+5215c,4,<global>,_ZN8ast_node3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_node::hir(exec_list*, _mesa_glsl_parse_state*)"
+52160,6,<global>,_ZN23ast_function_expression13hir_no_rvalueEP9exec_listP22_mesa_glsl_parse_state,"ast_function_expression::hir_no_rvalue(exec_list*, _mesa_glsl_parse_state*)"
+52166,6,<global>,_ZN25ast_aggregate_initializer13hir_no_rvalueEP9exec_listP22_mesa_glsl_parse_state,"ast_aggregate_initializer::hir_no_rvalue(exec_list*, _mesa_glsl_parse_state*)"
+5216c,228,<global>,_Z26get_scalar_boolean_operandP9exec_listP22_mesa_glsl_parse_stateP14ast_expressioniPKcPb,"get_scalar_boolean_operand(exec_list*, _mesa_glsl_parse_state*, ast_expression*, int, char const*, bool*)"
+52250,168,<global>,_Z28check_builtin_array_max_sizePKcj7YYLTYPEP22_mesa_glsl_parse_state,"check_builtin_array_max_size(char const*, unsigned int, YYLTYPE, _mesa_glsl_parse_state*)"
+522f8,6,<global>,_ZN14ast_expression3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_expression::hir(exec_list*, _mesa_glsl_parse_state*)"
+52300,5636,<global>,_ZN14ast_expression6do_hirEP9exec_listP22_mesa_glsl_parse_stateb,"ast_expression::do_hir(exec_list*, _mesa_glsl_parse_state*, bool)"
+53904,6,<global>,_ZN14ast_expression13hir_no_rvalueEP9exec_listP22_mesa_glsl_parse_state,"ast_expression::hir_no_rvalue(exec_list*, _mesa_glsl_parse_state*)"
+5390c,1188,<global>,sub_5390C,sub_5390C
+53db0,612,<global>,sub_53DB0,sub_53DB0
+54014,336,<global>,sub_54014,sub_54014
+54164,392,<global>,sub_54164,sub_54164
+542ec,660,<global>,sub_542EC,sub_542EC
+54580,384,<global>,sub_54580,sub_54580
+54700,124,<global>,sub_54700,sub_54700
+5477c,22,<global>,_ZN24ast_expression_statement3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_expression_statement::hir(exec_list*, _mesa_glsl_parse_state*)"
+54792,74,<global>,_ZN22ast_compound_statement3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_compound_statement::hir(exec_list*, _mesa_glsl_parse_state*)"
+547dc,100,<global>,_ZNK18ast_type_specifier9glsl_typeEPPKcP22_mesa_glsl_parse_state,"ast_type_specifier::glsl_type(char const**, _mesa_glsl_parse_state*) const"
+54840,484,<global>,sub_54840,sub_54840
+54a24,6,<global>,_ZNK24ast_fully_specified_type9glsl_typeEPPKcP22_mesa_glsl_parse_state,"ast_fully_specified_type::glsl_type(char const**, _mesa_glsl_parse_state*) const"
+54a2c,752,<global>,_Z19process_initializerP11ir_variableP15ast_declarationP24ast_fully_specified_typeP9exec_listP22_mesa_glsl_parse_state,"process_initializer(ir_variable*, ast_declaration*, ast_fully_specified_type*, exec_list*, _mesa_glsl_parse_state*)"
+54d1c,224,<global>,_Z19validate_identifierPKc7YYLTYPEP22_mesa_glsl_parse_state,"validate_identifier(char const*, YYLTYPE, _mesa_glsl_parse_state*)"
+54dfc,2560,<global>,_ZN19ast_declarator_list3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_declarator_list::hir(exec_list*, _mesa_glsl_parse_state*)"
+557fc,76,<global>,sub_557FC,sub_557FC
+55848,2784,<global>,sub_55848,sub_55848
+56328,180,<global>,sub_56328,sub_56328
+563dc,812,<global>,sub_563DC,sub_563DC
+56708,612,<global>,_ZN24ast_parameter_declarator3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_parameter_declarator::hir(exec_list*, _mesa_glsl_parse_state*)"
+5696c,204,<global>,_ZN24ast_parameter_declarator17parameters_to_hirEP9exec_listbS1_P22_mesa_glsl_parse_state,"ast_parameter_declarator::parameters_to_hir(exec_list*, bool, exec_list*, _mesa_glsl_parse_state*)"
+56a38,24,<global>,_Z13emit_functionP22_mesa_glsl_parse_stateP11ir_function,"emit_function(_mesa_glsl_parse_state*, ir_function*)"
+56a50,964,<global>,_ZN12ast_function3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_function::hir(exec_list*, _mesa_glsl_parse_state*)"
+56e14,324,<global>,_ZN23ast_function_definition3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_function_definition::hir(exec_list*, _mesa_glsl_parse_state*)"
+56f58,964,<global>,_ZN18ast_jump_statement3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_jump_statement::hir(exec_list*, _mesa_glsl_parse_state*)"
+5731c,368,<global>,_ZN23ast_iteration_statement16condition_to_hirEP9exec_listP22_mesa_glsl_parse_state,"ast_iteration_statement::condition_to_hir(exec_list*, _mesa_glsl_parse_state*)"
+5748c,348,<global>,_ZN23ast_selection_statement3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_selection_statement::hir(exec_list*, _mesa_glsl_parse_state*)"
+575e8,776,<global>,_ZN20ast_switch_statement3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_switch_statement::hir(exec_list*, _mesa_glsl_parse_state*)"
+578f0,200,<global>,_ZN20ast_switch_statement11test_to_hirEP9exec_listP22_mesa_glsl_parse_state,"ast_switch_statement::test_to_hir(exec_list*, _mesa_glsl_parse_state*)"
+579b8,22,<global>,_ZN15ast_switch_body3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_switch_body::hir(exec_list*, _mesa_glsl_parse_state*)"
+579d0,660,<global>,_ZN23ast_case_statement_list3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_case_statement_list::hir(exec_list*, _mesa_glsl_parse_state*)"
+57c64,332,<global>,_ZN18ast_case_statement3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_case_statement::hir(exec_list*, _mesa_glsl_parse_state*)"
+57db0,46,<global>,_ZN19ast_case_label_list3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_case_label_list::hir(exec_list*, _mesa_glsl_parse_state*)"
+57de0,980,<global>,_ZN14ast_case_label3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_case_label::hir(exec_list*, _mesa_glsl_parse_state*)"
+581b4,212,<global>,_ZN23ast_iteration_statement3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_iteration_statement::hir(exec_list*, _mesa_glsl_parse_state*)"
+58288,580,<global>,_ZN18ast_type_specifier3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_type_specifier::hir(exec_list*, _mesa_glsl_parse_state*)"
+584cc,1008,<global>,_Z40ast_process_structure_or_interface_blockP9exec_listP22_mesa_glsl_parse_stateS0_R7YYLTYPEPP17glsl_struct_fieldb18glsl_matrix_layoutb16ir_variable_mode,"ast_process_structure_or_interface_block(exec_list*, _mesa_glsl_parse_state*, exec_list*, YYLTYPE&, glsl_struct_field**, bool, glsl_matrix_layout, bool, ir_variable_mode)"
+588bc,128,<global>,sub_588BC,sub_588BC
+5893c,68,<global>,sub_5893C,sub_5893C
+58980,432,<global>,_ZN20ast_struct_specifier3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_struct_specifier::hir(exec_list*, _mesa_glsl_parse_state*)"
+58b30,2056,<global>,_ZN19ast_interface_block3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_interface_block::hir(exec_list*, _mesa_glsl_parse_state*)"
+59338,36,<global>,_ZN11ir_variable21reinit_interface_typeEPK9glsl_type,ir_variable::reinit_interface_type(glsl_type const*)
+5935c,42,<global>,_ZN11ir_variable19init_interface_typeEPK9glsl_type,ir_variable::init_interface_type(glsl_type const*)
+59388,276,<global>,_ZN19ast_gs_input_layout3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_gs_input_layout::hir(exec_list*, _mesa_glsl_parse_state*)"
+5949c,576,<global>,_ZN19ast_cs_input_layout3hirEP9exec_listP22_mesa_glsl_parse_state,"ast_cs_input_layout::hir(exec_list*, _mesa_glsl_parse_state*)"
+596dc,60,<global>,_ZN10ir_builder5derefC2EP11ir_variable,ir_builder::deref::deref(ir_variable*)
+59718,34,<global>,_ZNK9glsl_type11atomic_sizeEv,glsl_type::atomic_size() const
+5973c,68,<global>,_ZN22_mesa_glsl_parse_state39check_explicit_uniform_location_allowedEP7YYLTYPEPK11ir_variable,"_mesa_glsl_parse_state::check_explicit_uniform_location_allowed(YYLTYPE*, ir_variable const*)"
+59780,168,<global>,_ZN22_mesa_glsl_parse_state38check_explicit_attrib_location_allowedEP7YYLTYPEPK11ir_variable,"_mesa_glsl_parse_state::check_explicit_attrib_location_allowed(YYLTYPE*, ir_variable const*)"
+59828,196,<global>,_ZN22_mesa_glsl_parse_state37check_separate_shader_objects_allowedEP7YYLTYPEPK11ir_variable,"_mesa_glsl_parse_state::check_separate_shader_objects_allowed(YYLTYPE*, ir_variable const*)"
+598ec,36,<global>,_ZN29interface_block_usage_visitor5visitEP23ir_dereference_variable,interface_block_usage_visitor::visit(ir_dereference_variable*)
+59910,48,<global>,_ZNK18ast_type_specifier5printEv,ast_type_specifier::print() const
+59940,12,<global>,_ZNK24ast_fully_specified_type14has_qualifiersEv,ast_fully_specified_type::has_qualifiers() const
+5994c,12,<global>,_ZNK18ast_type_qualifier17has_interpolationEv,ast_type_qualifier::has_interpolation() const
+59958,18,<global>,_ZNK18ast_type_qualifier10has_layoutEv,ast_type_qualifier::has_layout() const
+5996a,12,<global>,_ZNK18ast_type_qualifier11has_storageEv,ast_type_qualifier::has_storage() const
+59976,12,<global>,_ZNK18ast_type_qualifier21has_auxiliary_storageEv,ast_type_qualifier::has_auxiliary_storage() const
+59984,60,<global>,_ZNK18ast_type_qualifier20interpolation_stringEv,ast_type_qualifier::interpolation_string() const
+599c0,892,<global>,_ZN18ast_type_qualifier15merge_qualifierEP7YYLTYPEP22_mesa_glsl_parse_stateS_,"ast_type_qualifier::merge_qualifier(YYLTYPE*, _mesa_glsl_parse_state*, ast_type_qualifier)"
+59d3c,832,<global>,_ZN18ast_type_qualifier18merge_in_qualifierEP7YYLTYPEP22_mesa_glsl_parse_stateS_RP8ast_node,"ast_type_qualifier::merge_in_qualifier(YYLTYPE*, _mesa_glsl_parse_state*, ast_type_qualifier, ast_node*&)"
+5a07c,2,<global>,_ZN8ast_node18_ralloc_destructorEPv,ast_node::_ralloc_destructor(void*)
+5a07e,18,<global>,sub_5A07E,sub_5A07E
+5a090,396,<global>,_Z39_mesa_glsl_initialize_builtin_functionsv,_mesa_glsl_initialize_builtin_functions()
+5a21c,32,<global>,_Z36_mesa_glsl_release_builtin_functionsv,_mesa_glsl_release_builtin_functions()
+5a23c,56,<global>,_Z32_mesa_glsl_find_builtin_functionP22_mesa_glsl_parse_statePKcP9exec_list,"_mesa_glsl_find_builtin_function(_mesa_glsl_parse_state*, char const*, exec_list*)"
+5a274,12,<global>,_Z38_mesa_glsl_get_builtin_function_shaderv,_mesa_glsl_get_builtin_function_shader()
+5a280,35332,<global>,sub_5A280,sub_5A280
+62c84,4,<global>,_ZN17glsl_symbol_table18_ralloc_destructorEPv,glsl_symbol_table::_ralloc_destructor(void*)
+62c88,176,<global>,sub_62C88,sub_62C88
+62d38,112,<global>,sub_62D38,sub_62D38
+62da8,8,<global>,sub_62DA8,sub_62DA8
+62db0,448,<global>,sub_62DB0,sub_62DB0
+62f70,32,<global>,sub_62F70,sub_62F70
+62f90,168,<global>,sub_62F90,sub_62F90
+63038,1448,<global>,sub_63038,sub_63038
+635e0,296,<global>,sub_635E0,sub_635E0
+63708,60,<global>,_ZN10ir_builder7operandC2EP11ir_variable,ir_builder::operand::operand(ir_variable*)
+63744,228,<global>,sub_63744,sub_63744
+63828,228,<global>,sub_63828,sub_63828
+6390c,208,<global>,sub_6390C,sub_6390C
+639dc,172,<global>,sub_639DC,sub_639DC
+63a88,216,<global>,sub_63A88,sub_63A88
+63b60,228,<global>,sub_63B60,sub_63B60
+63c44,1220,<global>,sub_63C44,sub_63C44
+64108,248,<global>,sub_64108,sub_64108
+64200,248,<global>,sub_64200,sub_64200
+642f8,260,<global>,sub_642F8,sub_642F8
+643fc,288,<global>,sub_643FC,sub_643FC
+6451c,256,<global>,sub_6451C,sub_6451C
+6461c,316,<global>,sub_6461C,sub_6461C
+64758,336,<global>,sub_64758,sub_64758
+648a8,4,<global>,sub_648A8,sub_648A8
+648ac,28,<global>,sub_648AC,sub_648AC
+648c8,300,<global>,sub_648C8,sub_648C8
+649f4,296,<global>,sub_649F4,sub_649F4
+64b1c,292,<global>,sub_64B1C,sub_64B1C
+64c40,40,<global>,sub_64C40,sub_64C40
+64c68,524,<global>,sub_64C68,sub_64C68
+64e74,560,<global>,sub_64E74,sub_64E74
+650a4,200,<global>,sub_650A4,sub_650A4
+6516c,280,<global>,sub_6516C,sub_6516C
+65284,192,<global>,sub_65284,sub_65284
+65344,192,<global>,sub_65344,sub_65344
+65404,192,<global>,sub_65404,sub_65404
+654c4,192,<global>,sub_654C4,sub_654C4
+65584,46,<global>,sub_65584,sub_65584
+655b2,40,<global>,sub_655B2,sub_655B2
+655da,38,<global>,sub_655DA,sub_655DA
+65600,204,<global>,sub_65600,sub_65600
+656cc,380,<global>,sub_656CC,sub_656CC
+65848,68,<global>,sub_65848,sub_65848
+6588c,216,<global>,sub_6588C,sub_6588C
+65964,368,<global>,sub_65964,sub_65964
+65ad4,316,<global>,sub_65AD4,sub_65AD4
+65c10,708,<global>,sub_65C10,sub_65C10
+65ed4,320,<global>,sub_65ED4,sub_65ED4
+66014,364,<global>,sub_66014,sub_66014
+66180,3564,<global>,sub_66180,sub_66180
+66f6c,5652,<global>,sub_66F6C,sub_66F6C
+68580,312,<global>,sub_68580,sub_68580
+686b8,368,<global>,sub_686B8,sub_686B8
+68828,456,<global>,sub_68828,sub_68828
+689f0,32,<global>,sub_689F0,sub_689F0
+68a10,24,<global>,sub_68A10,sub_68A10
+68a28,32,<global>,sub_68A28,sub_68A28
+68a48,1332,<global>,sub_68A48,sub_68A48
+68f7c,40,<global>,sub_68F7C,sub_68F7C
+68fa4,44,<global>,sub_68FA4,sub_68FA4
+68fd0,780,<global>,sub_68FD0,sub_68FD0
+692dc,240,<global>,sub_692DC,sub_692DC
+693cc,40,<global>,sub_693CC,sub_693CC
+693f4,240,<global>,sub_693F4,sub_693F4
+694e4,352,<global>,sub_694E4,sub_694E4
+69644,276,<global>,sub_69644,sub_69644
+69758,14,<global>,sub_69758,sub_69758
+69766,24,<global>,sub_69766,sub_69766
+6977e,6,<global>,sub_6977E,sub_6977E
+69784,24,<global>,sub_69784,sub_69784
+6979c,40,<global>,sub_6979C,sub_6979C
+697c4,50,<global>,sub_697C4,sub_697C4
+697f6,14,<global>,sub_697F6,sub_697F6
+69804,6,<global>,sub_69804,sub_69804
+6980a,44,<global>,sub_6980A,sub_6980A
+69836,32,<global>,sub_69836,sub_69836
+69856,34,<global>,sub_69856,sub_69856
+69878,66,<global>,sub_69878,sub_69878
+698ba,6,<global>,sub_698BA,sub_698BA
+698c0,38,<global>,sub_698C0,sub_698C0
+698e6,6,<global>,sub_698E6,sub_698E6
+698ec,40,<global>,sub_698EC,sub_698EC
+69914,6,<global>,sub_69914,sub_69914
+6991a,6,<global>,sub_6991A,sub_6991A
+69920,22,<global>,sub_69920,sub_69920
+69936,38,<global>,sub_69936,sub_69936
+6995c,32,<global>,sub_6995C,sub_6995C
+6997c,40,<global>,sub_6997C,sub_6997C
+699a4,216,<global>,sub_699A4,sub_699A4
+69a7c,216,<global>,sub_69A7C,sub_69A7C
+69b54,216,<global>,sub_69B54,sub_69B54
+69c2c,496,<global>,sub_69C2C,sub_69C2C
+69e1c,676,<global>,sub_69E1C,sub_69E1C
+6a0c0,872,<global>,sub_6A0C0,sub_6A0C0
+6a428,316,<global>,sub_6A428,sub_6A428
+6a564,360,<global>,sub_6A564,sub_6A564
+6a6cc,292,<global>,sub_6A6CC,sub_6A6CC
+6a7f0,828,<global>,sub_6A7F0,sub_6A7F0
+6ab2c,336,<global>,sub_6AB2C,sub_6AB2C
+6ac7c,336,<global>,sub_6AC7C,sub_6AC7C
+6adcc,392,<global>,sub_6ADCC,sub_6ADCC
+6af54,192,<global>,sub_6AF54,sub_6AF54
+6b014,264,<global>,sub_6B014,sub_6B014
+6b11c,272,<global>,sub_6B11C,sub_6B11C
+6b22c,284,<global>,sub_6B22C,sub_6B22C
+6b348,300,<global>,sub_6B348,sub_6B348
+6b474,300,<global>,sub_6B474,sub_6B474
+6b5a0,352,<global>,sub_6B5A0,sub_6B5A0
+6b700,188,<global>,sub_6B700,sub_6B700
+6b7bc,440,<global>,sub_6B7BC,sub_6B7BC
+6b974,964,<global>,sub_6B974,sub_6B974
+6bd38,244,<global>,sub_6BD38,sub_6BD38
+6be2c,46,<global>,sub_6BE2C,sub_6BE2C
+6be5a,38,<global>,sub_6BE5A,sub_6BE5A
+6be80,92,<global>,sub_6BE80,sub_6BE80
+6bedc,28,<global>,sub_6BEDC,sub_6BEDC
+6bef8,12,<global>,sub_6BEF8,sub_6BEF8
+6bf04,24,<global>,sub_6BF04,sub_6BF04
+6bf1c,32,<global>,sub_6BF1C,sub_6BF1C
+6bf3c,50,<global>,sub_6BF3C,sub_6BF3C
+6bf6e,44,<global>,sub_6BF6E,sub_6BF6E
+6bf9a,44,<global>,sub_6BF9A,sub_6BF9A
+6bfc6,6,<global>,sub_6BFC6,sub_6BFC6
+6bfcc,1152,<global>,_mesa_glsl_initialize_types,_mesa_glsl_initialize_types
+6c44c,4836,<global>,_Z31_mesa_glsl_initialize_variablesP9exec_listP22_mesa_glsl_parse_state,"_mesa_glsl_initialize_variables(exec_list*, _mesa_glsl_parse_state*)"
+6d730,124,<global>,sub_6D730,sub_6D730
+6d7ac,192,<global>,sub_6D7AC,sub_6D7AC
+6d86c,196,<global>,sub_6D86C,sub_6D86C
+6d930,300,<global>,sub_6D930,sub_6D930
+6da5c,100,<global>,sub_6DA5C,sub_6DA5C
+6dac0,128,<global>,sub_6DAC0,sub_6DAC0
+6db40,36372,<global>,_Z20_mesa_glsl_lexer_lexP7YYSTYPEP7YYLTYPEPv,"_mesa_glsl_lexer_lex(YYSTYPE*, YYLTYPE*, void*)"
+76954,148,<global>,sub_76954,sub_76954
+769e8,128,<global>,_Z31_mesa_glsl_lexer__create_bufferP7__sFILEiPv,"_mesa_glsl_lexer__create_buffer(__sFILE*, int, void*)"
+76a68,56,<global>,sub_76A68,sub_76A68
+76aa0,224,<global>,sub_76AA0,sub_76AA0
+76b80,36,<global>,sub_76B80,sub_76B80
+76ba4,172,<global>,sub_76BA4,sub_76BA4
+76c50,98,<global>,_Z24_mesa_glsl_lexer_restartP7__sFILEPv,"_mesa_glsl_lexer_restart(__sFILE*, void*)"
+76cb2,78,<global>,sub_76CB2,sub_76CB2
+76d00,106,<global>,_Z34_mesa_glsl_lexer__switch_to_bufferP15yy_buffer_statePv,"_mesa_glsl_lexer__switch_to_buffer(yy_buffer_state*, void*)"
+76d6a,4,<global>,_Z22_mesa_glsl_lexer_allocjPv,"_mesa_glsl_lexer_alloc(unsigned int, void*)"
+76d6e,56,<global>,_Z31_mesa_glsl_lexer__delete_bufferP15yy_buffer_statePv,"_mesa_glsl_lexer__delete_buffer(yy_buffer_state*, void*)"
+76da6,4,<global>,_Z21_mesa_glsl_lexer_freePvS_,"_mesa_glsl_lexer_free(void*, void*)"
+76daa,76,<global>,_Z30_mesa_glsl_lexer__flush_bufferP15yy_buffer_statePv,"_mesa_glsl_lexer__flush_buffer(yy_buffer_state*, void*)"
+76df6,98,<global>,_Z34_mesa_glsl_lexer_push_buffer_stateP15yy_buffer_statePv,"_mesa_glsl_lexer_push_buffer_state(yy_buffer_state*, void*)"
+76e58,80,<global>,_Z33_mesa_glsl_lexer_pop_buffer_statePv,_mesa_glsl_lexer_pop_buffer_state(void*)
+76ea8,152,<global>,_Z29_mesa_glsl_lexer__scan_bufferPcjPv,"_mesa_glsl_lexer__scan_buffer(char*, unsigned int, void*)"
+76f40,26,<global>,_Z29_mesa_glsl_lexer__scan_stringPKcPv,"_mesa_glsl_lexer__scan_string(char const*, void*)"
+76f5c,184,<global>,_Z28_mesa_glsl_lexer__scan_bytesPKcjPv,"_mesa_glsl_lexer__scan_bytes(char const*, unsigned int, void*)"
+77014,4,<global>,_Z26_mesa_glsl_lexer_get_extraPv,_mesa_glsl_lexer_get_extra(void*)
+77018,20,<global>,_Z27_mesa_glsl_lexer_get_linenoPv,_mesa_glsl_lexer_get_lineno(void*)
+7702c,20,<global>,_Z27_mesa_glsl_lexer_get_columnPv,_mesa_glsl_lexer_get_column(void*)
+77040,4,<global>,_Z23_mesa_glsl_lexer_get_inPv,_mesa_glsl_lexer_get_in(void*)
+77044,4,<global>,_Z24_mesa_glsl_lexer_get_outPv,_mesa_glsl_lexer_get_out(void*)
+77048,4,<global>,_Z25_mesa_glsl_lexer_get_lengPv,_mesa_glsl_lexer_get_leng(void*)
+7704c,4,<global>,_Z25_mesa_glsl_lexer_get_textPv,_mesa_glsl_lexer_get_text(void*)
+77050,4,<global>,_Z26_mesa_glsl_lexer_set_extraP22_mesa_glsl_parse_statePv,"_mesa_glsl_lexer_set_extra(_mesa_glsl_parse_state*, void*)"
+77054,80,<global>,_Z27_mesa_glsl_lexer_set_linenoiPv,"_mesa_glsl_lexer_set_lineno(int, void*)"
+770a4,80,<global>,_Z27_mesa_glsl_lexer_set_columniPv,"_mesa_glsl_lexer_set_column(int, void*)"
+770f4,4,<global>,_Z23_mesa_glsl_lexer_set_inP7__sFILEPv,"_mesa_glsl_lexer_set_in(__sFILE*, void*)"
+770f8,4,<global>,_Z24_mesa_glsl_lexer_set_outP7__sFILEPv,"_mesa_glsl_lexer_set_out(__sFILE*, void*)"
+770fc,4,<global>,_Z26_mesa_glsl_lexer_get_debugPv,_mesa_glsl_lexer_get_debug(void*)
+77100,4,<global>,_Z26_mesa_glsl_lexer_set_debugiPv,"_mesa_glsl_lexer_set_debug(int, void*)"
+77104,4,<global>,_Z25_mesa_glsl_lexer_get_lvalPv,_mesa_glsl_lexer_get_lval(void*)
+77108,4,<global>,_Z25_mesa_glsl_lexer_set_lvalP7YYSTYPEPv,"_mesa_glsl_lexer_set_lval(YYSTYPE*, void*)"
+7710c,4,<global>,_Z25_mesa_glsl_lexer_get_llocPv,_mesa_glsl_lexer_get_lloc(void*)
+77110,4,<global>,_Z25_mesa_glsl_lexer_set_llocP7YYLTYPEPv,"_mesa_glsl_lexer_set_lloc(YYLTYPE*, void*)"
+77114,50,<global>,_Z25_mesa_glsl_lexer_lex_initPPv,_mesa_glsl_lexer_lex_init(void**)
+77146,90,<global>,_Z31_mesa_glsl_lexer_lex_init_extraP22_mesa_glsl_parse_statePPv,"_mesa_glsl_lexer_lex_init_extra(_mesa_glsl_parse_state*, void**)"
+771a0,74,<global>,_Z28_mesa_glsl_lexer_lex_destroyPv,_mesa_glsl_lexer_lex_destroy(void*)
+771ea,4,<global>,_Z24_mesa_glsl_lexer_reallocPvjS_,"_mesa_glsl_lexer_realloc(void*, unsigned int, void*)"
+771ee,36,<global>,_Z21_mesa_glsl_lexer_ctorP22_mesa_glsl_parse_statePKc,"_mesa_glsl_lexer_ctor(_mesa_glsl_parse_state*, char const*)"
+77212,6,<global>,_Z21_mesa_glsl_lexer_dtorP22_mesa_glsl_parse_state,_mesa_glsl_lexer_dtor(_mesa_glsl_parse_state*)
+77218,22,<global>,_Z18glslopt_initialize14glslopt_target,glslopt_initialize(glslopt_target)
+77230,132,<global>,_ZN11glslopt_ctxC2E14glslopt_target,glslopt_ctx::glslopt_ctx(glslopt_target)
+772b4,30,<global>,_Z15glslopt_cleanupP11glslopt_ctx,glslopt_cleanup(glslopt_ctx*)
+772d2,16,<global>,_Z33glslopt_set_max_unroll_iterationsP11glslopt_ctxj,"glslopt_set_max_unroll_iterations(glslopt_ctx*, unsigned int)"
+772e4,1700,<global>,_Z16glslopt_optimizeP11glslopt_ctx19glslopt_shader_typePKcj,"glslopt_optimize(glslopt_ctx*, glslopt_shader_type, char const*, unsigned int)"
+77988,144,<global>,_ZN14glslopt_shaderC2Ev,glslopt_shader::glslopt_shader()
+77a18,20,<global>,_Z21glslopt_shader_deleteP14glslopt_shader,glslopt_shader_delete(glslopt_shader*)
+77a2c,54,<global>,_ZN14glslopt_shaderD2Ev,glslopt_shader::~glslopt_shader()
+77a62,8,<global>,_Z18glslopt_get_statusP14glslopt_shader,glslopt_get_status(glslopt_shader*)
+77a6a,8,<global>,_Z18glslopt_get_outputP14glslopt_shader,glslopt_get_output(glslopt_shader*)
+77a72,8,<global>,_Z22glslopt_get_raw_outputP14glslopt_shader,glslopt_get_raw_output(glslopt_shader*)
+77a7a,8,<global>,_Z15glslopt_get_logP14glslopt_shader,glslopt_get_log(glslopt_shader*)
+77a82,8,<global>,_Z30glslopt_shader_get_input_countP14glslopt_shader,glslopt_shader_get_input_count(glslopt_shader*)
+77a8a,8,<global>,_Z32glslopt_shader_get_uniform_countP14glslopt_shader,glslopt_shader_get_uniform_count(glslopt_shader*)
+77a92,8,<global>,_Z37glslopt_shader_get_uniform_total_sizeP14glslopt_shader,glslopt_shader_get_uniform_total_size(glslopt_shader*)
+77a9a,8,<global>,_Z32glslopt_shader_get_texture_countP14glslopt_shader,glslopt_shader_get_texture_count(glslopt_shader*)
+77aa2,76,<global>,_Z29glslopt_shader_get_input_descP14glslopt_shaderiPPKcP18glslopt_basic_typeP17glslopt_precisionPiS8_S8_S8_,"glslopt_shader_get_input_desc(glslopt_shader*, int, char const**, glslopt_basic_type*, glslopt_precision*, int*, int*, int*, int*)"
+77aee,54,<global>,_Z31glslopt_shader_get_uniform_descP14glslopt_shaderiPPKcP18glslopt_basic_typeP17glslopt_precisionPiS8_S8_S8_,"glslopt_shader_get_uniform_desc(glslopt_shader*, int, char const**, glslopt_basic_type*, glslopt_precision*, int*, int*, int*, int*)"
+77b24,76,<global>,_Z31glslopt_shader_get_texture_descP14glslopt_shaderiPPKcP18glslopt_basic_typeP17glslopt_precisionPiS8_S8_S8_,"glslopt_shader_get_texture_desc(glslopt_shader*, int, char const**, glslopt_basic_type*, glslopt_precision*, int*, int*, int*, int*)"
+77b70,30,<global>,_Z24glslopt_shader_get_statsP14glslopt_shaderPiS1_S1_,"glslopt_shader_get_stats(glslopt_shader*, int*, int*, int*)"
+77b8e,6,<global>,sub_77B8E,sub_77B8E
+77b94,2,<global>,_ZN22_mesa_glsl_parse_state18_ralloc_destructorEPv,_mesa_glsl_parse_state::_ralloc_destructor(void*)
+77b96,2,<global>,_ZN9exec_list18_ralloc_destructorEPv,exec_list::_ralloc_destructor(void*)
+77b98,408,<global>,sub_77B98,sub_77B98
+77d30,30,<global>,sub_77D30,sub_77D30
+77d4e,86,<global>,sub_77D4E,sub_77D4E
+77da4,420,<global>,sub_77DA4,sub_77DA4
+77f48,104,<global>,sub_77F48,sub_77F48
+77fb0,44,<global>,sub_77FB0,sub_77FB0
+77fdc,132,<global>,sub_77FDC,sub_77FDC
+78060,18068,<global>,_Z16_mesa_glsl_parseP22_mesa_glsl_parse_state,_mesa_glsl_parse(_mesa_glsl_parse_state*)
+7c6f4,28,<global>,sub_7C6F4,sub_7C6F4
+7c710,120,<global>,_ZN22_mesa_glsl_parse_state36check_explicit_attrib_stream_allowedEP7YYLTYPE,_mesa_glsl_parse_state::check_explicit_attrib_stream_allowed(YYLTYPE*)
+7c788,80,<global>,_ZN19ast_array_specifierC2ERK7YYLTYPEP14ast_expression,"ast_array_specifier::ast_array_specifier(YYLTYPE const&, ast_expression*)"
+7c7d8,136,<global>,_ZN19ast_interface_blockC2E18ast_type_qualifierPKcP19ast_array_specifier,"ast_interface_block::ast_interface_block(ast_type_qualifier, char const*, ast_array_specifier*)"
+7c860,732,<global>,sub_7C860,sub_7C860
+7cb3c,76,<global>,_Z27glsl_compute_version_stringPvbj,"glsl_compute_version_string(void*, bool, unsigned int)"
+7cb88,1104,<global>,_ZN22_mesa_glsl_parse_stateC1EP10gl_context15gl_shader_stagePv,"_mesa_glsl_parse_state::_mesa_glsl_parse_state(gl_context*, gl_shader_stage, void*)"
+7cfd8,540,<global>,_Z28_mesa_glsl_process_extensionPKcP7YYLTYPES0_S2_P22_mesa_glsl_parse_state,"_mesa_glsl_process_extension(char const*, YYLTYPE*, char const*, YYLTYPE*, _mesa_glsl_parse_state*)"
+7d1f4,396,<global>,_ZN22_mesa_glsl_parse_state13check_versionEjjP7YYLTYPEPKcz,"_mesa_glsl_parse_state::check_version(unsigned int, unsigned int, YYLTYPE*, char const*, ...)"
+7d380,80,<global>,_Z16_mesa_glsl_errorP7YYLTYPEP22_mesa_glsl_parse_statePKcz,"_mesa_glsl_error(YYLTYPE*, _mesa_glsl_parse_state*, char const*, ...)"
+7d3d0,428,<global>,_ZN22_mesa_glsl_parse_state25process_version_directiveEP7YYLTYPEiPKc,"_mesa_glsl_parse_state::process_version_directive(YYLTYPE*, int, char const*)"
+7d57c,28,<global>,_mesa_shader_stage_to_string,_mesa_shader_stage_to_string
+7d598,192,<global>,sub_7D598,sub_7D598
+7d658,76,<global>,_Z18_mesa_glsl_warningPK7YYLTYPEP22_mesa_glsl_parse_statePKcz,"_mesa_glsl_warning(YYLTYPE const*, _mesa_glsl_parse_state*, char const*, ...)"
+7d6a4,34,<global>,_ZNK20_mesa_glsl_extension21compatible_with_stateEPK22_mesa_glsl_parse_state,_mesa_glsl_extension::compatible_with_state(_mesa_glsl_parse_state const*) const
+7d6c6,32,<global>,_ZNK20_mesa_glsl_extension9set_flagsEP22_mesa_glsl_parse_state12ext_behavior,"_mesa_glsl_extension::set_flags(_mesa_glsl_parse_state*, ext_behavior) const"
+7d6e6,186,<global>,_Z28_mesa_ast_set_aggregate_typePK9glsl_typeP14ast_expression,"_mesa_ast_set_aggregate_type(glsl_type const*, ast_expression*)"
+7d7a0,296,<global>,_Z30_mesa_ast_type_qualifier_printPK18ast_type_qualifier,_mesa_ast_type_qualifier_print(ast_type_qualifier const*)
+7d8c8,24,<global>,_ZNK8ast_node5printEv,ast_node::print() const
+7d8e0,36,<global>,_ZN8ast_nodeC2Ev,ast_node::ast_node()
+7d904,52,<global>,_ZNK22ast_compound_statement5printEv,ast_compound_statement::print() const
+7d938,84,<global>,_ZN22ast_compound_statementC1EiP8ast_node,"ast_compound_statement::ast_compound_statement(int, ast_node*)"
+7d98c,636,<global>,_ZNK14ast_expression5printEv,ast_expression::print() const
+7dc08,80,<global>,_ZN14ast_expressionC2EiPS_S0_S0_,"ast_expression::ast_expression(int, ast_expression*, ast_expression*, ast_expression*)"
+7dc58,28,<global>,_ZNK24ast_expression_statement5printEv,ast_expression_statement::print() const
+7dc74,36,<global>,_ZN24ast_expression_statementC1EP14ast_expression,ast_expression_statement::ast_expression_statement(ast_expression*)
+7dc98,64,<global>,_ZNK12ast_function5printEv,ast_function::print() const
+7dcd8,60,<global>,_ZN12ast_functionC1Ev,ast_function::ast_function()
+7dd14,26,<global>,_ZNK24ast_fully_specified_type5printEv,ast_fully_specified_type::print() const
+7dd30,44,<global>,_ZNK24ast_parameter_declarator5printEv,ast_parameter_declarator::print() const
+7dd58,4,<global>,sub_7DD58,sub_7DD58
+7dd5c,26,<global>,_ZNK23ast_function_definition5printEv,ast_function_definition::print() const
+7dd78,56,<global>,_ZNK15ast_declaration5printEv,ast_declaration::print() const
+7ddb0,56,<global>,_ZN15ast_declarationC1EPKcP19ast_array_specifierP14ast_expression,"ast_declaration::ast_declaration(char const*, ast_array_specifier*, ast_expression*)"
+7dde8,144,<global>,_ZNK19ast_declarator_list5printEv,ast_declarator_list::print() const
+7de78,56,<global>,_ZN19ast_declarator_listC1EP24ast_fully_specified_type,ast_declarator_list::ast_declarator_list(ast_fully_specified_type*)
+7deb0,124,<global>,_ZNK18ast_jump_statement5printEv,ast_jump_statement::print() const
+7df2c,60,<global>,_ZN18ast_jump_statementC1EiP14ast_expression,"ast_jump_statement::ast_jump_statement(int, ast_expression*)"
+7df68,80,<global>,_ZNK23ast_selection_statement5printEv,ast_selection_statement::print() const
+7dfb8,56,<global>,_ZN23ast_selection_statementC1EP14ast_expressionP8ast_nodeS3_,"ast_selection_statement::ast_selection_statement(ast_expression*, ast_node*, ast_node*)"
+7dff0,56,<global>,_ZNK20ast_switch_statement5printEv,ast_switch_statement::print() const
+7e028,48,<global>,_ZN20ast_switch_statementC1EP14ast_expressionP8ast_node,"ast_switch_statement::ast_switch_statement(ast_expression*, ast_node*)"
+7e058,40,<global>,_ZNK15ast_switch_body5printEv,ast_switch_body::print() const
+7e080,36,<global>,_ZN15ast_switch_bodyC1EP23ast_case_statement_list,ast_switch_body::ast_switch_body(ast_case_statement_list*)
+7e0a4,68,<global>,_ZNK14ast_case_label5printEv,ast_case_label::print() const
+7e0e8,36,<global>,_ZN14ast_case_labelC1EP14ast_expression,ast_case_label::ast_case_label(ast_expression*)
+7e10c,36,<global>,_ZNK19ast_case_label_list5printEv,ast_case_label_list::print() const
+7e130,48,<global>,_ZN19ast_case_label_listC1Ev,ast_case_label_list::ast_case_label_list()
+7e160,44,<global>,_ZNK18ast_case_statement5printEv,ast_case_statement::print() const
+7e18c,52,<global>,_ZN18ast_case_statementC1EP19ast_case_label_list,ast_case_statement::ast_case_statement(ast_case_label_list*)
+7e1c0,28,<global>,_ZNK23ast_case_statement_list5printEv,ast_case_statement_list::print() const
+7e1dc,48,<global>,_ZN23ast_case_statement_listC1Ev,ast_case_statement_list::ast_case_statement_list()
+7e20c,172,<global>,_ZNK23ast_iteration_statement5printEv,ast_iteration_statement::print() const
+7e2b8,60,<global>,_ZN23ast_iteration_statementC1EiP8ast_nodeS1_P14ast_expressionS1_,"ast_iteration_statement::ast_iteration_statement(int, ast_node*, ast_node*, ast_expression*, ast_node*)"
+7e2f4,68,<global>,_ZNK20ast_struct_specifier5printEv,ast_struct_specifier::print() const
+7e338,152,<global>,_ZN20ast_struct_specifierC1EPKcP19ast_declarator_list,"ast_struct_specifier::ast_struct_specifier(char const*, ast_declarator_list*)"
+7e3d0,824,<global>,_mesa_glsl_compile_shader,_mesa_glsl_compile_shader
+7e708,402,<global>,_Z22do_common_optimizationP9exec_listbbPK26gl_shader_compiler_optionsb,"do_common_optimization(exec_list*, bool, bool, gl_shader_compiler_options const*, bool)"
+7e89a,16,<global>,_mesa_destroy_shader_compiler,_mesa_destroy_shader_compiler
+7e8aa,4,<global>,_mesa_destroy_shader_compiler_caches,_mesa_destroy_shader_compiler_caches
+7e8ae,2,<global>,_ZN18ast_type_qualifier18_ralloc_destructorEPv,ast_type_qualifier::_ralloc_destructor(void*)
+7e8b0,28,<global>,_ZN17glsl_symbol_tableC1Ev,glsl_symbol_table::glsl_symbol_table()
+7e8cc,22,<global>,_ZN17glsl_symbol_tableD1Ev,glsl_symbol_table::~glsl_symbol_table()
+7e8e2,6,<global>,_ZN17glsl_symbol_table10push_scopeEv,glsl_symbol_table::push_scope()
+7e8e8,6,<global>,_ZN17glsl_symbol_table9pop_scopeEv,glsl_symbol_table::pop_scope()
+7e8ee,28,<global>,_ZN17glsl_symbol_table24name_declared_this_scopeEPKc,glsl_symbol_table::name_declared_this_scope(char const*)
+7e90c,208,<global>,_ZN17glsl_symbol_table12add_variableEP11ir_variable,glsl_symbol_table::add_variable(ir_variable*)
+7e9dc,12,<global>,_ZN17glsl_symbol_table9get_entryEPKc,glsl_symbol_table::get_entry(char const*)
+7e9e8,84,<global>,_ZN17glsl_symbol_table8add_typeEPKcPK9glsl_type,"glsl_symbol_table::add_type(char const*, glsl_type const*)"
+7ea3c,156,<global>,_ZN17glsl_symbol_table13add_interfaceEPKcPK9glsl_type16ir_variable_mode,"glsl_symbol_table::add_interface(char const*, glsl_type const*, ir_variable_mode)"
+7ead8,148,<global>,_ZN17glsl_symbol_table12add_functionEP11ir_function,glsl_symbol_table::add_function(ir_function*)
+7eb6c,76,<global>,_ZN17glsl_symbol_table19add_global_functionEP11ir_function,glsl_symbol_table::add_global_function(ir_function*)
+7ebb8,26,<global>,_ZN17glsl_symbol_table12get_variableEPKc,glsl_symbol_table::get_variable(char const*)
+7ebd2,26,<global>,_ZN17glsl_symbol_table8get_typeEPKc,glsl_symbol_table::get_type(char const*)
+7ebec,38,<global>,_ZN17glsl_symbol_table13get_interfaceEPKc16ir_variable_mode,"glsl_symbol_table::get_interface(char const*, ir_variable_mode)"
+7ec12,26,<global>,_ZN17glsl_symbol_table12get_functionEPKc,glsl_symbol_table::get_function(char const*)
+7ec2c,24,<global>,_ZN17glsl_symbol_table16disable_variableEPKc,glsl_symbol_table::disable_variable(char const*)
+7ec44,2,<global>,_ZN18symbol_table_entry18_ralloc_destructorEPv,symbol_table_entry::_ralloc_destructor(void*)
+7ec48,44,<global>,_ZN9glsl_type20init_ralloc_type_ctxEv,glsl_type::init_ralloc_type_ctx()
+7ec74,96,<global>,_ZN9glsl_typeC1Ej14glsl_base_typejjPKc,"glsl_type::glsl_type(unsigned int, glsl_base_type, unsigned int, unsigned int, char const*)"
+7ecd4,136,<global>,_ZN9glsl_typeC1Ej14glsl_base_type16glsl_sampler_dimbbjPKc,"glsl_type::glsl_type(unsigned int, glsl_base_type, glsl_sampler_dim, bool, bool, unsigned int, char const*)"
+7ed5c,240,<global>,_ZN9glsl_typeC1EPK17glsl_struct_fieldjPKc,"glsl_type::glsl_type(glsl_struct_field const*, unsigned int, char const*)"
+7ee4c,252,<global>,_ZN9glsl_typeC2EPK17glsl_struct_fieldj22glsl_interface_packingPKc,"glsl_type::glsl_type(glsl_struct_field const*, unsigned int, glsl_interface_packing, char const*)"
+7ef48,62,<global>,_ZNK9glsl_type16contains_samplerEv,glsl_type::contains_sampler() const
+7ef86,70,<global>,_ZNK9glsl_type16contains_integerEv,glsl_type::contains_integer() const
+7efcc,66,<global>,_ZNK9glsl_type15contains_opaqueEv,glsl_type::contains_opaque() const
+7f010,88,<global>,_ZNK9glsl_type13sampler_indexEv,glsl_type::sampler_index() const
+7f068,62,<global>,_ZNK9glsl_type14contains_imageEv,glsl_type::contains_image() const
+7f0a8,36,<global>,_ZNK9glsl_type13get_base_typeEv,glsl_type::get_base_type() const
+7f0cc,72,<global>,_ZNK9glsl_type15get_scalar_typeEv,glsl_type::get_scalar_type() const
+7f114,72,<global>,_mesa_glsl_release_types,_mesa_glsl_release_types
+7f15c,192,<global>,_ZN9glsl_typeC2EPKS_j,"glsl_type::glsl_type(glsl_type const*, unsigned int)"
+7f21c,156,<global>,_ZN9glsl_type3vecEj,glsl_type::vec(unsigned int)
+7f2b8,156,<global>,_ZN9glsl_type4ivecEj,glsl_type::ivec(unsigned int)
+7f354,156,<global>,_ZN9glsl_type4uvecEj,glsl_type::uvec(unsigned int)
+7f3f0,156,<global>,_ZN9glsl_type4bvecEj,glsl_type::bvec(unsigned int)
+7f48c,236,<global>,_ZN9glsl_type12get_instanceEjjj,"glsl_type::get_instance(unsigned int, unsigned int, unsigned int)"
+7f578,216,<global>,_ZN9glsl_type18get_array_instanceEPKS_j,"glsl_type::get_array_instance(glsl_type const*, unsigned int)"
+7f650,48,<global>,_ZN9glsl_typenwEj,glsl_type::operator new(unsigned int)
+7f680,204,<global>,_ZNK9glsl_type14record_compareEPKS_,glsl_type::record_compare(glsl_type const*) const
+7f74c,36,<global>,_ZN9glsl_type18record_key_compareEPKvS1_,"glsl_type::record_key_compare(void const*, void const*)"
+7f770,152,<global>,_ZN9glsl_type15record_key_hashEPKv,glsl_type::record_key_hash(void const*)
+7f808,176,<global>,_ZN9glsl_type19get_record_instanceEPK17glsl_struct_fieldjPKc,"glsl_type::get_record_instance(glsl_struct_field const*, unsigned int, char const*)"
+7f8b8,180,<global>,_ZN9glsl_type22get_interface_instanceEPK17glsl_struct_fieldj22glsl_interface_packingPKc,"glsl_type::get_interface_instance(glsl_struct_field const*, unsigned int, glsl_interface_packing, char const*)"
+7f96c,96,<global>,_ZNK9glsl_type10field_typeEPKc,glsl_type::field_type(char const*) const
+7f9cc,56,<global>,_ZNK9glsl_type15field_precisionEPKc,glsl_type::field_precision(char const*) const
+7fa04,58,<global>,_ZNK9glsl_type11field_indexEPKc,glsl_type::field_index(char const*) const
+7fa40,106,<global>,_ZNK9glsl_type15component_slotsEv,glsl_type::component_slots() const
+7faac,88,<global>,_ZNK9glsl_type17uniform_locationsEv,glsl_type::uniform_locations() const
+7fb04,102,<global>,_ZNK9glsl_type25can_implicitly_convert_toEPKS_P22_mesa_glsl_parse_state,"glsl_type::can_implicitly_convert_to(glsl_type const*, _mesa_glsl_parse_state*) const"
+7fb6c,380,<global>,_ZNK9glsl_type21std140_base_alignmentEb,glsl_type::std140_base_alignment(bool) const
+7fce8,440,<global>,_ZNK9glsl_type11std140_sizeEb,glsl_type::std140_size(bool) const
+7fea0,92,<global>,_ZNK9glsl_type21count_attribute_slotsEv,glsl_type::count_attribute_slots() const
+7fefc,56,<global>,_ZNK9glsl_type21coordinate_componentsEv,glsl_type::coordinate_components() const
+7ff34,688,<global>,_Z32_mesa_ast_field_selection_to_hirPK14ast_expressionP9exec_listP22_mesa_glsl_parse_state,"_mesa_ast_field_selection_to_hir(ast_expression const*, exec_list*, _mesa_glsl_parse_state*)"
+801e4,52,<global>,_Z16higher_precisionP14ir_instructionS0_,"higher_precision(ir_instruction*, ir_instruction*)"
+80218,44,<global>,_Z17precision_from_irP14ir_instruction,precision_from_ir(ir_instruction*)
+80244,40,<global>,_ZN9ir_rvalueC2E12ir_node_type14glsl_precision,"ir_rvalue::ir_rvalue(ir_node_type, glsl_precision)"
+8026c,4,<global>,_ZNK9ir_rvalue7is_zeroEv,ir_rvalue::is_zero() const
+80270,4,<global>,_ZNK9ir_rvalue6is_oneEv,ir_rvalue::is_one() const
+80274,4,<global>,_ZNK9ir_rvalue15is_negative_oneEv,ir_rvalue::is_negative_one() const
+80278,4,<global>,_ZNK9ir_rvalue8is_basisEv,ir_rvalue::is_basis() const
+8027c,376,<global>,_ZN13ir_assignment7set_lhsEP9ir_rvalue,ir_assignment::set_lhs(ir_rvalue*)
+803f4,100,<global>,sub_803F4,sub_803F4
+80458,92,<global>,_ZN13ir_assignment22whole_variable_writtenEv,ir_assignment::whole_variable_written()
+804b4,56,<global>,_ZN13ir_assignmentC1EP14ir_dereferenceP9ir_rvalueS3_j,"ir_assignment::ir_assignment(ir_dereference*, ir_rvalue*, ir_rvalue*, unsigned int)"
+804ec,120,<global>,_ZN13ir_assignmentC1EP9ir_rvalueS1_S1_,"ir_assignment::ir_assignment(ir_rvalue*, ir_rvalue*, ir_rvalue*)"
+80564,92,<global>,_ZN13ir_expressionC1EiPK9glsl_typeP9ir_rvalueS4_S4_S4_,"ir_expression::ir_expression(int, glsl_type const*, ir_rvalue*, ir_rvalue*, ir_rvalue*, ir_rvalue*)"
+805c0,264,<global>,_ZN13ir_expressionC1EiP9ir_rvalue,"ir_expression::ir_expression(int, ir_rvalue*)"
+806c8,232,<global>,_ZN13ir_expressionC1EiP9ir_rvalueS1_,"ir_expression::ir_expression(int, ir_rvalue*, ir_rvalue*)"
+807b0,140,<global>,_ZN13ir_expressionC2EiP9ir_rvalueS1_S1_,"ir_expression::ir_expression(int, ir_rvalue*, ir_rvalue*, ir_rvalue*)"
+8083c,36,<global>,_ZN13ir_expression16get_num_operandsE23ir_expression_operation,ir_expression::get_num_operands(ir_expression_operation)
+80860,16,<global>,_ZN13ir_expression15operator_stringE23ir_expression_operation,ir_expression::operator_string(ir_expression_operation)
+80870,16,<global>,_ZN13ir_expression15operator_stringEv,ir_expression::operator_string()
+80880,32,<global>,_Z19depth_layout_string15ir_depth_layout,depth_layout_string(ir_depth_layout)
+808a0,52,<global>,_ZN13ir_expression12get_operatorEPKc,ir_expression::get_operator(char const*)
+808d4,56,<global>,_ZN11ir_constantC2Ev,ir_constant::ir_constant()
+8090c,88,<global>,_ZN11ir_constantC1EPK9glsl_typePK16ir_constant_data,"ir_constant::ir_constant(glsl_type const*, ir_constant_data const*)"
+80964,132,<global>,_ZN11ir_constantC1Efj,"ir_constant::ir_constant(float, unsigned int)"
+809e8,124,<global>,_ZN11ir_constantC1Ejj,"ir_constant::ir_constant(unsigned int, unsigned int)"
+80a64,124,<global>,_ZN11ir_constantC1Eij,"ir_constant::ir_constant(int, unsigned int)"
+80ae0,116,<global>,_ZN11ir_constantC1Ebj,"ir_constant::ir_constant(bool, unsigned int)"
+80b54,112,<global>,_ZN11ir_constantC1EPKS_j,"ir_constant::ir_constant(ir_constant const*, unsigned int)"
+80bc4,968,<global>,_ZN11ir_constantC1EPK9glsl_typeP9exec_list,"ir_constant::ir_constant(glsl_type const*, exec_list*)"
+80f8c,52,<global>,_ZNK11ir_constant18get_uint_componentEj,ir_constant::get_uint_component(unsigned int) const
+80fc0,52,<global>,_ZNK11ir_constant17get_int_componentEj,ir_constant::get_int_component(unsigned int) const
+80ff4,92,<global>,_ZNK11ir_constant19get_float_componentEj,ir_constant::get_float_component(unsigned int) const
+81050,58,<global>,_ZNK11ir_constant18get_bool_componentEj,ir_constant::get_bool_component(unsigned int) const
+8108c,220,<global>,_ZN11ir_constant4zeroEPvPK9glsl_type,"ir_constant::zero(void*, glsl_type const*)"
+81168,26,<global>,_ZNK11ir_constant17get_array_elementEj,ir_constant::get_array_element(unsigned int) const
+81182,62,<global>,_ZN11ir_constant16get_record_fieldEPKc,ir_constant::get_record_field(char const*)
+811c0,324,<global>,_ZN11ir_constant11copy_offsetEPS_i,"ir_constant::copy_offset(ir_constant*, int)"
+81304,276,<global>,_ZN11ir_constant18copy_masked_offsetEPS_ij,"ir_constant::copy_masked_offset(ir_constant*, int, unsigned int)"
+81418,226,<global>,_ZNK11ir_constant9has_valueEPKS_,ir_constant::has_value(ir_constant const*) const
+814fc,160,<global>,_ZNK11ir_constant8is_valueEfi,"ir_constant::is_value(float, int) const"
+8159c,10,<global>,_ZNK11ir_constant7is_zeroEv,ir_constant::is_zero() const
+815a6,12,<global>,_ZNK11ir_constant6is_oneEv,ir_constant::is_one() const
+815b2,16,<global>,_ZNK11ir_constant15is_negative_oneEv,ir_constant::is_negative_one() const
+815c2,158,<global>,_ZNK11ir_constant8is_basisEv,ir_constant::is_basis() const
+81660,26,<global>,_ZNK11ir_constant18is_uint16_constantEv,ir_constant::is_uint16_constant() const
+8167c,36,<global>,_ZN7ir_loopC1Ev,ir_loop::ir_loop()
+816a0,48,<global>,_ZN23ir_dereference_variableC1EP11ir_variable,ir_dereference_variable::ir_dereference_variable(ir_variable*)
+816d0,72,<global>,_ZN20ir_dereference_arrayC1EP9ir_rvalueS1_,"ir_dereference_array::ir_dereference_array(ir_rvalue*, ir_rvalue*)"
+81718,72,<global>,_ZN20ir_dereference_array9set_arrayEP9ir_rvalue,ir_dereference_array::set_array(ir_rvalue*)
+81760,136,<global>,_ZN20ir_dereference_arrayC1EP11ir_variableP9ir_rvalue,"ir_dereference_array::ir_dereference_array(ir_variable*, ir_rvalue*)"
+817e8,100,<global>,_ZN21ir_dereference_recordC1EP9ir_rvaluePKc,"ir_dereference_record::ir_dereference_record(ir_rvalue*, char const*)"
+8184c,164,<global>,_ZN21ir_dereference_recordC2EP11ir_variablePKc,"ir_dereference_record::ir_dereference_record(ir_variable*, char const*)"
+818f0,38,<global>,_ZNK14ir_dereference9is_lvalueEv,ir_dereference::is_lvalue() const
+81918,16,<global>,_ZN10ir_texture13opcode_stringEv,ir_texture::opcode_string()
+81928,52,<global>,_ZN10ir_texture10get_opcodeEPKc,ir_texture::get_opcode(char const*)
+8195c,6,<global>,_ZN10ir_texture11set_samplerEP14ir_dereferencePK9glsl_type,"ir_texture::set_sampler(ir_dereference*, glsl_type const*)"
+81964,196,<global>,_ZN10ir_swizzle9init_maskEPKjj,"ir_swizzle::init_mask(unsigned int const*, unsigned int)"
+81a28,132,<global>,_ZN10ir_swizzleC1EP9ir_rvaluejjjjj,"ir_swizzle::ir_swizzle(ir_rvalue*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)"
+81aac,76,<global>,_ZN10ir_swizzleC1EP9ir_rvaluePKjj,"ir_swizzle::ir_swizzle(ir_rvalue*, unsigned int const*, unsigned int)"
+81af8,88,<global>,_ZN10ir_swizzleC2EP9ir_rvalue15ir_swizzle_mask,"ir_swizzle::ir_swizzle(ir_rvalue*, ir_swizzle_mask)"
+81b50,312,<global>,_ZN10ir_swizzle6createEP9ir_rvaluePKcj,"ir_swizzle::create(ir_rvalue*, char const*, unsigned int)"
+81c88,8,<global>,_ZNK10ir_swizzle19variable_referencedEv,ir_swizzle::variable_referenced() const
+81c90,220,<global>,_ZN11ir_variableC1EPK9glsl_typePKc16ir_variable_mode14glsl_precision,"ir_variable::ir_variable(glsl_type const*, char const*, ir_variable_mode, glsl_precision)"
+81d6c,28,<global>,_Z20interpolation_stringj,interpolation_string(unsigned int)
+81d88,32,<global>,_ZN11ir_variable28determine_interpolation_modeEb,ir_variable::determine_interpolation_mode(bool)
+81da8,56,<global>,_ZN11ir_variable24enable_extension_warningEPKc,ir_variable::enable_extension_warning(char const*)
+81de0,24,<global>,_ZNK11ir_variable21get_extension_warningEv,ir_variable::get_extension_warning() const
+81df8,92,<global>,_ZN21ir_function_signatureC1EPK9glsl_type14glsl_precisionPFbPK22_mesa_glsl_parse_stateE,"ir_function_signature::ir_function_signature(glsl_type const*, glsl_precision, bool (*)(_mesa_glsl_parse_state const*))"
+81e54,10,<global>,_ZNK21ir_function_signature10is_builtinEv,ir_function_signature::is_builtin() const
+81e5e,12,<global>,_ZNK21ir_function_signature20is_builtin_availableEPK22_mesa_glsl_parse_state,ir_function_signature::is_builtin_available(_mesa_glsl_parse_state const*) const
+81e6a,156,<global>,_ZN21ir_function_signature16qualifiers_matchEP9exec_list,ir_function_signature::qualifiers_match(exec_list*)
+81f06,76,<global>,_ZN21ir_function_signature18replace_parametersEP9exec_list,ir_function_signature::replace_parameters(exec_list*)
+81f4c,8,<global>,sub_81F4C,sub_81F4C
+81f54,52,<global>,_ZN11ir_functionC1EPKc,ir_function::ir_function(char const*)
+81f88,32,<global>,_ZN11ir_function18has_user_signatureEv,ir_function::has_user_signature()
+81fa8,68,<global>,_ZN9ir_rvalue11error_valueEPv,ir_rvalue::error_value(void*)
+81fec,48,<global>,_Z15visit_exec_listP9exec_listP10ir_visitor,"visit_exec_list(exec_list*, ir_visitor*)"
+8201c,80,<global>,_Z11reparent_irP9exec_listPv,"reparent_ir(exec_list*, void*)"
+8206c,136,<global>,sub_8206C,sub_8206C
+820f4,50,<global>,_ZN9ir_rvalue21as_rvalue_to_saturateEv,ir_rvalue::as_rvalue_to_saturate()
+82126,58,<global>,sub_82126,sub_82126
+82160,58,<global>,sub_82160,sub_82160
+8219a,44,<global>,_Z17vertices_per_primj,vertices_per_prim(unsigned int)
+821c8,236,<global>,_Z11mode_stringPK11ir_variable,mode_string(ir_variable const*)
+822b4,2,<global>,_ZN14ir_instructionD2Ev,ir_instruction::~ir_instruction()
+822b6,2,<global>,_ZN14ir_dereferenceD0Ev,ir_dereference::~ir_dereference()
+822b8,12,<global>,_ZN9ir_rvalue6acceptEP10ir_visitor,ir_rvalue::accept(ir_visitor*)
+822c4,4,<global>,_ZN9ir_rvalue25whole_variable_referencedEv,ir_rvalue::whole_variable_referenced()
+822c8,4,<global>,_ZNK9ir_rvalue18is_uint16_constantEv,ir_rvalue::is_uint16_constant() const
+822cc,314,<global>,_Z21call_for_basic_blocksP9exec_listPFvP14ir_instructionS2_PvES3_,"call_for_basic_blocks(exec_list*, void (*)(ir_instruction*, ir_instruction*, void*), void*)"
+82406,22,<global>,_ZN10ir_builder10ir_factory4emitEP14ir_instruction,ir_builder::ir_factory::emit(ir_instruction*)
+8241c,92,<global>,_ZN10ir_builder10ir_factory9make_tempEPK9glsl_typePKc14glsl_precision,"ir_builder::ir_factory::make_temp(glsl_type const*, char const*, glsl_precision)"
+82478,68,<global>,_ZN10ir_builder6assignENS_5derefENS_7operandES1_i,"ir_builder::assign(ir_builder::deref, ir_builder::operand, ir_builder::operand, int)"
+824bc,22,<global>,_ZN10ir_builder6assignENS_5derefENS_7operandE,"ir_builder::assign(ir_builder::deref, ir_builder::operand)"
+824d2,8,<global>,_ZN10ir_builder6assignENS_5derefENS_7operandEi,"ir_builder::assign(ir_builder::deref, ir_builder::operand, int)"
+824da,20,<global>,_ZN10ir_builder6assignENS_5derefENS_7operandES1_,"ir_builder::assign(ir_builder::deref, ir_builder::operand, ir_builder::operand)"
+824f0,60,<global>,_ZN10ir_builder3retENS_7operandE,ir_builder::ret(ir_builder::operand)
+8252c,84,<global>,_ZN10ir_builder7swizzleENS_7operandEii,"ir_builder::swizzle(ir_builder::operand, int, int)"
+82580,164,<global>,_ZN10ir_builder16swizzle_for_sizeENS_7operandEj,"ir_builder::swizzle_for_size(ir_builder::operand, unsigned int)"
+82624,8,<global>,_ZN10ir_builder12swizzle_xxxxENS_7operandE,ir_builder::swizzle_xxxx(ir_builder::operand)
+8262c,10,<global>,_ZN10ir_builder12swizzle_yyyyENS_7operandE,ir_builder::swizzle_yyyy(ir_builder::operand)
+82636,10,<global>,_ZN10ir_builder12swizzle_zzzzENS_7operandE,ir_builder::swizzle_zzzz(ir_builder::operand)
+82640,10,<global>,_ZN10ir_builder12swizzle_wwwwENS_7operandE,ir_builder::swizzle_wwww(ir_builder::operand)
+8264a,8,<global>,_ZN10ir_builder9swizzle_xENS_7operandE,ir_builder::swizzle_x(ir_builder::operand)
+82652,10,<global>,_ZN10ir_builder9swizzle_yENS_7operandE,ir_builder::swizzle_y(ir_builder::operand)
+8265c,10,<global>,_ZN10ir_builder9swizzle_zENS_7operandE,ir_builder::swizzle_z(ir_builder::operand)
+82666,10,<global>,_ZN10ir_builder9swizzle_wENS_7operandE,ir_builder::swizzle_w(ir_builder::operand)
+82670,10,<global>,_ZN10ir_builder10swizzle_xyENS_7operandE,ir_builder::swizzle_xy(ir_builder::operand)
+8267a,10,<global>,_ZN10ir_builder11swizzle_xyzENS_7operandE,ir_builder::swizzle_xyz(ir_builder::operand)
+82684,10,<global>,_ZN10ir_builder12swizzle_xyzwENS_7operandE,ir_builder::swizzle_xyzw(ir_builder::operand)
+82690,60,<global>,_ZN10ir_builder4exprE23ir_expression_operationNS_7operandE,"ir_builder::expr(ir_expression_operation, ir_builder::operand)"
+826cc,64,<global>,_ZN10ir_builder4exprE23ir_expression_operationNS_7operandES1_,"ir_builder::expr(ir_expression_operation, ir_builder::operand, ir_builder::operand)"
+8270c,72,<global>,_ZN10ir_builder4exprE23ir_expression_operationNS_7operandES1_S1_,"ir_builder::expr(ir_expression_operation, ir_builder::operand, ir_builder::operand, ir_builder::operand)"
+82754,10,<global>,_ZN10ir_builder3addENS_7operandES0_,"ir_builder::add(ir_builder::operand, ir_builder::operand)"
+8275e,10,<global>,_ZN10ir_builder3subENS_7operandES0_,"ir_builder::sub(ir_builder::operand, ir_builder::operand)"
+82768,10,<global>,_ZN10ir_builder4min2ENS_7operandES0_,"ir_builder::min2(ir_builder::operand, ir_builder::operand)"
+82772,10,<global>,_ZN10ir_builder4max2ENS_7operandES0_,"ir_builder::max2(ir_builder::operand, ir_builder::operand)"
+8277c,10,<global>,_ZN10ir_builder3mulENS_7operandES0_,"ir_builder::mul(ir_builder::operand, ir_builder::operand)"
+82786,10,<global>,_ZN10ir_builder9imul_highENS_7operandES0_,"ir_builder::imul_high(ir_builder::operand, ir_builder::operand)"
+82790,10,<global>,_ZN10ir_builder3divENS_7operandES0_,"ir_builder::div(ir_builder::operand, ir_builder::operand)"
+8279a,10,<global>,_ZN10ir_builder5carryENS_7operandES0_,"ir_builder::carry(ir_builder::operand, ir_builder::operand)"
+827a4,10,<global>,_ZN10ir_builder6borrowENS_7operandES0_,"ir_builder::borrow(ir_builder::operand, ir_builder::operand)"
+827ae,8,<global>,_ZN10ir_builder10round_evenENS_7operandE,ir_builder::round_even(ir_builder::operand)
+827b6,26,<global>,_ZN10ir_builder3dotENS_7operandES0_,"ir_builder::dot(ir_builder::operand, ir_builder::operand)"
+827d0,12,<global>,_ZN10ir_builder5clampENS_7operandES0_S0_,"ir_builder::clamp(ir_builder::operand, ir_builder::operand, ir_builder::operand)"
+827dc,8,<global>,_ZN10ir_builder8saturateENS_7operandE,ir_builder::saturate(ir_builder::operand)
+827e4,8,<global>,_ZN10ir_builder3absENS_7operandE,ir_builder::abs(ir_builder::operand)
+827ec,8,<global>,_ZN10ir_builder3negENS_7operandE,ir_builder::neg(ir_builder::operand)
+827f4,8,<global>,_ZN10ir_builder3sinENS_7operandE,ir_builder::sin(ir_builder::operand)
+827fc,8,<global>,_ZN10ir_builder3cosENS_7operandE,ir_builder::cos(ir_builder::operand)
+82804,8,<global>,_ZN10ir_builder3expENS_7operandE,ir_builder::exp(ir_builder::operand)
+8280c,8,<global>,_ZN10ir_builder3rsqENS_7operandE,ir_builder::rsq(ir_builder::operand)
+82814,8,<global>,_ZN10ir_builder4sqrtENS_7operandE,ir_builder::sqrt(ir_builder::operand)
+8281c,8,<global>,_ZN10ir_builder3logENS_7operandE,ir_builder::log(ir_builder::operand)
+82824,8,<global>,_ZN10ir_builder4signENS_7operandE,ir_builder::sign(ir_builder::operand)
+8282c,10,<global>,_ZN10ir_builder5equalENS_7operandES0_,"ir_builder::equal(ir_builder::operand, ir_builder::operand)"
+82836,10,<global>,_ZN10ir_builder6nequalENS_7operandES0_,"ir_builder::nequal(ir_builder::operand, ir_builder::operand)"
+82840,10,<global>,_ZN10ir_builder4lessENS_7operandES0_,"ir_builder::less(ir_builder::operand, ir_builder::operand)"
+8284a,10,<global>,_ZN10ir_builder7greaterENS_7operandES0_,"ir_builder::greater(ir_builder::operand, ir_builder::operand)"
+82854,10,<global>,_ZN10ir_builder6lequalENS_7operandES0_,"ir_builder::lequal(ir_builder::operand, ir_builder::operand)"
+8285e,10,<global>,_ZN10ir_builder6gequalENS_7operandES0_,"ir_builder::gequal(ir_builder::operand, ir_builder::operand)"
+82868,8,<global>,_ZN10ir_builder9logic_notENS_7operandE,ir_builder::logic_not(ir_builder::operand)
+82870,10,<global>,_ZN10ir_builder9logic_andENS_7operandES0_,"ir_builder::logic_and(ir_builder::operand, ir_builder::operand)"
+8287a,10,<global>,_ZN10ir_builder8logic_orENS_7operandES0_,"ir_builder::logic_or(ir_builder::operand, ir_builder::operand)"
+82884,8,<global>,_ZN10ir_builder7bit_notENS_7operandE,ir_builder::bit_not(ir_builder::operand)
+8288c,10,<global>,_ZN10ir_builder7bit_andENS_7operandES0_,"ir_builder::bit_and(ir_builder::operand, ir_builder::operand)"
+82896,10,<global>,_ZN10ir_builder6bit_orENS_7operandES0_,"ir_builder::bit_or(ir_builder::operand, ir_builder::operand)"
+828a0,10,<global>,_ZN10ir_builder6lshiftENS_7operandES0_,"ir_builder::lshift(ir_builder::operand, ir_builder::operand)"
+828aa,10,<global>,_ZN10ir_builder6rshiftENS_7operandES0_,"ir_builder::rshift(ir_builder::operand, ir_builder::operand)"
+828b4,8,<global>,_ZN10ir_builder3f2iENS_7operandE,ir_builder::f2i(ir_builder::operand)
+828bc,8,<global>,_ZN10ir_builder11bitcast_f2iENS_7operandE,ir_builder::bitcast_f2i(ir_builder::operand)
+828c4,8,<global>,_ZN10ir_builder3i2fENS_7operandE,ir_builder::i2f(ir_builder::operand)
+828cc,8,<global>,_ZN10ir_builder11bitcast_i2fENS_7operandE,ir_builder::bitcast_i2f(ir_builder::operand)
+828d4,8,<global>,_ZN10ir_builder3i2uENS_7operandE,ir_builder::i2u(ir_builder::operand)
+828dc,8,<global>,_ZN10ir_builder3u2iENS_7operandE,ir_builder::u2i(ir_builder::operand)
+828e4,8,<global>,_ZN10ir_builder3f2uENS_7operandE,ir_builder::f2u(ir_builder::operand)
+828ec,8,<global>,_ZN10ir_builder11bitcast_f2uENS_7operandE,ir_builder::bitcast_f2u(ir_builder::operand)
+828f4,8,<global>,_ZN10ir_builder3u2fENS_7operandE,ir_builder::u2f(ir_builder::operand)
+828fc,8,<global>,_ZN10ir_builder11bitcast_u2fENS_7operandE,ir_builder::bitcast_u2f(ir_builder::operand)
+82904,8,<global>,_ZN10ir_builder3i2bENS_7operandE,ir_builder::i2b(ir_builder::operand)
+8290c,8,<global>,_ZN10ir_builder3b2iENS_7operandE,ir_builder::b2i(ir_builder::operand)
+82914,8,<global>,_ZN10ir_builder3f2bENS_7operandE,ir_builder::f2b(ir_builder::operand)
+8291c,8,<global>,_ZN10ir_builder3b2fENS_7operandE,ir_builder::b2f(ir_builder::operand)
+82924,8,<global>,_ZN10ir_builder23interpolate_at_centroidENS_7operandE,ir_builder::interpolate_at_centroid(ir_builder::operand)
+8292c,10,<global>,_ZN10ir_builder21interpolate_at_offsetENS_7operandES0_,"ir_builder::interpolate_at_offset(ir_builder::operand, ir_builder::operand)"
+82936,10,<global>,_ZN10ir_builder21interpolate_at_sampleENS_7operandES0_,"ir_builder::interpolate_at_sample(ir_builder::operand, ir_builder::operand)"
+82940,12,<global>,_ZN10ir_builder3fmaENS_7operandES0_S0_,"ir_builder::fma(ir_builder::operand, ir_builder::operand, ir_builder::operand)"
+8294c,12,<global>,_ZN10ir_builder3lrpENS_7operandES0_S0_,"ir_builder::lrp(ir_builder::operand, ir_builder::operand, ir_builder::operand)"
+82958,12,<global>,_ZN10ir_builder4cselENS_7operandES0_S0_,"ir_builder::csel(ir_builder::operand, ir_builder::operand, ir_builder::operand)"
+82964,76,<global>,_ZN10ir_builder15bitfield_insertENS_7operandES0_S0_S0_,"ir_builder::bitfield_insert(ir_builder::operand, ir_builder::operand, ir_builder::operand, ir_builder::operand)"
+829b0,116,<global>,_ZN10ir_builder7if_treeENS_7operandEP14ir_instruction,"ir_builder::if_tree(ir_builder::operand, ir_instruction*)"
+82a24,132,<global>,_ZN10ir_builder7if_treeENS_7operandEP14ir_instructionS2_,"ir_builder::if_tree(ir_builder::operand, ir_instruction*, ir_instruction*)"
+82aa8,6,<global>,_ZNK9ir_rvalue5cloneEPvP10hash_table,"ir_rvalue::clone(void*, hash_table*) const"
+82ab0,296,<global>,_ZNK11ir_variable5cloneEPvP10hash_table,"ir_variable::clone(void*, hash_table*) const"
+82bd8,76,<global>,_ZNK10ir_swizzle5cloneEPvP10hash_table,"ir_swizzle::clone(void*, hash_table*) const"
+82c24,76,<global>,_ZNK9ir_return5cloneEPvP10hash_table,"ir_return::clone(void*, hash_table*) const"
+82c70,76,<global>,_ZNK10ir_discard5cloneEPvP10hash_table,"ir_discard::clone(void*, hash_table*) const"
+82cbc,60,<global>,_ZNK12ir_loop_jump5cloneEPvP10hash_table,"ir_loop_jump::clone(void*, hash_table*) const"
+82cf8,220,<global>,_ZNK5ir_if5cloneEPvP10hash_table,"ir_if::clone(void*, hash_table*) const"
+82dd4,120,<global>,_ZNK7ir_loop5cloneEPvP10hash_table,"ir_loop::clone(void*, hash_table*) const"
+82e4c,188,<global>,_ZNK7ir_call5cloneEPvP10hash_table,"ir_call::clone(void*, hash_table*) const"
+82f08,180,<global>,_ZNK13ir_expression5cloneEPvP10hash_table,"ir_expression::clone(void*, hash_table*) const"
+82fbc,76,<global>,_ZNK23ir_dereference_variable5cloneEPvP10hash_table,"ir_dereference_variable::clone(void*, hash_table*) const"
+83008,84,<global>,_ZNK20ir_dereference_array5cloneEPvP10hash_table,"ir_dereference_array::clone(void*, hash_table*) const"
+8305c,72,<global>,_ZNK21ir_dereference_record5cloneEPvP10hash_table,"ir_dereference_record::clone(void*, hash_table*) const"
+830a4,204,<global>,_ZNK10ir_texture5cloneEPvP10hash_table,"ir_texture::clone(void*, hash_table*) const"
+83170,124,<global>,_ZNK13ir_assignment5cloneEPvP10hash_table,"ir_assignment::clone(void*, hash_table*) const"
+831ec,144,<global>,_ZNK11ir_function5cloneEPvP10hash_table,"ir_function::clone(void*, hash_table*) const"
+8327c,116,<global>,_ZNK21ir_function_signature5cloneEPvP10hash_table,"ir_function_signature::clone(void*, hash_table*) const"
+832f0,148,<global>,_ZNK21ir_function_signature15clone_prototypeEPvP10hash_table,"ir_function_signature::clone_prototype(void*, hash_table*) const"
+83384,268,<global>,_ZNK11ir_constant5cloneEPvP10hash_table,"ir_constant::clone(void*, hash_table*) const"
+83490,60,<global>,_ZNK22ir_precision_statement5cloneEPvP10hash_table,"ir_precision_statement::clone(void*, hash_table*) const"
+834cc,60,<global>,_ZNK21ir_typedecl_statement5cloneEPvP10hash_table,"ir_typedecl_statement::clone(void*, hash_table*) const"
+83508,188,<global>,_Z13clone_ir_listPvP9exec_listPKS0_,"clone_ir_list(void*, exec_list*, exec_list const*)"
+835c4,22,<global>,_ZN5ir_ifD0Ev,ir_if::~ir_if()
+835da,12,<global>,_ZN5ir_if6acceptEP10ir_visitor,ir_if::accept(ir_visitor*)
+835e6,22,<global>,_ZN7ir_callD0Ev,ir_call::~ir_call()
+835fc,12,<global>,_ZN7ir_call6acceptEP10ir_visitor,ir_call::accept(ir_visitor*)
+83608,22,<global>,_ZN9ir_returnD0Ev,ir_return::~ir_return()
+8361e,12,<global>,_ZN9ir_return6acceptEP10ir_visitor,ir_return::accept(ir_visitor*)
+8362a,22,<global>,_ZN12ir_loop_jumpD0Ev,ir_loop_jump::~ir_loop_jump()
+83640,12,<global>,_ZN12ir_loop_jump6acceptEP10ir_visitor,ir_loop_jump::accept(ir_visitor*)
+8364c,22,<global>,_ZN10ir_discardD0Ev,ir_discard::~ir_discard()
+83662,12,<global>,_ZN10ir_discard6acceptEP10ir_visitor,ir_discard::accept(ir_visitor*)
+8366e,22,<global>,_ZN9ir_rvalueD0Ev,ir_rvalue::~ir_rvalue()
+83684,4,<global>,_ZNK9ir_rvalue9is_lvalueEv,ir_rvalue::is_lvalue() const
+83688,4,<global>,_ZNK9ir_rvalue19variable_referencedEv,ir_rvalue::variable_referenced() const
+8368c,22,<global>,_ZN10ir_textureD0Ev,ir_texture::~ir_texture()
+836a2,12,<global>,_ZN10ir_texture6acceptEP10ir_visitor,ir_texture::accept(ir_visitor*)
+836ae,22,<global>,_ZN22ir_precision_statementD0Ev,ir_precision_statement::~ir_precision_statement()
+836c4,12,<global>,_ZN22ir_precision_statement6acceptEP10ir_visitor,ir_precision_statement::accept(ir_visitor*)
+836d0,22,<global>,_ZN21ir_typedecl_statementD0Ev,ir_typedecl_statement::~ir_typedecl_statement()
+836e6,12,<global>,_ZN21ir_typedecl_statement6acceptEP10ir_visitor,ir_typedecl_statement::accept(ir_visitor*)
+836f2,22,<global>,_ZN11ir_variableD0Ev,ir_variable::~ir_variable()
+83708,12,<global>,_ZN11ir_variable6acceptEP10ir_visitor,ir_variable::accept(ir_visitor*)
+83714,22,<global>,_ZN10ir_swizzleD0Ev,ir_swizzle::~ir_swizzle()
+8372a,12,<global>,_ZN10ir_swizzle6acceptEP10ir_visitor,ir_swizzle::accept(ir_visitor*)
+83736,34,<global>,_ZNK10ir_swizzle9is_lvalueEv,ir_swizzle::is_lvalue() const
+83758,22,<global>,_ZN7ir_loopD0Ev,ir_loop::~ir_loop()
+8376e,12,<global>,_ZN7ir_loop6acceptEP10ir_visitor,ir_loop::accept(ir_visitor*)
+8377a,22,<global>,_ZN23ir_dereference_variableD0Ev,ir_dereference_variable::~ir_dereference_variable()
+83790,12,<global>,_ZN23ir_dereference_variable6acceptEP10ir_visitor,ir_dereference_variable::accept(ir_visitor*)
+8379c,4,<global>,_ZNK23ir_dereference_variable19variable_referencedEv,ir_dereference_variable::variable_referenced() const
+837a0,4,<global>,_ZN23ir_dereference_variable25whole_variable_referencedEv,ir_dereference_variable::whole_variable_referenced()
+837a4,22,<global>,_ZN20ir_dereference_arrayD0Ev,ir_dereference_array::~ir_dereference_array()
+837ba,12,<global>,_ZN20ir_dereference_array6acceptEP10ir_visitor,ir_dereference_array::accept(ir_visitor*)
+837c6,8,<global>,_ZNK20ir_dereference_array19variable_referencedEv,ir_dereference_array::variable_referenced() const
+837ce,22,<global>,_ZN21ir_dereference_recordD0Ev,ir_dereference_record::~ir_dereference_record()
+837e4,12,<global>,_ZN21ir_dereference_record6acceptEP10ir_visitor,ir_dereference_record::accept(ir_visitor*)
+837f0,8,<global>,_ZNK21ir_dereference_record19variable_referencedEv,ir_dereference_record::variable_referenced() const
+837f8,22,<global>,_ZN13ir_assignmentD0Ev,ir_assignment::~ir_assignment()
+8380e,12,<global>,_ZN13ir_assignment6acceptEP10ir_visitor,ir_assignment::accept(ir_visitor*)
+8381a,22,<global>,_ZN11ir_functionD0Ev,ir_function::~ir_function()
+83830,12,<global>,_ZN11ir_function6acceptEP10ir_visitor,ir_function::accept(ir_visitor*)
+8383c,22,<global>,_ZN21ir_function_signatureD0Ev,ir_function_signature::~ir_function_signature()
+83852,12,<global>,_ZN21ir_function_signature6acceptEP10ir_visitor,ir_function_signature::accept(ir_visitor*)
+8385e,22,<global>,_ZN11ir_constantD0Ev,ir_constant::~ir_constant()
+83874,12,<global>,_ZN11ir_constant6acceptEP10ir_visitor,ir_constant::accept(ir_visitor*)
+83880,22,<global>,_ZN21fixup_ir_call_visitor11visit_enterEP7ir_call,fixup_ir_call_visitor::visit_enter(ir_call*)
+83896,4,<global>,_ZN9ir_rvalue25constant_expression_valueEP10hash_table,ir_rvalue::constant_expression_value(hash_table*)
+8389c,9128,<global>,_ZN13ir_expression25constant_expression_valueEP10hash_table,ir_expression::constant_expression_value(hash_table*)
+85c44,4,<global>,_ZN10ir_texture25constant_expression_valueEP10hash_table,ir_texture::constant_expression_value(hash_table*)
+85c48,236,<global>,_ZN10ir_swizzle25constant_expression_valueEP10hash_table,ir_swizzle::constant_expression_value(hash_table*)
+85d34,72,<global>,_ZN23ir_dereference_variable25constant_expression_valueEP10hash_table,ir_dereference_variable::constant_expression_value(hash_table*)
+85d7c,392,<global>,_ZN20ir_dereference_array25constant_expression_valueEP10hash_table,ir_dereference_array::constant_expression_value(hash_table*)
+85f04,32,<global>,_ZN21ir_dereference_record25constant_expression_valueEP10hash_table,ir_dereference_record::constant_expression_value(hash_table*)
+85f24,4,<global>,_ZN13ir_assignment25constant_expression_valueEP10hash_table,ir_assignment::constant_expression_value(hash_table*)
+85f28,2,<global>,_ZN11ir_constant25constant_expression_valueEP10hash_table,ir_constant::constant_expression_value(hash_table*)
+85f2a,14,<global>,_ZN7ir_call25constant_expression_valueEP10hash_table,ir_call::constant_expression_value(hash_table*)
+85f38,268,<global>,_ZN21ir_function_signature25constant_expression_valueEP9exec_listP10hash_table,"ir_function_signature::constant_expression_value(exec_list*, hash_table*)"
+86044,388,<global>,_ZN21ir_function_signature44constant_expression_evaluate_expression_listERK9exec_listP10hash_tablePP11ir_constant,"ir_function_signature::constant_expression_evaluate_expression_list(exec_list const&, hash_table*, ir_constant**)"
+861c8,308,<global>,sub_861C8,sub_861C8
+862fc,4,<global>,_ZN14ir_instruction6equalsEPS_12ir_node_type,"ir_instruction::equals(ir_instruction*, ir_node_type)"
+86300,82,<global>,_ZN11ir_constant6equalsEP14ir_instruction12ir_node_type,"ir_constant::equals(ir_instruction*, ir_node_type)"
+86352,28,<global>,_ZN23ir_dereference_variable6equalsEP14ir_instruction12ir_node_type,"ir_dereference_variable::equals(ir_instruction*, ir_node_type)"
+8636e,72,<global>,_ZN20ir_dereference_array6equalsEP14ir_instruction12ir_node_type,"ir_dereference_array::equals(ir_instruction*, ir_node_type)"
+863b6,52,<global>,_ZN10ir_swizzle6equalsEP14ir_instruction12ir_node_type,"ir_swizzle::equals(ir_instruction*, ir_node_type)"
+863ec,190,<global>,_ZN10ir_texture6equalsEP14ir_instruction12ir_node_type,"ir_texture::equals(ir_instruction*, ir_node_type)"
+864ac,108,<global>,_ZN13ir_expression6equalsEP14ir_instruction12ir_node_type,"ir_expression::equals(ir_instruction*, ir_node_type)"
+86518,2,<global>,_ZN14ir_instructionD0Ev,ir_instruction::~ir_instruction()
+8651a,22,<global>,_ZN13ir_expressionD0Ev,ir_expression::~ir_expression()
+86530,12,<global>,_ZN13ir_expression6acceptEP10ir_visitor,ir_expression::accept(ir_visitor*)
+8653c,116,<global>,_Z24do_expression_flatteningP9exec_listPFbP14ir_instructionE,"do_expression_flattening(exec_list*, bool (*)(ir_instruction*))"
+865b0,2,<global>,_ZN32ir_expression_flattening_visitorD2Ev,ir_expression_flattening_visitor::~ir_expression_flattening_visitor()
+865b4,252,<global>,_ZN32ir_expression_flattening_visitor13handle_rvalueEPP9ir_rvalue,ir_expression_flattening_visitor::handle_rvalue(ir_rvalue**)
+866b0,4,<global>,_ZN32ir_expression_flattening_visitorD0Ev,ir_expression_flattening_visitor::~ir_expression_flattening_visitor()
+866b4,68,<global>,_ZN11ir_function18matching_signatureEP22_mesa_glsl_parse_statePK9exec_listb,"ir_function::matching_signature(_mesa_glsl_parse_state*, exec_list const*, bool)"
+866f8,760,<global>,_ZN11ir_function18matching_signatureEP22_mesa_glsl_parse_statePK9exec_listbPb,"ir_function::matching_signature(_mesa_glsl_parse_state*, exec_list const*, bool, bool*)"
+869f0,152,<global>,_ZN11ir_function24exact_matching_signatureEP22_mesa_glsl_parse_statePK9exec_list,"ir_function::exact_matching_signature(_mesa_glsl_parse_state*, exec_list const*)"
+86a88,10,<global>,_ZN30ir_function_can_inline_visitor11visit_enterEP9ir_return,ir_function_can_inline_visitor::visit_enter(ir_return*)
+86a94,136,<global>,_Z10can_inlineP7ir_call,can_inline(ir_call*)
+86b1c,144,<global>,_Z25detect_recursion_unlinkedP22_mesa_glsl_parse_stateP9exec_list,"detect_recursion_unlinked(_mesa_glsl_parse_state*, exec_list*)"
+86bac,72,<global>,sub_86BAC,sub_86BAC
+86bf4,196,<global>,sub_86BF4,sub_86BF4
+86cb8,136,<global>,sub_86CB8,sub_86CB8
+86d40,144,<global>,_Z23detect_recursion_linkedP17gl_shader_programP9exec_list,"detect_recursion_linked(gl_shader_program*, exec_list*)"
+86dd0,84,<global>,sub_86DD0,sub_86DD0
+86e24,16,<global>,sub_86E24,sub_86E24
+86e34,8,<global>,sub_86E34,sub_86E34
+86e3c,116,<global>,sub_86E3C,sub_86E3C
+86eb0,92,<global>,sub_86EB0,sub_86EB0
+86f0c,4,<global>,nullsub_5,nullsub_5
+86f10,36,<global>,_ZN23ir_hierarchical_visitorC2Ev,ir_hierarchical_visitor::ir_hierarchical_visitor()
+86f34,24,<global>,_ZN23ir_hierarchical_visitor5visitEP9ir_rvalue,ir_hierarchical_visitor::visit(ir_rvalue*)
+86f4c,24,<global>,_ZN23ir_hierarchical_visitor5visitEP11ir_variable,ir_hierarchical_visitor::visit(ir_variable*)
+86f64,24,<global>,_ZN23ir_hierarchical_visitor5visitEP11ir_constant,ir_hierarchical_visitor::visit(ir_constant*)
+86f7c,24,<global>,_ZN23ir_hierarchical_visitor5visitEP12ir_loop_jump,ir_hierarchical_visitor::visit(ir_loop_jump*)
+86f94,24,<global>,_ZN23ir_hierarchical_visitor5visitEP22ir_precision_statement,ir_hierarchical_visitor::visit(ir_precision_statement*)
+86fac,24,<global>,_ZN23ir_hierarchical_visitor5visitEP21ir_typedecl_statement,ir_hierarchical_visitor::visit(ir_typedecl_statement*)
+86fc4,24,<global>,_ZN23ir_hierarchical_visitor5visitEP23ir_dereference_variable,ir_hierarchical_visitor::visit(ir_dereference_variable*)
+86fdc,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP7ir_loop,ir_hierarchical_visitor::visit_enter(ir_loop*)
+86ff4,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP7ir_loop,ir_hierarchical_visitor::visit_leave(ir_loop*)
+8700c,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP21ir_function_signature,ir_hierarchical_visitor::visit_enter(ir_function_signature*)
+87024,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP21ir_function_signature,ir_hierarchical_visitor::visit_leave(ir_function_signature*)
+8703c,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP11ir_function,ir_hierarchical_visitor::visit_enter(ir_function*)
+87054,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP11ir_function,ir_hierarchical_visitor::visit_leave(ir_function*)
+8706c,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP13ir_expression,ir_hierarchical_visitor::visit_enter(ir_expression*)
+87084,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP13ir_expression,ir_hierarchical_visitor::visit_leave(ir_expression*)
+8709c,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP10ir_texture,ir_hierarchical_visitor::visit_enter(ir_texture*)
+870b4,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP10ir_texture,ir_hierarchical_visitor::visit_leave(ir_texture*)
+870cc,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP10ir_swizzle,ir_hierarchical_visitor::visit_enter(ir_swizzle*)
+870e4,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP10ir_swizzle,ir_hierarchical_visitor::visit_leave(ir_swizzle*)
+870fc,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP20ir_dereference_array,ir_hierarchical_visitor::visit_enter(ir_dereference_array*)
+87114,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP20ir_dereference_array,ir_hierarchical_visitor::visit_leave(ir_dereference_array*)
+8712c,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP21ir_dereference_record,ir_hierarchical_visitor::visit_enter(ir_dereference_record*)
+87144,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP21ir_dereference_record,ir_hierarchical_visitor::visit_leave(ir_dereference_record*)
+8715c,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP13ir_assignment,ir_hierarchical_visitor::visit_enter(ir_assignment*)
+87174,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP13ir_assignment,ir_hierarchical_visitor::visit_leave(ir_assignment*)
+8718c,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP7ir_call,ir_hierarchical_visitor::visit_enter(ir_call*)
+871a4,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP7ir_call,ir_hierarchical_visitor::visit_leave(ir_call*)
+871bc,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP9ir_return,ir_hierarchical_visitor::visit_enter(ir_return*)
+871d4,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP9ir_return,ir_hierarchical_visitor::visit_leave(ir_return*)
+871ec,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP10ir_discard,ir_hierarchical_visitor::visit_enter(ir_discard*)
+87204,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP10ir_discard,ir_hierarchical_visitor::visit_leave(ir_discard*)
+8721c,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP5ir_if,ir_hierarchical_visitor::visit_enter(ir_if*)
+87234,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP5ir_if,ir_hierarchical_visitor::visit_leave(ir_if*)
+8724c,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP14ir_emit_vertex,ir_hierarchical_visitor::visit_enter(ir_emit_vertex*)
+87264,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP14ir_emit_vertex,ir_hierarchical_visitor::visit_leave(ir_emit_vertex*)
+8727c,24,<global>,_ZN23ir_hierarchical_visitor11visit_enterEP16ir_end_primitive,ir_hierarchical_visitor::visit_enter(ir_end_primitive*)
+87294,24,<global>,_ZN23ir_hierarchical_visitor11visit_leaveEP16ir_end_primitive,ir_hierarchical_visitor::visit_leave(ir_end_primitive*)
+872ac,6,<global>,_ZN23ir_hierarchical_visitor3runEP9exec_list,ir_hierarchical_visitor::run(exec_list*)
+872b4,112,<global>,_Z10visit_treeP14ir_instructionPFvS0_PvES1_S3_S1_,"visit_tree(ir_instruction*, void (*)(ir_instruction*, void*), void*, void (*)(ir_instruction*, void*), void*)"
+87324,76,<global>,_Z19visit_list_elementsP23ir_hierarchical_visitorP9exec_listb,"visit_list_elements(ir_hierarchical_visitor*, exec_list*, bool)"
+87370,12,<global>,_ZN9ir_rvalue6acceptEP23ir_hierarchical_visitor,ir_rvalue::accept(ir_hierarchical_visitor*)
+8737c,12,<global>,_ZN11ir_variable6acceptEP23ir_hierarchical_visitor,ir_variable::accept(ir_hierarchical_visitor*)
+87388,106,<global>,_ZN7ir_loop6acceptEP23ir_hierarchical_visitor,ir_loop::accept(ir_hierarchical_visitor*)
+873f2,12,<global>,_ZN12ir_loop_jump6acceptEP23ir_hierarchical_visitor,ir_loop_jump::accept(ir_hierarchical_visitor*)
+873fe,158,<global>,_ZN21ir_function_signature6acceptEP23ir_hierarchical_visitor,ir_function_signature::accept(ir_hierarchical_visitor*)
+8749c,96,<global>,_ZN11ir_function6acceptEP23ir_hierarchical_visitor,ir_function::accept(ir_hierarchical_visitor*)
+874fc,110,<global>,_ZN13ir_expression6acceptEP23ir_hierarchical_visitor,ir_expression::accept(ir_hierarchical_visitor*)
+8756c,138,<global>,_ZN10ir_texture6acceptEP23ir_hierarchical_visitor,ir_texture::accept(ir_hierarchical_visitor*)
+875f8,60,<global>,_ZN10ir_swizzle6acceptEP23ir_hierarchical_visitor,ir_swizzle::accept(ir_hierarchical_visitor*)
+87634,12,<global>,_ZN23ir_dereference_variable6acceptEP23ir_hierarchical_visitor,ir_dereference_variable::accept(ir_hierarchical_visitor*)
+87640,94,<global>,_ZN20ir_dereference_array6acceptEP23ir_hierarchical_visitor,ir_dereference_array::accept(ir_hierarchical_visitor*)
+8769e,60,<global>,_ZN21ir_dereference_record6acceptEP23ir_hierarchical_visitor,ir_dereference_record::accept(ir_hierarchical_visitor*)
+876da,96,<global>,_ZN13ir_assignment6acceptEP23ir_hierarchical_visitor,ir_assignment::accept(ir_hierarchical_visitor*)
+8773a,12,<global>,_ZN11ir_constant6acceptEP23ir_hierarchical_visitor,ir_constant::accept(ir_hierarchical_visitor*)
+87746,120,<global>,_ZN7ir_call6acceptEP23ir_hierarchical_visitor,ir_call::accept(ir_hierarchical_visitor*)
+877be,58,<global>,_ZN9ir_return6acceptEP23ir_hierarchical_visitor,ir_return::accept(ir_hierarchical_visitor*)
+877f8,58,<global>,_ZN10ir_discard6acceptEP23ir_hierarchical_visitor,ir_discard::accept(ir_hierarchical_visitor*)
+87832,174,<global>,_ZN5ir_if6acceptEP23ir_hierarchical_visitor,ir_if::accept(ir_hierarchical_visitor*)
+878e0,12,<global>,_ZN22ir_precision_statement6acceptEP23ir_hierarchical_visitor,ir_precision_statement::accept(ir_hierarchical_visitor*)
+878ec,12,<global>,_ZN21ir_typedecl_statement6acceptEP23ir_hierarchical_visitor,ir_typedecl_statement::accept(ir_hierarchical_visitor*)
+878f8,58,<global>,_ZN14ir_emit_vertex6acceptEP23ir_hierarchical_visitor,ir_emit_vertex::accept(ir_hierarchical_visitor*)
+87932,58,<global>,_ZN16ir_end_primitive6acceptEP23ir_hierarchical_visitor,ir_end_primitive::accept(ir_hierarchical_visitor*)
+8796c,22,<global>,_ZN14ir_emit_vertexD0Ev,ir_emit_vertex::~ir_emit_vertex()
+87982,12,<global>,_ZN14ir_emit_vertex6acceptEP10ir_visitor,ir_emit_vertex::accept(ir_visitor*)
+87990,80,<global>,_ZNK14ir_emit_vertex5cloneEPvP10hash_table,"ir_emit_vertex::clone(void*, hash_table*) const"
+879e0,22,<global>,_ZN16ir_end_primitiveD0Ev,ir_end_primitive::~ir_end_primitive()
+879f6,12,<global>,_ZN16ir_end_primitive6acceptEP10ir_visitor,ir_end_primitive::accept(ir_visitor*)
+87a04,84,<global>,_ZNK16ir_end_primitive5cloneEPvP10hash_table,"ir_end_primitive::clone(void*, hash_table*) const"
+87a58,96,<global>,_Z17import_prototypesPK9exec_listPS_P17glsl_symbol_tablePv,"import_prototypes(exec_list const*, exec_list*, glsl_symbol_table*, void*)"
+87ab8,48,<global>,sub_87AB8,sub_87AB8
+87ae8,100,<global>,sub_87AE8,sub_87AE8
+87b4c,8,<global>,sub_87B4C,sub_87B4C
+87b54,1368,<global>,_Z19_mesa_print_ir_glslP9exec_listP22_mesa_glsl_parse_statePc13PrintGlslMode,"_mesa_print_ir_glsl(exec_list*, _mesa_glsl_parse_state*, char*, PrintGlslMode)"
+880ac,76,<global>,_ZN13string_buffer15asprintf_appendEPKcz,"string_buffer::asprintf_append(char const*, ...)"
+880f8,2,<global>,_ZN10ir_visitorD2Ev,ir_visitor::~ir_visitor()
+880fc,60,<global>,_ZN21ir_print_glsl_visitor6indentEv,ir_print_glsl_visitor::indent()
+88138,44,<global>,_ZN21ir_print_glsl_visitor18end_statement_lineEv,ir_print_glsl_visitor::end_statement_line()
+88164,44,<global>,_ZN21ir_print_glsl_visitor14newline_indentEv,ir_print_glsl_visitor::newline_indent()
+88190,44,<global>,_ZN21ir_print_glsl_visitor16newline_deindentEv,ir_print_glsl_visitor::newline_deindent()
+881bc,136,<global>,_ZN21ir_print_glsl_visitor14print_var_nameEP11ir_variable,ir_print_glsl_visitor::print_var_name(ir_variable*)
+88244,224,<global>,_ZN21ir_print_glsl_visitor15print_precisionEP14ir_instructionPK9glsl_type,"ir_print_glsl_visitor::print_precision(ir_instruction*, glsl_type const*)"
+88324,512,<global>,_ZN21ir_print_glsl_visitor5visitEP11ir_variable,ir_print_glsl_visitor::visit(ir_variable*)
+88524,44,<global>,_ZN21ir_print_glsl_visitor22can_emit_canonical_forEP19loop_variable_state,ir_print_glsl_visitor::can_emit_canonical_for(loop_variable_state*)
+88550,104,<global>,sub_88550,sub_88550
+885b8,436,<global>,_ZN21ir_print_glsl_visitor5visitEP21ir_function_signature,ir_print_glsl_visitor::visit(ir_function_signature*)
+8876c,168,<global>,_ZN21ir_print_glsl_visitor5visitEP11ir_function,ir_print_glsl_visitor::visit(ir_function*)
+88814,636,<global>,_ZN21ir_print_glsl_visitor5visitEP13ir_expression,ir_print_glsl_visitor::visit(ir_expression*)
+88a90,636,<global>,_ZN21ir_print_glsl_visitor5visitEP10ir_texture,ir_print_glsl_visitor::visit(ir_texture*)
+88d0c,380,<global>,_ZN21ir_print_glsl_visitor5visitEP10ir_swizzle,ir_print_glsl_visitor::visit(ir_swizzle*)
+88e88,26,<global>,_ZN21ir_print_glsl_visitor5visitEP23ir_dereference_variable,ir_print_glsl_visitor::visit(ir_dereference_variable*)
+88ea4,56,<global>,_ZN21ir_print_glsl_visitor5visitEP20ir_dereference_array,ir_print_glsl_visitor::visit(ir_dereference_array*)
+88edc,36,<global>,_ZN21ir_print_glsl_visitor5visitEP21ir_dereference_record,ir_print_glsl_visitor::visit(ir_dereference_record*)
+88efc,4,<global>,sub_88EFC,sub_88EFC
+88f00,184,<global>,_ZN21ir_print_glsl_visitor26try_print_array_assignmentEP14ir_dereferenceP9ir_rvalue,"ir_print_glsl_visitor::try_print_array_assignment(ir_dereference*, ir_rvalue*)"
+88fb8,424,<global>,_ZN21ir_print_glsl_visitor20emit_assignment_partEP14ir_dereferenceP9ir_rvaluejS3_,"ir_print_glsl_visitor::emit_assignment_part(ir_dereference*, ir_rvalue*, unsigned int, ir_rvalue*)"
+89160,564,<global>,_ZN21ir_print_glsl_visitor5visitEP13ir_assignment,ir_print_glsl_visitor::visit(ir_assignment*)
+89394,260,<global>,_Z11print_floatR13string_bufferf,"print_float(string_buffer&, float)"
+89498,672,<global>,_ZN21ir_print_glsl_visitor5visitEP11ir_constant,ir_print_glsl_visitor::visit(ir_constant*)
+89738,228,<global>,_ZN21ir_print_glsl_visitor5visitEP7ir_call,ir_print_glsl_visitor::visit(ir_call*)
+8981c,56,<global>,_ZN21ir_print_glsl_visitor5visitEP9ir_return,ir_print_glsl_visitor::visit(ir_return*)
+89854,60,<global>,_ZN21ir_print_glsl_visitor5visitEP10ir_discard,ir_print_glsl_visitor::visit(ir_discard*)
+89890,348,<global>,_ZN21ir_print_glsl_visitor5visitEP5ir_if,ir_print_glsl_visitor::visit(ir_if*)
+899ec,852,<global>,_ZN21ir_print_glsl_visitor18emit_canonical_forEP7ir_loop,ir_print_glsl_visitor::emit_canonical_for(ir_loop*)
+89d40,184,<global>,_ZN21ir_print_glsl_visitor5visitEP7ir_loop,ir_print_glsl_visitor::visit(ir_loop*)
+89df8,44,<global>,_ZN21ir_print_glsl_visitor5visitEP12ir_loop_jump,ir_print_glsl_visitor::visit(ir_loop_jump*)
+89e24,16,<global>,_ZN21ir_print_glsl_visitor5visitEP22ir_precision_statement,ir_print_glsl_visitor::visit(ir_precision_statement*)
+89e34,236,<global>,_ZN21ir_print_glsl_visitor5visitEP21ir_typedecl_statement,ir_print_glsl_visitor::visit(ir_typedecl_statement*)
+89f20,28,<global>,_ZN21ir_print_glsl_visitor5visitEP14ir_emit_vertex,ir_print_glsl_visitor::visit(ir_emit_vertex*)
+89f3c,28,<global>,_ZN21ir_print_glsl_visitor5visitEP16ir_end_primitive,ir_print_glsl_visitor::visit(ir_end_primitive*)
+89f58,4,<global>,_ZN21ir_print_glsl_visitorD0Ev,ir_print_glsl_visitor::~ir_print_glsl_visitor()
+89f5c,2,<global>,_ZN10ir_visitor5visitEP9ir_rvalue,ir_visitor::visit(ir_rvalue*)
+89f5e,94,<global>,_ZN13string_buffer22vasprintf_rewrite_tailEPjPKcSt9__va_list,"string_buffer::vasprintf_rewrite_tail(unsigned int*, char const*, std::__va_list)"
+89fbc,1188,<global>,_Z20_mesa_print_ir_metalP9exec_listP22_mesa_glsl_parse_statePc13PrintGlslModePi,"_mesa_print_ir_metal(exec_list*, _mesa_glsl_parse_state*, char*, PrintGlslMode, int*)"
+8a460,224,<global>,_ZN19metal_print_contextC2EPc,metal_print_context::metal_print_context(char*)
+8a540,116,<global>,_ZN26global_print_tracker_metalC2Ev,global_print_tracker_metal::global_print_tracker_metal()
+8a5b4,60,<global>,_ZN22ir_print_metal_visitor6indentEv,ir_print_metal_visitor::indent()
+8a5f0,44,<global>,_ZN22ir_print_metal_visitor18end_statement_lineEv,ir_print_metal_visitor::end_statement_line()
+8a61c,44,<global>,_ZN22ir_print_metal_visitor14newline_indentEv,ir_print_metal_visitor::newline_indent()
+8a648,44,<global>,_ZN22ir_print_metal_visitor16newline_deindentEv,ir_print_metal_visitor::newline_deindent()
+8a674,136,<global>,_ZN22ir_print_metal_visitor14print_var_nameEP11ir_variable,ir_print_metal_visitor::print_var_name(ir_variable*)
+8a6fc,1268,<global>,_ZN22ir_print_metal_visitor5visitEP11ir_variable,ir_print_metal_visitor::visit(ir_variable*)
+8abf0,44,<global>,_ZN22ir_print_metal_visitor22can_emit_canonical_forEP19loop_variable_state,ir_print_metal_visitor::can_emit_canonical_for(loop_variable_state*)
+8ac1c,664,<global>,_ZN22ir_print_metal_visitor5visitEP21ir_function_signature,ir_print_metal_visitor::visit(ir_function_signature*)
+8aeb4,168,<global>,_ZN22ir_print_metal_visitor5visitEP11ir_function,ir_print_metal_visitor::visit(ir_function*)
+8af5c,1816,<global>,_ZN22ir_print_metal_visitor5visitEP13ir_expression,ir_print_metal_visitor::visit(ir_expression*)
+8b674,56,<global>,sub_8B674,sub_8B674
+8b6ac,1204,<global>,sub_8B6AC,sub_8B6AC
+8bb60,836,<global>,_ZN22ir_print_metal_visitor5visitEP10ir_texture,ir_print_metal_visitor::visit(ir_texture*)
+8bea4,348,<global>,_ZN22ir_print_metal_visitor5visitEP10ir_swizzle,ir_print_metal_visitor::visit(ir_swizzle*)
+8c000,40,<global>,_ZN22ir_print_metal_visitor5visitEP23ir_dereference_variable,ir_print_metal_visitor::visit(ir_dereference_variable*)
+8c028,156,<global>,sub_8C028,sub_8C028
+8c0c4,56,<global>,_ZN22ir_print_metal_visitor5visitEP20ir_dereference_array,ir_print_metal_visitor::visit(ir_dereference_array*)
+8c0fc,36,<global>,_ZN22ir_print_metal_visitor5visitEP21ir_dereference_record,ir_print_metal_visitor::visit(ir_dereference_record*)
+8c11c,4,<global>,sub_8C11C,sub_8C11C
+8c120,648,<global>,_ZN22ir_print_metal_visitor20emit_assignment_partEP14ir_dereferenceP9ir_rvaluejS3_,"ir_print_metal_visitor::emit_assignment_part(ir_dereference*, ir_rvalue*, unsigned int, ir_rvalue*)"
+8c3a8,536,<global>,_ZN22ir_print_metal_visitor5visitEP13ir_assignment,ir_print_metal_visitor::visit(ir_assignment*)
+8c5c0,616,<global>,_ZN22ir_print_metal_visitor5visitEP11ir_constant,ir_print_metal_visitor::visit(ir_constant*)
+8c828,228,<global>,_ZN22ir_print_metal_visitor5visitEP7ir_call,ir_print_metal_visitor::visit(ir_call*)
+8c90c,56,<global>,_ZN22ir_print_metal_visitor5visitEP9ir_return,ir_print_metal_visitor::visit(ir_return*)
+8c944,72,<global>,_ZN22ir_print_metal_visitor5visitEP10ir_discard,ir_print_metal_visitor::visit(ir_discard*)
+8c98c,348,<global>,_ZN22ir_print_metal_visitor5visitEP5ir_if,ir_print_metal_visitor::visit(ir_if*)
+8cae8,816,<global>,_ZN22ir_print_metal_visitor18emit_canonical_forEP7ir_loop,ir_print_metal_visitor::emit_canonical_for(ir_loop*)
+8ce18,184,<global>,_ZN22ir_print_metal_visitor5visitEP7ir_loop,ir_print_metal_visitor::visit(ir_loop*)
+8ced0,44,<global>,_ZN22ir_print_metal_visitor5visitEP12ir_loop_jump,ir_print_metal_visitor::visit(ir_loop_jump*)
+8cefc,2,<global>,_ZN22ir_print_metal_visitor5visitEP22ir_precision_statement,ir_print_metal_visitor::visit(ir_precision_statement*)
+8cf00,208,<global>,_ZN22ir_print_metal_visitor5visitEP21ir_typedecl_statement,ir_print_metal_visitor::visit(ir_typedecl_statement*)
+8cfd0,28,<global>,_ZN22ir_print_metal_visitor5visitEP14ir_emit_vertex,ir_print_metal_visitor::visit(ir_emit_vertex*)
+8cfec,28,<global>,_ZN22ir_print_metal_visitor5visitEP16ir_end_primitive,ir_print_metal_visitor::visit(ir_end_primitive*)
+8d008,4,<global>,_ZN22ir_print_metal_visitorD0Ev,ir_print_metal_visitor::~ir_print_metal_visitor()
+8d00c,16,<global>,_ZNK14ir_instruction5printEv,ir_instruction::print() const
+8d01c,144,<global>,_ZNK14ir_instruction6fprintEP7__sFILE,ir_instruction::fprint(__sFILE*) const
+8d0ac,296,<global>,_mesa_print_ir,_mesa_print_ir
+8d1d4,128,<global>,sub_8D1D4,sub_8D1D4
+8d254,10,<global>,fprint_ir,fprint_ir
+8d260,72,<global>,_ZN16ir_print_visitorC2EP7__sFILE,ir_print_visitor::ir_print_visitor(__sFILE*)
+8d2a8,44,<global>,_ZN16ir_print_visitorD2Ev,ir_print_visitor::~ir_print_visitor()
+8d2d4,16,<global>,_ZN16ir_print_visitorD0Ev,ir_print_visitor::~ir_print_visitor()
+8d2e4,52,<global>,_ZN16ir_print_visitor6indentEv,ir_print_visitor::indent()
+8d318,160,<global>,_ZN16ir_print_visitor11unique_nameEP11ir_variable,ir_print_visitor::unique_name(ir_variable*)
+8d3b8,24,<global>,_ZN16ir_print_visitor5visitEP9ir_rvalue,ir_print_visitor::visit(ir_rvalue*)
+8d3d0,236,<global>,_ZN16ir_print_visitor5visitEP11ir_variable,ir_print_visitor::visit(ir_variable*)
+8d4bc,332,<global>,_ZN16ir_print_visitor5visitEP21ir_function_signature,ir_print_visitor::visit(ir_function_signature*)
+8d608,140,<global>,_ZN16ir_print_visitor5visitEP11ir_function,ir_print_visitor::visit(ir_function*)
+8d694,152,<global>,_ZN16ir_print_visitor5visitEP13ir_expression,ir_print_visitor::visit(ir_expression*)
+8d72c,228,<global>,_ZN16ir_print_visitor5visitEP10ir_texture,ir_print_visitor::visit(ir_texture*)
+8d810,204,<global>,_ZN16ir_print_visitor5visitEP10ir_swizzle,ir_print_visitor::visit(ir_swizzle*)
+8d8dc,56,<global>,_ZN16ir_print_visitor5visitEP23ir_dereference_variable,ir_print_visitor::visit(ir_dereference_variable*)
+8d914,72,<global>,_ZN16ir_print_visitor5visitEP20ir_dereference_array,ir_print_visitor::visit(ir_dereference_array*)
+8d95c,68,<global>,_ZN16ir_print_visitor5visitEP21ir_dereference_record,ir_print_visitor::visit(ir_dereference_record*)
+8d9a0,220,<global>,_ZN16ir_print_visitor5visitEP13ir_assignment,ir_print_visitor::visit(ir_assignment*)
+8da80,532,<global>,_ZN16ir_print_visitor5visitEP11ir_constant,ir_print_visitor::visit(ir_constant*)
+8dc94,112,<global>,_ZN16ir_print_visitor5visitEP7ir_call,ir_print_visitor::visit(ir_call*)
+8dd04,64,<global>,_ZN16ir_print_visitor5visitEP9ir_return,ir_print_visitor::visit(ir_return*)
+8dd44,68,<global>,_ZN16ir_print_visitor5visitEP10ir_discard,ir_print_visitor::visit(ir_discard*)
+8dd88,300,<global>,_ZN16ir_print_visitor5visitEP5ir_if,ir_print_visitor::visit(ir_if*)
+8deb4,136,<global>,_ZN16ir_print_visitor5visitEP7ir_loop,ir_print_visitor::visit(ir_loop*)
+8df3c,44,<global>,_ZN16ir_print_visitor5visitEP12ir_loop_jump,ir_print_visitor::visit(ir_loop_jump*)
+8df68,2,<global>,_ZN16ir_print_visitor5visitEP22ir_precision_statement,ir_print_visitor::visit(ir_precision_statement*)
+8df6a,2,<global>,_ZN16ir_print_visitor5visitEP21ir_typedecl_statement,ir_print_visitor::visit(ir_typedecl_statement*)
+8df6c,68,<global>,_ZN16ir_print_visitor5visitEP14ir_emit_vertex,ir_print_visitor::visit(ir_emit_vertex*)
+8dfb0,68,<global>,_ZN16ir_print_visitor5visitEP16ir_end_primitive,ir_print_visitor::visit(ir_end_primitive*)
+8dff4,72,<global>,_ZN22ir_rvalue_base_visitor12rvalue_visitEP13ir_expression,ir_rvalue_base_visitor::rvalue_visit(ir_expression*)
+8e03c,96,<global>,_ZN22ir_rvalue_base_visitor12rvalue_visitEP10ir_texture,ir_rvalue_base_visitor::rvalue_visit(ir_texture*)
+8e09c,18,<global>,_ZN22ir_rvalue_base_visitor12rvalue_visitEP10ir_swizzle,ir_rvalue_base_visitor::rvalue_visit(ir_swizzle*)
+8e0ae,56,<global>,_ZN22ir_rvalue_base_visitor12rvalue_visitEP20ir_dereference_array,ir_rvalue_base_visitor::rvalue_visit(ir_dereference_array*)
+8e0e6,18,<global>,_ZN22ir_rvalue_base_visitor12rvalue_visitEP21ir_dereference_record,ir_rvalue_base_visitor::rvalue_visit(ir_dereference_record*)
+8e0f8,40,<global>,_ZN22ir_rvalue_base_visitor12rvalue_visitEP13ir_assignment,ir_rvalue_base_visitor::rvalue_visit(ir_assignment*)
+8e120,136,<global>,_ZN22ir_rvalue_base_visitor12rvalue_visitEP7ir_call,ir_rvalue_base_visitor::rvalue_visit(ir_call*)
+8e1a8,18,<global>,_ZN22ir_rvalue_base_visitor12rvalue_visitEP9ir_return,ir_rvalue_base_visitor::rvalue_visit(ir_return*)
+8e1ba,18,<global>,_ZN22ir_rvalue_base_visitor12rvalue_visitEP5ir_if,ir_rvalue_base_visitor::rvalue_visit(ir_if*)
+8e1cc,18,<global>,_ZN22ir_rvalue_base_visitor12rvalue_visitEP14ir_emit_vertex,ir_rvalue_base_visitor::rvalue_visit(ir_emit_vertex*)
+8e1de,18,<global>,_ZN22ir_rvalue_base_visitor12rvalue_visitEP16ir_end_primitive,ir_rvalue_base_visitor::rvalue_visit(ir_end_primitive*)
+8e1f0,12,<global>,_ZN17ir_rvalue_visitor11visit_leaveEP13ir_expression,ir_rvalue_visitor::visit_leave(ir_expression*)
+8e1fc,12,<global>,_ZN17ir_rvalue_visitor11visit_leaveEP10ir_texture,ir_rvalue_visitor::visit_leave(ir_texture*)
+8e208,18,<global>,_ZN17ir_rvalue_visitor11visit_leaveEP10ir_swizzle,ir_rvalue_visitor::visit_leave(ir_swizzle*)
+8e21a,56,<global>,_ZN17ir_rvalue_visitor11visit_leaveEP20ir_dereference_array,ir_rvalue_visitor::visit_leave(ir_dereference_array*)
+8e252,18,<global>,_ZN17ir_rvalue_visitor11visit_leaveEP21ir_dereference_record,ir_rvalue_visitor::visit_leave(ir_dereference_record*)
+8e264,40,<global>,_ZN17ir_rvalue_visitor11visit_leaveEP13ir_assignment,ir_rvalue_visitor::visit_leave(ir_assignment*)
+8e28c,12,<global>,_ZN17ir_rvalue_visitor11visit_leaveEP7ir_call,ir_rvalue_visitor::visit_leave(ir_call*)
+8e298,18,<global>,_ZN17ir_rvalue_visitor11visit_leaveEP9ir_return,ir_rvalue_visitor::visit_leave(ir_return*)
+8e2aa,18,<global>,_ZN17ir_rvalue_visitor11visit_leaveEP5ir_if,ir_rvalue_visitor::visit_leave(ir_if*)
+8e2bc,18,<global>,_ZN17ir_rvalue_visitor11visit_leaveEP14ir_emit_vertex,ir_rvalue_visitor::visit_leave(ir_emit_vertex*)
+8e2ce,18,<global>,_ZN17ir_rvalue_visitor11visit_leaveEP16ir_end_primitive,ir_rvalue_visitor::visit_leave(ir_end_primitive*)
+8e2e0,12,<global>,_ZN23ir_rvalue_enter_visitor11visit_enterEP13ir_expression,ir_rvalue_enter_visitor::visit_enter(ir_expression*)
+8e2ec,12,<global>,_ZN23ir_rvalue_enter_visitor11visit_enterEP10ir_texture,ir_rvalue_enter_visitor::visit_enter(ir_texture*)
+8e2f8,18,<global>,_ZN23ir_rvalue_enter_visitor11visit_enterEP10ir_swizzle,ir_rvalue_enter_visitor::visit_enter(ir_swizzle*)
+8e30a,56,<global>,_ZN23ir_rvalue_enter_visitor11visit_enterEP20ir_dereference_array,ir_rvalue_enter_visitor::visit_enter(ir_dereference_array*)
+8e342,18,<global>,_ZN23ir_rvalue_enter_visitor11visit_enterEP21ir_dereference_record,ir_rvalue_enter_visitor::visit_enter(ir_dereference_record*)
+8e354,40,<global>,_ZN23ir_rvalue_enter_visitor11visit_enterEP13ir_assignment,ir_rvalue_enter_visitor::visit_enter(ir_assignment*)
+8e37c,12,<global>,_ZN23ir_rvalue_enter_visitor11visit_enterEP7ir_call,ir_rvalue_enter_visitor::visit_enter(ir_call*)
+8e388,18,<global>,_ZN23ir_rvalue_enter_visitor11visit_enterEP9ir_return,ir_rvalue_enter_visitor::visit_enter(ir_return*)
+8e39a,18,<global>,_ZN23ir_rvalue_enter_visitor11visit_enterEP5ir_if,ir_rvalue_enter_visitor::visit_enter(ir_if*)
+8e3ac,18,<global>,_ZN23ir_rvalue_enter_visitor11visit_enterEP14ir_emit_vertex,ir_rvalue_enter_visitor::visit_enter(ir_emit_vertex*)
+8e3be,18,<global>,_ZN23ir_rvalue_enter_visitor11visit_enterEP16ir_end_primitive,ir_rvalue_enter_visitor::visit_enter(ir_end_primitive*)
+8e3d0,112,<global>,_Z22calculate_shader_statsP9exec_listPiS1_S1_,"calculate_shader_stats(exec_list*, int*, int*, int*)"
+8e440,10,<global>,_ZN24ir_stats_counter_visitor11visit_leaveEP7ir_loop,ir_stats_counter_visitor::visit_leave(ir_loop*)
+8e44a,10,<global>,_ZN24ir_stats_counter_visitor11visit_leaveEP13ir_expression,ir_stats_counter_visitor::visit_leave(ir_expression*)
+8e454,10,<global>,_ZN24ir_stats_counter_visitor11visit_leaveEP10ir_texture,ir_stats_counter_visitor::visit_leave(ir_texture*)
+8e45e,22,<global>,_ZN24ir_stats_counter_visitor11visit_leaveEP13ir_assignment,ir_stats_counter_visitor::visit_leave(ir_assignment*)
+8e474,10,<global>,_ZN24ir_stats_counter_visitor11visit_leaveEP9ir_return,ir_stats_counter_visitor::visit_leave(ir_return*)
+8e47e,10,<global>,_ZN24ir_stats_counter_visitor11visit_leaveEP10ir_discard,ir_stats_counter_visitor::visit_leave(ir_discard*)
+8e488,10,<global>,_ZN24ir_stats_counter_visitor11visit_leaveEP5ir_if,ir_stats_counter_visitor::visit_leave(ir_if*)
+8e492,28,<global>,_ZNK23ir_struct_usage_visitor16has_struct_entryEPK9glsl_type,ir_struct_usage_visitor::has_struct_entry(glsl_type const*) const
+8e4b0,92,<global>,_ZN23ir_struct_usage_visitor5visitEP23ir_dereference_variable,ir_struct_usage_visitor::visit(ir_dereference_variable*)
+8e50c,92,<global>,_ZN23ir_struct_usage_visitorC2Ev,ir_struct_usage_visitor::ir_struct_usage_visitor()
+8e568,108,<global>,sub_8E568,sub_8E568
+8e5d4,32,<global>,_ZN23ir_struct_usage_visitorD2Ev,ir_struct_usage_visitor::~ir_struct_usage_visitor()
+8e5f4,112,<global>,_Z26do_remove_unused_typedeclsP9exec_list,do_remove_unused_typedecls(exec_list*)
+8e664,46,<global>,_ZN23ir_decl_removal_visitor5visitEP21ir_typedecl_statement,ir_decl_removal_visitor::visit(ir_typedecl_statement*)
+8e694,72,<global>,_Z15check_node_typeP14ir_instructionPv,"check_node_type(ir_instruction*, void*)"
+8e6dc,2,<global>,_Z16validate_ir_treeP9exec_list,validate_ir_tree(exec_list*)
+8e6e0,60,<global>,_ZN28ir_variable_refcount_visitorC2Ev,ir_variable_refcount_visitor::ir_variable_refcount_visitor()
+8e71c,44,<global>,_ZN28ir_variable_refcount_visitorD2Ev,ir_variable_refcount_visitor::~ir_variable_refcount_visitor()
+8e748,12,<global>,sub_8E748,sub_8E748
+8e754,20,<global>,_ZN26ir_variable_refcount_entryC2EP11ir_variable,ir_variable_refcount_entry::ir_variable_refcount_entry(ir_variable*)
+8e768,132,<global>,_ZN28ir_variable_refcount_visitor18get_variable_entryEP11ir_variable,ir_variable_refcount_visitor::get_variable_entry(ir_variable*)
+8e7ec,80,<global>,_ZN28ir_variable_refcount_visitor19find_variable_entryEP11ir_variable,ir_variable_refcount_visitor::find_variable_entry(ir_variable*)
+8e83c,18,<global>,_ZN28ir_variable_refcount_visitor5visitEP11ir_variable,ir_variable_refcount_visitor::visit(ir_variable*)
+8e84e,52,<global>,_ZN28ir_variable_refcount_visitor5visitEP23ir_dereference_variable,ir_variable_refcount_visitor::visit(ir_dereference_variable*)
+8e882,16,<global>,_ZN28ir_variable_refcount_visitor11visit_enterEP21ir_function_signature,ir_variable_refcount_visitor::visit_enter(ir_function_signature*)
+8e892,20,<global>,_ZN28ir_variable_refcount_visitor11visit_enterEP13ir_assignment,ir_variable_refcount_visitor::visit_enter(ir_assignment*)
+8e8a6,50,<global>,_ZN28ir_variable_refcount_visitor11visit_leaveEP13ir_assignment,ir_variable_refcount_visitor::visit_leave(ir_assignment*)
+8e8d8,348,<global>,_Z36link_assign_atomic_counter_resourcesP10gl_contextP17gl_shader_program,"link_assign_atomic_counter_resources(gl_context*, gl_shader_program*)"
+8ea34,588,<global>,sub_8EA34,sub_8EA34
+8ec80,460,<global>,_Z35link_check_atomic_counter_resourcesP10gl_contextP17gl_shader_program,"link_check_atomic_counter_resources(gl_context*, gl_shader_program*)"
+8ee4c,12,<global>,sub_8EE4C,sub_8EE4C
+8ee58,152,<global>,_Z19link_function_callsP17gl_shader_programP9gl_shaderPS2_j,"link_function_calls(gl_shader_program*, gl_shader*, gl_shader**, unsigned int)"
+8eef0,16,<global>,sub_8EEF0,sub_8EEF0
+8ef00,212,<global>,sub_8EF00,sub_8EF00
+8efd4,624,<global>,sub_8EFD4,sub_8EFD4
+8f244,112,<global>,sub_8F244,sub_8F244
+8f2b4,104,<global>,sub_8F2B4,sub_8F2B4
+8f31c,472,<global>,_Z36validate_intrastage_interface_blocksP17gl_shader_programPPK9gl_shaderj,"validate_intrastage_interface_blocks(gl_shader_program*, gl_shader const**, unsigned int)"
+8f4f4,136,<global>,sub_8F4F4,sub_8F4F4
+8f57c,380,<global>,_Z32validate_interstage_inout_blocksP17gl_shader_programPK9gl_shaderS3_,"validate_interstage_inout_blocks(gl_shader_program*, gl_shader const*, gl_shader const*)"
+8f6f8,376,<global>,_Z34validate_interstage_uniform_blocksP17gl_shader_programPP9gl_shaderi,"validate_interstage_uniform_blocks(gl_shader_program*, gl_shader**, int)"
+8f870,204,<global>,_Z13process_blockPvP10hash_tableP11ir_variable,"process_block(void*, hash_table*, ir_variable*)"
+8f93c,112,<global>,_ZN33link_uniform_block_active_visitor5visitEP11ir_variable,link_uniform_block_active_visitor::visit(ir_variable*)
+8f9ac,268,<global>,_ZN33link_uniform_block_active_visitor11visit_enterEP20ir_dereference_array,link_uniform_block_active_visitor::visit_enter(ir_dereference_array*)
+8fab8,76,<global>,_ZN33link_uniform_block_active_visitor5visitEP23ir_dereference_variable,link_uniform_block_active_visitor::visit(ir_dereference_variable*)
+8fb04,844,<global>,_Z19link_uniform_blocksPvP17gl_shader_programPP9gl_shaderjPP16gl_uniform_block,"link_uniform_blocks(void*, gl_shader_program*, gl_shader**, unsigned int, gl_uniform_block**)"
+8fe50,98,<global>,_Z34link_uniform_blocks_are_compatiblePK16gl_uniform_blockS1_,"link_uniform_blocks_are_compatible(gl_uniform_block const*, gl_uniform_block const*)"
+8feb2,8,<global>,sub_8FEB2,sub_8FEB2
+8feba,246,<global>,sub_8FEBA,sub_8FEBA
+8ffb0,2,<global>,nullsub_4,nullsub_4
+8ffb2,34,<global>,sub_8FFB2,sub_8FFB2
+8ffd4,46,<global>,_ZN6linker11get_storageEP18gl_uniform_storagejPKc,"linker::get_storage(gl_uniform_storage*, unsigned int, char const*)"
+90004,58,<global>,_ZN6linker24copy_constant_to_storageEP17gl_constant_valuePK11ir_constant14glsl_base_typejj,"linker::copy_constant_to_storage(gl_constant_value*, ir_constant const*, glsl_base_type, unsigned int, unsigned int)"
+90040,170,<global>,_ZN6linker19set_sampler_bindingEP17gl_shader_programPKci,"linker::set_sampler_binding(gl_shader_program*, char const*, int)"
+900ea,98,<global>,_ZN6linker17set_block_bindingEP17gl_shader_programPKci,"linker::set_block_binding(gl_shader_program*, char const*, int)"
+9014c,492,<global>,_ZN6linker23set_uniform_initializerEPvP17gl_shader_programPKcPK9glsl_typeP11ir_constantj,"linker::set_uniform_initializer(void*, gl_shader_program*, char const*, glsl_type const*, ir_constant*, unsigned int)"
+90338,324,<global>,_Z29link_set_uniform_initializersP17gl_shader_programj,"link_set_uniform_initializers(gl_shader_program*, unsigned int)"
+9047c,104,<global>,_ZN24program_resource_visitor7processEPK9glsl_typePKc,"program_resource_visitor::process(glsl_type const*, char const*)"
+904e4,384,<global>,_ZN24program_resource_visitor9recursionEPK9glsl_typePPcjbS2_b,"program_resource_visitor::recursion(glsl_type const*, char**, unsigned int, bool, glsl_type const*, bool)"
+90664,356,<global>,_ZN24program_resource_visitor7processEP11ir_variable,program_resource_visitor::process(ir_variable*)
+907c8,10,<global>,_ZN24program_resource_visitor11visit_fieldEPK9glsl_typePKcbS2_b,"program_resource_visitor::visit_field(glsl_type const*, char const*, bool, glsl_type const*, bool)"
+907d2,2,<global>,_ZN24program_resource_visitor11visit_fieldEPK17glsl_struct_field,program_resource_visitor::visit_field(glsl_struct_field const*)
+907d4,276,<global>,_Z33link_cross_validate_uniform_blockPvPP16gl_uniform_blockPjS1_,"link_cross_validate_uniform_block(void*, gl_uniform_block**, unsigned int*, gl_uniform_block*)"
+908e8,1328,<global>,_Z29link_assign_uniform_locationsP17gl_shader_programj,"link_assign_uniform_locations(gl_shader_program*, unsigned int)"
+90e18,378,<global>,_ZN26parcel_out_uniform_storage15set_and_processEP17gl_shader_programP11ir_variable,"parcel_out_uniform_storage::set_and_process(gl_shader_program*, ir_variable*)"
+90f92,4,<global>,_ZN18string_to_uint_map10delete_keyEPKvPvS2_,"string_to_uint_map::delete_key(void const*, void*, void*)"
+90f96,136,<global>,sub_90F96,sub_90F96
+9101e,54,<global>,_ZN18string_to_uint_map3putEjPKc,"string_to_uint_map::put(unsigned int, char const*)"
+91054,500,<global>,_ZN26parcel_out_uniform_storage11visit_fieldEPK9glsl_typePKcbS2_b,"parcel_out_uniform_storage::visit_field(glsl_type const*, char const*, bool, glsl_type const*, bool)"
+91248,2,<global>,_ZN26parcel_out_uniform_storage11visit_fieldEPK9glsl_typePKcb,"parcel_out_uniform_storage::visit_field(glsl_type const*, char const*, bool)"
+9124a,158,<global>,_ZN26parcel_out_uniform_storage15handle_samplersEPK9glsl_typeP18gl_uniform_storage,"parcel_out_uniform_storage::handle_samplers(glsl_type const*, gl_uniform_storage*)"
+912e8,52,<global>,_ZN26parcel_out_uniform_storage13handle_imagesEPK9glsl_typeP18gl_uniform_storage,"parcel_out_uniform_storage::handle_images(glsl_type const*, gl_uniform_storage*)"
+9131c,596,<global>,_Z32cross_validate_outputs_to_inputsP17gl_shader_programP9gl_shaderS2_,"cross_validate_outputs_to_inputs(gl_shader_program*, gl_shader*, gl_shader*)"
+91570,76,<global>,sub_91570,sub_91570
+915bc,480,<global>,sub_915BC,sub_915BC
+9179c,352,<global>,_ZN14tfeedback_decl4initEP10gl_contextPKvPKc,"tfeedback_decl::init(gl_context*, void const*, char const*)"
+918fc,44,<global>,_ZN14tfeedback_decl7is_sameERKS_S1_,"tfeedback_decl::is_same(tfeedback_decl const&, tfeedback_decl const&)"
+91928,288,<global>,_ZN14tfeedback_decl15assign_locationEP10gl_contextP17gl_shader_program,"tfeedback_decl::assign_location(gl_context*, gl_shader_program*)"
+91a48,42,<global>,_ZNK14tfeedback_decl15get_num_outputsEv,tfeedback_decl::get_num_outputs() const
+91a74,280,<global>,_ZNK14tfeedback_decl5storeEP10gl_contextP17gl_shader_programP26gl_transform_feedback_infojj,"tfeedback_decl::store(gl_context*, gl_shader_program*, gl_transform_feedback_info*, unsigned int, unsigned int) const"
+91b8c,112,<global>,_ZN14tfeedback_decl14find_candidateEP17gl_shader_programP10hash_table,"tfeedback_decl::find_candidate(gl_shader_program*, hash_table*)"
+91bfc,196,<global>,_Z21parse_tfeedback_declsP10gl_contextP17gl_shader_programPKvjPPcP14tfeedback_decl,"parse_tfeedback_decls(gl_context*, gl_shader_program*, void const*, unsigned int, char**, tfeedback_decl*)"
+91cc0,280,<global>,_Z20store_tfeedback_infoP10gl_contextP17gl_shader_programjP14tfeedback_decl,"store_tfeedback_info(gl_context*, gl_shader_program*, unsigned int, tfeedback_decl*)"
+91dd8,172,<global>,_ZN6linker28populate_consumer_input_setsEPvP9exec_listP10hash_tableS4_PP11ir_variable,"linker::populate_consumer_input_sets(void*, exec_list*, hash_table*, hash_table*, ir_variable**)"
+91e84,84,<global>,_ZN6linker18get_matching_inputEPvPK11ir_variableP10hash_tableS5_PPS1_,"linker::get_matching_input(void*, ir_variable const*, hash_table*, hash_table*, ir_variable**)"
+91ed8,1148,<global>,_Z24assign_varying_locationsP10gl_contextPvP17gl_shader_programP9gl_shaderS5_jP14tfeedback_declj,"assign_varying_locations(gl_context*, void*, gl_shader_program*, gl_shader*, gl_shader*, unsigned int, tfeedback_decl*, unsigned int)"
+92354,196,<global>,sub_92354,sub_92354
+92418,42,<global>,_ZN29tfeedback_candidate_generator7processEP11ir_variable,tfeedback_candidate_generator::process(ir_variable*)
+92444,340,<global>,sub_92444,sub_92444
+92598,22,<global>,_Z26check_against_output_limitP10gl_contextP17gl_shader_programP9gl_shader,"check_against_output_limit(gl_context*, gl_shader_program*, gl_shader*)"
+925b0,300,<global>,_Z25check_against_input_limitP10gl_contextP17gl_shader_programP9gl_shader,"check_against_input_limit(gl_context*, gl_shader_program*, gl_shader*)"
+92718,72,<global>,_ZN29tfeedback_candidate_generator11visit_fieldEPK9glsl_typePKcb,"tfeedback_candidate_generator::visit_field(glsl_type const*, char const*, bool)"
+92760,20,<global>,sub_92760,sub_92760
+92774,112,<global>,_Z12linker_errorP17gl_shader_programPKcz,"linker_error(gl_shader_program*, char const*, ...)"
+927e4,100,<global>,_Z14linker_warningP17gl_shader_programPKcz,"linker_warning(gl_shader_program*, char const*, ...)"
+92848,84,<global>,_Z27parse_program_resource_namePKcPS0_,"parse_program_resource_name(char const*, char const**)"
+9289c,114,<global>,_Z34link_invalidate_variable_locationsP9exec_list,link_invalidate_variable_locations(exec_list*)
+92910,232,<global>,_Z33validate_vertex_shader_executableP17gl_shader_programP9gl_shader,"validate_vertex_shader_executable(gl_shader_program*, gl_shader*)"
+929f8,320,<global>,sub_929F8,sub_929F8
+92b38,196,<global>,_Z35validate_fragment_shader_executableP17gl_shader_programP9gl_shader,"validate_fragment_shader_executable(gl_shader_program*, gl_shader*)"
+92bfc,40,<global>,_Z35validate_geometry_shader_executableP17gl_shader_programP9gl_shader,"validate_geometry_shader_executable(gl_shader_program*, gl_shader*)"
+92c24,900,<global>,_Z22cross_validate_globalsP17gl_shader_programPP9gl_shaderjb,"cross_validate_globals(gl_shader_program*, gl_shader**, unsigned int, bool)"
+92fa8,12,<global>,_Z23cross_validate_uniformsP17gl_shader_program,cross_validate_uniforms(gl_shader_program*)
+92fb4,104,<global>,_Z15remap_variablesP14ir_instructionP9gl_shaderP10hash_table,"remap_variables(ir_instruction*, gl_shader*, hash_table*)"
+9301c,392,<global>,_Z21move_non_declarationsP9exec_listP9exec_nodebP9gl_shader,"move_non_declarations(exec_list*, exec_node*, bool, gl_shader*)"
+931a4,104,<global>,_Z32link_get_main_function_signatureP9gl_shader,link_get_main_function_signature(gl_shader*)
+9320c,1840,<global>,_Z23link_intrastage_shadersPvP10gl_contextP17gl_shader_programPP9gl_shaderj,"link_intrastage_shaders(void*, gl_context*, gl_shader_program*, gl_shader**, unsigned int)"
+9393c,4,<global>,nullsub_6,nullsub_6
+93940,64,<global>,_ZN20array_sizing_visitorC2Ev,array_sizing_visitor::array_sizing_visitor()
+93980,60,<global>,_Z20find_available_slotsjj,"find_available_slots(unsigned int, unsigned int)"
+939bc,1000,<global>,_Z35assign_attribute_or_color_locationsP17gl_shader_programjj,"assign_attribute_or_color_locations(gl_shader_program*, unsigned int, unsigned int)"
+93da4,8,<global>,sub_93DA4,sub_93DA4
+93dac,84,<global>,_Z32demote_shader_inputs_and_outputsP9gl_shader16ir_variable_mode,"demote_shader_inputs_and_outputs(gl_shader*, ir_variable_mode)"
+93e00,3496,<global>,_Z12link_shadersP10gl_contextP17gl_shader_program,"link_shaders(gl_context*, gl_shader_program*)"
+94ba8,38,<global>,sub_94BA8,sub_94BA8
+94bce,140,<global>,sub_94BCE,sub_94BCE
+94c5a,102,<global>,sub_94C5A,sub_94C5A
+94cc0,104,<global>,sub_94CC0,sub_94CC0
+94d28,10,<global>,sub_94D28,sub_94D28
+94d32,18,<global>,sub_94D32,sub_94D32
+94d44,4,<global>,j_j_j__ZdlPv,j_j_j__ZdlPv
+94d48,202,<global>,_ZN20array_sizing_visitor5visitEP11ir_variable,array_sizing_visitor::visit(ir_variable*)
+94e12,34,<global>,_ZN20array_sizing_visitor10fixup_typeEPPK9glsl_typej,"array_sizing_visitor::fixup_type(glsl_type const**, unsigned int)"
+94e34,116,<global>,_ZN20array_sizing_visitor24resize_interface_membersEPK9glsl_typePKj,"array_sizing_visitor::resize_interface_members(glsl_type const*, unsigned int const*)"
+94ea8,154,<global>,_ZN20array_sizing_visitor28fixup_unnamed_interface_typeEPKvPvS2_,"array_sizing_visitor::fixup_unnamed_interface_type(void const*, void*, void*)"
+94f42,32,<global>,sub_94F42,sub_94F42
+94f62,52,<global>,sub_94F62,sub_94F62
+94f96,58,<global>,sub_94F96,sub_94F96
+94fd0,40,<global>,_ZN13loop_variable16record_referenceEbbP13ir_assignment,"loop_variable::record_reference(bool, bool, ir_assignment*)"
+94ff8,92,<global>,_ZN10loop_stateC2Ev,loop_state::loop_state()
+95054,34,<global>,_ZN10loop_stateD1Ev,loop_state::~loop_state()
+95078,68,<global>,_ZN10loop_state6insertEP7ir_loop,loop_state::insert(ir_loop*)
+950bc,104,<global>,_ZN19loop_variable_stateC2Ev,loop_variable_state::loop_variable_state()
+95124,6,<global>,_ZN10loop_state3getEPK7ir_loop,loop_state::get(ir_loop const*)
+9512a,6,<global>,_ZN10loop_state16get_for_inductorEPK11ir_variable,loop_state::get_for_inductor(ir_variable const*)
+95130,10,<global>,_ZN10loop_state19insert_non_inductorEP11ir_variable,loop_state::insert_non_inductor(ir_variable*)
+9513c,244,<global>,_ZN10loop_state15insert_inductorEP13loop_variableP19loop_variable_stateP7ir_loop,"loop_state::insert_inductor(loop_variable*, loop_variable_state*, ir_loop*)"
+95230,6,<global>,_ZN19loop_variable_state3getEPK11ir_variable,loop_variable_state::get(ir_variable const*)
+95236,58,<global>,_ZN19loop_variable_state6insertEP11ir_variable,loop_variable_state::insert(ir_variable*)
+95270,72,<global>,_ZN19loop_variable_state6insertEP5ir_if,loop_variable_state::insert(ir_if*)
+952b8,42,<global>,_ZN19loop_variable_state13get_or_insertEP11ir_variableb,"loop_variable_state::get_or_insert(ir_variable*, bool)"
+952e4,108,<global>,_Z22analyze_loop_variablesP9exec_list,analyze_loop_variables(exec_list*)
+95350,6,<global>,_ZN19loop_variable_state18_ralloc_destructorEPv,loop_variable_state::_ralloc_destructor(void*)
+95356,46,<global>,sub_95356,sub_95356
+95384,24,<global>,sub_95384,sub_95384
+9539c,130,<global>,sub_9539C,sub_9539C
+9541e,30,<global>,sub_9541E,sub_9541E
+9543c,1088,<global>,sub_9543C,sub_9543C
+9587c,18,<global>,sub_9587C,sub_9587C
+9588e,8,<global>,sub_9588E,sub_9588E
+95896,26,<global>,sub_95896,sub_95896
+958b0,20,<global>,sub_958B0,sub_958B0
+958c4,20,<global>,sub_958C4,sub_958C4
+958d8,244,<global>,sub_958D8,sub_958D8
+959cc,64,<global>,_ZN11examine_rhs5visitEP23ir_dereference_variable,examine_rhs::visit(ir_dereference_variable*)
+95a0c,200,<global>,_Z18find_initial_valueP7ir_loopP11ir_variablePP14ir_instruction,"find_initial_value(ir_loop*, ir_variable*, ir_instruction**)"
+95ad4,664,<global>,_Z20calculate_iterationsP9ir_rvalueS0_S0_23ir_expression_operation,"calculate_iterations(ir_rvalue*, ir_rvalue*, ir_rvalue*, ir_expression_operation)"
+95d6c,88,<global>,_Z17set_loop_controlsP9exec_listP10loop_state,"set_loop_controls(exec_list*, loop_state*)"
+95dc4,120,<global>,sub_95DC4,sub_95DC4
+95e3c,100,<global>,_Z12unroll_loopsP9exec_listP10loop_statePK26gl_shader_compiler_options,"unroll_loops(exec_list*, loop_state*, gl_shader_compiler_options const*)"
+95ea0,484,<global>,sub_95EA0,sub_95EA0
+96084,168,<global>,sub_96084,sub_96084
+9612c,80,<global>,sub_9612C,sub_9612C
+9617c,312,<global>,sub_9617C,sub_9617C
+962b4,10,<global>,_ZN17loop_unroll_count11visit_enterEP7ir_loop,loop_unroll_count::visit_enter(ir_loop*)
+962be,10,<global>,_ZN17loop_unroll_count11visit_enterEP13ir_expression,loop_unroll_count::visit_enter(ir_expression*)
+962c8,142,<global>,_ZN17loop_unroll_count11visit_enterEP20ir_dereference_array,loop_unroll_count::visit_enter(ir_dereference_array*)
+96358,10,<global>,_ZN17loop_unroll_count11visit_enterEP13ir_assignment,loop_unroll_count::visit_enter(ir_assignment*)
+96364,124,<global>,_Z19lower_clip_distanceP9gl_shader,lower_clip_distance(gl_shader*)
+963e0,316,<global>,sub_963E0,sub_963E0
+9651c,448,<global>,sub_9651C,sub_9651C
+966dc,544,<global>,sub_966DC,sub_966DC
+968fc,788,<global>,sub_968FC,sub_968FC
+96c10,52,<global>,sub_96C10,sub_96C10
+96c44,140,<global>,sub_96C44,sub_96C44
+96cd0,84,<global>,_Z13lower_discardP9exec_list,lower_discard(exec_list*)
+96d24,420,<global>,sub_96D24,sub_96D24
+96ec8,164,<global>,sub_96EC8,sub_96EC8
+96f6c,180,<global>,_Z18lower_discard_flowP9exec_list,lower_discard_flow(exec_list*)
+97020,220,<global>,sub_97020,sub_97020
+970fc,152,<global>,sub_970FC,sub_970FC
+97194,140,<global>,sub_97194,sub_97194
+97220,156,<global>,_Z23lower_if_to_cond_assignP9exec_listj,"lower_if_to_cond_assign(exec_list*, unsigned int)"
+972bc,30,<global>,_Z18check_control_flowP14ir_instructionPv,"check_control_flow(ir_instruction*, void*)"
+972dc,356,<global>,_Z25move_block_to_cond_assignPvP5ir_ifP9ir_rvalueP9exec_listP10hash_table,"move_block_to_cond_assign(void*, ir_if*, ir_rvalue*, exec_list*, hash_table*)"
+97440,12,<global>,sub_97440,sub_97440
+9744c,768,<global>,sub_9744C,sub_9744C
+9774c,88,<global>,_Z18lower_instructionsP9exec_listj,"lower_instructions(exec_list*, unsigned int)"
+977a4,2720,<global>,sub_977A4,sub_977A4
+98244,80,<global>,sub_98244,sub_98244
+98294,96,<global>,sub_98294,sub_98294
+982f4,172,<global>,_Z14do_lower_jumpsP9exec_listbbbbb,"do_lower_jumps(exec_list*, bool, bool, bool, bool, bool)"
+983a0,4,<global>,j_j_j__ZdlPv_0,j_j_j__ZdlPv_0
+983a4,2,<global>,_ZN23ir_control_flow_visitor5visitEP11ir_variable,ir_control_flow_visitor::visit(ir_variable*)
+983a8,372,<global>,sub_983A8,sub_983A8
+9851c,60,<global>,sub_9851C,sub_9851C
+98558,2,<global>,_ZN23ir_control_flow_visitor5visitEP13ir_expression,ir_control_flow_visitor::visit(ir_expression*)
+9855a,2,<global>,_ZN23ir_control_flow_visitor5visitEP10ir_texture,ir_control_flow_visitor::visit(ir_texture*)
+9855c,2,<global>,_ZN23ir_control_flow_visitor5visitEP10ir_swizzle,ir_control_flow_visitor::visit(ir_swizzle*)
+9855e,2,<global>,_ZN23ir_control_flow_visitor5visitEP23ir_dereference_variable,ir_control_flow_visitor::visit(ir_dereference_variable*)
+98560,2,<global>,_ZN23ir_control_flow_visitor5visitEP20ir_dereference_array,ir_control_flow_visitor::visit(ir_dereference_array*)
+98562,2,<global>,_ZN23ir_control_flow_visitor5visitEP21ir_dereference_record,ir_control_flow_visitor::visit(ir_dereference_record*)
+98564,2,<global>,_ZN23ir_control_flow_visitor5visitEP13ir_assignment,ir_control_flow_visitor::visit(ir_assignment*)
+98566,2,<global>,_ZN23ir_control_flow_visitor5visitEP11ir_constant,ir_control_flow_visitor::visit(ir_constant*)
+98568,2,<global>,_ZN23ir_control_flow_visitor5visitEP7ir_call,ir_control_flow_visitor::visit(ir_call*)
+9856a,22,<global>,sub_9856A,sub_9856A
+98580,4,<global>,nullsub_7,nullsub_7
+98584,1936,<global>,sub_98584,sub_98584
+98d14,868,<global>,sub_98D14,sub_98D14
+99078,32,<global>,sub_99078,sub_99078
+99098,2,<global>,nullsub_8,nullsub_8
+9909a,2,<global>,nullsub_9,nullsub_9
+9909c,2,<global>,_ZN23ir_control_flow_visitor5visitEP14ir_emit_vertex,ir_control_flow_visitor::visit(ir_emit_vertex*)
+9909e,2,<global>,_ZN23ir_control_flow_visitor5visitEP16ir_end_primitive,ir_control_flow_visitor::visit(ir_end_primitive*)
+990a0,80,<global>,sub_990A0,sub_990A0
+990f0,64,<global>,sub_990F0,sub_990F0
+99130,588,<global>,sub_99130,sub_99130
+9937c,348,<global>,sub_9937C,sub_9937C
+994d8,78,<global>,sub_994D8,sub_994D8
+99526,50,<global>,sub_99526,sub_99526
+99558,104,<global>,_Z16do_mat_op_to_vecP9exec_list,do_mat_op_to_vec(exec_list*)
+995c0,88,<global>,sub_995C0,sub_995C0
+99618,2340,<global>,sub_99618,sub_99618
+99f3c,124,<global>,sub_99F3C,sub_99F3C
+99fb8,200,<global>,sub_99FB8,sub_99FB8
+9a080,76,<global>,sub_9A080,sub_9A080
+9a0cc,684,<global>,_Z28lower_named_interface_blocksPvP9gl_shader,"lower_named_interface_blocks(void*, gl_shader*)"
+9a378,104,<global>,sub_9A378,sub_9A378
+9a3e0,204,<global>,sub_9A3E0,sub_9A3E0
+9a4ac,88,<global>,_Z11lower_noiseP9exec_list,lower_noise(exec_list*)
+9a504,52,<global>,_ZN19lower_noise_visitor13handle_rvalueEPP9ir_rvalue,lower_noise_visitor::handle_rvalue(ir_rvalue**)
+9a538,368,<global>,_ZN30brw_lower_offset_array_visitor13handle_rvalueEPP9ir_rvalue,brw_lower_offset_array_visitor::handle_rvalue(ir_rvalue**)
+9a6a8,88,<global>,_Z19lower_offset_arraysP9exec_list,lower_offset_arrays(exec_list*)
+9a700,136,<global>,_Z18lower_output_readsP9exec_list,lower_output_reads(exec_list*)
+9a790,136,<global>,sub_9A790,sub_9A790
+9a818,48,<global>,sub_9A818,sub_9A818
+9a848,24,<global>,sub_9A848,sub_9A848
+9a860,32,<global>,sub_9A860,sub_9A860
+9a880,44,<global>,sub_9A880,sub_9A880
+9a8ac,108,<global>,sub_9A8AC,sub_9A8AC
+9a918,40,<global>,sub_9A918,sub_9A918
+9a940,32,<global>,_ZN32lower_packed_varyings_gs_splicerC2EPvPK9exec_list,"lower_packed_varyings_gs_splicer::lower_packed_varyings_gs_splicer(void*, exec_list const*)"
+9a960,90,<global>,_ZN32lower_packed_varyings_gs_splicer11visit_leaveEP14ir_emit_vertex,lower_packed_varyings_gs_splicer::visit_leave(ir_emit_vertex*)
+9a9bc,476,<global>,_Z21lower_packed_varyingsPvj16ir_variable_modejP9gl_shader,"lower_packed_varyings(void*, unsigned int, ir_variable_mode, unsigned int, gl_shader*)"
+9ab98,1452,<global>,sub_9AB98,sub_9AB98
+9b144,204,<global>,sub_9B144,sub_9B144
+9b210,108,<global>,_Z22lower_packing_builtinsP9exec_listi,"lower_packing_builtins(exec_list*, int)"
+9b27c,16,<global>,sub_9B27C,sub_9B27C
+9b28c,2284,<global>,sub_9B28C,sub_9B28C
+9bb78,4,<global>,j_j_j__ZdlPv_1,j_j_j__ZdlPv_1
+9bb7c,208,<global>,sub_9BB7C,sub_9BB7C
+9bc4c,48,<global>,_ZN10ir_builder10ir_factory8constantEj,ir_builder::ir_factory::constant(unsigned int)
+9bc7c,48,<global>,_ZN10ir_builder10ir_factory8constantEf,ir_builder::ir_factory::constant(float)
+9bcac,288,<global>,sub_9BCAC,sub_9BCAC
+9bdcc,712,<global>,sub_9BDCC,sub_9BDCC
+9c094,300,<global>,sub_9C094,sub_9C094
+9c1c0,48,<global>,_ZN10ir_builder10ir_factory8constantEi,ir_builder::ir_factory::constant(int)
+9c1f0,436,<global>,sub_9C1F0,sub_9C1F0
+9c3a4,564,<global>,sub_9C3A4,sub_9C3A4
+9c5d8,104,<global>,_Z19lower_ubo_referenceP9gl_shaderP9exec_list,"lower_ubo_reference(gl_shader*, exec_list*)"
+9c640,1372,<global>,sub_9C640,sub_9C640
+9cb9c,176,<global>,sub_9CB9C,sub_9CB9C
+9cc4c,936,<global>,sub_9CC4C,sub_9CC4C
+9cff4,88,<global>,sub_9CFF4,sub_9CFF4
+9d04c,432,<global>,_Z19compare_index_blockP9exec_listP11ir_variablejjPv,"compare_index_block(exec_list*, ir_variable*, unsigned int, unsigned int, void*)"
+9d1fc,144,<global>,_Z35lower_variable_index_to_cond_assignP9exec_listbbbb,"lower_variable_index_to_cond_assign(exec_list*, bool, bool, bool, bool)"
+9d28c,148,<global>,sub_9D28C,sub_9D28C
+9d320,140,<global>,sub_9D320,sub_9D320
+9d3ac,68,<global>,sub_9D3AC,sub_9D3AC
+9d3f0,876,<global>,sub_9D3F0,sub_9D3F0
+9d75c,528,<global>,sub_9D75C,sub_9D75C
+9d96c,276,<global>,sub_9D96C,sub_9D96C
+9da80,64,<global>,sub_9DA80,sub_9DA80
+9dac0,84,<global>,_Z27do_vec_index_to_cond_assignP9exec_list,do_vec_index_to_cond_assign(exec_list*)
+9db14,68,<global>,sub_9DB14,sub_9DB14
+9db58,18,<global>,sub_9DB58,sub_9DB58
+9db6a,32,<global>,sub_9DB6A,sub_9DB6A
+9db8a,84,<global>,sub_9DB8A,sub_9DB8A
+9dbde,20,<global>,sub_9DBDE,sub_9DBDE
+9dbf2,18,<global>,sub_9DBF2,sub_9DBF2
+9dc04,876,<global>,sub_9DC04,sub_9DC04
+9df70,84,<global>,_Z23do_vec_index_to_swizzleP9exec_list,do_vec_index_to_swizzle(exec_list*)
+9dfc4,68,<global>,sub_9DFC4,sub_9DFC4
+9e008,18,<global>,sub_9E008,sub_9E008
+9e01a,18,<global>,sub_9E01A,sub_9E01A
+9e02c,84,<global>,sub_9E02C,sub_9E02C
+9e080,20,<global>,sub_9E080,sub_9E080
+9e094,20,<global>,sub_9E094,sub_9E094
+9e0a8,144,<global>,sub_9E0A8,sub_9E0A8
+9e138,144,<global>,_Z19is_extended_swizzleP13ir_expression,is_extended_swizzle(ir_expression*)
+9e1c8,92,<global>,_Z19lower_quadop_vectorP9exec_listb,"lower_quadop_vector(exec_list*, bool)"
+9e224,636,<global>,sub_9E224,sub_9E224
+9e4a0,108,<global>,_Z19lower_vector_insertP9exec_listb,"lower_vector_insert(exec_list*, bool)"
+9e50c,16,<global>,sub_9E50C,sub_9E50C
+9e51c,656,<global>,sub_9E51C,sub_9E51C
+9e7ac,4,<global>,j_j_j__ZdlPv_2,j_j_j__ZdlPv_2
+9e7b0,192,<global>,_Z15lower_vertex_idP9gl_shader,lower_vertex_id(gl_shader*)
+9e870,520,<global>,sub_9E870,sub_9E870
+9ea78,52,<global>,_mesa_error_no_memory,_mesa_error_no_memory
+9eaac,76,<global>,_Z10usage_failPKc,usage_fail(char const*)
+9eaf8,152,<global>,_Z14compile_shaderP10gl_contextP9gl_shader,"compile_shader(gl_context*, gl_shader*)"
+9eb90,1512,<global>,main,main
+9f178,104,<global>,_Z12do_algebraicP9exec_listbPK26gl_shader_compiler_options,"do_algebraic(exec_list*, bool, gl_shader_compiler_options const*)"
+9f1e0,4,<global>,nullsub_10,nullsub_10
+9f1e4,4404,<global>,sub_9F1E4,sub_9F1E4
+a0318,4,<global>,j_j_j__ZdlPv_3,j_j_j__ZdlPv_3
+a031c,244,<global>,sub_A031C,sub_A031C
+a0410,56,<global>,sub_A0410,sub_A0410
+a0448,248,<global>,_ZN26ir_array_splitting_visitor11split_derefEPP14ir_dereference,ir_array_splitting_visitor::split_deref(ir_dereference**)
+a0540,76,<global>,_ZN26ir_array_splitting_visitor13handle_rvalueEPP9ir_rvalue,ir_array_splitting_visitor::handle_rvalue(ir_rvalue**)
+a058c,140,<global>,_ZN26ir_array_splitting_visitor11visit_leaveEP13ir_assignment,ir_array_splitting_visitor::visit_leave(ir_assignment*)
+a0618,636,<global>,_Z21optimize_split_arraysP9exec_listbb,"optimize_split_arrays(exec_list*, bool, bool)"
+a0894,2,<global>,_ZN26ir_array_splitting_visitorD2Ev,ir_array_splitting_visitor::~ir_array_splitting_visitor()
+a0896,4,<global>,_ZN26ir_array_splitting_visitorD0Ev,ir_array_splitting_visitor::~ir_array_splitting_visitor()
+a089a,18,<global>,sub_A089A,sub_A089A
+a08ac,20,<global>,sub_A08AC,sub_A08AC
+a08c0,16,<global>,sub_A08C0,sub_A08C0
+a08d0,52,<global>,sub_A08D0,sub_A08D0
+a0904,180,<global>,sub_A0904,sub_A0904
+a09b8,84,<global>,_Z19do_constant_foldingP9exec_list,do_constant_folding(exec_list*)
+a0a0c,2,<global>,nullsub_11,nullsub_11
+a0a0e,114,<global>,sub_A0A0E,sub_A0A0E
+a0a80,264,<global>,sub_A0A80,sub_A0A80
+a0b88,144,<global>,sub_A0B88,sub_A0B88
+a0c18,4,<global>,j_j_j__ZdlPv_4,j_j_j__ZdlPv_4
+a0c1c,188,<global>,_Z23do_constant_propagationP9exec_list,do_constant_propagation(exec_list*)
+a0cd8,184,<global>,sub_A0CD8,sub_A0CD8
+a0d90,136,<global>,sub_A0D90,sub_A0D90
+a0e18,4,<global>,sub_A0E18,sub_A0E18
+a0e1c,224,<global>,sub_A0E1C,sub_A0E1C
+a0efc,212,<global>,sub_A0EFC,sub_A0EFC
+a0fd0,56,<global>,sub_A0FD0,sub_A0FD0
+a1008,456,<global>,sub_A1008,sub_A1008
+a11d0,196,<global>,sub_A11D0,sub_A11D0
+a1294,276,<global>,sub_A1294,sub_A1294
+a13a8,176,<global>,_Z20do_constant_variableP9exec_list,do_constant_variable(exec_list*)
+a1458,98,<global>,_Z29do_constant_variable_unlinkedP9exec_list,do_constant_variable_unlinked(exec_list*)
+a14ba,24,<global>,sub_A14BA,sub_A14BA
+a14d2,116,<global>,sub_A14D2,sub_A14D2
+a1546,68,<global>,sub_A1546,sub_A1546
+a158a,132,<global>,sub_A158A,sub_A158A
+a160e,4,<global>,sub_A160E,sub_A160E
+a1612,62,<global>,sub_A1612,sub_A1612
+a1650,188,<global>,_Z19do_copy_propagationP9exec_list,do_copy_propagation(exec_list*)
+a1740,180,<global>,sub_A1740,sub_A1740
+a17f4,136,<global>,sub_A17F4,sub_A17F4
+a187c,4,<global>,sub_A187C,sub_A187C
+a1880,192,<global>,sub_A1880,sub_A1880
+a1940,122,<global>,sub_A1940,sub_A1940
+a19ba,42,<global>,sub_A19BA,sub_A19BA
+a19e4,104,<global>,sub_A19E4,sub_A19E4
+a1a4c,260,<global>,sub_A1A4C,sub_A1A4C
+a1b50,192,<global>,_Z28do_copy_propagation_elementsP9exec_list,do_copy_propagation_elements(exec_list*)
+a1c10,184,<global>,sub_A1C10,sub_A1C10
+a1cc8,136,<global>,sub_A1CC8,sub_A1CC8
+a1d50,4,<global>,sub_A1D50,sub_A1D50
+a1d54,556,<global>,sub_A1D54,sub_A1D54
+a1f80,122,<global>,sub_A1F80,sub_A1F80
+a1ffa,42,<global>,sub_A1FFA,sub_A1FFA
+a2024,432,<global>,sub_A2024,sub_A2024
+a21d4,108,<global>,sub_A21D4,sub_A21D4
+a2240,304,<global>,sub_A2240,sub_A2240
+a2370,160,<global>,_Z6do_cseP9exec_list,do_cse(exec_list*)
+a2410,46,<global>,sub_A2410,sub_A2410
+a243e,46,<global>,sub_A243E,sub_A243E
+a246c,4,<global>,sub_A246C,sub_A246C
+a2470,96,<global>,sub_A2470,sub_A2470
+a24d0,612,<global>,sub_A24D0,sub_A24D0
+a2734,20,<global>,sub_A2734,sub_A2734
+a2748,16,<global>,sub_A2748,sub_A2748
+a2758,292,<global>,_Z31optimize_dead_builtin_variablesP9exec_list16ir_variable_mode,"optimize_dead_builtin_variables(exec_list*, ir_variable_mode)"
+a287c,656,<global>,_Z24do_dead_builtin_varyingsP10gl_contextP9gl_shaderS2_jP14tfeedback_decl,"do_dead_builtin_varyings(gl_context*, gl_shader*, gl_shader*, unsigned int, tfeedback_decl*)"
+a2b0c,698,<global>,sub_A2B0C,sub_A2B0C
+a2dc6,94,<global>,sub_A2DC6,sub_A2DC6
+a2e24,192,<global>,sub_A2E24,sub_A2E24
+a2ee4,552,<global>,sub_A2EE4,sub_A2EE4
+a310c,112,<global>,sub_A310C,sub_A310C
+a317c,400,<global>,sub_A317C,sub_A317C
+a330c,288,<global>,_Z12do_dead_codeP9exec_listb,"do_dead_code(exec_list*, bool)"
+a342c,100,<global>,_Z21do_dead_code_unlinkedP9exec_list,do_dead_code_unlinked(exec_list*)
+a3490,72,<global>,_Z18do_dead_code_localP9exec_list,do_dead_code_local(exec_list*)
+a34d8,800,<global>,sub_A34D8,sub_A34D8
+a37f8,20,<global>,sub_A37F8,sub_A37F8
+a380c,18,<global>,sub_A380C,sub_A380C
+a381e,58,<global>,sub_A381E,sub_A381E
+a3858,72,<global>,sub_A3858,sub_A3858
+a38a0,112,<global>,sub_A38A0,sub_A38A0
+a3910,292,<global>,_Z17do_dead_functionsP9exec_list,do_dead_functions(exec_list*)
+a3a34,40,<global>,sub_A3A34,sub_A3A34
+a3a5c,20,<global>,sub_A3A5C,sub_A3A5C
+a3a70,92,<global>,sub_A3A70,sub_A3A70
+a3acc,84,<global>,_Z28opt_flatten_nested_if_blocksP9exec_list,opt_flatten_nested_if_blocks(exec_list*)
+a3b20,4,<global>,sub_A3B20,sub_A3B20
+a3b24,168,<global>,sub_A3B24,sub_A3B24
+a3bcc,244,<global>,_Z17opt_flip_matricesP9exec_list,opt_flip_matrices(exec_list*)
+a3cc0,264,<global>,sub_A3CC0,sub_A3CC0
+a3dc8,84,<global>,_Z20do_function_inliningP9exec_list,do_function_inlining(exec_list*)
+a3e1c,4,<global>,nullsub_12,nullsub_12
+a3e20,960,<global>,_ZN7ir_call15generate_inlineEP14ir_instruction,ir_call::generate_inline(ir_instruction*)
+a41e0,128,<global>,sub_A41E0,sub_A41E0
+a4260,56,<global>,_ZN31ir_variable_replacement_visitor13replace_derefEPP14ir_dereference,ir_variable_replacement_visitor::replace_deref(ir_dereference**)
+a4298,76,<global>,_ZN31ir_variable_replacement_visitor14replace_rvalueEPP9ir_rvalue,ir_variable_replacement_visitor::replace_rvalue(ir_rvalue**)
+a42e4,14,<global>,_ZN31ir_variable_replacement_visitor11visit_leaveEP10ir_texture,ir_variable_replacement_visitor::visit_leave(ir_texture*)
+a42f2,14,<global>,_ZN31ir_variable_replacement_visitor11visit_leaveEP20ir_dereference_array,ir_variable_replacement_visitor::visit_leave(ir_dereference_array*)
+a4300,14,<global>,_ZN31ir_variable_replacement_visitor11visit_leaveEP21ir_dereference_record,ir_variable_replacement_visitor::visit_leave(ir_dereference_record*)
+a4310,132,<global>,_ZN31ir_variable_replacement_visitor11visit_leaveEP7ir_call,ir_variable_replacement_visitor::visit_leave(ir_call*)
+a4394,2,<global>,_ZN31ir_variable_replacement_visitorD2Ev,ir_variable_replacement_visitor::~ir_variable_replacement_visitor()
+a4396,4,<global>,_ZN31ir_variable_replacement_visitorD0Ev,ir_variable_replacement_visitor::~ir_variable_replacement_visitor()
+a439a,6,<global>,sub_A439A,sub_A439A
+a43a0,8,<global>,sub_A43A0,sub_A43A0
+a43a8,4,<global>,sub_A43A8,sub_A43A8
+a43ac,4,<global>,sub_A43AC,sub_A43AC
+a43b0,4,<global>,sub_A43B0,sub_A43B0
+a43b4,52,<global>,sub_A43B4,sub_A43B4
+a43e8,4,<global>,sub_A43E8,sub_A43E8
+a43ec,4,<global>,j_j_j__ZdlPv_5,j_j_j__ZdlPv_5
+a43f0,84,<global>,_Z20do_if_simplificationP9exec_list,do_if_simplification(exec_list*)
+a4444,4,<global>,sub_A4444,sub_A4444
+a4448,268,<global>,sub_A4448,sub_A4448
+a4554,84,<global>,_Z15do_minmax_pruneP9exec_list,do_minmax_prune(exec_list*)
+a45a8,120,<global>,sub_A45A8,sub_A45A8
+a4620,496,<global>,sub_A4620,sub_A4620
+a4810,228,<global>,sub_A4810,sub_A4810
+a48f4,344,<global>,sub_A48F4,sub_A48F4
+a4a4c,210,<global>,sub_A4A4C,sub_A4A4C
+a4b1e,40,<global>,sub_A4B1E,sub_A4B1E
+a4b46,42,<global>,sub_A4B46,sub_A4B46
+a4b70,84,<global>,_Z15do_noop_swizzleP9exec_list,do_noop_swizzle(exec_list*)
+a4bc4,104,<global>,sub_A4BC4,sub_A4BC4
+a4c2c,84,<global>,_Z17do_rebalance_treeP9exec_list,do_rebalance_tree(exec_list*)
+a4c80,320,<global>,sub_A4C80,sub_A4C80
+a4dc0,70,<global>,sub_A4DC0,sub_A4DC0
+a4e06,162,<global>,sub_A4E06,sub_A4E06
+a4ea8,84,<global>,_Z24optimize_redundant_jumpsP9exec_list,optimize_redundant_jumps(exec_list*)
+a4f32,4,<global>,sub_A4F32,sub_A4F32
+a4f36,178,<global>,sub_A4F36,sub_A4F36
+a4fe8,476,<global>,_Z22do_structure_splittingP9exec_list,do_structure_splitting(exec_list*)
+a51c4,2,<global>,nullsub_13,nullsub_13
+a51c6,18,<global>,sub_A51C6,sub_A51C6
+a51d8,34,<global>,sub_A51D8,sub_A51D8
+a51fa,16,<global>,sub_A51FA,sub_A51FA
+a520a,4,<global>,sub_A520A,sub_A520A
+a520e,46,<global>,sub_A520E,sub_A520E
+a523c,120,<global>,sub_A523C,sub_A523C
+a52b4,556,<global>,sub_A52B4,sub_A52B4
+a54e0,76,<global>,sub_A54E0,sub_A54E0
+a552c,4,<global>,j_j_j__ZdlPv_6,j_j_j__ZdlPv_6
+a5530,156,<global>,sub_A5530,sub_A5530
+a55cc,84,<global>,_Z18do_swizzle_swizzleP9exec_list,do_swizzle_swizzle(exec_list*)
+a5620,272,<global>,sub_A5620,sub_A5620
+a5730,104,<global>,_Z16do_tree_graftingP9exec_list,do_tree_grafting(exec_list*)
+a5798,364,<global>,sub_A5798,sub_A5798
+a5904,4,<global>,sub_A5904,sub_A5904
+a5908,4,<global>,sub_A5908,sub_A5908
+a590c,4,<global>,sub_A590C,sub_A590C
+a5910,72,<global>,sub_A5910,sub_A5910
+a5958,92,<global>,sub_A5958,sub_A5958
+a59b4,18,<global>,sub_A59B4,sub_A59B4
+a59c6,54,<global>,sub_A59C6,sub_A59C6
+a59fc,128,<global>,sub_A59FC,sub_A59FC
+a5a7c,284,<global>,sub_A5A7C,sub_A5A7C
+a5b98,22,<global>,sub_A5B98,sub_A5B98
+a5bae,90,<global>,sub_A5BAE,sub_A5BAE
+a5c08,24,<global>,sub_A5C08,sub_A5C08
+a5c20,112,<global>,_ZN27ir_vector_splitting_visitor12split_rvalueEPP9ir_rvalue,ir_vector_splitting_visitor::split_rvalue(ir_rvalue**)
+a5c90,64,<global>,_ZN27ir_vector_splitting_visitor13handle_rvalueEPP9ir_rvalue,ir_vector_splitting_visitor::handle_rvalue(ir_rvalue**)
+a5cd0,212,<global>,_ZN27ir_vector_splitting_visitor11visit_leaveEP13ir_assignment,ir_vector_splitting_visitor::visit_leave(ir_assignment*)
+a5da4,660,<global>,_Z22optimize_split_vectorsP9exec_listb26glsl_vector_splitting_mode,"optimize_split_vectors(exec_list*, bool, glsl_vector_splitting_mode)"
+a6038,2,<global>,_ZN27ir_vector_splitting_visitorD2Ev,ir_vector_splitting_visitor::~ir_vector_splitting_visitor()
+a603a,4,<global>,_ZN27ir_vector_splitting_visitorD0Ev,ir_vector_splitting_visitor::~ir_vector_splitting_visitor()
+a603e,18,<global>,sub_A603E,sub_A603E
+a6050,20,<global>,sub_A6050,sub_A6050
+a6064,16,<global>,sub_A6064,sub_A6064
+a6074,72,<global>,sub_A6074,sub_A6074
+a60bc,88,<global>,sub_A60BC,sub_A60BC
+a6114,172,<global>,sub_A6114,sub_A6114
+a61c0,96,<global>,_Z12do_vectorizeP9exec_list,do_vectorize(exec_list*)
+a6220,292,<global>,sub_A6220,sub_A6220
+a6344,34,<global>,sub_A6344,sub_A6344
+a6366,44,<global>,sub_A6366,sub_A6366
+a6392,10,<global>,sub_A6392,sub_A6392
+a639c,76,<global>,sub_A639C,sub_A639C
+a63e8,8,<global>,sub_A63E8,sub_A63E8
+a63f0,138,<global>,sub_A63F0,sub_A63F0
+a647a,68,<global>,sub_A647A,sub_A647A
+a64be,54,<global>,sub_A64BE,sub_A64BE
+a64f4,244,<global>,sub_A64F4,sub_A64F4
+a65e8,20,<global>,_ZN8s_symbolC2EPKcj,"s_symbol::s_symbol(char const*, unsigned int)"
+a65fc,32,<global>,_ZN6s_listC2Ev,s_list::s_list()
+a661c,72,<global>,_ZN12s_expression15read_expressionEPvRPKc,"s_expression::read_expression(void*, char const*&)"
+a6664,560,<global>,sub_A6664,sub_A6664
+a6894,12,<global>,_ZN5s_int5printEv,s_int::print()
+a68a0,24,<global>,_ZN7s_float5printEv,s_float::print()
+a68b8,12,<global>,_ZN8s_symbol5printEv,s_symbol::print()
+a68c4,62,<global>,_ZN6s_list5printEv,s_list::print()
+a6904,104,<global>,_ZN9s_pattern5matchEP12s_expression,s_pattern::match(s_expression*)
+a696c,124,<global>,_Z7s_matchP12s_expressionjP9s_patternb,"s_match(s_expression*, unsigned int, s_pattern*, bool)"
+a69e8,4,<global>,_ZNK12s_expression7is_listEv,s_expression::is_list() const
+a69ec,4,<global>,_ZNK12s_expression9is_symbolEv,s_expression::is_symbol() const
+a69f0,4,<global>,_ZNK8s_number9is_numberEv,s_number::is_number() const
+a69f4,4,<global>,_ZNK5s_int6is_intEv,s_int::is_int() const
+a69f8,14,<global>,_ZN5s_int6fvalueEv,s_int::fvalue()
+a6a06,4,<global>,_ZNK12s_expression6is_intEv,s_expression::is_int() const
+a6a0a,4,<global>,_ZN7s_float6fvalueEv,s_float::fvalue()
+a6a0e,4,<global>,_ZNK8s_symbol9is_symbolEv,s_symbol::is_symbol() const
+a6a12,4,<global>,_ZNK12s_expression9is_numberEv,s_expression::is_number() const
+a6a16,4,<global>,_ZNK6s_list7is_listEv,s_list::is_list() const
+a6a1c,112,<global>,sub_A6A1C,sub_A6A1C
+a6a8c,4,<global>,_mesa_reference_shader,_mesa_reference_shader
+a6a90,2,<global>,_mesa_shader_debug,_mesa_shader_debug
+a6a92,68,<global>,_mesa_new_shader,_mesa_new_shader
+a6ad8,380,<global>,_Z30initialize_context_to_defaultsP10gl_context6gl_api,"initialize_context_to_defaults(gl_context*, gl_api)"
+a6c54,46,<global>,ZzNewAllocator,ZzNewAllocator
+a6c84,100,<global>,ZzNewMemoryPage,ZzNewMemoryPage
+a6ce8,148,<global>,ZzNewNearMemoryPage,ZzNewNearMemoryPage
+a6d7c,48,<global>,ZzNewNearCodeCave,ZzNewNearCodeCave
+a6dac,62,<global>,ZzAddMemoryPage,ZzAddMemoryPage
+a6dea,136,<global>,ZzNewCodeSlice,ZzNewCodeSlice
+a6e72,268,<global>,ZzNewNearCodeSlice,ZzNewNearCodeSlice
+a6f80,80,<global>,ZzInitializeInterceptor,ZzInitializeInterceptor
+a6fd0,100,<global>,sub_A6FD0,sub_A6FD0
+a7034,46,<global>,ZzFindHookFunctionEntry,ZzFindHookFunctionEntry
+a7062,60,<global>,ZzAddHookFunctionEntry,ZzAddHookFunctionEntry
+a709e,66,<global>,ZzInitializeHookFunctionEntry,ZzInitializeHookFunctionEntry
+a70e0,72,<global>,ZzFreeHookFunctionEntry,ZzFreeHookFunctionEntry
+a7128,104,<global>,ZzBuildHook,ZzBuildHook
+a7190,98,<global>,ZzBuildHookGOT,ZzBuildHookGOT
+a71f4,152,<global>,ZzEnableHook,ZzEnableHook
+a728c,56,<global>,ZzDisableHook,ZzDisableHook
+a72c4,52,<global>,ZzHook,ZzHook
+a72f8,32,<global>,ZzHookPrePost,ZzHookPrePost
+a7318,30,<global>,ZzHookReplace,ZzHookReplace
+a7336,88,<global>,ZzDynamicBinaryInstrumentation,ZzDynamicBinaryInstrumentation
+a738e,34,<global>,ZzHookOneInstruction,ZzHookOneInstruction
+a73b0,22,<global>,zz_malloc_with_zero,zz_malloc_with_zero
+a73c6,14,<global>,ZzRuntimeCodePatch,ZzRuntimeCodePatch
+a73d4,8,<global>,ZzGetCurrentThreadStack,ZzGetCurrentThreadStack
+a73dc,52,<global>,ZzNewThreadStack,ZzNewThreadStack
+a7410,36,<global>,ZzNewCallStack,ZzNewCallStack
+a7434,18,<global>,ZzFreeCallStack,ZzFreeCallStack
+a7446,20,<global>,ZzPopCallStack,ZzPopCallStack
+a745a,64,<global>,ZzPushCallStack,ZzPushCallStack
+a749a,50,<global>,ZzGetCallStackData,ZzGetCallStackData
+a74cc,54,<global>,ZzNewCallStackData,ZzNewCallStackData
+a7502,72,<global>,ZzSetCallStackData,ZzSetCallStackData
+a754c,16,<global>,HookZzDebugInfoEnable,HookZzDebugInfoEnable
+a755c,16,<global>,HookZzDebugInfoIsEnable,HookZzDebugInfoIsEnable
+a756c,12,<global>,ZzObtainDebugInfo,ZzObtainDebugInfo
+a7578,124,<global>,ZzBuildTrampoline,ZzBuildTrampoline
+a75f4,4,<global>,ZzHookGOT,ZzHookGOT
+a75f8,4,<global>,ZzDisableHookGOT,ZzDisableHookGOT
+a75fc,8,<global>,ZzMemoryGetPageSzie,ZzMemoryGetPageSzie
+a7604,8,<global>,ZzMemoryAllocatePages,ZzMemoryAllocatePages
+a760c,8,<global>,ZzMemoryAllocateNearPages,ZzMemoryAllocateNearPages
+a7614,8,<global>,ZzMemoryAllocate,ZzMemoryAllocate
+a761c,8,<global>,ZzMemoryPatchCode,ZzMemoryPatchCode
+a7624,8,<global>,ZzMemoryProtectAsExecutable,ZzMemoryProtectAsExecutable
+a762c,8,<global>,ZzMemoryProtectAsWritable,ZzMemoryProtectAsWritable
+a7634,8,<global>,ZzMemorySearchCodeCave,ZzMemorySearchCodeCave
+a763c,4,<global>,ZzMemoryIsSupportAllocateRXPage,ZzMemoryIsSupportAllocateRXPage
+a7640,8,<global>,ZzThreadNewThreadLocalKeyPtr,ZzThreadNewThreadLocalKeyPtr
+a7648,8,<global>,ZzThreadFreeThreadLocalKeyPtr,ZzThreadFreeThreadLocalKeyPtr
+a7650,8,<global>,ZzThreadGetCurrentThreadData,ZzThreadGetCurrentThreadData
+a7658,8,<global>,ZzThreadSetCurrentThreadData,ZzThreadSetCurrentThreadData
+a7660,8,<global>,ZzThreadGetCurrentThreadID,ZzThreadGetCurrentThreadID
+a7668,14,<global>,get_insn_sub,get_insn_sub
+a7676,80,<global>,insn_equal,insn_equal
+a76c8,60,<global>,zz_arm_reader_new,zz_arm_reader_new
+a7704,48,<global>,zz_arm_reader_reset,zz_arm_reader_reset
+a7734,8,<global>,zz_arm_reader_init,zz_arm_reader_init
+a773c,44,<global>,zz_arm_reader_free,zz_arm_reader_free
+a7768,84,<global>,zz_arm_reader_read_one_instruction,zz_arm_reader_read_one_instruction
+a77bc,240,<global>,GetARMInsnType,GetARMInsnType
+a78ac,64,<global>,insn_is_thumb2,insn_is_thumb2
+a78ec,60,<global>,zz_thumb_reader_new,zz_thumb_reader_new
+a7928,48,<global>,zz_thumb_reader_reset,zz_thumb_reader_reset
+a7958,8,<global>,zz_thumb_reader_init,zz_thumb_reader_init
+a7960,44,<global>,zz_thumb_reader_free,zz_thumb_reader_free
+a798c,124,<global>,zz_thumb_reader_read_one_instruction,zz_thumb_reader_read_one_instruction
+a7a08,592,<global>,GetTHUMBInsnType,GetTHUMBInsnType
+a7c58,88,<global>,zz_arm_register_describe,zz_arm_register_describe
+a7cb0,24,<global>,zz_arm_relocator_init,zz_arm_relocator_init
+a7cc8,24,<global>,zz_arm_relocator_free,zz_arm_relocator_free
+a7ce0,20,<global>,zz_arm_relocator_reset,zz_arm_relocator_reset
+a7cf4,40,<global>,zz_arm_relocator_read_one,zz_arm_relocator_read_one
+a7d1c,76,<global>,zz_arm_relocator_try_relocate,zz_arm_relocator_try_relocate
+a7d68,176,<global>,zz_arm_relocator_relocate_writer,zz_arm_relocator_relocate_writer
+a7e18,20,<global>,zz_arm_relocator_register_literal_insn,zz_arm_relocator_register_literal_insn
+a7e2c,600,<global>,zz_arm_relocator_write_one,zz_arm_relocator_write_one
+a8084,16,<global>,zz_arm_relocator_write_all,zz_arm_relocator_write_all
+a8094,24,<global>,zz_thumb_relocator_init,zz_thumb_relocator_init
+a80ac,24,<global>,zz_thumb_relocator_free,zz_thumb_relocator_free
+a80c4,20,<global>,zz_thumb_relocator_reset,zz_thumb_relocator_reset
+a80d8,40,<global>,zz_thumb_relocator_read_one,zz_thumb_relocator_read_one
+a8100,68,<global>,zz_thumb_relocator_try_relocate,zz_thumb_relocator_try_relocate
+a8144,176,<global>,zz_thumb_relocator_relocate_writer,zz_thumb_relocator_relocate_writer
+a81f4,20,<global>,zz_thumb_relocator_register_literal_insn,zz_thumb_relocator_register_literal_insn
+a8208,84,<global>,zz_thumb_relocator_rewrite_LDR_literal_T1,zz_thumb_relocator_rewrite_LDR_literal_T1
+a825c,102,<global>,zz_thumb_relocator_rewrite_LDR_literal_T2,zz_thumb_relocator_rewrite_LDR_literal_T2
+a82c2,48,<global>,zz_thumb_relocator_rewrite_ADR_T1,zz_thumb_relocator_rewrite_ADR_T1
+a82f2,82,<global>,zz_thumb_relocator_rewrite_ADR_T2,zz_thumb_relocator_rewrite_ADR_T2
+a8344,82,<global>,zz_thumb_relocator_rewrite_ADR_T3,zz_thumb_relocator_rewrite_ADR_T3
+a8396,94,<global>,zz_thumb_relocator_rewrite_B_T1,zz_thumb_relocator_rewrite_B_T1
+a83f4,56,<global>,zz_thumb_relocator_rewrite_B_T2,zz_thumb_relocator_rewrite_B_T2
+a842c,164,<global>,zz_thumb_relocator_rewrite_B_T3,zz_thumb_relocator_rewrite_B_T3
+a84d0,144,<global>,zz_thumb_relocator_rewrite_B_T4,zz_thumb_relocator_rewrite_B_T4
+a8560,174,<global>,zz_thumb_relocator_rewrite_BLBLX_immediate_T1,zz_thumb_relocator_rewrite_BLBLX_immediate_T1
+a860e,200,<global>,zz_thumb_relocator_rewrite_BLBLX_T2,zz_thumb_relocator_rewrite_BLBLX_T2
+a88d4,16,<global>,zz_thumb_relocator_write_all,zz_thumb_relocator_write_all
+a88e4,60,<global>,zz_arm_writer_new,zz_arm_writer_new
+a8920,84,<global>,zz_arm_writer_reset,zz_arm_writer_reset
+a8974,8,<global>,zz_arm_writer_init,zz_arm_writer_init
+a897c,84,<global>,zz_arm_writer_reset_without_align,zz_arm_writer_reset_without_align
+a89d0,44,<global>,zz_arm_writer_free,zz_arm_writer_free
+a89fc,6,<global>,zz_arm_writer_near_jump_range_size,zz_arm_writer_near_jump_range_size
+a8a04,92,<global>,zz_arm_writer_put_bytes,zz_arm_writer_put_bytes
+a8a60,92,<global>,zz_arm_writer_put_instruction,zz_arm_writer_put_instruction
+a8abc,18,<global>,zz_arm_writer_put_b_imm,zz_arm_writer_put_b_imm
+a8ad0,124,<global>,zz_arm_writer_put_ldr_reg_reg_imm_A1,zz_arm_writer_put_ldr_reg_reg_imm_A1
+a8b4c,92,<global>,zz_arm_writer_put_ldr_reg_reg_imm_index,zz_arm_writer_put_ldr_reg_reg_imm_index
+a8ba8,80,<global>,zz_arm_writer_put_ldr_reg_imm_literal,zz_arm_writer_put_ldr_reg_imm_literal
+a8bf8,108,<global>,zz_arm_writer_put_ldr_reg_reg_imm,zz_arm_writer_put_ldr_reg_reg_imm
+a8c64,34,<global>,zz_arm_writer_put_ldr_b_reg_address,zz_arm_writer_put_ldr_b_reg_address
+a8c88,92,<global>,zz_arm_writer_put_str_reg_reg_imm,zz_arm_writer_put_str_reg_reg_imm
+a8ce4,28,<global>,zz_arm_writer_put_ldr_reg_address,zz_arm_writer_put_ldr_reg_address
+a8d00,88,<global>,zz_arm_writer_put_add_reg_reg_imm,zz_arm_writer_put_add_reg_reg_imm
+a8d58,88,<global>,zz_arm_writer_put_sub_reg_reg_imm,zz_arm_writer_put_sub_reg_reg_imm
+a8db0,82,<global>,zz_arm_writer_put_bx_to_thumb,zz_arm_writer_put_bx_to_thumb
+a8e04,60,<global>,zz_arm_writer_put_bx_reg,zz_arm_writer_put_bx_reg
+a8e40,16,<global>,zz_arm_writer_put_nop,zz_arm_writer_put_nop
+a8e50,64,<global>,zz_arm_writer_put_push_reg,zz_arm_writer_put_push_reg
+a8e90,64,<global>,zz_arm_writer_put_pop_reg,zz_arm_writer_put_pop_reg
+a8ed0,60,<global>,zz_thumb_writer_new,zz_thumb_writer_new
+a8f0c,88,<global>,zz_thumb_writer_reset,zz_thumb_writer_reset
+a8f64,8,<global>,zz_thumb_writer_init,zz_thumb_writer_init
+a8f6c,48,<global>,zz_thumb_writer_free,zz_thumb_writer_free
+a8f9c,6,<global>,zz_thumb_writer_near_jump_range_size,zz_thumb_writer_near_jump_range_size
+a8fa4,92,<global>,zz_thumb_writer_put_bytes,zz_thumb_writer_put_bytes
+a9000,92,<global>,zz_thumb_writer_put_instruction,zz_thumb_writer_put_instruction
+a905c,16,<global>,zz_thumb_writer_put_nop,zz_thumb_writer_put_nop
+a906c,18,<global>,zz_thumb_writer_put_b_imm,zz_thumb_writer_put_b_imm
+a9080,88,<global>,zz_thumb_writer_put_bx_reg,zz_thumb_writer_put_bx_reg
+a90d8,64,<global>,zz_thumb_writer_put_blx_reg,zz_thumb_writer_put_blx_reg
+a9118,100,<global>,zz_thumb_writer_put_branch_imm,zz_thumb_writer_put_branch_imm
+a917c,12,<global>,zz_thumb_writer_put_bl_imm,zz_thumb_writer_put_bl_imm
+a9188,12,<global>,zz_thumb_writer_put_blx_imm,zz_thumb_writer_put_blx_imm
+a9194,12,<global>,zz_thumb_writer_put_b_imm32,zz_thumb_writer_put_b_imm32
+a91a0,132,<global>,zz_thumb_writer_put_ldr_reg_imm,zz_thumb_writer_put_ldr_reg_imm
+a9224,124,<global>,zz_thumb_writer_put_ldr_b_reg_address,zz_thumb_writer_put_ldr_b_reg_address
+a92a0,120,<global>,zz_thumb_writer_put_ldr_reg_address,zz_thumb_writer_put_ldr_reg_address
+a9318,128,<global>,zz_thumb_writer_put_transfer_reg_reg_offset_T1,zz_thumb_writer_put_transfer_reg_reg_offset_T1
+a9398,128,<global>,zz_thumb_writer_put_transfer_reg_reg_offset_T2,zz_thumb_writer_put_transfer_reg_reg_offset_T2
+a9418,144,<global>,zz_thumb_writer_put_transfer_reg_reg_offset_T3,zz_thumb_writer_put_transfer_reg_reg_offset_T3
+a94a8,200,<global>,zz_thumb_writer_put_transfer_reg_reg_offset_T4,zz_thumb_writer_put_transfer_reg_reg_offset_T4
+a9570,92,<global>,sub_A9570,sub_A9570
+a95cc,20,<global>,zz_thumb_writer_put_ldr_reg_reg_offset,zz_thumb_writer_put_ldr_reg_reg_offset
+a95e0,20,<global>,zz_thumb_writer_put_str_reg_reg_offset,zz_thumb_writer_put_str_reg_reg_offset
+a95f4,34,<global>,zz_thumb_writer_put_ldr_index_reg_reg_offset,zz_thumb_writer_put_ldr_index_reg_reg_offset
+a9616,32,<global>,zz_thumb_writer_put_str_index_reg_reg_offset,zz_thumb_writer_put_str_index_reg_reg_offset
+a9636,10,<global>,zz_thumb_writer_put_str_reg_reg,zz_thumb_writer_put_str_reg_reg
+a9640,10,<global>,zz_thumb_writer_put_ldr_reg_reg,zz_thumb_writer_put_ldr_reg_reg
+a964c,136,<global>,zz_thumb_writer_put_add_reg_imm,zz_thumb_writer_put_add_reg_imm
+a96d4,10,<global>,zz_thumb_writer_put_sub_reg_imm,zz_thumb_writer_put_sub_reg_imm
+a96e0,260,<global>,zz_thumb_writer_put_add_reg_reg_imm,zz_thumb_writer_put_add_reg_reg_imm
+a97e4,10,<global>,zz_thumb_writer_put_sub_reg_reg_imm,zz_thumb_writer_put_sub_reg_reg_imm
+a97f0,68,<global>,zz_thumb_writer_put_push_reg,zz_thumb_writer_put_push_reg
+a9834,68,<global>,zz_thumb_writer_put_pop_reg,zz_thumb_writer_put_pop_reg
+a9878,104,<global>,zz_thumb_writer_put_add_reg_reg_reg,zz_thumb_writer_put_add_reg_reg_reg
+a98e0,72,<global>,zz_thumb_code_patch,zz_thumb_code_patch
+a9928,84,<global>,zz_thumb_relocate_code_patch,zz_thumb_relocate_code_patch
+a997c,72,<global>,zz_arm_code_patch,zz_arm_code_patch
+a99c4,84,<global>,zz_arm_relocate_code_patch,zz_arm_relocate_code_patch
+a9a18,420,<global>,ZzBuildInteceptorBackend,ZzBuildInteceptorBackend
+a9bbc,4,<global>,ZzFreeTrampoline,ZzFreeTrampoline
+a9bc0,260,<global>,ZzPrepareTrampoline,ZzPrepareTrampoline
+a9cc4,504,<global>,ZzBuildEnterTransferTrampoline,ZzBuildEnterTransferTrampoline
+a9ebc,384,<global>,ZzBuildEnterTrampoline,ZzBuildEnterTrampoline
+aa03c,404,<global>,ZzBuildDynamicBinaryInstrumentationTrampoline,ZzBuildDynamicBinaryInstrumentationTrampoline
+aa1d0,1380,<global>,ZzBuildInvokeTrampoline,ZzBuildInvokeTrampoline
+aa734,328,<global>,ZzBuildInsnLeaveTrampoline,ZzBuildInsnLeaveTrampoline
+aa87c,328,<global>,ZzBuildLeaveTrampoline,ZzBuildLeaveTrampoline
+aa9c4,1044,<global>,ZzActivateTrampoline,ZzActivateTrampoline
+aadd8,60,<global>,ctx_save,ctx_save
+aaddc,56,<global>,sub_AADDC,sub_AADDC
+aae14,56,<global>,ctx_restore,ctx_restore
+aae18,52,<global>,sub_AAE18,sub_AAE18
+aae4c,64,<global>,dynamic_binary_instrumentation_invocation,dynamic_binary_instrumentation_invocation
+aae8c,132,<global>,function_context_begin_invocation,function_context_begin_invocation
+aaf10,96,<global>,insn_context_end_invocation,insn_context_end_invocation
+aaf70,92,<global>,function_context_end_invocation,function_context_end_invocation
+aafcc,232,<global>,zz_thumb_thunker_build_enter_thunk,zz_thumb_thunker_build_enter_thunk
+ab0b4,232,<global>,zz_thumb_thunker_build_insn_leave_thunk,zz_thumb_thunker_build_insn_leave_thunk
+ab19c,232,<global>,zz_thumb_thunker_build_dynamic_binary_instrumentation_thunk,zz_thumb_thunker_build_dynamic_binary_instrumentation_thunk
+ab284,220,<global>,zz_thumb_thunker_build_leave_thunk,zz_thumb_thunker_build_leave_thunk
+ab360,1056,<global>,ZzThunkerBuildThunk,ZzThunkerBuildThunk
+ab780,48,<global>,zz_vm_read_string,zz_vm_read_string
+ab7b0,148,<global>,zz_vm_search_data,zz_vm_search_data
+ab844,6,<global>,zz_vm_align_floor,zz_vm_align_floor
+ab84a,10,<global>,zz_vm_align_ceil,zz_vm_align_ceil
+ab854,232,<global>,zz_linux_vm_get_memory_layout_via_pid,zz_linux_vm_get_memory_layout_via_pid
+ab93c,180,<global>,zz_linux_vm_search_code_cave,zz_linux_vm_search_code_cave
+ab9f0,16,<global>,PointerReadFailedHandler,PointerReadFailedHandler
+aba00,140,<global>,zz_posix_vm_check_address_valid_via_signal,zz_posix_vm_check_address_valid_via_signal
+aba8c,6,<global>,zz_posix_vm_get_page_size,zz_posix_vm_get_page_size
+aba92,50,<global>,zz_posix_vm_check_address_valid_via_msync,zz_posix_vm_check_address_valid_via_msync
+abac4,112,<global>,zz_posix_vm_protect,zz_posix_vm_protect
+abb34,10,<global>,zz_posix_vm_protect_as_executable,zz_posix_vm_protect_as_executable
+abb3e,10,<global>,zz_posxi_vm_protect_as_writable,zz_posxi_vm_protect_as_writable
+abb48,80,<global>,zz_posix_vm_allocate_pages,zz_posix_vm_allocate_pages
+abb98,28,<global>,zz_posix_vm_allocate,zz_posix_vm_allocate
+abbb4,66,<global>,zz_posix_vm_allocate_near_pages,zz_posix_vm_allocate_near_pages
+abbf8,120,<global>,zz_posix_vm_search_text_code_cave,zz_posix_vm_search_text_code_cave
+abc70,98,<global>,zz_posix_vm_patch_code,zz_posix_vm_patch_code
+abcd2,34,<global>,zz_posix_thread_new_thread_local_key_list,zz_posix_thread_new_thread_local_key_list
+abcf4,58,<global>,zz_posix_thread_add_thread_local_key,zz_posix_thread_add_thread_local_key
+abd30,68,<global>,zz_posix_thread_free_thread_local_key,zz_posix_thread_free_thread_local_key
+abd74,28,<global>,zz_posix_thread_initialize_thread_local_key_list,zz_posix_thread_initialize_thread_local_key_list
+abd90,52,<global>,zz_posix_thread_new_thread_local_key_ptr,zz_posix_thread_new_thread_local_key_ptr
+abdc4,52,<global>,zz_posix_thread_get_current_thread_data,zz_posix_thread_get_current_thread_data
+abdf8,52,<global>,zz_posix_thread_set_current_thread_data,zz_posix_thread_set_current_thread_data
+abe2c,8,<global>,zz_posix_get_current_thread_id,zz_posix_get_current_thread_id
+abe34,4,<global>,j_j_nullsub_3,j_j_nullsub_3
+abe38,36,<global>,sub_ABE38,sub_ABE38
+abe5c,156,<global>,sub_ABE5C,sub_ABE5C
+abef8,48,<global>,sub_ABEF8,sub_ABEF8
+abf28,48,<global>,sub_ABF28,sub_ABF28
+abf58,68,<global>,sub_ABF58,sub_ABF58
+abf9c,4,<global>,sub_ABF9C,sub_ABF9C
+abfa0,96,<global>,sub_ABFA0,sub_ABFA0
+ac000,100,<global>,j_nullsub_3,j_nullsub_3
+ac064,312,<global>,sub_AC064,sub_AC064
+ac19c,24,<global>,sub_AC19C,sub_AC19C
+ac1b4,92,<global>,sub_AC1B4,sub_AC1B4
+ac210,92,<global>,sub_AC210,sub_AC210
+ac26c,112,<global>,sub_AC26C,sub_AC26C
+ac2dc,152,<global>,sub_AC2DC,sub_AC2DC
+ac374,12,<global>,sub_AC374,sub_AC374
+ac380,48,<global>,sub_AC380,sub_AC380
+ac3b0,8,<global>,sub_AC3B0,sub_AC3B0
+ac3b8,44,<global>,sub_AC3B8,sub_AC3B8
+ac3e4,124,<global>,sub_AC3E4,sub_AC3E4
+ac460,32,<global>,sub_AC460,sub_AC460
+ac480,6,<global>,sub_AC480,sub_AC480
+ac486,28,<global>,sub_AC486,sub_AC486
+ac4a2,42,<global>,sub_AC4A2,sub_AC4A2
+ac4cc,32,<global>,sub_AC4CC,sub_AC4CC
+ac4ec,2,<global>,nullsub_14,nullsub_14
+ac4ee,6,<global>,sub_AC4EE,sub_AC4EE
+ac4f4,56,<global>,sub_AC4F4,sub_AC4F4
+ac52c,10,<global>,_ZdlPv,operator delete(void*)
+ac536,4,<global>,_ZdaPv,operator delete[](void*)
+ac53a,10,<global>,sub_AC53A,sub_AC53A
+ac544,4,<global>,sub_AC544,sub_AC544
+ac548,156,<global>,sub_AC548,sub_AC548
+ac5e4,200,<global>,sub_AC5E4,sub_AC5E4
+ac6ac,208,<global>,sub_AC6AC,sub_AC6AC
+ac77c,128,<global>,sub_AC77C,sub_AC77C
+ac7fc,12,<global>,sub_AC7FC,sub_AC7FC
+ac808,708,<global>,sub_AC808,sub_AC808
+acacc,28,<global>,sub_ACACC,sub_ACACC
+acae8,70,<global>,sub_ACAE8,sub_ACAE8
+acb2e,12,<global>,sub_ACB2E,sub_ACB2E
+acb3a,98,<global>,sub_ACB3A,sub_ACB3A
+acb9c,20,<global>,sub_ACB9C,sub_ACB9C
+acbb0,46,<global>,sub_ACBB0,sub_ACBB0
+acbde,18,<global>,sub_ACBDE,sub_ACBDE
+acbf0,4,<global>,j_j_j___cxa_begin_cleanup,j_j_j___cxa_begin_cleanup
+acbf4,108,<global>,sub_ACBF4,sub_ACBF4
+acc60,24,<global>,sub_ACC60,sub_ACC60
+acc78,4,<global>,j_nullsub_1,j_nullsub_1
+acc7c,16,<global>,sub_ACC7C,sub_ACC7C
+acc8c,20,<global>,sub_ACC8C,sub_ACC8C
+acca0,24,<global>,sub_ACCA0,sub_ACCA0
+accb8,16,<global>,sub_ACCB8,sub_ACCB8
+accc8,92,<global>,sub_ACCC8,sub_ACCC8
+acd24,112,<global>,_Znwj,operator new(unsigned int)
+acd94,30,<global>,sub_ACD94,sub_ACD94
+acdb2,14,<global>,_Znaj,operator new[](unsigned int)
+acdc0,4,<global>,sub_ACDC0,sub_ACDC0
+acdc4,120,<global>,sub_ACDC4,sub_ACDC4
+ace3c,60,<global>,sub_ACE3C,sub_ACE3C
+ace78,60,<global>,sub_ACE78,sub_ACE78
+aceb4,400,<global>,__gxx_personality_v0,__gxx_personality_v0
+ad044,4,<global>,j_j_j_nullsub_3_0_0,j_j_j_nullsub_3_0_0
+ad048,36,<global>,sub_AD048,sub_AD048
+ad06c,84,<global>,sub_AD06C,sub_AD06C
+ad0c0,4,<global>,j_j_j_nullsub_3,j_j_j_nullsub_3
+ad0c4,34,<global>,sub_AD0C4,sub_AD0C4
+ad0e6,54,<global>,sub_AD0E6,sub_AD0E6
+ad11c,4,<global>,sub_AD11C,sub_AD11C
+ad120,8,<global>,sub_AD120,sub_AD120
+ad128,36,<global>,sub_AD128,sub_AD128
+ad14c,20,<global>,sub_AD14C,sub_AD14C
+ad160,36,<global>,sub_AD160,sub_AD160
+ad184,76,<global>,sub_AD184,sub_AD184
+ad1d0,76,<global>,sub_AD1D0,sub_AD1D0
+ad21c,44,<global>,sub_AD21C,sub_AD21C
+ad248,2,<global>,nullsub_3,nullsub_3
+ad24a,4,<global>,j_j_j__ZdlPv_7,j_j_j__ZdlPv_7
+ad24e,24,<global>,sub_AD24E,sub_AD24E
+ad266,20,<global>,sub_AD266,sub_AD266
+ad27a,18,<global>,sub_AD27A,sub_AD27A
+ad28c,24,<global>,sub_AD28C,sub_AD28C
+ad2a4,4,<global>,j_nullsub_1_0,j_nullsub_1_0
+ad2a8,16,<global>,sub_AD2A8,sub_AD2A8
+ad2b8,20,<global>,sub_AD2B8,sub_AD2B8
+ad2cc,24,<global>,sub_AD2CC,sub_AD2CC
+ad2e4,4,<global>,j_nullsub_1_1,j_nullsub_1_1
+ad2e8,16,<global>,sub_AD2E8,sub_AD2E8
+ad2f8,20,<global>,sub_AD2F8,sub_AD2F8
+ad30c,4,<global>,j_j_j_nullsub_3_0,j_j_j_nullsub_3_0
+ad310,36,<global>,sub_AD310,sub_AD310
+ad334,500,<global>,sub_AD334,sub_AD334
+ad528,4,<global>,sub_AD528,sub_AD528
+ad52c,224,<global>,_ZSt25__stl_throw_runtime_errorPKc,std::__stl_throw_runtime_error(char const*)
+ad60c,180,<global>,sub_AD60C,sub_AD60C
+ad6c0,224,<global>,_ZSt23__stl_throw_range_errorPKc,std::__stl_throw_range_error(char const*)
+ad7a0,224,<global>,_ZSt24__stl_throw_out_of_rangePKc,std::__stl_throw_out_of_range(char const*)
+ad880,224,<global>,_ZSt24__stl_throw_length_errorPKc,std::__stl_throw_length_error(char const*)
+ad960,224,<global>,_ZSt28__stl_throw_invalid_argumentPKc,std::__stl_throw_invalid_argument(char const*)
+ada40,224,<global>,_ZSt26__stl_throw_overflow_errorPKc,std::__stl_throw_overflow_error(char const*)
+adb20,120,<global>,_ZNSt17__Named_exceptionC1ERKSs,"std::__Named_exception::__Named_exception(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)"
+adb98,124,<global>,_ZNSt17__Named_exceptionC1ERKS_,std::__Named_exception::__Named_exception(std::__Named_exception const&)
+adc14,110,<global>,_ZNSt17__Named_exceptionaSERKS_,std::__Named_exception::operator=(std::__Named_exception const&)
+adc84,44,<global>,_ZNSt11logic_errorD1Ev,std::logic_error::~logic_error()
+adcb0,48,<global>,_ZNSt17__Named_exceptionD0Ev,std::__Named_exception::~__Named_exception()
+adce0,6,<global>,_ZNKSt17__Named_exception4whatEv,std::__Named_exception::what() const
+adce8,48,<global>,_ZNSt11logic_errorD0Ev,std::logic_error::~logic_error()
+add18,48,<global>,_ZNSt13runtime_errorD0Ev,std::runtime_error::~runtime_error()
+add48,48,<global>,_ZNSt12domain_errorD0Ev,std::domain_error::~domain_error()
+add78,48,<global>,_ZNSt16invalid_argumentD0Ev,std::invalid_argument::~invalid_argument()
+adda8,48,<global>,_ZNSt12length_errorD0Ev,std::length_error::~length_error()
+addd8,48,<global>,_ZNSt12out_of_rangeD0Ev,std::out_of_range::~out_of_range()
+ade08,48,<global>,_ZNSt11range_errorD0Ev,std::range_error::~range_error()
+ade38,48,<global>,_ZNSt14overflow_errorD0Ev,std::overflow_error::~overflow_error()
+ade68,48,<global>,_ZNSt15underflow_errorD0Ev,std::underflow_error::~underflow_error()
+ade98,16,<global>,sub_ADE98,sub_ADE98
+adea8,104,<global>,_ZNSt14__malloc_alloc8allocateEj,std::__malloc_alloc::allocate(unsigned int)
+adf10,52,<global>,_ZNSt14__malloc_alloc18set_malloc_handlerEPFvvE,std::__malloc_alloc::set_malloc_handler(void (*)())
+adf44,200,<global>,_ZNSt12__node_alloc11_M_allocateERj_0,_ZNSt12__node_alloc11_M_allocateERj_0
+ae00c,108,<global>,sub_AE00C,sub_AE00C
+ae078,68,<global>,sub_AE078,sub_AE078
+ae0bc,384,<global>,sub_AE0BC,sub_AE0BC
+ae23c,4,<global>,_ZNSt12__node_alloc11_M_allocateERj,std::__node_alloc::_M_allocate(unsigned int&)
+ae240,68,<global>,_ZNSt12__node_alloc13_M_deallocateEPvj,"std::__node_alloc::_M_deallocate(void*, unsigned int)"
+ae284,92,<global>,sub_AE284,sub_AE284
+ae2e0,300,<global>,sub_AE2E0,sub_AE2E0
+ae40c,44,<global>,sub_AE40C,sub_AE40C
+ae438,80,<global>,sub_AE438,sub_AE438
+ae488,300,<global>,_ZNSt4priv14_Pthread_alloc23_S_get_per_thread_stateEv_0,_ZNSt4priv14_Pthread_alloc23_S_get_per_thread_stateEv_0
+ae5b4,136,<global>,_ZNSt4priv14_Pthread_alloc8allocateERj_0,_ZNSt4priv14_Pthread_alloc8allocateERj_0
+ae63c,52,<global>,sub_AE63C,sub_AE63C
+ae670,178,<global>,_ZNSt4priv14_Pthread_alloc8allocateERjPNS_31_Pthread_alloc_per_thread_stateE_0,_ZNSt4priv14_Pthread_alloc8allocateERjPNS_31_Pthread_alloc_per_thread_stateE_0
+ae722,82,<global>,sub_AE722,sub_AE722
+ae774,126,<global>,sub_AE774,sub_AE774
+ae7f2,4,<global>,_ZNSt4priv14_Pthread_alloc8allocateERj,std::priv::_Pthread_alloc::allocate(unsigned int&)
+ae7f6,52,<global>,_ZNSt4priv14_Pthread_alloc10deallocateEPvj,"std::priv::_Pthread_alloc::deallocate(void*, unsigned int)"
+ae82a,4,<global>,_ZNSt4priv14_Pthread_alloc8allocateERjPNS_31_Pthread_alloc_per_thread_stateE,"std::priv::_Pthread_alloc::allocate(unsigned int&, std::priv::_Pthread_alloc_per_thread_state*)"
+ae82e,82,<global>,_ZNSt4priv14_Pthread_alloc10deallocateEPvjPNS_31_Pthread_alloc_per_thread_stateE,"std::priv::_Pthread_alloc::deallocate(void*, unsigned int, std::priv::_Pthread_alloc_per_thread_state*)"
+ae880,126,<global>,_ZNSt4priv14_Pthread_alloc10reallocateEPvjRj,"std::priv::_Pthread_alloc::reallocate(void*, unsigned int, unsigned int&)"
+ae8fe,4,<global>,_ZNSt4priv14_Pthread_alloc23_S_get_per_thread_stateEv,std::priv::_Pthread_alloc::_S_get_per_thread_state()
+ae904,16,<global>,__cxa_end_cleanup,__cxa_end_cleanup
+ae914,108,<global>,__cxa_type_match,__cxa_type_match
+ae980,74,<global>,__cxa_begin_cleanup,__cxa_begin_cleanup
+ae9ca,86,<global>,sub_AE9CA,sub_AE9CA
+aea20,360,<global>,__cxa_call_unexpected,__cxa_call_unexpected
+aebb6,66,<global>,sub_AEBB6,sub_AEBB6
+aebf8,280,<global>,sub_AEBF8,sub_AEBF8
+aed10,16,<global>,sub_AED10,sub_AED10
+aed20,2,<global>,nullsub_1,nullsub_1
+aed22,6,<global>,j_j_j__ZdlPv_8,j_j_j__ZdlPv_8
+aed28,20,<global>,sub_AED28,sub_AED28
+aed3c,16,<global>,sub_AED3C,sub_AED3C
+aed4c,4,<global>,j_j_j__ZdlPv_9,j_j_j__ZdlPv_9
+aed50,24,<global>,sub_AED50,sub_AED50
+aed68,20,<global>,sub_AED68,sub_AED68
+aed7c,4,<global>,j_j_nullsub_3_2,j_j_nullsub_3_2
+aed80,34,<global>,sub_AED80,sub_AED80
+aeda2,6,<global>,sub_AEDA2,sub_AEDA2
+aeda8,4,<global>,j_j_nullsub_3_1,j_j_nullsub_3_1
+aedac,34,<global>,sub_AEDAC,sub_AEDAC
+aedce,6,<global>,sub_AEDCE,sub_AEDCE
+aedd4,8,<global>,j_j_nullsub_3_0,j_j_nullsub_3_0
+aeddc,44,<global>,sub_AEDDC,sub_AEDDC
+aee08,204,<global>,sub_AEE08,sub_AEE08
+aeed4,116,<global>,sub_AEED4,sub_AEED4
+aef48,40,<global>,sub_AEF48,sub_AEF48
+aef70,40,<global>,sub_AEF70,sub_AEF70
+aef98,18,<global>,__gnu_thumb1_case_uqi,__gnu_thumb1_case_uqi
+aefac,168,<global>,__aeabi_uidiv,__aeabi_uidiv
+af054,32,<global>,__aeabi_uidivmod,__aeabi_uidivmod
+af074,8,<global>,__aeabi_idiv,__aeabi_idiv
+af07c,212,<global>,sub_AF07C,sub_AF07C
+af150,32,<global>,__aeabi_idivmod,__aeabi_idivmod
+af170,68,<global>,__aeabi_ldivmod,__aeabi_ldivmod
+af1b4,16,<global>,__aeabi_idiv0,__aeabi_idiv0
+af1c4,60,<global>,__gnu_ldivmod_helper,__gnu_ldivmod_helper
+af200,60,<global>,__gnu_uldivmod_helper,__gnu_uldivmod_helper
+af23c,24,<global>,sub_AF23C,sub_AF23C
+af254,164,<global>,sub_AF254,sub_AF254
+af2f8,80,<global>,sub_AF2F8,sub_AF2F8
+af348,256,<global>,sub_AF348,sub_AF348
+af448,108,<global>,sub_AF448,sub_AF448
+af4b4,20,<global>,sub_AF4B4,sub_AF4B4
+af4c8,8,<global>,sub_AF4C8,sub_AF4C8
+af4d0,4,<global>,nullsub_2,nullsub_2
+af4d4,100,<global>,sub_AF4D4,sub_AF4D4
+af538,296,<global>,sub_AF538,sub_AF538
+af660,8,<global>,_Unwind_GetCFA,_Unwind_GetCFA
+af668,164,<global>,__gnu_Unwind_RaiseException,__gnu_Unwind_RaiseException
+af70c,28,<global>,__gnu_Unwind_ForcedUnwind,__gnu_Unwind_ForcedUnwind
+af728,116,<global>,__gnu_Unwind_Resume,__gnu_Unwind_Resume
+af79c,32,<global>,__gnu_Unwind_Resume_or_Rethrow,__gnu_Unwind_Resume_or_Rethrow
+af7bc,4,<global>,_Unwind_Complete,_Unwind_Complete
+af7c0,24,<global>,_Unwind_DeleteException,_Unwind_DeleteException
+af7d8,92,<global>,_Unwind_VRS_Get,_Unwind_VRS_Get
+af834,40,<global>,sub_AF834,sub_AF834
+af85c,92,<global>,_Unwind_VRS_Set,_Unwind_VRS_Set
+af8b8,44,<global>,sub_AF8B8,sub_AF8B8
+af8e4,200,<global>,__gnu_Unwind_Backtrace,__gnu_Unwind_Backtrace
+af9ac,1004,<global>,sub_AF9AC,sub_AF9AC
+afd98,8,<global>,__aeabi_unwind_cpp_pr0,__aeabi_unwind_cpp_pr0
+afda0,8,<global>,__aeabi_unwind_cpp_pr1,__aeabi_unwind_cpp_pr1
+afda8,8,<global>,__aeabi_unwind_cpp_pr2,__aeabi_unwind_cpp_pr2
+afdb0,864,<global>,_Unwind_VRS_Pop,_Unwind_VRS_Pop
+b0110,20,<global>,restore_core_regs,restore_core_regs
+b0124,8,<global>,__gnu_Unwind_Restore_VFP,__gnu_Unwind_Restore_VFP
+b012c,8,<global>,__gnu_Unwind_Save_VFP,__gnu_Unwind_Save_VFP
+b0134,8,<global>,__gnu_Unwind_Restore_VFP_D,__gnu_Unwind_Restore_VFP_D
+b013c,8,<global>,__gnu_Unwind_Save_VFP_D,__gnu_Unwind_Save_VFP_D
+b0144,8,<global>,__gnu_Unwind_Restore_VFP_D_16_to_31,__gnu_Unwind_Restore_VFP_D_16_to_31
+b014c,8,<global>,__gnu_Unwind_Save_VFP_D_16_to_31,__gnu_Unwind_Save_VFP_D_16_to_31
+b0154,68,<global>,__gnu_Unwind_Restore_WMMXD,__gnu_Unwind_Restore_WMMXD
+b0198,68,<global>,__gnu_Unwind_Save_WMMXD,__gnu_Unwind_Save_WMMXD
+b01dc,20,<global>,__gnu_Unwind_Restore_WMMXC,__gnu_Unwind_Restore_WMMXC
+b01f0,20,<global>,__gnu_Unwind_Save_WMMXC,__gnu_Unwind_Save_WMMXC
+b0204,36,<global>,_Unwind_RaiseException,_Unwind_RaiseException
+b0228,36,<global>,_Unwind_Resume,_Unwind_Resume
+b0240,12,<global>,sub_B0240,sub_B0240
+b024c,36,<global>,___Unwind_Resume_or_Rethrow,___Unwind_Resume_or_Rethrow
+b0270,36,<global>,___Unwind_ForcedUnwind,___Unwind_ForcedUnwind
+b0294,36,<global>,___Unwind_Backtrace,___Unwind_Backtrace
+b02b8,96,<global>,sub_B02B8,sub_B02B8
+b0318,40,<global>,sub_B0318,sub_B0318
+b0340,4,<global>,sub_B0340,sub_B0340
+b0344,920,<global>,__gnu_unwind_execute,__gnu_unwind_execute
+b06dc,64,<global>,__gnu_unwind_frame,__gnu_unwind_frame
+b071c,16,<global>,_Unwind_GetRegionStart,_Unwind_GetRegionStart
+b072c,28,<global>,_Unwind_GetLanguageSpecificData,_Unwind_GetLanguageSpecificData
+b0748,8,<global>,_Unwind_GetDataRelBase,_Unwind_GetDataRelBase
+b0750,8,<global>,_Unwind_GetTextRelBase,_Unwind_GetTextRelBase
+b0758,380,<global>,__divdi3,__divdi3
+b08d4,268,<global>,__udivdi3,__udivdi3
+b09e0,28,<global>,__aeabi_llsr,__aeabi_llsr
+b09fc,28,<global>,__aeabi_llsl,__aeabi_llsl
+b0a18,16,<global>,j_malloc,j_malloc
+b0a28,16,<global>,j_free,j_free
+b0a38,16,<global>,j_j_glcpp__scan_bytes,j_j_glcpp__scan_bytes
+b0a48,16,<global>,j_realloc,j_realloc
+b0a58,16,<global>,j_fputc,j_fputc
+b0a68,16,<global>,j_j_ralloc_free,j_j_ralloc_free
+b0a78,16,<global>,j_j_hash_table_insert,j_j_hash_table_insert
+b0a88,16,<global>,j_j_glcpp_error,j_j_glcpp_error
+b0a98,16,<global>,j_strtod,j_strtod
+b0aa8,16,<global>,j_vsnprintf,j_vsnprintf
+b0ab8,16,<global>,j_j__mesa_error_no_memory,j_j__mesa_error_no_memory
+b0ac8,16,<global>,j_j_ralloc_size,j_j_ralloc_size
+b0ad8,16,<global>,j_j__ZN9glsl_type12get_instanceEjjj,j_j__ZN9glsl_type12get_instanceEjjj
+b0ae8,16,<global>,j_j__ZN14ast_expression6do_hirEP9exec_listP22_mesa_glsl_parse_stateb,j_j__ZN14ast_expression6do_hirEP9exec_listP22_mesa_glsl_parse_stateb
+b0af8,16,<global>,j_j__ZNK18ast_type_specifier9glsl_typeEPPKcP22_mesa_glsl_parse_state,j_j__ZNK18ast_type_specifier9glsl_typeEPPKcP22_mesa_glsl_parse_state
+b0b08,16,<global>,j_j__Z18_mesa_glsl_warningPK7YYLTYPEP22_mesa_glsl_parse_statePKcz,j_j__Z18_mesa_glsl_warningPK7YYLTYPEP22_mesa_glsl_parse_statePKcz
+b0b18,16,<global>,j_j__Z16_mesa_glsl_errorP7YYLTYPEP22_mesa_glsl_parse_statePKcz,j_j__Z16_mesa_glsl_errorP7YYLTYPEP22_mesa_glsl_parse_statePKcz
+b0b28,16,<global>,j_j__ZN11ir_variable19init_interface_typeEPK9glsl_type,j_j__ZN11ir_variable19init_interface_typeEPK9glsl_type
+b0b38,16,<global>,j_j__ZN11ir_function18matching_signatureEP22_mesa_glsl_parse_statePK9exec_listb,j_j__ZN11ir_function18matching_signatureEP22_mesa_glsl_parse_statePK9exec_listb
+b0b48,16,<global>,j_j__ZN17glsl_symbol_tableD1Ev,j_j__ZN17glsl_symbol_tableD1Ev
+b0b58,16,<global>,j_j__ZN20ir_dereference_arrayC1EP11ir_variableP9ir_rvalue,j_j__ZN20ir_dereference_arrayC1EP11ir_variableP9ir_rvalue
+b0b68,16,<global>,j___cxa_atexit,j___cxa_atexit
+b0b78,16,<global>,j_j__Z28_mesa_glsl_lexer__scan_bytesPKcjPv,j_j__Z28_mesa_glsl_lexer__scan_bytesPKcjPv
+b0b88,16,<global>,j_j__Z28_mesa_glsl_lexer_lex_destroyPv,j_j__Z28_mesa_glsl_lexer_lex_destroyPv
+b0b98,16,<global>,j_j__mesa_destroy_shader_compiler,j_j__mesa_destroy_shader_compiler
+b0ba8,16,<global>,j_printf,j_printf
+b0bb8,16,<global>,j_puts,j_puts
+b0bc8,16,<global>,j_putchar,j_putchar
+b0bd8,16,<global>,j_j__mesa_glsl_release_types,j_j__mesa_glsl_release_types
+b0be8,16,<global>,j_j__Z36_mesa_glsl_release_builtin_functionsv,j_j__Z36_mesa_glsl_release_builtin_functionsv
+b0bf8,16,<global>,j_j__mesa_symbol_table_push_scope,j_j__mesa_symbol_table_push_scope
+b0c08,16,<global>,j_j__mesa_symbol_table_pop_scope,j_j__mesa_symbol_table_pop_scope
+b0c18,16,<global>,j_j__mesa_symbol_table_find_symbol,j_j__mesa_symbol_table_find_symbol
+b0c28,16,<global>,j_j__mesa_symbol_table_add_global_symbol,j_j__mesa_symbol_table_add_global_symbol
+b0c38,16,<global>,j_j__ZN9glsl_type4uvecEj,j_j__ZN9glsl_type4uvecEj
+b0c48,16,<global>,j_j__ZN9glsl_type4ivecEj,j_j__ZN9glsl_type4ivecEj
+b0c58,16,<global>,j_j__ZN9glsl_type3vecEj,j_j__ZN9glsl_type3vecEj
+b0c68,16,<global>,j_j__ZN9glsl_type4bvecEj,j_j__ZN9glsl_type4bvecEj
+b0c78,16,<global>,j_j__Z17precision_from_irP14ir_instruction,j_j__Z17precision_from_irP14ir_instruction
+b0c88,16,<global>,j_j_ralloc_steal,j_j_ralloc_steal
+b0c98,16,<global>,j_j__ZN10ir_builder6assignENS_5derefENS_7operandES1_i,j_j__ZN10ir_builder6assignENS_5derefENS_7operandES1_i
+b0ca8,16,<global>,j_j__ZN10ir_builder7swizzleENS_7operandEii,j_j__ZN10ir_builder7swizzleENS_7operandEii
+b0cb8,16,<global>,j_j__ZN13ir_expressionC1EiP9ir_rvalue,j_j__ZN13ir_expressionC1EiP9ir_rvalue
+b0cc8,16,<global>,j_j__ZN13ir_expressionC1EiP9ir_rvalueS1_,j_j__ZN13ir_expressionC1EiP9ir_rvalueS1_
+b0cd8,16,<global>,j_j__ZN10ir_builder4exprE23ir_expression_operationNS_7operandES1_,j_j__ZN10ir_builder4exprE23ir_expression_operationNS_7operandES1_
+b0ce8,16,<global>,j_j__ZN10ir_builder4exprE23ir_expression_operationNS_7operandE,j_j__ZN10ir_builder4exprE23ir_expression_operationNS_7operandE
+b0cf8,16,<global>,j_j__ZN10ir_builder4exprE23ir_expression_operationNS_7operandES1_S1_,j_j__ZN10ir_builder4exprE23ir_expression_operationNS_7operandES1_S1_
+b0d08,16,<global>,j_j__ZN9ir_rvalue11error_valueEPv,j_j__ZN9ir_rvalue11error_valueEPv
+b0d18,16,<global>,j_j__ZN20ir_dereference_arrayC1EP9ir_rvalueS1_,j_j__ZN20ir_dereference_arrayC1EP9ir_rvalueS1_
+b0d28,16,<global>,j_j__ZN21ir_dereference_recordC1EP9ir_rvaluePKc,j_j__ZN21ir_dereference_recordC1EP9ir_rvaluePKc
+b0d38,16,<global>,j_j__ZN11ir_constant16get_record_fieldEPKc,j_j__ZN11ir_constant16get_record_fieldEPKc
+b0d48,16,<global>,j_j__ZN21ir_function_signature25constant_expression_valueEP9exec_listP10hash_table,j_j__ZN21ir_function_signature25constant_expression_valueEP9exec_listP10hash_table
+b0d58,16,<global>,j_j__ZdlPv,j_j__ZdlPv
+b0d68,16,<global>,j_j__Z19visit_list_elementsP23ir_hierarchical_visitorP9exec_listb,j_j__Z19visit_list_elementsP23ir_hierarchical_visitorP9exec_listb
+b0d78,16,<global>,j_j__ZN21ir_print_glsl_visitor6indentEv,j_j__ZN21ir_print_glsl_visitor6indentEv
+b0d88,16,<global>,j_j__ZN13string_buffer15asprintf_appendEPKcz,j_j__ZN13string_buffer15asprintf_appendEPKcz
+b0d98,16,<global>,j_j__ZN21ir_print_glsl_visitor14print_var_nameEP11ir_variable,j_j__ZN21ir_print_glsl_visitor14print_var_nameEP11ir_variable
+b0da8,16,<global>,j_j__Z11print_floatR13string_bufferf,j_j__Z11print_floatR13string_bufferf
+b0db8,16,<global>,j_j__ZN22ir_print_metal_visitor6indentEv,j_j__ZN22ir_print_metal_visitor6indentEv
+b0dc8,16,<global>,j_j__ZN22ir_print_metal_visitor14print_var_nameEP11ir_variable,j_j__ZN22ir_print_metal_visitor14print_var_nameEP11ir_variable
+b0dd8,16,<global>,j_j__ZNK14ir_instruction6fprintEP7__sFILE,j_j__ZNK14ir_instruction6fprintEP7__sFILE
+b0de8,16,<global>,j_fwrite,j_fwrite
+b0df8,16,<global>,j_fprintf,j_fprintf
+b0e08,16,<global>,j_fputs,j_fputs
+b0e18,16,<global>,j_j_ralloc_asprintf,j_j_ralloc_asprintf
+b0e28,16,<global>,j_j__ZN24program_resource_visitor7processEP11ir_variable,j_j__ZN24program_resource_visitor7processEP11ir_variable
+b0e38,16,<global>,j_j__ZN24program_resource_visitor7processEPK9glsl_typePKc,j_j__ZN24program_resource_visitor7processEPK9glsl_typePKc
+b0e48,16,<global>,j_j__Z22cross_validate_globalsP17gl_shader_programPP9gl_shaderjb,j_j__Z22cross_validate_globalsP17gl_shader_programPP9gl_shaderjb
+b0e58,16,<global>,j_j__ZdaPv,j_j__ZdaPv
+b0e68,16,<global>,j_j_hash_table_find,j_j_hash_table_find
+b0e78,16,<global>,j_j_hash_table_dtor,j_j_hash_table_dtor
+b0e88,16,<global>,j_j__ZN22ir_rvalue_base_visitor12rvalue_visitEP13ir_assignment,j_j__ZN22ir_rvalue_base_visitor12rvalue_visitEP13ir_assignment
+b0e98,16,<global>,j_j__ZN22ir_rvalue_base_visitor12rvalue_visitEP7ir_call,j_j__ZN22ir_rvalue_base_visitor12rvalue_visitEP7ir_call
+b0ea8,16,<global>,j_j__ZN13ir_assignmentC1EP9ir_rvalueS1_S1_,j_j__ZN13ir_assignmentC1EP9ir_rvalueS1_S1_
+b0eb8,16,<global>,j_j_hash_table_string_hash,j_j_hash_table_string_hash
+b0ec8,16,<global>,j_j__ZN11ir_constantC1Ejj,j_j__ZN11ir_constantC1Ejj
+b0ed8,16,<global>,j_j__ZN11ir_constantC1Efj,j_j__ZN11ir_constantC1Efj
+b0ee8,16,<global>,j_j__ZN11ir_constantC1Eij,j_j__ZN11ir_constantC1Eij
+b0ef8,16,<global>,j_j__mesa_print_ir,j_j__mesa_print_ir
+b0f08,16,<global>,j_j__ZN23ir_hierarchical_visitor11visit_enterEP21ir_function_signature,j_j__ZN23ir_hierarchical_visitor11visit_enterEP21ir_function_signature
+b0f18,16,<global>,j_j__ZN23ir_hierarchical_visitor11visit_leaveEP21ir_function_signature,j_j__ZN23ir_hierarchical_visitor11visit_leaveEP21ir_function_signature
+b0f28,16,<global>,j_pthread_mutex_unlock,j_pthread_mutex_unlock
+b0f38,16,<global>,j_j___cxa_begin_cleanup,j_j___cxa_begin_cleanup
+b0f48,42,<global>,j_j__ZNSt14__malloc_alloc8allocateEj,j_j__ZNSt14__malloc_alloc8allocateEj

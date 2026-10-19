@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="data_downloader_title_text_color">#ff000000</color>
+    <color name="data_downloader_button_text_color">#ffffffff</color>
+    <color name="data_downloader_main_text_color">#ff000000</color>
+    <color name="data_downloader_progress_text_color">#ff000000</color>
+    <color name="gi_gameloft_logo_background_color">#ff000000</color>
+    <color name="gi_button_text">#ff000000</color>
+    <color name="gi_info_text">#ff000000</color>
+    <color name="gi_tittle_text">#ff010101</color>
+    <color name="gi_black">#ff000000</color>
+</resources>

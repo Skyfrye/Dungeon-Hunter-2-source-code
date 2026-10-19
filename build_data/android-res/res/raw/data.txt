@@ -1,0 +1,1 @@
+DYNAMIC:http://dl.gameloft.com/partners/androidmarket/d.cdn.php

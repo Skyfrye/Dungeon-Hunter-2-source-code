@@ -1,0 +1,101 @@
+elf_address,symbol,status,source_file,notes
+0x55a914,_ZN6glitch3gui9CGUITable9addColumnEPKwi,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CGUITable Column and Cell layouts and font/driver vtable slots unmapped
+0x55adfc,_ZN6glitch3gui9CGUITable6addRowEj,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CGUITable Row vector and recalculateHeights not mapped
+0x55afcc,_ZN6glitch3gui11CGUIToolBar22updateAbsolutePositionEv,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; base IGUIElement::updateAbsolutePosition and CGUIToolBar offsets +0x58..+0x60 unmapped
+0x55b014,_ZN6glitch3gui11CGUIToolBar9addButtonEiPKwS3_RKN5boost13intrusive_ptrINS_5video8ITextureEEESA_bb,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CGUIButton ctor (0x1e4 bytes) and vtable setter slots unmapped
+0x55b190,_ZN6glitch3gui11IGUIToolBarC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: IGUIElement base layout and IGUIToolBar vtable
+0x55b450,_ZN6glitch3gui11CGUIToolBarC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: IGUIToolBar base ctor and parent setRelativePosition
+0x55b5f0,_ZN6glitch3gui11CGUIToolBarC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; second ctor variant building a non-primary base at +0x04; blocked on same layout
+0x55b740,_ZN6glitch3gui11CGUIToolBar7onEventERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: parent vtable slot 8 dispatch and SEvent field layout
+0x55b83c,_ZN6glitch3gui11CGUIToolBarD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; D1 destructor blocked on IGUIElement D1 and vtable pointers
+0x55b8cc,_ZN6glitch3gui11CGUIToolBarD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,D0 deleting destructor; compiler thunk calls D1 then frees (not rebuilt)
+0x55b908,_ZN6glitch3gui11IGUIToolBarD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,D0 deleting destructor; compiler thunk calls D1 then frees (not rebuilt)
+0x55b984,_ZN6glitch3gui11CGUIToolBar4drawEv,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: driver vtable slots and child list iteration
+0x55ba34,_ZN6glitch3gui11CGUITTGlyphC2Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: vtable pointer and glyph record layout
+0x55bab0,_ZN6glitch3gui11CGUITTGlyphC1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x55ba34 same body; declared only; blocked on unmapped layout
+0x55bb30,_ZN6glitch3gui10CGUITTFontC2EPNS_5video12IVideoDriverE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CGUITTFont vtable and IVideoDriver refcount layout
+0x55bbb4,_ZN6glitch3gui10CGUITTFontC1EPNS_5video12IVideoDriverE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x55bb30 same body; declared only; blocked on unmapped layout
+0x55bc38,_ZN6glitch3gui10CGUITTFont9setBorderEjNS_5video6SColorE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: glyph record (88-byte) fields +0x50 and +0x54
+0x55bfec,_ZN6glitch3gui10CGUITTFont9drawGlyphEPKNS0_11CGUITTGlyphENS_4core10position2dIiEEPKNS5_4rectIiEENS_5video6SColorE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: C2DDriver::draw2DImage and glyph rectangles
+0x55c110,_ZN6glitch3gui10CGUITTFont18drawGlyphInTextureEPKNS0_11CGUITTGlyphERKN5boost13intrusive_ptrINS_5video8ITextureEEENS_4core10position2dIiEEPKNSC_4rectIiEENS7_6SColorE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: texture vtable slots 132 140 144 and C2DDriver draw
+0x55c240,_ZN6glitch3gui10CGUITTFont20getVertBearingFactorEv,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: FreeType FT_Get_Char_Index FT_Load_Glyph and face metrics
+0x55c2e4,_ZN6glitch3gui10IGUITTFontD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,D0 deleting destructor; compiler thunk calls D1 then frees (not rebuilt)
+0x55c2f8,_ZN6glitch3gui10CGUITTFaceD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: FreeType FT_Done_Face and library refcount
+0x55c354,_ZN6glitch3gui10CGUITTFaceD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,D0 deleting destructor; compiler thunk calls D1 then frees (not rebuilt)
+0x55c370,_ZN6glitch3gui10CGUITTFaceD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x55c2f8 same body; declared only; blocked on unmapped layout
+0x55c3cc,_ZN6glitch3gui10CGUITTFace4loadEPNS_2io9IReadFileE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: IReadFile vtable slots and FT_New_Memory_Face
+0x55c450,_ZN6glitch3gui10CGUITTFace4loadEPKc,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: FT_New_Face
+0x55c48c,_ZN6glitch3gui13CGUITTLibraryD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: FT_Done_FreeType
+0x55c4c4,_ZN6glitch3gui13CGUITTLibraryD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,D0 deleting destructor; compiler thunk calls D1 then frees (not rebuilt)
+0x55c4e0,_ZN6glitch3gui13CGUITTLibraryD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x55c48c same body; declared only; blocked on unmapped layout
+0x55c518,_ZN6glitch3gui13CGUITTLibraryC1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: FT_Init_FreeType and library refcount
+0x55c564,_ZN6glitch3gui10CGUITTFaceC1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CGUITTLibrary allocation and refcount
+0x55c600,_ZN6glitch3gui10CGUITTFaceC2Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x55c564 same body; declared only; blocked on unmapped layout
+0x55c69c,_ZN6glitch3gui13CGUITTLibraryC2Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x55c518 same body; declared only; blocked on unmapped layout
+0x55c6e8,_ZN6glitch3gui11CGUITTGlyphD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: IReferenceCounted drop and glyph texture fields
+0x55c738,_ZN6glitch3gui11CGUITTGlyphD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,D0 deleting destructor; compiler thunk calls D1 then frees (not rebuilt)
+0x55c754,_ZN6glitch3gui11CGUITTGlyphD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x55c6e8 same body; declared only; blocked on unmapped layout
+0x55c7a4,_ZN6glitch3gui11CGUITTGlyph4FreeEPNS_5video12IVideoDriverE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CTextureManager::removeTexture
+0x55c7ec,_ZN6glitch3gui11CGUITTGlyphaSERKS1_,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: refcount drop on texture members
+0x55c97c,_ZN6glitch3gui10CGUITTFont11clearGlyphsEv,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: std::vector erase and glyph Free
+0x55cae0,_ZN6glitch3gui10CGUITTFontD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; D1 blocked on glyph vectors and face drop
+0x55cb60,_ZN6glitch3gui10CGUITTFontD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,D0 deleting destructor; compiler thunk calls D1 then frees (not rebuilt)
+0x55cb7c,_ZN6glitch3gui10CGUITTFontD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x55cae0 same body; declared only; blocked on unmapped layout
+0x55cbfc,_ZN6glitch3gui11CGUITTGlyph5cacheEjPNS0_10CGUITTFaceEPNS_5video12IVideoDriverEb,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; largest font body (1000 bytes): blocked on FreeType bitmap embolden and CTextureManager
+0x55d218,_ZNK6glitch3gui10CGUITTFont15getGlyphByValueEj,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: FT_Get_Char_Index and cache call
+0x55d2b0,_ZNK6glitch3gui10CGUITTFont21getWidthFromCharacterEj,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: getGlyphByValue and iterateUTF8String
+0x55d340,_ZNK6glitch3gui10CGUITTFont19getCharacterFromPosEPKci,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: iterateUTF8String
+0x55d3b8,_ZNK6glitch3gui10CGUITTFont19getCharacterFromPosEPKwi,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: getWidthFromCharacter
+0x55d418,_ZNK6glitch3gui10CGUITTFont12getDimensionEPKc,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: iterateUTF8String and getWidthFromCharacter
+0x55d488,_ZNK6glitch3gui10CGUITTFont12getDimensionEPKw,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: getWidthFromCharacter
+0x55d4e0,_ZN6glitch3gui10CGUITTFont13drawInTextureEPKcRKN5boost13intrusive_ptrINS_5video8ITextureEEENS_4core4rectIiEENS6_6SColorEbb,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: virtual dispatch slots and driver draw2DImage
+0x55d854,_ZN6glitch3gui10CGUITTFont4drawEPKcRKNS_4core4rectIiEENS_5video6SColorEbbPS7_,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: virtual dispatch and std::string temp
+0x55dab8,_ZNK6glitch3gui10CGUITTFont9getHeightEPKc,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: getGlyphByValue and iterateUTF8String
+0x55db50,_ZNK6glitch3gui10CGUITTFont9getHeightEPKw,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: getGlyphByValue
+0x55dbd8,_ZNK6glitch3gui10CGUITTFont14getGlyphByCharEw,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: FreeType and glyph cache
+0x55dc70,_ZN6glitch3gui10CGUITTFont13drawInTextureEPKwRKN5boost13intrusive_ptrINS_5video8ITextureEEENS_4core4rectIiEENS6_6SColorEbb,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: virtual dispatch and driver draw
+0x55e020,_ZN6glitch3gui10CGUITTFont4drawEPKwRKNS_4core4rectIiEENS_5video6SColorEbbPS7_,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: virtual dispatch and std::wstring temp
+0x55e9f0,_ZN6glitch3gui10CGUITTFont6attachEPNS0_10CGUITTFaceEjjNS_5video6SColorE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: vector resize and CGUITTGlyph ctor and dtor
+0x55eb40,_ZN6glitch3gui10CGUIWindow22updateAbsolutePositionEv,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,thunk forwarding through base or member vtable; not reimplemented
+0x55eb7c,_ZNK6glitch3gui11IGUIElement14getNextElementEibbRPS1_S3_b.clone.2,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: IGUIElement child list and vtable slot 44
+0x55ecd0,_ZN6glitch3gui11IGUIElement11setTabOrderEi.clone.3,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: IGUIElement parent chain and getNextElement recursion
+0x55ed80,_ZN6glitch3gui10IGUIWindowC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: IGUIElement base layout and vtable
+0x55f040,_ZN6glitch3gui10CGUIWindowC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: IGUIWindow base and font/skin lookup
+0x55f680,_ZN6glitch3gui10CGUIWindowC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; second CGUIWindow ctor variant; blocked on same layout
+0x55fc70,_ZN6glitch3gui10CGUIWindowD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; D1 blocked on child refcount drops and IGUIElement D1
+0x55fd40,_ZN6glitch3gui10CGUIWindowD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,D0 deleting destructor; compiler thunk calls D1 then frees (not rebuilt)
+0x55fd5c,_ZN6glitch3gui10CGUIWindowD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; VTT-style destructor variant; alias layout of 0x55fc70
+0x55fe1c,_ZN6glitch3gui10CGUIWindow7onEventERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: SEvent and child list dispatch
+0x56008c,_ZN6glitch3gui10CGUIWindow4drawEv,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: driver vtable slots and child draw loop
+0x578924,_ZN6glitch5scene10CBatchMeshC2Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CBatchMesh member block before +0x20 unmapped
+0x5789e4,_ZN6glitch5scene10CBatchMeshC1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x578924 same body; declared only; blocked on unmapped layout
+0x578aa4,_ZN6glitch5scene10CBatchMeshC2Ej,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CBatchMesh member block before +0x20 unmapped
+0x578b60,_ZN6glitch5scene10CBatchMeshC1Ej,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x578aa4 same body; declared only; blocked on unmapped layout
+0x578c50,_ZNK6glitch5scene10CBatchMesh13getMeshBufferEj,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; batch record (20 bytes at +0x20 vector) mapped; refcount ++ and owner block unmapped
+0x578ccc,_ZNK6glitch5scene10CBatchMesh11getMaterialEj,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; batch record material at +0x04 mapped; refcount unmapped
+0x578cf4,_ZNK6glitch5scene10CBatchMesh29getMaterialVertexAttributeMapEj,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; batch record map at +0x08 mapped; refcount unmapped
+0x578d9c,_ZN6glitch5scene32getNbVertexAttributeMapsDataSizeERKN5boost13intrusive_ptrINS_5video27CMaterialVertexAttributeMapEEE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CMaterialVertexAttributeMap layout beyond +0x04
+0x578ee0,_ZNK6glitch5scene10CBatchMesh8SSegment4saveEPNS_2io10IWriteFileEb,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: IWriteFile vtable and segment field layout
+0x57a2ac,_ZN6glitch5scene10CBatchMesh11setMaterialEjRKN5boost13intrusive_ptrINS_5video9CMaterialEEERKNS3_INS4_27CMaterialVertexAttributeMapEEE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: batch vector reallocation and refcount
+0x57a368,_ZN6glitch5scene10CBatchMesh6SBatchD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; SBatch destructor blocked on intrusive_ptr release
+0x57a4a8,_ZN6glitch5scene10CBatchMesh5stripEv,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: vector reserve on owner vectors
+0x57a59c,_ZN6glitch5scene10CBatchMeshD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; D1 blocked on owner buffer members beyond +0x08
+0x57a604,_ZN6glitch5scene10CBatchMeshD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,D0 deleting destructor; compiler thunk calls D1 then frees (not rebuilt)
+0x57a620,_ZN6glitch5scene10CBatchMeshD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x57a59c same body; declared only; blocked on unmapped layout
+0x57a688,_ZN6glitch5scene10CBatchMesh6SBatchD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,alias of 0x57a368 same body; declared only; alias of 0x57a368 SBatch destructor
+0x57a6d4,_ZNK6glitch5scene10CBatchMesh17updateBoundingBoxEv,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,"superseded by the ledger.csv row, which now holds the current blockers: CVertexStreams::computeBoundingBox (0x5a0ec0) exists as of this pass; what remains is the unmapped SSegment bytes (+0x00 pointer / +0x04 index chain, +0x24 and +0x26 range, +0x0c box pointer) and the +0x68 stored-box half"
+0x57aae4,_ZN6glitch5scene10CBatchMesh20updateSegmentContentEPvPKNS0_11CMeshBufferEjbRKN5boost13intrusive_ptrINS_5video9CMaterialEEERKNS7_INS8_19CVertexAttributeMapEEEPKNS8_12IVideoDriverE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CVertexStreams and CPrimitiveStream layout
+0x57b174,_ZN6glitch5scene10CBatchMesh30initStaticSegmentBoundingBoxesEv,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: segment bounding box layout
+0x57b3d8,_ZN6glitch5scene10CBatchMesh8SSegment4loadEPNS_2io9IReadFileEb,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: IReadFile vtable and segment field layout
+0x57b67c,_ZN6glitch5scene10CBatchMesh8SSegment5cloneERKS2_,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: boost object_pool construct
+0x57b900,_ZN6glitch5scene10CBatchMesh8addBatchEv,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: SBatch ctor with segment count
+0x57b96c,_ZN6glitch5scene10CBatchMesh18quantizeComponentsEbbPNS_5video12IVideoDriverE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CMeshBuffer and quantization layout
+0x57ba8c,_ZN6glitch5scene10CBatchMesh6SBatchaSERKS2_,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: refcount drops on material and map
+0x57bc78,_ZN6glitch5scene10CBatchMesh11sortBatchesEPKNS_5video12IVideoDriverEPj,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CMaterial::getTechnique and technique table
+0x57bd44,_ZN6glitch5scene10CBatchMesh5clearEv,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: SBatch clear and refcount drops
+0x57be34,_ZN6glitch5scene10CBatchMesh9setBufferEjRKN5boost13intrusive_ptrINS0_11CMeshBufferEEERKNS3_INS_5video9CMaterialEEE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: CVertexStreams and CMaterialVertexAttributeMap refcounts
+0x57c19c,_ZN6glitch5scene10CBatchMesh4sortEPKNS_5video12IVideoDriverE,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; largest CBatchMesh body (2020 bytes): blocked on sort key layout
+0x57d98c,_ZN6glitch5scene10CBatchMesh10addSegmentEtjs,partial,glitch-scene-collada-gui/src/recon/slice_04.cpp,declared only; blocked: segment info vector and batch layout
+0x57e524,_ZNK6glitch5scene15CBatchSceneNode25getTransformedBoundingBoxEv,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,thunk forwarding through base or member vtable; not reimplemented
+0x57e538,_ZNK6glitch5scene15CBatchSceneNode14getBoundingBoxEv,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,thunk forwarding through base or member vtable; not reimplemented
+0x57e554,_ZNK6glitch5scene15CBatchSceneNode16getMaterialCountEv,skipped,glitch-scene-collada-gui/src/recon/slice_04.cpp,thunk forwarding through base or member vtable; not reimplemented

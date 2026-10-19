@@ -1,0 +1,12 @@
+DWARF-derived C++ declaration sketches. These are NOT original source files,
+not compilation-ready headers, and contain NO recovered function bodies.
+Qualified names are printed verbatim; arrays/function pointers, templates,
+access defaults, static methods, and ABI-only entries may require manual repair.
+Exact DWARF attributes and type references are preserved in dies.jsonl.gz.
+Source paths refer to original debug metadata; those files are not bundled.
+
+Compilation unit: /tmp/ndk/src/build/../gcc/gcc-4.4.3/libgcc/../gcc/config/arm/lib1funcs.asm
+Evidence category: compiler_runtime_libgcc
+
+
+// Functions outside record declarations

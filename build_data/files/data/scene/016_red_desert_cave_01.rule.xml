@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/desert_cave"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\016_red_desert_cave_01.pyscript"
+	camera_znear="900"
+	camera_zfar="10000"
+	music="RedDesertCaveOneAmbientMusic"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	light_set="data/3D/Light/desertcave.lightset_xml"
+	fixed_light_set="data/3D/Light/desertcave_es1_1.lightset_xml"
+	prog_vertex_buffer_size="524400"
+	prog_index_buffer_size="97200"
+	fix_vertex_buffer_size="1181880"
+	fix_index_buffer_size="148224"
+>
+
+	<list name="objectives" random="true" replacement="false">
+		<elem name="obj02_dsrtcave_ws_00" gameplay="rdc01_obj02_dsrtcave_ws_00_01.mgp" visual="rdc01_obj02_dsrtcave_ws_00_01.mvp"/>
+	</list>
+
+	<list name="path_bandits" random="true">
+		<elem name="corner_dsrtcave_ne_00" gameplay="rdc01_corner_dsrtcave_ne_00_01.mgp" visual="rdc01_corner_dsrtcave_ne_00_01.mvp"/>
+		<elem name="corner_dsrtcave_se_00" gameplay="rdc01_corner_dsrtcave_se_00_01.mgp" visual="rdc01_corner_dsrtcave_se_00_01.mvp"/>
+		<elem name="corner_dsrtcave_wn_00" gameplay="rdc01_corner_dsrtcave_wn_00_01.mgp" visual="rdc01_corner_dsrtcave_wn_00_01.mvp"/>
+		<elem name="corner_dsrtcave_ws_00" gameplay="rdc01_corner_dsrtcave_ws_00_01.mgp" visual="rdc01_corner_dsrtcave_ws_00_01.mvp"/>
+		<elem name="straight_dsrtcave_we_00" gameplay="rdc01_straight_dsrtcave_we_00_01.mgp" visual="rdc01_straight_dsrtcave_we_00_01.mvp"/>
+	</list>
+	
+	<list name="path_spiders" random="true">
+		<elem name="corner_dsrtcave_ne_00" gameplay="rdc01_corner_dsrtcave_ne_00_02.mgp" visual="rdc01_corner_dsrtcave_ne_00_02.mvp"/>
+		<elem name="corner_dsrtcave_se_00" gameplay="rdc01_corner_dsrtcave_se_00_02.mgp" visual="rdc01_corner_dsrtcave_se_00_02.mvp"/>
+		<elem name="corner_dsrtcave_wn_00" gameplay="rdc01_corner_dsrtcave_wn_00_02.mgp" visual="rdc01_corner_dsrtcave_wn_00_02.mvp"/>
+		<elem name="corner_dsrtcave_ws_00" gameplay="rdc01_corner_dsrtcave_ws_00_02.mgp" visual="rdc01_corner_dsrtcave_ws_00_02.mvp"/>
+		<elem name="straight_dsrtcave_we_00" gameplay="rdc01_straight_dsrtcave_we_00_02.mgp" visual="rdc01_straight_dsrtcave_we_00_02.mvp"/>
+	</list>
+
+	<list name="start" random="true">
+		<elem name="obj01_dsrtcave_e_00" gameplay="rdc01_obj01_dsrtcave_e_00_01.mgp" visual="rdc01_obj01_dsrtcave_e_00_01.mvp"/>
+	</list>
+	
+	<list name="end" random="true">
+		<elem name="obj05_dsrtcave_n_00" gameplay="rdc01_obj05_dsrtcave_n_00_01.mgp" visual="rdc01_obj05_dsrtcave_n_00_01.mvp"/>
+	</list>
+	
+<RootRule name="#start">
+	<path name="#path_bandits" length="2,4" dontGoBack="true">
+		<Forceblock name="#objectives[0]">
+			<path name="#path_spiders" length="2,4" dontGoBack="true">
+				<Forceblock name="#end"/>
+			</path>
+		</Forceblock>
+	</path>
+</RootRule>
+</rules>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/lighthousse"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\019_light_house_01.pyscript"
+	camera_znear="900"
+	camera_zfar="1000000"
+	music="LighthouseTempleAmbientMusic"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	light_set="data/3D/Light/lighthousse.lightset_xml"
+	fixed_light_set="data/3D/Light/lighthousse_es1_1.lightset_xml"
+	prog_vertex_buffer_size="220320"
+	prog_index_buffer_size="42480"
+	fix_vertex_buffer_size="2312316"
+	fix_index_buffer_size="158436"
+>
+	
+	<list name="level2" random="true">
+		<elem name="close_01" gameplay="lh01_lv02_close_01_01.mgp" visual="lh01_lv02_close_01_01.mvp"/>
+	</list>
+	
+	<list name="level7" random="true">
+		<elem name="open_02" gameplay="lh01_lv07_open_02_01.mgp" visual="lh01_lv07_open_02_01.mvp"/>
+	</list>
+	
+	<list name="level8" random="true">
+		<elem name="close_03" gameplay="lh01_lv08_close_03_01.mgp" visual="lh01_lv08_close_03_01.mvp"/>
+	</list>
+	
+	<list name="level9" random="true">
+		<elem name="open_01" gameplay="lh01_lv09_open_01_01.mgp" visual="lh01_lv09_open_01_01.mvp"/>
+		<elem name="close_01" gameplay="lh01_lv09_close_01_01.mgp" visual="lh01_lv09_close_01_01.mvp"/>
+		<elem name="open_03" gameplay="lh01_lv09_open_03_01.mgp" visual="lh01_lv09_open_03_01.mvp"/>
+	</list>
+	
+	<list name="level10" random="true">
+		<elem name="open_02" gameplay="lh01_lv10_open_02_01.mgp" visual="lh01_lv10_open_02_01.mvp"/>
+		<elem name="close_03" gameplay="lh01_lv10_close_03_01.mgp" visual="lh01_lv10_close_03_01.mvp"/>
+	</list>
+	
+<RootRule name="#level7">
+	<Forceblock name="#level8">
+		<Forceblock name="#level9">
+			<Forceblock name="#level10">
+				<Forceblock name="#level2"/>
+			</Forceblock>
+		</Forceblock>
+	</Forceblock>
+	<EndPath exit="west"/>
+</RootRule>
+</rules>
+</RootRule>
+</rules>

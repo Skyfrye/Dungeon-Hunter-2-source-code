@@ -1,0 +1,858 @@
+--[[ Combat Formulas
+
+	IMPORTANT NOTES:
+		-	Don't rename the file
+		-	Don't rename the core functions. You can add sub functions however.
+		-	This is Fixed Point arithmetic (back from the mobile age, ions ago),
+			so use the provided functions to multiply or divide the values.
+			(Read CommonAPI.txt in data/scripts/)
+		-	This file will be included with many different others in the same instance
+			of a script, so keep the nomenclature name clash safe, using the prefix "CF"
+			for anything that is global.
+		-	That file is not "thread safe". This comes from the fact that `attacker`
+			and `defender` are set only once before all calculations, to avoid to push
+			them on the stack on each function calls.
+			(i.e. combat calculations should not be performed in more than one thread.)
+--]]
+
+-- ###################################################################################
+-- FAST VALUES
+-- ###################################################################################
+-- Damage
+local CP_Damage_Min_Main_Hand	= GetPyStruct("CharacterProperties", "Damage_Min_Main_Hand");
+local CP_Damage_Max_Main_Hand	= GetPyStruct("CharacterProperties", "Damage_Max_Main_Hand");
+local CP_Damage_Min_Off_Hand	= GetPyStruct("CharacterProperties", "Damage_Min_Off_Hand");
+local CP_Damage_Max_Off_Hand	= GetPyStruct("CharacterProperties", "Damage_Max_Off_Hand");
+local CP_SnS_MinDamage			= GetPyStruct("CharacterProperties", "SnS_MinDamage");
+local CP_SnS_MaxDamage			= GetPyStruct("CharacterProperties", "SnS_MaxDamage");
+-- Dots
+local CP_Dot_Duration			= GetPyStruct("CharacterProperties", "Dot_Duration");
+local CP_Dot_Min_Damage			= GetPyStruct("CharacterProperties", "Dot_Min_Damage");
+local CP_Dot_Max_Damage			= GetPyStruct("CharacterProperties", "Dot_Max_Damage");
+local CP_SnS_Dot_Duration		= GetPyStruct("CharacterProperties", "SnS_Dot_Duration");
+local CP_SnS_Dot_Min_Damage		= GetPyStruct("CharacterProperties", "SnS_Dot_Min_Damage");
+local CP_SnS_Dot_Max_Damage		= GetPyStruct("CharacterProperties", "SnS_Dot_Max_Damage");
+local CP_SnS_Dot_Elemental_Type	= GetPyStruct("CharacterProperties", "SnS_Dot_Elemental_Type");
+
+-- ###################################################################################
+-- ###################################################################################
+
+local g_cf_data = {};	-- Don't touch that. It is used to optimize the calling =]
+
+-- Switch the comment from one line to the other to show traces or disable them
+--local CF_Trace = Trace;
+local CF_Trace = function() end;
+
+
+
+-- ----------------------------------------------------------------------------
+-- Must return `true` if the attacker misses the defender, `false` otherwise
+-- Must return `true` if the defender dodges the attacker, `false` otherwise
+local function CF__CalcMissOrDodge(attacker, defender, roll, attackType, element, offHanded)
+	local missAutoMiss	= roll+1;	-- default: Don't auto miss
+	local missAutoHit		= roll-1;	-- default: Don't auto hit
+	local missTarget		= roll+1;	-- default: Don't miss
+
+	local dodgeRoll		= ToFixed(Rand(0, 100));	-- We need a second roll for dodge
+	local dodgeAutoHit	= dodgeRoll-1;					-- default: Don't auto hit
+	local dodgeTarget		= dodgeRoll+1;					-- default: Don't dodge
+
+
+
+	-- ** STEP 1 - Auto Miss and Auto Hit (Miss) ---------------------
+	-- MELEE
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		missAutoMiss	= GetPyCst("CombatConstants", "COMBAT_MELEE_AUTOMATIC_MISS_LIMIT");
+		missAutoHit		= GetPyCst("CombatConstants", "COMBAT_MELEE_AUTOMATIC_HIT_LIMIT");
+
+	-- MAGIC
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+		missAutoMiss	= GetPyCst("CombatConstants", "COMBAT_MAGIC_AUTOMATIC_MISS_LIMIT");
+		missAutoHit		= GetPyCst("CombatConstants", "COMBAT_MAGIC_AUTOMATIC_HIT_LIMIT");
+
+	end
+
+
+	-- RESULT
+	if(roll >= missAutoMiss) then
+		CF_Trace("\tAttacker automatically misses the defender");
+		return true, false;
+	elseif(roll < missAutoHit) then
+		CF_Trace("\tAttacker automatically hits the defender");
+		return false, false;
+	end
+	-- ** STEP 1 -----------------------------------------------------
+
+
+
+	-- ** STEP 2 - Auto Miss (Dodge) ---------------------------------
+	-- MELEE
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		dodgeAutoHit = GetPyCst("CombatConstants", "COMBAT_MELEE_MAXIMUM_DODGE");
+
+	-- MAGIC
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+		-- no auto-hit with dodge roll for magic
+
+	end
+
+
+	-- RESULT
+--	if(dodgeRoll < dodgeAutoHit) then
+--		CF_Trace("\tDefender automatically can't block the attacker");
+--		return false, false;
+--	end
+	-- ** STEP 2 -----------------------------------------------------
+
+
+
+	-- ** STEP 3 - Miss Calculation ----------------------------------
+	-- MELEE
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		local attackRating = attacker:GetProp(GetPyStruct("CharacterProperties", "Rating_Attack"));
+		attackRating = attackRating + attacker:GetAttackRatingBonus(offHanded);
+		local deltaRating = attackRating - defender:GetProp(GetPyStruct("CharacterProperties", "Rating_Defense"));
+
+		missTarget = GetPyCst("CombatConstants", "COMBAT_MELEE_BASE_TO_HIT_CHANCE");
+		missTarget = missTarget + MulFixed(deltaRating, GetPyCst("CombatConstants", "COMBAT_MELEE_AR_DR_DIFFERENCE_MODIFIER_TO_HIT"));
+		missTarget = missTarget + MulFixed(g_cf_data["ad_dlevel"], GetPyCst("CombatConstants", "COMBAT_MELEE_LEVEL_DIFFERENCE_MODIFIER_TO_HIT"));
+
+	-- MAGIC
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+		local attackRating = attacker:GetProp(GetPyStruct("CharacterProperties", "Spell_Rating_Attack"));
+
+		if(element ~= GetPyCst("Elemental", "none")) then
+			attackRating = attackRating + attacker:GetProp(GetPyStruct("CharacterProperties", "Spell_Rating_Attack_Bonus_Fire") + element);
+		end
+
+		local deltaRating = attackRating - defender:GetProp(GetPyStruct("CharacterProperties", "Spell_Rating_Dodge"));
+
+		missTarget = GetPyCst("CombatConstants", "COMBAT_MAGIC_BASE_TO_HIT_CHANCE");
+		missTarget = missTarget + MulFixed(deltaRating, GetPyCst("CombatConstants", "COMBAT_MAGIC_AR_DR_DIFFERENCE_MODIFIER_TO_HIT"));
+		missTarget = missTarget + MulFixed(g_cf_data["ad_dlevel"], GetPyCst("CombatConstants", "COMBAT_MAGIC_LEVEL_DIFFERENCE_MODIFIER_TO_HIT"));
+	end
+	-- ** STEP 3 -----------------------------------------------------
+
+
+
+	-- ** STEP 4 - Dodge Calculation ---------------------------------
+	-- MELEE
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		dodgeTarget = defender:GetProp(GetPyStruct("CharacterProperties", "Rating_Dodge"));
+		dodgeTarget = dodgeTarget + MulFixed(g_cf_data["da_dlevel"], GetPyCst("CombatConstants", "COMBAT_MELEE_LEVEL_DIFFERENCE_MODIFIER_TO_DODGE"));
+
+	-- MAGIC
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+		-- no dodge for magic
+
+	end
+	-- ** STEP 4 -----------------------------------------------------
+
+
+
+	-- ** STEP 5 - Final Results -------------------------------------
+	if(roll >= missTarget) then
+		CF_Trace("\tAttacker misses the defender");
+		return true, false;
+	end
+
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		if(dodgeRoll < dodgeTarget) then
+			CF_Trace("\tDefender dodges the attacker");
+			return false, true;
+		end
+	end
+
+	return false, false;
+	-- ** STEP 5 -----------------------------------------------------
+end
+
+
+-- ----------------------------------------------------------------------------
+-- Must return `true` if the defender blocks the attacker, `false` otherwise
+local function CF__CalcBlock(attacker, defender, roll, attackType)
+	local target	= roll-1;	-- default: Don't block
+	local autoMiss = roll+1;	-- default: Don't auto miss
+
+	-- MELEE
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		autoMiss = GetPyCst("CombatConstants", "COMBAT_MELEE_MAXIMUM_BLOCK");
+
+		target = defender:GetProp(GetPyStruct("CharacterProperties", "Rating_Block"));
+		target = target + MulFixed(g_cf_data["da_dlevel"], GetPyCst("CombatConstants", "COMBAT_MELEE_LEVEL_DIFFERENCE_MODIFIER_TO_BLOCK"));
+
+		if(defender:HasShield()) then
+			target = target + defender:GetProp(GetPyStruct("CharacterProperties", "Rating_Block_Bonus_Shield"));
+		end
+
+	-- MAGIC
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+
+	end
+
+
+	-- RESULT
+	if(roll >= autoMiss) then
+		return false;
+	elseif(roll < target) then
+		CF_Trace("\tDefender blocks the attacker");
+		g_cf_data["isBlocked"] = true;
+		return true;
+	else
+		return false;
+	end
+end
+
+
+-- ----------------------------------------------------------------------------
+-- Must return `true` if the attacker crits the defender, `false` otherwise
+local function CF__CalcCrit(attacker, defender, roll, attackType)
+	local target	= roll-1;	-- default: Don't crit
+	local autoMiss	= roll+1;	-- default: Don't auto miss
+
+	-- MELEE
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		autoMiss	= GetPyCst("CombatConstants", "COMBAT_MELEE_MAXIMUM_CRITICAL");
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "Rating_Critical"));
+		target	= target + MulFixed(g_cf_data["ad_dlevel"], GetPyCst("CombatConstants", "COMBAT_MELEE_LEVEL_DIFFERENCE_MODIFIER_TO_CRITICAL"));
+
+	-- MAGIC
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "Spell_Rating_Critical"));
+		target	= target + MulFixed(g_cf_data["ad_dlevel"], GetPyCst("CombatConstants", "COMBAT_MAGIC_LEVEL_DIFFERENCE_MODIFIER_TO_CRITICAL"));
+
+	end
+
+
+	--target = target + attacker:GetCritRatingBonus(offHanded);
+
+
+	-- RESULT
+	if(roll >= autoMiss) then
+		return false;
+	elseif(roll < target) then
+		CF_Trace("\tAttacker crits the defender");
+		g_cf_data["isCritical"] = true;
+		return true;
+	else
+		return false;
+	end
+end
+
+
+-- ----------------------------------------------------------------------------
+-- Must return `true` if the attack hurts the defender, `false` otherwise
+local function CF__CalcHurt(attacker, defender, roll, attackType)
+	local target = roll-1;	-- default: Don't hurt
+	local level_difference_to_resist_hurt = 5;
+
+	CF_Trace("DEFENDER IS:");
+	-- MELEE
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "Hurt_Target_Chance"));
+		if(target>0) then
+			target	= target + (attacker:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_hurt);
+			target	= target - defender:GetProp(GetPyStruct("CharacterProperties", "Hurt_Resist_Chance"));
+			target	= target - (defender:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_hurt);
+			CF_Trace("	HURT CHANCES = "..tostring(target/256).."\%");
+		end
+	-- MAGIC
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "SnS_Hurt_Target_Chance"));
+		if(target>0) then
+			target	= target + (attacker:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_hurt);
+			target	= target - defender:GetProp(GetPyStruct("CharacterProperties", "Hurt_Resist_Chance"));
+			target	= target - (defender:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_hurt);
+			CF_Trace("	HURT CHANCES = "..tostring(target/256).."\%");
+		end
+	end
+
+	--CF_Trace("HURT ADUSTED ROLL ="..tostring(target));
+
+	-- RESULT
+	if(roll < target) then
+		CF_Trace("	=> HURTED!!! :"..tostring(roll/256).." < "..tostring(target/256));
+		return true;
+	else
+		CF_Trace("		NOT HURTED!!! :"..tostring(roll/256).." > "..tostring(target/256));
+		return false;
+	end
+end
+
+
+-- ----------------------------------------------------------------------------
+-- Must return `true` if the attack knocks back the defender, `false` otherwise
+local function CF__CalcPush(attacker, defender, roll, attackType)
+	local target = roll-1;	-- default: Don't knock back
+	local level_difference_to_resist_push = 5;
+
+	-- MELEE
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "Push_Target_Chance"));
+		if(target>0) then
+			target	= target + (attacker:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_push);
+			target	= target - defender:GetProp(GetPyStruct("CharacterProperties", "Push_Resist_Chance"));
+			target	= target - (defender:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_push);
+			CF_Trace("	PUSH CHANCES = "..tostring(target/256).."\%");
+		end
+
+	-- MAGIC
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "SnS_Push_Target_Chance"));
+		if(target>0) then
+			target	= target + (attacker:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_push);
+			target	= target - defender:GetProp(GetPyStruct("CharacterProperties", "Push_Resist_Chance"));
+			target	= target - (defender:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_push);
+			CF_Trace("	PUSH CHANCES = "..tostring(target/256).."\%");
+		end
+	end
+
+	--CF_Trace("PUSH ADUSTED ROLL ="..tostring(target));
+
+	-- RESULT
+	if(roll < target) then
+		CF_Trace("	=> PUSHED!!! :"..tostring(roll/256).." < "..tostring(target/256));
+		return true;
+	else
+		CF_Trace("		NOT PUSH!!! :"..tostring(roll/256).." > "..tostring(target/256));
+		return false;
+	end
+end
+
+
+-- ----------------------------------------------------------------------------
+-- Must return `true` if the attack stuns the defender, `false` otherwise
+local function CF__CalcStun(attacker, defender, roll, attackType)
+	local target = roll-1;	-- default: Don't stun
+	local level_difference_to_resist_stun = 5;
+
+	-- MELEE
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "Stun_Target_Chance"));
+		if(target>0) then
+			target = target + (attacker:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_stun);
+			target	= target - defender:GetProp(GetPyStruct("CharacterProperties", "Stun_Resist_Chance"));
+			target	= target - (defender:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_stun);
+			CF_Trace("	STUN CHANCES = "..tostring(target/256).."\%");
+		end
+
+	-- MAGIC
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "SnS_Stun_Target_Chance"));
+		if(target>0) then
+			target	= target + (attacker:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_stun);
+			target	= target - defender:GetProp(GetPyStruct("CharacterProperties", "Stun_Resist_Chance"));
+			target	= target - (defender:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_stun);
+			CF_Trace("	STUN CHANCES = "..tostring(target/256).."\%");
+		end
+	end
+
+	--CF_Trace("STUN ADUSTED ROLL ="..tostring(target));
+	-- RESULT
+	if(roll < target) then
+		CF_Trace("	=> STUNNED!!! :"..tostring(roll/256).." < "..tostring(target/256));
+		return true;
+	else
+		CF_Trace("		NOT STUNNED!!! :"..tostring(roll/256).." > "..tostring(target/256));
+		return false;
+	end
+end
+
+
+-- ----------------------------------------------------------------------------
+-- Must return `true` if the attack fears the defender, `false` otherwise
+local function CF__CalcFear(attacker, defender, roll, attackType)
+	local target = roll-1;	-- default: Don't fear
+	local level_difference_to_resist_fear = 5;
+
+	-- MELEE
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "Fear_Target_Chance"));
+		if(target>0) then
+			target	= target + (attacker:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_fear);
+			target	= target - defender:GetProp(GetPyStruct("CharacterProperties", "Fear_Resist_Chance"));
+			target	= target - (defender:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_fear);
+			CF_Trace("	FEAR CHANCES = "..tostring(target/256).."\%");
+		end
+
+	-- MAGIC
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "SnS_Fear_Target_Chance"));
+		if(target>0) then
+			target	= target + (attacker:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_fear);
+			target	= target - defender:GetProp(GetPyStruct("CharacterProperties", "Fear_Resist_Chance"));
+			target	= target - (defender:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_fear);
+			CF_Trace("	FEAR CHANCES = "..tostring(target/256).."\%");
+		end
+	end
+
+	--CF_Trace("FEAR ADUSTED ROLL ="..tostring(target));
+
+	-- RESULT
+	if(roll < target) then
+		CF_Trace("	=> SCARED!!! :"..tostring(roll/256).." < "..tostring(target/256));
+		return true;
+	else
+		CF_Trace("		NOT SCARED!!! :"..tostring(roll/256).." > "..tostring(target/256));
+		return false;
+	end
+end
+
+
+-- ----------------------------------------------------------------------------
+-- Must return `true` if the attack slows down the defender, `false` otherwise
+local function CF__CalcSlow(attacker, defender, roll, attackType)
+	local target = roll-1;	-- default: Don't slow down
+	local level_difference_to_resist_slow = 0.125;
+	-- MELEE
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee")) then
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "Slow_Target_Chance"));
+		if(target>0) then
+			target	= target + (attacker:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_slow);
+			target	= target - defender:GetProp(GetPyStruct("CharacterProperties", "Slow_Resist_Chance"));
+			target	= target - (defender:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_slow);
+			CF_Trace("	SLOW CHANCES = "..tostring(target/256).."%%");
+		end
+
+
+	-- MAGIC
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+		target	= attacker:GetProp(GetPyStruct("CharacterProperties", "SnS_Slow_Target_Chance"));
+		if(target>0) then
+			target	= target + (attacker:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_slow);
+			target	= target - defender:GetProp(GetPyStruct("CharacterProperties", "Slow_Resist_Chance"));
+			target	= target - (defender:GetProp(GetPyStruct("CharacterProperties", "Level"))*level_difference_to_resist_slow);
+			CF_Trace("	SLOW CHANCES = "..tostring(target/256).."%%");
+		end
+	end
+
+	--CF_Trace("SLOW ADUSTED ROLL ="..tostring(target));
+
+
+	-- RESULT
+	if(roll < target) then
+		CF_Trace("	=> SLOWED!!! :"..tostring(roll/256).." < "..tostring(target/256));
+		return true;
+	else
+		CF_Trace("		NOT SLOWED!!! :"..tostring(roll/256).." > "..tostring(target/256));
+		return false;
+	end
+end
+
+-- ----------------------------------------------------------------------------
+-- Return the damage made over time
+--
+local function CF_CalcDotDamage(attacker, defender, isSnS)
+	local dotDuration 	= isSnS and attacker:GetProp(CP_SnS_Dot_Duration) or attacker:GetProp(CP_Dot_Duration);
+	local dotDamage		= 0;
+	local dotElement	= -1;
+
+	if(dotDuration > 0) then
+		local minDotDamage = isSnS and attacker:GetProp(CP_SnS_Dot_Min_Damage) or attacker:GetProp(CP_Dot_Min_Damage);
+		local maxDotDamage = isSnS and attacker:GetProp(CP_SnS_Dot_Max_Damage) or attacker:GetProp(CP_Dot_Max_Damage);
+
+		-- Integrity check
+		if(maxDotDamage < minDotDamage) then
+			Trace("ERROR: DoT Max Damage is smaller than Min Damage for : "..tostring(attacker:GetName()));
+		end
+
+		dotDamage	= Rand(minDotDamage, maxDotDamage);
+		dotElement	= isSnS and FromFixed(attacker:GetProp(CP_SnS_Dot_Elemental_Type)) or GetPyCst("Elemental", "none");
+
+		-- We handle the Bonus and Resistance on the total of the DoT, rather than on each DoT's tick
+		if(dotElement ~= GetPyCst("Elemental", "none")) then
+			-- We grab the floating value, for more precision
+			local absorbPt = defender:GetProp(GetPyStruct("CharacterProperties", "Resistance_Fire") + dotElement);
+
+			-- This was way too powerful, since we can have something like +200 spell damage bonus, and it would add each tick
+			-- dotDamage = dotDamage + attacker:GetProp(GetPyStruct("CharacterProperties", "Spell_Damage_Bonus_Fire") + dotElement);
+			dotDamage = dotDamage - absorbPt;
+
+			if(dotDamage < 0) then
+				dotDamage = 0;
+			end
+		end
+	end
+	return dotDuration, dotDamage, dotElement;
+end
+
+-- ----------------------------------------------------------------------------
+-- The return values depend of the type of attack. Check the comments inside
+-- the function for more details.
+local function CF__CalcDamage(attacker, defender, extraArg, attackType, element, offHanded, isSkill)
+	-- * Melee damages
+	-- `extraArg` is not used
+	-- `element` is not used
+	-- `offHanded` indicates which hand has been used for the attack
+	-- `isSkill` indicates if it is a skill requiring melee calculation
+	-- Must return the damage after bonus and penalties
+	-- Must return the element type
+	-- Must return the leech HP
+	-- Must return the leech MP
+	-- Must return the DoT duration
+	-- Must return the DoT damage
+	-- Must return the DoT element
+	if(attackType == GetPyCst("CombatAttackTypes", "Melee") or attackType == GetPyCst("CombatAttackTypes", "Range")) then
+		local minDamage, maxDamage;
+		local damage;
+		local leechHP, leechMP;
+		--local dotDuration, dotDamage, dotElement;
+
+		-- Grab the damage ranges
+		if(offHanded) then
+			minDamage	= attacker:GetProp(CP_Damage_Min_Off_Hand);
+			maxDamage	= attacker:GetProp(CP_Damage_Max_Off_Hand);
+			element		= FromFixed(attacker:GetProp(GetPyStruct("CharacterProperties", "Damage_Elemental_Type_Off_Hand")));
+		else
+			minDamage	= attacker:GetProp(CP_Damage_Min_Main_Hand);
+			maxDamage	= attacker:GetProp(CP_Damage_Max_Main_Hand);
+			element		= FromFixed(attacker:GetProp(GetPyStruct("CharacterProperties", "Damage_Elemental_Type_Main_Hand")));
+		end
+
+		-- We apply the modification to the basic range if it is a skill
+		if(isSkill) then
+-- 			minDamage	= minDamage + attacker:GetProp(CP_SnS_MinDamage);
+-- 			maxDamage	= maxDamage + attacker:GetProp(CP_SnS_MaxDamage);
+			minDamage	= attacker:GetProp(CP_SnS_MinDamage);
+			maxDamage	= attacker:GetProp(CP_SnS_MaxDamage);
+		end
+
+		-- Integrity check
+		if(maxDamage < minDamage) then
+			Trace("ERROR: Max Damage is smaller than Min Damage for : "..tostring(attacker:GetName()));
+		end
+
+		-- Roll + bonus from specific weapon
+		damage = Rand(minDamage, maxDamage);
+		damage = damage + attacker:GetDamageBonus(offHanded);
+
+		-- Special bonus: Stunned Defender
+		if(defender:GetState() == GetPyCst("AIStates", "Stunned")) then
+			damage = damage + attacker:GetProp(GetPyStruct("CharacterProperties", "Damage_Bonus_Stunned"));
+		end
+
+		-- Special bonus: Stealthed Attacker
+		if(attacker:GetProp(GetPyStruct("CharacterProperties", "Special_Sneak")) > defender:GetProp(GetPyStruct("CharacterProperties", "Special_Sneak_Detection"))) then
+			damage = damage + attacker:GetProp(GetPyStruct("CharacterProperties", "Damage_Bonus_Sneaking"));
+		end
+
+		-- Special bonus: Successful Successive Attack
+		local hitCount = attacker:GetHitCount();
+		if(hitCount > 0) then
+			damage = damage + (hitCount * attacker:GetProp(GetPyStruct("CharacterProperties", "Damage_Bonus_Combo")));
+		end
+
+		-- We apply the block mitigation
+		if(g_cf_data["isBlocked"]) then
+			damage = MulFixed(damage, defender:GetProp(GetPyStruct("CharacterProperties", "Damage_Block_Mitigation")));
+		end
+
+		-- We apply the critical hit bonus
+		if(g_cf_data["isCritical"]) then
+			damage = damage + maxDamage;
+		end
+
+		-- We apply the armor absorbtion
+		local armor = defender:GetProp(GetPyStruct("CharacterProperties", "Physical_Armor"));
+
+			--NOTE: this should maybe be a GetArmorBonus(), like bonus for ratings and damages are done
+	--	if(defender:HasShield()) then
+	--		armor = armor + defender:GetProp(GetPyStruct("CharacterProperties", "Physical_Armor_Bonus_Shield"));
+	--	end
+	
+		CF_Trace("==> damage ========== "..tostring(FromFixed(damage)));
+		damage = damage - MulFixed(armor, GetPyCst("CombatConstants", "COMBAT_MELEE_ARMOR_ABSORBTION"));
+		CF_Trace("==> ARMOR ========== "..tostring(FromFixed(GetPyCst("CombatConstants", "COMBAT_MELEE_ARMOR_ABSORBTION"))));
+		CF_Trace("==> damage ========== "..tostring(FromFixed(damage)));
+
+		-- We make sure the minimum damage of 1 is respected
+		if(damage <= 0) then
+			damage = ToFixed(1);
+		end
+
+		-- We calculate the leeched HP/MP
+		leechHP = MulFixed(damage, attacker:GetProp(GetPyStruct("CharacterProperties", "Leech_HP"))) / 100;
+		leechMP = MulFixed(damage, attacker:GetProp(GetPyStruct("CharacterProperties", "Leech_MP"))) / 100;
+
+		-- We calculate the elemental damage
+		if(element ~= GetPyCst("Elemental", "none")) then
+			local minElemDamage, maxElemDamage,ElemdDamage;
+
+			if(offHanded) then
+				minElemDamage	= attacker:GetProp(GetPyStruct("CharacterProperties", "Damage_Elemental_Min_Off_Hand"));
+				maxElemDamage	= attacker:GetProp(GetPyStruct("CharacterProperties", "Damage_Elemental_Max_Off_Hand"));
+			else
+				minElemDamage	= attacker:GetProp(GetPyStruct("CharacterProperties", "Damage_Elemental_Min_Main_Hand"));
+				maxElemDamage	= attacker:GetProp(GetPyStruct("CharacterProperties", "Damage_Elemental_Max_Main_Hand"));
+			end
+
+   
+		
+			if(minElemDamage >= 0 and maxElemDamage >= 0) then
+				-- Integrity check
+				if(maxElemDamage < minElemDamage) then
+					Trace("ERROR: Elemental Max Damage is smaller than Min Damage for : "..tostring(attacker:GetName()));
+				end
+
+        		-- Roll + bonus from specific weapon
+		    	ElemdDamage = Rand(minElemDamage, maxElemDamage);
+				--    ElemdDamage = ElemdDamage + attacker:GetDamageBonus(offHanded);
+
+				-- Failsafe in case of errors
+				if (dotElement==nil) then dotElement=0; end
+				if (element==nil) then element=0; end
+				if (resistPct==nil) then resistPct=0; end
+				if (ElemdDamage==nil) then ElemdDamage=0; end
+				if (dotDamage==nil) then dotDamage=0; end
+				
+				
+			  	local resistPct = FromFixed(defender:GetProp(GetPyStruct("CharacterProperties", "Resistance_Fire") + element));
+			  	resistPct = 1 - (resistPct / 100);
+
+			  	if(resistPct < 0) then		resistPct = 0;
+			  	elseif(resistPct > 1) then	resistPct = 1;
+			  	end
+
+			  	ElemdDamage = ElemdDamage * resistPct; -- It is a percentage, so we don't have to MulFixed() this line
+        		damage = damage + ElemdDamage;
+
+			  	if(damage <= 0) then
+			 		damage = ToFixed(1);
+			  	end
+			  
+   			end
+		end
+
+		-- We calculate the physical dot (a.k.a. bleeding)
+		--dotDuration = attacker:GetProp(GetPyStruct("CharacterProperties", "Dot_Duration"));
+		local dotDuration, dotDamage, dotElement = CF_CalcDotDamage(attacker, defender, isSkill);
+
+-- 		if(dotDuration > 0) then
+-- 			local minDotDamage = attacker:GetProp(GetPyStruct("CharacterProperties", "Dot_Min_Damage"));
+-- 			local maxDotDamage = attacker:GetProp(GetPyStruct("CharacterProperties", "Dot_Max_Damage"));
+-- 
+-- 			-- Integrity check
+-- 			if(maxDotDamage < minDotDamage) then
+-- 				Trace("ERROR: DoT Max Damage is smaller than Min Damage for : "..tostring(attacker:GetName()));
+-- 			end
+-- 
+-- 			dotDamage	= Rand(minDotDamage, maxDotDamage);
+-- 			dotElement	= GetPyCst("Elemental", "none");
+-- 		end
+		if (dotDamage==nil) then dotDamage=0; end
+		if (damage==nil) then damage=0; end
+		if (dotDuration==nil) then dotDuration=0; end
+-- 		Trace ("[AI Combat Formulas]Damage:"..FromFixed(damage).." DotDuration:"..FromFixed(dotDuration).." Dot Damage:"..FromFixed(dotDamage));
+		return damage, element, leechHP, leechMP, dotDuration, dotDamage, dotElement;
+
+
+	-- * Magical damages
+	-- `extraArg` is not used
+	-- `element` indicates the elemental type
+	-- `offHanded` is not used
+	-- `isSkill` is not used
+	-- Must return the damage after bonus and penalties
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Magic")) then
+		local minDamage, maxDamage;
+		if (isSkill) then
+			minDamage = attacker:GetProp(GetPyStruct("CharacterProperties", "SnS_MinDamage"));
+			maxDamage = attacker:GetProp(GetPyStruct("CharacterProperties", "SnS_MaxDamage"));
+		else
+			minDamage = attacker:GetProp(CP_Damage_Min_Main_Hand);
+			maxDamage = attacker:GetProp(CP_Damage_Max_Main_Hand);
+			element		= FromFixed(attacker:GetProp(GetPyStruct("CharacterProperties", "Damage_Elemental_Type_Main_Hand")));
+		end
+		
+		local damage;
+		if(minDamage ~= 0 or maxDamage ~= 0) then
+			damage = Rand(minDamage, maxDamage);
+
+			-- We apply the elemental bonus and resistance
+			if(element ~= GetPyCst("Elemental", "none")) then
+				-- We grab the floating value, for more precision
+				local _, resistPct = FromFixed(defender:GetProp(GetPyStruct("CharacterProperties", "Resistance_Fire") + element));
+				resistPct = 1 - (resistPct / 100);
+
+				if(resistPct < 0) then		resistPct = 0;
+				elseif(resistPct > 1) then	resistPct = 1;
+				end
+
+				damage = damage + attacker:GetProp(GetPyStruct("CharacterProperties", "Spell_Damage_Bonus_Fire") + element);
+				damage = damage * resistPct; -- It is a percentage, so we don't have to MulFixed() this line
+
+				if(damage <= 0) then
+					damage = ToFixed(1);
+				end
+			end
+
+			-- We apply the bonus for a critical hit
+			if(g_cf_data["isCritical"]) then
+				damage = damage + maxDamage;
+			end
+
+			-- We apply the absorbtion from the magical armor
+			CF_Trace("==> damage ========== "..tostring(FromFixed(damage)));
+			damage = damage - MulFixed(defender:GetProp(GetPyStruct("CharacterProperties", "Magical_Armor")), GetPyCst("CombatConstants", "COMBAT_MAGIC_ARMOR_ABSORBTION"));
+			CF_Trace("==> MAGICAL ARMOR ========== "..tostring(FromFixed(GetPyCst("CombatConstants", "COMBAT_MELEE_ARMOR_ABSORBTION"))));
+			CF_Trace("==> damage ========== "..tostring(FromFixed(damage)));
+
+			-- We check for a minimum damage
+			if(damage <= 0) then
+				damage = ToFixed(1);
+			end
+		else
+		    damage = 0;
+		end
+		
+		-- We calculate the dot
+		local dotDuration = 0;
+		local dotDamage = 0;
+		local dotElement = 0;
+		if(isSkill) then
+			dotDuration, dotDamage, dotElement = CF_CalcDotDamage(attacker, defender, true);
+			if (dotDuration==nil) then dotDuration=0; end
+			if (dotDuration>0) then
+				Trace ("");
+				Trace ("-----------------------------------------------");
+				Trace ("--  COMBAT FORMULAT SKILL DOT CALCULATION    --");
+				Trace ("-----------------------------------------------");
+				Trace ("Current attacker:"..attacker:GetName());
+				Trace ("Current Dot Duration:"..FromFixed(dotDuration));
+				Trace ("Current Dot Damage:"..FromFixed(dotDamage));
+				Trace ("-----------------------------------------------");
+				Trace ("");
+			end
+		end
+
+		-- Results
+		CF_Trace("==> MAGIC DAMAGE = "..tostring(FromFixed(damage)));
+		--Trace ("[AI Combat Formulas]Damage:"..FromFixed(damage).." DotDuration:"..FromFixed(dotDuration).." Dot Damage:"..FromFixed(dotDamage));
+		return damage, nil, nil, nil, dotDuration, dotDamage, dotElement;
+
+--		-- Range Type Combat tick
+	elseif(attackType == GetPyCst("CombatAttackTypes", "Dot")) then
+		local damage = extraArg;
+		--NOTE:	We handle the Bonus and Resistance on the total of the DoT, rather than on each DoT's tick
+		--		(Check SF_CalcDotDamage for the calculation)
+		Trace("==> DOT DAMAGE DONE = "..tostring(damage/256));
+		return damage;
+	end
+end
+
+
+
+-- ******************************************************************************************* --
+-- ** Don't touch those                                                                     ** --
+-- ******************************************************************************************* --
+function CF_SetCombatants(attacker, defender, elementalType, offHanded, isSkill)
+	g_cf_data["attacker"]	= attacker;
+	g_cf_data["defender"]	= defender;
+	g_cf_data["ad_dlevel"]	= attacker:GetProp(GetPyStruct("CharacterProperties", "Level")) - defender:GetProp(GetPyStruct("CharacterProperties", "Level"));
+	g_cf_data["da_dlevel"]	= -g_cf_data["ad_dlevel"];
+	g_cf_data["element"]		= elementalType;
+	g_cf_data["offHanded"]	= offHanded;
+	g_cf_data["isSkill"]		= isSkill;
+
+	CF_Trace("COMBAT: Attacker="..tostring(attacker:GetName()).." | Defender="..tostring(defender:GetName()));
+end
+
+function CF_ClearCombatants()
+	g_cf_data = {};
+end
+
+
+function CF_CalcMissOrDodge(roll, attackType)
+	if(g_cf_data["attacker"] and g_cf_data["defender"]) then
+		return CF__CalcMissOrDodge(g_cf_data["attacker"], g_cf_data["defender"], roll, attackType, g_cf_data["element"], g_cf_data["offHanded"]);
+	else
+		Trace("ERROR: No attacker or defender specified");
+		return false, false;
+	end
+end
+
+function CF_CalcDodge(roll, attackType)
+	if(g_cf_data["attacker"] and g_cf_data["defender"]) then
+		return CF__CalcDodge(g_cf_data["attacker"], g_cf_data["defender"], roll, attackType);
+	else
+		Trace("ERROR: No attacker or defender specified");
+		return false;
+	end
+end
+
+
+function CF_CalcBlock(roll, attackType)
+	if(g_cf_data["attacker"] and g_cf_data["defender"]) then
+		return CF__CalcBlock(g_cf_data["attacker"], g_cf_data["defender"], roll, attackType);
+	else
+		Trace("ERROR: No attacker or defender specified");
+		return false;
+	end
+end
+
+function CF_CalcCrit(roll, attackType)
+	if(g_cf_data["attacker"] and g_cf_data["defender"]) then
+		return CF__CalcCrit(g_cf_data["attacker"], g_cf_data["defender"], roll, attackType);
+	else
+		Trace("ERROR: No attacker or defender specified");
+		return false;
+	end
+end
+
+
+function CF_CalcHurt(roll, attackType)
+	if(g_cf_data["attacker"] and g_cf_data["defender"]) then
+		return CF__CalcHurt(g_cf_data["attacker"], g_cf_data["defender"], roll, attackType);
+	else
+		Trace("ERROR: No attacker or defender specified");
+		return false;
+	end
+end
+
+function CF_CalcPush(roll, attackType)
+	if(g_cf_data["attacker"] and g_cf_data["defender"]) then
+		return CF__CalcPush(g_cf_data["attacker"], g_cf_data["defender"], roll, attackType);
+	else
+		Trace("ERROR: No attacker or defender specified");
+		return false;
+	end
+end
+
+function CF_CalcStun(roll, attackType)
+	if(g_cf_data["attacker"] and g_cf_data["defender"]) then
+		return CF__CalcStun(g_cf_data["attacker"], g_cf_data["defender"], roll, attackType);
+	else
+		Trace("ERROR: No attacker or defender specified");
+		return false;
+	end
+end
+
+function CF_CalcFear(roll, attackType)
+	if(g_cf_data["attacker"] and g_cf_data["defender"]) then
+		return CF__CalcFear(g_cf_data["attacker"], g_cf_data["defender"], roll, attackType);
+	else
+		Trace("ERROR: No attacker or defender specified");
+		return false;
+	end
+end
+
+function CF_CalcSlow(roll, attackType)
+	if(g_cf_data["attacker"] and g_cf_data["defender"]) then
+		return CF__CalcSlow(g_cf_data["attacker"], g_cf_data["defender"], roll, attackType);
+	else
+		Trace("ERROR: No attacker or defender specified");
+		return false;
+	end
+end
+
+function CF_CalcDamage(extraArg, attackType)
+	if(g_cf_data["attacker"] and g_cf_data["defender"]) then
+		return CF__CalcDamage(	g_cf_data["attacker"], g_cf_data["defender"],
+										extraArg, attackType,
+										g_cf_data["element"], g_cf_data["offHanded"], g_cf_data["isSkill"]);
+	else
+		Trace("ERROR: No attacker or defender specified");
+		return false;
+	end
+end
+-- ******************************************************************************************* --
+-- ******************************************************************************************* --

@@ -1,0 +1,69 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Resurrecting God Dying Skill: 
+-- 
+-- - AOE knockback upon dying - no damages
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 1000.0;
+
+local CLASS_ID			= GetPyOID("ClassTable", "ResGodSkillAOEPushback");
+local g_summon_oid 		= GetPyOID("CharacterTable", "Madruk_A");
+ 
+-- Cached values
+local skill_level;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	skill_level = GetCurrentSpellInfo();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+
+	TargetListSearch(RANGE);
+	
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(not IsTargetListEmpty()) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+
+		PlayFX(GetPyOID("AnimatedEffectTable", "Madruk_Shockwave"));
+		PlaySound("HellKingTwoIntroMusic", false, 0, false);
+		
+		repeat
+			local target = GetTargetListTop();
+			PopTargetList();
+
+			SkillCombatRoll(target);
+		until(IsTargetListEmpty())
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	--Summon(g_summon_oid, true, 0.0, 0.0, 0.0, true);
+	CallPyScript("end_MadrukPhase1");
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_, nil);

@@ -1,0 +1,178 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Madruk Torso Drain Life Skill: 
+-- 
+-- - Projectile attack.
+-- - Stun and leech the target's HP on a successfull hit (3 sec duration)
+-- - If the projectile misses, a vulnerability debuff is applied on the boss (x2 damage taken - 3 sec duration)
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 1000;
+local TARGET_RANGE		= 5000;
+local ANGLE				= 360;
+local x,y,z
+
+local CLASS_ID			= GetPyOID("ClassTable", "MadrukTorso_DrainLife");
+								-- Empty buff only used for Timed visual FX
+local BUFF_ID			= GetPyOID("ClassTable", "Skill_Illusionist_Figments_buff");
+
+-- vfx
+local SkillFX 			=	GetPyOID("AnimatedEffectTable", "Skill_Madruk_Torso_lifedrain");
+local BuffFX  			=	GetPyOID("AnimatedEffectTable", "Skill_Madruk_Torso_lifedrain_persist");
+local TargetFX			=	GetPyOID("AnimatedEffectTable", "Spell_Madruk_Torso_lifedrain");
+local TargetBuffFX	=	GetPyOID("AnimatedEffectTable", "Spell_Madruk_Torso_lifedrain_persist");
+
+local target_buff 	= 	nil;
+local buff				= 	nil;
+
+local traces 			= 	false;
+-- end vfx
+
+-- Invisible man used for targetting
+local invisible_man = nil;
+local player = nil;
+
+-- Cached values
+
+local function drainlife()
+	-- Closing the trap
+	-- If the player is in the circle of the invisible man
+	-- Is life will be drained
+	-- TODO: Set animation and sound for the player when this happen.
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	local target = nil;
+	if (traces) then Trace("Trie to capture the player"); end
+	invisible_man:WarpTo(x,y,z,false);
+	TargetListSearch(150, 360, invisible_man);
+	invisible_man:WarpTo(0,0,0,false);
+	if(not IsTargetListEmpty()) then
+		if (traces) then Trace("Ok I think, I found a player here!"); end
+		target = GetTargetListTop()
+		if(target:IsCharacter()) then
+			if (traces) then Trace("Got it, drain his life a little now!!"); end
+			ApplyPropClass(CLASS_ID);
+			
+			-- Put the character in stun state for 3 sec
+			target:SetStunState(3000, false);
+			target:PlayActorAnim(GetPyOID("AnimDict", "spell_dh2_prince_drained_life_complete"));
+			
+			-- Do the health leach here. Will retrieve the SnS Damage as a reference for health points
+			local health0, HPMax0, HPPercentCurr0 = target:GetPropHP(); -- Get the current health of the MC before the damage
+			local damage = SkillCombatRoll(target);
+			local final_hp = GetPropHP() + FromFixed(damage); -- Final HP will be the damage caused on the MC
+			-- Using the damage points since the health of the player can update and the leach is innefective
+			--local health1, HPMax1, HPPercentCurr1 = target:GetPropHP(); -- Get the current health of the MC after the damage
+			--local health, HPMax, HPPercentCurr = GetPropHP(); -- Get the current health of the Madruk
+			--local damage = health0 - health1;
+			--local final_hp = GetPropHP() + damage; -- Final HP will be the damage caused on the MC
+			SetProp(GetPyStruct("CharacterProperties", "HP"),ToFixed(final_hp));
+			if (traces) then Trace ("Here is the final HP of the monster:"..final_hp); end
+			
+			-- VFX buff on the target
+			target_buff = target:CreateBuff(BUFF_ID, 3000 , false, 1, TargetBuffFX);
+			target:ApplyBuff(BUFF_ID, target_buff);
+			
+			-- VFX buff on Madruk Torso
+			buff = CreateBuff(BUFF_ID, 3000 , false, 1, BuffFX);
+			ApplyBuff(BUFF_ID, buff);
+			PlaySound("sfx_king_of_hell_magic_attack_hit",false,0,false);
+		end
+	end
+end
+
+local function cast_drain_circle(target)
+	-- We put the invisible man at place of the player 
+	-- Then 2 sec later, close the trap
+	target:EnableCollisions(false);
+	target:WarpTo(player);
+	invisible_man=target;
+	invisible_man:PlayFX(TargetFX);
+	PlayFX(SkillFX);
+	x, y, z = invisible_man:GetPosition();
+	buff_timer = StartSkillTimerCB(2000, 0, drainlife);
+end
+
+local function search_invisible_man()
+	-- Check for the presence of the invisible man and then will cast it at
+	-- the place of the player
+	-- The level need a NPC specificaly named: "_prim_NPC_Madruk_Target"
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Neutral"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	TargetListSearch(TARGET_RANGE, ANGLE);
+	local found = false;
+	repeat
+		
+		if (not IsTargetListEmpty()) then 
+			local target = GetTargetListTop();
+			if (traces) then Trace("Name of the found character"..target:GetName()); end
+			if (target:GetName()=="_prim_NPC_Madruk_Target") then
+				if (traces) then Trace ("Hey Cool! found the target"); end
+				cast_drain_circle(target);
+				found=true;
+			end
+			PopTargetList();
+		end
+	until(IsTargetListEmpty() or found)
+end
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	RegisterAnim(GetPyOID("AnimDict", "spell_dh2_prince_drained_life_complete"));
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(RANGE, ANGLE);
+	-- attack the first player in view
+	if(not IsTargetListEmpty()) then
+		player = GetTargetListTop()
+		LookAt( player );
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if (traces) then Trace("Madruk cast the Projectile to drain the player now."); end
+	LookAtTarget();
+	search_invisible_man();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target)
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkillEx({	update=OnSkillUpdate_,
+						check=OnSkillCheck_,
+						pre=OnPreSkill_,
+						skill=OnSkill_,
+						post=OnPostSkill_,
+						delayed=OnDelayedSkill_,
+						info=OnSkillInfo_,
+						});

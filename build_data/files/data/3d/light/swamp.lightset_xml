@@ -1,0 +1,21 @@
+<Module
+>
+	<GameObject
+		type="Light"
+		name="_prim_PlayerLight"
+		position="0.0,0.0,0.0"
+		scale="1.0,1.0,1.0"
+		debugcolor="255.0,229.0,0.0"
+		rotation="0.0,0.0,0.0"
+		radius="3.5"
+		attenuation="0.265625,0.0,0.132813"
+		ambientColor="255.0,255.0,255.0"
+		diffuseColor="255.0,255.0,255.0"
+		specularColor="255.0,255.0,255.0"
+		gametype="LightPoint"
+		attachedTo="Player"
+		attachedOffset="0.0,0.0,200.0"
+		automatic="1"
+		_templateName="PlayerLight"
+	/>
+</Module>

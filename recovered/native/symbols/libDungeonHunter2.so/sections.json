@@ -1,0 +1,312 @@
+[
+  {
+    "index": 0,
+    "name": "",
+    "type": "SHT_NULL",
+    "address": 0,
+    "file_offset": 0,
+    "size": 0,
+    "flags": 0,
+    "alignment": 0
+  },
+  {
+    "index": 1,
+    "name": ".hash",
+    "type": "SHT_HASH",
+    "address": 212,
+    "file_offset": 212,
+    "size": 195940,
+    "flags": 2,
+    "alignment": 4
+  },
+  {
+    "index": 2,
+    "name": ".dynsym",
+    "type": "SHT_DYNSYM",
+    "address": 196152,
+    "file_offset": 196152,
+    "size": 521152,
+    "flags": 2,
+    "alignment": 4
+  },
+  {
+    "index": 3,
+    "name": ".dynstr",
+    "type": "SHT_STRTAB",
+    "address": 717304,
+    "file_offset": 717304,
+    "size": 2049411,
+    "flags": 2,
+    "alignment": 1
+  },
+  {
+    "index": 4,
+    "name": ".rel.dyn",
+    "type": "SHT_REL",
+    "address": 2766716,
+    "file_offset": 2766716,
+    "size": 432896,
+    "flags": 2,
+    "alignment": 4
+  },
+  {
+    "index": 5,
+    "name": ".rel.plt",
+    "type": "SHT_REL",
+    "address": 3199612,
+    "file_offset": 3199612,
+    "size": 2808,
+    "flags": 2,
+    "alignment": 4
+  },
+  {
+    "index": 6,
+    "name": ".plt",
+    "type": "SHT_PROGBITS",
+    "address": 3202420,
+    "file_offset": 3202420,
+    "size": 4232,
+    "flags": 6,
+    "alignment": 4
+  },
+  {
+    "index": 7,
+    "name": ".text",
+    "type": "SHT_PROGBITS",
+    "address": 3206656,
+    "file_offset": 3206656,
+    "size": 5961032,
+    "flags": 6,
+    "alignment": 8
+  },
+  {
+    "index": 8,
+    "name": ".rodata",
+    "type": "SHT_PROGBITS",
+    "address": 9167688,
+    "file_offset": 9167688,
+    "size": 365064,
+    "flags": 2,
+    "alignment": 8
+  },
+  {
+    "index": 9,
+    "name": ".ARM.extab",
+    "type": "SHT_PROGBITS",
+    "address": 9532752,
+    "file_offset": 9532752,
+    "size": 4960,
+    "flags": 2,
+    "alignment": 4
+  },
+  {
+    "index": 10,
+    "name": ".ARM.exidx",
+    "type": "SHT_ARM_EXIDX",
+    "address": 9537712,
+    "file_offset": 9537712,
+    "size": 247936,
+    "flags": 130,
+    "alignment": 4
+  },
+  {
+    "index": 11,
+    "name": ".init_array",
+    "type": "SHT_INIT_ARRAY",
+    "address": 9789744,
+    "file_offset": 9785648,
+    "size": 2156,
+    "flags": 3,
+    "alignment": 4
+  },
+  {
+    "index": 12,
+    "name": ".data.rel.ro",
+    "type": "SHT_PROGBITS",
+    "address": 9791904,
+    "file_offset": 9787808,
+    "size": 253968,
+    "flags": 3,
+    "alignment": 8
+  },
+  {
+    "index": 13,
+    "name": ".dynamic",
+    "type": "SHT_DYNAMIC",
+    "address": 10045872,
+    "file_offset": 10041776,
+    "size": 232,
+    "flags": 3,
+    "alignment": 4
+  },
+  {
+    "index": 14,
+    "name": ".got",
+    "type": "SHT_PROGBITS",
+    "address": 10046104,
+    "file_offset": 10042008,
+    "size": 19560,
+    "flags": 3,
+    "alignment": 4
+  },
+  {
+    "index": 15,
+    "name": ".data",
+    "type": "SHT_PROGBITS",
+    "address": 10065664,
+    "file_offset": 10061568,
+    "size": 24444,
+    "flags": 3,
+    "alignment": 8
+  },
+  {
+    "index": 16,
+    "name": ".bss",
+    "type": "SHT_NOBITS",
+    "address": 10090112,
+    "file_offset": 10086012,
+    "size": 614320,
+    "flags": 3,
+    "alignment": 8
+  },
+  {
+    "index": 17,
+    "name": ".comment",
+    "type": "SHT_PROGBITS",
+    "address": 0,
+    "file_offset": 10086012,
+    "size": 15732,
+    "flags": 0,
+    "alignment": 1
+  },
+  {
+    "index": 18,
+    "name": ".debug_aranges",
+    "type": "SHT_PROGBITS",
+    "address": 0,
+    "file_offset": 10101744,
+    "size": 12200,
+    "flags": 0,
+    "alignment": 8
+  },
+  {
+    "index": 19,
+    "name": ".debug_pubnames",
+    "type": "SHT_PROGBITS",
+    "address": 0,
+    "file_offset": 10113944,
+    "size": 89644,
+    "flags": 0,
+    "alignment": 1
+  },
+  {
+    "index": 20,
+    "name": ".debug_info",
+    "type": "SHT_PROGBITS",
+    "address": 0,
+    "file_offset": 10203588,
+    "size": 1319016,
+    "flags": 0,
+    "alignment": 1
+  },
+  {
+    "index": 21,
+    "name": ".debug_abbrev",
+    "type": "SHT_PROGBITS",
+    "address": 0,
+    "file_offset": 11522604,
+    "size": 56021,
+    "flags": 0,
+    "alignment": 1
+  },
+  {
+    "index": 22,
+    "name": ".debug_line",
+    "type": "SHT_PROGBITS",
+    "address": 0,
+    "file_offset": 11578625,
+    "size": 135611,
+    "flags": 0,
+    "alignment": 1
+  },
+  {
+    "index": 23,
+    "name": ".debug_frame",
+    "type": "SHT_PROGBITS",
+    "address": 0,
+    "file_offset": 11714236,
+    "size": 45904,
+    "flags": 0,
+    "alignment": 4
+  },
+  {
+    "index": 24,
+    "name": ".debug_str",
+    "type": "SHT_PROGBITS",
+    "address": 0,
+    "file_offset": 11760140,
+    "size": 298437,
+    "flags": 48,
+    "alignment": 1
+  },
+  {
+    "index": 25,
+    "name": ".debug_loc",
+    "type": "SHT_PROGBITS",
+    "address": 0,
+    "file_offset": 12058577,
+    "size": 194627,
+    "flags": 0,
+    "alignment": 1
+  },
+  {
+    "index": 26,
+    "name": ".debug_ranges",
+    "type": "SHT_PROGBITS",
+    "address": 0,
+    "file_offset": 12253204,
+    "size": 142048,
+    "flags": 0,
+    "alignment": 1
+  },
+  {
+    "index": 27,
+    "name": ".ARM.attributes",
+    "type": "SHT_ARM_ATTRIBUTES",
+    "address": 0,
+    "file_offset": 12395252,
+    "size": 45,
+    "flags": 0,
+    "alignment": 1
+  },
+  {
+    "index": 28,
+    "name": ".shstrtab",
+    "type": "SHT_STRTAB",
+    "address": 0,
+    "file_offset": 12395297,
+    "size": 296,
+    "flags": 0,
+    "alignment": 1
+  },
+  {
+    "index": 29,
+    "name": ".symtab",
+    "type": "SHT_SYMTAB",
+    "address": 0,
+    "file_offset": 12396836,
+    "size": 1327728,
+    "flags": 0,
+    "alignment": 4
+  },
+  {
+    "index": 30,
+    "name": ".strtab",
+    "type": "SHT_STRTAB",
+    "address": 0,
+    "file_offset": 13724564,
+    "size": 2213720,
+    "flags": 0,
+    "alignment": 1
+  }
+]

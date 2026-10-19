@@ -1,0 +1,374 @@
+
+
+local AnimEvents = {};
+
+function AttachToAnimEvent(event_name, callback, refData)
+	if(type(callback) == "function") then
+		if(AnimEvents[event_name] ~= nil) then
+			Trace("ERROR: "..evnet_name.." animation event already defined and will be replaced");
+		end
+		AnimEvents[event_name] = {mycallback=callback, refData=refData}
+	end
+end
+
+function DetachFromAnimEvent(event_name, callback)
+	AnimEvents[event_name] = nil;
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+local TimerEvents = {}
+
+function StartTimerCB(timeMs, loop, callback, refData)
+	if(type(callback) ~= "function") then
+		return StartTimer(timeMs, loop);
+	else
+		local timerId = StartTimer(timeMs, loop);
+
+		TimerEvents[timerId] = {callback = callback, loop = loop, refData = refData};
+
+		return timerId;
+	end
+end
+
+function StopTimerCB(timerId)
+	TimerEvents[timerId] = nil;
+	StopTimer(timerId);
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character is created/loaded
+function OnInit()
+end
+
+
+-- -------------------------------------------------------------------------------
+--
+function OnInitPost()
+end
+
+
+-- -------------------------------------------------------------------------------
+--
+function OnInitFinal()
+end
+
+
+
+-- -------------------------------------------------------------------------------
+-- When the character is erased/unloaded
+function OnTerminate()
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- Every tick, with the time in seconds since last tick
+function OnUpdate(timestamp)
+	-- IMPORTANT!
+	-- This function won't be called if not re-defined.
+	-- You can still put common script inside this function in _commons.lua,
+	-- however you will need to overwrite that function and manually call this one.
+	--
+	-- We had to force the method to be overwritten to be called, because of
+	-- a required optimization in code to prevent monsters to call this method
+	-- way too often.
+end
+
+
+-- -------------------------------------------------------------------------------
+-- Called each time a Timer expires
+function OnTimer(timerId)
+	local cb_info = TimerEvents[timerId];
+
+	if(cb_info) then
+		cb_info.callback(timerId, cb_info.refData);
+
+		-- If it is not a looping timer, then we clear it from the callback list
+		if(not cb_info.loop) then
+			TimerEvents[timerId] = nil;
+		end
+	end
+end
+
+
+-- -------------------------------------------------------------------------------
+-- Called when an event "ev_" is found in an animation
+function OnAnimEvent(ev)
+	if (AnimEvents[ev]~=nil) then
+	--if (tcallback ~= nil) then
+		local tcallback = AnimEvents[ev];
+		tcallback.mycallback(ev, tcallback.refData);
+	end
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's animation is done.
+function OnEndOfAnim()
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character dies
+function OnDied(killer)
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character is revived
+function OnRevived(reviver)
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character spots an ally
+function OnFriendSpotted(friend)
+	-- IMPORTANT!
+	-- This function won't be called if not re-defined.
+	-- You can still put common script inside this function in _commons.lua,
+	-- however you will need to overwrite that function and manually call this one.
+	--
+	-- We had to force the method to be overwritten to be called, because of
+	-- a required optimization in code to prevent monsters to call this method
+	-- way too often.
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the characer spots a neutral character
+function OnNeutralSpotted(neutral)
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character spots an enemy
+function OnEnemySpotted(enemy)
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's target dies
+function OnTargetDied()
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's target gets out of sight
+function OnTargetOutOfSight()
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's target gets in sight
+function OnTargetInSight()
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's target is out of attack range
+function OnTargetOutOfRange()
+	-- IMPORTANT!
+	-- This function won't be called if not re-defined.
+	-- You can still put common script inside this function in _commons.lua,
+	-- however you will need to overwrite that function and manually call this one.
+	--
+	-- We had to force the method to be overwritten to be called, because of
+	-- a required optimization in code to prevent monsters to call this method
+	-- way too often.
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's target is in range of a ranged attack
+function OnTargetInRangedRange()
+	-- IMPORTANT!
+	-- This function won't be called if not re-defined.
+	-- You can still put common script inside this function in _commons.lua,
+	-- however you will need to overwrite that function and manually call this one.
+	--
+	-- We had to force the method to be overwritten to be called, because of
+	-- a required optimization in code to prevent monsters to call this method
+	-- way too often.
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's target is closer than ranged attack range
+function OnTargetInCloseRange()
+	-- IMPORTANT!
+	-- This function won't be called if not re-defined.
+	-- You can still put common script inside this function in _commons.lua,
+	-- however you will need to overwrite that function and manually call this one.
+	--
+	-- We had to force the method to be overwritten to be called, because of
+	-- a required optimization in code to prevent monsters to call this method
+	-- way too often.
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's target is in range of a melee attack
+function OnTargetInMeleeRange()
+	-- IMPORTANT!
+	-- This function won't be called if not re-defined.
+	-- You can still put common script inside this function in _commons.lua,
+	-- however you will need to overwrite that function and manually call this one.
+	--
+	-- We had to force the method to be overwritten to be called, because of
+	-- a required optimization in code to prevent monsters to call this method
+	-- way too often.
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's projectile hits something
+function OnProjectileHit()
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's target is missed
+function OnTargetMissed()
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's target is hit
+function OnTargetHit()
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's is being hit
+function OnCombatResults()
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's master dies
+function OnMasterDied()
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's master gets out of sight
+function OnMasterOutOfSight()
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's master gets in sight
+function OnMasterInSight()
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's master is out of attack range
+function OnMasterOutOfRange()
+	-- IMPORTANT!
+	-- This function won't be called if not re-defined.
+	-- You can still put common script inside this function in _commons.lua,
+	-- however you will need to overwrite that function and manually call this one.
+	--
+	-- We had to force the method to be overwritten to be called, because of
+	-- a required optimization in code to prevent monsters to call this method
+	-- way too often.
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's master is in range of a ranged attack
+-- (Only called if a ranged weapon is equipped)
+function OnMasterInRangedRange()
+	-- IMPORTANT!
+	-- This function won't be called if not re-defined.
+	-- You can still put common script inside this function in _commons.lua,
+	-- however you will need to overwrite that function and manually call this one.
+	--
+	-- We had to force the method to be overwritten to be called, because of
+	-- a required optimization in code to prevent monsters to call this method
+	-- way too often.
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's master is closer than ranged attack range
+-- (Only called if a ranged weapon is equipped)
+function OnMasterInCloseRange()
+	-- IMPORTANT!
+	-- This function won't be called if not re-defined.
+	-- You can still put common script inside this function in _commons.lua,
+	-- however you will need to overwrite that function and manually call this one.
+	--
+	-- We had to force the method to be overwritten to be called, because of
+	-- a required optimization in code to prevent monsters to call this method
+	-- way too often.
+end
+
+
+-- -------------------------------------------------------------------------------
+-- When the character's master is in range of a melee attack
+-- (Only called if a melee weapon is equipped or is bare-handed)
+function OnMasterInMeleeRange()
+	-- IMPORTANT!
+	-- This function won't be called if not re-defined.
+	-- You can still put common script inside this function in _commons.lua,
+	-- however you will need to overwrite that function and manually call this one.
+	--
+	-- We had to force the method to be overwritten to be called, because of
+	-- a required optimization in code to prevent monsters to call this method
+	-- way too often.
+end

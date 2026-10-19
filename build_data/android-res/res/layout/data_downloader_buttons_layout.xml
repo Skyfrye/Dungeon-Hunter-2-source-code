@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    style="@style/data_downloader_buttons_root_layout_style">
+    <FrameLayout
+        android:id="@+id/textLayout"
+        style="@style/data_downloader_frame_main_text_style">
+        <FrameLayout style="@style/data_downloader_main_text_background_frame">
+            <com.gameloft.layout.DataDownloaderTextView
+                android:id="@+id/data_downloader_main_text"
+                android:text=""
+                style="@style/data_downloader_main_text"/>
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/buttonsLayout"
+        style="@style/data_downloader_buttons_frame_layout_style">
+        <LinearLayout style="@style/data_downloader_buttons_layout_style">
+            <FrameLayout
+                android:id="@+id/data_downloader_yes_frame"
+                style="@style/data_downloader_frame_button_style">
+                <com.gameloft.layout.DataDownloaderButton
+                    android:id="@+id/data_downloader_yes"
+                    android:text="@string/YES"
+                    style="@style/data_downloader_button_style"/>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/data_downloader_no_frame"
+                style="@style/data_downloader_frame_button_style">
+                <com.gameloft.layout.DataDownloaderButton
+                    android:id="@+id/data_downloader_no"
+                    android:text="@string/NO"
+                    style="@style/data_downloader_button_style"/>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/data_downloader_cancel_frame"
+                style="@style/data_downloader_frame_button_style">
+                <com.gameloft.layout.DataDownloaderButton
+                    android:id="@+id/data_downloader_cancel"
+                    android:text="@string/CANCEL"
+                    style="@style/data_downloader_button_style"/>
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <include
+        android:id="@+id/titleLayout"
+        style="@style/data_downloader_title_included"
+        layout="@layout/title_layout"/>
+</RelativeLayout>

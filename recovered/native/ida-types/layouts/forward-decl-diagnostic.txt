@@ -1,0 +1,20 @@
+name=_Unwind_Exception ord=20 dstr='_Unwind_Exception'
+  is_struct=False is_udt=False is_forward=True is_typedef=False is_ptr=False is_func=False
+  size=18446744073709551615
+  type_str=0
+  udt_ok=False nmembers=0
+name=glitch::scene::ISceneNode ord=751 dstr='glitch::scene::ISceneNode'
+  is_struct=False is_udt=False is_forward=True is_typedef=False is_ptr=False is_func=False
+  size=18446744073709551615
+  type_str=0
+  udt_ok=False nmembers=0
+name=glitch::video::IVideoDriver ord=1693 dstr='glitch::video::IVideoDriver'
+  is_struct=False is_udt=False is_forward=True is_typedef=False is_ptr=False is_func=False
+  size=18446744073709551615
+  type_str=0
+  udt_ok=False nmembers=0
+name=glitch::video::CMaterial ord=1705 dstr='glitch::video::CMaterial'
+  is_struct=False is_udt=False is_forward=True is_typedef=False is_ptr=False is_func=False
+  size=18446744073709551615
+  type_str=0
+  udt_ok=False nmembers=0

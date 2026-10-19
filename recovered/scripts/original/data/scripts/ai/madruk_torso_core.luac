@@ -1,0 +1,313 @@
+-- BEHAVIOR SETTINGS (Can be tweaked for design)
+-- DATA
+local drainAttack_probModifier	= 40; 		-- chances in PCT that can be applied as a probability bonus.
+local drainAttack_pct			= 30; 		-- Drain attack activation on health %
+local traces 					= true;
+
+-- FLAGS
+local hp_flag 					= false;	-- checks if the hp has been initialized to 50%.
+local range						= false;	-- checks if the character is in range to attack
+local musicStarted_flag			= false; 	-- checks if the boss music has started or not.
+local allowed					= false;	-- check if the NPc is really spawned before allowing it to attack and move
+
+-- CONSTANTS
+local MUSIC						= "HellKingThreeLoopMusic";
+
+-- TIMERS setting for the attacks
+local ATTACK_DELAY				= 2000; 	-- Timer attack delay. ! DO NOT TOUCH will affect all the other attacks timing
+local ATTACK_LASER				= 5;    	-- Multiplier delay from the standard attack
+local WAIT_LASER				= 2;		-- Turns to wait before attacking again when itinitating the laser attack
+local ATTACK_DRAIN				= 3; 		-- Multiplier delay from the standard attack	
+local WAIT_DRAIN				= 4;		-- Turns to wait before attacking again when initiating the drain attack
+
+-- CACHED VALUES
+local timer_attack_flag			= -1;
+local counter_attack1 			= 0;		-- count to check before doint the attack
+local counter_attack2			= 0;		-- count to check before doint the attack
+local wait 						= 0; 		-- Count turn to wait before doing the std attack
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+local function InitVars()
+	-- BEHAVIOR SETTINGS (Can be tweaked for design)
+
+	-- DATA
+	drainAttack_probModifier	= 40; -- chances in PCT that can be applied as a probability bonus.
+	drainAttack_pct				= 30; -- Drain attack activation on health %
+	traces 						= false;
+
+	-- FLAGS
+	hp_flag 					= false;	-- checks if the hp has been initialized to 50%.
+	range						= false;	-- checks if the character is in range to attack
+	musicStarted_flag			= false;	-- checks if the boss music has started or not.
+	allowed						= false;	-- check if the NPc is really spawned before allowing it to attack and move
+
+	-- CONSTANTS
+	MUSIC						= "HellKingThreeLoopMusic";
+	-- TIMERS setting for the attacks
+	ATTACK_DELAY	= 1500; 	-- Timer attack delay used for the primary melee attack. ! DO NOT TOUCH will affect all the other attacks timing
+	ATTACK_LASER	= 5;    	-- Multiplier delay from the standard attack (6 = 9 sec)
+	WAIT_LASER		= 2;		-- Turns to wait before attacking again when itinitating the laser attack
+	ATTACK_DRAIN	= 4; 		-- Multiplier delay from the standard attack	 (4 = 6 sec)
+	WAIT_DRAIN		= 4;		-- Turns to wait before attacking again when initiating the drain attack
+
+	-- CACHED VALUES
+	counter_attack1 		= 0;	-- count to check before doint the attack
+	counter_attack2		= 0;	-- count to check before doint the attack
+	wait 						= 0;  -- Count turn to wait before doing the std attack
+	
+	timer_attack_flag			= -1;
+	
+	-- if (timer_attack_flag) then
+	--	StopTimerCB(timer_attack_flag);
+	--	timer_attack_flag = nil;
+	-- end
+end
+-- -------------------------------------------------------------------------------
+function getAIState(object, traces) -- Debug function -- to be removed
+	local state = object:GetState();
+	if( state == GetPyCst("AIStates", "Dead")) then
+		if (traces) then Trace("--> State: Dead"); end
+		return "Dead";
+	end
+	if( state == GetPyCst("AIStates", "Idle")) then
+		if (traces) then Trace("--> State: Idle"); end
+		return "Idle";
+	end
+	if( state == GetPyCst("AIStates", "Limbus")) then
+		if (traces) then Trace("--> State: Limbus"); end
+		return "Limbus";
+	end
+	if( state == GetPyCst("AIStates", "Spawn")) then
+		if (traces) then Trace("--> State: Spawn"); end
+		return "Spawn";
+	end
+	if( state == GetPyCst("AIStates", "Despawn")) then
+		if (traces) then Trace("--> State: Despawn"); end
+		return "Despawn";
+	end
+	if( state == GetPyCst("AIStates", "Move")) then
+		if (traces) then Trace("--> State: Move"); end
+		return "Move";
+	end
+	if( state == GetPyCst("AIStates", "Attack")) then
+		if (traces) then Trace("--> State: Attack"); end
+		return "Attack";
+	end
+	if( state == GetPyCst("AIStates", "Skill")) then
+		if (traces) then Trace("--> State: Skill"); end
+		return "Skill";
+	end
+	if( state == GetPyCst("AIStates", "Cast")) then
+		if (traces) then Trace("--> State: Cast"); end
+		return "Cast";
+	end
+	if( state == GetPyCst("AIStates", "Scared")) then
+		if (traces) then Trace("--> State: Scared"); end
+		return "Scared";
+	end
+	if( state == GetPyCst("AIStates", "Stunned")) then
+		if (traces) then Trace("--> State: Stunned"); end
+		return "Stunned";
+	end
+	if( state == GetPyCst("AIStates", "KnockedBack")) then
+		if (traces) then Trace("--> State: KnockedBack"); end
+		return "KnockedBack";
+	end
+
+	if( state == GetPyCst("AIStates", "Injured")) then
+		if (traces) then Trace("--> State: Injured"); end
+		return "Injured";
+	end
+	if( state == GetPyCst("AIStates", "Interact")) then
+		if (traces) then Trace("--> State: Interact"); end
+		return "Interact";
+	end
+	if( state == GetPyCst("AIStates", "Anim")) then
+		if (traces) then Trace("--> State: Anim"); end
+		return "Anim";
+	end
+	if( state == GetPyCst("AIStates", "Reviving")) then
+		if (traces) then Trace("--> State: Reviving"); end
+		return "Reviving";
+	end
+	if( state == GetPyCst("AIStates", "Revived")) then
+		if (traces) then Trace("--> State: Revived"); end
+		return "Revived";
+	end
+	if( state == GetPyCst("AIStates", "PreSpawn")) then
+		if (traces) then Trace("--> State: PreSpawn"); end
+		return "PreSpawn";
+	end
+	return "No state";
+end
+-- -------------------------------------------------------------------------------
+-- EVENTS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+
+
+local function Do_HealthCheck()
+	local HPCurr, HPMax, HPPercentCurr = GetPropHP();
+	if (traces) then 
+		Trace ("---------------------------------------------");
+		Trace (" Current Madruk Torso health:"..HPPercentCurr.."%%  "..HPCurr.."/"..HPMax);
+		Trace ("---------------------------------------------");
+	end
+	
+	if (HPPercentCurr < drainAttack_pct) then
+		return true;
+	else
+		return false;
+	end
+	
+end
+
+-- Main loop calling the attacks.
+-- Other attack work by multipliers
+local function Attack(timer)
+	if (wait==0) then
+		counter_attack1 = counter_attack1 + 1;
+		counter_attack2 = counter_attack2 + 1;
+	else
+		if (traces) then Trace ("Waiting before starting another attack"..wait); end
+	end
+	if (wait>=1) then wait = wait - 1; end
+	if (counter_attack1 >= ATTACK_LASER) then
+		-- Do the Laser, timed attack at 9 sec intervals(default)
+		DoSkill(1);
+		counter_attack1 = 0; 
+		wait = WAIT_LASER; -- estimated attack duration
+		if (traces) then Trace("Madruk decide to do a Laser attack"); end
+	end
+	if (counter_attack2 >= ATTACK_DRAIN) then
+		-- Do the Drain, based on health or a probability (timed at 4.5 sec intervals)
+		counter_attack2 = 0;
+		local prob_pct = GetRand(1,100);
+		if (traces) then Trace ("Is "..prob_pct.." < "..drainAttack_probModifier.."?"); end
+		if (Do_HealthCheck() or (prob_pct < drainAttack_probModifier)) then
+			DoSkill(2); 
+			wait = WAIT_DRAIN; -- estimated attack duration
+			if (traces) then Trace("Madruk decide to do a Drain attack"); end
+		end
+	end
+	-- Standard Melee attack, timed at 1.5 sec intervals
+	if (traces) then Trace ("States of combat: counter 1:"..counter_attack1.." Counter 2:"..counter_attack2.." wait is:"..wait); end
+	if (range and wait==0) then
+		DoSkill(0); -- Bite
+		if (traces) then Trace("Madruk decide to do a bite attack"); end
+	end
+end
+-- -------------------------------------------------------------------------------
+-- CALLBACKS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+function madrukTorso_OnInitFinal()
+	InitVars();
+end
+AddToVFTable("OnInitFinal", "madrukTorso_OnInitFinal");
+
+
+
+-- -------------------------------------------------------------------------------
+function madrukTorso_OnEnemySpotted(enemy)
+	if (allowed) then 
+		if (not musicStarted_flag) then
+			musicStarted_flag = true;
+			PlayMusic(MUSIC, 500);
+		end
+		if(not HasTarget()) then
+ 			AddAggro(enemy, 0);
+ 			SetTarget(enemy);
+ 		end
+ 	end
+end
+AddToVFTable("OnEnemySpotted", "madrukTorso_OnEnemySpotted");
+
+
+
+-- -------------------------------------------------------------------------------
+function madrukTorso_OnTargetOutOfRange()
+	if (allowed) then
+		MoveTo(GetTarget());
+		range = false;
+	end
+end
+AddToVFTable("OnTargetOutOfRange", "madrukTorso_OnTargetOutOfRange");
+
+
+
+-- -------------------------------------------------------------------------------
+function madrukTorso_OnTargetInRangedRange()
+	if (allowed) then
+		MoveTo(GetTarget());
+		range = false;
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "madrukTorso_OnTargetInRangedRange");
+
+
+
+-- -------------------------------------------------------------------------------
+function madrukTorso_OnTargetInCloseRange()
+	range = true;
+end
+AddToVFTable("OnTargetInCloseRange", "madrukTorso_OnTargetInCloseRange");
+
+
+
+-- -------------------------------------------------------------------------------
+function madrukTorso_OnUpdate(timestamp)
+	OnUpdate(timestamp);
+	
+	if(hp_flag == false ) then
+		local HPCurr, HPMax, HPPercentCurr = GetPropHP();
+		
+		local HPAmount = (HPMax / 2);
+		SetProp(GetPyStruct("CharacterProperties", "HP"), ToFixed(HPAmount));
+		
+		hp_flag = true;
+	end
+	
+	local HPCurr, HPMax, HPPercentCurr = GetPropHP();
+	
+	if (HPPercentCurr == 100 and hp_flag == true) then
+		local HPCurr, HPMax, HPPercentCurr = GetPropHP();
+		
+		local HPAmount = (HPMax / 2);
+		SetProp(GetPyStruct("CharacterProperties", "HP"), ToFixed(HPAmount));
+		
+		hp_flag = true;
+	end
+	-- check the AI State to be sure the AI is being spawned.
+	if (allowed==false) then
+		local check = getAIState(GetSelf(), false);
+		if (check=="Idle") then
+			allowed = true;
+			if (timer_attack_flag==-1) then
+				timer_attack_flag = StartTimerCB(ATTACK_DELAY, true, Attack);
+			end
+		end
+	end
+end
+AddToVFTable("OnUpdate", "madrukTorso_OnUpdate");
+
+
+
+-- -------------------------------------------------------------------------------
+function madrukTorso_OnDied(killer)
+	if (timer_attack_flag) then
+		StopTimerCB(timer_attack_flag);
+	end
+	PlayMusic("DarkDungeonTempleAmbientMusic", 500);
+end
+AddToVFTable("OnDied", "madrukTorso_OnDied");
+
+-- -------------------------------------------------------------------------------
+function madrukTorso_OnTerminate()
+	if (timer_attack_flag) then
+		StopTimerCB(timer_attack_flag);
+	end
+end
+AddToVFTable("OnTerminate", "madrukTorso_OnTerminate");

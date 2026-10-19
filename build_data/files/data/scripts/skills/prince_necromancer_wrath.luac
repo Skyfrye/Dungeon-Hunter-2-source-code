@@ -1,0 +1,77 @@
+--[[	Wrath
+
+	Elemental damage increased when HP is 40% or lower
+	+20% elemental damage
+
+--]]
+
+local BUFF_ID			= GetPyOID("ClassTable", "Skill_Necromancer_Wrath");
+local BUFF_FX			= GetPyOID("AnimatedEffectTable", "active_buff_fx");
+
+local TIMER_DELAY		= 3000;
+local PCT_VALUE			= 40;
+
+-- Cached values
+local skill_level		= 0;
+local timer_wrath		= nil;
+local buff_wrath		= nil;
+
+-- ----------------------------------------------------------------------------------------------
+local function canApplyBuff()
+	local HPCurr, HPMax, HPPercentCurr = GetHP();
+	
+	if (HPPercentCurr < PCT_VALUE and (not buff_wrath)) then
+		buff_wrath = CreateBuff(BUFF_ID, 0, false, skill_level, BUFF_FX);
+		ApplyBuff(BUFF_ID, buff_wrath);
+		PlaySound("sfx_passive_skill_activate_3",false,0,false);
+	end
+	
+	if (HPPercentCurr >= PCT_VALUE and buff_wrath) then
+		RemoveBuff(BUFF_ID, buff_wrath);
+		buff_wrath = nil;
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(BUFF_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level = slvl;
+	end
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	
+	if (timer_wrath) then 
+		StopTimerCB(timer_wrath);
+	end
+	
+	if (skill_level ~= 0) then
+		timer_wrath = StartSkillTimerCB(TIMER_DELAY, true, canApplyBuff);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return false, skill_level > 0;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

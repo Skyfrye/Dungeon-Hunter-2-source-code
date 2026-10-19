@@ -1,0 +1,34 @@
+-- BEHAVIOR SETTINGS (Can be tweaked for design)
+isMeleeOnly				= true; -- if enabled, the boss will perform only melee attacks/skills
+timed_spotTargeting	= false;	-- if enabled, it will search for the more efficient target at regular interval (Timer: SEARCH_DELAY).
+isUsingSkills			= false;	-- if enabled, the boss will use skills only for all attacks, otherwise it will ignore its own skill table.
+												-- Skill order:
+													-- 0 = First Melee skill
+													-- 1 = First Ranged skill
+													-- 2* = Special attack skill
+													-- 3* = Second Melee attack
+													-- 4* = Second Ranged attack
+													-- *Note: If timed_specialAttack is false, slots 3 and 4 become 2 and 3.
+													
+timed_specialAttack	= false;	-- if enabled, the boss will perform a special attack at regular interval (Timer: SP_ATTACK_DELAY).
+												-- Skill slot must be 2 if using skills or 0 if not.
+
+
+-- DATA
+MELEE_RANGE					= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMinDistance")));
+RANGED_RANGE				= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMaxDistance")));
+
+firstMeleeSkill_prob		= 70; -- chances in PCT to perform the first melee attack of the skilltable.
+										-- -1 if using only one melee skill.
+firstRangedSkill_prob	= 50; -- chances in PCT to perform the first ranged attack of the skilltable.
+										-- -1 if using only one ranged skill.
+										
+-- TIMERS
+ATTACK_DELAY				= 3000; -- Timer attack delay.
+SEARCH_DELAY				= 3000; -- Timer search delay.
+SP_ATTACK_DELAY			= 8000; -- Timer special attack delay.
+
+-- MUSIC DATA
+BOSS_MUSIC					= ""; -- Must put the label of the boss music here unless the boss won't have any background music while fighting.
+LEVEL_MUSIC					= "DarkDungeonTempleAmbientMusic"; -- Must put the label of the level ambient music here unless it won't resume to the level music after defeating the boss.
+MUSIC_RESUME				= false;

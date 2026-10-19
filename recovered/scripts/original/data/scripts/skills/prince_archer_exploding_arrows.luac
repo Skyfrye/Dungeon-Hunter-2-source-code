@@ -1,0 +1,146 @@
+--[[	Exploding Arrows
+
+	Explode at enemy contact + chance to knockback, affect up to 3 nearby enemies.
+
+	05/21/2010 Mostly 100% working.
+	05/24/2010 Cooldown is fixed. Applying class is no longer disabling AI.
+	05/26/2010 Stability fix for the cooldown variable.
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+
+local RANGE			= 1200.0;	-- Range of the arrow
+local RANGE_EXPL	= 200.0;		-- Range of the explosion
+local ANGLE			= 220.0;		-- Range of arrows 'vision' angle
+local MAX_COUNT	= 3; 			-- Maximum victims around the explosion
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Archer_ExplodingArrows");
+local AIR_PROJECTILE_ID	= GetPyOID("ProjectileTable", "ArrowExplode");
+local FX = GetPyOID("AnimatedEffectTable", "spell_dh2_prince_rogue_burst_shot");
+
+-- Cached values
+local skill_level		= 0;
+local mana_cost;
+
+local cooldown			= 0;
+local traces 			= false;
+
+local function DoExplosion(timer, target)
+-- Create a new list from the impact point
+-- From that list create new damage
+-- do a maximum of 3 victims around the area
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+	TargetListSearch(RANGE_EXPL, 360, target);
+	if (traces) then Trace("Exploding.."); end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	ApplyPropClass(CLASS_ID);
+	-- Explosion FX on the main target
+	target:PlayFX(FX);
+	-- Temporary exploding AFX
+	--PlaySound("sfx_skill_mage_doppelganger_statue_explode",false,0,false);
+	PlaySound("sfx_impact_burst_shot",false,0,false);
+	if(not IsTargetListEmpty()) then
+		local count=0
+		repeat
+			local newtarget = GetTargetListTop();
+			PopTargetList();
+			local dmg = SkillCombatRoll(newtarget);
+			-- Temporary exploding AFX
+			--if (newtarget~=target) then newtarget:PlayFX(FX); PlaySound("sfx_skill_mage_doppelganger_statue_explode",false,0,false); end
+			if (traces) then Trace ("Exploding Arrows: Explosions found "..GetTargetListSize().." Potential target(s) and "..FromFixed(dmg).." damage on current target"); end
+			count=count+1;
+		until (IsTargetListEmpty() or count==MAX_COUNT)
+	end
+end
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+		SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	cooldown = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Cooldown"),true));
+	RANGE_EXPL = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"),true));
+	if(cooldown < 0) then cooldown = 0; end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	if(not HasBow()) then
+		return false, false
+	end
+	local test = HasSkillCooldown();
+	--Trace("Test value was : "..test);
+	return (not test and HasMana(mana_cost)), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	TargetListSearch(RANGE, ANGLE);
+	if(not IsTargetListEmpty()) then
+		local target = GetTargetListTop();
+		LookAt(target);
+	end
+	UseMana(mana_cost);
+	SetSkillCooldown(cooldown);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(not IsTargetListEmpty()) then
+		PopTargetList();
+		SpawnSkillProjectile(AIR_PROJECTILE_ID);
+	else
+		-- No target, but send a projectile anyway
+		SpawnSkillProjectile(AIR_PROJECTILE_ID);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target)
+	if (target) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+		local dmg = SkillCombatRoll(target);
+		if (dmg~=nil) then
+			if (traces) then Trace ("[Skill | Exploding Arrows] First hit! The target got "..FromFixed(dmg).." damage!"); end
+			--target:PlayFX(FX);
+			local timer = StartSkillTimerCB(500, 0, DoExplosion, target);
+			--DoExplosion(target);
+		end
+	end
+end
+
+
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkillEx({	update=OnSkillUpdate_,
+						check=OnSkillCheck_,
+						pre=OnPreSkill_,
+						skill=OnSkill_,
+						post=OnPostSkill_,
+						delayed=OnDelayedSkill_,
+						info=OnSkillInfo_,
+						});

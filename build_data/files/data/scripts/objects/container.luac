@@ -1,0 +1,32 @@
+--[[	Container Example Script
+
+	Example of what a container script would looks like.
+
+--]]
+
+
+-- 0 : actor represents what triggered the container to get opened
+function OnOpen(actor)
+	if(actor) then
+		Trace(GetName().." was opened by "..actor:GetName());
+
+		local dmg = DealDamages(actor, GetPyOID("GameObjectDamager", "Level01Damage"), GetPyCst("Elemental", "Fire"));
+
+		if(not dmg or dmg > 0) then
+			if(dmg) then
+				Trace(FromFixed(dmg) .. " damages done to a Character!");
+			else
+				Trace(" damaged a GameObject");
+			end
+
+			--actor:PlayFX(GetPyOID("AnimatedFXTable", "blahblahblah"));
+		end
+	else
+		Trace(GetName().." was opened miraculously");
+	end
+end
+
+
+-- 0 : event name
+function OnAnimEvent(event)
+end

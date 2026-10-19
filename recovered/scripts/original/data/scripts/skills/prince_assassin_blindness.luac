@@ -1,0 +1,111 @@
+--[[	Blindness
+
+	casts a cloud of smoke around the player that blinds all enemies nearby
+	Blinds enemies: they attack at close range but can't move or target MC
+	
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local MANA_BASE		= ToFixed(10);	-- Base mana cost
+local MANA_PLVL		= ToFixed(0);	-- Mana cost per player level
+local MANA_SLVL		= ToFixed(3);	-- Mana cost per skill level
+
+local RANGE				= 1200.0;
+
+local BUFF_ID		= GetPyOID("ClassTable", "Skill_Assassin_Blindness");
+local BUFF_FX		= GetPyOID("AnimatedEffectTable", "spell_dh2_assassin_blindness_persist");
+local BUFF_TIME	= 10000;
+
+-- Cached values
+local skill_level	= 0;
+local mana_cost;
+local buff;
+local buff_timer;
+local target
+local traces = false;
+
+
+local function OnTargetHit_Skill(attacker, defender)
+	if (skill_level > 0) then
+		if (attacker:GetID() == GetID()) then
+			RemoveBuff(BUFF_ID, buff);
+			SetIsTargetable(true);
+			buff = nil;
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function BuffExpired(timerId)
+	if(buff and buff_timer == timerId) then
+		if (traces) then Trace("Blindness Buff expired"); end
+		SetIsTargetable(true);
+		buff = nil;
+	end
+end
+-- ----------------------------------------------------------------------------------------------
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(BUFF_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local plvl = GetProp(GetPyStruct("CharacterProperties", "Level"));
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(BUFF_ID, skill_level);
+	RANGE = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"),true));
+	BUFF_TIME = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Duration"),true));
+	if (RANGE==0) then RANGE=500; end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	if(buff) then
+		if (traces) then Trace("Deactivating the blindness buff"); end
+		SetIsTargetable(true);
+		RemoveBuff(BUFF_ID, buff);
+		buff = nil;
+	end
+		
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if (traces) then Trace("Activating the blindness buff"); end
+	SetIsTargetable(false);
+	buff = CreateBuff(BUFF_ID, BUFF_TIME, false, skill_level, BUFF_FX);
+	ApplyBuff(BUFF_ID, buff);
+	-- Even if the buff has a duration, there is no callbacks associated with it,
+	-- so we keep our own timer.
+	buff_timer = StartSkillTimerCB(BUFF_TIME, false, BuffExpired);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+local function OnDelayedSkill_()
+	-- Used for the projectiles
+	if (traces) then Trace("Blindness OnDelayedSkill called"); end
+end
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_, OnSkillInfo_);

@@ -1,0 +1,98 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Madruk Buffer behavior: 
+-- 
+-- - Spawns and automatically spots Madruk, gets to him and buffs him at regular intervals.
+-- - Skill 1 : Increase Attack and Defense ratings according to the CLASSID.
+-- - Respawns after 30 seconds after death.
+-- - Teleports away if below 50% HP: TODO.
+-- - Apply a temporary debuff (taking 30% more damage) when casting the buff spell: TODO.
+-- ----------------------------------------------------------------------------------------------------
+
+local TIMER_DELAY		= 3250;
+local skill_check		= true;
+local g_heal_timer = -1;
+
+function madruk_buffer_OnFriendSpotted(friend)
+	if(not HasMaster()) then
+		SetMaster(friend);
+		if (friend) then
+			--Trace ("My master is:"..friend:GetName());
+		end
+		g_master = friend;	-- Caching the master
+	else
+		--Trace ("My friend is:"..friend:GetName().." but I have a master now:"..g_master:GetName());
+		if (friend:GetName()~=g_master:GetName()) then
+			Kill(friend);
+		end
+	end
+end
+AddToVFTable("OnFriendSpotted", "madruk_buffer_OnFriendSpotted");
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+function madruk_buffer_OnMasterOutOfSight()
+	WarpBehind(g_master);
+end
+AddToVFTable("OnMasterOutOfSight", "madruk_buffer_OnMasterOutOfSight");
+
+
+-- ----------------------------------------------------------------------------------------------------
+local function Do_Buff()
+	DoSkill(0);
+	skill_check = true;
+	g_heal_timer = -1;
+end
+
+
+function madruk_buffer_OnMasterOutOfRange()
+	MoveTo(g_master);
+end
+AddToVFTable("OnMasterOutOfRange", "madruk_buffer_OnMasterOutOfRange");
+
+
+function madruk_buffer_OnMasterInRangedRange()
+end
+AddToVFTable("OnMasterInRangedRange", "madruk_buffer_OnMasterInRangedRange");
+
+
+function madruk_buffer_OnMasterInCloseRange()
+end
+AddToVFTable("OnMasterInCloseRange", "madruk_buffer_OnMasterInCloseRange");
+
+
+function madruk_buffer_OnMasterInMeleeRange()
+	if(skill_check == true) then
+		Stop();
+		skill_check = false;
+		g_heal_timer = StartTimerCB(TIMER_DELAY, false, Do_Buff);
+	end
+end
+AddToVFTable("OnMasterInMeleeRange", "madruk_buffer_OnMasterInMeleeRange");
+
+
+function madruk_buffer_OnDied(killer)
+	if (g_heal_timer ~= -1 and g_heal_timer ~= nil) then
+		StopTimerCB(g_heal_timer);
+		g_heal_timer = nil;
+	end
+end
+AddToVFTable("OnDied", "madruk_buffer_OnDied");
+
+
+function madruk_buffer_OnTerminate()
+	if (g_heal_timer ~= -1 and g_heal_timer ~= nil) then
+		StopTimerCB(g_heal_timer);
+		g_heal_timer = nil;
+	end
+end
+AddToVFTable("OnTerminate", "madruk_buffer_OnTerminate");
+
+
+function madruk_buffer_OnMasterDied()
+	Kill();
+end
+AddToVFTable("OnMasterDied", "madruk_buffer_OnMasterDied");

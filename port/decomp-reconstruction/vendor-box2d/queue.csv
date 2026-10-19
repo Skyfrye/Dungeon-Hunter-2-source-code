@@ -1,0 +1,319 @@
+elf_address,body_bytes,owner,name,demangled
+34bc14,4,lib-box2d,_ZN21b2DestructionListenerD1Ev,b2DestructionListener::~b2DestructionListener()
+34bc18,4,lib-box2d,_ZN18b2BoundaryListenerD1Ev,b2BoundaryListener::~b2BoundaryListener()
+34bc1c,4,lib-box2d,_ZN17b2ContactListenerD1Ev,b2ContactListener::~b2ContactListener()
+34bc20,4,lib-box2d,_ZN17b2ContactListener3AddEPK14b2ContactPoint,b2ContactListener::Add(b2ContactPoint const*)
+34bc24,4,lib-box2d,_ZN17b2ContactListener7PersistEPK14b2ContactPoint,b2ContactListener::Persist(b2ContactPoint const*)
+34bc28,4,lib-box2d,_ZN17b2ContactListener6RemoveEPK14b2ContactPoint,b2ContactListener::Remove(b2ContactPoint const*)
+34bc2c,4,lib-box2d,_ZN17b2ContactListener6ResultEPK15b2ContactResult,b2ContactListener::Result(b2ContactResult const*)
+34bd70,36,lib-box2d,_ZN21b2DestructionListenerD0Ev,b2DestructionListener::~b2DestructionListener()
+34bda4,36,lib-box2d,_ZN17b2ContactListenerD0Ev,b2ContactListener::~b2ContactListener()
+34bdd8,36,lib-box2d,_ZN18b2BoundaryListenerD0Ev,b2BoundaryListener::~b2BoundaryListener()
+46e6ac,4,lib-box2d,_ZN10b2ShapeDefD1Ev,b2ShapeDef::~b2ShapeDef()
+46e6b4,4,lib-box2d,_ZN11b2CircleDefD1Ev,b2CircleDef::~b2CircleDef()
+46e6b8,4,lib-box2d,_ZN12b2PolygonDefD1Ev,b2PolygonDef::~b2PolygonDef()
+46e9d4,36,lib-box2d,_ZN10b2ShapeDefD0Ev,b2ShapeDef::~b2ShapeDef()
+46ea08,36,lib-box2d,_ZN11b2CircleDefD0Ev,b2CircleDef::~b2CircleDef()
+46ea3c,36,lib-box2d,_ZN12b2PolygonDefD0Ev,b2PolygonDef::~b2PolygonDef()
+7e1644,4,lib-box2d,_ZN6b2BodyD2Ev,b2Body::~b2Body()
+7e1648,4,lib-box2d,_ZN6b2BodyD1Ev,b2Body::~b2Body()
+7e164c,148,lib-box2d,_ZN6b2Body8SetXFormERK6b2Vec2f,"b2Body::SetXForm(b2Vec2 const&, float)"
+7e1818,156,lib-box2d,_ZN6b2Body17SetMassFromShapesEv,b2Body::SetMassFromShapes()
+7e1b28,72,lib-box2d,_ZN6b2Body7SetMassEPK10b2MassData,b2Body::SetMass(b2MassData const*)
+7e1d24,164,lib-box2d,_ZN6b2Body12DestroyShapeEP7b2Shape,b2Body::DestroyShape(b2Shape*)
+7e1dc8,132,lib-box2d,_ZN6b2Body11CreateShapeEP10b2ShapeDef,b2Body::CreateShape(b2ShapeDef*)
+7e1e4c,216,lib-box2d,_ZN6b2BodyC2EPK9b2BodyDefP7b2World,"b2Body::b2Body(b2BodyDef const*, b2World*)"
+7e20ac,80,lib-box2d,_ZN6b2Body17SynchronizeShapesEv,b2Body::SynchronizeShapes()
+7e2218,216,lib-box2d,_ZN6b2BodyC1EPK9b2BodyDefP7b2World,"b2Body::b2Body(b2BodyDef const*, b2World*)"
+7e2478,4,lib-box2d,_ZN12b2BroadPhaseD2Ev,b2BroadPhase::~b2BroadPhase()
+7e247c,4,lib-box2d,_ZN12b2BroadPhaseD1Ev,b2BroadPhase::~b2BroadPhase()
+7e2480,172,lib-box2d,_ZN12b2BroadPhase11TestOverlapEP7b2ProxyS1_,"b2BroadPhase::TestOverlap(b2Proxy*, b2Proxy*)"
+7e252c,140,lib-box2d,_ZN12b2BroadPhase11TestOverlapERK13b2BoundValuesP7b2Proxy,"b2BroadPhase::TestOverlap(b2BoundValues const&, b2Proxy*)"
+7e25b8,56,lib-box2d,_ZN12b2BroadPhase13ComputeBoundsEPtS0_RK6b2AABB,"b2BroadPhase::ComputeBounds(unsigned short*, unsigned short*, b2AABB const&)"
+7e276c,84,lib-box2d,_ZN12b2BroadPhase18IncrementTimeStampEv,b2BroadPhase::IncrementTimeStamp()
+7e27c0,96,lib-box2d,_ZN12b2BroadPhase21IncrementOverlapCountEi,b2BroadPhase::IncrementOverlapCount(int)
+7e2820,384,lib-box2d,_ZN12b2BroadPhase5QueryEPiS0_ttP7b2Boundii,"b2BroadPhase::Query(int*, int*, unsigned short, unsigned short, b2Bound*, int, int)"
+7e29a0,292,lib-box2d,_ZN12b2BroadPhase5QueryERK6b2AABBPPvi,"b2BroadPhase::Query(b2AABB const&, void**, int)"
+7e2ac4,4,lib-box2d,_ZN12b2BroadPhase8ValidateEv,b2BroadPhase::Validate()
+7e2ac8,4,lib-box2d,_ZN12b2BroadPhase6CommitEv,b2BroadPhase::Commit()
+7e2acc,180,lib-box2d,_ZN12b2BroadPhase12DestroyProxyEi,b2BroadPhase::DestroyProxy(int)
+7e2d54,292,lib-box2d,_ZN12b2BroadPhase11CreateProxyERK6b2AABBPv,"b2BroadPhase::CreateProxy(b2AABB const&, void*)"
+7e3048,80,lib-box2d,_ZN12b2BroadPhaseC1ERK6b2AABBP14b2PairCallback,"b2BroadPhase::b2BroadPhase(b2AABB const&, b2PairCallback*)"
+7e317c,80,lib-box2d,_ZN12b2BroadPhaseC2ERK6b2AABBP14b2PairCallback,"b2BroadPhase::b2BroadPhase(b2AABB const&, b2PairCallback*)"
+7e32b0,24,lib-box2d,_ZNK6b2AABB7IsValidEv,b2AABB::IsValid() const
+7e3344,1864,lib-box2d,_ZN12b2BroadPhase9MoveProxyEiRK6b2AABB,"b2BroadPhase::MoveProxy(int, b2AABB const&)"
+7e3a94,24,lib-box2d,_ZN7b2Sweep7AdvanceEf,b2Sweep::Advance(float)
+7e3bfc,32,lib-box2d,_ZNK7b2Sweep8GetXFormEP7b2XFormf,"b2Sweep::GetXForm(b2XForm*, float) const"
+7e3dbc,152,lib-box2d,_ZN13b2PairManagerC2Ev,b2PairManager::b2PairManager()
+7e3e54,152,lib-box2d,_ZN13b2PairManagerC1Ev,b2PairManager::b2PairManager()
+7e3eec,8,lib-box2d,_ZN13b2PairManager10InitializeEP12b2BroadPhaseP14b2PairCallback,"b2PairManager::Initialize(b2BroadPhase*, b2PairCallback*)"
+7e3ef4,116,lib-box2d,_ZN13b2PairManager4FindEiij,"b2PairManager::Find(int, int, unsigned int)"
+7e3f68,64,lib-box2d,_ZN13b2PairManager4FindEii,"b2PairManager::Find(int, int)"
+7e3fa8,220,lib-box2d,_ZN13b2PairManager7AddPairEii,"b2PairManager::AddPair(int, int)"
+7e4084,264,lib-box2d,_ZN13b2PairManager10RemovePairEii,"b2PairManager::RemovePair(int, int)"
+7e418c,4,lib-box2d,_ZN13b2PairManager14ValidateBufferEv,b2PairManager::ValidateBuffer()
+7e4190,140,lib-box2d,_ZN13b2PairManager15AddBufferedPairEii,"b2PairManager::AddBufferedPair(int, int)"
+7e4224,176,lib-box2d,_ZN13b2PairManager18RemoveBufferedPairEii,"b2PairManager::RemoveBufferedPair(int, int)"
+7e42dc,4,lib-box2d,_ZN13b2PairManager13ValidateTableEv,b2PairManager::ValidateTable()
+7e42e0,464,lib-box2d,_ZN13b2PairManager6CommitEv,b2PairManager::Commit()
+7e44b8,60,lib-box2d,_ZN12b2PolygonDef8SetAsBoxEff,"b2PolygonDef::SetAsBox(float, float)"
+7e4670,80,lib-box2d,_ZNK14b2PolygonShape9TestPointERK7b2XFormRK6b2Vec2,"b2PolygonShape::TestPoint(b2XForm const&, b2Vec2 const&) const"
+7e47e8,48,lib-box2d,_ZNK14b2PolygonShape11TestSegmentERK7b2XFormPfP6b2Vec2RK9b2Segmentf,"b2PolygonShape::TestSegment(b2XForm const&, float*, b2Vec2*, b2Segment const&, float) const"
+7e4b54,52,lib-box2d,_ZNK14b2PolygonShape11ComputeAABBEP6b2AABBRK7b2XForm,"b2PolygonShape::ComputeAABB(b2AABB*, b2XForm const&) const"
+7e4dc8,80,lib-box2d,_ZNK14b2PolygonShape16ComputeSweptAABBEP6b2AABBRK7b2XFormS4_,"b2PolygonShape::ComputeSweptAABB(b2AABB*, b2XForm const&, b2XForm const&) const"
+7e4e8c,156,lib-box2d,_ZNK14b2PolygonShape11ComputeMassEP10b2MassData,b2PolygonShape::ComputeMass(b2MassData*) const
+7e51dc,32,lib-box2d,_ZNK14b2PolygonShape8CentroidERK7b2XForm,b2PolygonShape::Centroid(b2XForm const&) const
+7e526c,108,lib-box2d,_ZNK14b2PolygonShape7SupportERK7b2XFormRK6b2Vec2,"b2PolygonShape::Support(b2XForm const&, b2Vec2 const&) const"
+7e5444,44,lib-box2d,_ZN14b2PolygonShapeD1Ev,b2PolygonShape::~b2PolygonShape()
+7e5478,60,lib-box2d,_ZN14b2PolygonShape17UpdateSweepRadiusERK6b2Vec2,b2PolygonShape::UpdateSweepRadius(b2Vec2 const&)
+7e5524,24,lib-box2d,_ZN6b2Vec29NormalizeEv,b2Vec2::Normalize()
+7e5928,328,lib-box2d,_ZN14b2PolygonShapeC1EPK10b2ShapeDef,b2PolygonShape::b2PolygonShape(b2ShapeDef const*)
+7e5c34,328,lib-box2d,_ZN14b2PolygonShapeC2EPK10b2ShapeDef,b2PolygonShape::b2PolygonShape(b2ShapeDef const*)
+7e5f40,116,lib-box2d,_ZN12b2PolygonDef8SetAsBoxEffRK6b2Vec2f,"b2PolygonDef::SetAsBox(float, float, b2Vec2 const&, float)"
+7e602c,44,lib-box2d,_ZN14b2PolygonShapeD0Ev,b2PolygonShape::~b2PolygonShape()
+7e6068,128,lib-box2d,_ZN7b2ShapeC2EPK10b2ShapeDef,b2Shape::b2Shape(b2ShapeDef const*)
+7e60f0,128,lib-box2d,_ZN7b2ShapeC1EPK10b2ShapeDef,b2Shape::b2Shape(b2ShapeDef const*)
+7e6178,4,lib-box2d,_ZN7b2ShapeD2Ev,b2Shape::~b2Shape()
+7e617c,4,lib-box2d,_ZN7b2ShapeD1Ev,b2Shape::~b2Shape()
+7e6180,48,lib-box2d,_ZN7b2Shape12DestroyProxyEP12b2BroadPhase,b2Shape::DestroyProxy(b2BroadPhase*)
+7e61b0,100,lib-box2d,_ZN7b2Shape13RefilterProxyEP12b2BroadPhaseRK7b2XForm,"b2Shape::RefilterProxy(b2BroadPhase*, b2XForm const&)"
+7e62d4,52,lib-box2d,_ZN7b2Shape11CreateProxyEP12b2BroadPhaseRK7b2XForm,"b2Shape::CreateProxy(b2BroadPhase*, b2XForm const&)"
+7e63d0,80,lib-box2d,_ZN7b2Shape11SynchronizeEP12b2BroadPhaseRK7b2XFormS4_,"b2Shape::Synchronize(b2BroadPhase*, b2XForm const&, b2XForm const&)"
+7e64d8,20,lib-box2d,_ZN7b2ShapeD0Ev,b2Shape::~b2Shape()
+7e64f4,100,lib-box2d,_ZN7b2Shape7DestroyEPS_P16b2BlockAllocator,"b2Shape::Destroy(b2Shape*, b2BlockAllocator*)"
+7e6558,100,lib-box2d,_ZN7b2Shape6CreateEPK10b2ShapeDefP16b2BlockAllocator,"b2Shape::Create(b2ShapeDef const*, b2BlockAllocator*)"
+7e65bc,4,lib-box2d,_ZN14b2PairCallbackD1Ev,b2PairCallback::~b2PairCallback()
+7e65c0,4,lib-box2d,_ZN9b2ContactD1Ev,b2Contact::~b2Contact()
+7e65c4,4,lib-box2d,_ZN13b2NullContact8EvaluateEP17b2ContactListener,b2NullContact::Evaluate(b2ContactListener*)
+7e65c8,8,lib-box2d,_ZN13b2NullContact12GetManifoldsEv,b2NullContact::GetManifolds()
+7e65d0,4,lib-box2d,_ZN13b2NullContactD1Ev,b2NullContact::~b2NullContact()
+7e65d4,16,lib-box2d,_ZN7b2World22SetDestructionListenerEP21b2DestructionListener,b2World::SetDestructionListener(b2DestructionListener*)
+7e65e4,16,lib-box2d,_ZN7b2World19SetBoundaryListenerEP18b2BoundaryListener,b2World::SetBoundaryListener(b2BoundaryListener*)
+7e65f4,16,lib-box2d,_ZN7b2World16SetContactFilterEP15b2ContactFilter,b2World::SetContactFilter(b2ContactFilter*)
+7e6604,16,lib-box2d,_ZN7b2World18SetContactListenerEP17b2ContactListener,b2World::SetContactListener(b2ContactListener*)
+7e6614,16,lib-box2d,_ZN7b2World12SetDebugDrawEP11b2DebugDraw,b2World::SetDebugDraw(b2DebugDraw*)
+7e6624,320,lib-box2d,_ZN7b2World9DrawShapeEP7b2ShapeRK7b2XFormRK7b2Colorb,"b2World::DrawShape(b2Shape*, b2XForm const&, b2Color const&, bool)"
+7e6968,28,lib-box2d,_ZNK7b2World13GetProxyCountEv,b2World::GetProxyCount() const
+7e6984,28,lib-box2d,_ZNK7b2World12GetPairCountEv,b2World::GetPairCount() const
+7e69a0,16,lib-box2d,_ZN7b2World8ValidateEv,b2World::Validate()
+7e69b0,456,lib-box2d,_ZN7b2World9DrawJointEP7b2Joint,b2World::DrawJoint(b2Joint*)
+7e6b78,860,lib-box2d,_ZN7b2World13DrawDebugDataEv,b2World::DrawDebugData()
+7e759c,128,lib-box2d,_ZN7b2World5QueryERK6b2AABBPP7b2Shapei,"b2World::Query(b2AABB const&, b2Shape**, int)"
+7e761c,72,lib-box2d,_ZN6b2Body20SynchronizeTransformEv,b2Body::SynchronizeTransform()
+7e76dc,1056,lib-box2d,_ZN7b2World5SolveERK10b2TimeStep,b2World::Solve(b2TimeStep const&)
+7e7afc,32,lib-box2d,_ZN7b2World8RefilterEP7b2Shape,b2World::Refilter(b2Shape*)
+7e7b1c,356,lib-box2d,_ZN7b2World12DestroyJointEP7b2Joint,b2World::DestroyJoint(b2Joint*)
+7e7c80,304,lib-box2d,_ZN7b2World11CreateJointEPK10b2JointDef,b2World::CreateJoint(b2JointDef const*)
+7e7db0,328,lib-box2d,_ZN7b2World11DestroyBodyEP6b2Body,b2World::DestroyBody(b2Body*)
+7e7ef8,132,lib-box2d,_ZN7b2World10CreateBodyEPK9b2BodyDef,b2World::CreateBody(b2BodyDef const*)
+7e7f7c,116,lib-box2d,_ZN7b2WorldD1Ev,b2World::~b2World()
+7e7ffc,116,lib-box2d,_ZN7b2WorldD2Ev,b2World::~b2World()
+7e807c,12,lib-box2d,_ZN13b2NullContactD0Ev,b2NullContact::~b2NullContact()
+7e8090,12,lib-box2d,_ZN9b2ContactD0Ev,b2Contact::~b2Contact()
+7e80a4,12,lib-box2d,_ZN14b2PairCallbackD0Ev,b2PairCallback::~b2PairCallback()
+7e80b8,448,lib-box2d,_ZN7b2WorldC1ERK6b2AABBRK6b2Vec2b,"b2World::b2World(b2AABB const&, b2Vec2 const&, bool)"
+7e8288,448,lib-box2d,_ZN7b2WorldC2ERK6b2AABBRK6b2Vec2b,"b2World::b2World(b2AABB const&, b2Vec2 const&, bool)"
+7e8458,476,lib-box2d,_ZN7b2World8SolveTOIERK10b2TimeStep,b2World::SolveTOI(b2TimeStep const&)
+7e8b1c,56,lib-box2d,_ZN7b2World4StepEfi,"b2World::Step(float, int)"
+7e8c40,4,lib-box2d,_ZN15b2ContactFilterD1Ev,b2ContactFilter::~b2ContactFilter()
+7e8c44,4,lib-box2d,_ZN11b2DebugDrawD1Ev,b2DebugDraw::~b2DebugDraw()
+7e8c48,84,lib-box2d,_ZN15b2ContactFilter13ShouldCollideEP7b2ShapeS1_,"b2ContactFilter::ShouldCollide(b2Shape*, b2Shape*)"
+7e8c9c,36,lib-box2d,_ZN11b2DebugDrawC2Ev,b2DebugDraw::b2DebugDraw()
+7e8cc8,36,lib-box2d,_ZN11b2DebugDrawC1Ev,b2DebugDraw::b2DebugDraw()
+7e8cf4,8,lib-box2d,_ZN11b2DebugDraw8SetFlagsEj,b2DebugDraw::SetFlags(unsigned int)
+7e8cfc,8,lib-box2d,_ZNK11b2DebugDraw8GetFlagsEv,b2DebugDraw::GetFlags() const
+7e8d04,16,lib-box2d,_ZN11b2DebugDraw11AppendFlagsEj,b2DebugDraw::AppendFlags(unsigned int)
+7e8d14,16,lib-box2d,_ZN11b2DebugDraw10ClearFlagsEj,b2DebugDraw::ClearFlags(unsigned int)
+7e8d24,12,lib-box2d,_ZN15b2ContactFilterD0Ev,b2ContactFilter::~b2ContactFilter()
+7e8d38,12,lib-box2d,_ZN11b2DebugDrawD0Ev,b2DebugDraw::~b2DebugDraw()
+7e8da0,52,lib-box2d,_ZN16b2BlockAllocator4FreeEPvi,"b2BlockAllocator::Free(void*, int)"
+7e8ddc,72,lib-box2d,_ZN16b2BlockAllocatorD1Ev,b2BlockAllocator::~b2BlockAllocator()
+7e8e24,72,lib-box2d,_ZN16b2BlockAllocatorD2Ev,b2BlockAllocator::~b2BlockAllocator()
+7e8e6c,144,lib-box2d,_ZN16b2BlockAllocator5ClearEv,b2BlockAllocator::Clear()
+7e8efc,208,lib-box2d,_ZN16b2BlockAllocatorC1Ev,b2BlockAllocator::b2BlockAllocator()
+7e8fdc,208,lib-box2d,_ZN16b2BlockAllocatorC2Ev,b2BlockAllocator::b2BlockAllocator()
+7e90bc,188,lib-box2d,_ZN16b2BlockAllocator8AllocateEi,b2BlockAllocator::Allocate(int)
+7e9218,36,lib-box2d,_ZNK13b2CircleShape9TestPointERK7b2XFormRK6b2Vec2,"b2CircleShape::TestPoint(b2XForm const&, b2Vec2 const&) const"
+7e9320,36,lib-box2d,_ZNK13b2CircleShape11ComputeAABBEP6b2AABBRK7b2XForm,"b2CircleShape::ComputeAABB(b2AABB*, b2XForm const&) const"
+7e93fc,40,lib-box2d,_ZNK13b2CircleShape16ComputeSweptAABBEP6b2AABBRK7b2XFormS4_,"b2CircleShape::ComputeSweptAABB(b2AABB*, b2XForm const&, b2XForm const&) const"
+7e95ac,32,lib-box2d,_ZNK13b2CircleShape11ComputeMassEP10b2MassData,b2CircleShape::ComputeMass(b2MassData*) const
+7e9668,44,lib-box2d,_ZN13b2CircleShapeD1Ev,b2CircleShape::~b2CircleShape()
+7e969c,44,lib-box2d,_ZNK13b2CircleShape11TestSegmentERK7b2XFormPfP6b2Vec2RK9b2Segmentf,"b2CircleShape::TestSegment(b2XForm const&, float*, b2Vec2*, b2Segment const&, float) const"
+7e993c,24,lib-box2d,_ZN13b2CircleShape17UpdateSweepRadiusERK6b2Vec2,b2CircleShape::UpdateSweepRadius(b2Vec2 const&)
+7e99b0,80,lib-box2d,_ZN13b2CircleShapeC1EPK10b2ShapeDef,b2CircleShape::b2CircleShape(b2ShapeDef const*)
+7e9a08,80,lib-box2d,_ZN13b2CircleShapeC2EPK10b2ShapeDef,b2CircleShape::b2CircleShape(b2ShapeDef const*)
+7e9a60,44,lib-box2d,_ZN13b2CircleShapeD0Ev,b2CircleShape::~b2CircleShape()
+7e9a9c,100,lib-box2d,_ZN9b2Contact7AddTypeEPFPS_P7b2ShapeS2_P16b2BlockAllocatorEPFvS0_S4_E11b2ShapeTypeS9_,"b2Contact::AddType(b2Contact* (*)(b2Shape*, b2Shape*, b2BlockAllocator*), void (*)(b2Contact*, b2BlockAllocator*), b2ShapeType, b2ShapeType)"
+7e9b08,100,lib-box2d,_ZN9b2Contact19InitializeRegistersEv,b2Contact::InitializeRegisters()
+7e9b88,260,lib-box2d,_ZN9b2Contact6CreateEP7b2ShapeS1_P16b2BlockAllocator,"b2Contact::Create(b2Shape*, b2Shape*, b2BlockAllocator*)"
+7e9c98,132,lib-box2d,_ZN9b2Contact7DestroyEPS_P16b2BlockAllocator,"b2Contact::Destroy(b2Contact*, b2BlockAllocator*)"
+7e9d24,188,lib-box2d,_ZN9b2Contact6UpdateEP17b2ContactListener,b2Contact::Update(b2ContactListener*)
+7e9de0,108,lib-box2d,_ZN9b2ContactC1EP7b2ShapeS1_,"b2Contact::b2Contact(b2Shape*, b2Shape*)"
+7e9eb8,108,lib-box2d,_ZN9b2ContactC2EP7b2ShapeS1_,"b2Contact::b2Contact(b2Shape*, b2Shape*)"
+7e9f90,44,lib-box2d,_ZN16b2ContactManagerD1Ev,b2ContactManager::~b2ContactManager()
+7e9fc8,52,lib-box2d,_ZN16b2ContactManagerD0Ev,b2ContactManager::~b2ContactManager()
+7ea010,116,lib-box2d,_ZN16b2ContactManager7CollideEv,b2ContactManager::Collide()
+7ea084,488,lib-box2d,_ZN16b2ContactManager7DestroyEP9b2Contact,b2ContactManager::Destroy(b2Contact*)
+7ea508,24,lib-box2d,_ZN16b2ContactManager11PairRemovedEPvS0_S0_,"b2ContactManager::PairRemoved(void*, void*, void*)"
+7ea520,392,lib-box2d,_ZN16b2ContactManager9PairAddedEPvS0_,"b2ContactManager::PairAdded(void*, void*)"
+7ea6a8,276,lib-box2d,_ZN8b2Island6ReportEP19b2ContactConstraint,b2Island::Report(b2ContactConstraint*)
+7ea878,256,lib-box2d,_ZN8b2Island8SolveTOIERK10b2TimeStep,b2Island::SolveTOI(b2TimeStep const&)
+7ea9d0,900,lib-box2d,_ZN8b2Island5SolveERK10b2TimeStepRK6b2Vec2bb,"b2Island::Solve(b2TimeStep const&, b2Vec2 const&, bool, bool)"
+7eb078,52,lib-box2d,_ZN8b2IslandD1Ev,b2Island::~b2Island()
+7eb0ac,52,lib-box2d,_ZN8b2IslandD2Ev,b2Island::~b2Island()
+7eb0e0,124,lib-box2d,_ZN8b2IslandC1EiiiP16b2StackAllocatorP17b2ContactListener,"b2Island::b2Island(int, int, int, b2StackAllocator*, b2ContactListener*)"
+7eb15c,124,lib-box2d,_ZN8b2IslandC2EiiiP16b2StackAllocatorP17b2ContactListener,"b2Island::b2Island(int, int, int, b2StackAllocator*, b2ContactListener*)"
+7eb1d8,4,lib-box2d,_ZN7b2JointD1Ev,b2Joint::~b2Joint()
+7eb1dc,4,lib-box2d,_ZN7b2Joint23InitPositionConstraintsEv,b2Joint::InitPositionConstraints()
+7eb1e0,92,lib-box2d,_ZN7b2JointC2EPK10b2JointDef,b2Joint::b2Joint(b2JointDef const*)
+7eb244,92,lib-box2d,_ZN7b2JointC1EPK10b2JointDef,b2Joint::b2Joint(b2JointDef const*)
+7eb2a8,12,lib-box2d,_ZN7b2JointD0Ev,b2Joint::~b2Joint()
+7eb2bc,192,lib-box2d,_ZN7b2Joint7DestroyEPS_P16b2BlockAllocator,"b2Joint::Destroy(b2Joint*, b2BlockAllocator*)"
+7eb37c,252,lib-box2d,_ZN7b2Joint6CreateEPK10b2JointDefP16b2BlockAllocator,"b2Joint::Create(b2JointDef const*, b2BlockAllocator*)"
+7eb478,8,lib-box2d,_ZN12b2MouseJoint24SolvePositionConstraintsEv,b2MouseJoint::SolvePositionConstraints()
+7eb480,48,lib-box2d,_ZN12b2MouseJoint9SetTargetERK6b2Vec2,b2MouseJoint::SetTarget(b2Vec2 const&)
+7eb4b0,36,lib-box2d,_ZN12b2MouseJoint23InitVelocityConstraintsERK10b2TimeStep,b2MouseJoint::InitVelocityConstraints(b2TimeStep const&)
+7eb778,20,lib-box2d,_ZNK12b2MouseJoint10GetAnchor1Ev,b2MouseJoint::GetAnchor1() const
+7eb78c,32,lib-box2d,_ZNK12b2MouseJoint10GetAnchor2Ev,b2MouseJoint::GetAnchor2() const
+7eb81c,20,lib-box2d,_ZNK12b2MouseJoint16GetReactionForceEv,b2MouseJoint::GetReactionForce() const
+7eb830,8,lib-box2d,_ZNK12b2MouseJoint17GetReactionTorqueEv,b2MouseJoint::GetReactionTorque() const
+7eb838,4,lib-box2d,_ZN12b2MouseJointD1Ev,b2MouseJoint::~b2MouseJoint()
+7eb83c,12,lib-box2d,_ZN12b2MouseJointD0Ev,b2MouseJoint::~b2MouseJoint()
+7eb850,32,lib-box2d,_ZN12b2MouseJoint24SolveVelocityConstraintsERK10b2TimeStep,b2MouseJoint::SolveVelocityConstraints(b2TimeStep const&)
+7ebbe0,72,lib-box2d,_ZN12b2MouseJointC1EPK15b2MouseJointDef,b2MouseJoint::b2MouseJoint(b2MouseJointDef const*)
+7ebd48,72,lib-box2d,_ZN12b2MouseJointC2EPK15b2MouseJointDef,b2MouseJoint::b2MouseJoint(b2MouseJointDef const*)
+7ebeb0,4,lib-box2d,_ZN22b2PolyAndCircleContactD1Ev,b2PolyAndCircleContact::~b2PolyAndCircleContact()
+7ebeb4,8,lib-box2d,_ZN22b2PolyAndCircleContact12GetManifoldsEv,b2PolyAndCircleContact::GetManifolds()
+7ebebc,12,lib-box2d,_ZN22b2PolyAndCircleContactD0Ev,b2PolyAndCircleContact::~b2PolyAndCircleContact()
+7ebed0,64,lib-box2d,_ZN22b2PolyAndCircleContactC1EP7b2ShapeS1_,"b2PolyAndCircleContact::b2PolyAndCircleContact(b2Shape*, b2Shape*)"
+7ebf18,64,lib-box2d,_ZN22b2PolyAndCircleContactC2EP7b2ShapeS1_,"b2PolyAndCircleContact::b2PolyAndCircleContact(b2Shape*, b2Shape*)"
+7ebf60,44,lib-box2d,_ZN22b2PolyAndCircleContact7DestroyEP9b2ContactP16b2BlockAllocator,"b2PolyAndCircleContact::Destroy(b2Contact*, b2BlockAllocator*)"
+7ebf8c,48,lib-box2d,_ZN22b2PolyAndCircleContact6CreateEP7b2ShapeS1_P16b2BlockAllocator,"b2PolyAndCircleContact::Create(b2Shape*, b2Shape*, b2BlockAllocator*)"
+7ebfbc,60,lib-box2d,_ZN22b2PolyAndCircleContact8EvaluateEP17b2ContactListener,b2PolyAndCircleContact::Evaluate(b2ContactListener*)
+7eca90,4,lib-box2d,_ZN16b2PolygonContactD1Ev,b2PolygonContact::~b2PolygonContact()
+7eca94,8,lib-box2d,_ZN16b2PolygonContact12GetManifoldsEv,b2PolygonContact::GetManifolds()
+7eca9c,12,lib-box2d,_ZN16b2PolygonContactD0Ev,b2PolygonContact::~b2PolygonContact()
+7ecab0,52,lib-box2d,_ZN16b2PolygonContactC1EP7b2ShapeS1_,"b2PolygonContact::b2PolygonContact(b2Shape*, b2Shape*)"
+7ecaec,52,lib-box2d,_ZN16b2PolygonContactC2EP7b2ShapeS1_,"b2PolygonContact::b2PolygonContact(b2Shape*, b2Shape*)"
+7ecb28,44,lib-box2d,_ZN16b2PolygonContact7DestroyEP9b2ContactP16b2BlockAllocator,"b2PolygonContact::Destroy(b2Contact*, b2BlockAllocator*)"
+7ecb54,48,lib-box2d,_ZN16b2PolygonContact6CreateEP7b2ShapeS1_P16b2BlockAllocator,"b2PolygonContact::Create(b2Shape*, b2Shape*, b2BlockAllocator*)"
+7ecb84,60,lib-box2d,_ZN16b2PolygonContact8EvaluateEP17b2ContactListener,b2PolygonContact::Evaluate(b2ContactListener*)
+7ed658,40,lib-box2d,_ZN19b2PrismaticJointDef10InitializeEP6b2BodyS1_RK6b2Vec2S4_,"b2PrismaticJointDef::Initialize(b2Body*, b2Body*, b2Vec2 const&, b2Vec2 const&)"
+7ed7e8,32,lib-box2d,_ZN16b2PrismaticJoint23InitVelocityConstraintsERK10b2TimeStep,b2PrismaticJoint::InitVelocityConstraints(b2TimeStep const&)
+7ee080,36,lib-box2d,_ZN16b2PrismaticJoint24SolveVelocityConstraintsERK10b2TimeStep,b2PrismaticJoint::SolveVelocityConstraints(b2TimeStep const&)
+7ee820,32,lib-box2d,_ZNK16b2PrismaticJoint10GetAnchor1Ev,b2PrismaticJoint::GetAnchor1() const
+7ee8b0,32,lib-box2d,_ZNK16b2PrismaticJoint10GetAnchor2Ev,b2PrismaticJoint::GetAnchor2() const
+7ee940,44,lib-box2d,_ZNK16b2PrismaticJoint16GetReactionForceEv,b2PrismaticJoint::GetReactionForce() const
+7eeaac,8,lib-box2d,_ZNK16b2PrismaticJoint17GetReactionTorqueEv,b2PrismaticJoint::GetReactionTorque() const
+7eeab4,40,lib-box2d,_ZNK16b2PrismaticJoint19GetJointTranslationEv,b2PrismaticJoint::GetJointTranslation() const
+7eec94,28,lib-box2d,_ZNK16b2PrismaticJoint13GetJointSpeedEv,b2PrismaticJoint::GetJointSpeed() const
+7eefa4,8,lib-box2d,_ZNK16b2PrismaticJoint14IsLimitEnabledEv,b2PrismaticJoint::IsLimitEnabled() const
+7eefac,8,lib-box2d,_ZN16b2PrismaticJoint11EnableLimitEb,b2PrismaticJoint::EnableLimit(bool)
+7eefb4,8,lib-box2d,_ZNK16b2PrismaticJoint13GetLowerLimitEv,b2PrismaticJoint::GetLowerLimit() const
+7eefbc,8,lib-box2d,_ZNK16b2PrismaticJoint13GetUpperLimitEv,b2PrismaticJoint::GetUpperLimit() const
+7eefc4,12,lib-box2d,_ZN16b2PrismaticJoint9SetLimitsEff,"b2PrismaticJoint::SetLimits(float, float)"
+7eefd0,8,lib-box2d,_ZNK16b2PrismaticJoint14IsMotorEnabledEv,b2PrismaticJoint::IsMotorEnabled() const
+7eefd8,8,lib-box2d,_ZN16b2PrismaticJoint11EnableMotorEb,b2PrismaticJoint::EnableMotor(bool)
+7eefe0,8,lib-box2d,_ZN16b2PrismaticJoint13SetMotorSpeedEf,b2PrismaticJoint::SetMotorSpeed(float)
+7eefe8,8,lib-box2d,_ZN16b2PrismaticJoint16SetMaxMotorForceEf,b2PrismaticJoint::SetMaxMotorForce(float)
+7eeff0,8,lib-box2d,_ZNK16b2PrismaticJoint13GetMotorForceEv,b2PrismaticJoint::GetMotorForce() const
+7eeff8,4,lib-box2d,_ZN16b2PrismaticJointD1Ev,b2PrismaticJoint::~b2PrismaticJoint()
+7eeffc,12,lib-box2d,_ZN16b2PrismaticJointD0Ev,b2PrismaticJoint::~b2PrismaticJoint()
+7ef010,28,lib-box2d,_ZN16b2PrismaticJoint24SolvePositionConstraintsEv,b2PrismaticJoint::SolvePositionConstraints()
+7efa08,252,lib-box2d,_ZN16b2PrismaticJointC1EPK19b2PrismaticJointDef,b2PrismaticJoint::b2PrismaticJoint(b2PrismaticJointDef const*)
+7efb0c,252,lib-box2d,_ZN16b2PrismaticJointC2EPK19b2PrismaticJointDef,b2PrismaticJoint::b2PrismaticJoint(b2PrismaticJointDef const*)
+7efc10,32,lib-box2d,_ZN13b2PulleyJoint24SolveVelocityConstraintsERK10b2TimeStep,b2PulleyJoint::SolveVelocityConstraints(b2TimeStep const&)
+7f0314,32,lib-box2d,_ZNK13b2PulleyJoint10GetAnchor1Ev,b2PulleyJoint::GetAnchor1() const
+7f03a4,32,lib-box2d,_ZNK13b2PulleyJoint10GetAnchor2Ev,b2PulleyJoint::GetAnchor2() const
+7f0434,28,lib-box2d,_ZNK13b2PulleyJoint16GetReactionForceEv,b2PulleyJoint::GetReactionForce() const
+7f0470,8,lib-box2d,_ZNK13b2PulleyJoint17GetReactionTorqueEv,b2PulleyJoint::GetReactionTorque() const
+7f0478,28,lib-box2d,_ZNK13b2PulleyJoint16GetGroundAnchor1Ev,b2PulleyJoint::GetGroundAnchor1() const
+7f04b4,28,lib-box2d,_ZNK13b2PulleyJoint16GetGroundAnchor2Ev,b2PulleyJoint::GetGroundAnchor2() const
+7f04f0,8,lib-box2d,_ZNK13b2PulleyJoint8GetRatioEv,b2PulleyJoint::GetRatio() const
+7f04f8,4,lib-box2d,_ZN13b2PulleyJointD1Ev,b2PulleyJoint::~b2PulleyJoint()
+7f04fc,12,lib-box2d,_ZN13b2PulleyJointD0Ev,b2PulleyJoint::~b2PulleyJoint()
+7f0510,76,lib-box2d,_ZN13b2PulleyJointC1EPK16b2PulleyJointDef,b2PulleyJoint::b2PulleyJoint(b2PulleyJointDef const*)
+7f0668,76,lib-box2d,_ZN13b2PulleyJointC2EPK16b2PulleyJointDef,b2PulleyJoint::b2PulleyJoint(b2PulleyJointDef const*)
+7f07c0,32,lib-box2d,_ZNK13b2PulleyJoint10GetLength2Ev,b2PulleyJoint::GetLength2() const
+7f08c0,32,lib-box2d,_ZNK13b2PulleyJoint10GetLength1Ev,b2PulleyJoint::GetLength1() const
+7f09c0,32,lib-box2d,_ZN13b2PulleyJoint23InitVelocityConstraintsERK10b2TimeStep,b2PulleyJoint::InitVelocityConstraints(b2TimeStep const&)
+7f1038,92,lib-box2d,_ZN16b2PulleyJointDef10InitializeEP6b2BodyS1_RK6b2Vec2S4_S4_S4_f,"b2PulleyJointDef::Initialize(b2Body*, b2Body*, b2Vec2 const&, b2Vec2 const&, b2Vec2 const&, b2Vec2 const&, float)"
+7f129c,40,lib-box2d,_ZN13b2PulleyJoint24SolvePositionConstraintsEv,b2PulleyJoint::SolvePositionConstraints()
+7f1d5c,40,lib-box2d,_ZN18b2RevoluteJointDef10InitializeEP6b2BodyS1_RK6b2Vec2,"b2RevoluteJointDef::Initialize(b2Body*, b2Body*, b2Vec2 const&)"
+7f1e84,32,lib-box2d,_ZN15b2RevoluteJoint23InitVelocityConstraintsERK10b2TimeStep,b2RevoluteJoint::InitVelocityConstraints(b2TimeStep const&)
+7f2478,32,lib-box2d,_ZN15b2RevoluteJoint24SolveVelocityConstraintsERK10b2TimeStep,b2RevoluteJoint::SolveVelocityConstraints(b2TimeStep const&)
+7f2a00,32,lib-box2d,_ZNK15b2RevoluteJoint10GetAnchor1Ev,b2RevoluteJoint::GetAnchor1() const
+7f2a90,32,lib-box2d,_ZNK15b2RevoluteJoint10GetAnchor2Ev,b2RevoluteJoint::GetAnchor2() const
+7f2b20,20,lib-box2d,_ZNK15b2RevoluteJoint16GetReactionForceEv,b2RevoluteJoint::GetReactionForce() const
+7f2b34,8,lib-box2d,_ZNK15b2RevoluteJoint17GetReactionTorqueEv,b2RevoluteJoint::GetReactionTorque() const
+7f2b3c,28,lib-box2d,_ZNK15b2RevoluteJoint13GetJointAngleEv,b2RevoluteJoint::GetJointAngle() const
+7f2b64,24,lib-box2d,_ZNK15b2RevoluteJoint13GetJointSpeedEv,b2RevoluteJoint::GetJointSpeed() const
+7f2b80,8,lib-box2d,_ZNK15b2RevoluteJoint14IsMotorEnabledEv,b2RevoluteJoint::IsMotorEnabled() const
+7f2b88,8,lib-box2d,_ZN15b2RevoluteJoint11EnableMotorEb,b2RevoluteJoint::EnableMotor(bool)
+7f2b90,8,lib-box2d,_ZNK15b2RevoluteJoint14GetMotorTorqueEv,b2RevoluteJoint::GetMotorTorque() const
+7f2b98,8,lib-box2d,_ZN15b2RevoluteJoint13SetMotorSpeedEf,b2RevoluteJoint::SetMotorSpeed(float)
+7f2ba0,8,lib-box2d,_ZN15b2RevoluteJoint17SetMaxMotorTorqueEf,b2RevoluteJoint::SetMaxMotorTorque(float)
+7f2ba8,8,lib-box2d,_ZNK15b2RevoluteJoint14IsLimitEnabledEv,b2RevoluteJoint::IsLimitEnabled() const
+7f2bb0,8,lib-box2d,_ZN15b2RevoluteJoint11EnableLimitEb,b2RevoluteJoint::EnableLimit(bool)
+7f2bb8,8,lib-box2d,_ZNK15b2RevoluteJoint13GetLowerLimitEv,b2RevoluteJoint::GetLowerLimit() const
+7f2bc0,8,lib-box2d,_ZNK15b2RevoluteJoint13GetUpperLimitEv,b2RevoluteJoint::GetUpperLimit() const
+7f2bc8,12,lib-box2d,_ZN15b2RevoluteJoint9SetLimitsEff,"b2RevoluteJoint::SetLimits(float, float)"
+7f2bd4,4,lib-box2d,_ZN15b2RevoluteJointD1Ev,b2RevoluteJoint::~b2RevoluteJoint()
+7f2bd8,12,lib-box2d,_ZN15b2RevoluteJointD0Ev,b2RevoluteJoint::~b2RevoluteJoint()
+7f2bec,28,lib-box2d,_ZN15b2RevoluteJoint24SolvePositionConstraintsEv,b2RevoluteJoint::SolvePositionConstraints()
+7f336c,160,lib-box2d,_ZN15b2RevoluteJointC1EPK18b2RevoluteJointDef,b2RevoluteJoint::b2RevoluteJoint(b2RevoluteJointDef const*)
+7f3414,160,lib-box2d,_ZN15b2RevoluteJointC2EPK18b2RevoluteJointDef,b2RevoluteJoint::b2RevoluteJoint(b2RevoluteJointDef const*)
+7f34bc,48,lib-box2d,_Z6b2FreePv,b2Free(void*)
+7f34f4,52,lib-box2d,_Z7b2Alloci,b2Alloc(int)
+7f3530,48,lib-box2d,_ZN16b2StackAllocatorC2Ev,b2StackAllocator::b2StackAllocator()
+7f3560,48,lib-box2d,_ZN16b2StackAllocatorC1Ev,b2StackAllocator::b2StackAllocator()
+7f3590,4,lib-box2d,_ZN16b2StackAllocatorD2Ev,b2StackAllocator::~b2StackAllocator()
+7f3594,4,lib-box2d,_ZN16b2StackAllocatorD1Ev,b2StackAllocator::~b2StackAllocator()
+7f3598,16,lib-box2d,_ZNK16b2StackAllocator16GetMaxAllocationEv,b2StackAllocator::GetMaxAllocation() const
+7f35a8,156,lib-box2d,_ZN16b2StackAllocator4FreeEPv,b2StackAllocator::Free(void*)
+7f3644,228,lib-box2d,_ZN16b2StackAllocator8AllocateEi,b2StackAllocator::Allocate(int)
+7f3728,40,lib-box2d,_Z14b2TimeOfImpactPK7b2ShapeRK7b2SweepS1_S4_,"b2TimeOfImpact(b2Shape const*, b2Sweep const&, b2Shape const*, b2Sweep const&)"
+7f3a90,4,lib-box2d,_ZN15b2CircleContactD1Ev,b2CircleContact::~b2CircleContact()
+7f3a94,8,lib-box2d,_ZN15b2CircleContact12GetManifoldsEv,b2CircleContact::GetManifolds()
+7f3a9c,12,lib-box2d,_ZN15b2CircleContactD0Ev,b2CircleContact::~b2CircleContact()
+7f3ab0,64,lib-box2d,_ZN15b2CircleContactC1EP7b2ShapeS1_,"b2CircleContact::b2CircleContact(b2Shape*, b2Shape*)"
+7f3af8,64,lib-box2d,_ZN15b2CircleContactC2EP7b2ShapeS1_,"b2CircleContact::b2CircleContact(b2Shape*, b2Shape*)"
+7f3b40,44,lib-box2d,_ZN15b2CircleContact7DestroyEP9b2ContactP16b2BlockAllocator,"b2CircleContact::Destroy(b2Contact*, b2BlockAllocator*)"
+7f3b6c,48,lib-box2d,_ZN15b2CircleContact6CreateEP7b2ShapeS1_P16b2BlockAllocator,"b2CircleContact::Create(b2Shape*, b2Shape*, b2BlockAllocator*)"
+7f3b9c,52,lib-box2d,_ZN15b2CircleContact8EvaluateEP17b2ContactListener,b2CircleContact::Evaluate(b2ContactListener*)
+7f4424,60,lib-box2d,_Z25b2CollidePolygonAndCircleP10b2ManifoldPK14b2PolygonShapeRK7b2XFormPK13b2CircleShapeS6_,"b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2XForm const&, b2CircleShape const*, b2XForm const&)"
+7f4c4c,52,lib-box2d,_Z16b2CollideCirclesP10b2ManifoldPK13b2CircleShapeRK7b2XFormS3_S6_,"b2CollideCircles(b2Manifold*, b2CircleShape const*, b2XForm const&, b2CircleShape const*, b2XForm const&)"
+7f5920,68,lib-box2d,_Z17b2CollidePolygonsP10b2ManifoldPK14b2PolygonShapeRK7b2XFormS3_S6_,"b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2XForm const&, b2PolygonShape const*, b2XForm const&)"
+7f6210,248,lib-box2d,_ZN15b2ContactSolver23InitVelocityConstraintsERK10b2TimeStep,b2ContactSolver::InitVelocityConstraints(b2TimeStep const&)
+7f64a8,324,lib-box2d,_ZN15b2ContactSolver24SolveVelocityConstraintsEv,b2ContactSolver::SolveVelocityConstraints()
+7f6b20,124,lib-box2d,_ZN15b2ContactSolver27FinalizeVelocityConstraintsEv,b2ContactSolver::FinalizeVelocityConstraints()
+7f6b9c,100,lib-box2d,_ZN15b2ContactSolver24SolvePositionConstraintsEf,b2ContactSolver::SolvePositionConstraints(float)
+7f7020,28,lib-box2d,_ZN15b2ContactSolverD1Ev,b2ContactSolver::~b2ContactSolver()
+7f703c,28,lib-box2d,_ZN15b2ContactSolverD2Ev,b2ContactSolver::~b2ContactSolver()
+7f7058,684,lib-box2d,_ZN15b2ContactSolverC1ERK10b2TimeStepPP9b2ContactiP16b2StackAllocator,"b2ContactSolver::b2ContactSolver(b2TimeStep const&, b2Contact**, int, b2StackAllocator*)"
+7f7838,684,lib-box2d,_ZN15b2ContactSolverC2ERK10b2TimeStepPP9b2ContactiP16b2StackAllocator,"b2ContactSolver::b2ContactSolver(b2TimeStep const&, b2Contact**, int, b2StackAllocator*)"
+7f9848,204,lib-box2d,_Z10b2DistanceP6b2Vec2S0_PK7b2ShapeRK7b2XFormS3_S6_,"b2Distance(b2Vec2*, b2Vec2*, b2Shape const*, b2XForm const&, b2Shape const*, b2XForm const&)"
+7f9bc8,28,lib-box2d,_ZN15b2DistanceJoint24SolveVelocityConstraintsERK10b2TimeStep,b2DistanceJoint::SolveVelocityConstraints(b2TimeStep const&)
+7f9f14,32,lib-box2d,_ZNK15b2DistanceJoint10GetAnchor1Ev,b2DistanceJoint::GetAnchor1() const
+7f9fa4,32,lib-box2d,_ZNK15b2DistanceJoint10GetAnchor2Ev,b2DistanceJoint::GetAnchor2() const
+7fa034,24,lib-box2d,_ZNK15b2DistanceJoint16GetReactionForceEv,b2DistanceJoint::GetReactionForce() const
+7fa078,8,lib-box2d,_ZNK15b2DistanceJoint17GetReactionTorqueEv,b2DistanceJoint::GetReactionTorque() const
+7fa080,4,lib-box2d,_ZN15b2DistanceJointD1Ev,b2DistanceJoint::~b2DistanceJoint()
+7fa084,12,lib-box2d,_ZN15b2DistanceJointD0Ev,b2DistanceJoint::~b2DistanceJoint()
+7fa098,40,lib-box2d,_ZN15b2DistanceJoint23InitVelocityConstraintsERK10b2TimeStep,b2DistanceJoint::InitVelocityConstraints(b2TimeStep const&)
+7fa5a8,40,lib-box2d,_ZN18b2DistanceJointDef10InitializeEP6b2BodyS1_RK6b2Vec2S4_,"b2DistanceJointDef::Initialize(b2Body*, b2Body*, b2Vec2 const&, b2Vec2 const&)"
+7fa714,24,lib-box2d,_ZN15b2DistanceJoint24SolvePositionConstraintsEv,b2DistanceJoint::SolvePositionConstraints()
+7faa90,124,lib-box2d,_ZN15b2DistanceJointC1EPK18b2DistanceJointDef,b2DistanceJoint::b2DistanceJoint(b2DistanceJointDef const*)
+7fab14,124,lib-box2d,_ZN15b2DistanceJointC2EPK18b2DistanceJointDef,b2DistanceJoint::b2DistanceJoint(b2DistanceJointDef const*)
+7fab98,124,lib-box2d,_ZN11b2GearJoint23InitVelocityConstraintsERK10b2TimeStep,b2GearJoint::InitVelocityConstraints(b2TimeStep const&)
+7fb048,32,lib-box2d,_ZN11b2GearJoint24SolveVelocityConstraintsERK10b2TimeStep,b2GearJoint::SolveVelocityConstraints(b2TimeStep const&)
+7fb210,32,lib-box2d,_ZNK11b2GearJoint10GetAnchor1Ev,b2GearJoint::GetAnchor1() const
+7fb2a0,32,lib-box2d,_ZNK11b2GearJoint10GetAnchor2Ev,b2GearJoint::GetAnchor2() const
+7fb330,28,lib-box2d,_ZNK11b2GearJoint16GetReactionForceEv,b2GearJoint::GetReactionForce() const
+7fb36c,24,lib-box2d,_ZNK11b2GearJoint17GetReactionTorqueEv,b2GearJoint::GetReactionTorque() const
+7fb454,8,lib-box2d,_ZNK11b2GearJoint8GetRatioEv,b2GearJoint::GetRatio() const
+7fb45c,4,lib-box2d,_ZN11b2GearJointD1Ev,b2GearJoint::~b2GearJoint()
+7fb460,12,lib-box2d,_ZN11b2GearJointD0Ev,b2GearJoint::~b2GearJoint()
+7fb474,96,lib-box2d,_ZN11b2GearJoint24SolvePositionConstraintsEv,b2GearJoint::SolvePositionConstraints()
+7fb5ec,388,lib-box2d,_ZN11b2GearJointC1EPK14b2GearJointDef,b2GearJoint::b2GearJoint(b2GearJointDef const*)
+7fb794,388,lib-box2d,_ZN11b2GearJointC2EPK14b2GearJointDef,b2GearJoint::b2GearJoint(b2GearJointDef const*)

@@ -1,0 +1,236 @@
+local SKILLTREE_ID	= FromFixed(GetProp(GetPyStruct("CharacterProperties", "SkillTree")));
+local SKILL_CHANCE	= 40;
+local traces			= false;
+-- -------------------------------------------------------------------------------
+-- When the character is created/loaded
+function monster_OnInit()
+	OnInit();
+	
+	m_flee_flag = true;
+
+	BUFF_ID		= GetPyOID("ClassTable", "Buff_Speed");
+	buff = nil;
+	
+	saved_X, saved_Y = GetPosition();
+	
+----------------------------------------------------------------------------------------
+-- Dynamic level for monster. Monster must have there LevelMax param set to use dynamic level
+----------------------------------------------------------------------------------------
+	local m_lvl_max = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMax")));
+	local m_lvl_min = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMin")));
+	local m_lvl_offset = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelOffset")));
+	local pl_lvl = GetHostPlayerLevel();
+	local pl_diff = GetHostPlayerDifficulty();
+	local m_lvl = pl_lvl;
+	local m_level_min, m_level_max = GetCurrentLevelRange(pl_diff);
+
+	if(m_lvl_max > -1 ) then
+		if(m_level_max and m_level_max > -1 ) then
+			if( m_lvl <= m_level_min ) then
+				m_lvl = m_level_min;
+			else
+				if( m_lvl >= m_level_max ) then
+					m_lvl = m_level_max;
+				end
+			end
+		else
+			if( m_lvl <= m_lvl_min ) then
+				m_lvl = m_lvl_min;
+			else
+				if( m_lvl >= m_lvl_max ) then
+					m_lvl = m_lvl_max;
+				end
+			end
+		end
+		m_lvl = m_lvl + m_lvl_offset;
+
+		SetLevel(ToFixed(m_lvl));
+	end
+----------------------------------------------------------------------------------------
+-- End Dynamic level for monster
+----------------------------------------------------------------------------------------
+
+end
+AddToVFTable("OnInit", "monster_OnInit");
+
+-- ----------------------------------------------------------------------------------------------------
+local function IsHavingSkillTree()	return SKILLTREE_ID > -1;	end
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character spots an enemy
+function monster_OnEnemySpotted(enemy)
+	if(not HasTarget()) then
+		SetTarget(enemy);
+		HeadTo(enemy);
+		if (traces) then Trace("Monster: Ennemy spotted"); end
+	end
+end
+AddToVFTable("OnEnemySpotted", "monster_OnEnemySpotted");
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+function monster_OnTargetDied()
+	Stop();
+	ClearTarget();
+	if (traces) then Trace("Monster: Target Died"); end
+end
+AddToVFTable("OnTargetDied", "monster_OnTargetDied");
+
+
+-- -------------------------------------------------------------------------------
+function monster_OnTargetOutOfSight()
+	Stop();
+	local aggro = GetTarget();
+	if (aggro) then ClearAggro(aggro); end
+	ClearTarget();
+	if (traces) then Trace("Monster: Target out of sight"); end
+end
+AddToVFTable("OnTargetOutOfSight", "monster_OnTargetOutOfSight");
+
+
+-- -------------------------------------------------------------------------------
+function monster_OnTargetInSight()
+if (traces) then Trace("Monster: Target in sight"); end
+end
+AddToVFTable("OnTargetInSight", "monster_OnTargetInSight");
+
+
+-- -------------------------------------------------------------------------------
+function monster_OnTargetOutOfRange()
+   local state = GetState();
+	if( state == GetPyCst("AIStates", "Idle") and not HasPath() ) then
+		MoveTo(GetTarget());
+		if (traces) then Trace("Monster: Target out of range"); end
+	end
+end
+AddToVFTable("OnTargetOutOfRange", "monster_OnTargetOutOfRange");
+
+
+-- -------------------------------------------------------------------------------
+function monster_OnTargetInRangedRange()
+	if(buff)then
+		RemoveBuff(BUFF_ID, buff);
+		buff = nil;
+		m_flee_flag = true;
+	end
+	
+	Stop();
+	if (traces) then Trace("Monster: Target in ranged range"); end
+	if (IsHavingSkillTree()) then
+		
+		DoSkill(0);
+		
+	else
+		
+		Attack(GetTarget());
+	
+	end
+	
+end
+AddToVFTable("OnTargetInRangedRange", "monster_OnTargetInRangedRange");
+
+
+-- -------------------------------------------------------------------------------
+function monster_Flee()
+	if (traces) then Trace("Monster: Set Flag to flee"); end
+	m_flee_flag = false;
+end
+
+
+-- -------------------------------------------------------------------------------
+function monster_OnTargetInCloseRange()
+	local state = GetState();
+	
+	if(not buff) then
+		buff = CreateBuff(BUFF_ID);
+		ApplyBuff(BUFF_ID, buff);
+	end
+	
+	curr_X, curr_Y = GetPosition();	
+	if (traces) then Trace("Monster: Target in close range"); end
+	if (not m_flee_flag) then
+		if (IsHavingSkillTree()) then
+			DoSkill(0);
+		else
+			Attack(GetTarget());
+		end
+	elseif( curr_X == saved_X and curr_Y == saved_Y and m_flee_flag and state == GetPyCst("AIStates", "Move") and GetStateTime() > 500) then
+		m_flee_flag = false;
+		Stop();
+	elseif(m_flee_flag) then
+		Flee(GetTarget());
+	end
+
+	saved_X = curr_X;
+	saved_Y = curr_Y;
+
+end
+AddToVFTable("OnTargetInCloseRange", "monster_OnTargetInCloseRange");
+
+
+-- -------------------------------------------------------------------------------
+function monster_OnTargetInMeleeRange()
+	Stop();
+	if (traces) then Trace("Monster: Target in melee range"); end
+	if (IsHavingSkillTree()) then
+		Roll = GetRand(0,100);
+		if (Roll < SKILL_CHANCE) then
+			DoSkill(0);
+		else
+			Attack(GetTarget());
+		end
+	else
+		Attack(GetTarget());
+	end
+	
+end
+AddToVFTable("OnTargetInMeleeRange", "monster_OnTargetInMeleeRange");
+
+
+-- -------------------------------------------------------------------------------
+local function monster_EndGameCleanUp()
+	if(buff)then
+		RemoveBuff(BUFF_ID, buff);
+		buff = nil;
+	end
+end
+
+
+-- -------------------------------------------------------------------------------
+function monster_OnDied()
+	if (traces) then Trace("Monster: Died"); end
+	monster_EndGameCleanUp();
+end
+AddToVFTable("OnDied", "monster_OnDied");
+
+
+-- -------------------------------------------------------------------------------
+function monster_OnTerminate()
+	if (traces) then Trace("Monster: Terminate"); end
+	monster_EndGameCleanUp();
+end
+AddToVFTable("OnTerminate", "monster_OnTerminate");
+
+
+-- -------------------------------------------------------------------------------
+function monster_OnTargetHit(attacker, defender)
+	
+	if(defender:GetID() == GetID()) then
+		if (traces) then Trace("Monster: target hit"); end
+		if(not HasTarget()) then
+			SetTarget(attacker);
+			HeadTo(attacker);
+		end
+	end
+end
+AddToVFTable("OnTargetHit", "monster_OnTargetHit");
+AddToVFTable("OnTargetMissed", "monster_OnTargetHit");

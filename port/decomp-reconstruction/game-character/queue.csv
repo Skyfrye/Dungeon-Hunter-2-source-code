@@ -1,0 +1,1144 @@
+elf_address,body_bytes,owner,name,demangled
+3dbe78,4,AISDefault,_ZN10AISDefault6OnInitEv,AISDefault::OnInit()
+3dbe7c,4,AISDefault,_ZN10AISDefault10OnInitPostEv,AISDefault::OnInitPost()
+3dbe80,4,AISDefault,_ZN10AISDefault11OnInitFinalEv,AISDefault::OnInitFinal()
+3dbe84,4,AISDefault,_ZN10AISDefault11OnTerminateEv,AISDefault::OnTerminate()
+3dbe88,4,AISDefault,_ZN10AISDefault5OnMsgEiPKv,"AISDefault::OnMsg(int, void const*)"
+3dbe8c,4,AISDefault,_ZN10AISDefault14OnStateChangedEii,"AISDefault::OnStateChanged(int, int)"
+3dbe90,4,AISDefault,_ZN10AISDefault6OnDiedEP10GameObject,AISDefault::OnDied(GameObject*)
+3dbe94,4,AISDefault,_ZN10AISDefault9OnRevivedEP10GameObject,AISDefault::OnRevived(GameObject*)
+3dbe98,4,AISDefault,_ZN10AISDefault15OnFriendSpottedEP9Character,AISDefault::OnFriendSpotted(Character*)
+3dbe9c,4,AISDefault,_ZN10AISDefault16OnNeutralSpottedEP9Character,AISDefault::OnNeutralSpotted(Character*)
+3dbea0,4,AISDefault,_ZN10AISDefault14OnEnemySpottedEP9Character,AISDefault::OnEnemySpotted(Character*)
+3dbea4,4,AISDefault,_ZN10AISDefault7OnAggroEP9Character,AISDefault::OnAggro(Character*)
+3dbea8,4,AISDefault,_ZN10AISDefault9OnDeAggroEP9Character,AISDefault::OnDeAggro(Character*)
+3dbeac,4,AISDefault,_ZN10AISDefault12OnTargetDiedEv,AISDefault::OnTargetDied()
+3dbeb0,4,AISDefault,_ZN10AISDefault15OnTargetRevivedEv,AISDefault::OnTargetRevived()
+3dbeb4,4,AISDefault,_ZN10AISDefault18OnTargetOutOfSightEv,AISDefault::OnTargetOutOfSight()
+3dbeb8,4,AISDefault,_ZN10AISDefault15OnTargetInSightEv,AISDefault::OnTargetInSight()
+3dbebc,4,AISDefault,_ZN10AISDefault12OnMasterDiedEv,AISDefault::OnMasterDied()
+3dbec0,4,AISDefault,_ZN10AISDefault15OnMasterRevivedEv,AISDefault::OnMasterRevived()
+3dbec4,4,AISDefault,_ZN10AISDefault18OnMasterOutOfSightEv,AISDefault::OnMasterOutOfSight()
+3dbec8,4,AISDefault,_ZN10AISDefault15OnMasterInSightEv,AISDefault::OnMasterInSight()
+3dbecc,4,AISDefault,_ZN10AISDefault18OnMasterOutOfRangeEv,AISDefault::OnMasterOutOfRange()
+3dbed0,4,AISDefault,_ZN10AISDefault21OnMasterInRangedRangeEv,AISDefault::OnMasterInRangedRange()
+3dbed4,4,AISDefault,_ZN10AISDefault20OnMasterInCloseRangeEv,AISDefault::OnMasterInCloseRange()
+3dbed8,4,AISDefault,_ZN10AISDefault20OnMasterInMeleeRangeEv,AISDefault::OnMasterInMeleeRange()
+3dbedc,4,AISDefault,_ZN10AISDefault7OnTimerEPv,AISDefault::OnTimer(void*)
+3dbee0,4,AISDefault,_ZN10AISDefault13OnStunExpiredEv,AISDefault::OnStunExpired()
+3dbee4,4,AISDefault,_ZN10AISDefault13OnFearExpiredEv,AISDefault::OnFearExpired()
+3dbee8,4,AISDefault,_ZN10AISDefault20OnAttackDelayExpiredEv,AISDefault::OnAttackDelayExpired()
+3dbeec,4,AISDefault,_ZN10AISDefault11OnEndOfAnimEv,AISDefault::OnEndOfAnim()
+3dbef0,8,AISDefault,_ZN10AISDefault13OnPreInteractEv,AISDefault::OnPreInteract()
+3dbef8,4,AISDefault,_ZN10AISDefault11OnPreAttackEi,AISDefault::OnPreAttack(int)
+3dbefc,4,AISDefault,_ZN10AISDefault15OnProjectileHitEP10GameObject,AISDefault::OnProjectileHit(GameObject*)
+3dbf00,4,AISDefault,_ZN10AISDefault6OnKillEP9Character,AISDefault::OnKill(Character*)
+3dbf04,4,AISDefault,_ZN10AISDefault15OnCombatResultsEP10GameObjectPv,"AISDefault::OnCombatResults(GameObject*, void*)"
+3dbf08,48,AISDefault,_ZN10AISDefault16OnCollisionBeginEP10GameObjectb,"AISDefault::OnCollisionBegin(GameObject*, bool)"
+3dbf40,32,AISDefault,_ZN10AISDefault14OnCollisionEndEP10GameObjectb,"AISDefault::OnCollisionEnd(GameObject*, bool)"
+3dbf68,4,AISDefault,_ZN10AISDefault17OnCollisionResultEP10GameObjectb,"AISDefault::OnCollisionResult(GameObject*, bool)"
+3dbf6c,44,AISDefault,_ZN10AISDefaultD1Ev,AISDefault::~AISDefault()
+3dbfa0,388,AISDefault,_ZN10AISDefault18OnCollisionPersistEP10GameObjectb,"AISDefault::OnCollisionPersist(GameObject*, bool)"
+3dc12c,132,AISDefault,_ZN10AISDefault8OnAttackEiib,"AISDefault::OnAttack(int, int, bool)"
+3dc1b0,212,AISDefault,_ZN10AISDefault10OnInteractEv,AISDefault::OnInteract()
+3dc284,124,AISDefault,_ZN10AISDefault20OnTargetInMeleeRangeEv,AISDefault::OnTargetInMeleeRange()
+3dc300,392,AISDefault,_ZN10AISDefault20OnTargetInCloseRangeEv,AISDefault::OnTargetInCloseRange()
+3dc560,312,AISDefault,_ZN10AISDefault21OnTargetInRangedRangeEv,AISDefault::OnTargetInRangedRange()
+3dc698,256,AISDefault,_ZN10AISDefault18OnTargetOutOfRangeEv,AISDefault::OnTargetOutOfRange()
+3dc798,64,AISDefault,_ZN10AISDefault8OnUpdateEv,AISDefault::OnUpdate()
+3dc7d8,84,AISDefault,_ZN10AISDefault7InitVCBEv,AISDefault::InitVCB()
+3dc968,44,AISDefault,_ZN10AISDefaultD0Ev,AISDefault::~AISDefault()
+3dc9a8,160,AISDefault,_ZN10AISDefault15OnCombatResultsEP9CharacterS1_Pv,"AISDefault::OnCombatResults(Character*, Character*, void*)"
+3dca50,520,AISDefault,_ZN10AISDefault11OnAnimEventEPKc,AISDefault::OnAnimEvent(char const*)
+3dcc80,76,AISDefault,_ZN10AISDefault13OnScriptTimerEj,AISDefault::OnScriptTimer(unsigned int)
+3dccd0,32,AISExternal,_ZN11AISExternal11OnEndOfAnimEv,AISExternal::OnEndOfAnim()
+3dccf4,24,AISExternal,_ZN11AISExternal20OnMasterInMeleeRangeEv,AISExternal::OnMasterInMeleeRange()
+3dcd10,24,AISExternal,_ZN11AISExternal20OnMasterInCloseRangeEv,AISExternal::OnMasterInCloseRange()
+3dcd2c,24,AISExternal,_ZN11AISExternal21OnMasterInRangedRangeEv,AISExternal::OnMasterInRangedRange()
+3dcd48,24,AISExternal,_ZN11AISExternal18OnMasterOutOfRangeEv,AISExternal::OnMasterOutOfRange()
+3dcd64,12,AISExternal,_ZN11AISExternal15OnMasterInSightEv,AISExternal::OnMasterInSight()
+3dcd74,12,AISExternal,_ZN11AISExternal18OnMasterOutOfSightEv,AISExternal::OnMasterOutOfSight()
+3dcd84,12,AISExternal,_ZN11AISExternal12OnMasterDiedEv,AISExternal::OnMasterDied()
+3dcd94,24,AISExternal,_ZN11AISExternal20OnTargetInMeleeRangeEv,AISExternal::OnTargetInMeleeRange()
+3dcdb0,24,AISExternal,_ZN11AISExternal20OnTargetInCloseRangeEv,AISExternal::OnTargetInCloseRange()
+3dcdcc,24,AISExternal,_ZN11AISExternal21OnTargetInRangedRangeEv,AISExternal::OnTargetInRangedRange()
+3dcde8,24,AISExternal,_ZN11AISExternal18OnTargetOutOfRangeEv,AISExternal::OnTargetOutOfRange()
+3dce04,12,AISExternal,_ZN11AISExternal15OnTargetInSightEv,AISExternal::OnTargetInSight()
+3dce14,12,AISExternal,_ZN11AISExternal18OnTargetOutOfSightEv,AISExternal::OnTargetOutOfSight()
+3dce24,12,AISExternal,_ZN11AISExternal12OnTargetDiedEv,AISExternal::OnTargetDied()
+3dce34,12,AISExternal,_ZN11AISExternal11OnTerminateEv,AISExternal::OnTerminate()
+3dce44,12,AISExternal,_ZN11AISExternal11OnInitFinalEv,AISExternal::OnInitFinal()
+3dce54,12,AISExternal,_ZN11AISExternal10OnInitPostEv,AISExternal::OnInitPost()
+3dce64,60,AISExternal,_ZN11AISExternal8OnUpdateEv,AISExternal::OnUpdate()
+3dcea4,32,AISExternal,_ZN11AISExternal6OnInitEv,AISExternal::OnInit()
+3dcec8,368,AISExternal,_ZN11AISExternal7InitVCBEv,AISExternal::InitVCB()
+3dd060,44,AISExternal,_ZN11AISExternalD1Ev,AISExternal::~AISExternal()
+3dd094,20,AISExternal,_ZN11AISExternalD0Ev,AISExternal::~AISExternal()
+3dd0b0,44,AISExternal,_ZN11AISExternalD2Ev,AISExternal::~AISExternal()
+3dd0e4,60,AISExternal,_ZN11AISExternalC1Eb,AISExternal::AISExternal(bool)
+3dd128,60,AISExternal,_ZN11AISExternalC2Eb,AISExternal::AISExternal(bool)
+3dd250,76,AISExternal,_ZN11AISExternal15OnCombatResultsEP10GameObjectPv,"AISExternal::OnCombatResults(GameObject*, void*)"
+3dd2a0,80,AISExternal,_ZN11AISExternal15OnProjectileHitEP10GameObject,AISExternal::OnProjectileHit(GameObject*)
+3dd2f4,76,AISExternal,_ZN11AISExternal14OnEnemySpottedEP9Character,AISExternal::OnEnemySpotted(Character*)
+3dd344,76,AISExternal,_ZN11AISExternal16OnNeutralSpottedEP9Character,AISExternal::OnNeutralSpotted(Character*)
+3dd394,88,AISExternal,_ZN11AISExternal15OnFriendSpottedEP9Character,AISExternal::OnFriendSpotted(Character*)
+3dd3f0,76,AISExternal,_ZN11AISExternal9OnRevivedEP10GameObject,AISExternal::OnRevived(GameObject*)
+3dd440,76,AISExternal,_ZN11AISExternal6OnDiedEP10GameObject,AISExternal::OnDied(GameObject*)
+3de2d0,20,AISFaery,_ZN8AISFaery20OnMasterInCloseRangeEv,AISFaery::OnMasterInCloseRange()
+3de2e4,44,AISFaery,_ZN8AISFaeryD1Ev,AISFaery::~AISFaery()
+3de318,164,AISFaery,_ZN8AISFaery20OnMasterInMeleeRangeEv,AISFaery::OnMasterInMeleeRange()
+3de444,12,AISFaery,_ZN8AISFaery21OnMasterInRangedRangeEv,AISFaery::OnMasterInRangedRange()
+3de450,52,AISFaery,_ZN8AISFaery18OnMasterOutOfRangeEv,AISFaery::OnMasterOutOfRange()
+3de4c8,36,AISFaery,_ZN8AISFaery18OnMasterOutOfSightEv,AISFaery::OnMasterOutOfSight()
+3de4ec,88,AISFaery,_ZN8AISFaery15OnFriendSpottedEP9Character,AISFaery::OnFriendSpotted(Character*)
+3de544,104,AISFaery,_ZN8AISFaery8OnUpdateEv,AISFaery::OnUpdate()
+3de688,44,AISFaery,_ZN8AISFaeryD0Ev,AISFaery::~AISFaery()
+3dd490,4,AISMonster,_ZN10AISMonster15OnTargetRevivedEv,AISMonster::OnTargetRevived()
+3dd494,4,AISMonster,_ZN10AISMonster15OnTargetInSightEv,AISMonster::OnTargetInSight()
+3dd498,44,AISMonster,_ZN10AISMonsterD1Ev,AISMonster::~AISMonster()
+3dd4cc,52,AISMonster,_ZN10AISMonster14OnEnemySpottedEP9Character,AISMonster::OnEnemySpotted(Character*)
+3dd500,80,AISMonster,_ZN10AISMonster18OnTargetOutOfSightEv,AISMonster::OnTargetOutOfSight()
+3dd550,56,AISMonster,_ZN10AISMonster12OnTargetDiedEv,AISMonster::OnTargetDied()
+3dd588,124,AISMonster,_ZN10AISMonster8OnUpdateEv,AISMonster::OnUpdate()
+3dd7b0,44,AISMonster,_ZN10AISMonsterD0Ev,AISMonster::~AISMonster()
+3dd7ec,4,AISPlayer,_ZN9AISPlayer8OnAttackEiib,"AISPlayer::OnAttack(int, int, bool)"
+3dd7f0,92,AISPlayer,_ZN9AISPlayer20OnTargetInMeleeRangeEv,AISPlayer::OnTargetInMeleeRange()
+3dd84c,56,AISPlayer,_ZN9AISPlayer12OnTargetDiedEv,AISPlayer::OnTargetDied()
+3dd884,56,AISPlayer,_ZN9AISPlayer7InitVCBEv,AISPlayer::InitVCB()
+3dd99c,108,AISPlayer,_ZN9AISPlayerD1Ev,AISPlayer::~AISPlayer()
+3dda18,20,AISPlayer,_ZN9AISPlayerD0Ev,AISPlayer::~AISPlayer()
+3dda34,200,AISPlayer,_ZN9AISPlayer14OnEnemySpottedEP9Character,AISPlayer::OnEnemySpotted(Character*)
+3ddb10,92,AISPlayer,_ZN9AISPlayer6OnKillEP9Character,AISPlayer::OnKill(Character*)
+3ddb70,656,AISPlayer,_ZN9AISPlayer7OnAggroEP9Character,AISPlayer::OnAggro(Character*)
+3dde48,616,AISPlayer,_ZN9AISPlayer9OnDeAggroEP9Character,AISPlayer::OnDeAggro(Character*)
+3de100,104,AISPlayer,_ZN9AISPlayerD2Ev,AISPlayer::~AISPlayer()
+3de174,44,AISPlayerIPhone,_ZN15AISPlayerIPhoneD1Ev,AISPlayerIPhone::~AISPlayerIPhone()
+3de1a8,4,AISPlayerIPhone,_ZN15AISPlayerIPhone20OnTargetInMeleeRangeEv,AISPlayerIPhone::OnTargetInMeleeRange()
+3de1ac,4,AISPlayerIPhone,_ZN15AISPlayerIPhone20OnTargetInCloseRangeEv,AISPlayerIPhone::OnTargetInCloseRange()
+3de1b0,4,AISPlayerIPhone,_ZN15AISPlayerIPhone21OnTargetInRangedRangeEv,AISPlayerIPhone::OnTargetInRangedRange()
+3de1b4,4,AISPlayerIPhone,_ZN15AISPlayerIPhone18OnTargetOutOfRangeEv,AISPlayerIPhone::OnTargetOutOfRange()
+3de294,44,AISPlayerIPhone,_ZN15AISPlayerIPhoneD0Ev,AISPlayerIPhone::~AISPlayerIPhone()
+3c0050,4,CSAnim,_ZN6CSAnimD1Ev,CSAnim::~CSAnim()
+3c07bc,36,CSAnim,_ZN6CSAnimD0Ev,CSAnim::~CSAnim()
+3c1a14,40,CSAnim,_ZN6CSAnim7OnEventEiP9CharacterP16CharStateMachineiPv,"CSAnim::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c1a3c,40,CSAnim,_ZN6CSAnim8OnUpdateEiP9CharacterP16CharStateMachine,"CSAnim::OnUpdate(int, Character*, CharStateMachine*)"
+3c2dd0,120,CSAnim,_ZN6CSAnim6OnBlurEiP9CharacterP16CharStateMachinei,"CSAnim::OnBlur(int, Character*, CharStateMachine*, int)"
+3c324c,160,CSAnim,_ZN6CSAnim7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSAnim::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c8b28,100,CSAnim,_ZN6CSAnim6OnInitEiP9CharacterP16CharStateMachine,"CSAnim::OnInit(int, Character*, CharStateMachine*)"
+3c0010,4,CSAttack,_ZN8CSAttackD1Ev,CSAttack::~CSAttack()
+3c0990,36,CSAttack,_ZN8CSAttackD0Ev,CSAttack::~CSAttack()
+3c1288,580,CSAttack,_ZN8CSAttack7OnEventEiP9CharacterP16CharStateMachineiPv,"CSAttack::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c14f8,44,CSAttack,_ZN8CSAttack8OnUpdateEiP9CharacterP16CharStateMachine,"CSAttack::OnUpdate(int, Character*, CharStateMachine*)"
+3c3f74,200,CSAttack,_ZN8CSAttack6OnBlurEiP9CharacterP16CharStateMachinei,"CSAttack::OnBlur(int, Character*, CharStateMachine*, int)"
+3c404c,704,CSAttack,_ZN8CSAttack7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSAttack::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c8284,420,CSAttack,_ZN8CSAttack6OnInitEiP9CharacterP16CharStateMachine,"CSAttack::OnInit(int, Character*, CharStateMachine*)"
+3c001c,4,CSCast,_ZN6CSCastD1Ev,CSCast::~CSCast()
+3c0020,4,CSCast,_ZN6CSCast8OnUpdateEiP9CharacterP16CharStateMachine,"CSCast::OnUpdate(int, Character*, CharStateMachine*)"
+3c0024,4,CSCast,_ZN6CSCast7OnEventEiP9CharacterP16CharStateMachineiPv,"CSCast::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c0928,36,CSCast,_ZN6CSCastD0Ev,CSCast::~CSCast()
+3c3934,140,CSCast,_ZN6CSCast6OnBlurEiP9CharacterP16CharStateMachinei,"CSCast::OnBlur(int, Character*, CharStateMachine*, int)"
+3c39d0,196,CSCast,_ZN6CSCast7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSCast::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c85b8,100,CSCast,_ZN6CSCast6OnInitEiP9CharacterP16CharStateMachine,"CSCast::OnInit(int, Character*, CharStateMachine*)"
+3c0048,4,CSDead,_ZN6CSDeadD1Ev,CSDead::~CSDead()
+3c004c,4,CSDead,_ZN6CSDead8OnUpdateEiP9CharacterP16CharStateMachine,"CSDead::OnUpdate(int, Character*, CharStateMachine*)"
+3c0824,36,CSDead,_ZN6CSDeadD0Ev,CSDead::~CSDead()
+3c499c,156,CSDead,_ZN6CSDead6OnBlurEiP9CharacterP16CharStateMachinei,"CSDead::OnBlur(int, Character*, CharStateMachine*, int)"
+3c4c3c,248,CSDead,_ZN6CSDead7OnEventEiP9CharacterP16CharStateMachineiPv,"CSDead::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c4d50,540,CSDead,_ZN6CSDead7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSDead::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c8920,100,CSDead,_ZN6CSDead6OnInitEiP9CharacterP16CharStateMachine,"CSDead::OnInit(int, Character*, CharStateMachine*)"
+3bfff4,4,CSDespawn,_ZN9CSDespawnD1Ev,CSDespawn::~CSDespawn()
+3bfff8,4,CSDespawn,_ZN9CSDespawn8OnUpdateEiP9CharacterP16CharStateMachine,"CSDespawn::OnUpdate(int, Character*, CharStateMachine*)"
+3bfffc,4,CSDespawn,_ZN9CSDespawn7OnEventEiP9CharacterP16CharStateMachineiPv,"CSDespawn::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c0a2c,36,CSDespawn,_ZN9CSDespawnD0Ev,CSDespawn::~CSDespawn()
+3c32fc,216,CSDespawn,_ZN9CSDespawn7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSDespawn::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c3794,392,CSDespawn,_ZN9CSDespawn6OnBlurEiP9CharacterP16CharStateMachinei,"CSDespawn::OnBlur(int, Character*, CharStateMachine*, int)"
+3c7dfc,100,CSDespawn,_ZN9CSDespawn6OnInitEiP9CharacterP16CharStateMachine,"CSDespawn::OnInit(int, Character*, CharStateMachine*)"
+3c0000,4,CSIdle,_ZN6CSIdleD1Ev,CSIdle::~CSIdle()
+3c0004,4,CSIdle,_ZN6CSIdle7OnEventEiP9CharacterP16CharStateMachineiPv,"CSIdle::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c09f8,36,CSIdle,_ZN6CSIdleD0Ev,CSIdle::~CSIdle()
+3c0b78,340,CSIdle,_ZN6CSIdle16IdleCommonUpdateEiP9CharacterP16CharStateMachine,"CSIdle::IdleCommonUpdate(int, Character*, CharStateMachine*)"
+3c0e80,16,CSIdle,_ZN6CSIdle8OnUpdateEiP9CharacterP16CharStateMachine,"CSIdle::OnUpdate(int, Character*, CharStateMachine*)"
+3c2d3c,132,CSIdle,_ZN6CSIdle6OnBlurEiP9CharacterP16CharStateMachinei,"CSIdle::OnBlur(int, Character*, CharStateMachine*, int)"
+3c3020,256,CSIdle,_ZN6CSIdle7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSIdle::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c7e60,572,CSIdle,_ZN6CSIdle6OnInitEiP9CharacterP16CharStateMachine,"CSIdle::OnInit(int, Character*, CharStateMachine*)"
+3c003c,4,CSInjured,_ZN9CSInjuredD1Ev,CSInjured::~CSInjured()
+3c0040,4,CSInjured,_ZN9CSInjured8OnUpdateEiP9CharacterP16CharStateMachine,"CSInjured::OnUpdate(int, Character*, CharStateMachine*)"
+3c0044,4,CSInjured,_ZN9CSInjured7OnEventEiP9CharacterP16CharStateMachineiPv,"CSInjured::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c0858,36,CSInjured,_ZN9CSInjuredD0Ev,CSInjured::~CSInjured()
+3c33e8,208,CSInjured,_ZN9CSInjured7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSInjured::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c4ba4,136,CSInjured,_ZN9CSInjured6OnBlurEiP9CharacterP16CharStateMachinei,"CSInjured::OnBlur(int, Character*, CharStateMachine*, int)"
+3c8850,208,CSInjured,_ZN9CSInjured6OnInitEiP9CharacterP16CharStateMachine,"CSInjured::OnInit(int, Character*, CharStateMachine*)"
+3c007c,4,CSInteract,_ZN10CSInteractD1Ev,CSInteract::~CSInteract()
+3c0080,4,CSInteract,_ZN10CSInteract8OnUpdateEiP9CharacterP16CharStateMachine,"CSInteract::OnUpdate(int, Character*, CharStateMachine*)"
+3c07f0,36,CSInteract,_ZN10CSInteractD0Ev,CSInteract::~CSInteract()
+3c1558,160,CSInteract,_ZN10CSInteract7OnEventEiP9CharacterP16CharStateMachineiPv,"CSInteract::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c4f8c,280,CSInteract,_ZN10CSInteract6OnBlurEiP9CharacterP16CharStateMachinei,"CSInteract::OnBlur(int, Character*, CharStateMachine*, int)"
+3c5548,296,CSInteract,_ZN10CSInteract7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSInteract::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c8984,408,CSInteract,_ZN10CSInteract6OnInitEiP9CharacterP16CharStateMachine,"CSInteract::OnInit(int, Character*, CharStateMachine*)"
+3c0034,4,CSKnockedBack,_ZN13CSKnockedBackD1Ev,CSKnockedBack::~CSKnockedBack()
+3c0038,4,CSKnockedBack,_ZN13CSKnockedBack8OnUpdateEiP9CharacterP16CharStateMachine,"CSKnockedBack::OnUpdate(int, Character*, CharStateMachine*)"
+3c088c,36,CSKnockedBack,_ZN13CSKnockedBackD0Ev,CSKnockedBack::~CSKnockedBack()
+3c48e0,172,CSKnockedBack,_ZN13CSKnockedBack6OnBlurEiP9CharacterP16CharStateMachinei,"CSKnockedBack::OnBlur(int, Character*, CharStateMachine*, int)"
+3c4a48,328,CSKnockedBack,_ZN13CSKnockedBack7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSKnockedBack::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c5ab0,140,CSKnockedBack,_ZN13CSKnockedBack7OnEventEiP9CharacterP16CharStateMachineiPv,"CSKnockedBack::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c87d8,112,CSKnockedBack,_ZN13CSKnockedBack6OnInitEiP9CharacterP16CharStateMachine,"CSKnockedBack::OnInit(int, Character*, CharStateMachine*)"
+3c0074,4,CSLiftingIdle,_ZN13CSLiftingIdleD1Ev,CSLiftingIdle::~CSLiftingIdle()
+3c06ec,36,CSLiftingIdle,_ZN13CSLiftingIdleD0Ev,CSLiftingIdle::~CSLiftingIdle()
+3c0e90,16,CSLiftingIdle,_ZN13CSLiftingIdle8OnUpdateEiP9CharacterP16CharStateMachine,"CSLiftingIdle::OnUpdate(int, Character*, CharStateMachine*)"
+3c3140,236,CSLiftingIdle,_ZN13CSLiftingIdle7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSLiftingIdle::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c50b4,212,CSLiftingIdle,_ZN13CSLiftingIdle6OnBlurEiP9CharacterP16CharStateMachinei,"CSLiftingIdle::OnBlur(int, Character*, CharStateMachine*, int)"
+3c6608,52,CSLiftingIdle,_ZN13CSLiftingIdle7OnEventEiP9CharacterP16CharStateMachineiPv,"CSLiftingIdle::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c8d5c,376,CSLiftingIdle,_ZN13CSLiftingIdle6OnInitEiP9CharacterP16CharStateMachine,"CSLiftingIdle::OnInit(int, Character*, CharStateMachine*)"
+3c0078,4,CSLiftingMove,_ZN13CSLiftingMoveD1Ev,CSLiftingMove::~CSLiftingMove()
+3c06b8,36,CSLiftingMove,_ZN13CSLiftingMoveD0Ev,CSLiftingMove::~CSLiftingMove()
+3c0ea0,120,CSLiftingMove,_ZN13CSLiftingMove8OnUpdateEiP9CharacterP16CharStateMachine,"CSLiftingMove::OnUpdate(int, Character*, CharStateMachine*)"
+3c3e40,276,CSLiftingMove,_ZN13CSLiftingMove7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSLiftingMove::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c5198,236,CSLiftingMove,_ZN13CSLiftingMove6OnBlurEiP9CharacterP16CharStateMachinei,"CSLiftingMove::OnBlur(int, Character*, CharStateMachine*, int)"
+3c663c,52,CSLiftingMove,_ZN13CSLiftingMove7OnEventEiP9CharacterP16CharStateMachineiPv,"CSLiftingMove::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c8ee0,264,CSLiftingMove,_ZN13CSLiftingMove6OnInitEiP9CharacterP16CharStateMachine,"CSLiftingMove::OnInit(int, Character*, CharStateMachine*)"
+3bffe0,4,CSLimbus,_ZN8CSLimbusD1Ev,CSLimbus::~CSLimbus()
+3bffe4,4,CSLimbus,_ZN8CSLimbus8OnUpdateEiP9CharacterP16CharStateMachine,"CSLimbus::OnUpdate(int, Character*, CharStateMachine*)"
+3bffe8,4,CSLimbus,_ZN8CSLimbus7OnEventEiP9CharacterP16CharStateMachineiPv,"CSLimbus::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c0a94,36,CSLimbus,_ZN8CSLimbusD0Ev,CSLimbus::~CSLimbus()
+3c2be4,328,CSLimbus,_ZN8CSLimbus6OnBlurEiP9CharacterP16CharStateMachinei,"CSLimbus::OnBlur(int, Character*, CharStateMachine*, int)"
+3c2e58,272,CSLimbus,_ZN8CSLimbus7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSLimbus::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c7cc0,68,CSLimbus,_ZN8CSLimbus6OnInitEiP9CharacterP16CharStateMachine,"CSLimbus::OnInit(int, Character*, CharStateMachine*)"
+3c0008,4,CSMove,_ZN6CSMoveD1Ev,CSMove::~CSMove()
+3c000c,4,CSMove,_ZN6CSMove7OnEventEiP9CharacterP16CharStateMachineiPv,"CSMove::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c09c4,36,CSMove,_ZN6CSMoveD0Ev,CSMove::~CSMove()
+3c0f18,216,CSMove,_ZN6CSMove10UpdateTypeEP9CharacterP16CharStateMachine,"CSMove::UpdateType(Character*, CharStateMachine*)"
+3c1184,208,CSMove,_ZN6CSMove8OnUpdateEiP9CharacterP16CharStateMachine,"CSMove::OnUpdate(int, Character*, CharStateMachine*)"
+3c3aa4,152,CSMove,_ZN6CSMove6OnBlurEiP9CharacterP16CharStateMachinei,"CSMove::OnBlur(int, Character*, CharStateMachine*, int)"
+3c3bf8,184,CSMove,_ZN6CSMove7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSMove::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c80ac,456,CSMove,_ZN6CSMove6OnInitEiP9CharacterP16CharStateMachine,"CSMove::OnInit(int, Character*, CharStateMachine*)"
+3c006c,4,CSPreSpawn,_ZN10CSPreSpawnD1Ev,CSPreSpawn::~CSPreSpawn()
+3c0070,4,CSPreSpawn,_ZN10CSPreSpawn8OnUpdateEiP9CharacterP16CharStateMachine,"CSPreSpawn::OnUpdate(int, Character*, CharStateMachine*)"
+3c0720,36,CSPreSpawn,_ZN10CSPreSpawnD0Ev,CSPreSpawn::~CSPreSpawn()
+3c2810,284,CSPreSpawn,_ZN10CSPreSpawn7OnEventEiP9CharacterP16CharStateMachineiPv,"CSPreSpawn::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c67d4,168,CSPreSpawn,_ZN10CSPreSpawn6OnBlurEiP9CharacterP16CharStateMachinei,"CSPreSpawn::OnBlur(int, Character*, CharStateMachine*, int)"
+3c688c,372,CSPreSpawn,_ZN10CSPreSpawn7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSPreSpawn::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c8d24,56,CSPreSpawn,_ZN10CSPreSpawn6OnInitEiP9CharacterP16CharStateMachine,"CSPreSpawn::OnInit(int, Character*, CharStateMachine*)"
+3c0060,4,CSRevived,_ZN9CSRevivedD1Ev,CSRevived::~CSRevived()
+3c0064,4,CSRevived,_ZN9CSRevived8OnUpdateEiP9CharacterP16CharStateMachine,"CSRevived::OnUpdate(int, Character*, CharStateMachine*)"
+3c0068,4,CSRevived,_ZN9CSRevived7OnEventEiP9CharacterP16CharStateMachineiPv,"CSRevived::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c0754,36,CSRevived,_ZN9CSRevivedD0Ev,CSRevived::~CSRevived()
+3c34cc,256,CSRevived,_ZN9CSRevived7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSRevived::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c53ec,160,CSRevived,_ZN9CSRevived6OnBlurEiP9CharacterP16CharStateMachinei,"CSRevived::OnBlur(int, Character*, CharStateMachine*, int)"
+3c8cec,56,CSRevived,_ZN9CSRevived6OnInitEiP9CharacterP16CharStateMachine,"CSRevived::OnInit(int, Character*, CharStateMachine*)"
+3c0054,4,CSReviving,_ZN10CSRevivingD1Ev,CSReviving::~CSReviving()
+3c0058,4,CSReviving,_ZN10CSReviving8OnUpdateEiP9CharacterP16CharStateMachine,"CSReviving::OnUpdate(int, Character*, CharStateMachine*)"
+3c005c,4,CSReviving,_ZN10CSReviving7OnEventEiP9CharacterP16CharStateMachineiPv,"CSReviving::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c0788,36,CSReviving,_ZN10CSRevivingD0Ev,CSReviving::~CSReviving()
+3c5294,312,CSReviving,_ZN10CSReviving7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSReviving::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c6724,160,CSReviving,_ZN10CSReviving6OnBlurEiP9CharacterP16CharStateMachinei,"CSReviving::OnBlur(int, Character*, CharStateMachine*, int)"
+3c8b8c,340,CSReviving,_ZN10CSReviving6OnInitEiP9CharacterP16CharStateMachine,"CSReviving::OnInit(int, Character*, CharStateMachine*)"
+3c0028,4,CSScared,_ZN8CSScaredD1Ev,CSScared::~CSScared()
+3c08f4,36,CSScared,_ZN8CSScaredD0Ev,CSScared::~CSScared()
+3c2b28,72,CSScared,_ZN8CSScared7OnEventEiP9CharacterP16CharStateMachineiPv,"CSScared::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c45c4,248,CSScared,_ZN8CSScared7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSScared::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c4788,156,CSScared,_ZN8CSScared8OnUpdateEiP9CharacterP16CharStateMachine,"CSScared::OnUpdate(int, Character*, CharStateMachine*)"
+3c4834,156,CSScared,_ZN8CSScared6OnBlurEiP9CharacterP16CharStateMachinei,"CSScared::OnBlur(int, Character*, CharStateMachine*, int)"
+3c861c,264,CSScared,_ZN8CSScared6OnInitEiP9CharacterP16CharStateMachine,"CSScared::OnInit(int, Character*, CharStateMachine*)"
+3c0014,4,CSSkill,_ZN7CSSkillD1Ev,CSSkill::~CSSkill()
+3c0018,4,CSSkill,_ZN7CSSkill8OnUpdateEiP9CharacterP16CharStateMachine,"CSSkill::OnUpdate(int, Character*, CharStateMachine*)"
+3c095c,36,CSSkill,_ZN7CSSkillD0Ev,CSSkill::~CSSkill()
+3c0ac8,56,CSSkill,_ZN7CSSkill7OnEventEiP9CharacterP16CharStateMachineiPv,"CSSkill::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c434c,292,CSSkill,_ZN7CSSkill6OnBlurEiP9CharacterP16CharStateMachinei,"CSSkill::OnBlur(int, Character*, CharStateMachine*, int)"
+3c4480,308,CSSkill,_ZN7CSSkill7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSSkill::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c8438,372,CSSkill,_ZN7CSSkill6OnInitEiP9CharacterP16CharStateMachine,"CSSkill::OnInit(int, Character*, CharStateMachine*)"
+3bffec,4,CSSpawn,_ZN7CSSpawnD1Ev,CSSpawn::~CSSpawn()
+3bfff0,4,CSSpawn,_ZN7CSSpawn8OnUpdateEiP9CharacterP16CharStateMachine,"CSSpawn::OnUpdate(int, Character*, CharStateMachine*)"
+3c0a60,36,CSSpawn,_ZN7CSSpawnD0Ev,CSSpawn::~CSSpawn()
+3c0b04,72,CSSpawn,_ZN7CSSpawn7OnEventEiP9CharacterP16CharStateMachineiPv,"CSSpawn::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c2f7c,148,CSSpawn,_ZN7CSSpawn6OnBlurEiP9CharacterP16CharStateMachinei,"CSSpawn::OnBlur(int, Character*, CharStateMachine*, int)"
+3c35ec,388,CSSpawn,_ZN7CSSpawn7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSSpawn::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c7d0c,228,CSSpawn,_ZN7CSSpawn6OnInitEiP9CharacterP16CharStateMachine,"CSSpawn::OnInit(int, Character*, CharStateMachine*)"
+3c002c,4,CSStunned,_ZN9CSStunnedD1Ev,CSStunned::~CSStunned()
+3c0030,4,CSStunned,_ZN9CSStunned7OnEventEiP9CharacterP16CharStateMachineiPv,"CSStunned::OnEvent(int, Character*, CharStateMachine*, int, void*)"
+3c08c0,36,CSStunned,_ZN9CSStunnedD0Ev,CSStunned::~CSStunned()
+3c3b4c,156,CSStunned,_ZN9CSStunned6OnBlurEiP9CharacterP16CharStateMachinei,"CSStunned::OnBlur(int, Character*, CharStateMachine*, int)"
+3c3cc0,348,CSStunned,_ZN9CSStunned7OnFocusEiP9CharacterP16CharStateMachineiiPv,"CSStunned::OnFocus(int, Character*, CharStateMachine*, int, int, void*)"
+3c549c,156,CSStunned,_ZN9CSStunned8OnUpdateEiP9CharacterP16CharStateMachine,"CSStunned::OnUpdate(int, Character*, CharStateMachine*)"
+3c8730,156,CSStunned,_ZN9CSStunned6OnInitEiP9CharacterP16CharStateMachine,"CSStunned::OnInit(int, Character*, CharStateMachine*)"
+3cb2f0,28,CharAI,_ZN6CharAI22StepResetAvailableStepEv,CharAI::StepResetAvailableStep()
+3cb314,56,CharAI,_ZN6CharAI14StepInitScriptEv,CharAI::StepInitScript()
+3cb34c,264,CharAI,_ZN6CharAI15_UpdatePointersEv,CharAI::_UpdatePointers()
+3cb454,4,CharAI,_ZN6CharAI14UpdatePointersEv,CharAI::UpdatePointers()
+3cb458,20,CharAI,_ZNK6CharAI21IsScriptProcessLoadedEv,CharAI::IsScriptProcessLoaded() const
+3cb748,52,CharAI,_ZN6CharAI14AI_PauseUpdateEj,CharAI::AI_PauseUpdate(unsigned int)
+3cb77c,68,CharAI,_ZN6CharAI12_UpdateRegenEv,CharAI::_UpdateRegen()
+3cb7c0,124,CharAI,_ZN6CharAI12SetCharacterEP9Character,CharAI::SetCharacter(Character*)
+3cb854,152,CharAI,_ZN6CharAI22StepQueryAvailableStepEi,CharAI::StepQueryAvailableStep(int)
+3cb908,556,CharAI,_ZN6CharAI13_UpdateTargetEv,CharAI::_UpdateTarget()
+3cbb34,1756,CharAI,_ZN6CharAI12RaiseAIEventEiPv,"CharAI::RaiseAIEvent(int, void*)"
+3cc218,28,CharAI,_ZN6CharAI14StepLoadCommonEv,CharAI::StepLoadCommon()
+3cc26c,12,CharAI,_ZN6CharAI16StepSetCharacterEv,CharAI::StepSetCharacter()
+3cc278,8,CharAI,_ZN6CharAI16StepBindFunctionEv,CharAI::StepBindFunction()
+3cc280,420,CharAI,_ZN6CharAI17_HandleProjectileEP10ProjectilePv,"CharAI::_HandleProjectile(Projectile*, void*)"
+3cc484,256,CharAI,_ZN6CharAI8IsMyTurnEPKS_,CharAI::IsMyTurn(CharAI const*)
+3cc5a4,444,CharAI,_ZN6CharAI13_UpdateMasterEv,CharAI::_UpdateMaster()
+3cc9dc,280,CharAI,_ZN6CharAI21AIUnLoadScriptProcessEb,CharAI::AIUnLoadScriptProcess(bool)
+3ccaf4,216,CharAI,_ZN6CharAI9SetScriptI11AISExternalEEvv,void CharAI::SetScript<AISExternal>()
+3ccbe4,248,CharAI,_ZN6CharAI9SetScriptI10AISMonsterEEvv,void CharAI::SetScript<AISMonster>()
+3cccf8,256,CharAI,_ZN6CharAI9SetScriptI8AISFaeryEEvv,void CharAI::SetScript<AISFaery>()
+3cce14,248,CharAI,_ZN6CharAI9SetScriptI10AISDefaultEEvv,void CharAI::SetScript<AISDefault>()
+3ccfe4,280,CharAI,_ZN6CharAI9SetScriptI15AISPlayerIPhoneEEvv,void CharAI::SetScript<AISPlayerIPhone>()
+3cd11c,264,CharAI,_ZN6CharAI9SetScriptI9AISPlayerEEvv,void CharAI::SetScript<AISPlayer>()
+3cd384,448,CharAI,_ZN6CharAI13ClearAllAggroEv,CharAI::ClearAllAggro()
+3cd964,488,CharAI,_ZN6CharAID2Ev,CharAI::~CharAI()
+3cdb60,488,CharAI,_ZN6CharAID1Ev,CharAI::~CharAI()
+3cdd5c,20,CharAI,_ZN6CharAID0Ev,CharAI::~CharAI()
+3cdf7c,180,CharAI,_ZN6CharAI14StepLoadScriptEv,CharAI::StepLoadScript()
+3ce044,1812,CharAI,_ZN6CharAI18SetSkillsAndSpellsEv,CharAI::SetSkillsAndSpells()
+3ce7c0,80,CharAI,_ZN6CharAI17InitScriptProcessEb,CharAI::InitScriptProcess(bool)
+3ce9b8,548,CharAI,_ZN6CharAI14IncUpdateQueueEv,CharAI::IncUpdateQueue()
+3cebf0,340,CharAI,_ZN6CharAIC2Ev,CharAI::CharAI()
+3ced50,340,CharAI,_ZN6CharAIC1Ev,CharAI::CharAI()
+3ceeb0,372,CharAI,_ZN6CharAI15SetScriptByNameEPKc,CharAI::SetScriptByName(char const*)
+3cf04c,384,CharAI,_ZN6CharAI16StepCreateScriptEv,CharAI::StepCreateScript()
+3cf1f0,412,CharAI,_ZN6CharAI17LoadScriptProcessEv,CharAI::LoadScriptProcess()
+3cf3a4,76,CharAI,_ZN6CharAI22LoadNInitScriptProcessEb,CharAI::LoadNInitScriptProcess(bool)
+3cf3f0,1864,CharAI,_ZN6CharAI12_UpdateAggroEv,CharAI::_UpdateAggro()
+3cfbf4,336,CharAI,_ZN6CharAI6UpdateEv,CharAI::Update()
+3cfd68,20,CharAI,_ZN6CharAI14AI_SendMessageEiPKv,"CharAI::AI_SendMessage(int, void const*)"
+3cfd7c,104,CharAI,_ZN6CharAI16AI_ScriptCleanUpEv,CharAI::AI_ScriptCleanUp()
+3cfde4,312,CharAI,_ZN6CharAI13AI_ScriptInitEv,CharAI::AI_ScriptInit()
+3cff34,236,CharAI,_ZN6CharAI15AI_InteractWithEP10GameObject,CharAI::AI_InteractWith(GameObject*)
+3d01ac,1380,CharAI,_ZN6CharAI16AI_DoMeleeAttackEP10GameObjectb,"CharAI::AI_DoMeleeAttack(GameObject*, bool)"
+3d076c,964,CharAI,_ZN6CharAI16AI_DoRangeAttackEP10GameObjectb,"CharAI::AI_DoRangeAttack(GameObject*, bool)"
+3d0b80,36,CharAI,_ZN6CharAI10OnInitPostEv,CharAI::OnInitPost()
+3d0ba4,36,CharAI,_ZN6CharAI11OnInitFinalEv,CharAI::OnInitFinal()
+3d0bc8,36,CharAI,_ZN6CharAI5OnMsgEiPKv,"CharAI::OnMsg(int, void const*)"
+3d0bec,36,CharAI,_ZN6CharAI14OnStateChangedEii,"CharAI::OnStateChanged(int, int)"
+3d0c10,36,CharAI,_ZN6CharAI7OnTimerEPv,CharAI::OnTimer(void*)
+3d0c34,36,CharAI,_ZN6CharAI13OnStunExpiredEv,CharAI::OnStunExpired()
+3d0c58,36,CharAI,_ZN6CharAI13OnFearExpiredEv,CharAI::OnFearExpired()
+3d0c7c,36,CharAI,_ZN6CharAI20OnAttackDelayExpiredEv,CharAI::OnAttackDelayExpired()
+3d0ca0,36,CharAI,_ZN6CharAI13OnScriptTimerEj,CharAI::OnScriptTimer(unsigned int)
+3d0cc4,36,CharAI,_ZN6CharAI11OnAnimEventEPKc,CharAI::OnAnimEvent(char const*)
+3d0ce8,36,CharAI,_ZN6CharAI11OnEndOfAnimEv,CharAI::OnEndOfAnim()
+3d0d0c,44,CharAI,_ZN6CharAI13OnPreInteractEv,CharAI::OnPreInteract()
+3d0d38,36,CharAI,_ZN6CharAI10OnInteractEv,CharAI::OnInteract()
+3d0d5c,36,CharAI,_ZN6CharAI15OnProjectileHitEP10GameObject,CharAI::OnProjectileHit(GameObject*)
+3d0d80,36,CharAI,_ZN6CharAI6OnKillEP9Character,CharAI::OnKill(Character*)
+3d0da4,36,CharAI,_ZN6CharAI15OnCombatResultsEP9CharacterS1_Pv,"CharAI::OnCombatResults(Character*, Character*, void*)"
+3d0dc8,36,CharAI,_ZN6CharAI15OnCombatResultsEP10GameObjectPv,"CharAI::OnCombatResults(GameObject*, void*)"
+3d0dec,36,CharAI,_ZN6CharAI16OnCollisionBeginEP10GameObjectb,"CharAI::OnCollisionBegin(GameObject*, bool)"
+3d0e10,36,CharAI,_ZN6CharAI18OnCollisionPersistEP10GameObjectb,"CharAI::OnCollisionPersist(GameObject*, bool)"
+3d0e34,36,CharAI,_ZN6CharAI14OnCollisionEndEP10GameObjectb,"CharAI::OnCollisionEnd(GameObject*, bool)"
+3d0e58,36,CharAI,_ZN6CharAI17OnCollisionResultEP10GameObjectb,"CharAI::OnCollisionResult(GameObject*, bool)"
+3d0e7c,88,CharAI,_ZN6CharAI8OnAttackEiib,"CharAI::OnAttack(int, int, bool)"
+3d0ed4,72,CharAI,_ZN6CharAI11OnPreAttackEi,CharAI::OnPreAttack(int)
+3d0f1c,208,CharAI,_ZN6CharAI9OnRevivedEP10GameObject,CharAI::OnRevived(GameObject*)
+3d1000,80,CharAI,_ZN6CharAI6OnDiedEP10GameObject,CharAI::OnDied(GameObject*)
+3d1050,364,CharAI,_ZN6CharAI8OnUpdateEv,CharAI::OnUpdate()
+3d11bc,244,CharAI,_ZN6CharAI11OnTerminateEv,CharAI::OnTerminate()
+3d12b0,272,CharAI,_ZN6CharAI6OnInitEv,CharAI::OnInit()
+3d14b4,100,CharAI,_ZN6CharAI14OnEnemySpottedEP9Character,CharAI::OnEnemySpotted(Character*)
+3d1694,96,CharAI,_ZN6CharAI20OnMasterInMeleeRangeEv,CharAI::OnMasterInMeleeRange()
+3d1740,96,CharAI,_ZN6CharAI20OnMasterInCloseRangeEv,CharAI::OnMasterInCloseRange()
+3d17ec,96,CharAI,_ZN6CharAI21OnMasterInRangedRangeEv,CharAI::OnMasterInRangedRange()
+3d1898,96,CharAI,_ZN6CharAI18OnMasterOutOfRangeEv,CharAI::OnMasterOutOfRange()
+3d1944,96,CharAI,_ZN6CharAI15OnMasterInSightEv,CharAI::OnMasterInSight()
+3d19f0,96,CharAI,_ZN6CharAI18OnMasterOutOfSightEv,CharAI::OnMasterOutOfSight()
+3d1a9c,96,CharAI,_ZN6CharAI15OnMasterRevivedEv,CharAI::OnMasterRevived()
+3d1b48,96,CharAI,_ZN6CharAI12OnMasterDiedEv,CharAI::OnMasterDied()
+3d1bf4,96,CharAI,_ZN6CharAI20OnTargetInMeleeRangeEv,CharAI::OnTargetInMeleeRange()
+3d1ca0,96,CharAI,_ZN6CharAI20OnTargetInCloseRangeEv,CharAI::OnTargetInCloseRange()
+3d1d4c,96,CharAI,_ZN6CharAI21OnTargetInRangedRangeEv,CharAI::OnTargetInRangedRange()
+3d1e00,96,CharAI,_ZN6CharAI18OnTargetOutOfRangeEv,CharAI::OnTargetOutOfRange()
+3d1eb4,96,CharAI,_ZN6CharAI15OnTargetRevivedEv,CharAI::OnTargetRevived()
+3d1f60,96,CharAI,_ZN6CharAI12OnTargetDiedEv,CharAI::OnTargetDied()
+3d2014,100,CharAI,_ZN6CharAI9OnDeAggroEP9Character,CharAI::OnDeAggro(Character*)
+3d20c8,100,CharAI,_ZN6CharAI7OnAggroEP9Character,CharAI::OnAggro(Character*)
+3d217c,100,CharAI,_ZN6CharAI16OnNeutralSpottedEP9Character,CharAI::OnNeutralSpotted(Character*)
+3d2230,100,CharAI,_ZN6CharAI15OnFriendSpottedEP9Character,CharAI::OnFriendSpotted(Character*)
+3d22e4,96,CharAI,_ZN6CharAI15OnTargetInSightEv,CharAI::OnTargetInSight()
+3d2410,96,CharAI,_ZN6CharAI18OnTargetOutOfSightEv,CharAI::OnTargetOutOfSight()
+3d24f8,4,CharAI,_ZN6CharAI12HandleGroupsEv,CharAI::HandleGroups()
+3d24fc,8,CharAI,_ZN6CharAI9GroupInfo8CanSpawnEP9Character,CharAI::GroupInfo::CanSpawn(Character*)
+3d2628,420,CharAI,_ZN6CharAI9GroupInfo6OnDiedEP9CharacterP10GameObject,"CharAI::GroupInfo::OnDied(Character*, GameObject*)"
+3d27cc,616,CharAI,_ZN6CharAI9GroupInfo14OnEnemySpottedEP9CharacterS2_,"CharAI::GroupInfo::OnEnemySpotted(Character*, Character*)"
+3d2a34,180,CharAI,_ZN6CharAI9GroupInfo10CanRespawnEP9Character,CharAI::GroupInfo::CanRespawn(Character*)
+3d2cc0,144,CharAI,_ZN6CharAI9GroupInfoD1Ev,CharAI::GroupInfo::~GroupInfo()
+3d2de0,72,CharAI,_ZN6CharAI9GroupInfoC1ERKS0_,CharAI::GroupInfo::GroupInfo(CharAI::GroupInfo const&)
+3d2fb0,64,CharAI,_ZN6CharAI14ClearGroupInfoEv,CharAI::ClearGroupInfo()
+3d2ff8,288,CharAI,_ZN6CharAI15RemoveFromGroupEv,CharAI::RemoveFromGroup()
+3d37d0,752,CharAI,_ZN6CharAI10AddToGroupEP9Character,CharAI::AddToGroup(Character*)
+3d3ae4,8,CharAI,_ZN6CharAI19_OnEndOfAnimSectionEv,CharAI::_OnEndOfAnimSection()
+3d3aec,8,CharAI,_ZN6CharAI12_OnEndOfAnimEv,CharAI::_OnEndOfAnim()
+3d3af4,540,CharAI,_ZN6CharAI21_ParseObjectAnimEventEPKc,CharAI::_ParseObjectAnimEvent(char const*)
+3d3d30,28,CharAI,_ZN6CharAI18_OnAnimSequenceEndEv,CharAI::_OnAnimSequenceEnd()
+3d3d4c,28,CharAI,_ZN6CharAI20_OnAnimSequenceBeginEv,CharAI::_OnAnimSequenceBegin()
+3d3d68,108,CharAI,_ZN6CharAI25_OnAnimStepEnd_SkillSpellEv,CharAI::_OnAnimStepEnd_SkillSpell()
+3d3dd4,112,CharAI,_ZN6CharAI27_OnAnimStepBegin_SkillSpellEv,CharAI::_OnAnimStepBegin_SkillSpell()
+3d3e44,436,CharAI,_ZN6CharAI21_OnAnimStepEnd_AttackEv,CharAI::_OnAnimStepEnd_Attack()
+3d3ff8,76,CharAI,_ZN6CharAI14_OnAnimStepEndEv,CharAI::_OnAnimStepEnd()
+3d4044,220,CharAI,_ZN6CharAI23_OnAnimStepBegin_AttackEv,CharAI::_OnAnimStepBegin_Attack()
+3d4120,68,CharAI,_ZN6CharAI21_OnAnimStepBegin_MoveEv,CharAI::_OnAnimStepBegin_Move()
+3d4204,100,CharAI,_ZN6CharAI16_OnAnimStepBeginEv,CharAI::_OnAnimStepBegin()
+3d4434,1168,CharAI,_ZN6CharAI12_OnAnimEventEPKc,CharAI::_OnAnimEvent(char const*)
+3d49c4,12,CharAI,_ZN6CharAI17AI_SyncLastTargetEv,CharAI::AI_SyncLastTarget()
+3d49d0,32,CharAI,_ZNK6CharAI18AI_IsTargetSeekingEv,CharAI::AI_IsTargetSeeking() const
+3d49f0,16,CharAI,_ZNK6CharAI11AI_HasAggroEv,CharAI::AI_HasAggro() const
+3d4a00,16,CharAI,_ZNK6CharAI12AI_IsAggroedEv,CharAI::AI_IsAggroed() const
+3d4a10,8,CharAI,_ZNK6CharAI16AI_GetAggroCountEv,CharAI::AI_GetAggroCount() const
+3d4a18,56,CharAI,_ZNK6CharAI18AI_GetHighestAggroEv,CharAI::AI_GetHighestAggro() const
+3d4ac8,228,CharAI,_ZNK6CharAI11AI_GetAggroEP9Character,CharAI::AI_GetAggro(Character*) const
+3d4bc4,112,CharAI,_ZNK6CharAI13AI_IsInCombatEv,CharAI::AI_IsInCombat() const
+3d4c34,88,CharAI,_ZNK6CharAI17AI_GetMeleeRadiusEv,CharAI::AI_GetMeleeRadius() const
+3d4c9c,16,CharAI,_ZNK6CharAI19AI_GetMeleeRadiusSqEv,CharAI::AI_GetMeleeRadiusSq() const
+3d4cb0,72,CharAI,_ZNK6CharAI15AI_IsCloserThanEfPK10GameObject,"CharAI::AI_IsCloserThan(float, GameObject const*) const"
+3d4d80,120,CharAI,_ZN6CharAI12AI_SetMasterEP9Character,CharAI::AI_SetMaster(Character*)
+3d4ea0,32,CharAI,_ZNK6CharAI12AI_IsInSightEf,CharAI::AI_IsInSight(float) const
+3d4ed8,72,CharAI,_ZNK6CharAI12AI_IsInSightEPK10GameObject,CharAI::AI_IsInSight(GameObject const*) const
+3d4f98,84,CharAI,_ZNK6CharAI23AI_IsInInteractionRangeEPK10GameObject,CharAI::AI_IsInInteractionRange(GameObject const*) const
+3d511c,652,CharAI,_ZNK6CharAI11AI_IsFriendEPK10GameObject,CharAI::AI_IsFriend(GameObject const*) const
+3d53ec,48,CharAI,_ZN6CharAI21AI_PauseTargetSeekingEj,CharAI::AI_PauseTargetSeeking(unsigned int)
+3d541c,52,CharAI,_ZNK6CharAI23AI_GetTargetAsCharacterEv,CharAI::AI_GetTargetAsCharacter() const
+3d5450,52,CharAI,_ZN6CharAI23AI_GetTargetAsCharacterEv,CharAI::AI_GetTargetAsCharacter()
+3d5484,60,CharAI,_ZNK6CharAI21AI_IsTargetACharacterEv,CharAI::AI_IsTargetACharacter() const
+3d574c,776,CharAI,_ZNK6CharAI10AI_IsEnemyEPK10GameObject,CharAI::AI_IsEnemy(GameObject const*) const
+3d5a98,648,CharAI,_ZNK6CharAI12AI_IsNeutralEPK10GameObject,CharAI::AI_IsNeutral(GameObject const*) const
+3d5fa8,476,CharAI,_ZN6CharAI16AI_ClearAllAggroEv,CharAI::AI_ClearAllAggro()
+3d6188,216,CharAI,_ZNK6CharAI17AI_IsInMeleeRangeEPK10GameObject,CharAI::AI_IsInMeleeRange(GameObject const*) const
+3d63d8,260,CharAI,_ZNK6CharAI17AI_IsInCloseRangeEPK10GameObject,CharAI::AI_IsInCloseRange(GameObject const*) const
+3d6604,172,CharAI,_ZNK6CharAI12AI_IsInRangeEPK10GameObject,CharAI::AI_IsInRange(GameObject const*) const
+3d67f4,156,CharAI,_ZNK6CharAI12AI_CanAttackEP10GameObject,CharAI::AI_CanAttack(GameObject*) const
+3d6890,516,CharAI,_ZN6CharAI12AI_SetTargetEP10GameObjectb,"CharAI::AI_SetTarget(GameObject*, bool)"
+3d6abc,540,CharAI,_ZN6CharAI24AI_ClearAllAggroTowardMeEb,CharAI::AI_ClearAllAggroTowardMe(bool)
+3d6cdc,140,CharAI,_ZN6CharAI10AI_SetDeadEv,CharAI::AI_SetDead()
+3d6d68,388,CharAI,_ZN6CharAI13AI_ClearAggroEP9Character,CharAI::AI_ClearAggro(Character*)
+3d7208,200,CharAI,_ZNK6CharAI26AI_GetRelationsConverseMapERKSt3mapIP9CharacterfSt4lessIS2_ESaISt4pairIKS2_fEEE,"CharAI::AI_GetRelationsConverseMap(std::map<Character*, float, std::less<Character*>, std::allocator<std::pair<Character* const, float> > > const&) const"
+3d72d0,220,CharAI,_ZNK6CharAI16AI_GetAggroEntryEiRP9CharacterRf,"CharAI::AI_GetAggroEntry(int, Character*&, float&) const"
+3d79ec,612,CharAI,_ZN6CharAI11AI_SetAggroEP9Characterf,"CharAI::AI_SetAggro(Character*, float)"
+3d7c68,252,CharAI,_ZN6CharAI11AI_AddAggroEP9Characterf,"CharAI::AI_AddAggro(Character*, float)"
+3d7d9c,8,CharAI,_ZNK6CharAI16AI_IsSpellActiveEv,CharAI::AI_IsSpellActive() const
+3d7da4,4,CharAI,_ZN6CharAI14AI_CancelSpellEv,CharAI::AI_CancelSpell()
+3d7da8,200,CharAI,_ZNK6CharAI12AI_SpellInfoERf,CharAI::AI_SpellInfo(float&) const
+3d7e88,192,CharAI,_ZNK6CharAI12AI_SkillInfoEjjRf,"CharAI::AI_SkillInfo(unsigned int, unsigned int, float&) const"
+3d7f60,212,CharAI,_ZN6CharAI11AI_EndSpellEb,CharAI::AI_EndSpell(bool)
+3d8038,84,CharAI,_ZN6CharAI11_SpellFocusEv,CharAI::_SpellFocus()
+3d808c,40,CharAI,_ZN6CharAI11_SkillFocusEv,CharAI::_SkillFocus()
+3d80b4,244,CharAI,_ZNK6CharAI16AI_IsSpellUsableEv,CharAI::AI_IsSpellUsable() const
+3d81c0,356,CharAI,_ZN6CharAI13AI_BeginSpellEb,CharAI::AI_BeginSpell(bool)
+3d832c,44,CharAI,_ZN6CharAI12AI_CastSpellEv,CharAI::AI_CastSpell()
+3d8358,260,CharAI,_ZNK6CharAI16AI_IsSkillUsableEj,CharAI::AI_IsSkillUsable(unsigned int) const
+3d8474,108,CharAI,_ZN6CharAI11AI_EndSkillEj,CharAI::AI_EndSkill(unsigned int)
+3d84e0,220,CharAI,_ZN6CharAI14AI_CancelSkillEj,CharAI::AI_CancelSkill(unsigned int)
+3d85d4,208,CharAI,_ZNK6CharAI16AI_IsSkillActiveEj,CharAI::AI_IsSkillActive(unsigned int) const
+3d86bc,404,CharAI,_ZN6CharAI13AI_BeginSkillEj,CharAI::AI_BeginSkill(unsigned int)
+3d8868,44,CharAI,_ZN6CharAI11AI_UseSkillEj,CharAI::AI_UseSkill(unsigned int)
+3d8894,180,CharAI,_ZN6CharAI15UpdateAllSkillsEv,CharAI::UpdateAllSkills()
+3d8948,164,CharAI,_ZN6CharAI15_UpdateSkillsCBEijPv,"CharAI::_UpdateSkillsCB(int, unsigned int, void*)"
+3d8a04,140,CharAI,_ZN6CharAI12UpdateSkillsEv,CharAI::UpdateSkills()
+3d8a98,72,CharAI,_ZN6CharAI13_SpellCleanUpEv,CharAI::_SpellCleanUp()
+3d8ae0,72,CharAI,_ZN6CharAI13_SkillCleanUpEv,CharAI::_SkillCleanUp()
+3d8b28,84,CharAI,_ZN6CharAI10_SpellBlurEv,CharAI::_SpellBlur()
+3d8b7c,40,CharAI,_ZN6CharAI10_SkillBlurEv,CharAI::_SkillBlur()
+3d8ba4,84,CharAI,_ZN6CharAI11_SpellEventEv,CharAI::_SpellEvent()
+3d8bf8,40,CharAI,_ZN6CharAI11_SkillEventEv,CharAI::_SkillEvent()
+3d8cfc,116,CharAI,_ZN6CharAI15AI_ReloadSkillsEv,CharAI::AI_ReloadSkills()
+3d8d70,44,CharAI,_ZN6CharAI21_ClearNonStickyTargetEv,CharAI::_ClearNonStickyTarget()
+3d8e78,20,CharAIScript,_ZN12CharAIScript13CallStatePostEv,CharAIScript::CallStatePost()
+3d8e8c,20,CharAIScript,_ZN12CharAIScript13CallStateInitEv,CharAIScript::CallStateInit()
+3d8ea0,20,CharAIScript,_ZN12CharAIScript19CallStateConditionsEv,CharAIScript::CallStateConditions()
+3d8eb4,20,CharAIScript,_ZN12CharAIScript15CallStateUpdateEv,CharAIScript::CallStateUpdate()
+3d8ec8,80,CharAIScript,_ZN12CharAIScript24CharAIScriptBindFunctionEv,CharAIScript::CharAIScriptBindFunction()
+3d8f2c,24,CharAIScript,_ZN12CharAIScript12BindFunctionEv,CharAIScript::BindFunction()
+3d8f44,100,CharAIScript,_ZN12CharAIScriptC1Eb,CharAIScript::CharAIScript(bool)
+3d8fb0,100,CharAIScript,_ZN12CharAIScriptC2Eb,CharAIScript::CharAIScript(bool)
+3d90f8,164,CharAIScript,_ZN12CharAIScript12SetCharacterEP9Character,CharAIScript::SetCharacter(Character*)
+3d91b8,48,CharAIScript,_ZN12CharAIScript6_StateD1Ev,CharAIScript::_State::~_State()
+3d926c,96,CharAIScript,_ZN12CharAIScriptD1Ev,CharAIScript::~CharAIScript()
+3d92d4,20,CharAIScript,_ZN12CharAIScriptD0Ev,CharAIScript::~CharAIScript()
+3d92f0,96,CharAIScript,_ZN12CharAIScriptD2Ev,CharAIScript::~CharAIScript()
+3d9648,60,CharAIScript,_ZN12CharAIScript6_StateC1ERKS0_,CharAIScript::_State::_State(CharAIScript::_State const&)
+3d9684,24,CharAIScript,_ZN12CharAIScript6_StateC1Ev,CharAIScript::_State::_State()
+3d9710,128,CharAIScript,_ZN12CharAIScript12_ChangeStateERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"CharAIScript::_ChangeState(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3da144,540,CharAIScript,_ZN12CharAIScript14_RegisterStateERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"CharAIScript::_RegisterState(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3cc238,44,CharAISkillScript,_ZN17CharAISkillScriptD1Ev,CharAISkillScript::~CharAISkillScript()
+3cc448,44,CharAISkillScript,_ZN17CharAISkillScriptD0Ev,CharAISkillScript::~CharAISkillScript()
+3cde2c,296,CharAISkillScript,_ZN17CharAISkillScriptC1EP9CharacterPKcj,"CharAISkillScript::CharAISkillScript(Character*, char const*, unsigned int)"
+3da3d0,92,CharAISkillScript,_ZN17CharAISkillScript11GetCooldownEv,CharAISkillScript::GetCooldown()
+3da494,104,CharAISkillScript,_ZN17CharAISkillScript15SpawnProjectileEjf,"CharAISkillScript::SpawnProjectile(unsigned int, float)"
+3da510,104,CharAISkillScript,_ZN17CharAISkillScript15SpawnProjectileEjb,"CharAISkillScript::SpawnProjectile(unsigned int, bool)"
+3da6c0,196,CharAISkillScript,_ZN17CharAISkillScript11OnPostSkillEv,CharAISkillScript::OnPostSkill()
+3da794,276,CharAISkillScript,_ZN17CharAISkillScript7OnSkillEv,CharAISkillScript::OnSkill()
+3da8b8,276,CharAISkillScript,_ZN17CharAISkillScript10OnPreSkillEv,CharAISkillScript::OnPreSkill()
+3da9dc,272,CharAISkillScript,_ZN17CharAISkillScript19OnSkillCheck_UsableEv,CharAISkillScript::OnSkillCheck_Usable()
+3daafc,196,CharAISkillScript,_ZN17CharAISkillScript14OnSkillCleanUpEv,CharAISkillScript::OnSkillCleanUp()
+3dabd0,196,CharAISkillScript,_ZN17CharAISkillScript13OnSkillUpdateEv,CharAISkillScript::OnSkillUpdate()
+3daca8,432,CharAISkillScript,_ZN17CharAISkillScript7GetInfoEjPf,"CharAISkillScript::GetInfo(unsigned int, float*)"
+3dae7c,360,CharAISkillScript,_ZN17CharAISkillScript14_ProjectileHitEP10ProjectilePv,"CharAISkillScript::_ProjectileHit(Projectile*, void*)"
+3daff4,360,CharAISkillScript,_ZN17CharAISkillScript16_ProjectileCheckEP10ProjectilePv,"CharAISkillScript::_ProjectileCheck(Projectile*, void*)"
+3db16c,268,CharAISkillScript,_ZN17CharAISkillScript19OnSkillCheck_ActiveEv,CharAISkillScript::OnSkillCheck_Active()
+433b44,44,CharMenuTutorialMsg,_ZN19CharMenuTutorialMsgC1EiRKSsS1_,"CharMenuTutorialMsg::CharMenuTutorialMsg(int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)"
+433b70,44,CharMenuTutorialMsg,_ZN19CharMenuTutorialMsgC2EiRKSsS1_,"CharMenuTutorialMsg::CharMenuTutorialMsg(int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)"
+45a780,72,CharMenuTutorialMsg,_ZN19CharMenuTutorialMsgC1ERKS_,CharMenuTutorialMsg::CharMenuTutorialMsg(CharMenuTutorialMsg const&)
+41f8f0,136,CharPropTextField,_ZN17CharPropTextFieldC1EPN7gameswf9characterES2_,"CharPropTextField::CharPropTextField(gameswf::character*, gameswf::character*)"
+41f978,136,CharPropTextField,_ZN17CharPropTextFieldC2EPN7gameswf9characterES2_,"CharPropTextField::CharPropTextField(gameswf::character*, gameswf::character*)"
+422aa8,508,CharPropTextField,_ZN17CharPropTextField6UpdateEP8RenderFX,CharPropTextField::Update(RenderFX*)
+3af76c,16,CharProperties,_ZNK14CharProperties9PROPS_GetEib.clone.3,"CharProperties::PROPS_Get(int, bool) const"
+3b55d4,140,CharProperties,_ZNK14CharProperties18PROPS_GetFromSheetEiPN7Structs19CharacterPropertiesE,"CharProperties::PROPS_GetFromSheet(int, Structs::CharacterProperties*) const"
+3bd130,16,CharProperties,_ZNK14CharProperties9PROPS_GetEib.clone.9,"CharProperties::PROPS_Get(int, bool) const"
+3de6c4,20,CharProperties,_ZNK14CharProperties18PROPS_GetWalkSpeedEv,CharProperties::PROPS_GetWalkSpeed() const
+3de708,20,CharProperties,_ZNK14CharProperties22PROPS_GetRotationSpeedEv,CharProperties::PROPS_GetRotationSpeed() const
+3de74c,20,CharProperties,_ZNK14CharProperties20PROPS_GetAttackSpeedEv,CharProperties::PROPS_GetAttackSpeed() const
+3de790,20,CharProperties,_ZNK14CharProperties16PROPS_GetOpacityEv,CharProperties::PROPS_GetOpacity() const
+3de7ec,40,CharProperties,_ZNK14CharProperties19PROPS_GetModifiedXPEi,CharProperties::PROPS_GetModifiedXP(int) const
+3de814,40,CharProperties,_ZNK14CharProperties22PROPS_GetModifiedPriceEi,CharProperties::PROPS_GetModifiedPrice(int) const
+3de83c,4,CharProperties,_ZN14CharProperties15PROPS_RemoveDotEi,CharProperties::PROPS_RemoveDot(int)
+3de840,4,CharProperties,_ZNK14CharProperties20DBG_PROPS_DumpToFileEPKcb,"CharProperties::DBG_PROPS_DumpToFile(char const*, bool) const"
+3de844,4,CharProperties,_ZNK14CharProperties15DBG_PROPS_PrintEii,"CharProperties::DBG_PROPS_Print(int, int) const"
+3de848,32,CharProperties,_ZNK14CharProperties17DBG_PROPS_GetNameEi,CharProperties::DBG_PROPS_GetName(int) const
+3dec0c,124,CharProperties,_ZN14CharProperties12SetCharacterEP9Character,CharProperties::SetCharacter(Character*)
+3deca0,236,CharProperties,_ZN14CharProperties12_SetPropertyERN7Structs19CharacterPropertiesEii,"CharProperties::_SetProperty(Structs::CharacterProperties&, int, int)"
+3dedb4,252,CharProperties,_ZNK14CharProperties12_GetPropertyERKN7Structs19CharacterPropertiesEi,"CharProperties::_GetProperty(Structs::CharacterProperties const&, int) const"
+3deed8,48,CharProperties,_ZNK14CharProperties8_GetTypeEi,CharProperties::_GetType(int) const
+3def10,28,CharProperties,_ZNK14CharProperties11_GetDefaultEi,CharProperties::_GetDefault(int) const
+3def34,72,CharProperties,_ZN14CharProperties16_ResetPropertiesERN7Structs19CharacterPropertiesE,CharProperties::_ResetProperties(Structs::CharacterProperties&)
+3def84,32,CharProperties,_ZN14CharProperties16PROPS_ResetSheetEPN7Structs19CharacterPropertiesE,CharProperties::PROPS_ResetSheet(Structs::CharacterProperties*)
+3defac,8,CharProperties,_ZN14CharProperties20ResetGearsPropertiesEv,CharProperties::ResetGearsProperties()
+3defb4,8,CharProperties,_ZN14CharProperties20ResetSavedPropertiesEv,CharProperties::ResetSavedProperties()
+3defbc,8,CharProperties,_ZN14CharProperties19ResetBasePropertiesEv,CharProperties::ResetBaseProperties()
+3defc4,48,CharProperties,_ZN14CharProperties18ResetAllPropertiesEv,CharProperties::ResetAllProperties()
+3deff4,128,CharProperties,_ZN14CharPropertiesC1Ev,CharProperties::CharProperties()
+3df084,128,CharProperties,_ZN14CharPropertiesC2Ev,CharProperties::CharProperties()
+3df114,44,CharProperties,_ZNK14CharProperties14_IsPropertySetERKN7Structs19CharacterPropertiesEi,"CharProperties::_IsPropertySet(Structs::CharacterProperties const&, int) const"
+3df140,96,CharProperties,_ZN14CharProperties12_AddPropertyERN7Structs19CharacterPropertiesEii,"CharProperties::_AddProperty(Structs::CharacterProperties&, int, int)"
+3df250,72,CharProperties,_ZN14CharProperties18_LoadFromCharTableERN7Structs19CharacterPropertiesEi,"CharProperties::_LoadFromCharTable(Structs::CharacterProperties&, int)"
+3df2a4,12,CharProperties,_ZN14CharProperties18LoadBasePropertiesEi,CharProperties::LoadBaseProperties(int)
+3df2b0,88,CharProperties,_ZN14CharProperties15UnLoadPropNamesEv,CharProperties::UnLoadPropNames()
+3df314,140,CharProperties,_ZN14CharProperties23PROPS_ApplyClassToSheetEiPN7Structs19CharacterPropertiesE,"CharProperties::PROPS_ApplyClassToSheet(int, Structs::CharacterProperties*)"
+3df3b8,48,CharProperties,_ZN14CharProperties16PROPS_ApplyClassEib,"CharProperties::PROPS_ApplyClass(int, bool)"
+3df3f0,144,CharProperties,_ZN14CharProperties10HandleDotsEv,CharProperties::HandleDots()
+3df480,200,CharProperties,_ZN14CharProperties19LoadGearsPropertiesEv,CharProperties::LoadGearsProperties()
+3df6e0,48,CharProperties,_ZNK14CharProperties12PROPS_GetIntEib,"CharProperties::PROPS_GetInt(int, bool) const"
+3df718,84,CharProperties,_ZNK14CharProperties25PROPS_GetMagicDamageBonusEv,CharProperties::PROPS_GetMagicDamageBonus() const
+3df76c,88,CharProperties,_ZNK14CharProperties19PROPS_GetMagicToHitEv,CharProperties::PROPS_GetMagicToHit() const
+3df7c4,88,CharProperties,_ZNK14CharProperties24PROPS_GetBonusCritRatingEb,CharProperties::PROPS_GetBonusCritRating(bool) const
+3df81c,144,CharProperties,_ZNK14CharProperties26PROPS_GetBonusAttackRatingEb,CharProperties::PROPS_GetBonusAttackRating(bool) const
+3df8ac,212,CharProperties,_ZNK14CharProperties20PROPS_GetBonusDamageEb,CharProperties::PROPS_GetBonusDamage(bool) const
+3df980,276,CharProperties,_ZNK14CharProperties21PROPS_GetIntWithBonusEib,"CharProperties::PROPS_GetIntWithBonus(int, bool) const"
+3dfd18,328,CharProperties,_ZNK14CharProperties13PROPS_IsBonusEi,CharProperties::PROPS_IsBonus(int) const
+3dfe60,1972,CharProperties,_ZN14CharProperties14RecalcPropertyEi,CharProperties::RecalcProperty(int)
+3e0614,220,CharProperties,_ZN14CharProperties16PROPS_SetToSheetEiiPN7Structs19CharacterPropertiesE,"CharProperties::PROPS_SetToSheet(int, int, Structs::CharacterProperties*)"
+3e0708,144,CharProperties,_ZN14CharProperties9PROPS_AddEii,"CharProperties::PROPS_Add(int, int)"
+3e0798,8,CharProperties,_ZN14CharProperties12PROPS_AddIntEii,"CharProperties::PROPS_AddInt(int, int)"
+3e07a0,104,CharProperties,_ZN14CharProperties9PROPS_SetEii,"CharProperties::PROPS_Set(int, int)"
+3e0808,8,CharProperties,_ZN14CharProperties12PROPS_SetIntEii,"CharProperties::PROPS_SetInt(int, int)"
+3e0810,68,CharProperties,_ZN14CharProperties16RecalcPropertiesEb,CharProperties::RecalcProperties(bool)
+3e0854,40,CharProperties,_ZN14CharProperties28LoadPropertiesForClassSelectEi,CharProperties::LoadPropertiesForClassSelect(int)
+3e087c,44,CharProperties,_ZN14CharProperties20UpdateBasePropertiesEi,CharProperties::UpdateBaseProperties(int)
+3e08a8,36,CharProperties,_ZN14CharProperties21UpdateGearsPropertiesEv,CharProperties::UpdateGearsProperties()
+3e0a68,72,CharProperties,_ZN14CharProperties8BuffDeclD1Ev,CharProperties::BuffDecl::~BuffDecl()
+3e0af8,356,CharProperties,_ZN14CharProperties20PROPS_RemoveAllBuffsEv,CharProperties::PROPS_RemoveAllBuffs()
+3e0c6c,408,CharProperties,_ZN14CharPropertiesD1Ev,CharProperties::~CharProperties()
+3e0e10,20,CharProperties,_ZN14CharPropertiesD0Ev,CharProperties::~CharProperties()
+3e0e2c,408,CharProperties,_ZN14CharPropertiesD2Ev,CharProperties::~CharProperties()
+3e101c,484,CharProperties,_ZN14CharProperties13PROPS_DelBuffEiPN7Structs19CharacterPropertiesE,"CharProperties::PROPS_DelBuff(int, Structs::CharacterProperties*)"
+3e123c,276,CharProperties,_ZN14CharProperties11BuffExpiredEPN10CharTimers5TimerE,CharProperties::BuffExpired(CharTimers::Timer*)
+3e1374,828,CharProperties,_ZN14CharProperties13LoadPropNamesEPKc,CharProperties::LoadPropNames(char const*)
+3e16e0,108,CharProperties,_ZN14CharProperties17GetNameFromPropIDEi,CharProperties::GetNameFromPropID(int)
+3e1758,148,CharProperties,_ZN14CharProperties17GetPropIDFromNameEPKc,CharProperties::GetPropIDFromName(char const*)
+3e19c0,72,CharProperties,_ZN14CharProperties8BuffDeclC1ERKS0_,CharProperties::BuffDecl::BuffDecl(CharProperties::BuffDecl const&)
+3e1a08,48,CharProperties,_ZN14CharProperties8BuffDeclC1Ev,CharProperties::BuffDecl::BuffDecl()
+3e232c,760,CharProperties,_ZN14CharProperties13PROPS_AddBuffEijijiPKc,"CharProperties::PROPS_AddBuff(int, unsigned int, int, unsigned int, int, char const*)"
+3e2720,720,CharProperties,_ZN14CharProperties12PROPS_AddDotEiii,"CharProperties::PROPS_AddDot(int, int, int)"
+3e2a5c,336,CharProperties,_ZN14CharProperties16PROPS_DebuffSlowEj,CharProperties::PROPS_DebuffSlow(unsigned int)
+3e2bcc,4,CharProperties,_ZN14CharProperties17_ApplyGroupOnlyIfERN7Structs19CharacterPropertiesEPNS0_9ClassFuncE,"CharProperties::_ApplyGroupOnlyIf(Structs::CharacterProperties&, Structs::ClassFunc*)"
+3e2bd0,12,CharProperties,_ZN14CharProperties7_SetOIDERN7Structs19CharacterPropertiesEPNS0_9ClassFuncE,"CharProperties::_SetOID(Structs::CharacterProperties&, Structs::ClassFunc*)"
+3e2bdc,52,CharProperties,_ZN14CharProperties9_AddValueERN7Structs19CharacterPropertiesEPNS0_9ClassFuncE,"CharProperties::_AddValue(Structs::CharacterProperties&, Structs::ClassFunc*)"
+3e2c10,104,CharProperties,_ZN14CharProperties27_ScaleWithPercentageForBuffERN7Structs19CharacterPropertiesEPNS0_9ClassFuncEb,"CharProperties::_ScaleWithPercentageForBuff(Structs::CharacterProperties&, Structs::ClassFunc*, bool)"
+3e2c78,72,CharProperties,_ZN14CharProperties20_ScaleWithPercentageERN7Structs19CharacterPropertiesEPNS0_9ClassFuncEb,"CharProperties::_ScaleWithPercentage(Structs::CharacterProperties&, Structs::ClassFunc*, bool)"
+3e2cc0,68,CharProperties,_ZN14CharProperties13_AddOtherPropERN7Structs19CharacterPropertiesEPNS0_9ClassFuncE,"CharProperties::_AddOtherProp(Structs::CharacterProperties&, Structs::ClassFunc*)"
+3e2d04,72,CharProperties,_ZN14CharProperties7_MinMaxERN7Structs19CharacterPropertiesEPNS0_9ClassFuncE,"CharProperties::_MinMax(Structs::CharacterProperties&, Structs::ClassFunc*)"
+3e2d4c,204,CharProperties,_ZN14CharProperties28_LinearWithPropPlusBaseValueERN7Structs19CharacterPropertiesEPNS0_9ClassFuncEb,"CharProperties::_LinearWithPropPlusBaseValue(Structs::CharacterProperties&, Structs::ClassFunc*, bool)"
+3e2e20,488,CharProperties,_ZN14CharProperties10_LoadClassERN7Structs19CharacterPropertiesEib,"CharProperties::_LoadClass(Structs::CharacterProperties&, int, bool)"
+3e3014,100,CharProperties,_ZN14CharProperties6_GroupERN7Structs19CharacterPropertiesEPNS0_9ClassFuncEb,"CharProperties::_Group(Structs::CharacterProperties&, Structs::ClassFunc*, bool)"
+3e3154,344,CharProperties,_ZN14CharProperties14_LoadGearStatsEib,"CharProperties::_LoadGearStats(int, bool)"
+3e32b4,2652,CharProperties,_ZN14CharProperties14_LoadGearPowerEib,"CharProperties::_LoadGearPower(int, bool)"
+3bffdc,4,CharState,_ZN9CharStateD1Ev,CharState::~CharState()
+3c0684,36,CharState,_ZN9CharStateD0Ev,CharState::~CharState()
+3c0084,92,CharStateMachine,_ZNK16CharStateMachine9_HasStateEi,CharStateMachine::_HasState(int) const
+3c00e0,204,CharStateMachine,_ZNK16CharStateMachine9_HasEventEii,"CharStateMachine::_HasEvent(int, int) const"
+3c01ac,20,CharStateMachine,_ZNK16CharStateMachine11SM_GetStateEv,CharStateMachine::SM_GetState() const
+3c01c0,20,CharStateMachine,_ZNK16CharStateMachine13SM_IsInLimbusEv,CharStateMachine::SM_IsInLimbus() const
+3c01d4,24,CharStateMachine,_ZNK16CharStateMachine15SM_IsInPreSpawnEv,CharStateMachine::SM_IsInPreSpawn() const
+3c01ec,68,CharStateMachine,_ZNK16CharStateMachine21SM_IsAwaitingToReviveEv,CharStateMachine::SM_IsAwaitingToRevive() const
+3c0230,24,CharStateMachine,_ZNK16CharStateMachine20SM_IsAwaitingToSpawnEv,CharStateMachine::SM_IsAwaitingToSpawn() const
+3c0248,24,CharStateMachine,_ZNK16CharStateMachine13SM_IsSpawningEv,CharStateMachine::SM_IsSpawning() const
+3c0260,60,CharStateMachine,_ZNK16CharStateMachine9SM_IsIdleEb,CharStateMachine::SM_IsIdle(bool) const
+3c029c,52,CharStateMachine,_ZNK16CharStateMachine11SM_IsMovingEb,CharStateMachine::SM_IsMoving(bool) const
+3c02d0,24,CharStateMachine,_ZNK16CharStateMachine14SM_IsAttackingEv,CharStateMachine::SM_IsAttacking() const
+3c02e8,24,CharStateMachine,_ZNK16CharStateMachine15SM_IsUsingSkillEv,CharStateMachine::SM_IsUsingSkill() const
+3c0300,52,CharStateMachine,_ZNK16CharStateMachine15SM_IsUsingSkillEj,CharStateMachine::SM_IsUsingSkill(unsigned int) const
+3c0334,24,CharStateMachine,_ZNK16CharStateMachine12SM_IsCastingEv,CharStateMachine::SM_IsCasting() const
+3c034c,44,CharStateMachine,_ZNK16CharStateMachine11SM_IsScaredEb,CharStateMachine::SM_IsScared(bool) const
+3c0378,44,CharStateMachine,_ZNK16CharStateMachine12SM_IsStunnedEb,CharStateMachine::SM_IsStunned(bool) const
+3c03a4,24,CharStateMachine,_ZNK16CharStateMachine16SM_IsKnockedBackEv,CharStateMachine::SM_IsKnockedBack() const
+3c03bc,48,CharStateMachine,_ZNK16CharStateMachine18SM_IsIncapacitatedEv,CharStateMachine::SM_IsIncapacitated() const
+3c03f0,24,CharStateMachine,_ZNK16CharStateMachine9SM_IsDeadEv,CharStateMachine::SM_IsDead() const
+3c0408,24,CharStateMachine,_ZNK16CharStateMachine16SM_IsInteractingEv,CharStateMachine::SM_IsInteracting() const
+3c0420,48,CharStateMachine,_ZNK16CharStateMachine12SM_IsLiftingEv,CharStateMachine::SM_IsLifting() const
+3c0b50,40,CharStateMachine,_ZN16CharStateMachine10SM_SetAnimEi,CharStateMachine::SM_SetAnim(int)
+3c1600,124,CharStateMachine,_ZN16CharStateMachine12SetCharacterEP9Character,CharStateMachine::SetCharacter(Character*)
+3c1694,404,CharStateMachine,_ZNK16CharStateMachine9_GetEventEii,"CharStateMachine::_GetEvent(int, int) const"
+3c184c,212,CharStateMachine,_ZN16CharStateMachine9_GetStateEi,CharStateMachine::_GetState(int)
+3c1938,200,CharStateMachine,_ZN16CharStateMachine9_SetStateEiiPv,"CharStateMachine::_SetState(int, int, void*)"
+3c1a00,20,CharStateMachine,_ZN16CharStateMachine15SM_SetIdleStateEb,CharStateMachine::SM_SetIdleState(bool)
+3c1a64,16,CharStateMachine,_ZN16CharStateMachine19SM_SetPreSpawnStateEv,CharStateMachine::SM_SetPreSpawnState()
+3c1a74,52,CharStateMachine,_ZN16CharStateMachine17SM_SetLimbusStateEb,CharStateMachine::SM_SetLimbusState(bool)
+3c1aa8,28,CharStateMachine,_ZN16CharStateMachine15SM_SetAnimStateEibb,"CharStateMachine::SM_SetAnimState(int, bool, bool)"
+3c1ac4,140,CharStateMachine,_ZN16CharStateMachineC1Ev,CharStateMachine::CharStateMachine()
+3c1b58,140,CharStateMachine,_ZN16CharStateMachineC2Ev,CharStateMachine::CharStateMachine()
+3c2734,220,CharStateMachine,_ZN16CharStateMachine16SM_SetSpawnStateEbb,"CharStateMachine::SM_SetSpawnState(bool, bool)"
+3c2a00,68,CharStateMachine,_ZN16CharStateMachine5FlushEv,CharStateMachine::Flush()
+3c2a44,92,CharStateMachine,_ZN16CharStateMachineD1Ev,CharStateMachine::~CharStateMachine()
+3c2aa8,20,CharStateMachine,_ZN16CharStateMachineD0Ev,CharStateMachine::~CharStateMachine()
+3c2ac4,92,CharStateMachine,_ZN16CharStateMachineD2Ev,CharStateMachine::~CharStateMachine()
+3c5684,492,CharStateMachine,_ZN16CharStateMachine15RaiseStateEventEiPv,"CharStateMachine::RaiseStateEvent(int, void*)"
+3c5880,36,CharStateMachine,_ZN16CharStateMachine18SM_SetRevivedStateEPvb,"CharStateMachine::SM_SetRevivedState(void*, bool)"
+3c58a4,36,CharStateMachine,_ZN16CharStateMachine19SM_SetRevivingStateEPvb,"CharStateMachine::SM_SetRevivingState(void*, bool)"
+3c58c8,440,CharStateMachine,_ZN16CharStateMachine15SM_SetDeadStateEbPvb,"CharStateMachine::SM_SetDeadState(bool, void*, bool)"
+3c5b3c,36,CharStateMachine,_ZN16CharStateMachine18SM_SetDodgingStateEPvb,"CharStateMachine::SM_SetDodgingState(void*, bool)"
+3c5c60,36,CharStateMachine,_ZN16CharStateMachine19SM_SetBlockingStateEPvb,"CharStateMachine::SM_SetBlockingState(void*, bool)"
+3c5d84,36,CharStateMachine,_ZN16CharStateMachine17SM_SetInjureStateEPvb,"CharStateMachine::SM_SetInjureState(void*, bool)"
+3c5ea0,316,CharStateMachine,_ZN16CharStateMachine20SM_SetKnockBackStateEbPvb,"CharStateMachine::SM_SetKnockBackState(bool, void*, bool)"
+3c5ffc,304,CharStateMachine,_ZN16CharStateMachine15SM_SetStunStateEjbPvb,"CharStateMachine::SM_SetStunState(unsigned int, bool, void*, bool)"
+3c6144,304,CharStateMachine,_ZN16CharStateMachine16SM_SetScareStateEjbPvb,"CharStateMachine::SM_SetScareState(unsigned int, bool, void*, bool)"
+3c628c,248,CharStateMachine,_ZN16CharStateMachine6UpdateEv,CharStateMachine::Update()
+3c6394,220,CharStateMachine,_ZN16CharStateMachine15SM_SetCastStateEjPvb,"CharStateMachine::SM_SetCastState(unsigned int, void*, bool)"
+3c6488,36,CharStateMachine,_ZN16CharStateMachine17SM_SetAttackStateEPvb,"CharStateMachine::SM_SetAttackState(void*, bool)"
+3c64ac,324,CharStateMachine,_ZN16CharStateMachine19SM_SetInteractStateEibPvb,"CharStateMachine::SM_SetInteractState(int, bool, void*, bool)"
+3c6670,164,CharStateMachine,_ZN16CharStateMachine16SM_SetSkillStateEjbPvb,"CharStateMachine::SM_SetSkillState(unsigned int, bool, void*, bool)"
+3c7318,388,CharStateMachine,_ZN16CharStateMachine13RegisterStateEi,CharStateMachine::RegisterState(int)
+3c7b18,424,CharStateMachine,_ZN16CharStateMachine16SM_RegisterEventEiiiM9CharacterFbiPviRiE,"CharStateMachine::SM_RegisterEvent(int, int, int, bool (Character::*)(int, void*, int, int&))"
+3db288,8,CharTimers,_ZNK10CharTimers6_Timer5GetIDEv,CharTimers::_Timer::GetID() const
+3db290,8,CharTimers,_ZNK10CharTimers6_Timer6GetRefEv,CharTimers::_Timer::GetRef() const
+3db298,32,CharTimers,_ZN10CharTimers9TMR_PauseEj,CharTimers::TMR_Pause(unsigned int)
+3db2b8,32,CharTimers,_ZN10CharTimers10TMR_ResumeEj,CharTimers::TMR_Resume(unsigned int)
+3db2d8,32,CharTimers,_ZN10CharTimers8TMR_StopEj,CharTimers::TMR_Stop(unsigned int)
+3db2f8,76,CharTimers,_ZN10CharTimers11TMR_StopAllEv,CharTimers::TMR_StopAll()
+3db344,68,CharTimers,_ZNK10CharTimers12TMR_TimeLeftEjRjS0_,"CharTimers::TMR_TimeLeft(unsigned int, unsigned int&, unsigned int&) const"
+3db3fc,44,CharTimers,_ZN10CharTimersD1Ev,CharTimers::~CharTimers()
+3db430,44,CharTimers,_ZN10CharTimersD2Ev,CharTimers::~CharTimers()
+3db464,20,CharTimers,_ZN10CharTimersD0Ev,CharTimers::~CharTimers()
+3db480,124,CharTimers,_ZN10CharTimers12SetCharacterEP9Character,CharTimers::SetCharacter(Character*)
+3db640,576,CharTimers,_ZN10CharTimers6UpdateEv,CharTimers::Update()
+3dbb0c,68,CharTimers,_ZN10CharTimersC2Ev,CharTimers::CharTimers()
+3dbb58,68,CharTimers,_ZN10CharTimersC1Ev,CharTimers::CharTimers()
+3dbd70,172,CharTimers,_ZN10CharTimers14_findTimerSlotEv,CharTimers::_findTimerSlot()
+3dbe24,84,CharTimers,_ZN10CharTimers9TMR_StartEjiiPv,"CharTimers::TMR_Start(unsigned int, int, int, void*)"
+3a2e1c,8,Character,_ZNK9Character11IsCharacterEv,Character::IsCharacter() const
+3a2e24,8,Character,_ZNK9Character14GetFocusObjectEv,Character::GetFocusObject() const
+3a2e2c,12,Character,_ZNK9Character14IsUpdatingPathEv,Character::IsUpdatingPath() const
+3a2e38,12,Character,_ZNK9Character28IsUpdatingPositionFromVisualEv,Character::IsUpdatingPositionFromVisual() const
+3a2e44,12,Character,_ZNK9Character29IsUpdatingPositionFromPhysicsEv,Character::IsUpdatingPositionFromPhysics() const
+3a2e50,12,Character,_ZNK9Character28IsUpdatingRotationFromVisualEv,Character::IsUpdatingRotationFromVisual() const
+3a2e5c,12,Character,_ZNK9Character29IsUpdatingRotationFromPhysicsEv,Character::IsUpdatingRotationFromPhysics() const
+3a2e68,16,Character,_ZNK9Character28IsUpdatingVisualWithRotationEv,Character::IsUpdatingVisualWithRotation() const
+3a2e78,16,Character,_ZNK9Character25IsValidatingFloorPositionEv,Character::IsValidatingFloorPosition() const
+3a2e88,20,Character,_ZNK9Character24IsValidatingCameraLimitsEv,Character::IsValidatingCameraLimits() const
+3a2e9c,28,Character,_ZNK9Character10GetFXScaleEv,Character::GetFXScale() const
+3a2ecc,8,Character,_ZNK9Character15GetFXScaleValueEv,Character::GetFXScaleValue() const
+3a2ed4,12,Character,_ZNK9Character6IsDeadEv,Character::IsDead() const
+3a2ee0,8,Character,_ZNK9Character10IsAnimatedEv,Character::IsAnimated() const
+3a2ee8,8,Character,_ZNK9Character10IsObstacleEv,Character::IsObstacle() const
+3a2ef0,12,Character,_ZNK9Character17GetObstacleRadiusEv,Character::GetObstacleRadius() const
+3a2efc,12,Character,_ZNK9Character19GetObstacleStrengthEv,Character::GetObstacleStrength() const
+3a2f08,12,Character,_ZNK9Character13getUDTypeNameEv,Character::getUDTypeName() const
+3a2f48,124,Character,_ZN9Character17HasCharOIDInCacheEi,Character::HasCharOIDInCache(int)
+3a2fcc,12,Character,_ZNK9Character7GetLootEv,Character::GetLoot() const
+3a2fd8,20,Character,_ZNK9Character7HasLootEv,Character::HasLoot() const
+3a2fec,48,Character,_ZNK9Character11GetCharAIIdEv,Character::GetCharAIId() const
+3a3024,40,Character,_ZNK9Character9GetCharAIEv,Character::GetCharAI() const
+3a3054,16,Character,_ZNK9Character11GetCharTypeEv,Character::GetCharType() const
+3a3064,24,Character,_ZNK9Character9IsMonsterEv,Character::IsMonster() const
+3a307c,24,Character,_ZNK9Character10IsFollowerEv,Character::IsFollower() const
+3a3094,24,Character,_ZNK9Character8IsFaerieEv,Character::IsFaerie() const
+3a30ac,24,Character,_ZNK9Character10IsSummonedEv,Character::IsSummoned() const
+3a30c4,24,Character,_ZNK9Character10IsMerchantEv,Character::IsMerchant() const
+3a30dc,24,Character,_ZNK9Character14IsInvisibleManEv,Character::IsInvisibleMan() const
+3a30f4,24,Character,_ZNK9Character9IsCleanerEv,Character::IsCleaner() const
+3a310c,56,Character,_ZNK9Character5IsNPCEv,Character::IsNPC() const
+3a3144,20,Character,_ZNK9Character10IsMiniBossEv,Character::IsMiniBoss() const
+3a3158,20,Character,_ZNK9Character6IsBossEv,Character::IsBoss() const
+3a316c,20,Character,_ZNK9Character13IsCharSittingEv,Character::IsCharSitting() const
+3a3180,48,Character,_ZNK9Character18GetCharAIFactionIdEv,Character::GetCharAIFactionId() const
+3a31b8,40,Character,_ZNK9Character16GetCharAIFactionEv,Character::GetCharAIFaction() const
+3a31e8,56,Character,_ZNK9Character14GetCharModelIdEv,Character::GetCharModelId() const
+3a3228,52,Character,_ZNK9Character18GetCharAnimTableIdEv,Character::GetCharAnimTableId() const
+3a3264,40,Character,_ZNK9Character16GetCharAnimTableEv,Character::GetCharAnimTable() const
+3a3294,52,Character,_ZNK9Character15GetCharSoundsIdEv,Character::GetCharSoundsId() const
+3a32d0,40,Character,_ZNK9Character13GetCharSoundsEv,Character::GetCharSounds() const
+3a3300,92,Character,_ZNK9Character14GetFXFootprintEv,Character::GetFXFootprint() const
+3a3368,92,Character,_ZNK9Character15GetFXBloodDeathEv,Character::GetFXBloodDeath() const
+3a33d0,92,Character,_ZNK9Character10GetFXBloodEv,Character::GetFXBlood() const
+3a3438,44,Character,_ZNK9Character14GetAttackDelayEv,Character::GetAttackDelay() const
+3a346c,116,Character,_ZNK9Character14HasComboAttackEv,Character::HasComboAttack() const
+3a34f0,116,Character,_ZNK9Character17GetNumComboAttackEv,Character::GetNumComboAttack() const
+3a36e4,64,Character,_ZNK9Character9IsZonableEv,Character::IsZonable() const
+3a3724,8,Character,_ZNK9Character10GetOpacityEv,Character::GetOpacity() const
+3a372c,32,Character,_ZNK9Character16GetRotationSpeedEv,Character::GetRotationSpeed() const
+3a374c,8,Character,_ZNK9Character20GetInteractionRadiusEv,Character::GetInteractionRadius() const
+3a3754,16,Character,_ZNK9Character19IsAvoidingObstaclesEv,Character::IsAvoidingObstacles() const
+3a3fe4,120,Character,_ZN9Character23CheckForAllQuestsTrophyEv,Character::CheckForAllQuestsTrophy()
+3a4068,64,Character,_ZN9Character26RemoveMultiplayerHighlightEv,Character::RemoveMultiplayerHighlight()
+3a40b0,44,Character,_ZN9Character13DisableSelfFXEv,Character::DisableSelfFX()
+3a40e4,44,Character,_ZN9Character14DisableStateFXEv,Character::DisableStateFX()
+3a41a0,312,Character,_ZN9Character23AddMultiplayerHighlightEv,Character::AddMultiplayerHighlight()
+3a4344,84,Character,_ZN9Character16UpdateAIPointersEv,Character::UpdateAIPointers()
+3a4398,116,Character,_ZN9Character15SetRelativeAABBERK4aabbIfEb,"Character::SetRelativeAABB(aabb<float> const&, bool)"
+3a4470,508,Character,_ZN9Character13UpdateStateFXEv,Character::UpdateStateFX()
+3a469c,320,Character,_ZN9Character16UpdateSpotTargetEv,Character::UpdateSpotTarget()
+3a47e8,136,Character,_ZNK9Character18GetInteractionTypeEP10GameObject,Character::GetInteractionType(GameObject*) const
+3a4870,192,Character,_ZNK9Character13IsInteractiveEP10GameObject,Character::IsInteractive(GameObject*) const
+3a4930,192,Character,_ZN9Character24INV_DoesMeetRequirementsEP12ItemInstance,Character::INV_DoesMeetRequirements(ItemInstance*)
+3a49f0,72,Character,_ZNK9Character8IsPlayerEv,Character::IsPlayer() const
+3a4a3c,344,Character,_ZN9Character17INV_TransmuteItemEP12ItemInstanceb,"Character::INV_TransmuteItem(ItemInstance*, bool)"
+3a4bac,64,Character,_ZNK9Character15GetRespawnDelayEv,Character::GetRespawnDelay() const
+3a4bec,40,Character,_ZN9Character17INV_TransmuteItemEjb,"Character::INV_TransmuteItem(unsigned int, bool)"
+3a4c14,172,Character,_ZN9Character17EquipAllSlotsAutoEv,Character::EquipAllSlotsAuto()
+3a4cc0,8,Character,_ZN9Character15AddItemInstanceEP12ItemInstancebb,"Character::AddItemInstance(ItemInstance*, bool, bool)"
+3a4cd0,100,Character,_ZNK9Character14CanRangeAttackERiS0_S0_,"Character::CanRangeAttack(int&, int&, int&) const"
+3a4d3c,32,Character,_ZNK9Character14CanRangeAttackEv,Character::CanRangeAttack() const
+3a4d5c,28,Character,_ZN9Character10RaiseEventEiPv,"Character::RaiseEvent(int, void*)"
+3a4d78,968,Character,_ZN9Character8InteractEP10GameObject,Character::Interact(GameObject*)
+3a5184,172,Character,_ZN9Character16GetImmunityTimerEi,Character::GetImmunityTimer(int)
+3a5248,92,Character,_ZNK9Character10CanRespawnEv,Character::CanRespawn() const
+3a52a4,308,Character,_ZN9Character9CanUpdateEv,Character::CanUpdate()
+3a53e0,196,Character,_ZNK9Character13GetAnimStanceEv,Character::GetAnimStance() const
+3a54b4,32,Character,_ZNK9Character22GetCharUniqueAnimSetIdEv,Character::GetCharUniqueAnimSetId() const
+3a54d4,428,Character,_ZNK9Character16GetCharModelNameEv,Character::GetCharModelName() const
+3a56a4,112,Character,_ZNK9Character12GetClassNameEv,Character::GetClassName() const
+3a5784,104,Character,_ZNK9Character16GetPreSetAIStateEv,Character::GetPreSetAIState() const
+3a57f4,124,Character,_ZNK9Character19GetLeftFootPositionEv,Character::GetLeftFootPosition() const
+3a5874,124,Character,_ZNK9Character20GetRightFootPositionEv,Character::GetRightFootPosition() const
+3a58f4,120,Character,_ZN9Character18SetInitialPositionERK7Point3DIfE,Character::SetInitialPosition(Point3D<float> const&)
+3a5974,24,Character,_ZN9Character8DisabledEv,Character::Disabled()
+3a598c,4,Character,_ZN9Character7EnabledEv,Character::Enabled()
+3a5990,28,Character,_ZNK9Character9HasPotionEv,Character::HasPotion() const
+3a59ac,304,Character,_ZN9Character6ReviveEP10GameObjectb,"Character::Revive(GameObject*, bool)"
+3a5ae4,52,Character,_ZNK9Character8DropLootEP10GameObject,Character::DropLoot(GameObject*) const
+3a5b18,1676,Character,_ZN9Character4KillEP10GameObjectb,"Character::Kill(GameObject*, bool)"
+3a6210,932,Character,_ZN9Character11DeserializeEP11IStreamBase,Character::Deserialize(IStreamBase*)
+3a65c4,248,Character,_ZN9Character9SerializeEP11IStreamBase,Character::Serialize(IStreamBase*)
+3a66f8,276,Character,_ZN9Character5CleanEv,Character::Clean()
+3a6a24,1216,Character,_ZN9Character18NetStructCharacterC1Ev,Character::NetStructCharacter::NetStructCharacter()
+3a6f0c,2548,Character,_ZN9Character25PopulateOutgoingNetStructEb,Character::PopulateOutgoingNetStruct(bool)
+3a799c,64,Character,_ZN9Character17ClearConcurrentAIEv,Character::ClearConcurrentAI()
+3a7a50,168,Character,_ZN9Character18NetStructCharacterD1Ev,Character::NetStructCharacter::~NetStructCharacter()
+3a7b08,20,Character,_ZN9Character18NetStructCharacterD0Ev,Character::NetStructCharacter::~NetStructCharacter()
+3a7b24,272,Character,_ZN9Character19UnLoadScriptProcessENSt4priv17_Rb_tree_iteratorISt4pairIKiPS_ENS0_11_MapTraitsTIS5_EEEEb,"Character::UnLoadScriptProcess(std::priv::_Rb_tree_iterator<std::pair<int const, Character*>, std::priv::_MapTraitsT<std::pair<int const, Character*> > >, bool)"
+3a7c84,268,Character,_ZN9CharacterD1Ev,Character::~Character()
+3a7de0,20,Character,_ZN9CharacterD0Ev,Character::~Character()
+3a7dfc,268,Character,_ZN9CharacterD2Ev,Character::~Character()
+3a7f10,1484,Character,_ZN9Character26InterpretIncomingNetStructEb,Character::InterpretIncomingNetStruct(bool)
+3a84f4,1444,Character,_ZNK9Character4DrawEv,Character::Draw() const
+3a8bc4,1596,Character,_ZN9Character6HitForEjP10GameObject,"Character::HitFor(unsigned int, GameObject*)"
+3a9340,352,Character,_ZN9CharacterC2EN10ObjectBase6GO_IDSE,Character::Character(ObjectBase::GO_IDS)
+3a999c,68,Character,_ZN9Character14INV_UpdateSkinEv,Character::INV_UpdateSkin()
+3a9d10,164,Character,_ZN9Character26INV_CheckItemsRequirementsEv,Character::INV_CheckItemsRequirements()
+3a9db4,244,Character,_ZN9Character12ReloadSkillsEv,Character::ReloadSkills()
+3a9eb0,56,Character,_ZN9Character19UnEquipItemFromSlotEj,Character::UnEquipItemFromSlot(unsigned int)
+3a9ee8,64,Character,_ZN9Character13EquipSlotAutoEj,Character::EquipSlotAuto(unsigned int)
+3a9f30,52,Character,_ZN9Character15EquipItemToSlotEjj,"Character::EquipItemToSlot(unsigned int, unsigned int)"
+3a9f6c,52,Character,_ZN9Character15UnEquipItemAutoEj,Character::UnEquipItemAuto(unsigned int)
+3a9fa8,52,Character,_ZN9Character13EquipItemAutoEj,Character::EquipItemAuto(unsigned int)
+3a9fe4,408,Character,_ZN9Character17DeclarePropertiesEv,Character::DeclareProperties()
+3aa1b4,352,Character,_ZN9CharacterC1EN10ObjectBase6GO_IDSE,Character::Character(ObjectBase::GO_IDS)
+3ab674,1284,Character,_ZN9Character17AddCharOIDToCacheEij,"Character::AddCharOIDToCache(int, unsigned int)"
+3abb9c,736,Character,_ZN9Character22UpdateObjectOfInterestEv,Character::UpdateObjectOfInterest()
+3abe98,2292,Character,_ZN9Character6UpdateEv,Character::Update()
+3acd58,216,Character,_ZN9Character12CreatePlayerEPS_jjPKc,"Character::CreatePlayer(Character*, unsigned int, unsigned int, char const*)"
+3acea4,216,Character,_ZN9Character12CreatePlayerEjjjPKcbb,"Character::CreatePlayer(unsigned int, unsigned int, unsigned int, char const*, bool, bool)"
+3ad064,284,Character,_ZN9Character9CreateNPCEPKcS1_bb,"Character::CreateNPC(char const*, char const*, bool, bool)"
+3ad1f8,44,Character,_ZN9Character9CreateNPCEiPKcb,"Character::CreateNPC(int, char const*, bool)"
+3ad22c,16,Character,_ZN9Character10CSM_AttackEiPviRi,"Character::CSM_Attack(int, void*, int, int&)"
+3ad23c,8,Character,_ZN9Character11CSM_InjuredEiPviRi,"Character::CSM_Injured(int, void*, int, int&)"
+3ad244,60,Character,_ZN9Character15CSM_InterruptedEiPviRi,"Character::CSM_Interrupted(int, void*, int, int&)"
+3ad280,16,Character,_ZN9Character20CSM_StoppedAttackingEiPviRi,"Character::CSM_StoppedAttacking(int, void*, int, int&)"
+3ad290,12,Character,_ZN9Character13CSM_StopSkillEiPviRi,"Character::CSM_StopSkill(int, void*, int, int&)"
+3ad29c,40,Character,_ZN9Character22CSM_CanStopInteractionEiPviRi,"Character::CSM_CanStopInteraction(int, void*, int, int&)"
+3ad2c8,28,Character,_ZN9Character20CSM_AfterInteractionEiPviRi,"Character::CSM_AfterInteraction(int, void*, int, int&)"
+3ad2e4,80,Character,_ZN9Character9CSM_SpawnEiPviRi,"Character::CSM_Spawn(int, void*, int, int&)"
+3ad418,16,Character,_ZN9Character13Ctrl_RotateByEf,Character::Ctrl_RotateBy(float)
+3ad430,64,Character,_ZNK9Character13CTRLIsAllowedEv,Character::CTRLIsAllowed() const
+3ad478,136,Character,_ZN9Character12Ctrl_OpenIGMEv,Character::Ctrl_OpenIGM()
+3ad528,76,Character,_ZN9Character9Ctrl_KillEP10GameObjectb,"Character::Ctrl_Kill(GameObject*, bool)"
+3ad57c,48,Character,_ZN9Character15Ctrl_DropObjectEv,Character::Ctrl_DropObject()
+3ad5ac,104,Character,_ZN9Character11ForceUseOOIEP10GameObject,Character::ForceUseOOI(GameObject*)
+3ad614,116,Character,_ZN9Character6UseOOIEv,Character::UseOOI()
+3ad690,88,Character,_ZN9Character11Ctrl_UseOOIEP10GameObject,Character::Ctrl_UseOOI(GameObject*)
+3ad6f0,300,Character,_ZN9Character14Ctrl_UsePotionEv,Character::Ctrl_UsePotion()
+3ad83c,8,Character,_ZN9Character12Ctrl_EndCastEb,Character::Ctrl_EndCast(bool)
+3ad84c,8,Character,_ZN9Character14Ctrl_BeginCastEb,Character::Ctrl_BeginCast(bool)
+3ad85c,8,Character,_ZN9Character13Ctrl_EndSkillEj,Character::Ctrl_EndSkill(unsigned int)
+3ad86c,8,Character,_ZN9Character15Ctrl_BeginSkillEj,Character::Ctrl_BeginSkill(unsigned int)
+3ad87c,12,Character,_ZN9Character11Ctrl_AttackEP10GameObject,Character::Ctrl_Attack(GameObject*)
+3ad890,60,Character,_ZN9Character9Ctrl_StopEv,Character::Ctrl_Stop()
+3ad8d4,144,Character,_ZN9Character16Ctrl_HeadTowardsEP10GameObject,Character::Ctrl_HeadTowards(GameObject*)
+3ad9ac,48,Character,_ZN9Character11Ctrl_LookAtEP10GameObject,Character::Ctrl_LookAt(GameObject*)
+3ad9e4,68,Character,_ZN9Character11Ctrl_MoveToEP10GameObject,Character::Ctrl_MoveTo(GameObject*)
+3ada30,52,Character,_ZN9Character11Ctrl_MoveToERK7Point3DIfE,Character::Ctrl_MoveTo(Point3D<float> const&)
+3ada6c,84,Character,_ZN9Character11Ctrl_HeadToEP10GameObject,Character::Ctrl_HeadTo(GameObject*)
+3adac8,56,Character,_ZN9Character11Ctrl_HeadToERK7Point3DIfE,Character::Ctrl_HeadTo(Point3D<float> const&)
+3adb60,36,Character,_ZN9Character16Ctrl_HeadTowardsERK7Point3DIfE,Character::Ctrl_HeadTowards(Point3D<float> const&)
+3adcf4,184,Character,_ZN9Character11Ctrl_WarpToERK7Point3DIfE,Character::Ctrl_WarpTo(Point3D<float> const&)
+3addbc,4,Character,_ZN9Character11Ctrl_LookAtERK7Point3DIfE,Character::Ctrl_LookAt(Point3D<float> const&)
+3addc8,1056,Character,_ZN9Character10Ctrl_ClickERK7Point3DIfEb,"Character::Ctrl_Click(Point3D<float> const&, bool)"
+3ae5a0,52,Character,_ZNK9Character18GetCharFaeryListIdEv,Character::GetCharFaeryListId() const
+3ae5dc,40,Character,_ZNK9Character16GetCharFaeryListEv,Character::GetCharFaeryList() const
+3ae60c,8,Character,_ZN9Character17GetFaeryCharacterEv,Character::GetFaeryCharacter()
+3ae614,8,Character,_ZNK9Character17GetFaeryCharacterEv,Character::GetFaeryCharacter() const
+3ae61c,396,Character,_ZN9Character13IncFaeryLevelEj,Character::IncFaeryLevel(unsigned int)
+3ae7d4,340,Character,_ZN9Character13SetFaeryStateEji,"Character::SetFaeryState(unsigned int, int)"
+3ae94c,80,Character,_ZN9Character18IncAllFaeriesLevelEv,Character::IncAllFaeriesLevel()
+3ae99c,232,Character,_ZN9Character11ChangeFaeryEj,Character::ChangeFaery(unsigned int)
+3aea9c,36,Character,_ZN9Character17IsCastingPossibleEv,Character::IsCastingPossible()
+3aeac0,464,Character,_ZNK9Character12GetCharFaeryEi,Character::GetCharFaery(int) const
+3aef68,92,Character,_ZN9Character30F_ApplyScrollingCombatTextGoldEPS_i,"Character::F_ApplyScrollingCombatTextGold(Character*, int)"
+3af0c8,100,Character,_ZN9Character28F_ApplyScrollingCombatTextXPEPS_iii,"Character::F_ApplyScrollingCombatTextXP(Character*, int, int, int)"
+3af1fc,96,Character,_ZN9Character26F_ApplyScrollingCombatTextERKNS_12AttackResultEP10GameObjectPS_,"Character::F_ApplyScrollingCombatText(Character::AttackResult const&, GameObject*, Character*)"
+3af3b0,72,Character,_ZN9Character14_F_ResetResultERNS_12AttackResultE,Character::_F_ResetResult(Character::AttackResult&)
+3af77c,100,Character,_ZN9Character26F_ApplyScrollingCombatTextERKNS_12AttackResultEPS_S3_,"Character::F_ApplyScrollingCombatText(Character::AttackResult const&, Character*, Character*)"
+3afd38,116,Character,_ZN9Character18F_ApplyCombatSoundERKNS_12AttackResultEP10GameObjectPS_,"Character::F_ApplyCombatSound(Character::AttackResult const&, GameObject*, Character*)"
+3afee0,128,Character,_ZN9Character18F_ApplyCombatSoundERKNS_12AttackResultEPS_S3_,"Character::F_ApplyCombatSound(Character::AttackResult const&, Character*, Character*)"
+3b01b8,524,Character,_ZN9Character13F_ApplyResultERKNS_12AttackResultEP10GameObjectPS_b,"Character::F_ApplyResult(Character::AttackResult const&, GameObject*, Character*, bool)"
+3b061c,288,Character,_ZN9Character10F_GOAttackERNS_12AttackResultEP10GameObjectPS_ii,"Character::F_GOAttack(Character::AttackResult&, GameObject*, Character*, int, int)"
+3b10b4,652,Character,_ZN9Character13F_ApplyResultERKNS_12AttackResultEPS_S3_b,"Character::F_ApplyResult(Character::AttackResult const&, Character*, Character*, bool)"
+3b2638,1568,Character,_ZN9Character18_F_CalculateResultERNS_12AttackResultEPS_S2_iiii,"Character::_F_CalculateResult(Character::AttackResult&, Character*, Character*, int, int, int, int)"
+3b2e68,288,Character,_ZN9Character11F_DotAttackERNS_12AttackResultEPS_S2_ii,"Character::F_DotAttack(Character::AttackResult&, Character*, Character*, int, int)"
+3b3004,288,Character,_ZN9Character13F_SpellAttackERNS_12AttackResultEPS_S2_ii,"Character::F_SpellAttack(Character::AttackResult&, Character*, Character*, int, int)"
+3b31a4,292,Character,_ZN9Character13F_SkillAttackERNS_12AttackResultEPS_S2_ii,"Character::F_SkillAttack(Character::AttackResult&, Character*, Character*, int, int)"
+3b3368,300,Character,_ZN9Character13F_MeleeAttackERNS_12AttackResultEPS_S2_bb,"Character::F_MeleeAttack(Character::AttackResult&, Character*, Character*, bool, bool)"
+3b35f0,40,Character,_ZN9Character7InitAllEv,Character::InitAll()
+3b36b0,52,Character,_ZN9Character24InitializePlayerSavegameEv,Character::InitializePlayerSavegame()
+3b36e4,8,Character,_ZN9Character27UpdateInventoryLocalizationEv,Character::UpdateInventoryLocalization()
+3b36ec,164,Character,_ZN9Character26SafeGetCharPropsTemplateIdEv,Character::SafeGetCharPropsTemplateId()
+3b379c,136,Character,_ZN9Character11InitSpawnedEiRK7Point3DIfE,"Character::InitSpawned(int, Point3D<float> const&)"
+3b3928,52,Character,_ZN9Character11InitCoopCamEv,Character::InitCoopCam()
+3b395c,268,Character,_ZN9Character14_InitEquipmentEv,Character::_InitEquipment()
+3b3a70,32,Character,_ZN9Character9_InitHpMpEv,Character::_InitHpMp()
+3b3a90,112,Character,_ZN9Character16_InitSkillsSlotsEv,Character::_InitSkillsSlots()
+3b3b00,256,Character,_ZN9Character11_InitSoundsEv,Character::_InitSounds()
+3b3d38,680,Character,_ZN9Character18SafeGetCharPropsIdEv,Character::SafeGetCharPropsId()
+3b4088,824,Character,_ZN9Character18InitPhysicalObjectEv,Character::InitPhysicalObject()
+3b4738,232,Character,_ZN9Character24RegisterCharacterFXTableEv,Character::RegisterCharacterFXTable()
+3b4834,304,Character,_ZN9Character23InitLightSetAndMaterialEv,Character::InitLightSetAndMaterial()
+3b4978,512,Character,_ZN9Character9InitFinalEv,Character::InitFinal()
+3b4bc4,328,Character,_ZN9Character7InitCamEv,Character::InitCam()
+3b4d60,484,Character,_ZN9Character8InitPostEv,Character::InitPost()
+3b5678,12,Character,_ZN9Character12_ClearMasterERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_ClearMaster(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b5684,12,Character,_ZN9Character13_LookAtTargetERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_LookAtTarget(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b5690,36,Character,_ZN9Character12_ClearTargetERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_ClearTarget(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b56b4,8,Character,_ZN9Character5_StopERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_Stop(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b56bc,4640,Character,_ZN9Character14createBindingsERN3sfc6script3lua6BinderE,Character::createBindings(sfc::script::lua::Binder&)
+3b6c70,12,Character,_ZN9Character10_GetMasterERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetMaster(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6c7c,12,Character,_ZN9Character10_GetTargetERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetTarget(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6c88,64,Character,_ZN9Character14_GetSpotTargetERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetSpotTarget(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6cc8,16,Character,_ZN9Character12_GetHitCountERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetHitCount(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6cd8,116,Character,_ZN9Character10_GetPropHPERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetPropHP(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6d5c,16,Character,_ZN9Character10_GetCharIDERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetCharID(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6d6c,12,Character,_ZN9Character13_GetStateTimeERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetStateTime(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6d78,40,Character,_ZN9Character9_GetStateERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetState(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6da0,36,Character,_ZN9Character26_GetCurrentEquippedFaeryIdERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetCurrentEquippedFaeryId(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6dc4,52,Character,_ZN9Character24_GetEquippedFaeryElementERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetEquippedFaeryElement(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6df8,56,Character,_ZN9Character29_GetCurrentEquippedFaeryLevelERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetCurrentEquippedFaeryLevel(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6e30,80,Character,_ZN9Character20_GetCurrentSpellInfoERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetCurrentSpellInfo(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6e80,60,Character,_ZN9Character15_GetCharAIFlagsERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetCharAIFlags(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6ec4,68,Character,_ZN9Character12_IsConnectedERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_IsConnected(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6f10,44,Character,_ZN9Character19_CanAttackFromRangeERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_CanAttackFromRange(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6f3c,20,Character,_ZN9Character10_HasMasterERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_HasMaster(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6f50,20,Character,_ZN9Character10_HasTargetERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_HasTarget(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6f64,32,Character,_ZN9Character17_CanAttackInMeleeERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_CanAttackInMelee(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6f84,32,Character,_ZN9Character7_HasBowERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_HasBow(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6fa4,32,Character,_ZN9Character10_HasShieldERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_HasShield(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b6fc4,84,Character,_ZN9Character19_IsMasterHostPlayerERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_IsMasterHostPlayer(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7020,36,Character,_ZN9Character19_TargetInMeleeRangeERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_TargetInMeleeRange(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7044,32,Character,_ZN9Character9_HasAggroERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_HasAggro(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7064,116,Character,_ZN9Character10_StopTimerERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_StopTimer(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b70d8,108,Character,_ZN9Character13_RegisterAnimERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_RegisterAnim(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7144,600,Character,_ZN9Character20_EnableSpotTargetingERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_EnableSpotTargeting(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b73a4,244,Character,_ZN9Character9_SetLevelERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SetLevel(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b74a8,116,Character,_ZN9Character12_ResumeTimerERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_ResumeTimer(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b751c,116,Character,_ZN9Character11_PauseTimerERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_PauseTimer(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7590,240,Character,_ZN9Character11_StartTimerERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_StartTimer(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7680,132,Character,_ZN9Character18_SetKnockBackStateERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SetKnockBackState(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7704,96,Character,_ZN9Character9_RotateByERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_RotateBy(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7774,120,Character,_ZN9Character8_RegenMPERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_RegenMP(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b77ec,120,Character,_ZN9Character8_RegenHPERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_RegenHP(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7864,136,Character,_ZN9Character8_UseManaERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_UseMana(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b78ec,136,Character,_ZN9Character8_HasManaERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_HasMana(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7974,120,Character,_ZN9Character16_AllowSkillBreakERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_AllowSkillBreak(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b79ec,120,Character,_ZN9Character14_AllowRotationERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_AllowRotation(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7a64,104,Character,_ZN9Character16_SetIsTargetableERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SetIsTargetable(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7acc,92,Character,_ZN9Character19_GetPropBonusDamageERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetPropBonusDamage(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7b28,92,Character,_ZN9Character23_GetPropBonusCritRatingERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetPropBonusCritRating(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7b84,92,Character,_ZN9Character25_GetPropBonusAttackRatingERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetPropBonusAttackRating(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7be0,472,Character,_ZN9Character11_RemoveDotsERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_RemoveDots(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7dbc,128,Character,_ZN9Character14_DBG_DumpPropsERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_DBG_DumpProps(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7e40,108,Character,_ZN9Character5_KillERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_Kill(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b7eac,484,Character,_ZN9Character8_SetPropERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SetProp(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b8098,412,Character,_ZN9Character9_AddAggroERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_AddAggro(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b82e4,324,Character,_ZN9Character11_ClearPropsERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_ClearProps(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b842c,312,Character,_ZN9Character11_RemoveBuffERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_RemoveBuff(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b856c,208,Character,_ZN9Character18_GetSkillIDFromOIDERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetSkillIDFromOID(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b8648,96,Character,_ZN9Character11_ClearAggroERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_ClearAggro(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b86a8,1304,Character,_ZN9Character11_CreateBuffERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_CreateBuff(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b8bd8,220,Character,_ZN9Character8_DoSkillERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_DoSkill(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b8cb8,220,Character,_ZN9Character11_BeginSkillERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_BeginSkill(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b8d98,180,Character,_ZN9Character11_WarpBehindERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_WarpBehind(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b8ed8,96,Character,_ZN9Character7_LookAtERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_LookAt(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b8f38,100,Character,_ZN9Character10_SetTargetERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SetTarget(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b8f9c,228,Character,_ZN9Character20_GetCurrentSkillInfoERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetCurrentSkillInfo(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b9084,96,Character,_ZN9Character10_SetMasterERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SetMaster(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b90e4,188,Character,_ZN9Character24_SetSpellCooldownTimerIdERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SetSpellCooldownTimerId(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b91a0,136,Character,_ZN9Character5_FleeERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_Flee(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b92a4,296,Character,_ZN9Character16_SpellCombatRollERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SpellCombatRoll(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b93cc,220,Character,_ZN9Character9_EndSkillERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_EndSkill(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b94ac,208,Character,_ZN9Character10_StopSkillERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_StopSkill(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b9580,300,Character,_ZN9Character13_SetStunStateERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SetStunState(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b96b0,300,Character,_ZN9Character14_SetScareStateERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SetScareState(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b97e0,480,Character,_ZN9Character24_SetSkillCooldownTimerIdERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SetSkillCooldownTimerId(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b99d0,920,Character,_ZN9Character21_SpawnSkillProjectileERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SpawnSkillProjectile(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b9d8c,432,Character,_ZN9Character8_GetPropERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_GetProp(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b9f44,120,Character,_ZN9Character7_AttackERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_Attack(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3b9fbc,720,Character,_ZN9Character16_SkillCombatRollERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SkillCombatRoll(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3ba298,232,Character,_ZN9Character20_SetProjectileTargetERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_SetProjectileTarget(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3ba388,856,Character,_ZN9Character9_PlayAnimERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_PlayAnim(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3ba71c,784,Character,_ZN9Character7_HeadToERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_HeadTo(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3babdc,448,Character,_ZN9Character15_ApplyPropClassERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_ApplyPropClass(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3bada8,784,Character,_ZN9Character7_MoveToERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_MoveTo(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3bb268,784,Character,_ZN9Character7_WarpToERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Character::_WarpTo(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3bb728,24,Character,_ZN9Character10SG_GetSlotEv,Character::SG_GetSlot()
+3bb740,20,Character,_ZN9Character10SG_SetSlotEj,Character::SG_SetSlot(unsigned int)
+3bb754,28,Character,_ZN9Character12SG_SetPlayerEPS_,Character::SG_SetPlayer(Character*)
+3bb770,20,Character,_ZN9Character8SG_BlockEb,Character::SG_Block(bool)
+3bb784,20,Character,_ZN9Character12SG_IsBlockedEv,Character::SG_IsBlocked()
+3bb798,48,Character,_ZN9Character19SG_SetUseSpawnPointEb,Character::SG_SetUseSpawnPoint(bool)
+3bb7d0,24,Character,_ZN9Character16SG_RedoQuestSyncEv,Character::SG_RedoQuestSync()
+3bb7e8,20,Character,_ZNK9Character16SG_GetPlayerNameEv,Character::SG_GetPlayerName() const
+3bb7fc,24,Character,_ZNK9Character17SG_GetPlayerClassEv,Character::SG_GetPlayerClass() const
+3bb814,20,Character,_ZN9Character17SG_SetPlayerClassEi,Character::SG_SetPlayerClass(int)
+3bb828,24,Character,_ZN9Character17SG_GetPlayerLevelEv,Character::SG_GetPlayerLevel()
+3bb840,20,Character,_ZN9Character17SG_SetPlayerLevelEi,Character::SG_SetPlayerLevel(int)
+3bb854,64,Character,_ZN9Character13SG_SetLevelIdEii,"Character::SG_SetLevelId(int, int)"
+3bb89c,64,Character,_ZN9Character21SG_SetLevelEntryPointEii,"Character::SG_SetLevelEntryPoint(int, int)"
+3bb8e4,44,Character,_ZN9Character20SG_GetGameDifficultyEv,Character::SG_GetGameDifficulty()
+3bb918,24,Character,_ZN9Character28SG_GetGameDifficultyUnlockedEv,Character::SG_GetGameDifficultyUnlocked()
+3bb930,32,Character,_ZN9Character28SG_SetGameDifficultyUnlockedEi,Character::SG_SetGameDifficultyUnlocked(int)
+3bb950,52,Character,_ZN9Character20SG_SetGameDifficultyEi,Character::SG_SetGameDifficulty(int)
+3bb98c,68,Character,_ZNK9Character21SG_GetCurrentFaerieIdEi,Character::SG_GetCurrentFaerieId(int) const
+3bb9d8,64,Character,_ZN9Character19SG_SetCurrentFaerieEji,"Character::SG_SetCurrentFaerie(unsigned int, int)"
+3bba20,72,Character,_ZN9Character17SG_GetFaerieCountEi,Character::SG_GetFaerieCount(int)
+3bba70,20,Character,_ZN9Character23SG_UnlockAllFastTravelsEv,Character::SG_UnlockAllFastTravels()
+3bba84,68,Character,_ZN9Character26SG_SetFastTravelIdUnlockedEPKcbi,"Character::SG_SetFastTravelIdUnlocked(char const*, bool, int)"
+3bbad0,48,Character,_ZN9Character26SG_GetFastTravelIdUnlockedEPKci,"Character::SG_GetFastTravelIdUnlocked(char const*, int)"
+3bbb08,48,Character,_ZN9Character26SG_GetFastTravelIdUnlockedEii,"Character::SG_GetFastTravelIdUnlocked(int, int)"
+3bbb40,4,Character,_ZN9Character12__SaveQuestsEP11IFileStreamPv,"Character::__SaveQuests(IFileStream*, void*)"
+3bbb44,4,Character,_ZN9Character12__LoadQuestsEP11IStreamBasePv,"Character::__LoadQuests(IStreamBase*, void*)"
+3bbb48,68,Character,_ZN9Character17SG_SetFaerieStateEjii,"Character::SG_SetFaerieState(unsigned int, int, int)"
+3bbb94,48,Character,_ZN9Character19SG_IsFaerieUnlockedEji,"Character::SG_IsFaerieUnlocked(unsigned int, int)"
+3bbbcc,68,Character,_ZN9Character17SG_SetFaerieLevelEjii,"Character::SG_SetFaerieLevel(unsigned int, int, int)"
+3bbc18,56,Character,_ZN9Character17SG_GetFaerieLevelEji,"Character::SG_GetFaerieLevel(unsigned int, int)"
+3bbc58,20,Character,_ZN9Character14SG_SetSaveDateEv,Character::SG_SetSaveDate()
+3bbc6c,48,Character,_ZN9Character16SG_IsLevelLockedEii,"Character::SG_IsLevelLocked(int, int)"
+3bbca4,68,Character,_ZN9Character16SG_SetLevelStateEiii,"Character::SG_SetLevelState(int, int, int)"
+3bbcf0,56,Character,_ZN9Character16SG_GetLevelStateEii,"Character::SG_GetLevelState(int, int)"
+3bbd30,48,Character,_ZN9Character15SG_IsMapLocSeenEii,"Character::SG_IsMapLocSeen(int, int)"
+3bbd68,48,Character,_ZN9Character17SG_IsMapLocLockedEii,"Character::SG_IsMapLocLocked(int, int)"
+3bbda0,68,Character,_ZN9Character17SG_SetMapLocStateEiii,"Character::SG_SetMapLocState(int, int, int)"
+3bbdec,56,Character,_ZN9Character17SG_GetMapLocStateEii,"Character::SG_GetMapLocState(int, int)"
+3bbe2c,20,Character,_ZN9Character15SG_ReloadSkillsEv,Character::SG_ReloadSkills()
+3bbe40,20,Character,_ZN9Character12SG_TellSlotsEPFvijPvES0_,"Character::SG_TellSlots(void (*)(int, unsigned int, void*), void*)"
+3bbe54,20,Character,_ZN9Character17SG_SetSkillInSlotEij,"Character::SG_SetSkillInSlot(int, unsigned int)"
+3bbe68,28,Character,_ZN9Character17SG_GetSkillInSlotEi,Character::SG_GetSkillInSlot(int)
+3bbe84,28,Character,_ZN9Character15SG_GetSkillSlotEj,Character::SG_GetSkillSlot(unsigned int)
+3bbea0,28,Character,_ZN9Character16SG_HasSkillSlotsEv,Character::SG_HasSkillSlots()
+3bbebc,20,Character,_ZN9Character16SG_SetSkillLevelEji,"Character::SG_SetSkillLevel(unsigned int, int)"
+3bbed0,28,Character,_ZNK9Character16SG_GetSkillLevelEj,Character::SG_GetSkillLevel(unsigned int) const
+3bbeec,28,Character,_ZN9Character13SG_GetSkillIdEj,Character::SG_GetSkillId(unsigned int)
+3bbf08,36,Character,_ZN9Character16SG_SetPlayerNameEPKc,Character::SG_SetPlayerName(char const*)
+3bbf40,116,Character,_ZN9Character16SG_SetCurrentActEii,"Character::SG_SetCurrentAct(int, int)"
+3bbfbc,88,Character,_ZN9Character25SG_SetCurrentPrimaryQuestEii,"Character::SG_SetCurrentPrimaryQuest(int, int)"
+3bc01c,88,Character,_ZN9Character18SG_SetCurrentQuestEii,"Character::SG_SetCurrentQuest(int, int)"
+3bc07c,312,Character,_ZN9Character27SG_NeedToResendQuestSyncMsgEv,Character::SG_NeedToResendQuestSyncMsg()
+3bc1dc,68,Character,_ZN9Character36SG_DBG_TraceDetailedQuestInformationEP7__sFILEii,"Character::SG_DBG_TraceDetailedQuestInformation(__sFILE*, int, int)"
+3bc228,68,Character,_ZN9Character15SG_GetNextQuestEPFbPK5QuestEii,"Character::SG_GetNextQuest(bool (*)(Quest const*), int, int)"
+3bc274,48,Character,_ZN9Character17SG_GetQuestByNameEPKci,"Character::SG_GetQuestByName(char const*, int)"
+3bc2ac,68,Character,_ZN9Character15SG_GetQuestByIDEPFbPK5QuestEii,"Character::SG_GetQuestByID(bool (*)(Quest const*), int, int)"
+3bc2f8,60,Character,_ZN9Character15SG_GetQuestByIDEii,"Character::SG_GetQuestByID(int, int)"
+3bc33c,56,Character,_ZN9Character15SG_GetNumQuestsEPFbPK5QuestEi,"Character::SG_GetNumQuests(bool (*)(Quest const*), int)"
+3bc37c,124,Character,_ZN9Character15SG_GetNumQuestsEi,Character::SG_GetNumQuests(int)
+3bc400,56,Character,_ZN9Character25SG_GetCurrentPrimaryQuestEi,Character::SG_GetCurrentPrimaryQuest(int)
+3bc440,56,Character,_ZN9Character18SG_GetCurrentQuestEi,Character::SG_GetCurrentQuest(int)
+3bc480,20,Character,_ZN9Character9SG_UpdateEb,Character::SG_Update(bool)
+3bc494,20,Character,_ZN9Character17SG_SaveCheckpointEv,Character::SG_SaveCheckpoint()
+3bc4a8,20,Character,_ZN9Character7SG_SaveEv,Character::SG_Save()
+3bc4bc,20,Character,_ZN9Character17SG_LoadCheckpointEi,Character::SG_LoadCheckpoint(int)
+3bc4d0,20,Character,_ZN9Character7SG_LoadEi,Character::SG_Load(int)
+3bc5c0,52,Character,_ZNK9Character18GetCharSkillListIdEv,Character::GetCharSkillListId() const
+3bc5fc,40,Character,_ZNK9Character16GetCharSkillListEv,Character::GetCharSkillList() const
+3bc62c,92,Character,_ZNK9Character17GetSkillIDFromOIDEi,Character::GetSkillIDFromOID(int) const
+3bc688,8,Character,_ZNK9Character18IsUsingFreezingRayEv,Character::IsUsingFreezingRay() const
+3bc690,40,Character,_ZNK9Character10IsSneakingEv,Character::IsSneaking() const
+3bc6b8,196,Character,_ZN9Character14CancelSneakingEv,Character::CancelSneaking()
+3bc784,188,Character,_ZNK9Character12GetCharSkillEi,Character::GetCharSkill(int) const
+3bc860,368,Character,_ZN9Character11ResetSkillsEv,Character::ResetSkills()
+3bc9ec,100,Character,_ZN9Character17CanIncrementSkillEi,Character::CanIncrementSkill(int)
+3bca50,52,Character,_ZNK9Character16IsSkillAvailableEi,Character::IsSkillAvailable(int) const
+3bca84,84,Character,_ZNK9Character17IsSkillEquippableEi,Character::IsSkillEquippable(int) const
+3bcad8,84,Character,_ZN9Character13IsSkillUsableEi,Character::IsSkillUsable(int)
+3bcc58,736,Character,_ZN9Character8IncSkillEib,"Character::IncSkill(int, bool)"
+3bd000,184,Character,_ZN9Character20VerifySpecializationEv,Character::VerifySpecialization()
+3bd0c0,16,Character,_ZN9Character5SetMPEi,Character::SetMP(int)
+3bd0d0,16,Character,_ZN9Character5SetHPEi,Character::SetHP(int)
+3bd0e0,16,Character,_ZNK9Character10GetTotalMPEv,Character::GetTotalMP() const
+3bd0f0,16,Character,_ZNK9Character10GetTotalHPEv,Character::GetTotalHP() const
+3bd100,16,Character,_ZNK9Character5GetMPEv,Character::GetMP() const
+3bd110,16,Character,_ZNK9Character5GetHPEv,Character::GetHP() const
+3bd120,16,Character,_ZNK9Character8GetLevelEv,Character::GetLevel() const
+3bd140,140,Character,_ZN9Character12ValidateHPMPEv,Character::ValidateHPMP()
+3bd1cc,160,Character,_ZN9Character16ResetStatsChangeEiiii,"Character::ResetStatsChange(int, int, int, int)"
+3bd26c,112,Character,_ZN9Character10ResetStatsEv,Character::ResetStats()
+3bd2dc,88,Character,_ZNK9Character12GetHPPercentEv,Character::GetHPPercent() const
+3bd338,88,Character,_ZNK9Character12GetMPPercentEv,Character::GetMPPercent() const
+3bd394,36,Character,_ZNK9Character27GetEffectiveThreatPerDamageEv,Character::GetEffectiveThreatPerDamage() const
+3bd3bc,36,Character,_ZNK9Character25GetEffectiveThreatPerHealEv,Character::GetEffectiveThreatPerHeal() const
+3bd3e4,36,Character,_ZNK9Character37GetEffectiveThreatPerDamageToFriendlyEv,Character::GetEffectiveThreatPerDamageToFriendly() const
+3bd40c,212,Character,_ZNK9Character7HasManaEi,Character::HasMana(int) const
+3bd4f8,244,Character,_ZN9Character10IncStatNrgEv,Character::IncStatNrg()
+3bd600,244,Character,_ZN9Character10IncStatEndEv,Character::IncStatEnd()
+3bd708,244,Character,_ZN9Character10IncStatDexEv,Character::IncStatDex()
+3bd810,244,Character,_ZN9Character10IncStatStrEv,Character::IncStatStr()
+3bda74,288,Character,_ZN9Character15ModifyCharPropsEii,"Character::ModifyCharProps(int, int)"
+3bdbb8,220,Character,_ZN9Character7RegenMPEi,Character::RegenMP(int)
+3bdca4,220,Character,_ZN9Character7RegenHPEi,Character::RegenHP(int)
+3bdd90,336,Character,_ZN9Character9RegenTickEb,Character::RegenTick(bool)
+3bdef4,432,Character,_ZN9Character7UseManaEi,Character::UseMana(int)
+3beb88,548,Character,_ZN9Character7LevelUpEi,Character::LevelUp(int)
+3bf498,848,Character,_ZN9Character7_GiveXPEib,"Character::_GiveXP(int, bool)"
+3bf828,240,Character,_ZN9Character12DistributeXPEPS_S0_,"Character::DistributeXP(Character*, Character*)"
+36d258,28,PlayerInfo,_ZN10PlayerInfo6DeleteEP14CNetPlayerInfo,PlayerInfo::Delete(CNetPlayerInfo*)
+36d48c,96,PlayerInfo,_ZN10PlayerInfo8IsActiveEv,PlayerInfo::IsActive()
+36fcb0,156,PlayerInfo,_ZN10PlayerInfo22SetCharacterNumPotionsEi,PlayerInfo::SetCharacterNumPotions(int)
+36fd58,160,PlayerInfo,_ZN10PlayerInfo14SetCharacterXPEi,PlayerInfo::SetCharacterXP(int)
+36fe04,160,PlayerInfo,_ZN10PlayerInfo16SetCharacterGoldEi,PlayerInfo::SetCharacterGold(int)
+370908,160,PlayerInfo,_ZN10PlayerInfo14SetReadyToRollEb,PlayerInfo::SetReadyToRoll(bool)
+3709b4,224,PlayerInfo,_ZN10PlayerInfo17UpdateReadyToRollEv,PlayerInfo::UpdateReadyToRoll()
+370a9c,160,PlayerInfo,_ZN10PlayerInfo9SetIngameEb,PlayerInfo::SetIngame(bool)
+370b48,160,PlayerInfo,_ZN10PlayerInfo14SetDoneLoadingEb,PlayerInfo::SetDoneLoading(bool)
+370bf4,156,PlayerInfo,_ZN10PlayerInfo22SetCharacterDeathTimerEi,PlayerInfo::SetCharacterDeathTimer(int)
+370cf8,248,PlayerInfo,_ZN10PlayerInfo16ClearLoadingInfoEv,PlayerInfo::ClearLoadingInfo()
+370e48,156,PlayerInfo,_ZN10PlayerInfo17SetCharacterLevelEi,PlayerInfo::SetCharacterLevel(int)
+370ef0,156,PlayerInfo,_ZN10PlayerInfo17SetCharacterClassEi,PlayerInfo::SetCharacterClass(int)
+371294,360,PlayerInfo,_ZN10PlayerInfoD1Ev,PlayerInfo::~PlayerInfo()
+371670,20,PlayerInfo,_ZN10PlayerInfoD0Ev,PlayerInfo::~PlayerInfo()
+37168c,360,PlayerInfo,_ZN10PlayerInfoD2Ev,PlayerInfo::~PlayerInfo()
+371ccc,164,PlayerInfo,_ZN10PlayerInfo16SetCharacterNameESs,"PlayerInfo::SetCharacterName(std::basic_string<char, std::char_traits<char>, std::allocator<char> >)"
+373bdc,1416,PlayerInfo,_ZN10PlayerInfo5ResetEv,PlayerInfo::Reset()
+37418c,2396,PlayerInfo,_ZN10PlayerInfoC1Ev,PlayerInfo::PlayerInfo()
+374ca0,32,PlayerInfo,_ZN10PlayerInfo6CreateEv,PlayerInfo::Create()
+374cc0,2396,PlayerInfo,_ZN10PlayerInfoC2Ev,PlayerInfo::PlayerInfo()
+3777d0,1832,PlayerInfo,_ZN10PlayerInfoC1ERKS_,PlayerInfo::PlayerInfo(PlayerInfo const&)
+378808,568,PlayerInfo,_ZN10PlayerInfoaSERKS_,PlayerInfo::operator=(PlayerInfo const&)
+459900,160,PlayerInfo,_ZN10PlayerInfo13SetInCutsceneEb,PlayerInfo::SetInCutscene(bool)
+330794,24,PlayerManager,_ZN13PlayerManager23GetLocalPlayerCharacterEv,PlayerManager::GetLocalPlayerCharacter()
+36d280,100,PlayerManager,_ZN13PlayerManager18IsPlayerInLocalMapEi,PlayerManager::IsPlayerInLocalMap(int)
+36d7a8,108,PlayerManager,_ZN13PlayerManager13GetNumPlayersEv,PlayerManager::GetNumPlayers()
+36d814,32,PlayerManager,_ZN13PlayerManager16ReceiveQuestSyncEP14PlayerSavegame,PlayerManager::ReceiveQuestSync(PlayerSavegame*)
+36d834,28,PlayerManager,_ZN13PlayerManager20ClearQuestSyncBufferEv,PlayerManager::ClearQuestSyncBuffer()
+36d850,404,PlayerManager,_ZN13PlayerManager16_UnpackInventoryER10PlayerInfo,PlayerManager::_UnpackInventory(PlayerInfo&)
+36de28,40,PlayerManager,_ZN13PlayerManager19IsPlayerInRemoteMapEi,PlayerManager::IsPlayerInRemoteMap(int)
+36de50,116,PlayerManager,_ZN13PlayerManager15DoesPlayerExistEi,PlayerManager::DoesPlayerExist(int)
+36dec4,212,PlayerManager,_ZN13PlayerManager17_GetNetPlayerInfoEib,"PlayerManager::_GetNetPlayerInfo(int, bool)"
+36dfb0,236,PlayerManager,_ZN13PlayerManager21GetPlayerByInternalIDEib,"PlayerManager::GetPlayerByInternalID(int, bool)"
+36e09c,112,PlayerManager,_ZN13PlayerManager16GetHostingPlayerEv,PlayerManager::GetHostingPlayer()
+36e10c,416,PlayerManager,_ZN13PlayerManager24_GetInternalIDByRemoteIDEib,"PlayerManager::_GetInternalIDByRemoteID(int, bool)"
+36e2ac,32,PlayerManager,_ZN13PlayerManager15GetRemotePlayerEib,"PlayerManager::GetRemotePlayer(int, bool)"
+36e2cc,428,PlayerManager,_ZN13PlayerManager23_GetInternalIDByLocalIDEib,"PlayerManager::_GetInternalIDByLocalID(int, bool)"
+36e478,32,PlayerManager,_ZN13PlayerManager14GetLocalPlayerEib,"PlayerManager::GetLocalPlayer(int, bool)"
+36e498,260,PlayerManager,_ZN13PlayerManager18HandleQuestSyncMsgEPKci,"PlayerManager::HandleQuestSyncMsg(char const*, int)"
+36e5b4,400,PlayerManager,_ZN13PlayerManager26_GetInternalIDByFriendlyIDEib,"PlayerManager::_GetInternalIDByFriendlyID(int, bool)"
+36e744,32,PlayerManager,_ZN13PlayerManager9GetPlayerEib,"PlayerManager::GetPlayer(int, bool)"
+36e764,148,PlayerManager,_ZN13PlayerManager14AllPlayersDeadEv,PlayerManager::AllPlayersDead()
+36e7f8,196,PlayerManager,_ZN13PlayerManager14AllReadyToRollEv,PlayerManager::AllReadyToRoll()
+36e8bc,216,PlayerManager,_ZN13PlayerManager21AllClientsReadyToRollEv,PlayerManager::AllClientsReadyToRoll()
+36e994,188,PlayerManager,_ZN13PlayerManager14AllLoadingDoneEv,PlayerManager::AllLoadingDone()
+36ea50,104,PlayerManager,_ZN13PlayerManager29GetNumPlayerCharactersOfClassEi,PlayerManager::GetNumPlayerCharactersOfClass(int)
+36eab8,8,PlayerManager,_ZN13PlayerManager28GetNumPlayerCharacterWarriorEv,PlayerManager::GetNumPlayerCharacterWarrior()
+36eac0,8,PlayerManager,_ZN13PlayerManager26GetNumPlayerCharacterRogueEv,PlayerManager::GetNumPlayerCharacterRogue()
+36eac8,8,PlayerManager,_ZN13PlayerManager25GetNumPlayerCharacterMageEv,PlayerManager::GetNumPlayerCharacterMage()
+36ead0,388,PlayerManager,_ZN13PlayerManager18GetNumLocalPlayersEb,PlayerManager::GetNumLocalPlayers(bool)
+36ec54,176,PlayerManager,_ZN13PlayerManager12InitialSetupE7Point3DIfE,PlayerManager::InitialSetup(Point3D<float>)
+36ed0c,412,PlayerManager,_ZN13PlayerManager20_UpdatePlayerNumbersEv,PlayerManager::_UpdatePlayerNumbers()
+36eea8,340,PlayerManager,_ZN13PlayerManager20GetPlayerByCharacterEPK9Characterb,"PlayerManager::GetPlayerByCharacter(Character const*, bool)"
+36effc,44,PlayerManager,_ZN13PlayerManager13IsLocalPlayerEPK9Character,PlayerManager::IsLocalPlayer(Character const*)
+36f074,104,PlayerManager,_ZN13PlayerManager20IsLocalPlayerHostingEv,PlayerManager::IsLocalPlayerHosting()
+36f0dc,392,PlayerManager,_ZN13PlayerManager34_AttachControllerToPlayerCharacterEi,PlayerManager::_AttachControllerToPlayerCharacter(int)
+36f2bc,312,PlayerManager,_ZN13PlayerManager18PostInitCharactersEv,PlayerManager::PostInitCharacters()
+36f4b4,76,PlayerManager,_ZN13PlayerManager24_UpdateJoiningControllerEii,"PlayerManager::_UpdateJoiningController(int, int)"
+370020,548,PlayerManager,_ZN13PlayerManager14_PackInventoryER10PlayerInfo,PlayerManager::_PackInventory(PlayerInfo&)
+370c9c,76,PlayerManager,_ZN13PlayerManager24ResetCharacterDeathTimerEv,PlayerManager::ResetCharacterDeathTimer()
+370e00,72,PlayerManager,_ZN13PlayerManager16ClearLoadingInfoEv,PlayerManager::ClearLoadingInfo()
+371050,136,PlayerManager,_ZN13PlayerManager29_AttachLightToPlayerCharacterEi,PlayerManager::_AttachLightToPlayerCharacter(int)
+3714ac,196,PlayerManager,_ZN13PlayerManagerD1Ev,PlayerManager::~PlayerManager()
+371580,20,PlayerManager,_ZN13PlayerManagerD0Ev,PlayerManager::~PlayerManager()
+37159c,196,PlayerManager,_ZN13PlayerManagerD2Ev,PlayerManager::~PlayerManager()
+37193c,420,PlayerManager,_ZN13PlayerManager22_CheckOnlineTransitionEv,PlayerManager::_CheckOnlineTransition()
+371d80,1016,PlayerManager,_ZN13PlayerManager15RemoveCharacterEP9Character,PlayerManager::RemoveCharacter(Character*)
+3721b8,104,PlayerManager,_ZN13PlayerManager19RemoveAllCharactersEv,PlayerManager::RemoveAllCharacters()
+372220,1128,PlayerManager,_ZN13PlayerManager13_AddCharacterEi,PlayerManager::_AddCharacter(int)
+3726bc,260,PlayerManager,_ZN13PlayerManager12RemovePlayerEi,PlayerManager::RemovePlayer(int)
+3727c0,76,PlayerManager,_ZN13PlayerManager16RemoveAllPlayersEv,PlayerManager::RemoveAllPlayers()
+37280c,4912,PlayerManager,_ZN13PlayerManager17_ManageCharactersEv,PlayerManager::_ManageCharacters()
+374b28,180,PlayerManager,_ZN13PlayerManagerC1Ev,PlayerManager::PlayerManager()
+374be4,180,PlayerManager,_ZN13PlayerManagerC2Ev,PlayerManager::PlayerManager()
+37565c,1068,PlayerManager,_ZN13PlayerManager18ReviveLocalPlayersEb,PlayerManager::ReviveLocalPlayers(bool)
+375af0,932,PlayerManager,_ZN13PlayerManager19_HandleGlobalDeathsEv,PlayerManager::_HandleGlobalDeaths()
+375eb4,296,PlayerManager,_ZN13PlayerManager18_CheckGlobalDeathsEv,PlayerManager::_CheckGlobalDeaths()
+375fe8,264,PlayerManager,_ZN13PlayerManager18_HandleLocalDeathsEv,PlayerManager::_HandleLocalDeaths()
+376100,128,PlayerManager,_ZN13PlayerManager17_CheckLocalDeathsEv,PlayerManager::_CheckLocalDeaths()
+376380,568,PlayerManager,_ZN13PlayerManager25OnHostChangedNotificationEi,PlayerManager::OnHostChangedNotification(int)
+378a40,332,PlayerManager,_ZN13PlayerManager10_AddPlayerEiiib,"PlayerManager::_AddPlayer(int, int, int, bool)"
+378b94,236,PlayerManager,_ZN13PlayerManager23_CheckRemoteControllersEv,PlayerManager::_CheckRemoteControllers()
+378c80,604,PlayerManager,_ZN13PlayerManager22_CheckLocalControllersEv,PlayerManager::_CheckLocalControllers()
+378fb4,200,PlayerManager,_ZN13PlayerManager6UpdateEv,PlayerManager::Update()
+3e8b3c,64,SpawnGroupManager,_ZN17SpawnGroupManagerC2Ev,SpawnGroupManager::SpawnGroupManager()
+3e8b84,64,SpawnGroupManager,_ZN17SpawnGroupManagerC1Ev,SpawnGroupManager::SpawnGroupManager()
+3e8c40,144,SpawnGroupManager,_ZN17SpawnGroupManager8GetGroupEPKc,SpawnGroupManager::GetGroup(char const*)
+3e8f24,88,SpawnGroupManager,_ZN17SpawnGroupManagerD1Ev,SpawnGroupManager::~SpawnGroupManager()
+3e8f84,20,SpawnGroupManager,_ZN17SpawnGroupManagerD0Ev,SpawnGroupManager::~SpawnGroupManager()
+3e8fa0,88,SpawnGroupManager,_ZN17SpawnGroupManagerD2Ev,SpawnGroupManager::~SpawnGroupManager()
+3e907c,348,SpawnGroupManager,_ZN17SpawnGroupManager8DelSpawnEP9SpawnSpot,SpawnGroupManager::DelSpawn(SpawnSpot*)
+3e9238,1656,SpawnGroupManager,_ZN17SpawnGroupManager6updateEd,SpawnGroupManager::update(double)
+3ea098,348,SpawnGroupManager,_ZN17SpawnGroupManager8InsSpawnEP9SpawnSpot,SpawnGroupManager::InsSpawn(SpawnSpot*)
+3ea730,116,SpawnGroupManager,_ZN17SpawnGroupManager11GetInstanceEv,SpawnGroupManager::GetInstance()
+3ea20c,8,SpawnPoint,_ZNK10SpawnPoint11IsUpdatableEv,SpawnPoint::IsUpdatable() const
+3ea214,8,SpawnPoint,_ZNK10SpawnPoint9IsZonableEv,SpawnPoint::IsZonable() const
+3ea21c,8,SpawnPoint,_ZNK10SpawnPoint10IsAnimatedEv,SpawnPoint::IsAnimated() const
+3ea224,8,SpawnPoint,_ZNK10SpawnPoint13IsInteractiveEP10GameObject,SpawnPoint::IsInteractive(GameObject*) const
+3ea22c,88,SpawnPoint,_ZN10SpawnPoint11PlaceObjectEP10GameObject,SpawnPoint::PlaceObject(GameObject*)
+3ea28c,48,SpawnPoint,_ZN10SpawnPoint8InitPostEv,SpawnPoint::InitPost()
+3ea2cc,52,SpawnPoint,_ZN10SpawnPointD1Ev,SpawnPoint::~SpawnPoint()
+3ea320,20,SpawnPoint,_ZN10SpawnPointD0Ev,SpawnPoint::~SpawnPoint()
+3ea33c,52,SpawnPoint,_ZN10SpawnPointD2Ev,SpawnPoint::~SpawnPoint()
+3ea388,84,SpawnPoint,_ZN10SpawnPointC1EN10ObjectBase6GO_IDSE,SpawnPoint::SpawnPoint(ObjectBase::GO_IDS)
+3ea3fc,84,SpawnPoint,_ZN10SpawnPointC2EN10ObjectBase6GO_IDSE,SpawnPoint::SpawnPoint(ObjectBase::GO_IDS)
+3ea554,176,SpawnPoint,_ZN10SpawnPoint17DeclarePropertiesEv,SpawnPoint::DeclareProperties()
+3ea6e4,8,SpawnSpot,_ZNK9SpawnSpot11IsUpdatableEv,SpawnSpot::IsUpdatable() const
+3ea6ec,8,SpawnSpot,_ZNK9SpawnSpot9IsZonableEv,SpawnSpot::IsZonable() const
+3ea6f4,8,SpawnSpot,_ZNK9SpawnSpot10IsAnimatedEv,SpawnSpot::IsAnimated() const
+3ea6fc,8,SpawnSpot,_ZNK9SpawnSpot13IsInteractiveEP10GameObject,SpawnSpot::IsInteractive(GameObject*) const
+3ea704,44,SpawnSpot,_ZN9SpawnSpot11PlaceObjectEP10GameObject,SpawnSpot::PlaceObject(GameObject*)
+3ea7b8,68,SpawnSpot,_ZN9SpawnSpot9InitFinalEv,SpawnSpot::InitFinal()
+3ea7fc,4,SpawnSpot,_ZN9SpawnSpot8InitPostEv,SpawnSpot::InitPost()
+3ea808,68,SpawnSpot,_ZN9SpawnSpotD1Ev,SpawnSpot::~SpawnSpot()
+3ea86c,20,SpawnSpot,_ZN9SpawnSpotD0Ev,SpawnSpot::~SpawnSpot()
+3ea888,68,SpawnSpot,_ZN9SpawnSpotD2Ev,SpawnSpot::~SpawnSpot()
+3ea8e4,76,SpawnSpot,_ZN9SpawnSpotC1EN10ObjectBase6GO_IDSE,SpawnSpot::SpawnSpot(ObjectBase::GO_IDS)
+3ea94c,76,SpawnSpot,_ZN9SpawnSpotC2EN10ObjectBase6GO_IDSE,SpawnSpot::SpawnSpot(ObjectBase::GO_IDS)
+3eaa98,72,SpawnSpot,_ZN9SpawnSpot17DeclarePropertiesEv,SpawnSpot::DeclareProperties()

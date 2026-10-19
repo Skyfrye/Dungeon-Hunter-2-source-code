@@ -1,0 +1,269 @@
+--[[	Tornado
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Cyclone");
+local AREA_CLASS_ID	= GetPyOID("ClassTable", "Skill_Cyclone_Proximity");
+local PROJECTILE_ID	= GetPyOID("ProjectileTable", "Tornado");
+
+local CST_STUNNED		= GetPyCst("AIStates", "Stunned");
+local STRCT_SNS_LVL	= GetPyStruct("CharacterProperties", "SnS_Level");
+
+local LOOK_AT_RANGE	= 1500;
+local LOOK_AT_ANGLE	= 360;
+local TICK_DELAY		= 500;
+
+local AREA_RANGE		= 300;
+local AREA_ANGLE		= 360;
+
+-- Cached values
+local skill_level = 0;
+local mana_cost;
+
+local proj_count = 0;
+local projectiles = {}
+local timer_tick;
+local hack_self;
+local traces 			= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- FUNCTIONS
+-- ----------------------------------------------------------------------------------------------
+
+-- ----------------------------------------------------------------------------------------------
+local function GetProjectilePosition(projectile)
+	if(not hack_self) then
+		hack_self = GetSelf();
+	end
+
+	hack_self._this = projectile;	-- Trading a LUD for a LUD
+	return hack_self:GetPosition();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function HandleTick()
+		-- FOR EACH PROJECTILE
+	for projectile, pdata in pairs(projectiles) do
+		local x,y,z	= GetProjectilePosition(projectile);
+
+		-- In case the victim is still in front of the projectile,
+		-- we need to use the delta vector obtained from the initial
+		-- projectile's position with the current projectile's position,
+		-- to obtain its direction.
+		local dx	= x-pdata.x;
+		local dy	= y-pdata.y;
+		local dz	= z-pdata.z;
+
+		if (traces) then Trace("[Skills/Cyclone] Projectile is now at "..x..", "..y..", "..z); end
+
+		-- FOR EACH GAME OBJECTS ENCOUNTERED
+		for _, obj in pairs(pdata.rolls) do
+			SkillCombatRoll(obj.ptr);
+			obj.ptr:UNLOCK();
+		end
+		pdata.rolls = {};
+
+		-- FOR EACH VICTIMS
+		if(pdata.vcount > 0) then
+			SetProp(STRCT_SNS_LVL, ToFixed(skill_level));
+			ApplyPropClass(CLASS_ID);
+
+			for victim_id, victim_data in pairs(pdata.victims) do
+				if(victim_data.ptr:GetState() == CST_STUNNED) then
+					if (trace) then Trace("[Skills/Cyclone] "..victim_data.ptr:GetName() .. " has been stunned; we can move him!"); end
+
+					local vx,vy,vz = victim_data.ptr:GetPosition();
+					if (not IsBoss(victim_data.ptr)) then
+						if (not IsMiniBoss(victim_data.ptr)) then
+							victim_data.ptr:HeadTo(vx+dx, vy+dy, vz);	-- Z-UP
+						end
+					end
+				else
+				    -- Apply DoT once
+					local dmg = SkillCombatRoll(victim_data.ptr);
+
+					if(victim_data.ptr:GetState() == CST_STUNNED) then
+						if (trace) then Trace("[Skills/Cyclone] "..victim_data.ptr:GetName() .. " has been stunned; we can move him!"); end
+
+						local vx,vy,vz = victim_data.ptr:GetPosition();
+						if (not IsBoss(victim_data.ptr)) then
+							if (not IsMiniBoss(victim_data.ptr)) then
+								victim_data.ptr:HeadTo(vx+dx, vy+dy, vz);	-- Z-UP
+							end
+						end
+					end
+				end
+			end
+		end
+
+		-- COLLATERAL DAMAGE
+		-- (Enemies near the tornado, but who didn't get caught by it)
+		SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+		SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+		SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+
+		TargetListSearch(AREA_RANGE, AREA_ANGLE, x, y, z, false);
+
+		if(not IsTargetListEmpty()) then
+			SetProp(STRCT_SNS_LVL, ToFixed(skill_level));
+			ApplyPropClass(AREA_CLASS_ID);
+
+			repeat
+				local target = GetTargetListTop();
+				PopTargetList();
+
+				-- We make sure it is not one of our victim
+				if(not pdata.victims[target:GetID()]) then
+					if (traces) then Trace("[Skills/Cyclone] Dealing Collateral Damage to "..target:GetName()); end
+					SkillCombatRoll(target);
+				end
+			until(IsTargetListEmpty())
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function CreateTornado()
+	local tornado	= SpawnSkillProjectile(PROJECTILE_ID);
+	local x, y, z	= GetPosition();
+
+	projectiles[tornado] = {victims={}, rolls={}, vcount=0, x=x, y=y, z=z};
+	proj_count = proj_count + 1;
+
+	if(proj_count == 1) then
+		timer_tick = StartSkillTimerCB(TICK_DELAY, true, HandleTick);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function CleanUp(projectile)
+	if (traces) then Trace("[Skills/Cyclone] Cleaning up"); end
+
+	for _, obj in pairs(projectiles[projectile].rolls) do
+		obj.ptr:UNLOCK();
+	end
+	for _, chr in pairs(projectiles[projectile].victims) do
+		chr.ptr:UNLOCK();
+	end
+
+	projectiles[projectile] = nil;
+	proj_count = proj_count - 1;
+
+	if(proj_count == 0) then
+		StopTimerCB(timer_tick);
+		timer_tick = nil;
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function AddVictim(victim, projectile)
+	local pdata = projectiles[projectile];
+
+	if(not pdata) then
+		return;
+	end
+
+	-- Game Objects are not victims, but we must handle them anyway
+	if(not victim:IsCharacter()) then
+		if (traces) then Trace("[Skills/Cyclone] Object encountered: "..victim:GetName()); end
+
+		if(not pdata.rolls[victim:GetID()]) then
+			pdata.rolls[victim:GetID()] = {ptr=victim};
+			victim:LOCK();
+		end
+
+	-- Character are handled differently
+	else
+		if (traces) then Trace("[Skills/Cyclone] Character caught in the tornado: "..victim:GetName()); end
+
+		if(not pdata.victims[victim:GetID()]) then
+			pdata.victims[victim:GetID()] = {ptr=victim};
+			pdata.vcount = pdata.vcount + 1;
+			victim:LOCK();
+		end
+
+	end
+end
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	AREA_RANGE = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"), true));
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(LOOK_AT_RANGE, LOOK_AT_ANGLE);
+
+	if(not IsTargetListEmpty()) then
+		LookAt( (GetTargetListTop()) );
+	end
+
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	CreateTornado();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target, projectile)
+	-- If we expired, we clean up our stuff
+	if(not target) then
+		CleanUp(projectile);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkillCheck_(target, projectile)
+	-- The tornado never "hits" anyone,
+	-- but we do keep track of our victims.
+	AddVictim(target, projectile);
+	return false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkillEx({	update=OnSkillUpdate_,
+						check=OnSkillCheck_,
+						pre=OnPreSkill_,
+						skill=OnSkill_,
+						post=OnPostSkill_,
+						delayed=OnDelayedSkill_,
+						info=OnSkillInfo_,
+						delayed_check=OnDelayedSkillCheck_,
+						});

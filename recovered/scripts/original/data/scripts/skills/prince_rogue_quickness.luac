@@ -1,0 +1,105 @@
+--[[	Quickness (Buff)
+
+	Timed buff
+	The hero running speed and Dodge skill is increased for a short duration.
+		Mana Cost: 15		|	+1 mana cost
+		Cast time: na		|
+		Duration: 4 sec	|	+1 sec duration
+		
+		Note: Still need to be tweaked. Will have to check for time per level
+		20 may 2010, this version is working now. Still the SLVL bug, and
+						 the time is defined here not in the character class 
+		
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+local BUFF_ID		= GetPyOID("ClassTable", "Skill_Rogue_Quickness_buff");
+local BUFF_FX		= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_rogue_quickness");
+local SKILL_ID		= GetPyOID("ClassTable", "Skill_Rogue_Quickness");
+
+-- Others skill affect the SNS value... Need to do it here.
+local TIME_BASE 	= 4000;
+local TIME_INC		= 1000;
+
+-- Cached values
+local skill_level	= 0;
+local mana_cost;
+local bufftime;
+local buff			= nil;
+local buff_timer;
+local traces		= false;
+
+-- ----------------------------------------------------------------------------------------------
+-- Utils
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function BuffExpired(timerId)
+	if(buff and buff_timer == timerId) then
+		if (traces) then Trace("[LUA SCRIPT]Quickness: Buff expired"); end
+		buff = nil;
+	end
+end
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(SKILL_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(SKILL_ID, skill_level);
+	bufftime = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Duration"), true));
+	-- Failsafe in case the SNS_duration is overidden by another skill
+	if (bufftime==0) then
+		bufftime = TIME_BASE+(TIME_INC*skill_level);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	if (buff) then
+		RemoveBuff(BUFF_ID, buff);
+		buff = nil;
+	end
+
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	local slvl = GetCurrentSkillInfo();
+	if (traces) then Trace ("[LUA SCRIPT]Quickness: The duration of the BUFF is "..(bufftime/1000).." seconds."); end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(slvl));
+	SetBuffProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(slvl));
+	
+	buff = CreateBuff(BUFF_ID, bufftime , false, slvl, BUFF_FX);
+	ApplyBuff(BUFF_ID, buff);
+	-- Even if the buff has a duration, there is no callbacks associated with it,
+	-- so we keep our own timer.
+	buff_timer = StartSkillTimerCB(bufftime, 0, BuffExpired);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

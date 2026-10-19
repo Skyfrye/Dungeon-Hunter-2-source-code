@@ -1,0 +1,85 @@
+--[[	Whirling Drift
+
+	This skill attacks all enemies in a 360 degree angle around the warrior who
+	performs it. The targets receive half the warrior melee weapons damage and
+	are pushed backwards a little. There is a forward movement in addition to 
+	the whirl. 
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE			= 360.0;
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Berserk_WhirlingDrift");
+
+-- Cached values
+local skill_level = 0;
+local mana_cost;
+local target;
+local traces 	= false;
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+
+	TargetListSearch(RANGE);
+
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(not IsTargetListEmpty()) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+
+		repeat
+			local target = GetTargetListTop();
+			PopTargetList();
+
+			local dmg = SkillCombatRoll(target);
+			if (traces) then
+				if (FromFixed(dmg)==-1) then Trace("[Skills | Whirling wind] Missed!"); end
+				if (FromFixed(dmg)>0) then Trace("[Skills | Whirling wind] Caused "..FromFixed(dmg).." damage!"); end
+				if (target:IsDead()) then Trace("[Skills | Whirling wind] You killed the monster!"); end
+			end
+		until(IsTargetListEmpty())
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

@@ -1,0 +1,2 @@
+Include("Assassin1_settings");
+Include("generic_boss_core");

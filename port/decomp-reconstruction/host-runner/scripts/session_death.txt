@@ -1,0 +1,19 @@
+# (b) Hero death and respawn. First death: the hero walks into the lizard and moth packs of the first area and stands there without fighting
+# (walkto steps through the path-finding; no attack button). Second death: the controller's kill command (v2Controller::Cmd_Kill).
+# `auto 1` taps through the death screen ("no time to rest") and skips the cut scene that the level restart (Level::Restart) replays.
+60 tap 1000 700
+200 tap 2148 322
+300 tap 2136 368
+420 tap 1200 540
+700 auto 1
+700 herostat
+720 levelstat before-pack
+730 walkto -6876 -250 3000
+3740 levelstat after-pack
+3740 herostat
+3750 kill
+4300 levelstat after-kill-respawn
+4300 herostat
+4310 hunt 900 3500
+5220 levelstat after-hunt
+5230 quit

@@ -1,0 +1,323 @@
+--[[
+
+	OnSkillCheck():
+		-	Must return (bool), (bool)
+			>	1st bool indicates if the skill can be used (do mana check, cooldown check, whatever...)
+			>	2nd bool indicates if the skill is active (in case of buff/debuff/aura/triggered etc.)
+
+--]]
+-- Common Includes (So we don't need to include it in each files)
+
+
+-- Globals, to be called by C++
+OnSkillUpdate = nil;
+OnSkillCleanUp = nil;
+OnSkillCheck = nil;
+OnPreSkill = nil;
+OnSkill = nil;
+OnPostSkill = nil;
+OnDelayedSkill = nil;
+OnDelayedSkillCheck = nil;
+OnSkillInfo = nil;
+
+
+-- Handling of skills
+local SKILLS		= {};
+local DEFAULT_NAME	= "--no skills defined--";
+local WORKING_NAME	= nil;
+local WORKING_ID	= -1;
+local SKILL_ID		= nil;
+local SKILL_NAME	= nil;
+
+
+-- [C++] - Indicates what skill is going to be loaded (i.e. call RegisterSkill)
+function DeclareSkill(skillName, skillId)
+	WORKING_NAME	= skillName;
+	WORKING_ID		= skillId;
+end
+
+
+-- [Lua] - Add a skill callbacks to our skill list
+function RegisterSkill(callback_update, callback_check, callback_pre, callback, callback_post, callback_delayed, callback_info)
+	RegisterSkillEx({	update=callback_update,
+						check=callback_check,
+						pre=callback_pre,
+						skill=callback,
+						post=callback_post,
+						delayed=callback_delayed,
+						info=callback_info,
+						});
+end
+
+function RegisterSkillEx(callbacks)
+	if(type(callbacks) ~= "table") then
+		Trace("Invalid callbacks: Must be a table");
+		return;
+	end
+
+	if(not WORKING_NAME) then
+		Trace("Can't register a skill at this time");
+		return;
+	end
+
+	if(SKILLS[WORKING_NAME]) then
+		Trace("A skill with the '"..WORKING_NAME.."' name already is registered!");
+		return;
+	end
+
+	if(	not callbacks["update"]
+		or	not callbacks["check"]
+		or	not callbacks["pre"]
+		or	not callbacks["skill"]) then
+		Trace("Skill '"..WORKING_NAME.."' doesn't define every requried callbacks.");
+		return;
+	end
+
+	SKILLS[WORKING_NAME]						= {};
+	SKILLS[WORKING_NAME].ID						= WORKING_ID;
+	SKILLS[WORKING_NAME].OnSkillUpdate			= callbacks["update"]			or SKILLS[DEFAULT_NAME].OnSkillUpdate;
+	SKILLS[WORKING_NAME].OnSkillCleanUp			= callbacks["cleanup"]			or SKILLS[DEFAULT_NAME].OnSkillCleanUp;
+	SKILLS[WORKING_NAME].OnSkillCheck			= callbacks["check"]			or SKILLS[DEFAULT_NAME].OnSkillCheck;
+	SKILLS[WORKING_NAME].OnPreSkill				= callbacks["pre"]				or SKILLS[DEFAULT_NAME].OnPreSkill;
+	SKILLS[WORKING_NAME].OnSkill				= callbacks["skill"]			or SKILLS[DEFAULT_NAME].OnSkill;
+	SKILLS[WORKING_NAME].OnPostSkill			= callbacks["post"]				or SKILLS[DEFAULT_NAME].OnPostSkill;
+	SKILLS[WORKING_NAME].OnDelayedSkillCheck	= callbacks["delayed_check"]	or SKILLS[DEFAULT_NAME].OnDelayedSkillCheck;
+	SKILLS[WORKING_NAME].OnDelayedSkill			= callbacks["delayed"]			or SKILLS[DEFAULT_NAME].OnDelayedSkill;
+	SKILLS[WORKING_NAME].OnSkillInfo			= callbacks["info"]				or SKILLS[DEFAULT_NAME].OnSkillInfo;
+end
+
+
+-- [C++] - Set a skill as the `active` one (i.e. one we are going to call)
+function SetSkill(skillName, skillId)
+	if(SKILLS[skillName]) then
+		OnSkillUpdate		= SKILLS[skillName].OnSkillUpdate;
+		OnSkillCleanUp		= SKILLS[skillName].OnSkillCleanUp;
+		OnSkillCheck		= SKILLS[skillName].OnSkillCheck;
+		OnPreSkill			= SKILLS[skillName].OnPreSkill;
+		OnSkill				= SKILLS[skillName].OnSkill;
+		OnPostSkill			= SKILLS[skillName].OnPostSkill;
+		OnDelayedSkill		= SKILLS[skillName].OnDelayedSkill;
+		OnDelayedSkillCheck	= SKILLS[skillName].OnDelayedSkillCheck;
+		OnSkillInfo			= SKILLS[skillName].OnSkillInfo;
+		SKILL_ID			= SKILLS[skillName].ID;
+		SKILL_NAME			= skillName;
+	else
+		SetSkill(DEFAULT_NAME, nil);
+	end
+end
+
+
+-- [C++] - Put back the default skill as active
+function UnsetSkill()
+	SetSkill(DEFAULT_NAME, nil);
+end
+
+
+-- We place a default implementation for our callbacks
+DeclareSkill(DEFAULT_NAME, -1);
+RegisterSkillEx({	update			= function() Trace("Invalid OnSkillUpdate()");								end,
+					cleanup			= function()						end,
+					check			= function() Trace("Invalid OnSkillCheck()");		return false, false;	end,
+					pre				= function() Trace("Invalid OnPreSkill()");			return false;			end,
+					skill			= function() Trace("Invalid OnSkill()");			return false;			end,
+					post			= function() 																end,
+					delayed			= function() 																end,
+					delayed_check	= function()										--[[return true]]		end,
+					info			= function() 																end,
+					});
+SetSkill(DEFAULT_NAME);
+
+
+
+-- ---------------------------------------------------------------------------------
+-- [Lua] - Proxy methods, to avoid async. call to C++ functions causing side effects
+-- ---------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------
+local function SkillTimerCB_(timerId, refData)
+	if(type(refData.callback) == "function") then
+		local backupID = SKILL_ID;
+		SKILL_ID = refData.skill_id;
+		refData.callback(timerId, refData.refData);
+		SKILL_ID = backupID;
+	end
+end
+
+-- ---------------------------------------------------------------------------------
+function StartSkillTimerCB(timeMs, loop, callback, refData)
+	local tmpData = {callback = callback, skill_id = SKILL_ID, refData = refData};
+
+	return StartTimerCB(timeMs, loop, SkillTimerCB_, tmpData);
+end
+
+
+-- ---------------------------------------------------------------------------------
+local function SkillAnimEventCB_(event_name, refData)
+	if(type(refData.callback) == "function") then
+		local backupID = SKILL_ID;
+		SKILL_ID = refData.skill_id;
+		refData.callback(event_name, refData.refData);
+		SKILL_ID = backupID;
+	end
+end
+
+-- ---------------------------------------------------------------------------------
+function AttachToSkillAnimEvent(event_name, callback, refData)
+	local tmpData = {callback = callback, skill_id = SKILL_ID, refData = refData};
+
+	return AttachToAnimEvent(event_name, SkillAnimEventCB_, tmpData);
+end
+
+
+-- ---------------------------------------------------------------------------------
+function GetCurrentSkillInfo()
+	return GetCurrentSkillInfo__(SKILL_ID);
+end
+
+-- ---------------------------------------------------------------------------------
+function SkillCombatRoll(object)
+	return SkillCombatRoll__(SKILL_ID, object);
+end
+
+-- ---------------------------------------------------------------------------------
+function SpawnSkillProjectile(...)
+	return SpawnSkillProjectile__(SKILL_ID, ...);
+end
+
+-- ---------------------------------------------------------------------------------
+function StopSkill()
+	StopSkill__(SKILL_ID);
+end
+
+-- ---------------------------------------------------------------------------------
+-- [Lua] - Helper methods - Cooldown
+-- ---------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------
+local function SkillCooldownExpiredCB_(timerId, skillName)
+	local skill = SKILLS[skillName];
+
+	if(skill) then
+		SetSkillCooldownTimerId__(skill.ID, nil);
+		skill.COOLDOWN = nil;
+	end
+end
+
+-- ---------------------------------------------------------------------------------
+function SetSkillCooldown(delay)
+	if(delay > 0) then
+		local timerId = StartSkillTimerCB(delay, false, SkillCooldownExpiredCB_, SKILL_NAME);
+
+		SetSkillCooldownTimerId__(SKILL_ID, timerId);
+		SKILLS[SKILL_NAME].COOLDOWN = timerId;
+	end
+end
+
+-- ---------------------------------------------------------------------------------
+function HasSkillCooldown()
+	return SKILLS[SKILL_NAME].COOLDOWN;
+end
+
+
+-- ---------------------------------------------------------------------------------
+local function SpellCooldownExpiredCB_(timerId)
+	SetSpellCooldownTimerId__(nil);
+	SPELL_COOLDOWN = nil;
+end
+
+-- ---------------------------------------------------------------------------------
+function SetSpellCooldown(delay)
+	if(delay > 0) then
+		local timerId = StartTimerCB(delay, false, SpellCooldownExpiredCB_);
+
+		SetSpellCooldownTimerId__(timerId);
+		SPELL_COOLDOWN = timerId;
+	end
+end
+
+-- ---------------------------------------------------------------------------------
+function HasSpellCooldown()
+	return SPELL_COOLDOWN;
+end
+
+-- ---------------------------------------------------------------------------------
+-- [Lua] - Helper methods
+-- ---------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------
+function SetTempProps(class_id, skill_level)
+	ClearProps(true);
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level), true);
+	ApplyPropClass(class_id, true);
+end
+
+-- ---------------------------------------------------------------------------------
+function CalcManaCost(class_id, skill_level)
+	SetTempProps(class_id, skill_level);
+	return GetProp(GetPyStruct("CharacterProperties", "SnS_ManaCost"), true);
+end
+
+-- ---------------------------------------------------------------------------------
+function IsBoss(target)
+local flag = target:GetCharAIFlags();
+	if (BitAnd(flag, GetPyCst("AIFlags", "Boss")) ~= 0) then
+		return true;
+	end
+	return false;
+end
+-- ---------------------------------------------------------------------------------
+function IsMiniBoss(target)
+local flag = target:GetCharAIFlags();
+	if (BitAnd(flag, GetPyCst("AIFlags", "MiniBoss")) ~= 0) then
+		return true;
+	end
+	return false;
+end
+
+-- ---------------------------------------------------------------------------------
+function IsWeak(target)
+local flag = target:GetCharAIFlags();
+	if (flag == GetPyCst("AIFlags", "Weak")) then
+		return true;
+	end
+	return false;
+end
+
+
+-- ---------------------------------------------------------------------------------
+-- [Lua] - AI Events
+-- ---------------------------------------------------------------------------------
+local AI_EVENTS_LISTENERS = {};
+
+-- ---------------------------------------------------------------------------------
+-- WARNING:	If the AI really uses the event, the AI will stop working properly.
+--			This is basically for players' skills, which has an empty AI.
+--			Also, some events are not propagated to Lua for the players,
+--			so make sure to ask a programmer if an event can be stealed.
+function StealAIEvent(eventName, func)
+	if(type(func) == "function") then
+		if(not AI_EVENTS_LISTENERS[eventName]) then
+			AI_EVENTS_LISTENERS[eventName] = {};
+
+			local globals = getfenv(0);
+
+			globals["AIEventProxy_"..eventName] = function(...)
+				local funcs = AI_EVENTS_LISTENERS[eventName];
+				local backupSkillId = SKILL_ID;
+-- 				Trace("backing up "..tostring(SKILL_ID));
+
+				for _, fdata in ipairs(funcs) do
+					SKILL_ID = fdata.skillId;
+-- 					Trace("setting the skill id to "..tostring(SKILL_ID).." temporarily");
+					fdata.func(...);
+				end
+				SKILL_ID = backupSkillId;
+-- 				Trace("reverting back to "..tostring(SKILL_ID));
+			end
+
+			AddToVFTable(eventName, "AIEventProxy_"..eventName);
+		end
+
+		table.insert(AI_EVENTS_LISTENERS[eventName], {func=func, skillId=WORKING_ID});
+
+	else
+		Trace(tostring(func) .. " is not a function");
+	end
+end

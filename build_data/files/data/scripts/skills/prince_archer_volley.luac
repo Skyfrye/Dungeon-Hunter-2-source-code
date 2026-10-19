@@ -1,0 +1,186 @@
+--[[	Volley
+
+	Long range multiple target medium damage  attack. Throw an arrow to multiple target.
+	Medium mana cost (TL Ricochet?)
+	
+	05/21/2010 Seem to work now. Only missing now is the skill upgrade increase for the % chances
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+
+local RANGE						= 900.0;
+local ANGLE						= 270.0;
+
+local CLASS_ID					= GetPyOID("ClassTable", "Skill_Archer_Volley");
+local AIR_PROJECTILE_ID			= GetPyOID("ProjectileTable", "ArrowDefault");
+
+-- Cached values
+local skill_level				= 0;
+local mana_cost;
+
+local oldTarget 				= nil;
+local newTarget					= nil;
+local projectile				= nil;
+local projectileRebound			= nil;
+local chances					= nil;
+
+local traces					= true;
+
+-- ----------------------------------------------------------------------------------------------
+local function rebound_chance()
+	local rnd_roll = GetRand(0,100);
+	if (rnd_roll < chances) then
+		return true;
+	else
+		return false;
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function do_rebound(origin)
+	local damageTarget = false;
+	
+	if (rebound_chance()) then	
+		if (traces) then Trace("[Skill | Volley] Rebound!"); end
+		
+		SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+		SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+		SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+		
+		TargetListSearch(RANGE,360,origin);
+		
+		repeat
+			if(not IsTargetListEmpty()) then
+				target = GetTargetListTop();
+				
+				if (target:GetName() ~= oldTarget:GetName()) then
+					damageTarget = true;
+					if (traces) then Trace("[Skill | Volley] Found new target: " .. target:GetName()); end
+				end
+				
+				PopTargetList();
+			end
+		until ((IsTargetListEmpty()) or (damageTarget)) 
+
+		if (damageTarget) then	
+			projectileRebound = SpawnSkillProjectile(AIR_PROJECTILE_ID, origin, target);
+			SetProjectileTarget( projectileRebound, target );
+			newTarget = target;
+			if (traces) then Trace("[Skill | Volley] Here is going the second projectile! Victim: " .. target:GetName()); end
+		else
+			if (traces) then Trace("No Targets to attack!"); end
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(slvl));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	
+	-- Retrieving the Class properties for the BonusDamage and the chances of pierce (rebound).
+	chances = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"), true));
+	
+	if (traces) then Trace ("Here is the chances of piercing now:" .. chances); end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	if(not HasBow()) then
+		return false, false
+	end
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	
+	TargetListSearch(RANGE,ANGLE);
+	
+	if(not IsTargetListEmpty()) then
+		local target = GetTargetListTop();
+		LookAt(target);
+		if (traces) then Trace ("DEBUG: Initial check: "..GetTargetListSize().." Potential target(s)"); end
+	end
+	-- Use the mana
+	UseMana(mana_cost);
+	oldTarget = nil;
+	newTarget = nil;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	local target;
+	local victims = GetTargetListSize();
+	
+	if(not IsTargetListEmpty()) then 
+	  	target = GetTargetListTop();
+		LookAt(target);
+		PopTargetList();
+		if (traces) then Trace("[Skill | Volley] Here is the first arrow! Victims:"..GetTargetListSize()); end
+		projectile = SpawnSkillProjectile(AIR_PROJECTILE_ID);
+	else
+		if (traces) then Trace("[Skill | Volley] Here is the first arrow!"); end
+		SpawnSkillProjectile(AIR_PROJECTILE_ID);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target, proj)
+	if (target) then
+	
+		if (proj == projectile) then
+			Trace("Target's name is: " .. target:GetName());
+			
+		elseif (proj == projectileRebound) then
+		
+			if (target:GetName() == oldTarget:GetName()) then
+				target = newTarget; -- Faking it since SetProjectileTarget doesn't seem to work
+			end
+		end
+		
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+		local dmg = SkillCombatRoll(target);
+		
+		if (dmg ~= nil) then
+		
+			if (traces) then Trace ("Target: " .. target:GetName() .. " got "..FromFixed(dmg).." damage"); end
+		end
+		
+		if (oldTarget == nil) then
+			oldTarget = target;
+		end
+		
+		do_rebound(target);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_, OnSkillInfo_);

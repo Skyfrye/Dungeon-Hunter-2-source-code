@@ -1,0 +1,190 @@
+--[[	Conversion (Passive)
+
+	A successful attack has a chance to convert the target to fight on player's side
+	Does not affect boss monsters
+	The conversion is permanent
+
+--]]
+-- Preset Values
+local BUFF_DELAY_BASE 	= 10000;
+local BUFF_DELAY_LEVEL	= 2500;
+local BUFF_CHANCE_BASE	= 5.0;
+local BUFF_CHANCE_LEVEL	= 1.0;
+-- 
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Paladin_Conversion");
+local BUFF_ID		= GetPyOID("ClassTable", "FactionBuff3");
+
+local BUFF_DELAY;
+local BUFF_CHANCE;
+
+local BUFF_FX		= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_warrior_paladin_conversion_persist") 
+
+-- Cached values
+local skill_level	= 0;
+local buff;
+local buff_timer	= -1;
+local traces		= false;
+-- New stuff for keeping in memory the buffs, the object names, and their timer.
+local memory			= {};
+local memory_object 	= {};
+local memory_buff		= {};
+
+local function cleanup()
+	-- If the buff is cleared then remove the NPC from the list
+	local a=0;
+	repeat
+		a=a+1;
+-- 		if (memory_object[a]:IsDead()) then 
+-- 			memory_object[a]=nil;
+-- 			Trace("Object in slot is dead, removing it.."); 
+-- 		end
+		if (memory_buff[a]==nil and memory_object[a]~=nil) then 
+			memory_object[a]=nil;
+			if (traces) then Trace("Buff is cleared"); end
+		end
+	until (a==6);
+end
+
+local function check_free_slot()
+	local a=0;
+	local freeslot = 0;
+	repeat
+		a=a+1;
+		if (memory_object[a]==nil) then freeslot=a; end
+	until (a==6 or freeslot>0);
+	if (traces) then Trace("The current freeslot is slot:"..freeslot); end
+	return freeslot
+end
+
+local function find_slot(name)
+	local a=0;
+	local found = false;
+	if (traces) then Trace("Asked name:"..name); end
+	repeat
+		a=a+1;
+		if (memory_object[a]==name) then found=true; end
+		if (memory_object[a]~=nil and found) then 
+			if (traces) then Trace("Match with memory slot "..a); end
+		end
+	until (a==6 or found);
+	if (found) then return a; else return 0; end
+end
+
+local function BuffExpired(timerId, target)
+	if(buff_timer == timerId) then
+		target:SetIsTargetable(true);
+		buff_timer=-1;
+	end
+end
+-- ----------------------------------------------------------------------------------------------
+local function OnTargetHit_Skill(attacker, defender)
+	local skip = false;
+	if (skill_level > 0) then
+		if (attacker:GetID() == GetID()) then
+			if (not IsBoss(defender) and not IsMiniBoss(defender)) then
+				
+				-- This will check around the 6 slots to check for a converted and break the spell on them
+				-- Will stop the timer and destroy the buff
+				cleanup();
+				local converted=find_slot(defender:GetName());
+				if (converted>0) then
+					if (traces) then Trace("We have found a converted! Removing the buff on slot:"..converted); end
+					defender:RemoveBuff(BUFF_ID, memory_buff[converted]);
+					memory_object[converted] = nil;
+					memory_buff[converted] = nil;
+					table.remove(memory_buff,converted);
+					skip = true;
+				end
+				
+				local rnd_roll = GetRand(0,100);
+				if (traces) then
+					Trace ("[Skill Conversion]  Round roll is "..rnd_roll.." % and the BUFF Chance is:"..BUFF_CHANCE.."%");
+					Trace ("[Skill Conversion]  Buff delay is "..BUFF_DELAY.."ms");
+				end
+				if (rnd_roll < BUFF_CHANCE) then
+					if (traces) then Trace("[Skill Conversion] Condition initiated"); end
+					if (traces) then Trace("[Skill Conversion] Applying BUFF"); end
+					if (IsBoss(defender)) then
+						if (traces) then Trace("[Skill Conversion] Applying BUFF on a BOSS?!! WTF!!!"); end
+					end
+					if (IsMiniBoss(defender)) then
+						if (traces) then Trace("[Skill Conversion] Applying BUFF on a BOSS?!! WTF!!!"); end
+					end
+					if (not defender:IsDead() and not skip) then
+						local checkslot = check_free_slot();
+						-- Creating and applying a buff on the object (conversion)
+						memory_buff[checkslot] = defender:CreateBuff(BUFF_ID, BUFF_DELAY, false, skill_level, BUFF_FX);
+						defender:ApplyBuff(BUFF_ID, memory_buff[checkslot]);
+						-- Only have a sound confirming that the NPC is converted
+						PlaySound("sfx_passive_skill_activate_1",false,0,false);
+						-- Does a stop on the NPC and player so they stop fighting since they are friend now
+						Stop();
+						defender:Stop();
+						-- Remove the targeting for the NPC for a little while, enable it back after 2 sec.
+						-- But do only one occurence of this (should be, but better check)
+						if (buff_timer==-1) then
+							defender:SetIsTargetable(false);
+							buff_timer = StartSkillTimerCB(2000, 0, BuffExpired, defender);
+						end
+						
+						-- Keep infos in memory slots to found back the buff
+						
+						if (checkslot~=0) then
+							if (traces) then Trace("adding the object"..defender:GetName().. " to the slot:"..checkslot); end
+							memory_object[checkslot]=defender:GetName();
+							if (#memory_buff<=6) then
+								table.insert(memory_buff,buff);
+							end
+						end
+					end
+				end
+			end
+			else
+			if (traces) then 
+				Trace("[Skill Conversion] Boss or Miniboss detected, not using this..."); 
+			end
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+
+
+
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+		SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	local plvl = GetProp(GetPyStruct("CharacterProperties", "Level"));
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(slvl));
+	ApplyPropClass(CLASS_ID);
+	BUFF_DELAY	= FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Duration"),true));
+	BUFF_CHANCE = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"),true));
+	if (traces) then Trace ("[Skill Conversion] Buff Delay="..BUFF_DELAY.." Buff chance="..BUFF_CHANCE); end
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

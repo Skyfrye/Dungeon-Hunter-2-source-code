@@ -1,0 +1,8 @@
+bossroom.mgx
+close_01.mgx
+close_02.mgx
+close_03.mgx
+open_01.mgx
+open_02.mgx
+open_03.mgx
+startroom.mgx

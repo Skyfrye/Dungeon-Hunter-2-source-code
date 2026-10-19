@@ -1,0 +1,97 @@
+--[[	Disciples
+
+	Chance to causes other nearby monsters to target the enemy the Illusionist attack. 
+		
+	AoE: 200 radius
+	!!! Warning, this skill currently WILL affect the bosses faction.
+	!!! We need a LUA command to check for bosses status.
+	
+	Chance: 10%
+--]]
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Illusionist_Disciples");
+local BUFF_FX		= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_mage_illusionist_hypnotic_gaze_persist");
+
+-- Cached values
+local skill_level	= 0;
+local RANGE 		= 1200;		-- Basic Range for the effect or the skill
+attack_chance 		= 10;			-- Basic attack chance faction reversal value
+
+local bufftime		=	10000; 	-- Fixed buff duration of ten(10) seconds
+local buff			= 	{};		-- Groups of buffs
+local counter		=	0;
+local traces		= true;
+
+
+-- ----------------------------------------------------------------------------------------------
+local function BuffExpired(timerId, counter, defender)
+	if(buff[counter] ~= nil) then
+		Trace("[LUA SCRIPT]Disciples: Buff expired");
+		RemoveBuff(CLASS_ID, buff[counter]);
+		buff[counter] = nil;
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnTargetHit_Skill(attacker, defender)
+	if (defender:GetHP() > 0) then
+		if (skill_level > 0 and attacker:GetID() == GetID()) then
+			if (defender:IsCharacter()) then
+				SetTarget(defender);
+				-- My attempt to calculate a % chance of doing the skill
+				local chance1 = GetRand(1, 100);
+				if (traces) then
+					Trace ("[Skill/disciples] The skill chance is :"..chance1);
+					Trace ("[Skill/disciples] The current radius is:"..RANGE);
+					Trace ("[Skill/disciples] The current chance is:"..attack_chance);
+				end
+				if (chance1<attack_chance) then
+					if (traces) then Trace ("[Skill/Disciples] MATCH!"); end
+					if (not IsBoss(defender) and not IsMiniBoss(defender)) then 
+						buff[counter] = defender:CreateBuff(CLASS_ID, bufftime, false, skill_level, BUFF_FX);
+						defender:ApplyBuff(CLASS_ID, buff[counter]);
+						StartSkillTimerCB(bufftime, false, BuffExpired, counter, defender);
+						counter = counter + 1;
+					end
+				end
+			end
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	RANGE 			= FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"), true));
+	attack_chance 	= FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp2"), true));
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

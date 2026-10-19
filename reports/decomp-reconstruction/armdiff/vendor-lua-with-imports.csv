@@ -1,0 +1,2 @@
+category,address,symbol,demangled,source_file,orig_size,trivial,shape,result,reason_or_difference,cases,equal,fault_equal,inconclusive,mismatch,first_case,first_difference,mismatch_class,orig_coverage_pct,flags,recon_symbol,src_sha1,notes
+vendor-lua,0x854180,math_random,math_random,vendor-lua/src/v1-vendor-lua-lib_lua-d91850-0.cpp,376,,internal,excluded,call shape internal not in scope (use --shape any),0,0,0,0,0,,,,,,,,

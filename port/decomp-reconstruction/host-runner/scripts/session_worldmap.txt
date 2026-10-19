@@ -1,0 +1,12 @@
+# (c2) The route of session_exit.txt, but at the exit zone the fast-travel panel's "world map" button is pressed (route N worldmap):
+# the world map (GSLevelMap / MenuWorldMap) opens instead of the next level.
+60 tap 1000 700
+200 tap 2148 322
+300 tap 2136 368
+420 tap 1200 540
+700 auto 1
+700 levelstat start
+720 route 7000 worldmap
+6900 levelstat worldmap
+6900 shot worldmap
+7400 quit

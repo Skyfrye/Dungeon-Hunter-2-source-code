@@ -1,0 +1,15 @@
+corner_rootden_ne_.mgx
+corner_rootden_nw_.mgx
+corner_rootden_se_.mgx
+corner_rootden_sw_.mgx
+deadend_rootden_e_.mgx
+deadend_rootden_n_.mgx
+deadend_rootden_s_.mgx
+deadend_rootden_w_.mgx
+objboss_rootden_w_.mgx
+objcross_rootden_nesw_.mgx
+objentry_rootden_e_.mgx
+straight_rootden_ew_.mgx
+straight_rootden_ns_.mgx
+t_rootden_esw_.mgx
+t_rootden_wne_.mgx

@@ -1,0 +1,74 @@
+; ARM ELF recovered assembly. Addresses are original ELF virtual addresses.
+; .byte marks mapped data or bytes Capstone could not decode.
+; This is an annotated listing, not assembler-ready source.
+
+; FUNCTION 0x00764840, declared_size=124, range_size=124, mode=arm
+; class-group: gameswf::array<gameswf::smart_ptr<gameswf::movie_definition> >
+; alias: _ZN7gameswf5arrayINS_9smart_ptrINS_16movie_definitionEEEE7reserveEi
+; demangled: gameswf::array<gameswf::smart_ptr<gameswf::movie_definition> >::reserve(int)
+; decoder-mode: arm
+00764840  10 40 2d e9                                      push {r4, lr}
+00764844  0c 30 d0 e5                                      ldrb r3, [r0, #0xc]
+00764848  00 40 a0 e1                                      mov r4, r0
+0076484c  00 00 53 e3                                      cmp r3, #0
+00764850  0f 00 00 1a                                      bne #0x764894
+00764854  00 00 51 e3                                      cmp r1, #0
+00764858  08 20 90 e5                                      ldr r2, [r0, #8]
+0076485c  08 10 80 e5                                      str r1, [r0, #8]
+00764860  0c 00 00 1a                                      bne #0x764898
+00764864  00 00 90 e5                                      ldr r0, [r0]
+00764868  00 00 50 e3                                      cmp r0, #0
+0076486c  01 00 00 0a                                      beq #0x764878
+00764870  02 11 a0 e1                                      lsl r1, r2, #2
+00764874  af b8 ff eb                                      bl #0x752b38
+00764878  00 30 a0 e3                                      mov r3, #0
+0076487c  00 30 84 e5                                      str r3, [r4]
+00764880  10 80 bd e8                                      pop {r4, pc}
+00764884  01 01 a0 e1                                      lsl r0, r1, #2
+00764888  0c 10 a0 e1                                      mov r1, ip
+0076488c  c2 b8 ff eb                                      bl #0x752b9c
+00764890  00 00 84 e5                                      str r0, [r4]
+00764894  10 80 bd e8                                      pop {r4, pc}
+00764898  00 c0 90 e5                                      ldr ip, [r0]
+0076489c  00 00 5c e3                                      cmp ip, #0
+007648a0  f7 ff ff 0a                                      beq #0x764884
+007648a4  0c 00 a0 e1                                      mov r0, ip
+007648a8  01 11 a0 e1                                      lsl r1, r1, #2
+007648ac  02 21 a0 e1                                      lsl r2, r2, #2
+007648b0  bd b8 ff eb                                      bl #0x752bac
+007648b4  00 00 84 e5                                      str r0, [r4]
+007648b8  10 80 bd e8                                      pop {r4, pc}
+
+; FUNCTION 0x00765328, declared_size=112, range_size=112, mode=arm
+; class-group: gameswf::array<gameswf::smart_ptr<gameswf::movie_definition> >
+; alias: _ZN7gameswf5arrayINS_9smart_ptrINS_16movie_definitionEEEE6resizeEi.clone.3
+; demangled: gameswf::array<gameswf::smart_ptr<gameswf::movie_definition> >::resize(int) [clone .clone.3]
+; decoder-mode: arm
+00765328  70 40 2d e9                                      push {r4, r5, r6, lr}
+0076532c  04 40 90 e5                                      ldr r4, [r0, #4]
+00765330  00 60 a0 e1                                      mov r6, r0
+00765334  00 00 54 e3                                      cmp r4, #0
+00765338  0b 00 00 da                                      ble #0x76536c
+0076533c  00 50 a0 e3                                      mov r5, #0
+00765340  00 30 96 e5                                      ldr r3, [r6]
+00765344  05 01 93 e7                                      ldr r0, [r3, r5, lsl #2]
+00765348  01 50 85 e2                                      add r5, r5, #1
+0076534c  00 00 50 e3                                      cmp r0, #0
+00765350  00 00 00 0a                                      beq #0x765358
+00765354  b9 d3 ff eb                                      bl #0x75a240
+00765358  04 00 55 e1                                      cmp r5, r4
+0076535c  f7 ff ff 1a                                      bne #0x765340
+00765360  00 30 a0 e3                                      mov r3, #0
+00765364  04 30 86 e5                                      str r3, [r6, #4]
+00765368  70 80 bd e8                                      pop {r4, r5, r6, pc}
+0076536c  fb ff ff aa                                      bge #0x765360
+00765370  04 31 a0 e1                                      lsl r3, r4, #2
+00765374  00 10 a0 e3                                      mov r1, #0
+00765378  00 20 96 e5                                      ldr r2, [r6]
+0076537c  01 40 94 e2                                      adds r4, r4, #1
+00765380  03 10 82 e7                                      str r1, [r2, r3]
+00765384  04 30 83 e2                                      add r3, r3, #4
+00765388  fa ff ff 1a                                      bne #0x765378
+0076538c  00 30 a0 e3                                      mov r3, #0
+00765390  04 30 86 e5                                      str r3, [r6, #4]
+00765394  70 80 bd e8                                      pop {r4, r5, r6, pc}

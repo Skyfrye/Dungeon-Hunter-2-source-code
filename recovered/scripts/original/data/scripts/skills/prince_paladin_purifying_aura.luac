@@ -1,0 +1,159 @@
+--[[	Puryfying Aura
+
+	Give a HP boost
+	Affects all allies
+	Medium mana cost
+	
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 300.0;
+local HEAL_AMOUNT		= 15;
+
+local BUFF_ID			= GetPyOID("ClassTable", "Skill_Paladin_PurifyingAura");
+local BUFF_FX			= GetPyOID("AnimatedEffectTable", "skill_dh2_prince_warrior_paladin_purifying_aura");
+local BUFF_FX2			= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_warrior_paladin_purifying_aura");
+local BUFF_PERSIST		= GetPyOID("AnimatedEffectTable", "skill_dh2_prince_warrior_paladin_purifying_aura_persist");
+local BUFF_TIME			= 12000;
+
+local CST_CHR_FILTER	= GetPyCst("AITargetList_CharacterFilter", "Player");
+local CST_OBJ_FILTER	= GetPyCst("AITargetList_ObjectFilter", "NONE");
+local CST_SORTING		= GetPyCst("AITargetList_Sorting", "NoSort");
+local CST_SEARCH_RANGE 	= 6000;
+
+
+-- Cached values
+local skill_level		= 0;
+local mana_cost			= nil;
+local buff				= nil;
+local buff_timer		= nil;
+local traces			= false;
+
+-- ----------------------------------------------------------------------------------------------
+local function Heal(target, amount)
+
+	local HP_Curr, HP_Max = target:GetPropHP(); -- Get the current health of the target
+	local hpIncrease = (skill_level * amount);	-- Define the HP that will be added to the target
+	local maxHealth = HP_Curr + hpIncrease;		-- Define that maximum amount of health that can be added
+	
+	if (traces) then Trace("Target has " .. HP_Max .. " health points and now is health bar should be at " .. maxHealth); end
+	
+	if (HP_Max > maxHealth) then
+		target:SetBuffProp(GetPyStruct("CharacterProperties", "HP"),ToFixed(maxHealth));
+	else
+		target:SetBuffProp(GetPyStruct("CharacterProperties", "HP"),ToFixed(HP_Max));
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function SearchForTargets()
+	
+	if (buff) then 
+		RemoveBuff(BUFF_ID, buff);
+		buff = nil; 
+	end
+	
+	-- Apply the buff to all allies from a 60 meter radius
+	SetTargetListCharacterFilter(CST_CHR_FILTER);
+	SetTargetListObjectFilter(CST_OBJ_FILTER);
+	SetTargetListSorting(CST_SORTING);
+	
+	TargetListSearch(CST_SEARCH_RANGE);
+	
+	repeat
+		if (not IsTargetListEmpty()) then
+		
+			local target = GetTargetListTop();
+			if (target:IsPlayer() and (target:GetName() ~= GetSelf():GetName())) then
+			
+				-- Apply buff to target
+				target:PlayFX(BUFF_FX2); 
+				Heal(target, HEAL_AMOUNT);
+				local targetBuff = target:CreateBuff(BUFF_ID, BUFF_TIME, false, skill_level, BUFF_PERSIST);
+				target:ApplyBuff(BUFF_ID, targetBuff);
+			end
+			
+			PopTargetList();
+		else
+			-- No targets found
+			if (traces) then Trace ("[SKILLS: Purifying aura] No other target"); end
+		end
+	until(IsTargetListEmpty())
+	
+	-- Apply buff to self
+	Heal(GetSelf(), HEAL_AMOUNT);
+	buff = CreateBuff(BUFF_ID, BUFF_TIME, false, skill_level, BUFF_PERSIST);
+	ApplyBuff(BUFF_ID, buff);
+	PlayFX(BUFF_FX); 
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(BUFF_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	
+	local slvl = GetCurrentSkillInfo();
+	
+	if (slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost = CalcManaCost(BUFF_ID, skill_level);
+	
+	if (buff and skill_level == 0) then
+		RemoveBuff(BUFF_ID, buff);
+	end
+	
+	if(buff and skill_level ~= 0) then
+		SetBuffProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(slvl));
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	local myHP = GetPropHP();
+	if (traces) then Trace("[SKILLS: My HP is: " .. myHP); end
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	if (traces) then 
+		Trace("[SKILLS: Purifying aura] OnPreSkill Called"); 
+		Trace("[SKILLS: Purifying aura] Wasting mana right away..."); 
+		Trace("[SKILLS: Purifying aura] Time of buff="..BUFF_TIME);
+	end
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if (traces) then 
+		Trace("[SKILLS: Purifying aura] OnSkill Called");
+		Trace("[SKILLS: Purifying aura] Activating the buff"); 
+	end
+	
+	SearchForTargets();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+local function OnBuffered_()
+	if (traces) then Trace("[SKILLS: Purifying aura] checking for a buffered function now."); end
+end
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnBuffered_, OnSkillInfo_);

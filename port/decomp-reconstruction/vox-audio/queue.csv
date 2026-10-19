@@ -1,0 +1,1141 @@
+elf_address,body_bytes,owner,name,demangled
+86366c,20,<global>,_Z8DestructIN3vox15StreamInterfaceEEvPT_,void Destruct<vox::StreamInterface>(vox::StreamInterface*)
+874e64,52,<global>,_Z5fgetcPN3vox21StreamCursorInterfaceE,fgetc(vox::StreamCursorInterface*)
+874e98,64,<global>,_Z5freadPvjjPN3vox21StreamCursorInterfaceE,"fread(void*, unsigned int, unsigned int, vox::StreamCursorInterface*)"
+874ed8,36,<global>,_Z5ftellPN3vox21StreamCursorInterfaceE,ftell(vox::StreamCursorInterface*)
+874efc,40,<global>,_Z5fseekPN3vox21StreamCursorInterfaceEii,"fseek(vox::StreamCursorInterface*, int, int)"
+874f24,8,<global>,_Z6fclosePN3vox21StreamCursorInterfaceE,fclose(vox::StreamCursorInterface*)
+876298,8,<global>,_Z26get_stb_vorbis_struct_sizev,get_stb_vorbis_struct_size()
+8762a0,52,<global>,_Z28stb_vorbis_get_stream_offsetP10stb_vorbis,stb_vorbis_get_stream_offset(stb_vorbis*)
+8762d4,12,<global>,_Z22stb_vorbis_get_channelP10stb_vorbis,stb_vorbis_get_channel(stb_vorbis*)
+8762e0,44,<global>,_Z30stb_vorbis_get_previous_windowP10stb_vorbisi,"stb_vorbis_get_previous_window(stb_vorbis*, int)"
+87630c,44,<global>,_Z21stb_vorbis_get_bufferP10stb_vorbisi,"stb_vorbis_get_buffer(stb_vorbis*, int)"
+876338,16,<global>,_Z21stb_vorbis_set_streamP10stb_vorbisPN3vox21StreamCursorInterfaceE,"stb_vorbis_set_stream(stb_vorbis*, vox::StreamCursorInterface*)"
+876348,12,<global>,_Z26stb_vorbis_get_blocksize_1P10stb_vorbis,stb_vorbis_get_blocksize_1(stb_vorbis*)
+876354,12,<global>,_Z15stb_vorbis_copyP10stb_vorbisS0_,"stb_vorbis_copy(stb_vorbis*, stb_vorbis*)"
+876e18,20,<global>,_Z28stb_vorbis_get_sample_offsetP10stb_vorbis,stb_vorbis_get_sample_offset(stb_vorbis*)
+876e2c,56,<global>,_Z19stb_vorbis_get_infoP10stb_vorbis,stb_vorbis_get_info(stb_vorbis*)
+876e64,20,<global>,_Z20stb_vorbis_get_errorP10stb_vorbis,stb_vorbis_get_error(stb_vorbis*)
+876e78,20,<global>,_Z24stb_vorbis_open_filenamePcPiP16stb_vorbis_alloc,"stb_vorbis_open_filename(char*, int*, stb_vorbis_alloc*)"
+8775f4,124,<global>,_ZL17setup_temp_mallocP10stb_vorbisi,"setup_temp_malloc(stb_vorbis*, int)"
+877680,168,<global>,_ZL12setup_mallocP10stb_vorbisi,"setup_malloc(stb_vorbis*, int)"
+877738,68,<global>,_ZL15setup_temp_freeP10stb_vorbisPvj,"setup_temp_free(stb_vorbis*, void*, unsigned int)"
+87777c,44,<global>,_ZL10setup_freeP10stb_vorbisPv,"setup_free(stb_vorbis*, void*)"
+8777a8,108,<global>,_ZL4getnP10stb_vorbisPhi,"getn(stb_vorbis*, unsigned char*, int)"
+877828,84,<global>,_ZL4get8P10stb_vorbis,get8(stb_vorbis*)
+87787c,64,<global>,_ZL5get32P10stb_vorbis,get32(stb_vorbis*)
+877a5c,164,<global>,_ZL12next_segmentP10stb_vorbis,next_segment(stb_vorbis*)
+877b5c,92,<global>,_ZL15get8_packet_rawP10stb_vorbis,get8_packet_raw(stb_vorbis*)
+877bb8,200,<global>,_ZL8get_bitsP10stb_vorbisi,"get_bits(stb_vorbis*, int)"
+877c80,104,<global>,_ZL12prep_huffmanP10stb_vorbis,prep_huffman(stb_vorbis*)
+877ce8,168,<global>,_ZL18maybe_start_packetP10stb_vorbis,maybe_start_packet(stb_vorbis*)
+877f58,52,<global>,_Z26stb_vorbis_get_file_offsetP10stb_vorbis,stb_vorbis_get_file_offset(stb_vorbis*)
+877f8c,96,<global>,_ZL4skipP10stb_vorbisi,"skip(stb_vorbis*, int)"
+877fec,176,<global>,_ZL15set_file_offsetP10stb_vorbisj,"set_file_offset(stb_vorbis*, unsigned int)"
+87836c,348,<global>,_Z35stb_vorbis_stream_length_in_samplesP10stb_vorbis,stb_vorbis_stream_length_in_samples(stb_vorbis*)
+8784c8,40,<global>,_Z35stb_vorbis_stream_length_in_secondsP10stb_vorbis,stb_vorbis_stream_length_in_seconds(stb_vorbis*)
+878634,40,<global>,_Z17inverse_mdct_slowPfiP10stb_vorbisi,"inverse_mdct_slow(float*, int, stb_vorbis*, int)"
+87871c,944,<global>,_ZL14init_blocksizeP10stb_vorbisii,"init_blocksize(stb_vorbis*, int, int)"
+87a9bc,36,<global>,_Z16stb_vorbis_closeP10stb_vorbis,stb_vorbis_close(stb_vorbis*)
+87a9e0,460,<global>,_ZL26codebook_decode_scalar_rawP10stb_vorbisP8Codebook,"codebook_decode_scalar_raw(stb_vorbis*, Codebook*)"
+87abac,564,<global>,_ZL35codebook_decode_deinterleave_repeatP10stb_vorbisP8CodebookPPfiPiS5_ii,"codebook_decode_deinterleave_repeat(stb_vorbis*, Codebook*, float**, int, int*, int*, int, int)"
+87ae5c,276,<global>,_ZL21codebook_decode_startP10stb_vorbisP8Codebooki,"codebook_decode_start(stb_vorbis*, Codebook*, int)"
+87debc,52,<global>,_Z21stb_vorbis_seek_startP10stb_vorbis,stb_vorbis_seek_start(stb_vorbis*)
+87def0,216,<global>,_Z22stb_vorbis_open_memoryPhiPiP16stb_vorbis_alloc,"stb_vorbis_open_memory(unsigned char*, int, int*, stb_vorbis_alloc*)"
+87dfe4,212,<global>,_Z28stb_vorbis_open_file_sectionPN3vox21StreamCursorInterfaceEiPiP16stb_vorbis_allocj,"stb_vorbis_open_file_section(vox::StreamCursorInterface*, int, int*, stb_vorbis_alloc*, unsigned int)"
+87e0c8,112,<global>,_Z20stb_vorbis_open_filePN3vox21StreamCursorInterfaceEiPiP16stb_vorbis_alloc,"stb_vorbis_open_file(vox::StreamCursorInterface*, int, int*, stb_vorbis_alloc*)"
+87e138,184,<global>,_Z26stb_vorbis_get_frame_floatP10stb_vorbisPiPPPf,"stb_vorbis_get_frame_float(stb_vorbis*, int*, float***)"
+87e1f0,336,<global>,_Z28stb_vorbis_get_samples_floatP10stb_vorbisiPPfi,"stb_vorbis_get_samples_float(stb_vorbis*, int, float**, int)"
+87e358,28,<global>,_Z40stb_vorbis_get_samples_float_interleavedP10stb_vorbisiPfi,"stb_vorbis_get_samples_float_interleaved(stb_vorbis*, int, float*, int)"
+87e4a8,208,<global>,_Z28stb_vorbis_get_samples_shortP10stb_vorbisiPPsi,"stb_vorbis_get_samples_short(stb_vorbis*, int, short**, int)"
+87e578,28,<global>,_Z40stb_vorbis_get_samples_short_interleavedP10stb_vorbisiPsi,"stb_vorbis_get_samples_short_interleaved(stb_vorbis*, int, short*, int)"
+87e658,108,<global>,_Z26stb_vorbis_get_frame_shortP10stb_vorbisiPPsi,"stb_vorbis_get_frame_short(stb_vorbis*, int, short**, int)"
+87e6c4,136,<global>,_Z38stb_vorbis_get_frame_short_interleavedP10stb_vorbisiPsi,"stb_vorbis_get_frame_short_interleaved(stb_vorbis*, int, short*, int)"
+87e750,280,<global>,_Z24stb_vorbis_decode_memoryPhiPiS0_PPs,"stb_vorbis_decode_memory(unsigned char*, int, int*, int*, short**)"
+87e894,280,<global>,_Z26stb_vorbis_decode_filenamePcPiPPs,"stb_vorbis_decode_filename(char*, int*, short**)"
+87f1b0,8,<global>,_Z15stb_vorbis_seekP10stb_vorbisj,"stb_vorbis_seek(stb_vorbis*, unsigned int)"
+87f1b8,8,<global>,_Z21stb_vorbis_seek_frameP10stb_vorbisj,"stb_vorbis_seek_frame(stb_vorbis*, unsigned int)"
+896038,20,AdpcmState,_ZN10AdpcmStateC2Ev,AdpcmState::AdpcmState()
+89604c,20,AdpcmState,_ZN10AdpcmStateC1Ev,AdpcmState::AdpcmState()
+896060,4,AdpcmState,_ZN10AdpcmStateD2Ev,AdpcmState::~AdpcmState()
+896064,4,AdpcmState,_ZN10AdpcmStateD1Ev,AdpcmState::~AdpcmState()
+310444,4,lib-vox-audio,_Z7VoxFreePv,VoxFree(void*)
+3104f8,4,lib-vox-audio,_Z8VoxAllocj,VoxAlloc(unsigned int)
+310648,24,lib-vox-audio,_Z8VoxAllocjN3vox10VoxMemHintE,"VoxAlloc(unsigned int, vox::VoxMemHint)"
+310664,40,lib-vox-audio,_Z8VoxAllocjN3vox10VoxMemHintEPKcS2_i,"VoxAlloc(unsigned int, vox::VoxMemHint, char const*, char const*, int)"
+31068c,12,lib-vox-audio,_Z8VoxAllocjPKcS0_i,"VoxAlloc(unsigned int, char const*, char const*, int)"
+3691e4,4,lib-vox-audio,_ZN3vox6HandleD1Ev,vox::Handle::~Handle()
+3691e8,12,lib-vox-audio,_ZNK3vox6Handle5GetIdEv,vox::Handle::GetId() const
+3691f4,8,lib-vox-audio,_ZNK3vox6Handle16GetObjectPointerEv,vox::Handle::GetObjectPointer() const
+3691fc,20,lib-vox-audio,_ZNK3vox6Handle12GetTimeStampERjS1_,"vox::Handle::GetTimeStamp(unsigned int&, unsigned int&) const"
+369210,12,lib-vox-audio,_ZN3vox6Handle12SetTimeStampEjj,"vox::Handle::SetTimeStamp(unsigned int, unsigned int)"
+36921c,116,lib-vox-audio,_ZN15VoxSoundManager11UnloadSoundEi,VoxSoundManager::UnloadSound(int)
+369298,80,lib-vox-audio,_ZN15VoxSoundManager15UnloadAllSoundsEv,VoxSoundManager::UnloadAllSounds()
+3692f0,28,lib-vox-audio,_ZN15VoxSoundManager24ConvertVisual3DToSound3DERKN6glitch4core8vector3dIfEE,VoxSoundManager::ConvertVisual3DToSound3D(glitch::core::vector3d<float> const&)
+369348,4,lib-vox-audio,_ZN15VoxSoundManager14SetIPodShuffleEv,VoxSoundManager::SetIPodShuffle()
+36934c,4,lib-vox-audio,_ZN15VoxSoundManager15UpdateIPodAsyncEv,VoxSoundManager::UpdateIPodAsync()
+369480,4,lib-vox-audio,_ZN15VoxSoundManager20GetIPodPlaylistCountEv,VoxSoundManager::GetIPodPlaylistCount()
+369484,28,lib-vox-audio,_ZN15VoxSoundManager15SetIPodPlaylistEi,VoxSoundManager::SetIPodPlaylist(int)
+3694a0,36,lib-vox-audio,_ZN3vox6HandleD0Ev,vox::Handle::~Handle()
+3694d4,56,lib-vox-audio,_ZN15VoxSoundManager14BackToMainMenuEv,VoxSoundManager::BackToMainMenu()
+369514,208,lib-vox-audio,_ZN15VoxSoundManager13SetMusicStateEPKc,VoxSoundManager::SetMusicState(char const*)
+3695f4,156,lib-vox-audio,_ZN15VoxSoundManager15SetLevelRoutingEi,VoxSoundManager::SetLevelRouting(int)
+3696dc,284,lib-vox-audio,_ZN15VoxSoundManager14IsSoundPlayingEi,VoxSoundManager::IsSoundPlaying(int)
+369804,224,lib-vox-audio,_ZN15VoxSoundManager14IsMusicPlayingEv,VoxSoundManager::IsMusicPlaying()
+3698f0,148,lib-vox-audio,_ZN15VoxSoundManager12StopAllMusicEi,VoxSoundManager::StopAllMusic(int)
+369990,80,lib-vox-audio,_ZN15VoxSoundManager13StopAllSoundsEi,VoxSoundManager::StopAllSounds(int)
+3699fc,212,lib-vox-audio,_ZN15VoxSoundManager9LoadSoundEi,VoxSoundManager::LoadSound(int)
+369b38,216,lib-vox-audio,_ZN15VoxSoundManager14GetSoundVolumeEi,VoxSoundManager::GetSoundVolume(int)
+369c2c,176,lib-vox-audio,_ZN15VoxSoundManager16SetInitialVolumeEfff,"VoxSoundManager::SetInitialVolume(float, float, float)"
+369da0,268,lib-vox-audio,_ZN15VoxSoundManager14SetSoundVolumeEif,"VoxSoundManager::SetSoundVolume(int, float)"
+369ee8,44,lib-vox-audio,_ZN15VoxSoundManager15GetMasterVolumeEv,VoxSoundManager::GetMasterVolume()
+369f1c,44,lib-vox-audio,_ZN15VoxSoundManager15SetMasterVolumeEf,VoxSoundManager::SetMasterVolume(float)
+369f50,148,lib-vox-audio,_ZN15VoxSoundManager14SetListenerPosERKN6glitch4core8vector3dIfEES5_S5_iif,"VoxSoundManager::SetListenerPos(glitch::core::vector3d<float> const&, glitch::core::vector3d<float> const&, glitch::core::vector3d<float> const&, int, int, float)"
+369fec,148,lib-vox-audio,_ZN15VoxSoundManager4StopEii,"VoxSoundManager::Stop(int, int)"
+36a138,88,lib-vox-audio,_ZN15VoxSoundManager8StopBeatEv,VoxSoundManager::StopBeat()
+36a1a0,108,lib-vox-audio,_ZN15VoxSoundManager9StopMusicEi,VoxSoundManager::StopMusic(int)
+36a218,152,lib-vox-audio,_ZN15VoxSoundManager6Stop3DEiiP7Point3DIfEf,"VoxSoundManager::Stop3D(int, int, Point3D<float>*, float)"
+36a470,272,lib-vox-audio,_ZN15VoxSoundManager6ResumeEi,VoxSoundManager::Resume(int)
+36a590,132,lib-vox-audio,_ZN15VoxSoundManager15ResumeAllSoundsEv,VoxSoundManager::ResumeAllSounds()
+36a624,56,lib-vox-audio,_ZN15VoxSoundManager14PauseAllSoundsEv,VoxSoundManager::PauseAllSounds()
+36a664,272,lib-vox-audio,_ZN15VoxSoundManager5PauseEi,VoxSoundManager::Pause(int)
+36a784,52,lib-vox-audio,_ZN15VoxSoundManager10PauseMusicEv,VoxSoundManager::PauseMusic()
+36a7c0,1060,lib-vox-audio,_ZN15VoxSoundManager18PlaySoundPackSoundEiPKcN3vox11FormatTypesEiiNS2_21VoxSourceLoadingFlagsERKN6glitch4core8vector3dIfEEff,"VoxSoundManager::PlaySoundPackSound(int, char const*, vox::FormatTypes, int, int, vox::VoxSourceLoadingFlags, glitch::core::vector3d<float> const&, float, float)"
+36afb0,60,lib-vox-audio,_ZN15VoxSoundManagerD1Ev,VoxSoundManager::~VoxSoundManager()
+36b048,56,lib-vox-audio,_ZN15VoxSoundManager14DeleteInstanceEv,VoxSoundManager::DeleteInstance()
+36b088,60,lib-vox-audio,_ZN15VoxSoundManagerD2Ev,VoxSoundManager::~VoxSoundManager()
+36b120,392,lib-vox-audio,_ZN15VoxSoundManager21ShowPlayingMusicTitleEPc,VoxSoundManager::ShowPlayingMusicTitle(char*)
+36b2cc,256,lib-vox-audio,_ZN15VoxSoundManager16ReleaseLvlSoundsEv,VoxSoundManager::ReleaseLvlSounds()
+36b420,116,lib-vox-audio,_ZN15VoxSoundManager9PlayEventEiRKN6glitch4core8vector3dIfEEff,"VoxSoundManager::PlayEvent(int, glitch::core::vector3d<float> const&, float, float)"
+36b5d8,112,lib-vox-audio,_ZN15VoxSoundManager6Play3DEiRKN6glitch4core8vector3dIfEEbiff,"VoxSoundManager::Play3D(int, glitch::core::vector3d<float> const&, bool, int, float, float)"
+36b80c,116,lib-vox-audio,_ZN15VoxSoundManager4PlayEibiib,"VoxSoundManager::Play(int, bool, int, int, bool)"
+36baa0,388,lib-vox-audio,_ZN15VoxSoundManager14CrossfadeMusicEii,"VoxSoundManager::CrossfadeMusic(int, int)"
+36bc34,36,lib-vox-audio,_ZN15VoxSoundManager8PlayMenuEibii,"VoxSoundManager::PlayMenu(int, bool, int, int)"
+36bc58,112,lib-vox-audio,_ZN15VoxSoundManager8PlayBeatEibb,"VoxSoundManager::PlayBeat(int, bool, bool)"
+36bd78,64,lib-vox-audio,_ZN15VoxSoundManager9PlayMusicEibbi,"VoxSoundManager::PlayMusic(int, bool, bool, int)"
+36c014,304,lib-vox-audio,_ZN15VoxSoundManager18SetInSafeZoneMusicEb,VoxSoundManager::SetInSafeZoneMusic(bool)
+36c164,104,lib-vox-audio,_ZN15VoxSoundManager11ResumeMusicEi,VoxSoundManager::ResumeMusic(int)
+36c224,104,lib-vox-audio,_ZN15VoxSoundManager12RestartMusicEi,VoxSoundManager::RestartMusic(int)
+36c2e4,116,lib-vox-audio,_ZN15VoxSoundManager10InitializeEv,VoxSoundManager::Initialize()
+36c734,28,lib-vox-audio,_ZN15VoxSoundManager19GetIPodPlaylistNameEi,VoxSoundManager::GetIPodPlaylistName(int)
+36c7b0,128,lib-vox-audio,_ZN15VoxSoundManagerC1Ev,VoxSoundManager::VoxSoundManager()
+36ca88,64,lib-vox-audio,_ZN15VoxSoundManager14CreateInstanceEv,VoxSoundManager::CreateInstance()
+36cad0,128,lib-vox-audio,_ZN15VoxSoundManagerC2Ev,VoxSoundManager::VoxSoundManager()
+36cda8,1024,lib-vox-audio,_ZN15VoxSoundManager11IPodControlEPKc,VoxSoundManager::IPodControl(char const*)
+8616f8,52,lib-vox-audio,_ZN3vox9VoxEngine13SuspendEngineEv,vox::VoxEngine::SuspendEngine()
+861734,52,lib-vox-audio,_ZN3vox9VoxEngine12ResumeEngineEv,vox::VoxEngine::ResumeEngine()
+861770,60,lib-vox-audio,_ZN3vox9VoxEngine17IsEngineSuspendedEv,vox::VoxEngine::IsEngineSuspended()
+8617b4,4,lib-vox-audio,_ZN3vox9VoxEngine6UpdateEf,vox::VoxEngine::Update(float)
+8617b8,4,lib-vox-audio,_ZN3vox9VoxEngine13UpdateSourcesEv,vox::VoxEngine::UpdateSources()
+8617bc,4,lib-vox-audio,_ZN3vox9VoxEngine14UpdateEmittersEf,vox::VoxEngine::UpdateEmitters(float)
+8617c0,52,lib-vox-audio,_ZN3vox9VoxEngine13SetMasterGainEff,"vox::VoxEngine::SetMasterGain(float, float)"
+8617fc,52,lib-vox-audio,_ZN3vox9VoxEngine12SetGroupGainEjff,"vox::VoxEngine::SetGroupGain(unsigned int, float, float)"
+861838,4,lib-vox-audio,_ZN3vox9VoxEngine41RegisterForEmitterStateChangeNotificationERNS_13EmitterHandleEPFvS2_PvNS_18EmitterExternStateEES3_,"vox::VoxEngine::RegisterForEmitterStateChangeNotification(vox::EmitterHandle&, void (*)(vox::EmitterHandle&, void*, vox::EmitterExternState), void*)"
+86183c,4,lib-vox-audio,_ZN3vox9VoxEngine43UnregisterForEmitterStateChangeNotificationERNS_13EmitterHandleE,vox::VoxEngine::UnregisterForEmitterStateChangeNotification(vox::EmitterHandle&)
+861840,52,lib-vox-audio,_ZN3vox9VoxEngine21UpdateSourcesThreadedEv,vox::VoxEngine::UpdateSourcesThreaded()
+86187c,4,lib-vox-audio,_ZN3vox9VoxEngine21UpdateSourcesThreadedEPvS1_,"vox::VoxEngine::UpdateSourcesThreaded(void*, void*)"
+861880,32,lib-vox-audio,_ZN3vox9VoxEngine12GetDebugInfoERNS_9DebugInfoE,vox::VoxEngine::GetDebugInfo(vox::DebugInfo&)
+8618a8,32,lib-vox-audio,_ZN3vox9VoxEngine10PrintDebugEv,vox::VoxEngine::PrintDebug()
+8618d0,32,lib-vox-audio,_ZN3vox9VoxEngine13SetOutputModeENS_13VoxOutputModeE,vox::VoxEngine::SetOutputMode(vox::VoxOutputMode)
+8618f8,40,lib-vox-audio,_ZN3vox9VoxEngine13GetOutputModeEv,vox::VoxEngine::GetOutputMode()
+861928,32,lib-vox-audio,_ZN3vox9VoxEngine24SetInteractiveMusicStateERNS_13EmitterHandleEPKc,"vox::VoxEngine::SetInteractiveMusicState(vox::EmitterHandle&, char const*)"
+861950,32,lib-vox-audio,_ZN3vox9VoxEngine22SetDSPEmitterParameterERNS_13EmitterHandleEiPv,"vox::VoxEngine::SetDSPEmitterParameter(vox::EmitterHandle&, int, void*)"
+861978,32,lib-vox-audio,_ZN3vox9VoxEngine18SetSFXPresetActiveEibf,"vox::VoxEngine::SetSFXPresetActive(int, bool, float)"
+8619a0,56,lib-vox-audio,_ZN3vox9VoxEngine16SetRoutingVolumeEPcS1_NS_22VoxDSPGeneralParameter14BusRoutingTypeEfff,"vox::VoxEngine::SetRoutingVolume(char*, char*, vox::VoxDSPGeneralParameter::BusRoutingType, float, float, float)"
+8619e0,32,lib-vox-audio,_ZN3vox9VoxEngine20SetDynamicBusRoutingEPc,vox::VoxEngine::SetDynamicBusRouting(char*)
+861a08,32,lib-vox-audio,_ZN3vox9VoxEngine19SetStaticBusRoutingEPc,vox::VoxEngine::SetStaticBusRouting(char*)
+861a30,32,lib-vox-audio,_ZN3vox9VoxEngine22Get3DGeneralParameteriEiRi,"vox::VoxEngine::Get3DGeneralParameteri(int, int&)"
+861a58,32,lib-vox-audio,_ZN3vox9VoxEngine22Get3DGeneralParameterfEiRf,"vox::VoxEngine::Get3DGeneralParameterf(int, float&)"
+861a80,32,lib-vox-audio,_ZN3vox9VoxEngine21Get3DGeneralParameterERNS_22Vox3DGeneralParametersE,vox::VoxEngine::Get3DGeneralParameter(vox::Vox3DGeneralParameters&)
+861aa8,56,lib-vox-audio,_ZN3vox9VoxEngine24Get3DListenerOrientationERfS1_S1_S1_S1_S1_,"vox::VoxEngine::Get3DListenerOrientation(float&, float&, float&, float&, float&, float&)"
+861ae8,32,lib-vox-audio,_ZN3vox9VoxEngine21Get3DListenerVelocityERfS1_S1_,"vox::VoxEngine::Get3DListenerVelocity(float&, float&, float&)"
+861b10,32,lib-vox-audio,_ZN3vox9VoxEngine21Get3DListenerPositionERfS1_S1_,"vox::VoxEngine::Get3DListenerPosition(float&, float&, float&)"
+861b38,32,lib-vox-audio,_ZN3vox9VoxEngine22Set3DGeneralParameteriEii,"vox::VoxEngine::Set3DGeneralParameteri(int, int)"
+861b60,32,lib-vox-audio,_ZN3vox9VoxEngine22Set3DGeneralParameterfEif,"vox::VoxEngine::Set3DGeneralParameterf(int, float)"
+861b88,32,lib-vox-audio,_ZN3vox9VoxEngine21Set3DGeneralParameterERKNS_22Vox3DGeneralParametersE,vox::VoxEngine::Set3DGeneralParameter(vox::Vox3DGeneralParameters const&)
+861bb0,56,lib-vox-audio,_ZN3vox9VoxEngine24Set3DListenerOrientationEffffff,"vox::VoxEngine::Set3DListenerOrientation(float, float, float, float, float, float)"
+861bf0,32,lib-vox-audio,_ZN3vox9VoxEngine21Set3DListenerVelocityEfff,"vox::VoxEngine::Set3DListenerVelocity(float, float, float)"
+861c18,32,lib-vox-audio,_ZN3vox9VoxEngine21Set3DListenerPositionEfff,"vox::VoxEngine::Set3DListenerPosition(float, float, float)"
+861c40,32,lib-vox-audio,_ZN3vox9VoxEngine22Get3DEmitterParameteriERNS_13EmitterHandleEiRi,"vox::VoxEngine::Get3DEmitterParameteri(vox::EmitterHandle&, int, int&)"
+861c68,32,lib-vox-audio,_ZN3vox9VoxEngine22Get3DEmitterParameterfERNS_13EmitterHandleEiRf,"vox::VoxEngine::Get3DEmitterParameterf(vox::EmitterHandle&, int, float&)"
+861c90,32,lib-vox-audio,_ZN3vox9VoxEngine22Get3DEmitterParametersERNS_13EmitterHandleERNS_22Vox3DEmitterParametersE,"vox::VoxEngine::Get3DEmitterParameters(vox::EmitterHandle&, vox::Vox3DEmitterParameters&)"
+861cb8,48,lib-vox-audio,_ZN3vox9VoxEngine21Get3DEmitterDirectionERNS_13EmitterHandleERfS3_S3_,"vox::VoxEngine::Get3DEmitterDirection(vox::EmitterHandle&, float&, float&, float&)"
+861cf0,48,lib-vox-audio,_ZN3vox9VoxEngine20Get3DEmitterVelocityERNS_13EmitterHandleERfS3_S3_,"vox::VoxEngine::Get3DEmitterVelocity(vox::EmitterHandle&, float&, float&, float&)"
+861d28,48,lib-vox-audio,_ZN3vox9VoxEngine20Get3DEmitterPositionERNS_13EmitterHandleERfS3_S3_,"vox::VoxEngine::Get3DEmitterPosition(vox::EmitterHandle&, float&, float&, float&)"
+861d60,32,lib-vox-audio,_ZN3vox9VoxEngine22Set3DEmitterParameteriERNS_13EmitterHandleEii,"vox::VoxEngine::Set3DEmitterParameteri(vox::EmitterHandle&, int, int)"
+861d88,32,lib-vox-audio,_ZN3vox9VoxEngine22Set3DEmitterParameterfERNS_13EmitterHandleEif,"vox::VoxEngine::Set3DEmitterParameterf(vox::EmitterHandle&, int, float)"
+861db0,32,lib-vox-audio,_ZN3vox9VoxEngine22Set3DEmitterParametersERNS_13EmitterHandleERKNS_22Vox3DEmitterParametersE,"vox::VoxEngine::Set3DEmitterParameters(vox::EmitterHandle&, vox::Vox3DEmitterParameters const&)"
+861dd8,48,lib-vox-audio,_ZN3vox9VoxEngine21Set3DEmitterDirectionERNS_13EmitterHandleEfff,"vox::VoxEngine::Set3DEmitterDirection(vox::EmitterHandle&, float, float, float)"
+861e10,48,lib-vox-audio,_ZN3vox9VoxEngine20Set3DEmitterVelocityERNS_13EmitterHandleEfff,"vox::VoxEngine::Set3DEmitterVelocity(vox::EmitterHandle&, float, float, float)"
+861e48,48,lib-vox-audio,_ZN3vox9VoxEngine20Set3DEmitterPositionERNS_13EmitterHandleEfff,"vox::VoxEngine::Set3DEmitterPosition(vox::EmitterHandle&, float, float, float)"
+861e80,40,lib-vox-audio,_ZN3vox9VoxEngine12GetGroupGainEi,vox::VoxEngine::GetGroupGain(int)
+861eb0,40,lib-vox-audio,_ZN3vox9VoxEngine13GetMasterGainEv,vox::VoxEngine::GetMasterGain()
+861ee0,32,lib-vox-audio,_ZN3vox9VoxEngine9GetStatusERNS_13EmitterHandleE,vox::VoxEngine::GetStatus(vox::EmitterHandle&)
+861f08,40,lib-vox-audio,_ZN3vox9VoxEngine6IsDoneERNS_13EmitterHandleE,vox::VoxEngine::IsDone(vox::EmitterHandle&)
+861f38,32,lib-vox-audio,_ZN3vox9VoxEngine9IsPlayingERNS_13EmitterHandleE,vox::VoxEngine::IsPlaying(vox::EmitterHandle&)
+861f60,32,lib-vox-audio,_ZN3vox9VoxEngine7IsAliveERNS_13EmitterHandleE,vox::VoxEngine::IsAlive(vox::EmitterHandle&)
+861f88,32,lib-vox-audio,_ZN3vox9VoxEngine7IsValidERNS_13EmitterHandleE,vox::VoxEngine::IsValid(vox::EmitterHandle&)
+861fb0,32,lib-vox-audio,_ZN3vox9VoxEngine7IsReadyERNS_13EmitterHandleE,vox::VoxEngine::IsReady(vox::EmitterHandle&)
+861fd8,32,lib-vox-audio,_ZN3vox9VoxEngine13SetPlayCursorERNS_13EmitterHandleEf,"vox::VoxEngine::SetPlayCursor(vox::EmitterHandle&, float)"
+862000,40,lib-vox-audio,_ZN3vox9VoxEngine13GetPlayCursorERNS_13EmitterHandleE,vox::VoxEngine::GetPlayCursor(vox::EmitterHandle&)
+862030,32,lib-vox-audio,_ZN3vox9VoxEngine8GetGroupERNS_13EmitterHandleE,vox::VoxEngine::GetGroup(vox::EmitterHandle&)
+862058,32,lib-vox-audio,_ZN3vox9VoxEngine8SetGroupERNS_13EmitterHandleEi,"vox::VoxEngine::SetGroup(vox::EmitterHandle&, int)"
+862080,32,lib-vox-audio,_ZN3vox9VoxEngine17ResumeAllEmittersEjf,"vox::VoxEngine::ResumeAllEmitters(unsigned int, float)"
+8620a8,32,lib-vox-audio,_ZN3vox9VoxEngine16PauseAllEmittersEjf,"vox::VoxEngine::PauseAllEmitters(unsigned int, float)"
+8620d0,32,lib-vox-audio,_ZN3vox9VoxEngine15StopAllEmittersEjf,"vox::VoxEngine::StopAllEmitters(unsigned int, float)"
+8620f8,32,lib-vox-audio,_ZN3vox9VoxEngine15PlayAllEmittersEjf,"vox::VoxEngine::PlayAllEmitters(unsigned int, float)"
+862120,32,lib-vox-audio,_ZN3vox9VoxEngine14GetAllEmittersEPNS_13EmitterHandleEi,"vox::VoxEngine::GetAllEmitters(vox::EmitterHandle*, int)"
+862148,32,lib-vox-audio,_ZN3vox9VoxEngine6ResumeERNS_13EmitterHandleEf,"vox::VoxEngine::Resume(vox::EmitterHandle&, float)"
+862170,32,lib-vox-audio,_ZN3vox9VoxEngine5PauseERNS_13EmitterHandleEf,"vox::VoxEngine::Pause(vox::EmitterHandle&, float)"
+862198,32,lib-vox-audio,_ZN3vox9VoxEngine4StopERNS_13EmitterHandleEf,"vox::VoxEngine::Stop(vox::EmitterHandle&, float)"
+8621c0,32,lib-vox-audio,_ZN3vox9VoxEngine4PlayERNS_13EmitterHandleEbf,"vox::VoxEngine::Play(vox::EmitterHandle&, bool, float)"
+8621e8,40,lib-vox-audio,_ZN3vox9VoxEngine8GetPitchERNS_13EmitterHandleE,vox::VoxEngine::GetPitch(vox::EmitterHandle&)
+862218,32,lib-vox-audio,_ZN3vox9VoxEngine8SetPitchERNS_13EmitterHandleEff,"vox::VoxEngine::SetPitch(vox::EmitterHandle&, float, float)"
+862240,32,lib-vox-audio,_ZN3vox9VoxEngine7SetLoopERNS_13EmitterHandleEb,"vox::VoxEngine::SetLoop(vox::EmitterHandle&, bool)"
+862268,40,lib-vox-audio,_ZN3vox9VoxEngine7GetGainERNS_13EmitterHandleE,vox::VoxEngine::GetGain(vox::EmitterHandle&)
+862298,32,lib-vox-audio,_ZN3vox9VoxEngine7SetGainERNS_13EmitterHandleEff,"vox::VoxEngine::SetGain(vox::EmitterHandle&, float, float)"
+8622c0,32,lib-vox-audio,_ZN3vox9VoxEngine20SetAutoKillAfterDoneERNS_13EmitterHandleEb,"vox::VoxEngine::SetAutoKillAfterDone(vox::EmitterHandle&, bool)"
+8622e8,88,lib-vox-audio,_ZN3vox9VoxEngine7GetDataERNS_13EmitterHandleE,vox::VoxEngine::GetData(vox::EmitterHandle&)
+862348,32,lib-vox-audio,_ZN3vox9VoxEngine11KillEmitterERNS_13EmitterHandleE,vox::VoxEngine::KillEmitter(vox::EmitterHandle&)
+862370,48,lib-vox-audio,_ZN3vox9VoxEngine11GetUserDataERNS_13EmitterHandleE,vox::VoxEngine::GetUserData(vox::EmitterHandle&)
+8623a8,32,lib-vox-audio,_ZN3vox9VoxEngine11SetUserDataERNS_13EmitterHandleERNS_21EmitterHandleUserDataE,"vox::VoxEngine::SetUserData(vox::EmitterHandle&, vox::EmitterHandleUserData&)"
+8623d0,96,lib-vox-audio,_ZN3vox9VoxEngine18CreateEmitterAsyncERNS_10DataHandleEiPv,"vox::VoxEngine::CreateEmitterAsync(vox::DataHandle&, int, void*)"
+862438,96,lib-vox-audio,_ZN3vox9VoxEngine13CreateEmitterERNS_10DataHandleEiPv,"vox::VoxEngine::CreateEmitter(vox::DataHandle&, int, void*)"
+8624a0,40,lib-vox-audio,_ZN3vox9VoxEngine11GetDurationERNS_10DataHandleE,vox::VoxEngine::GetDuration(vox::DataHandle&)
+8624d0,32,lib-vox-audio,_ZN3vox9VoxEngine7IsValidERNS_10DataHandleE,vox::VoxEngine::IsValid(vox::DataHandle&)
+8624f8,32,lib-vox-audio,_ZN3vox9VoxEngine7IsReadyERNS_10DataHandleE,vox::VoxEngine::IsReady(vox::DataHandle&)
+862520,32,lib-vox-audio,_ZN3vox9VoxEngine17GetAllDataSourcesEPNS_10DataHandleEi,"vox::VoxEngine::GetAllDataSources(vox::DataHandle*, int)"
+862548,32,lib-vox-audio,_ZN3vox9VoxEngine17GetEmitterHandlesERNS_10DataHandleEPNS_13EmitterHandleEi,"vox::VoxEngine::GetEmitterHandles(vox::DataHandle&, vox::EmitterHandle*, int)"
+862570,32,lib-vox-audio,_ZN3vox9VoxEngine17ReleaseDatasourceEj,vox::VoxEngine::ReleaseDatasource(unsigned int)
+862598,32,lib-vox-audio,_ZN3vox9VoxEngine17ReleaseDatasourceERNS_10DataHandleE,vox::VoxEngine::ReleaseDatasource(vox::DataHandle&)
+8625c0,40,lib-vox-audio,_ZN3vox9VoxEngine6GetUidERNS_10DataHandleE,vox::VoxEngine::GetUid(vox::DataHandle&)
+8625f0,32,lib-vox-audio,_ZN3vox9VoxEngine6SetUidERNS_10DataHandleEi,"vox::VoxEngine::SetUid(vox::DataHandle&, int)"
+862618,32,lib-vox-audio,_ZN3vox9VoxEngine17SetPriorityBankIdERNS_10DataHandleEi,"vox::VoxEngine::SetPriorityBankId(vox::DataHandle&, int)"
+862640,48,lib-vox-audio,_ZN3vox9VoxEngine11GetUserDataERNS_10DataHandleE,vox::VoxEngine::GetUserData(vox::DataHandle&)
+862678,32,lib-vox-audio,_ZN3vox9VoxEngine11SetUserDataERNS_10DataHandleERNS_18DataHandleUserDataE,"vox::VoxEngine::SetUserData(vox::DataHandle&, vox::DataHandleUserData&)"
+8626a0,88,lib-vox-audio,_ZN3vox9VoxEngine24ConvertToRamBufferSourceERNS_10DataHandleE,vox::VoxEngine::ConvertToRamBufferSource(vox::DataHandle&)
+862700,88,lib-vox-audio,_ZN3vox9VoxEngine18ConvertToRawSourceERNS_10DataHandleE,vox::VoxEngine::ConvertToRawSource(vox::DataHandle&)
+862760,120,lib-vox-audio,_ZN3vox9VoxEngine19LoadDataSourceAsyncEiPviS1_iNS_21VoxSourceLoadingFlagsE,"vox::VoxEngine::LoadDataSourceAsync(int, void*, int, void*, int, vox::VoxSourceLoadingFlags)"
+8627e0,112,lib-vox-audio,_ZN3vox9VoxEngine14LoadDataSourceEiPviS1_i,"vox::VoxEngine::LoadDataSource(int, void*, int, void*, int)"
+862858,56,lib-vox-audio,_ZN3vox9VoxEngine15SetPriorityBankEiiiNS_20PriorityBankBehaviorE,"vox::VoxEngine::SetPriorityBank(int, int, int, vox::PriorityBankBehavior)"
+862898,40,lib-vox-audio,_ZN3vox9VoxEngine19RegisterDecoderTypeEPFPNS_16DecoderInterfaceEPvE,vox::VoxEngine::RegisterDecoderType(vox::DecoderInterface* (*)(void*))
+8628c8,40,lib-vox-audio,_ZN3vox9VoxEngine18RegisterStreamTypeEPFPNS_15StreamInterfaceEPvE,vox::VoxEngine::RegisterStreamType(vox::StreamInterface* (*)(void*))
+8628f8,60,lib-vox-audio,_ZN3vox9VoxEngine16DestroyVoxEngineEv,vox::VoxEngine::DestroyVoxEngine()
+862944,60,lib-vox-audio,_ZN3vox9VoxEngine8ShutdownEv,vox::VoxEngine::Shutdown()
+862990,124,lib-vox-audio,_ZN3vox9VoxEngineD1Ev,vox::VoxEngine::~VoxEngine()
+862a18,20,lib-vox-audio,_ZN3vox9VoxEngineD0Ev,vox::VoxEngine::~VoxEngine()
+862a34,124,lib-vox-audio,_ZN3vox9VoxEngineD2Ev,vox::VoxEngine::~VoxEngine()
+862abc,68,lib-vox-audio,_ZN3vox9VoxEngineC1Ev,vox::VoxEngine::VoxEngine()
+862b30,52,lib-vox-audio,_ZN3vox9VoxEngine12GetVoxEngineEv,vox::VoxEngine::GetVoxEngine()
+862b80,68,lib-vox-audio,_ZN3vox9VoxEngineC2Ev,vox::VoxEngine::VoxEngine()
+862c4c,156,lib-vox-audio,_ZN3vox9VoxEngine22UpdateEmittersThreadedEv,vox::VoxEngine::UpdateEmittersThreaded()
+862cf0,24,lib-vox-audio,_ZN3vox9VoxEngine14UpdateThreadedEv,vox::VoxEngine::UpdateThreaded()
+862d08,4,lib-vox-audio,_ZN3vox9VoxEngine14UpdateThreadedEPvS1_,"vox::VoxEngine::UpdateThreaded(void*, void*)"
+862d0c,4,lib-vox-audio,_ZN3vox9VoxEngine22UpdateEmittersThreadedEPvS1_,"vox::VoxEngine::UpdateEmittersThreaded(void*, void*)"
+862d10,200,lib-vox-audio,_ZN3vox9VoxEngine10InitializeEv,vox::VoxEngine::Initialize()
+862e70,36,lib-vox-audio,_ZN3vox17VoxEngineInternal18RegisterStreamTypeEPFPNS_15StreamInterfaceEPvE,vox::VoxEngineInternal::RegisterStreamType(vox::StreamInterface* (*)(void*))
+862e94,40,lib-vox-audio,_ZN3vox17VoxEngineInternal19RegisterDecoderTypeEPFPNS_16DecoderInterfaceEPvE,vox::VoxEngineInternal::RegisterDecoderType(vox::DecoderInterface* (*)(void*))
+862ebc,4,lib-vox-audio,_ZN3vox17VoxEngineInternal17UpdateDebugServerEv,vox::VoxEngineInternal::UpdateDebugServer()
+862ec0,460,lib-vox-audio,_ZN3vox17VoxEngineInternal8Update3DEv,vox::VoxEngineInternal::Update3D()
+86308c,36,lib-vox-audio,_ZN3vox17VoxEngineInternal9UpdateDSPEf,vox::VoxEngineInternal::UpdateDSP(float)
+8630b0,4,lib-vox-audio,_ZN3vox17VoxEngineInternal23_SetDefault3DParametersEv,vox::VoxEngineInternal::_SetDefault3DParameters()
+8630b4,4,lib-vox-audio,_ZN3vox17VoxEngineInternal16SetRoutingVolumeEPcS1_NS_22VoxDSPGeneralParameter14BusRoutingTypeEfff,"vox::VoxEngineInternal::SetRoutingVolume(char*, char*, vox::VoxDSPGeneralParameter::BusRoutingType, float, float, float)"
+8630b8,44,lib-vox-audio,_ZN3vox17VoxEngineInternal13GetOutputModeEv,vox::VoxEngineInternal::GetOutputMode()
+8630e4,44,lib-vox-audio,_ZN3vox17VoxEngineInternal13SetOutputModeENS_13VoxOutputModeE,vox::VoxEngineInternal::SetOutputMode(vox::VoxOutputMode)
+863110,52,lib-vox-audio,_ZNK3vox6HandleeqERKS0_,vox::Handle::operator==(vox::Handle const&) const
+863144,164,lib-vox-audio,_ZN3vox18HandlableContainer4FindEx,vox::HandlableContainer::Find(long long)
+8631e8,44,lib-vox-audio,_ZN3vox18HandlableContainer15GetFreeHandleIdEv,vox::HandlableContainer::GetFreeHandleId()
+863214,12,lib-vox-audio,_ZN3vox18HandlableContainer5beginEv,vox::HandlableContainer::begin()
+863220,8,lib-vox-audio,_ZN3vox18HandlableContainer3endEv,vox::HandlableContainer::end()
+863228,240,lib-vox-audio,_ZN3vox10EmitterObj20ProcessNonNativeDataEf,vox::EmitterObj::ProcessNonNativeData(float)
+863318,528,lib-vox-audio,_ZN3vox10EmitterObj8Update3DEv,vox::EmitterObj::Update3D()
+863528,8,lib-vox-audio,_ZN3vox10EmitterObj15SetGainModifierEf,vox::EmitterObj::SetGainModifier(float)
+863530,12,lib-vox-audio,_ZN3vox10EmitterObj7IsReadyEv,vox::EmitterObj::IsReady()
+86353c,60,lib-vox-audio,_ZN3vox10EmitterObj7_IsDoneEv,vox::EmitterObj::_IsDone()
+863578,244,lib-vox-audio,_ZN3vox19PriorityBankManager14_CanAddEmitterEii,"vox::PriorityBankManager::_CanAddEmitter(int, int)"
+8636e0,44,lib-vox-audio,_ZN3vox9HandlableD1Ev,vox::Handlable::~Handlable()
+863714,64,lib-vox-audio,_ZN3vox18VoxCallbackManager7SendAllEv,vox::VoxCallbackManager::SendAll()
+863788,72,lib-vox-audio,_ZN3vox18VoxCallbackManagerD1Ev,vox::VoxCallbackManager::~VoxCallbackManager()
+8637fc,72,lib-vox-audio,_ZN3vox18VoxCallbackManagerD2Ev,vox::VoxCallbackManager::~VoxCallbackManager()
+863870,48,lib-vox-audio,_ZN3vox12PriorityBankD1Ev,vox::PriorityBank::~PriorityBank()
+8638e4,68,lib-vox-audio,_ZN3vox10EmitterObj9UpdateDSPEf,vox::EmitterObj::UpdateDSP(float)
+863954,128,lib-vox-audio,_ZN3vox10EmitterObj7CleanUpEv,vox::EmitterObj::CleanUp()
+863a0c,196,lib-vox-audio,_ZN3vox18HandlableContainer5ClearEv,vox::HandlableContainer::Clear()
+863ad0,60,lib-vox-audio,_ZN3vox18HandlableContainerD1Ev,vox::HandlableContainer::~HandlableContainer()
+863b0c,60,lib-vox-audio,_ZN3vox18HandlableContainerD2Ev,vox::HandlableContainer::~HandlableContainer()
+863b48,208,lib-vox-audio,_ZN3vox18HandlableContainer5EraseEx,vox::HandlableContainer::Erase(long long)
+863c24,108,lib-vox-audio,_ZN3vox7DataObjD1Ev,vox::DataObj::~DataObj()
+863cac,20,lib-vox-audio,_ZN3vox7DataObjD0Ev,vox::DataObj::~DataObj()
+863cc8,32,lib-vox-audio,_ZN3vox18VoxCallbackManager3AddEPNS_11VoxCallbackE,vox::VoxCallbackManager::Add(vox::VoxCallback*)
+86418c,68,lib-vox-audio,_ZN3vox19PriorityBankManagerD1Ev,vox::PriorityBankManager::~PriorityBankManager()
+8648f4,212,lib-vox-audio,_ZN3vox18HandlableContainer3AddEPNS_9HandlableE,vox::HandlableContainer::Add(vox::Handlable*)
+8649c8,184,lib-vox-audio,_ZN3vox18HandlableContainer5MergeEPS0_,vox::HandlableContainer::Merge(vox::HandlableContainer*)
+864a80,24,lib-vox-audio,_ZN3vox19PriorityBankManager12GetDebugInfoEPNS_15DebugChunk_bankE,vox::PriorityBankManager::GetDebugInfo(vox::DebugChunk_bank*)
+864b1c,28,lib-vox-audio,_ZN3vox19PriorityBankManager13CanAddEmitterEii,"vox::PriorityBankManager::CanAddEmitter(int, int)"
+864b5c,20,lib-vox-audio,_ZN3vox10EmitterObj9GetStatusEv,vox::EmitterObj::GetStatus()
+864bec,32,lib-vox-audio,_ZN3vox10EmitterObj30NeedToSendStateChangedCallbackERPFvRNS_13EmitterHandleEPvNS_18EmitterExternStateEERS3_RS4_,"vox::EmitterObj::NeedToSendStateChangedCallback(void (*&)(vox::EmitterHandle&, void*, vox::EmitterExternState), void*&, vox::EmitterExternState&)"
+864cb4,20,lib-vox-audio,_ZN3vox10EmitterObj30UnregisterStateChangedCallbackEv,vox::EmitterObj::UnregisterStateChangedCallback()
+864ce0,28,lib-vox-audio,_ZN3vox10EmitterObj28RegisterStateChangedCallbackEPFvRNS_13EmitterHandleEPvNS_18EmitterExternStateEES3_,"vox::EmitterObj::RegisterStateChangedCallback(void (*)(vox::EmitterHandle&, void*, vox::EmitterExternState), void*)"
+864d10,20,lib-vox-audio,_ZN3vox17VoxEngineInternal11IsSuspendedEv,vox::VoxEngineInternal::IsSuspended()
+864d44,40,lib-vox-audio,_ZN3vox17VoxEngineInternal6ResumeEv,vox::VoxEngineInternal::Resume()
+864dc4,36,lib-vox-audio,_ZN3vox17VoxEngineInternal7SuspendEv,vox::VoxEngineInternal::Suspend()
+864e28,20,lib-vox-audio,_ZN3vox10EmitterObj10PrintDebugEv,vox::EmitterObj::PrintDebug()
+864e64,28,lib-vox-audio,_ZN3vox10EmitterObj16Get3DParameterfvEiRNS_11VoxVector3fE,"vox::EmitterObj::Get3DParameterfv(int, vox::VoxVector3f&)"
+864f04,36,lib-vox-audio,_ZN3vox10EmitterObj16Get3DParameter3fEiRfS1_S1_,"vox::EmitterObj::Get3DParameter3f(int, float&, float&, float&)"
+864fa0,32,lib-vox-audio,_ZN3vox10EmitterObj15Get3DParameterfEiRf,"vox::EmitterObj::Get3DParameterf(int, float&)"
+865044,28,lib-vox-audio,_ZN3vox10EmitterObj15Get3DParameteriEiRi,"vox::EmitterObj::Get3DParameteri(int, int&)"
+865078,28,lib-vox-audio,_ZN3vox10EmitterObj16Set3DParameterfvEiRKNS_11VoxVector3fE,"vox::EmitterObj::Set3DParameterfv(int, vox::VoxVector3f const&)"
+865130,36,lib-vox-audio,_ZN3vox10EmitterObj16Set3DParameter3fEifff,"vox::EmitterObj::Set3DParameter3f(int, float, float, float)"
+8651c0,32,lib-vox-audio,_ZN3vox10EmitterObj15Set3DParameterfEif,"vox::EmitterObj::Set3DParameterf(int, float)"
+865280,28,lib-vox-audio,_ZN3vox10EmitterObj15Set3DParameteriEii,"vox::EmitterObj::Set3DParameteri(int, int)"
+8652b8,224,lib-vox-audio,_ZN3vox10EmitterObj20SetDefaultParametersEv,vox::EmitterObj::SetDefaultParameters()
+865398,20,lib-vox-audio,_ZN3vox10EmitterObj11GetUserDataEv,vox::EmitterObj::GetUserData()
+8653c0,24,lib-vox-audio,_ZN3vox10EmitterObj11SetUserDataERNS_21EmitterHandleUserDataE,vox::EmitterObj::SetUserData(vox::EmitterHandleUserData&)
+8653ec,24,lib-vox-audio,_ZN3vox10EmitterObj13SetPlayCursorEf,vox::EmitterObj::SetPlayCursor(float)
+8654f8,20,lib-vox-audio,_ZN3vox10EmitterObj13GetPlayCursorEv,vox::EmitterObj::GetPlayCursor()
+86556c,20,lib-vox-audio,_ZN3vox10EmitterObj6IsDoneEv,vox::EmitterObj::IsDone()
+86559c,20,lib-vox-audio,_ZN3vox10EmitterObj9IsPlayingEv,vox::EmitterObj::IsPlaying()
+8655e0,20,lib-vox-audio,_ZN3vox10EmitterObj5ResetEv,vox::EmitterObj::Reset()
+865608,24,lib-vox-audio,_ZN3vox10EmitterObj7SetLoopEb,vox::EmitterObj::SetLoop(bool)
+865630,20,lib-vox-audio,_ZN3vox10EmitterObj7GetLoopEv,vox::EmitterObj::GetLoop()
+865658,24,lib-vox-audio,_ZN3vox10EmitterObj8SetStateEi,vox::EmitterObj::SetState(int)
+865680,20,lib-vox-audio,_ZN3vox10EmitterObj8GetStateEv,vox::EmitterObj::GetState()
+8656a8,20,lib-vox-audio,_ZN3vox10EmitterObj8GetPitchEv,vox::EmitterObj::GetPitch()
+8656d0,20,lib-vox-audio,_ZN3vox10EmitterObj7GetGainEv,vox::EmitterObj::GetGain()
+8656f8,24,lib-vox-audio,_ZN3vox10EmitterObj7IsGroupEj,vox::EmitterObj::IsGroup(unsigned int)
+865734,24,lib-vox-audio,_ZN3vox10EmitterObj8SetGroupEi,vox::EmitterObj::SetGroup(int)
+86575c,20,lib-vox-audio,_ZN3vox10EmitterObj8GetGroupEv,vox::EmitterObj::GetGroup()
+865784,20,lib-vox-audio,_ZN3vox10EmitterObj9ShouldDieEv,vox::EmitterObj::ShouldDie()
+8657f4,20,lib-vox-audio,_ZN3vox10EmitterObj7IsAliveEv,vox::EmitterObj::IsAlive()
+865828,20,lib-vox-audio,_ZN3vox10EmitterObj9NeedToDieEv,vox::EmitterObj::NeedToDie()
+865850,24,lib-vox-audio,_ZN3vox10EmitterObj20SetAutoKillAfterDoneEb,vox::EmitterObj::SetAutoKillAfterDone(bool)
+865878,20,lib-vox-audio,_ZN3vox7DataObj11GetUserDataEv,vox::DataObj::GetUserData()
+8658a0,24,lib-vox-audio,_ZN3vox7DataObj11SetUserDataERNS_18DataHandleUserDataE,vox::DataObj::SetUserData(vox::DataHandleUserData&)
+8658cc,20,lib-vox-audio,_ZN3vox7DataObj7IsReadyEv,vox::DataObj::IsReady()
+8658fc,44,lib-vox-audio,_ZN3vox7DataObj11GetDurationEv,vox::DataObj::GetDuration()
+865954,32,lib-vox-audio,_ZN3vox7DataObj12GetDebugInfoERNS_21DebugChunk_dataSourceE,vox::DataObj::GetDebugInfo(vox::DebugChunk_dataSource&)
+8659ec,20,lib-vox-audio,_ZN3vox7DataObj10PrintDebugEv,vox::DataObj::PrintDebug()
+865a0c,24,lib-vox-audio,_ZN3vox7DataObj7IsGroupEj,vox::DataObj::IsGroup(unsigned int)
+865a48,20,lib-vox-audio,_ZN3vox7DataObj8GetGroupEv,vox::DataObj::GetGroup()
+865a70,20,lib-vox-audio,_ZN3vox7DataObj9ShouldDieEv,vox::DataObj::ShouldDie()
+865aec,20,lib-vox-audio,_ZN3vox7DataObj9NeedToDieEv,vox::DataObj::NeedToDie()
+865b30,28,lib-vox-audio,_ZN3vox7DataObj17UnregisterEmitterEx,vox::DataObj::UnregisterEmitter(long long)
+865ba8,28,lib-vox-audio,_ZN3vox7DataObj15RegisterEmitterEx,vox::DataObj::RegisterEmitter(long long)
+865bf4,20,lib-vox-audio,_ZN3vox9Handlable7ReleaseEv,vox::Handlable::Release()
+865c24,20,lib-vox-audio,_ZN3vox9Handlable6RetainEv,vox::Handlable::Retain()
+865c50,32,lib-vox-audio,_ZN3vox17VoxEngineInternal18SetSFXPresetActiveEibf,"vox::VoxEngineInternal::SetSFXPresetActive(int, bool, float)"
+865ca4,24,lib-vox-audio,_ZN3vox17VoxEngineInternal20SetDynamicBusRoutingEPc,vox::VoxEngineInternal::SetDynamicBusRouting(char*)
+865ce8,24,lib-vox-audio,_ZN3vox17VoxEngineInternal19SetStaticBusRoutingEPc,vox::VoxEngineInternal::SetStaticBusRouting(char*)
+865d2c,28,lib-vox-audio,_ZN3vox17VoxEngineInternal22Get3DGeneralParameteriEiRi,"vox::VoxEngineInternal::Get3DGeneralParameteri(int, int&)"
+865d60,28,lib-vox-audio,_ZN3vox17VoxEngineInternal22Get3DGeneralParameterfEiRf,"vox::VoxEngineInternal::Get3DGeneralParameterf(int, float&)"
+865da8,24,lib-vox-audio,_ZN3vox17VoxEngineInternal21Get3DGeneralParameterERNS_22Vox3DGeneralParametersE,vox::VoxEngineInternal::Get3DGeneralParameter(vox::Vox3DGeneralParameters&)
+865de8,48,lib-vox-audio,_ZN3vox17VoxEngineInternal24Get3DListenerOrientationERfS1_S1_S1_S1_S1_,"vox::VoxEngineInternal::Get3DListenerOrientation(float&, float&, float&, float&, float&, float&)"
+865e58,32,lib-vox-audio,_ZN3vox17VoxEngineInternal21Get3DListenerVelocityERfS1_S1_,"vox::VoxEngineInternal::Get3DListenerVelocity(float&, float&, float&)"
+865e9c,32,lib-vox-audio,_ZN3vox17VoxEngineInternal21Get3DListenerPositionERfS1_S1_,"vox::VoxEngineInternal::Get3DListenerPosition(float&, float&, float&)"
+865ee0,28,lib-vox-audio,_ZN3vox17VoxEngineInternal22Set3DGeneralParameteriEii,"vox::VoxEngineInternal::Set3DGeneralParameteri(int, int)"
+865f18,28,lib-vox-audio,_ZN3vox17VoxEngineInternal22Set3DGeneralParameterfEif,"vox::VoxEngineInternal::Set3DGeneralParameterf(int, float)"
+865f68,24,lib-vox-audio,_ZN3vox17VoxEngineInternal21Set3DGeneralParameterERKNS_22Vox3DGeneralParametersE,vox::VoxEngineInternal::Set3DGeneralParameter(vox::Vox3DGeneralParameters const&)
+865fb8,48,lib-vox-audio,_ZN3vox17VoxEngineInternal24Set3DListenerOrientationEffffff,"vox::VoxEngineInternal::Set3DListenerOrientation(float, float, float, float, float, float)"
+866018,32,lib-vox-audio,_ZN3vox17VoxEngineInternal21Set3DListenerVelocityEfff,"vox::VoxEngineInternal::Set3DListenerVelocity(float, float, float)"
+866058,32,lib-vox-audio,_ZN3vox17VoxEngineInternal21Set3DListenerPositionEfff,"vox::VoxEngineInternal::Set3DListenerPosition(float, float, float)"
+866098,24,lib-vox-audio,_ZN3vox17VoxEngineInternal12GetGroupGainEi,vox::VoxEngineInternal::GetGroupGain(int)
+8660d4,20,lib-vox-audio,_ZN3vox17VoxEngineInternal13GetMasterGainEv,vox::VoxEngineInternal::GetMasterGain()
+8661bc,32,lib-vox-audio,_ZN3vox19PriorityBankManager15SetPriorityBankEiiiNS_20PriorityBankBehaviorE,"vox::PriorityBankManager::SetPriorityBank(int, int, int, vox::PriorityBankBehavior)"
+866258,24,lib-vox-audio,_ZN3vox17VoxEngineInternal15SetPriorityBankEiiiNS_20PriorityBankBehaviorE,"vox::VoxEngineInternal::SetPriorityBank(int, int, int, vox::PriorityBankBehavior)"
+866380,576,lib-vox-audio,_ZN3vox10EmitterObjC1ExiiPNS_21DriverSourceInterfaceEPNS_7DataObjE,"vox::EmitterObj::EmitterObj(long long, int, int, vox::DriverSourceInterface*, vox::DataObj*)"
+8665cc,576,lib-vox-audio,_ZN3vox10EmitterObjC2ExiiPNS_21DriverSourceInterfaceEPNS_7DataObjE,"vox::EmitterObj::EmitterObj(long long, int, int, vox::DriverSourceInterface*, vox::DataObj*)"
+866818,24,lib-vox-audio,_ZN3vox10EmitterObj12GetDebugInfoERNS_18DebugChunk_emitterE,vox::EmitterObj::GetDebugInfo(vox::DebugChunk_emitter&)
+866abc,16,lib-vox-audio,_ZN3vox10EmitterObj30SetInteractiveMusicStateChangeEPKc,vox::EmitterObj::SetInteractiveMusicStateChange(char const*)
+866acc,28,lib-vox-audio,_ZN3vox10EmitterObj15SetDSPParameterEiPv,"vox::EmitterObj::SetDSPParameter(int, void*)"
+866b30,624,lib-vox-audio,_ZN3vox10EmitterObj17ProcessNativeDataEf,vox::EmitterObj::ProcessNativeData(float)
+866dec,44,lib-vox-audio,_ZN3vox7DataObj6UpdateEv,vox::DataObj::Update()
+867260,272,lib-vox-audio,_ZN3vox17VoxEngineInternal12GetDebugInfoERNS_9DebugInfoE,vox::VoxEngineInternal::GetDebugInfo(vox::DebugInfo&)
+867370,24,lib-vox-audio,_ZN3vox17VoxEngineInternal10PrintDebugEv,vox::VoxEngineInternal::PrintDebug()
+8674cc,244,lib-vox-audio,_ZN3vox17VoxEngineInternal16GetEmitterObjectERNS_13EmitterHandleE,vox::VoxEngineInternal::GetEmitterObject(vox::EmitterHandle&)
+8675c0,72,lib-vox-audio,_ZN3vox17VoxEngineInternal11GetUserDataERNS_13EmitterHandleE,vox::VoxEngineInternal::GetUserData(vox::EmitterHandle&)
+867608,68,lib-vox-audio,_ZN3vox17VoxEngineInternal11SetUserDataERNS_13EmitterHandleERNS_21EmitterHandleUserDataE,"vox::VoxEngineInternal::SetUserData(vox::EmitterHandle&, vox::EmitterHandleUserData&)"
+86764c,140,lib-vox-audio,_ZN3vox17VoxEngineInternal24SetInteractiveMusicStateERNS_13EmitterHandleEPKc,"vox::VoxEngineInternal::SetInteractiveMusicState(vox::EmitterHandle&, char const*)"
+8676d8,76,lib-vox-audio,_ZN3vox17VoxEngineInternal22SetDSPEmitterParameterERNS_13EmitterHandleEiPv,"vox::VoxEngineInternal::SetDSPEmitterParameter(vox::EmitterHandle&, int, void*)"
+867724,76,lib-vox-audio,_ZN3vox17VoxEngineInternal22Get3DEmitterParameteriERNS_13EmitterHandleEiRi,"vox::VoxEngineInternal::Get3DEmitterParameteri(vox::EmitterHandle&, int, int&)"
+867770,76,lib-vox-audio,_ZN3vox17VoxEngineInternal22Get3DEmitterParameterfERNS_13EmitterHandleEiRf,"vox::VoxEngineInternal::Get3DEmitterParameterf(vox::EmitterHandle&, int, float&)"
+8677bc,184,lib-vox-audio,_ZN3vox17VoxEngineInternal22Get3DEmitterParametersERNS_13EmitterHandleERNS_22Vox3DEmitterParametersE,"vox::VoxEngineInternal::Get3DEmitterParameters(vox::EmitterHandle&, vox::Vox3DEmitterParameters&)"
+867874,96,lib-vox-audio,_ZN3vox17VoxEngineInternal21Get3DEmitterDirectionERNS_13EmitterHandleERfS3_S3_,"vox::VoxEngineInternal::Get3DEmitterDirection(vox::EmitterHandle&, float&, float&, float&)"
+8678d4,96,lib-vox-audio,_ZN3vox17VoxEngineInternal20Get3DEmitterVelocityERNS_13EmitterHandleERfS3_S3_,"vox::VoxEngineInternal::Get3DEmitterVelocity(vox::EmitterHandle&, float&, float&, float&)"
+867934,96,lib-vox-audio,_ZN3vox17VoxEngineInternal20Get3DEmitterPositionERNS_13EmitterHandleERfS3_S3_,"vox::VoxEngineInternal::Get3DEmitterPosition(vox::EmitterHandle&, float&, float&, float&)"
+867994,76,lib-vox-audio,_ZN3vox17VoxEngineInternal22Set3DEmitterParameteriERNS_13EmitterHandleEii,"vox::VoxEngineInternal::Set3DEmitterParameteri(vox::EmitterHandle&, int, int)"
+8679e0,76,lib-vox-audio,_ZN3vox17VoxEngineInternal22Set3DEmitterParameterfERNS_13EmitterHandleEif,"vox::VoxEngineInternal::Set3DEmitterParameterf(vox::EmitterHandle&, int, float)"
+867a2c,184,lib-vox-audio,_ZN3vox17VoxEngineInternal22Set3DEmitterParametersERNS_13EmitterHandleERKNS_22Vox3DEmitterParametersE,"vox::VoxEngineInternal::Set3DEmitterParameters(vox::EmitterHandle&, vox::Vox3DEmitterParameters const&)"
+867ae4,96,lib-vox-audio,_ZN3vox17VoxEngineInternal21Set3DEmitterDirectionERNS_13EmitterHandleEfff,"vox::VoxEngineInternal::Set3DEmitterDirection(vox::EmitterHandle&, float, float, float)"
+867b44,96,lib-vox-audio,_ZN3vox17VoxEngineInternal20Set3DEmitterVelocityERNS_13EmitterHandleEfff,"vox::VoxEngineInternal::Set3DEmitterVelocity(vox::EmitterHandle&, float, float, float)"
+867ba4,96,lib-vox-audio,_ZN3vox17VoxEngineInternal20Set3DEmitterPositionERNS_13EmitterHandleEfff,"vox::VoxEngineInternal::Set3DEmitterPosition(vox::EmitterHandle&, float, float, float)"
+867c04,68,lib-vox-audio,_ZN3vox17VoxEngineInternal8GetGroupERNS_13EmitterHandleE,vox::VoxEngineInternal::GetGroup(vox::EmitterHandle&)
+867c48,76,lib-vox-audio,_ZN3vox17VoxEngineInternal8SetGroupERNS_13EmitterHandleEi,"vox::VoxEngineInternal::SetGroup(vox::EmitterHandle&, int)"
+867c94,68,lib-vox-audio,_ZN3vox17VoxEngineInternal13SetPlayCursorERNS_13EmitterHandleEf,"vox::VoxEngineInternal::SetPlayCursor(vox::EmitterHandle&, float)"
+867cd8,72,lib-vox-audio,_ZN3vox17VoxEngineInternal13GetPlayCursorERNS_13EmitterHandleE,vox::VoxEngineInternal::GetPlayCursor(vox::EmitterHandle&)
+867d20,68,lib-vox-audio,_ZN3vox17VoxEngineInternal9GetStatusERNS_13EmitterHandleE,vox::VoxEngineInternal::GetStatus(vox::EmitterHandle&)
+867d64,72,lib-vox-audio,_ZN3vox17VoxEngineInternal6IsDoneERNS_13EmitterHandleE,vox::VoxEngineInternal::IsDone(vox::EmitterHandle&)
+867dac,68,lib-vox-audio,_ZN3vox17VoxEngineInternal9IsPlayingERNS_13EmitterHandleE,vox::VoxEngineInternal::IsPlaying(vox::EmitterHandle&)
+867df0,68,lib-vox-audio,_ZN3vox17VoxEngineInternal7IsAliveERNS_13EmitterHandleE,vox::VoxEngineInternal::IsAlive(vox::EmitterHandle&)
+867e34,60,lib-vox-audio,_ZN3vox17VoxEngineInternal7IsValidERNS_13EmitterHandleE,vox::VoxEngineInternal::IsValid(vox::EmitterHandle&)
+867e70,68,lib-vox-audio,_ZN3vox17VoxEngineInternal7IsReadyERNS_13EmitterHandleE,vox::VoxEngineInternal::IsReady(vox::EmitterHandle&)
+867eb4,72,lib-vox-audio,_ZN3vox17VoxEngineInternal8GetPitchERNS_13EmitterHandleE,vox::VoxEngineInternal::GetPitch(vox::EmitterHandle&)
+867efc,68,lib-vox-audio,_ZN3vox17VoxEngineInternal7SetLoopERNS_13EmitterHandleEb,"vox::VoxEngineInternal::SetLoop(vox::EmitterHandle&, bool)"
+867f40,72,lib-vox-audio,_ZN3vox17VoxEngineInternal7GetGainERNS_13EmitterHandleE,vox::VoxEngineInternal::GetGain(vox::EmitterHandle&)
+867f88,68,lib-vox-audio,_ZN3vox17VoxEngineInternal20SetAutoKillAfterDoneERNS_13EmitterHandleEb,"vox::VoxEngineInternal::SetAutoKillAfterDone(vox::EmitterHandle&, bool)"
+867fcc,60,lib-vox-audio,_ZN3vox17VoxEngineInternal43UnregisterForEmitterStateChangeNotificationERNS_13EmitterHandleE,vox::VoxEngineInternal::UnregisterForEmitterStateChangeNotification(vox::EmitterHandle&)
+868008,76,lib-vox-audio,_ZN3vox17VoxEngineInternal41RegisterForEmitterStateChangeNotificationERNS_13EmitterHandleEPFvS2_PvNS_18EmitterExternStateEES3_,"vox::VoxEngineInternal::RegisterForEmitterStateChangeNotification(vox::EmitterHandle&, void (*)(vox::EmitterHandle&, void*, vox::EmitterExternState), void*)"
+868054,68,lib-vox-audio,_ZN3vox17VoxEngineInternal29IncreaseEmitterObjectRefCountERNS_13EmitterHandleE,vox::VoxEngineInternal::IncreaseEmitterObjectRefCount(vox::EmitterHandle&)
+868098,140,lib-vox-audio,_ZN3vox13EmitterHandleC1ExPPNS_17VoxEngineInternalEPNS_9HandlableEjj,"vox::EmitterHandle::EmitterHandle(long long, vox::VoxEngineInternal**, vox::Handlable*, unsigned int, unsigned int)"
+86812c,140,lib-vox-audio,_ZN3vox13EmitterHandleC2ExPPNS_17VoxEngineInternalEPNS_9HandlableEjj,"vox::EmitterHandle::EmitterHandle(long long, vox::VoxEngineInternal**, vox::Handlable*, unsigned int, unsigned int)"
+8681c0,132,lib-vox-audio,_ZN3vox13EmitterHandleC1ERKS0_,vox::EmitterHandle::EmitterHandle(vox::EmitterHandle const&)
+868250,132,lib-vox-audio,_ZN3vox13EmitterHandleC2ERKS0_,vox::EmitterHandle::EmitterHandle(vox::EmitterHandle const&)
+8682e0,68,lib-vox-audio,_ZN3vox17VoxEngineInternal29DecreaseEmitterObjectRefCountERNS_13EmitterHandleE,vox::VoxEngineInternal::DecreaseEmitterObjectRefCount(vox::EmitterHandle&)
+868324,136,lib-vox-audio,_ZN3vox13EmitterHandleaSERKS0_,vox::EmitterHandle::operator=(vox::EmitterHandle const&)
+8683ac,72,lib-vox-audio,_ZN3vox13EmitterHandleD1Ev,vox::EmitterHandle::~EmitterHandle()
+8683fc,20,lib-vox-audio,_ZN3vox13EmitterHandleD0Ev,vox::EmitterHandle::~EmitterHandle()
+868418,72,lib-vox-audio,_ZN3vox13EmitterHandleD2Ev,vox::EmitterHandle::~EmitterHandle()
+868468,588,lib-vox-audio,_ZN3vox17VoxEngineInternal14GetAllEmittersEPNS_13EmitterHandleEi,"vox::VoxEngineInternal::GetAllEmitters(vox::EmitterHandle*, int)"
+8686bc,244,lib-vox-audio,_ZN3vox17VoxEngineInternal13GetDataObjectERNS_10DataHandleE,vox::VoxEngineInternal::GetDataObject(vox::DataHandle&)
+8687b0,72,lib-vox-audio,_ZN3vox17VoxEngineInternal11GetUserDataERNS_10DataHandleE,vox::VoxEngineInternal::GetUserData(vox::DataHandle&)
+8687f8,68,lib-vox-audio,_ZN3vox17VoxEngineInternal11SetUserDataERNS_10DataHandleERNS_18DataHandleUserDataE,"vox::VoxEngineInternal::SetUserData(vox::DataHandle&, vox::DataHandleUserData&)"
+86883c,64,lib-vox-audio,_ZN3vox17VoxEngineInternal6GetUidERNS_10DataHandleE,vox::VoxEngineInternal::GetUid(vox::DataHandle&)
+86887c,60,lib-vox-audio,_ZN3vox17VoxEngineInternal6SetUidERNS_10DataHandleEi,"vox::VoxEngineInternal::SetUid(vox::DataHandle&, int)"
+8688b8,60,lib-vox-audio,_ZN3vox17VoxEngineInternal17SetPriorityBankIdERNS_10DataHandleEi,"vox::VoxEngineInternal::SetPriorityBankId(vox::DataHandle&, int)"
+8688f4,72,lib-vox-audio,_ZN3vox17VoxEngineInternal11GetDurationERNS_10DataHandleE,vox::VoxEngineInternal::GetDuration(vox::DataHandle&)
+86893c,60,lib-vox-audio,_ZN3vox17VoxEngineInternal7IsValidERNS_10DataHandleE,vox::VoxEngineInternal::IsValid(vox::DataHandle&)
+868978,68,lib-vox-audio,_ZN3vox17VoxEngineInternal7IsReadyERNS_10DataHandleE,vox::VoxEngineInternal::IsReady(vox::DataHandle&)
+8689bc,708,lib-vox-audio,_ZN3vox17VoxEngineInternal17GetEmitterHandlesERNS_10DataHandleEPNS_13EmitterHandleEi,"vox::VoxEngineInternal::GetEmitterHandles(vox::DataHandle&, vox::EmitterHandle*, int)"
+868c88,72,lib-vox-audio,_ZN3vox17VoxEngineInternal17ReleaseDatasourceERNS_10DataHandleE,vox::VoxEngineInternal::ReleaseDatasource(vox::DataHandle&)
+868d10,68,lib-vox-audio,_ZN3vox17VoxEngineInternal26IncreaseDataObjectRefCountERNS_10DataHandleE,vox::VoxEngineInternal::IncreaseDataObjectRefCount(vox::DataHandle&)
+868d54,140,lib-vox-audio,_ZN3vox10DataHandleC1ExPPNS_17VoxEngineInternalEPNS_9HandlableEjj,"vox::DataHandle::DataHandle(long long, vox::VoxEngineInternal**, vox::Handlable*, unsigned int, unsigned int)"
+868de8,140,lib-vox-audio,_ZN3vox10DataHandleC2ExPPNS_17VoxEngineInternalEPNS_9HandlableEjj,"vox::DataHandle::DataHandle(long long, vox::VoxEngineInternal**, vox::Handlable*, unsigned int, unsigned int)"
+868e7c,132,lib-vox-audio,_ZN3vox10DataHandleC1ERKS0_,vox::DataHandle::DataHandle(vox::DataHandle const&)
+868f0c,132,lib-vox-audio,_ZN3vox10DataHandleC2ERKS0_,vox::DataHandle::DataHandle(vox::DataHandle const&)
+868f9c,196,lib-vox-audio,_ZN3vox17VoxEngineInternal7GetDataERNS_13EmitterHandleE,vox::VoxEngineInternal::GetData(vox::EmitterHandle&)
+869068,56,lib-vox-audio,_ZN3vox17VoxEngineInternal22GetFreeEmitterObjectIdEv,vox::VoxEngineInternal::GetFreeEmitterObjectId()
+8690a0,376,lib-vox-audio,_ZN3vox17VoxEngineInternal18CreateEmitterAsyncERNS_10DataHandleEiPv,"vox::VoxEngineInternal::CreateEmitterAsync(vox::DataHandle&, int, void*)"
+869314,56,lib-vox-audio,_ZN3vox17VoxEngineInternal19GetFreeDataObjectIdEv,vox::VoxEngineInternal::GetFreeDataObjectId()
+86934c,40,lib-vox-audio,_ZN3vox17VoxEngineInternal10InitializeEv,vox::VoxEngineInternal::Initialize()
+8696d0,36,lib-vox-audio,_ZN3vox19PriorityBankManager15AddPriorityBankEiiNS_20PriorityBankBehaviorE,"vox::PriorityBankManager::AddPriorityBank(int, int, vox::PriorityBankBehavior)"
+8697bc,156,lib-vox-audio,_ZN3vox19PriorityBankManagerC1Ei,vox::PriorityBankManager::PriorityBankManager(int)
+869858,72,lib-vox-audio,_ZN3vox19PriorityBankManagerC1Ev,vox::PriorityBankManager::PriorityBankManager()
+8698a0,72,lib-vox-audio,_ZN3vox19PriorityBankManagerC2Ev,vox::PriorityBankManager::PriorityBankManager()
+8698e8,156,lib-vox-audio,_ZN3vox19PriorityBankManagerC2Ei,vox::PriorityBankManager::PriorityBankManager(int)
+869984,44,lib-vox-audio,_ZN3vox9HandlableD0Ev,vox::Handlable::~Handlable()
+8699c0,80,lib-vox-audio,_ZN3vox10EmitterObjD1Ev,vox::EmitterObj::~EmitterObj()
+869a1c,20,lib-vox-audio,_ZN3vox10EmitterObjD0Ev,vox::EmitterObj::~EmitterObj()
+869a38,80,lib-vox-audio,_ZN3vox10EmitterObjD2Ev,vox::EmitterObj::~EmitterObj()
+869a94,608,lib-vox-audio,_ZN3vox17VoxEngineInternalC1Ev,vox::VoxEngineInternal::VoxEngineInternal()
+869d3c,52,lib-vox-audio,_ZN3vox17VoxEngineInternal20GetVoxEngineInternalEv,vox::VoxEngineInternal::GetVoxEngineInternal()
+869d8c,608,lib-vox-audio,_ZN3vox17VoxEngineInternalC2Ev,vox::VoxEngineInternal::VoxEngineInternal()
+86a034,488,lib-vox-audio,_ZN3vox17VoxEngineInternal17ReleaseDatasourceEj,vox::VoxEngineInternal::ReleaseDatasource(unsigned int)
+86a3c8,20,lib-vox-audio,_ZN3vox19PriorityBankManager6UpdateEv,vox::PriorityBankManager::Update()
+86a504,184,lib-vox-audio,_ZN3vox18HandlableContainer6DetachEx,vox::HandlableContainer::Detach(long long)
+86a5d0,88,lib-vox-audio,_ZN3vox17VoxEngineInternal19DetachEmitterObjectEx,vox::VoxEngineInternal::DetachEmitterObject(long long)
+86a628,232,lib-vox-audio,_ZN3vox17VoxEngineInternal17ReleaseDatasourceEPNS_7DataObjE,vox::VoxEngineInternal::ReleaseDatasource(vox::DataObj*)
+86a710,460,lib-vox-audio,_ZN3vox17VoxEngineInternal21_ReleaseAllDatasourceEv,vox::VoxEngineInternal::_ReleaseAllDatasource()
+86a8dc,100,lib-vox-audio,_ZN3vox17VoxEngineInternal11KillEmitterERNS_13EmitterHandleE,vox::VoxEngineInternal::KillEmitter(vox::EmitterHandle&)
+86a940,88,lib-vox-audio,_ZN3vox17VoxEngineInternal16DetachDataObjectEx,vox::VoxEngineInternal::DetachDataObject(long long)
+86a998,148,lib-vox-audio,_ZN3vox17VoxEngineInternal13UpdateSourcesEv,vox::VoxEngineInternal::UpdateSources()
+86ab10,80,lib-vox-audio,_ZN3vox17VoxEngineInternal26DecreaseDataObjectRefCountERNS_10DataHandleE,vox::VoxEngineInternal::DecreaseDataObjectRefCount(vox::DataHandle&)
+86aba0,136,lib-vox-audio,_ZN3vox10DataHandleaSERKS0_,vox::DataHandle::operator=(vox::DataHandle const&)
+86ac28,72,lib-vox-audio,_ZN3vox10DataHandleD1Ev,vox::DataHandle::~DataHandle()
+86ac78,20,lib-vox-audio,_ZN3vox10DataHandleD0Ev,vox::DataHandle::~DataHandle()
+86ac94,588,lib-vox-audio,_ZN3vox17VoxEngineInternal17GetAllDataSourcesEPNS_10DataHandleEi,"vox::VoxEngineInternal::GetAllDataSources(vox::DataHandle*, int)"
+86aee8,236,lib-vox-audio,_ZN3vox17VoxEngineInternal19LoadDataSourceAsyncEiPviS1_iNS_21VoxSourceLoadingFlagsE,"vox::VoxEngineInternal::LoadDataSourceAsync(int, void*, int, void*, int, vox::VoxSourceLoadingFlags)"
+86b144,368,lib-vox-audio,_ZN3vox17VoxEngineInternal14LoadDataSourceEiPviS1_i,"vox::VoxEngineInternal::LoadDataSource(int, void*, int, void*, int)"
+86b420,620,lib-vox-audio,_ZN3vox17VoxEngineInternal24ConvertToRamBufferSourceERNS_10DataHandleE,vox::VoxEngineInternal::ConvertToRamBufferSource(vox::DataHandle&)
+86b694,716,lib-vox-audio,_ZN3vox17VoxEngineInternal18ConvertToRawSourceERNS_10DataHandleE,vox::VoxEngineInternal::ConvertToRawSource(vox::DataHandle&)
+86b968,72,lib-vox-audio,_ZN3vox10DataHandleD2Ev,vox::DataHandle::~DataHandle()
+86b9b8,36,lib-vox-audio,_ZN3vox17VoxEngineInternal12SetGroupGainEjff,"vox::VoxEngineInternal::SetGroupGain(unsigned int, float, float)"
+86bb24,32,lib-vox-audio,_ZN3vox10EmitterObj7SetGainEff,"vox::EmitterObj::SetGain(float, float)"
+86bbf4,76,lib-vox-audio,_ZN3vox17VoxEngineInternal7SetGainERNS_13EmitterHandleEff,"vox::VoxEngineInternal::SetGain(vox::EmitterHandle&, float, float)"
+86bc40,32,lib-vox-audio,_ZN3vox10EmitterObj8SetPitchEff,"vox::EmitterObj::SetPitch(float, float)"
+86bd10,76,lib-vox-audio,_ZN3vox17VoxEngineInternal8SetPitchERNS_13EmitterHandleEff,"vox::VoxEngineInternal::SetPitch(vox::EmitterHandle&, float, float)"
+86bd5c,32,lib-vox-audio,_ZN3vox17VoxEngineInternal13SetMasterGainEff,"vox::VoxEngineInternal::SetMasterGain(float, float)"
+86be68,380,lib-vox-audio,_ZN3vox17VoxEngineInternalD1Ev,vox::VoxEngineInternal::~VoxEngineInternal()
+86c010,20,lib-vox-audio,_ZN3vox17VoxEngineInternalD0Ev,vox::VoxEngineInternal::~VoxEngineInternal()
+86c02c,380,lib-vox-audio,_ZN3vox17VoxEngineInternalD2Ev,vox::VoxEngineInternal::~VoxEngineInternal()
+86c1d4,28,lib-vox-audio,_ZN3vox10EmitterObj6ResumeEf,vox::EmitterObj::Resume(float)
+86c2cc,16,lib-vox-audio,_ZN3vox17VoxEngineInternal6ResumeEPNS_10EmitterObjEf,"vox::VoxEngineInternal::Resume(vox::EmitterObj*, float)"
+86c2dc,508,lib-vox-audio,_ZN3vox17VoxEngineInternal17ResumeAllEmittersEjf,"vox::VoxEngineInternal::ResumeAllEmitters(unsigned int, float)"
+86c4d8,68,lib-vox-audio,_ZN3vox17VoxEngineInternal6ResumeERNS_13EmitterHandleEf,"vox::VoxEngineInternal::Resume(vox::EmitterHandle&, float)"
+86c5ec,1036,lib-vox-audio,_ZN3vox10EmitterObjC1ExiiiPNS_21DriverSourceInterfaceEPNS_22DecoderCursorInterfaceEPNS_7DataObjE,"vox::EmitterObj::EmitterObj(long long, int, int, int, vox::DriverSourceInterface*, vox::DecoderCursorInterface*, vox::DataObj*)"
+86ca08,796,lib-vox-audio,_ZN3vox17VoxEngineInternal13CreateEmitterERNS_10DataHandleEiPv,"vox::VoxEngineInternal::CreateEmitter(vox::DataHandle&, int, void*)"
+86ce1c,1036,lib-vox-audio,_ZN3vox10EmitterObjC2ExiiiPNS_21DriverSourceInterfaceEPNS_22DecoderCursorInterfaceEPNS_7DataObjE,"vox::EmitterObj::EmitterObj(long long, int, int, int, vox::DriverSourceInterface*, vox::DecoderCursorInterface*, vox::DataObj*)"
+86d238,892,lib-vox-audio,_ZN3vox10EmitterObj9LoadAsyncEv,vox::EmitterObj::LoadAsync()
+86d5b8,28,lib-vox-audio,_ZN3vox10EmitterObj6UpdateEf,vox::EmitterObj::Update(float)
+86db40,32,lib-vox-audio,_ZN3vox17VoxEngineInternal14UpdateEmittersEf,vox::VoxEngineInternal::UpdateEmitters(float)
+86e078,28,lib-vox-audio,_ZN3vox19PriorityBankManager13RemoveEmitterEiPNS_10EmitterObjE,"vox::PriorityBankManager::RemoveEmitter(int, vox::EmitterObj*)"
+86e160,348,lib-vox-audio,_ZN3vox17VoxEngineInternal11KillEmitterEPNS_10EmitterObjE,vox::VoxEngineInternal::KillEmitter(vox::EmitterObj*)
+86e304,28,lib-vox-audio,_ZN3vox10EmitterObj4PlayEf,vox::EmitterObj::Play(float)
+86e428,28,lib-vox-audio,_ZN3vox10EmitterObj5PauseEf,vox::EmitterObj::Pause(float)
+86e618,16,lib-vox-audio,_ZN3vox17VoxEngineInternal5PauseEPNS_10EmitterObjEf,"vox::VoxEngineInternal::Pause(vox::EmitterObj*, float)"
+86e628,508,lib-vox-audio,_ZN3vox17VoxEngineInternal16PauseAllEmittersEjf,"vox::VoxEngineInternal::PauseAllEmitters(unsigned int, float)"
+86e824,68,lib-vox-audio,_ZN3vox17VoxEngineInternal5PauseERNS_13EmitterHandleEf,"vox::VoxEngineInternal::Pause(vox::EmitterHandle&, float)"
+86e868,28,lib-vox-audio,_ZN3vox10EmitterObj4StopEf,vox::EmitterObj::Stop(float)
+86ea54,32,lib-vox-audio,_ZN3vox19PriorityBankManager10AddEmitterEiPNS_10EmitterObjE,"vox::PriorityBankManager::AddEmitter(int, vox::EmitterObj*)"
+86ed00,76,lib-vox-audio,_ZN3vox17VoxEngineInternal4StopEPNS_10EmitterObjEf,"vox::VoxEngineInternal::Stop(vox::EmitterObj*, float)"
+86ed4c,508,lib-vox-audio,_ZN3vox17VoxEngineInternal15StopAllEmittersEjf,"vox::VoxEngineInternal::StopAllEmitters(unsigned int, float)"
+86ef48,68,lib-vox-audio,_ZN3vox17VoxEngineInternal4StopERNS_13EmitterHandleEf,"vox::VoxEngineInternal::Stop(vox::EmitterHandle&, float)"
+86ef8c,180,lib-vox-audio,_ZN3vox17VoxEngineInternal4PlayEPNS_10EmitterObjEbf,"vox::VoxEngineInternal::Play(vox::EmitterObj*, bool, float)"
+86f040,532,lib-vox-audio,_ZN3vox17VoxEngineInternal15PlayAllEmittersEjf,"vox::VoxEngineInternal::PlayAllEmitters(unsigned int, float)"
+86f254,76,lib-vox-audio,_ZN3vox17VoxEngineInternal4PlayERNS_13EmitterHandleEbf,"vox::VoxEngineInternal::Play(vox::EmitterHandle&, bool, float)"
+86f3b4,412,lib-vox-audio,_ZN3vox8VoxUtils27LoadDataSourceFromFileToRAMEPKcii,"vox::VoxUtils::LoadDataSourceFromFileToRAM(char const*, int, int)"
+86f558,72,lib-vox-audio,_ZN3vox8VoxUtils22LoadDataSourceFromFileEPKcii,"vox::VoxUtils::LoadDataSourceFromFile(char const*, int, int)"
+86f5a0,92,lib-vox-audio,_ZN3vox8VoxUtils27LoadDataSourceFromFileAsRAWEPKcii,"vox::VoxUtils::LoadDataSourceFromFileAsRAW(char const*, int, int)"
+86f5fc,180,lib-vox-audio,_ZN3vox8VoxUtils24LoadDataSourceFromFileExEPKciNS_21VoxSourceLoadingFlagsEi,"vox::VoxUtils::LoadDataSourceFromFileEx(char const*, int, vox::VoxSourceLoadingFlags, int)"
+86f6b0,252,lib-vox-audio,_ZN3vox8VoxUtils39LoadDataSourceFromFileAutoDetectDecoderEPKci,"vox::VoxUtils::LoadDataSourceFromFileAutoDetectDecoder(char const*, int)"
+86f8e0,260,lib-vox-audio,_ZN3vox8VoxUtils41LoadDataSourceFromFileAutoDetectDecoderExEPKciNS_21VoxSourceLoadingFlagsEPNS_18DataHandleUserDataE,"vox::VoxUtils::LoadDataSourceFromFileAutoDetectDecoderEx(char const*, int, vox::VoxSourceLoadingFlags, vox::DataHandleUserData*)"
+86fb2c,4,lib-vox-audio,_ZN3vox16DecoderInterfaceD1Ev,vox::DecoderInterface::~DecoderInterface()
+86fb30,4,lib-vox-audio,_ZN3vox16DecoderInterface4InitEv,vox::DecoderInterface::Init()
+86fb34,4,lib-vox-audio,_ZN3vox16DecoderInterface8ShutdownEv,vox::DecoderInterface::Shutdown()
+86fb38,4,lib-vox-audio,_ZN3vox22DecoderCursorInterfaceD1Ev,vox::DecoderCursorInterface::~DecoderCursorInterface()
+86fb3c,4,lib-vox-audio,_ZN3vox22DecoderCursorInterface4InitEv,vox::DecoderCursorInterface::Init()
+86fb40,4,lib-vox-audio,_ZN3vox22DecoderCursorInterface8ShutdownEv,vox::DecoderCursorInterface::Shutdown()
+86fb44,24,lib-vox-audio,_ZN3vox22DecoderCursorInterface9DecodeRefERPvi,"vox::DecoderCursorInterface::DecodeRef(void*&, int)"
+86fb5c,24,lib-vox-audio,_ZN3vox22DecoderCursorInterface5ResetEv,vox::DecoderCursorInterface::Reset()
+86fb74,8,lib-vox-audio,_ZN3vox22DecoderCursorInterface14GetRewindLimitEv,vox::DecoderCursorInterface::GetRewindLimit()
+86fb7c,4,lib-vox-audio,_ZN3vox22DecoderCursorInterface6RewindEi,vox::DecoderCursorInterface::Rewind(int)
+86fb80,8,lib-vox-audio,_ZN3vox22DecoderCursorInterface7SetLoopEb,vox::DecoderCursorInterface::SetLoop(bool)
+86fb88,8,lib-vox-audio,_ZN3vox22DecoderCursorInterface15GetStreamCursorEv,vox::DecoderCursorInterface::GetStreamCursor()
+86fb90,8,lib-vox-audio,_ZN3vox22DecoderCursorInterface20AllowBufferReferenceEv,vox::DecoderCursorInterface::AllowBufferReference()
+86fb98,8,lib-vox-audio,_ZN3vox11DecoderMPC87GetTypeEv,vox::DecoderMPC8::GetType()
+86fba0,8,lib-vox-audio,_ZN3vox11DecoderMPC88GetParamEv,vox::DecoderMPC8::GetParam()
+86fba8,44,lib-vox-audio,_Z8mpc_readP12mpc_reader_tPvi,"mpc_read(mpc_reader_t*, void*, int)"
+86fbd4,56,lib-vox-audio,_Z8mpc_seekP12mpc_reader_ti,"mpc_seek(mpc_reader_t*, int)"
+86fc0c,44,lib-vox-audio,_Z8mpc_tellP12mpc_reader_t,mpc_tell(mpc_reader_t*)
+86fc38,56,lib-vox-audio,_Z11mpc_getsizeP12mpc_reader_t,mpc_getsize(mpc_reader_t*)
+86fc70,8,lib-vox-audio,_Z11mpc_canseekP12mpc_reader_t,mpc_canseek(mpc_reader_t*)
+86fc78,48,lib-vox-audio,_ZN3vox11DecoderMPC8C2EPNS_17DecoderMPC8ParamsE,vox::DecoderMPC8::DecoderMPC8(vox::DecoderMPC8Params*)
+86fcb0,48,lib-vox-audio,_ZN3vox11DecoderMPC8C1EPNS_17DecoderMPC8ParamsE,vox::DecoderMPC8::DecoderMPC8(vox::DecoderMPC8Params*)
+86fce8,112,lib-vox-audio,_ZN3vox17DecoderMPC8Cursor7HasDataEv,vox::DecoderMPC8Cursor::HasData()
+86fd58,52,lib-vox-audio,_ZN3vox17DecoderMPC8Cursor19ConvertFloatToShortEPsPfi,"vox::DecoderMPC8Cursor::ConvertFloatToShort(short*, float*, int)"
+86fdbc,4,lib-vox-audio,_ZN3vox17DecoderMPC8Cursor19ConvertFixedToShortEPsPii,"vox::DecoderMPC8Cursor::ConvertFixedToShort(short*, int*, int)"
+86fdc0,4,lib-vox-audio,_ZN3vox11DecoderMPC8D1Ev,vox::DecoderMPC8::~DecoderMPC8()
+86fdc4,12,lib-vox-audio,_ZN3vox11DecoderMPC8D0Ev,vox::DecoderMPC8::~DecoderMPC8()
+86fdd8,12,lib-vox-audio,_ZN3vox16DecoderInterfaceD0Ev,vox::DecoderInterface::~DecoderInterface()
+86fdec,12,lib-vox-audio,_ZN3vox22DecoderCursorInterfaceD0Ev,vox::DecoderCursorInterface::~DecoderCursorInterface()
+86fe00,56,lib-vox-audio,_ZN3vox17DecoderMPC8Cursor4SeekEj,vox::DecoderMPC8Cursor::Seek(unsigned int)
+86fe38,40,lib-vox-audio,_ZN3vox17DecoderMPC8Cursor6DecodeEPvi,"vox::DecoderMPC8Cursor::Decode(void*, int)"
+8700a4,72,lib-vox-audio,_ZN3vox17DecoderMPC8CursorD1Ev,vox::DecoderMPC8Cursor::~DecoderMPC8Cursor()
+8700f4,20,lib-vox-audio,_ZN3vox17DecoderMPC8CursorD0Ev,vox::DecoderMPC8Cursor::~DecoderMPC8Cursor()
+870110,72,lib-vox-audio,_ZN3vox17DecoderMPC8CursorD2Ev,vox::DecoderMPC8Cursor::~DecoderMPC8Cursor()
+870160,44,lib-vox-audio,_ZN3vox11DecoderMPC813DestroyCursorEPNS_22DecoderCursorInterfaceE,vox::DecoderMPC8::DestroyCursor(vox::DecoderCursorInterface*)
+87018c,368,lib-vox-audio,_ZN3vox17DecoderMPC8CursorC1EPNS_16DecoderInterfaceEPNS_21StreamCursorInterfaceE,"vox::DecoderMPC8Cursor::DecoderMPC8Cursor(vox::DecoderInterface*, vox::StreamCursorInterface*)"
+87031c,368,lib-vox-audio,_ZN3vox17DecoderMPC8CursorC2EPNS_16DecoderInterfaceEPNS_21StreamCursorInterfaceE,"vox::DecoderMPC8Cursor::DecoderMPC8Cursor(vox::DecoderInterface*, vox::StreamCursorInterface*)"
+8704ac,24,lib-vox-audio,_ZN3vox11DecoderMPC815CreateNewCursorEPNS_21StreamCursorInterfaceE,vox::DecoderMPC8::CreateNewCursor(vox::StreamCursorInterface*)
+8704dc,20,lib-vox-audio,_ZN3vox18DecoderMPC8FactoryEPv,vox::DecoderMPC8Factory(void*)
+870504,8,lib-vox-audio,_ZN3vox12DecoderMSWav7GetTypeEv,vox::DecoderMSWav::GetType()
+87050c,8,lib-vox-audio,_ZN3vox12DecoderMSWav8GetParamEv,vox::DecoderMSWav::GetParam()
+870514,44,lib-vox-audio,_ZN3vox12DecoderMSWavC2Ev,vox::DecoderMSWav::DecoderMSWav()
+870548,44,lib-vox-audio,_ZN3vox12DecoderMSWavC1Ev,vox::DecoderMSWav::DecoderMSWav()
+87057c,44,lib-vox-audio,_ZN3vox18DecoderMSWavCursor6DecodeEPvi,"vox::DecoderMSWavCursor::Decode(void*, int)"
+8705a8,44,lib-vox-audio,_ZN3vox18DecoderMSWavCursor4SeekEj,vox::DecoderMSWavCursor::Seek(unsigned int)
+8705d4,16,lib-vox-audio,_ZN3vox18DecoderMSWavCursor7SetLoopEb,vox::DecoderMSWavCursor::SetLoop(bool)
+8705e4,44,lib-vox-audio,_ZN3vox18DecoderMSWavCursor7HasDataEv,vox::DecoderMSWavCursor::HasData()
+870610,824,lib-vox-audio,_ZN3vox18DecoderMSWavCursor9ParseFileEv,vox::DecoderMSWavCursor::ParseFile()
+8709b8,16,lib-vox-audio,_ZN3vox19DecoderMSWavFactoryEPv,vox::DecoderMSWavFactory(void*)
+8709d8,76,lib-vox-audio,_ZN3vox18DecoderMSWavCursorD1Ev,vox::DecoderMSWavCursor::~DecoderMSWavCursor()
+870a2c,20,lib-vox-audio,_ZN3vox18DecoderMSWavCursorD0Ev,vox::DecoderMSWavCursor::~DecoderMSWavCursor()
+870a48,76,lib-vox-audio,_ZN3vox18DecoderMSWavCursorD2Ev,vox::DecoderMSWavCursor::~DecoderMSWavCursor()
+870a9c,44,lib-vox-audio,_ZN3vox12DecoderMSWav13DestroyCursorEPNS_22DecoderCursorInterfaceE,vox::DecoderMSWav::DestroyCursor(vox::DecoderCursorInterface*)
+870ac8,352,lib-vox-audio,_ZN3vox18DecoderMSWavCursorC1EPNS_16DecoderInterfaceEPNS_21StreamCursorInterfaceE,"vox::DecoderMSWavCursor::DecoderMSWavCursor(vox::DecoderInterface*, vox::StreamCursorInterface*)"
+870c68,24,lib-vox-audio,_ZN3vox12DecoderMSWav15CreateNewCursorEPNS_21StreamCursorInterfaceE,vox::DecoderMSWav::CreateNewCursor(vox::StreamCursorInterface*)
+870c98,352,lib-vox-audio,_ZN3vox18DecoderMSWavCursorC2EPNS_16DecoderInterfaceEPNS_21StreamCursorInterfaceE,"vox::DecoderMSWavCursor::DecoderMSWavCursor(vox::DecoderInterface*, vox::StreamCursorInterface*)"
+870e38,324,lib-vox-audio,_ZN3vox8DataNode9DropNodesEv,vox::DataNode::DropNodes()
+870f7c,120,lib-vox-audio,_ZN3vox12DecoderMSWavD2Ev,vox::DecoderMSWav::~DecoderMSWav()
+870ffc,120,lib-vox-audio,_ZN3vox12DecoderMSWavD1Ev,vox::DecoderMSWav::~DecoderMSWav()
+87107c,20,lib-vox-audio,_ZN3vox12DecoderMSWavD0Ev,vox::DecoderMSWav::~DecoderMSWav()
+871098,8,lib-vox-audio,_ZN3vox13DecoderNative7GetTypeEv,vox::DecoderNative::GetType()
+8710a0,8,lib-vox-audio,_ZN3vox13DecoderNative8GetParamEv,vox::DecoderNative::GetParam()
+8710a8,44,lib-vox-audio,_ZN3vox19DecoderNativeCursor7HasDataEv,vox::DecoderNativeCursor::HasData()
+8710d4,40,lib-vox-audio,_ZN3vox19DecoderNativeCursor14GetRewindLimitEv,vox::DecoderNativeCursor::GetRewindLimit()
+8710fc,44,lib-vox-audio,_ZN3vox19DecoderNativeCursor4SeekEj,vox::DecoderNativeCursor::Seek(unsigned int)
+871128,4,lib-vox-audio,_ZN3vox19DecoderNativeCursor7SetLoopEb,vox::DecoderNativeCursor::SetLoop(bool)
+8715d8,44,lib-vox-audio,_ZNK3vox13StringCompareclERKSbIcSt11char_traitsIcENS_10SAllocatorIcLNS_10VoxMemHintE0EEEES8_,"vox::StringCompare::operator()(std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const&, std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const&) const"
+8718cc,76,lib-vox-audio,_ZN3vox19DecoderNativeCursor5ResetEv,vox::DecoderNativeCursor::Reset()
+871954,20,lib-vox-audio,_ZN3vox19DecoderNativeCursor13GetStateIndexEv,vox::DecoderNativeCursor::GetStateIndex()
+871a50,44,lib-vox-audio,_ZN3vox13DecoderNative13DestroyCursorEPNS_22DecoderCursorInterfaceE,vox::DecoderNative::DestroyCursor(vox::DecoderCursorInterface*)
+8720b8,164,lib-vox-audio,_ZN3vox19DecoderNativeCursor6RewindEi,vox::DecoderNativeCursor::Rewind(int)
+87215c,44,lib-vox-audio,_ZN3vox13DecoderNative30CreateTransitionRulesContainerEii,"vox::DecoderNative::CreateTransitionRulesContainer(int, int)"
+872188,36,lib-vox-audio,_ZN3vox13DecoderNative21CreateStatesContainerEi,vox::DecoderNative::CreateStatesContainer(int)
+8721ac,108,lib-vox-audio,_ZN3vox13DecoderNative28CreateSegmentsInfoContainersEii,"vox::DecoderNative::CreateSegmentsInfoContainers(int, int)"
+872218,252,lib-vox-audio,_ZN3vox19DecoderNativeCursor6DecodeEPvi,"vox::DecoderNativeCursor::Decode(void*, int)"
+872314,216,lib-vox-audio,_ZN3vox19DecoderNativeCursorD1Ev,vox::DecoderNativeCursor::~DecoderNativeCursor()
+872424,20,lib-vox-audio,_ZN3vox19DecoderNativeCursorD0Ev,vox::DecoderNativeCursor::~DecoderNativeCursor()
+872440,216,lib-vox-audio,_ZN3vox19DecoderNativeCursorD2Ev,vox::DecoderNativeCursor::~DecoderNativeCursor()
+872550,160,lib-vox-audio,_ZN3vox13DecoderNativeD1Ev,vox::DecoderNative::~DecoderNative()
+87261c,20,lib-vox-audio,_ZN3vox13DecoderNativeD0Ev,vox::DecoderNative::~DecoderNative()
+872638,160,lib-vox-audio,_ZN3vox13DecoderNativeD2Ev,vox::DecoderNative::~DecoderNative()
+872a84,68,lib-vox-audio,_ZN3vox13DecoderNative26CreateTransitionsContainerEi,vox::DecoderNative::CreateTransitionsContainer(int)
+872ac8,8,lib-vox-audio,_ZN3vox13DecoderNative24CreatePlaylistsContainerEi,vox::DecoderNative::CreatePlaylistsContainer(int)
+872ad0,160,lib-vox-audio,_ZN3vox13DecoderNativeC1Ev,vox::DecoderNative::DecoderNative()
+872b78,16,lib-vox-audio,_ZN3vox20DecoderNativeFactoryEPv,vox::DecoderNativeFactory(void*)
+872b98,160,lib-vox-audio,_ZN3vox13DecoderNativeC2Ev,vox::DecoderNative::DecoderNative()
+872cf0,360,lib-vox-audio,_ZN3vox19DecoderNativeCursor22SetImplicitSegmentCuesEv,vox::DecoderNativeCursor::SetImplicitSegmentCues()
+873144,56,lib-vox-audio,_ZN3vox19DecoderNativeCursor24SetInteractiveMusicStateEPKc,vox::DecoderNativeCursor::SetInteractiveMusicState(char const*)
+8738bc,440,lib-vox-audio,_ZN3vox19DecoderNativeCursor9ParseFileEv,vox::DecoderNativeCursor::ParseFile()
+8742f4,296,lib-vox-audio,_ZN3vox19DecoderNativeCursorC1EPNS_16DecoderInterfaceEPNS_21StreamCursorInterfaceE,"vox::DecoderNativeCursor::DecoderNativeCursor(vox::DecoderInterface*, vox::StreamCursorInterface*)"
+874648,24,lib-vox-audio,_ZN3vox13DecoderNative15CreateNewCursorEPNS_21StreamCursorInterfaceE,vox::DecoderNative::CreateNewCursor(vox::StreamCursorInterface*)
+874678,296,lib-vox-audio,_ZN3vox19DecoderNativeCursorC2EPNS_16DecoderInterfaceEPNS_21StreamCursorInterfaceE,"vox::DecoderNativeCursor::DecoderNativeCursor(vox::DecoderInterface*, vox::StreamCursorInterface*)"
+8749cc,8,lib-vox-audio,_ZN3vox10DecoderRaw7GetTypeEv,vox::DecoderRaw::GetType()
+8749d4,8,lib-vox-audio,_ZN3vox10DecoderRaw8GetParamEv,vox::DecoderRaw::GetParam()
+8749dc,4,lib-vox-audio,_ZN3vox16DecoderRawCursorD1Ev,vox::DecoderRawCursor::~DecoderRawCursor()
+8749e0,44,lib-vox-audio,_ZN3vox16DecoderRawCursor20AllowBufferReferenceEv,vox::DecoderRawCursor::AllowBufferReference()
+874a0c,80,lib-vox-audio,_ZN3vox10DecoderRawC2EPNS_11TrackParamsE,vox::DecoderRaw::DecoderRaw(vox::TrackParams*)
+874a64,80,lib-vox-audio,_ZN3vox10DecoderRawC1EPNS_11TrackParamsE,vox::DecoderRaw::DecoderRaw(vox::TrackParams*)
+874abc,92,lib-vox-audio,_ZN3vox16DecoderRawCursorC2EPNS_16DecoderInterfaceEPNS_21StreamCursorInterfaceE,"vox::DecoderRawCursor::DecoderRawCursor(vox::DecoderInterface*, vox::StreamCursorInterface*)"
+874b20,92,lib-vox-audio,_ZN3vox16DecoderRawCursorC1EPNS_16DecoderInterfaceEPNS_21StreamCursorInterfaceE,"vox::DecoderRawCursor::DecoderRawCursor(vox::DecoderInterface*, vox::StreamCursorInterface*)"
+874b84,192,lib-vox-audio,_ZN3vox16DecoderRawCursor9DecodeRefERPvi,"vox::DecoderRawCursor::DecodeRef(void*&, int)"
+874c44,172,lib-vox-audio,_ZN3vox16DecoderRawCursor6DecodeEPvi,"vox::DecoderRawCursor::Decode(void*, int)"
+874cf0,76,lib-vox-audio,_ZN3vox16DecoderRawCursor4SeekEj,vox::DecoderRawCursor::Seek(unsigned int)
+874d3c,104,lib-vox-audio,_ZN3vox16DecoderRawCursor7HasDataEv,vox::DecoderRawCursor::HasData()
+874da4,4,lib-vox-audio,_ZN3vox10DecoderRawD1Ev,vox::DecoderRaw::~DecoderRaw()
+874da8,12,lib-vox-audio,_ZN3vox10DecoderRawD0Ev,vox::DecoderRaw::~DecoderRaw()
+874dbc,12,lib-vox-audio,_ZN3vox16DecoderRawCursorD0Ev,vox::DecoderRawCursor::~DecoderRawCursor()
+874dd0,44,lib-vox-audio,_ZN3vox10DecoderRaw13DestroyCursorEPNS_22DecoderCursorInterfaceE,vox::DecoderRaw::DestroyCursor(vox::DecoderCursorInterface*)
+874dfc,24,lib-vox-audio,_ZN3vox10DecoderRaw15CreateNewCursorEPNS_21StreamCursorInterfaceE,vox::DecoderRaw::CreateNewCursor(vox::StreamCursorInterface*)
+874e2c,20,lib-vox-audio,_ZN3vox17DecoderRawFactoryEPv,vox::DecoderRawFactory(void*)
+874e54,8,lib-vox-audio,_ZN3vox16DecoderStbVorbis7GetTypeEv,vox::DecoderStbVorbis::GetType()
+874e5c,8,lib-vox-audio,_ZN3vox16DecoderStbVorbis8GetParamEv,vox::DecoderStbVorbis::GetParam()
+874f2c,112,lib-vox-audio,_ZN3vox22DecoderStbVorbisCursor7HasDataEv,vox::DecoderStbVorbisCursor::HasData()
+874f9c,80,lib-vox-audio,_ZN3vox22DecoderStbVorbisCursor4SeekEj,vox::DecoderStbVorbisCursor::Seek(unsigned int)
+874fec,216,lib-vox-audio,_ZN3vox22DecoderStbVorbisCursor6DecodeEPvi,"vox::DecoderStbVorbisCursor::Decode(void*, int)"
+8750c4,56,lib-vox-audio,_ZN3vox22DecoderStbVorbisCursorD1Ev,vox::DecoderStbVorbisCursor::~DecoderStbVorbisCursor()
+875104,20,lib-vox-audio,_ZN3vox22DecoderStbVorbisCursorD0Ev,vox::DecoderStbVorbisCursor::~DecoderStbVorbisCursor()
+875120,56,lib-vox-audio,_ZN3vox22DecoderStbVorbisCursorD2Ev,vox::DecoderStbVorbisCursor::~DecoderStbVorbisCursor()
+875160,56,lib-vox-audio,_ZN3vox16DecoderStbVorbisD1Ev,vox::DecoderStbVorbis::~DecoderStbVorbis()
+8751a0,20,lib-vox-audio,_ZN3vox16DecoderStbVorbisD0Ev,vox::DecoderStbVorbis::~DecoderStbVorbis()
+8751bc,56,lib-vox-audio,_ZN3vox16DecoderStbVorbisD2Ev,vox::DecoderStbVorbis::~DecoderStbVorbis()
+8751fc,184,lib-vox-audio,_ZN3vox22DecoderStbVorbisCursorC1EPNS_16DecoderInterfaceEPNS_21StreamCursorInterfaceE,"vox::DecoderStbVorbisCursor::DecoderStbVorbisCursor(vox::DecoderInterface*, vox::StreamCursorInterface*)"
+8752bc,184,lib-vox-audio,_ZN3vox22DecoderStbVorbisCursorC2EPNS_16DecoderInterfaceEPNS_21StreamCursorInterfaceE,"vox::DecoderStbVorbisCursor::DecoderStbVorbisCursor(vox::DecoderInterface*, vox::StreamCursorInterface*)"
+87537c,44,lib-vox-audio,_ZN3vox16DecoderStbVorbis13DestroyCursorEPNS_22DecoderCursorInterfaceE,vox::DecoderStbVorbis::DestroyCursor(vox::DecoderCursorInterface*)
+8753a8,24,lib-vox-audio,_ZN3vox16DecoderStbVorbis15CreateNewCursorEPNS_21StreamCursorInterfaceE,vox::DecoderStbVorbis::CreateNewCursor(vox::StreamCursorInterface*)
+8753d8,16,lib-vox-audio,_ZN3vox23DecoderStbVorbisFactoryEPv,vox::DecoderStbVorbisFactory(void*)
+875414,4,lib-vox-audio,_ZN3vox18VoxMSWavSubDecoderD1Ev,vox::VoxMSWavSubDecoder::~VoxMSWavSubDecoder()
+875418,176,lib-vox-audio,_ZN3vox26VoxMSWavSubDecoderIMAADPCM7HasDataEv,vox::VoxMSWavSubDecoderIMAADPCM::HasData()
+8754c8,12,lib-vox-audio,_ZN3vox18VoxMSWavSubDecoderD0Ev,vox::VoxMSWavSubDecoder::~VoxMSWavSubDecoder()
+8754dc,40,lib-vox-audio,_ZN3vox26VoxMSWavSubDecoderIMAADPCMD1Ev,vox::VoxMSWavSubDecoderIMAADPCM::~VoxMSWavSubDecoderIMAADPCM()
+875538,20,lib-vox-audio,_ZN3vox26VoxMSWavSubDecoderIMAADPCMD0Ev,vox::VoxMSWavSubDecoderIMAADPCM::~VoxMSWavSubDecoderIMAADPCM()
+875554,40,lib-vox-audio,_ZN3vox26VoxMSWavSubDecoderIMAADPCMD2Ev,vox::VoxMSWavSubDecoderIMAADPCM::~VoxMSWavSubDecoderIMAADPCM()
+8755b0,300,lib-vox-audio,_ZN3vox26VoxMSWavSubDecoderIMAADPCMC1EPNS_21StreamCursorInterfaceEPNS_9WaveChunkE,"vox::VoxMSWavSubDecoderIMAADPCM::VoxMSWavSubDecoderIMAADPCM(vox::StreamCursorInterface*, vox::WaveChunk*)"
+875744,300,lib-vox-audio,_ZN3vox26VoxMSWavSubDecoderIMAADPCMC2EPNS_21StreamCursorInterfaceEPNS_9WaveChunkE,"vox::VoxMSWavSubDecoderIMAADPCM::VoxMSWavSubDecoderIMAADPCM(vox::StreamCursorInterface*, vox::WaveChunk*)"
+8758d8,848,lib-vox-audio,_ZN3vox26VoxMSWavSubDecoderIMAADPCM11DecodeBlockEPv,vox::VoxMSWavSubDecoderIMAADPCM::DecodeBlock(void*)
+875c34,148,lib-vox-audio,_ZN3vox26VoxMSWavSubDecoderIMAADPCM4SeekEj,vox::VoxMSWavSubDecoderIMAADPCM::Seek(unsigned int)
+875cc8,36,lib-vox-audio,_ZN3vox26VoxMSWavSubDecoderIMAADPCM6DecodeEPvi,"vox::VoxMSWavSubDecoderIMAADPCM::Decode(void*, int)"
+875e24,4,lib-vox-audio,_ZN3vox21VoxMSWavSubDecoderPCMD1Ev,vox::VoxMSWavSubDecoderPCM::~VoxMSWavSubDecoderPCM()
+875e28,48,lib-vox-audio,_ZN3vox21VoxMSWavSubDecoderPCM11GetDataSizeEv,vox::VoxMSWavSubDecoderPCM::GetDataSize()
+875e58,112,lib-vox-audio,_ZN3vox21VoxMSWavSubDecoderPCM7HasDataEv,vox::VoxMSWavSubDecoderPCM::HasData()
+875ec8,12,lib-vox-audio,_ZN3vox21VoxMSWavSubDecoderPCMD0Ev,vox::VoxMSWavSubDecoderPCM::~VoxMSWavSubDecoderPCM()
+875edc,244,lib-vox-audio,_ZN3vox21VoxMSWavSubDecoderPCM4SeekEj,vox::VoxMSWavSubDecoderPCM::Seek(unsigned int)
+875fd0,228,lib-vox-audio,_ZN3vox21VoxMSWavSubDecoderPCM6DecodeEPvi,"vox::VoxMSWavSubDecoderPCM::Decode(void*, int)"
+876168,124,lib-vox-audio,_ZN3vox21VoxMSWavSubDecoderPCMC1EPNS_21StreamCursorInterfaceEPNS_9WaveChunkE,"vox::VoxMSWavSubDecoderPCM::VoxMSWavSubDecoderPCM(vox::StreamCursorInterface*, vox::WaveChunk*)"
+876200,124,lib-vox-audio,_ZN3vox21VoxMSWavSubDecoderPCMC2EPNS_21StreamCursorInterfaceEPNS_9WaveChunkE,"vox::VoxMSWavSubDecoderPCM::VoxMSWavSubDecoderPCM(vox::StreamCursorInterface*, vox::WaveChunk*)"
+876c58,380,lib-vox-audio,_ZL19vorbis_finish_frameP10stb_vorbisiii,"vorbis_finish_frame(stb_vorbis*, int, int, int)"
+877590,100,lib-vox-audio,_ZL11vorbis_initP10stb_vorbisP16stb_vorbis_alloc,"vorbis_init(stb_vorbis*, stb_vorbis_alloc*)"
+877d90,456,lib-vox-audio,_ZL21vorbis_decode_initialP10stb_vorbisPiS1_S1_S1_S1_,"vorbis_decode_initial(stb_vorbis*, int*, int*, int*, int*, int*)"
+87809c,700,lib-vox-audio,_ZL16vorbis_find_pageP10stb_vorbisPjS1_,"vorbis_find_page(stb_vorbis*, unsigned int*, unsigned int*)"
+87a73c,640,lib-vox-audio,_ZL13vorbis_deinitP10stb_vorbis,vorbis_deinit(stb_vorbis*)
+87af70,1576,lib-vox-audio,_ZL20vorbis_decode_packetP10stb_vorbisPiS1_S1_,"vorbis_decode_packet(stb_vorbis*, int*, int*, int*)"
+87de80,60,lib-vox-audio,_ZL23vorbis_pump_first_frameP10stb_vorbis,vorbis_pump_first_frame(stb_vorbis*)
+87e9dc,492,lib-vox-audio,_ZL27vorbis_seek_frame_from_pageP10stb_vorbisjjji,"vorbis_seek_frame_from_page(stb_vorbis*, unsigned int, unsigned int, unsigned int, int)"
+87ebc8,516,lib-vox-audio,_ZL16vorbis_seek_baseP10stb_vorbisji,"vorbis_seek_base(stb_vorbis*, unsigned int, int)"
+87f1c0,124,lib-vox-audio,mpc_bits_read,mpc_bits_read
+87f23c,80,lib-vox-audio,mpc_demux_pos,mpc_demux_pos
+87f28c,228,lib-vox-audio,mpc_set_replay_level,mpc_set_replay_level
+87f42c,372,lib-vox-audio,mpc_demux_fill,mpc_demux_fill
+87f5c4,232,lib-vox-audio,mpc_demux_seek,mpc_demux_seek
+87f6ac,112,lib-vox-audio,mpc_demux_seek_sample,mpc_demux_seek_sample
+87fa74,76,lib-vox-audio,mpc_demux_seek_second,mpc_demux_seek_second
+87fac0,896,lib-vox-audio,mpc_demux_decode,mpc_demux_decode
+87ff10,20,lib-vox-audio,mpc_demux_get_info,mpc_demux_get_info
+87ff24,20,lib-vox-audio,mpc_demux_exit,mpc_demux_exit
+87ff5c,280,lib-vox-audio,mpc_demux_chap_find,mpc_demux_chap_find
+88033c,100,lib-vox-audio,mpc_demux_chap,mpc_demux_chap
+8803a0,52,lib-vox-audio,mpc_demux_chap_nb,mpc_demux_chap_nb
+8803d4,148,lib-vox-audio,mpc_demux_ST,mpc_demux_ST
+88063c,228,lib-vox-audio,mpc_demux_init,mpc_demux_init
+880d40,264,lib-vox-audio,mpc_decoder_scale_output,mpc_decoder_scale_output
+880e48,4,lib-vox-audio,mpc_decoder_init_quant,mpc_decoder_init_quant
+880e4c,124,lib-vox-audio,mpc_bits_read,mpc_bits_read
+880ec8,120,lib-vox-audio,streaminfo_gain,streaminfo_gain
+880f40,68,lib-vox-audio,mpc_streaminfo_get_length,mpc_streaminfo_get_length
+880f84,36,lib-vox-audio,mpc_streaminfo_get_length_samples,mpc_streaminfo_get_length_samples
+880fa8,400,lib-vox-audio,mpc_get_encoder_string,mpc_get_encoder_string
+881154,212,lib-vox-audio,streaminfo_encoder_info,streaminfo_encoder_info
+881230,484,lib-vox-audio,streaminfo_read_header_sv8,streaminfo_read_header_sv8
+881418,1004,lib-vox-audio,streaminfo_read_header_sv7,streaminfo_read_header_sv7
+881810,36,lib-vox-audio,_ZN3vox15PlaylistElementC2Ev,vox::PlaylistElement::PlaylistElement()
+881834,36,lib-vox-audio,_ZN3vox15PlaylistElementC1Ev,vox::PlaylistElement::PlaylistElement()
+881858,44,lib-vox-audio,_ZN3vox15PlaylistElementC2ERS0_,vox::PlaylistElement::PlaylistElement(vox::PlaylistElement&)
+881884,44,lib-vox-audio,_ZN3vox15PlaylistElementC1ERS0_,vox::PlaylistElement::PlaylistElement(vox::PlaylistElement&)
+8818b0,36,lib-vox-audio,_ZN3vox15PlaylistElement5ResetEv,vox::PlaylistElement::Reset()
+8818d4,92,lib-vox-audio,_ZN3vox12SegmentGroupC2EPNS_10GroupInfosEi,"vox::SegmentGroup::SegmentGroup(vox::GroupInfos*, int)"
+881938,92,lib-vox-audio,_ZN3vox12SegmentGroupC1EPNS_10GroupInfosEi,"vox::SegmentGroup::SegmentGroup(vox::GroupInfos*, int)"
+88199c,100,lib-vox-audio,_ZN3vox12SegmentGroupC2ERS0_,vox::SegmentGroup::SegmentGroup(vox::SegmentGroup&)
+881a08,100,lib-vox-audio,_ZN3vox12SegmentGroupC1ERS0_,vox::SegmentGroup::SegmentGroup(vox::SegmentGroup&)
+881a74,4,lib-vox-audio,_ZN3vox12SegmentGroupD2Ev,vox::SegmentGroup::~SegmentGroup()
+881a78,4,lib-vox-audio,_ZN3vox12SegmentGroupD1Ev,vox::SegmentGroup::~SegmentGroup()
+881a7c,8,lib-vox-audio,_ZN3vox12SegmentGroup13GetSelectModeEv,vox::SegmentGroup::GetSelectMode()
+881a84,8,lib-vox-audio,_ZN3vox12SegmentGroup7IsValidEv,vox::SegmentGroup::IsValid()
+881a8c,68,lib-vox-audio,_ZN3vox12SegmentGroup8SetStateERS0_,vox::SegmentGroup::SetState(vox::SegmentGroup&)
+881ad0,104,lib-vox-audio,_ZN3vox11RandomGroupC2EPNS_10GroupInfosEi,"vox::RandomGroup::RandomGroup(vox::GroupInfos*, int)"
+881b40,104,lib-vox-audio,_ZN3vox11RandomGroupC1EPNS_10GroupInfosEi,"vox::RandomGroup::RandomGroup(vox::GroupInfos*, int)"
+881bb0,92,lib-vox-audio,_ZN3vox11RandomGroup8GetStateEPNS_16RandomGroupStateE,vox::RandomGroup::GetState(vox::RandomGroupState*)
+881c0c,28,lib-vox-audio,_ZN3vox11RandomGroup22PeekAtNextGroupElementENS_13GroupPeekModeE,vox::RandomGroup::PeekAtNextGroupElement(vox::GroupPeekMode)
+881c28,68,lib-vox-audio,_ZN3vox15SequentialGroupC2EPNS_10GroupInfosEi,"vox::SequentialGroup::SequentialGroup(vox::GroupInfos*, int)"
+881c74,68,lib-vox-audio,_ZN3vox15SequentialGroupC1EPNS_10GroupInfosEi,"vox::SequentialGroup::SequentialGroup(vox::GroupInfos*, int)"
+881cc0,112,lib-vox-audio,_ZN3vox15SequentialGroup23GetGroupElementPositionEv,vox::SequentialGroup::GetGroupElementPosition()
+881d30,52,lib-vox-audio,_ZN3vox15SequentialGroup8GetStateEPNS_20SequentialGroupStateE,vox::SequentialGroup::GetState(vox::SequentialGroupState*)
+881d64,60,lib-vox-audio,_ZN3vox15SequentialGroup22PeekAtNextGroupElementENS_13GroupPeekModeE,vox::SequentialGroup::PeekAtNextGroupElement(vox::GroupPeekMode)
+881da0,56,lib-vox-audio,_ZN3vox15SequentialGroup5ResetEi,vox::SequentialGroup::Reset(int)
+881dd8,36,lib-vox-audio,_ZN3vox15SequentialGroup8SetStateERS0_,vox::SequentialGroup::SetState(vox::SequentialGroup&)
+881dfc,52,lib-vox-audio,_ZN3vox15SequentialGroup8SetStateEPNS_20SequentialGroupStateE,vox::SequentialGroup::SetState(vox::SequentialGroupState*)
+881e30,28,lib-vox-audio,_ZN3vox15SequentialGroup18SetToPreviousStateEv,vox::SequentialGroup::SetToPreviousState()
+881e4c,80,lib-vox-audio,_ZN3vox14NativePlaylistC2EPNS_13PlaylistInfosE,vox::NativePlaylist::NativePlaylist(vox::PlaylistInfos*)
+881e9c,80,lib-vox-audio,_ZN3vox14NativePlaylistC1EPNS_13PlaylistInfosE,vox::NativePlaylist::NativePlaylist(vox::PlaylistInfos*)
+881eec,16,lib-vox-audio,_ZN3vox14NativePlaylist17GetCurrentElementEv,vox::NativePlaylist::GetCurrentElement()
+881efc,8,lib-vox-audio,_ZN3vox14NativePlaylist18GetCurrentPositionEv,vox::NativePlaylist::GetCurrentPosition()
+881f04,60,lib-vox-audio,_ZN3vox14NativePlaylist8GetStateEPNS_13PlaylistStateE,vox::NativePlaylist::GetState(vox::PlaylistState*)
+881f40,56,lib-vox-audio,_ZN3vox14NativePlaylist18GetPlaylistElementEi,vox::NativePlaylist::GetPlaylistElement(int)
+881f78,548,lib-vox-audio,_ZN3vox14NativePlaylist18GetPlaylistElementEv,vox::NativePlaylist::GetPlaylistElement()
+88219c,8,lib-vox-audio,_ZN3vox14NativePlaylist7IsValidEv,vox::NativePlaylist::IsValid()
+8821a4,324,lib-vox-audio,_ZN3vox14NativePlaylist17PeekAtNextElementEv,vox::NativePlaylist::PeekAtNextElement()
+8822e8,120,lib-vox-audio,_ZN3vox14NativePlaylist5ResetEv,vox::NativePlaylist::Reset()
+882360,172,lib-vox-audio,_ZN3vox14NativePlaylist8SetStateERS0_,vox::NativePlaylist::SetState(vox::NativePlaylist&)
+88240c,60,lib-vox-audio,_ZN3vox14NativePlaylist18SetToPreviousStateEv,vox::NativePlaylist::SetToPreviousState()
+882448,28,lib-vox-audio,_ZN3vox22NativePlaylistsManagerC2Ev,vox::NativePlaylistsManager::NativePlaylistsManager()
+882464,28,lib-vox-audio,_ZN3vox22NativePlaylistsManagerC1Ev,vox::NativePlaylistsManager::NativePlaylistsManager()
+882480,8,lib-vox-audio,_ZN3vox22NativePlaylistsManager14GetNbPlaylistsEv,vox::NativePlaylistsManager::GetNbPlaylists()
+882488,56,lib-vox-audio,_ZN3vox22NativePlaylistsManager18GetPlaylistElementEiii,"vox::NativePlaylistsManager::GetPlaylistElement(int, int, int)"
+8824c0,8,lib-vox-audio,_ZN3vox22NativePlaylistsManager7IsValidEv,vox::NativePlaylistsManager::IsValid()
+8824c8,12,lib-vox-audio,_ZN3vox22NativePlaylistsManager25PeekAtNextPlaylistElementEi,vox::NativePlaylistsManager::PeekAtNextPlaylistElement(int)
+8824d4,20,lib-vox-audio,_ZN3vox22NativePlaylistsManager13ResetPlaylistEi,vox::NativePlaylistsManager::ResetPlaylist(int)
+8824e8,12,lib-vox-audio,_ZN3vox22NativePlaylistsManager26SetPlaylistToPreviousStateEi,vox::NativePlaylistsManager::SetPlaylistToPreviousState(int)
+8824f4,84,lib-vox-audio,_ZN3vox22NativePlaylistsManager8SetStateERS0_,vox::NativePlaylistsManager::SetState(vox::NativePlaylistsManager&)
+882548,32,lib-vox-audio,_ZN3vox22NativePlaylistsManager4InitEi,vox::NativePlaylistsManager::Init(int)
+882568,28,lib-vox-audio,_ZN3vox22NativePlaylistsManager11AddPlaylistEiPNS_13PlaylistInfosE,"vox::NativePlaylistsManager::AddPlaylist(int, vox::PlaylistInfos*)"
+8825b8,252,lib-vox-audio,_ZN3vox14NativePlaylistD1Ev,vox::NativePlaylist::~NativePlaylist()
+8826b4,92,lib-vox-audio,_ZN3vox22NativePlaylistsManagerD1Ev,vox::NativePlaylistsManager::~NativePlaylistsManager()
+882720,92,lib-vox-audio,_ZN3vox22NativePlaylistsManagerD2Ev,vox::NativePlaylistsManager::~NativePlaylistsManager()
+88278c,252,lib-vox-audio,_ZN3vox14NativePlaylistD2Ev,vox::NativePlaylist::~NativePlaylist()
+882888,64,lib-vox-audio,_ZN3vox15SequentialGroupD1Ev,vox::SequentialGroup::~SequentialGroup()
+8828d0,64,lib-vox-audio,_ZN3vox15SequentialGroupD2Ev,vox::SequentialGroup::~SequentialGroup()
+882918,204,lib-vox-audio,_ZN3vox11RandomGroupD1Ev,vox::RandomGroup::~RandomGroup()
+8829fc,204,lib-vox-audio,_ZN3vox11RandomGroupD2Ev,vox::RandomGroup::~RandomGroup()
+882ae0,296,lib-vox-audio,_ZN3vox14NativePlaylist8SetStateEPNS_13PlaylistStateE,vox::NativePlaylist::SetState(vox::PlaylistState*)
+882c0c,64,lib-vox-audio,_ZN3vox22NativePlaylistsManager27TransposePlaylistParametersEii,"vox::NativePlaylistsManager::TransposePlaylistParameters(int, int)"
+882c4c,20,lib-vox-audio,_ZN3vox12SegmentGroupD0Ev,vox::SegmentGroup::~SegmentGroup()
+882c68,20,lib-vox-audio,_ZN3vox15SequentialGroupD0Ev,vox::SequentialGroup::~SequentialGroup()
+882c84,20,lib-vox-audio,_ZN3vox11RandomGroupD0Ev,vox::RandomGroup::~RandomGroup()
+882ca0,100,lib-vox-audio,_ZN3vox11RandomGroup21GetActiveElementIndexEv,vox::RandomGroup::GetActiveElementIndex()
+882d94,160,lib-vox-audio,_ZN3vox11RandomGroup23GetGroupElementPositionEv,vox::RandomGroup::GetGroupElementPosition()
+882f48,272,lib-vox-audio,_ZN3vox11RandomGroup8SetStateEPNS_16RandomGroupStateE,vox::RandomGroup::SetState(vox::RandomGroupState*)
+883088,232,lib-vox-audio,_ZN3vox11RandomGroup5ResetEi,vox::RandomGroup::Reset(int)
+88317c,188,lib-vox-audio,_ZN3vox11RandomGroupC1ERS0_,vox::RandomGroup::RandomGroup(vox::RandomGroup&)
+8832c0,188,lib-vox-audio,_ZN3vox11RandomGroupC2ERS0_,vox::RandomGroup::RandomGroup(vox::RandomGroup&)
+883404,192,lib-vox-audio,_ZN3vox11RandomGroup18SetToPreviousStateEv,vox::RandomGroup::SetToPreviousState()
+8834f0,416,lib-vox-audio,_ZN3vox11RandomGroup8SetStateERS0_,vox::RandomGroup::SetState(vox::RandomGroup&)
+8836b0,28,lib-vox-audio,_ZN3vox11RandomGroup10AddElementEPNS_18RandomGroupElementE,vox::RandomGroup::AddElement(vox::RandomGroupElement*)
+88387c,72,lib-vox-audio,_ZN3vox15SequentialGroup10AddElementEi,vox::SequentialGroup::AddElement(int)
+8838c4,28,lib-vox-audio,_ZN3vox14NativePlaylist18AddPlaylistElementEPNS_20PlaylistElementInfosE,vox::NativePlaylist::AddPlaylistElement(vox::PlaylistElementInfos*)
+8839c8,52,lib-vox-audio,_ZN3vox22NativePlaylistsManager18AddPlaylistElementEPNS_20PlaylistElementInfosE,vox::NativePlaylistsManager::AddPlaylistElement(vox::PlaylistElementInfos*)
+8839fc,180,lib-vox-audio,_ZN3vox15SequentialGroupC1ERS0_,vox::SequentialGroup::SequentialGroup(vox::SequentialGroup&)
+883ab8,180,lib-vox-audio,_ZN3vox15SequentialGroupC2ERS0_,vox::SequentialGroup::SequentialGroup(vox::SequentialGroup&)
+883c04,48,lib-vox-audio,_ZN3vox14NativePlaylist8AddGroupEPNS_10GroupInfosE,vox::NativePlaylist::AddGroup(vox::GroupInfos*)
+883ca4,52,lib-vox-audio,_ZN3vox22NativePlaylistsManager8AddGroupEPNS_10GroupInfosE,vox::NativePlaylistsManager::AddGroup(vox::GroupInfos*)
+883cd8,232,lib-vox-audio,_ZN3vox14NativePlaylistC1ERS0_,vox::NativePlaylist::NativePlaylist(vox::NativePlaylist&)
+883eac,104,lib-vox-audio,_ZN3vox22NativePlaylistsManagerC1ERS0_,vox::NativePlaylistsManager::NativePlaylistsManager(vox::NativePlaylistsManager&)
+883f68,104,lib-vox-audio,_ZN3vox22NativePlaylistsManagerC2ERS0_,vox::NativePlaylistsManager::NativePlaylistsManager(vox::NativePlaylistsManager&)
+884024,232,lib-vox-audio,_ZN3vox14NativePlaylistC2ERS0_,vox::NativePlaylist::NativePlaylist(vox::NativePlaylist&)
+8841f8,4,lib-vox-audio,_ZN3vox19VoxNativeSubDecoderD1Ev,vox::VoxNativeSubDecoder::~VoxNativeSubDecoder()
+8841fc,32,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder25EmulateMixSegmentInBufferEiPNS_12SegmentStateE,"vox::VoxNativeSubDecoder::EmulateMixSegmentInBuffer(int, vox::SegmentState*)"
+8842e8,208,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder26EmulateMixMultipleSegmentsEi,vox::VoxNativeSubDecoder::EmulateMixMultipleSegments(int)
+8843b8,128,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder28GetNextDyingSegmentLifeStateEv,vox::VoxNativeSubDecoder::GetNextDyingSegmentLifeState()
+884438,48,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder14GetTrackParamsEv,vox::VoxNativeSubDecoder::GetTrackParams()
+884468,8,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder7HasDataEv,vox::VoxNativeSubDecoder::HasData()
+884470,104,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder20IsExtraSegmentNeededEPNS_14TransitionRuleE,vox::VoxNativeSubDecoder::IsExtraSegmentNeeded(vox::TransitionRule*)
+8844e8,60,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder18MixSegmentInBufferEPsiPNS_12SegmentStateE,"vox::VoxNativeSubDecoder::MixSegmentInBuffer(short*, int, vox::SegmentState*)"
+884734,160,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder11StopSegmentEPNS_12SegmentStateE,vox::VoxNativeSubDecoder::StopSegment(vox::SegmentState*)
+8847d4,12,lib-vox-audio,_ZN3vox19VoxNativeSubDecoderD0Ev,vox::VoxNativeSubDecoder::~VoxNativeSubDecoder()
+8847e8,32,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder21UpdateOldSegmentStateEPNS_14TransitionRuleE,vox::VoxNativeSubDecoder::UpdateOldSegmentState(vox::TransitionRule*)
+884ab4,32,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder23UpdateDyingSegmentStateEPNS_14TransitionRuleE,vox::VoxNativeSubDecoder::UpdateDyingSegmentState(vox::TransitionRule*)
+884bc4,340,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder25UpdateCurrentSegmentStateEPNS_14TransitionRuleEb,"vox::VoxNativeSubDecoder::UpdateCurrentSegmentState(vox::TransitionRule*, bool)"
+884f04,40,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder5CleanEv,vox::VoxNativeSubDecoder::Clean()
+884f3c,244,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder8SetStateEPNS_21NativeSubDecoderStateE,vox::VoxNativeSubDecoder::SetState(vox::NativeSubDecoderState*)
+88506c,244,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder8GetStateEPNS_21NativeSubDecoderStateE,vox::VoxNativeSubDecoder::GetState(vox::NativeSubDecoderState*)
+88519c,188,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder5ResetEv,vox::VoxNativeSubDecoder::Reset()
+885258,40,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder19MixMultipleSegmentsEPsi,"vox::VoxNativeSubDecoder::MixMultipleSegments(short*, int)"
+88547c,64,lib-vox-audio,_ZN3vox21NativeSubDecoderStateD1Ev,vox::NativeSubDecoderState::~NativeSubDecoderState()
+8854cc,20,lib-vox-audio,_ZN3vox21NativeSubDecoderStateD0Ev,vox::NativeSubDecoderState::~NativeSubDecoderState()
+8854e8,64,lib-vox-audio,_ZN3vox21NativeSubDecoderStateD2Ev,vox::NativeSubDecoderState::~NativeSubDecoderState()
+885538,128,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder25SwapOldAndCurrentSegmentsEv,vox::VoxNativeSubDecoder::SwapOldAndCurrentSegments()
+8855e8,268,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder19ApplyTransitionRuleEPNS_14TransitionRuleE,vox::VoxNativeSubDecoder::ApplyTransitionRule(vox::TransitionRule*)
+885740,580,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder20UpdateSegmentsStatesEv,vox::VoxNativeSubDecoder::UpdateSegmentsStates()
+885984,184,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder23InterpretTransitionRuleEi,vox::VoxNativeSubDecoder::InterpretTransitionRule(int)
+885a3c,132,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder8SetStateEi,vox::VoxNativeSubDecoder::SetState(int)
+885ac0,312,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder13EmulateDecodeEi,vox::VoxNativeSubDecoder::EmulateDecode(int)
+885c1c,260,lib-vox-audio,_ZN3vox19VoxNativeSubDecoder6DecodeEPvi,"vox::VoxNativeSubDecoder::Decode(void*, int)"
+885d44,452,lib-vox-audio,_ZN3vox19VoxNativeSubDecoderC1EPNS_21StreamCursorInterfaceEPNS_12NativeChunksEPNS_6StatesEPNS_13AudioSegmentsEPSt6vectorIS9_IiNS_10SAllocatorIiLNS_10VoxMemHintE0EEEENSA_ISD_LSB_0EEEEPNS_15TransitionRulesEPS9_IS9_INS_16TransitionParamsENSA_ISJ_LSB_0EEEENSA_ISL_LSB_0EEEEPSt3mapISbIcSt11char_traitsIcENSA_IcLSB_0EEEEiNS_13StringCompareENSA_ISt4pairIKST_iELSB_0EEEEPNS_22NativePlaylistsManagerE,"vox::VoxNativeSubDecoder::VoxNativeSubDecoder(vox::StreamCursorInterface*, vox::NativeChunks*, vox::States*, vox::AudioSegments*, std::vector<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, vox::TransitionRules*, std::vector<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, std::map<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> >, int, vox::StringCompare, vox::SAllocator<std::pair<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const, int>, (vox::VoxMemHint)0> >*, vox::NativePlaylistsManager*)"
+885f10,452,lib-vox-audio,_ZN3vox19VoxNativeSubDecoderC2EPNS_21StreamCursorInterfaceEPNS_12NativeChunksEPNS_6StatesEPNS_13AudioSegmentsEPSt6vectorIS9_IiNS_10SAllocatorIiLNS_10VoxMemHintE0EEEENSA_ISD_LSB_0EEEEPNS_15TransitionRulesEPS9_IS9_INS_16TransitionParamsENSA_ISJ_LSB_0EEEENSA_ISL_LSB_0EEEEPSt3mapISbIcSt11char_traitsIcENSA_IcLSB_0EEEEiNS_13StringCompareENSA_ISt4pairIKST_iELSB_0EEEEPNS_22NativePlaylistsManagerE,"vox::VoxNativeSubDecoder::VoxNativeSubDecoder(vox::StreamCursorInterface*, vox::NativeChunks*, vox::States*, vox::AudioSegments*, std::vector<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, vox::TransitionRules*, std::vector<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, std::map<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> >, int, vox::StringCompare, vox::SAllocator<std::pair<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const, int>, (vox::VoxMemHint)0> >*, vox::NativePlaylistsManager*)"
+8860dc,288,lib-vox-audio,_ZN3vox21NativeSubDecoderStateC1EPNS_22NativePlaylistsManagerE,vox::NativeSubDecoderState::NativeSubDecoderState(vox::NativePlaylistsManager*)
+88621c,288,lib-vox-audio,_ZN3vox21NativeSubDecoderStateC2EPNS_22NativePlaylistsManagerE,vox::NativeSubDecoderState::NativeSubDecoderState(vox::NativePlaylistsManager*)
+88635c,8,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM4SeekEj,vox::VoxNativeSubDecoderIMAADPCM::Seek(unsigned int)
+886364,92,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM18EmulateDecodeBlockEPNS_12SegmentStateE,vox::VoxNativeSubDecoderIMAADPCM::EmulateDecodeBlock(vox::SegmentState*)
+8863dc,88,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM41EmulateSetDecodingBufferToSegmentPositionEPNS_12SegmentStateE,vox::VoxNativeSubDecoderIMAADPCM::EmulateSetDecodingBufferToSegmentPosition(vox::SegmentState*)
+886434,32,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM31GetBytePositionFromSampleOffsetEj,vox::VoxNativeSubDecoderIMAADPCM::GetBytePositionFromSampleOffset(unsigned int)
+886454,76,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM17GetDecodingBufferEv,vox::VoxNativeSubDecoderIMAADPCM::GetDecodingBuffer()
+8864a0,44,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM21ReleaseDecodingBufferEi,vox::VoxNativeSubDecoderIMAADPCM::ReleaseDecodingBuffer(int)
+8864cc,44,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM5ResetEv,vox::VoxNativeSubDecoderIMAADPCM::Reset()
+8864f8,92,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM8SetStateEPNS_29NativeSubDecoderIMAADPCMStateE,vox::VoxNativeSubDecoderIMAADPCM::SetState(vox::NativeSubDecoderIMAADPCMState*)
+886554,44,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM8GetStateEPNS_29NativeSubDecoderIMAADPCMStateE,vox::VoxNativeSubDecoderIMAADPCM::GetState(vox::NativeSubDecoderIMAADPCMState*)
+886580,40,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM20EmulateDecodeSegmentEiPNS_12SegmentStateE,"vox::VoxNativeSubDecoderIMAADPCM::EmulateDecodeSegment(int, vox::SegmentState*)"
+8867dc,36,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM37EmulateDecodeCurrentSegmentWithOffsetEi,vox::VoxNativeSubDecoderIMAADPCM::EmulateDecodeCurrentSegmentWithOffset(int)
+886a20,152,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCMD1Ev,vox::VoxNativeSubDecoderIMAADPCM::~VoxNativeSubDecoderIMAADPCM()
+886b00,20,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCMD0Ev,vox::VoxNativeSubDecoderIMAADPCM::~VoxNativeSubDecoderIMAADPCM()
+886b1c,152,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCMD2Ev,vox::VoxNativeSubDecoderIMAADPCM::~VoxNativeSubDecoderIMAADPCM()
+886bfc,396,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCMC1EPNS_21StreamCursorInterfaceEPNS_12NativeChunksEPNS_6StatesEPNS_13AudioSegmentsEPSt6vectorIS9_IiNS_10SAllocatorIiLNS_10VoxMemHintE0EEEENSA_ISD_LSB_0EEEEPNS_15TransitionRulesEPS9_IS9_INS_16TransitionParamsENSA_ISJ_LSB_0EEEENSA_ISL_LSB_0EEEEPSt3mapISbIcSt11char_traitsIcENSA_IcLSB_0EEEEiNS_13StringCompareENSA_ISt4pairIKST_iELSB_0EEEEPNS_22NativePlaylistsManagerE,"vox::VoxNativeSubDecoderIMAADPCM::VoxNativeSubDecoderIMAADPCM(vox::StreamCursorInterface*, vox::NativeChunks*, vox::States*, vox::AudioSegments*, std::vector<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, vox::TransitionRules*, std::vector<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, std::map<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> >, int, vox::StringCompare, vox::SAllocator<std::pair<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const, int>, (vox::VoxMemHint)0> >*, vox::NativePlaylistsManager*)"
+886dbc,396,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCMC2EPNS_21StreamCursorInterfaceEPNS_12NativeChunksEPNS_6StatesEPNS_13AudioSegmentsEPSt6vectorIS9_IiNS_10SAllocatorIiLNS_10VoxMemHintE0EEEENSA_ISD_LSB_0EEEEPNS_15TransitionRulesEPS9_IS9_INS_16TransitionParamsENSA_ISJ_LSB_0EEEENSA_ISL_LSB_0EEEEPSt3mapISbIcSt11char_traitsIcENSA_IcLSB_0EEEEiNS_13StringCompareENSA_ISt4pairIKST_iELSB_0EEEEPNS_22NativePlaylistsManagerE,"vox::VoxNativeSubDecoderIMAADPCM::VoxNativeSubDecoderIMAADPCM(vox::StreamCursorInterface*, vox::NativeChunks*, vox::States*, vox::AudioSegments*, std::vector<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, vox::TransitionRules*, std::vector<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, std::map<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> >, int, vox::StringCompare, vox::SAllocator<std::pair<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const, int>, (vox::VoxMemHint)0> >*, vox::NativePlaylistsManager*)"
+886f7c,44,lib-vox-audio,_ZN3vox29NativeSubDecoderIMAADPCMStateD1Ev,vox::NativeSubDecoderIMAADPCMState::~NativeSubDecoderIMAADPCMState()
+886fb0,20,lib-vox-audio,_ZN3vox29NativeSubDecoderIMAADPCMStateD0Ev,vox::NativeSubDecoderIMAADPCMState::~NativeSubDecoderIMAADPCMState()
+886fcc,44,lib-vox-audio,_ZN3vox29NativeSubDecoderIMAADPCMStateD2Ev,vox::NativeSubDecoderIMAADPCMState::~NativeSubDecoderIMAADPCMState()
+887000,44,lib-vox-audio,_ZN3vox29NativeSubDecoderIMAADPCMStateC1EPNS_22NativePlaylistsManagerE,vox::NativeSubDecoderIMAADPCMState::NativeSubDecoderIMAADPCMState(vox::NativePlaylistsManager*)
+887034,44,lib-vox-audio,_ZN3vox29NativeSubDecoderIMAADPCMStateC2EPNS_22NativePlaylistsManagerE,vox::NativeSubDecoderIMAADPCMState::NativeSubDecoderIMAADPCMState(vox::NativePlaylistsManager*)
+887068,1008,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM11DecodeBlockEPvPNS_12SegmentStateE,"vox::VoxNativeSubDecoderIMAADPCM::DecodeBlock(void*, vox::SegmentState*)"
+887464,224,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM4SeekEiPNS_12SegmentStateE,"vox::VoxNativeSubDecoderIMAADPCM::Seek(int, vox::SegmentState*)"
+887544,116,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM34SetDecodingBufferToSegmentPositionEPNS_12SegmentStateE,vox::VoxNativeSubDecoderIMAADPCM::SetDecodingBufferToSegmentPosition(vox::SegmentState*)
+8875b8,44,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM13DecodeSegmentEPviPNS_12SegmentStateE,"vox::VoxNativeSubDecoderIMAADPCM::DecodeSegment(void*, int, vox::SegmentState*)"
+887860,40,lib-vox-audio,_ZN3vox27VoxNativeSubDecoderIMAADPCM30DecodeCurrentSegmentWithOffsetEPvi,"vox::VoxNativeSubDecoderIMAADPCM::DecodeCurrentSegmentWithOffset(void*, int)"
+887b0c,8,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM4SeekEj,vox::VoxNativeSubDecoderPCM::Seek(unsigned int)
+887b14,8,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM17GetDecodingBufferEv,vox::VoxNativeSubDecoderPCM::GetDecodingBuffer()
+887b1c,4,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM21ReleaseDecodingBufferEi,vox::VoxNativeSubDecoderPCM::ReleaseDecodingBuffer(int)
+887b20,4,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM34SetDecodingBufferToSegmentPositionEPNS_12SegmentStateE,vox::VoxNativeSubDecoderPCM::SetDecodingBufferToSegmentPosition(vox::SegmentState*)
+887b24,4,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCMD2Ev,vox::VoxNativeSubDecoderPCM::~VoxNativeSubDecoderPCM()
+887b28,4,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCMD1Ev,vox::VoxNativeSubDecoderPCM::~VoxNativeSubDecoderPCM()
+887b2c,12,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM31GetBytePositionFromSampleOffsetEj,vox::VoxNativeSubDecoderPCM::GetBytePositionFromSampleOffset(unsigned int)
+887b38,128,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM4SeekEiPNS_12SegmentStateE,"vox::VoxNativeSubDecoderPCM::Seek(int, vox::SegmentState*)"
+887bb8,4,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM5ResetEv,vox::VoxNativeSubDecoderPCM::Reset()
+887bbc,4,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM8SetStateEPNS_24NativeSubDecoderPCMStateE,vox::VoxNativeSubDecoderPCM::SetState(vox::NativeSubDecoderPCMState*)
+887bc0,4,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM8GetStateEPNS_24NativeSubDecoderPCMStateE,vox::VoxNativeSubDecoderPCM::GetState(vox::NativeSubDecoderPCMState*)
+887bc4,600,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM20EmulateDecodeSegmentEiPNS_12SegmentStateE,"vox::VoxNativeSubDecoderPCM::EmulateDecodeSegment(int, vox::SegmentState*)"
+887e1c,564,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM37EmulateDecodeCurrentSegmentWithOffsetEi,vox::VoxNativeSubDecoderPCM::EmulateDecodeCurrentSegmentWithOffset(int)
+888050,604,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM13DecodeSegmentEPviPNS_12SegmentStateE,"vox::VoxNativeSubDecoderPCM::DecodeSegment(void*, int, vox::SegmentState*)"
+8882ac,588,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCM30DecodeCurrentSegmentWithOffsetEPvi,"vox::VoxNativeSubDecoderPCM::DecodeCurrentSegmentWithOffset(void*, int)"
+8884f8,20,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCMD0Ev,vox::VoxNativeSubDecoderPCM::~VoxNativeSubDecoderPCM()
+888514,100,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCMC1EPNS_21StreamCursorInterfaceEPNS_12NativeChunksEPNS_6StatesEPNS_13AudioSegmentsEPSt6vectorIS9_IiNS_10SAllocatorIiLNS_10VoxMemHintE0EEEENSA_ISD_LSB_0EEEEPNS_15TransitionRulesEPS9_IS9_INS_16TransitionParamsENSA_ISJ_LSB_0EEEENSA_ISL_LSB_0EEEEPSt3mapISbIcSt11char_traitsIcENSA_IcLSB_0EEEEiNS_13StringCompareENSA_ISt4pairIKST_iELSB_0EEEEPNS_22NativePlaylistsManagerE,"vox::VoxNativeSubDecoderPCM::VoxNativeSubDecoderPCM(vox::StreamCursorInterface*, vox::NativeChunks*, vox::States*, vox::AudioSegments*, std::vector<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, vox::TransitionRules*, std::vector<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, std::map<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> >, int, vox::StringCompare, vox::SAllocator<std::pair<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const, int>, (vox::VoxMemHint)0> >*, vox::NativePlaylistsManager*)"
+888580,100,lib-vox-audio,_ZN3vox22VoxNativeSubDecoderPCMC2EPNS_21StreamCursorInterfaceEPNS_12NativeChunksEPNS_6StatesEPNS_13AudioSegmentsEPSt6vectorIS9_IiNS_10SAllocatorIiLNS_10VoxMemHintE0EEEENSA_ISD_LSB_0EEEEPNS_15TransitionRulesEPS9_IS9_INS_16TransitionParamsENSA_ISJ_LSB_0EEEENSA_ISL_LSB_0EEEEPSt3mapISbIcSt11char_traitsIcENSA_IcLSB_0EEEEiNS_13StringCompareENSA_ISt4pairIKST_iELSB_0EEEEPNS_22NativePlaylistsManagerE,"vox::VoxNativeSubDecoderPCM::VoxNativeSubDecoderPCM(vox::StreamCursorInterface*, vox::NativeChunks*, vox::States*, vox::AudioSegments*, std::vector<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<int, vox::SAllocator<int, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, vox::TransitionRules*, std::vector<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, vox::SAllocator<std::vector<vox::TransitionParams, vox::SAllocator<vox::TransitionParams, (vox::VoxMemHint)0> >, (vox::VoxMemHint)0> >*, std::map<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> >, int, vox::StringCompare, vox::SAllocator<std::pair<std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const, int>, (vox::VoxMemHint)0> >*, vox::NativePlaylistsManager*)"
+8885ec,44,lib-vox-audio,_ZN3vox24NativeSubDecoderPCMStateD1Ev,vox::NativeSubDecoderPCMState::~NativeSubDecoderPCMState()
+888620,20,lib-vox-audio,_ZN3vox24NativeSubDecoderPCMStateD0Ev,vox::NativeSubDecoderPCMState::~NativeSubDecoderPCMState()
+88863c,44,lib-vox-audio,_ZN3vox24NativeSubDecoderPCMStateD2Ev,vox::NativeSubDecoderPCMState::~NativeSubDecoderPCMState()
+888670,44,lib-vox-audio,_ZN3vox24NativeSubDecoderPCMStateC1EPNS_22NativePlaylistsManagerE,vox::NativeSubDecoderPCMState::NativeSubDecoderPCMState(vox::NativePlaylistsManager*)
+8886a4,44,lib-vox-audio,_ZN3vox24NativeSubDecoderPCMStateC2EPNS_22NativePlaylistsManagerE,vox::NativeSubDecoderPCMState::NativeSubDecoderPCMState(vox::NativePlaylistsManager*)
+8886d8,4,lib-vox-audio,_ZN3vox15StreamInterfaceD1Ev,vox::StreamInterface::~StreamInterface()
+8886dc,4,lib-vox-audio,_ZN3vox15StreamInterface4InitEv,vox::StreamInterface::Init()
+8886e0,4,lib-vox-audio,_ZN3vox15StreamInterface8ShutdownEv,vox::StreamInterface::Shutdown()
+8886e4,8,lib-vox-audio,_ZN3vox15StreamInterface4SizeEv,vox::StreamInterface::Size()
+8886ec,4,lib-vox-audio,_ZN3vox21StreamCursorInterfaceD1Ev,vox::StreamCursorInterface::~StreamCursorInterface()
+8886f0,4,lib-vox-audio,_ZN3vox21StreamCursorInterface4InitEv,vox::StreamCursorInterface::Init()
+8886f4,4,lib-vox-audio,_ZN3vox21StreamCursorInterface8ShutdownEv,vox::StreamCursorInterface::Shutdown()
+8886f8,24,lib-vox-audio,_ZN3vox21StreamCursorInterface7ReadRefERPhi,"vox::StreamCursorInterface::ReadRef(unsigned char*&, int)"
+888710,8,lib-vox-audio,_ZN3vox21StreamCursorInterface20AllowBufferReferenceEv,vox::StreamCursorInterface::AllowBufferReference()
+888718,8,lib-vox-audio,_ZN3vox11StreamCFile7GetTypeEv,vox::StreamCFile::GetType()
+888720,8,lib-vox-audio,_ZN3vox17StreamCFileCursor10IsSeekableEv,vox::StreamCFileCursor::IsSeekable()
+888728,80,lib-vox-audio,_ZN3vox17StreamCFileCursor4InitEv,vox::StreamCFileCursor::Init()
+888778,68,lib-vox-audio,_ZN3vox17StreamCFileCursor4TellEv,vox::StreamCFileCursor::Tell()
+8887bc,12,lib-vox-audio,_ZN3vox15StreamInterfaceD0Ev,vox::StreamInterface::~StreamInterface()
+8887d0,12,lib-vox-audio,_ZN3vox21StreamCursorInterfaceD0Ev,vox::StreamCursorInterface::~StreamCursorInterface()
+8887e4,68,lib-vox-audio,_ZN3vox11StreamCFileD1Ev,vox::StreamCFile::~StreamCFile()
+888830,44,lib-vox-audio,_ZN3vox11StreamCFile13DestroyCursorEPNS_21StreamCursorInterfaceE,vox::StreamCFile::DestroyCursor(vox::StreamCursorInterface*)
+88885c,284,lib-vox-audio,_ZN3vox17StreamCFileCursor4ReadEPhi,"vox::StreamCFileCursor::Read(unsigned char*, int)"
+8889c0,108,lib-vox-audio,_ZN3vox17StreamCFileCursor8ShutdownEv,vox::StreamCFileCursor::Shutdown()
+888a2c,44,lib-vox-audio,_ZN3vox17StreamCFileCursorD1Ev,vox::StreamCFileCursor::~StreamCFileCursor()
+888a60,140,lib-vox-audio,_ZN3vox11StreamCFile4InitEv,vox::StreamCFile::Init()
+888aec,48,lib-vox-audio,_ZN3vox11StreamCFile15CreateNewCursorEv,vox::StreamCFile::CreateNewCursor()
+888c34,96,lib-vox-audio,_ZN3vox11StreamCFileC2EPKc,vox::StreamCFile::StreamCFile(char const*)
+888cb4,44,lib-vox-audio,_ZN3vox17StreamCFileCursorD0Ev,vox::StreamCFileCursor::~StreamCFileCursor()
+888cf0,116,lib-vox-audio,_ZN3vox17StreamCFileCursor11EndOfStreamEv,vox::StreamCFileCursor::EndOfStream()
+888d64,68,lib-vox-audio,_ZN3vox11StreamCFileD0Ev,vox::StreamCFile::~StreamCFile()
+888db8,352,lib-vox-audio,_ZN3vox17StreamCFileCursor4SeekEii,"vox::StreamCFileCursor::Seek(int, int)"
+888f18,96,lib-vox-audio,_ZN3vox11StreamCFileC1EPKc,vox::StreamCFile::StreamCFile(char const*)
+888f98,20,lib-vox-audio,_ZN3vox18StreamCFileFactoryEPv,vox::StreamCFileFactory(void*)
+888fc0,8,lib-vox-audio,_ZN3vox18StreamMemoryBuffer7GetTypeEv,vox::StreamMemoryBuffer::GetType()
+888fc8,8,lib-vox-audio,_ZN3vox24StreamMemoryBufferCursor10IsSeekableEv,vox::StreamMemoryBufferCursor::IsSeekable()
+888fd0,8,lib-vox-audio,_ZN3vox24StreamMemoryBufferCursor4TellEv,vox::StreamMemoryBufferCursor::Tell()
+888fd8,8,lib-vox-audio,_ZN3vox24StreamMemoryBufferCursor20AllowBufferReferenceEv,vox::StreamMemoryBufferCursor::AllowBufferReference()
+888fe0,4,lib-vox-audio,_ZN3vox24StreamMemoryBufferCursorD1Ev,vox::StreamMemoryBufferCursor::~StreamMemoryBufferCursor()
+888fe4,12,lib-vox-audio,_ZN3vox24StreamMemoryBufferCursorD0Ev,vox::StreamMemoryBufferCursor::~StreamMemoryBufferCursor()
+888ff8,44,lib-vox-audio,_ZN3vox18StreamMemoryBuffer13DestroyCursorEPNS_21StreamCursorInterfaceE,vox::StreamMemoryBuffer::DestroyCursor(vox::StreamCursorInterface*)
+889024,68,lib-vox-audio,_ZN3vox18StreamMemoryBufferD1Ev,vox::StreamMemoryBuffer::~StreamMemoryBuffer()
+889070,20,lib-vox-audio,_ZN3vox18StreamMemoryBufferD0Ev,vox::StreamMemoryBuffer::~StreamMemoryBuffer()
+88908c,68,lib-vox-audio,_ZN3vox18StreamMemoryBufferD2Ev,vox::StreamMemoryBuffer::~StreamMemoryBuffer()
+8890d8,44,lib-vox-audio,_ZN3vox18StreamMemoryBuffer15CreateNewCursorEv,vox::StreamMemoryBuffer::CreateNewCursor()
+88912c,164,lib-vox-audio,_ZN3vox18StreamMemoryBufferC1EPNS_24StreamMemoryBufferParamsE,vox::StreamMemoryBuffer::StreamMemoryBuffer(vox::StreamMemoryBufferParams*)
+8891dc,20,lib-vox-audio,_ZN3vox25StreamMemoryBufferFactoryEPv,vox::StreamMemoryBufferFactory(void*)
+889204,164,lib-vox-audio,_ZN3vox18StreamMemoryBufferC2EPNS_24StreamMemoryBufferParamsE,vox::StreamMemoryBuffer::StreamMemoryBuffer(vox::StreamMemoryBufferParams*)
+8892b4,60,lib-vox-audio,_ZN3vox24StreamMemoryBufferCursor11EndOfStreamEv,vox::StreamMemoryBufferCursor::EndOfStream()
+8892f0,164,lib-vox-audio,_ZN3vox24StreamMemoryBufferCursor4SeekEii,"vox::StreamMemoryBufferCursor::Seek(int, int)"
+889394,116,lib-vox-audio,_ZN3vox24StreamMemoryBufferCursor7ReadRefERPhi,"vox::StreamMemoryBufferCursor::ReadRef(unsigned char*&, int)"
+889408,116,lib-vox-audio,_ZN3vox24StreamMemoryBufferCursor4ReadEPhi,"vox::StreamMemoryBufferCursor::Read(unsigned char*, int)"
+889490,4,lib-vox-audio,VoxFree_c,VoxFree_c
+889494,4,lib-vox-audio,VoxAlloc_c,VoxAlloc_c
+889498,148,lib-vox-audio,_ZNK3vox15VoxSoundPackXML11GetBankInfoEiRiS1_RNS_20PriorityBankBehaviorE,"vox::VoxSoundPackXML::GetBankInfo(int, int&, int&, vox::PriorityBankBehavior&) const"
+88952c,168,lib-vox-audio,_ZNK3vox15VoxSoundPackXML11GetBankInfoEiRNS_11BankInfoXMLE,"vox::VoxSoundPackXML::GetBankInfo(int, vox::BankInfoXML&) const"
+8895d4,132,lib-vox-audio,_ZNK3vox15VoxSoundPackXML12GetGroupInfoEiRPKcRNS_14Vox3DSoundTypeE,"vox::VoxSoundPackXML::GetGroupInfo(int, char const*&, vox::Vox3DSoundType&) const"
+889658,156,lib-vox-audio,_ZNK3vox15VoxSoundPackXML12GetGroupInfoEiRNS_12GroupInfoXMLE,"vox::VoxSoundPackXML::GetGroupInfo(int, vox::GroupInfoXML&) const"
+8896f4,184,lib-vox-audio,_ZNK3vox15VoxSoundPackXML17GetDataSourceInfoEiRPKcRNS_11FormatTypesERiS6_RNS_21VoxSourceLoadingFlagsE,"vox::VoxSoundPackXML::GetDataSourceInfo(int, char const*&, vox::FormatTypes&, int&, int&, vox::VoxSourceLoadingFlags&) const"
+8897ac,232,lib-vox-audio,_ZNK3vox15VoxSoundPackXML17GetDataSourceInfoEiRNS_17DataSourceInfoXMLE,"vox::VoxSoundPackXML::GetDataSourceInfo(int, vox::DataSourceInfoXML&) const"
+889894,168,lib-vox-audio,_ZNK3vox15VoxSoundPackXML14GetEmitterInfoEiRiS1_RbRNS_14Vox3DSoundTypeERPKc,"vox::VoxSoundPackXML::GetEmitterInfo(int, int&, int&, bool&, vox::Vox3DSoundType&, char const*&) const"
+88993c,396,lib-vox-audio,_ZNK3vox15VoxSoundPackXML14GetEmitterInfoEiRNS_14EmitterInfoXMLE,"vox::VoxSoundPackXML::GetEmitterInfo(int, vox::EmitterInfoXML&) const"
+889ac8,108,lib-vox-audio,_ZN3vox15VoxSoundPackXML19GetSoundCustomParamEiiRPKc,"vox::VoxSoundPackXML::GetSoundCustomParam(int, int, char const*&)"
+889b34,208,lib-vox-audio,_ZNK3vox15VoxSoundPackXML12GetEventInfoEiRNS_12EventInfoXMLE,"vox::VoxSoundPackXML::GetEventInfo(int, vox::EventInfoXML&) const"
+889c04,80,lib-vox-audio,_ZN3vox15VoxSoundPackXML12GetEventSizeEi,vox::VoxSoundPackXML::GetEventSize(int)
+889c54,104,lib-vox-audio,_ZN3vox15VoxSoundPackXML19GetEventCustomParamEiiRPKc,"vox::VoxSoundPackXML::GetEventCustomParam(int, int, char const*&)"
+889e98,84,lib-vox-audio,_ZN3vox11SoundXMLDefD1Ev,vox::SoundXMLDef::~SoundXMLDef()
+88a090,120,lib-vox-audio,_ZN3vox11EventXMLDefD1Ev,vox::EventXMLDef::~EventXMLDef()
+88a3f4,112,lib-vox-audio,_ZNK3vox15VoxSoundPackXML11GetEventUidEPKc,vox::VoxSoundPackXML::GetEventUid(char const*) const
+88a464,44,lib-vox-audio,_ZN3vox15VoxSoundPackXML19GetEventCustomParamEPKciRS2_,"vox::VoxSoundPackXML::GetEventCustomParam(char const*, int, char const*&)"
+88a490,28,lib-vox-audio,_ZN3vox15VoxSoundPackXML12GetEventSizeEPKc,vox::VoxSoundPackXML::GetEventSize(char const*)
+88a4ac,36,lib-vox-audio,_ZNK3vox15VoxSoundPackXML12GetEventInfoEPKcRNS_12EventInfoXMLE,"vox::VoxSoundPackXML::GetEventInfo(char const*, vox::EventInfoXML&) const"
+88a4d0,24,lib-vox-audio,_ZNK3vox12c8stringcompclEPKcS2_,"vox::c8stringcomp::operator()(char const*, char const*) const"
+88a55c,52,lib-vox-audio,_ZNK3vox15VoxSoundPackXML11GetSoundUidEPKc,vox::VoxSoundPackXML::GetSoundUid(char const*) const
+88a590,44,lib-vox-audio,_ZN3vox15VoxSoundPackXML19GetSoundCustomParamEPKciRS2_,"vox::VoxSoundPackXML::GetSoundCustomParam(char const*, int, char const*&)"
+88a5bc,36,lib-vox-audio,_ZNK3vox15VoxSoundPackXML14GetEmitterInfoEPKcRNS_14EmitterInfoXMLE,"vox::VoxSoundPackXML::GetEmitterInfo(char const*, vox::EmitterInfoXML&) const"
+88a5e0,76,lib-vox-audio,_ZNK3vox15VoxSoundPackXML14GetEmitterInfoEPKcRiS3_S3_RbRNS_14Vox3DSoundTypeERS2_,"vox::VoxSoundPackXML::GetEmitterInfo(char const*, int&, int&, int&, bool&, vox::Vox3DSoundType&, char const*&) const"
+88a62c,36,lib-vox-audio,_ZNK3vox15VoxSoundPackXML17GetDataSourceInfoEPKcRNS_17DataSourceInfoXMLE,"vox::VoxSoundPackXML::GetDataSourceInfo(char const*, vox::DataSourceInfoXML&) const"
+88a650,76,lib-vox-audio,_ZNK3vox15VoxSoundPackXML17GetDataSourceInfoEPKcRiRS2_RNS_11FormatTypesES3_S3_RNS_21VoxSourceLoadingFlagsE,"vox::VoxSoundPackXML::GetDataSourceInfo(char const*, int&, char const*&, vox::FormatTypes&, int&, int&, vox::VoxSourceLoadingFlags&) const"
+88ade0,72,lib-vox-audio,_ZN3vox11GroupXMLDefC1Ev,vox::GroupXMLDef::GroupXMLDef()
+88ae2c,40,lib-vox-audio,_ZN3vox11GroupXMLDefC1ERKS0_,vox::GroupXMLDef::GroupXMLDef(vox::GroupXMLDef const&)
+88af5c,4,lib-vox-audio,_Z8VoxAllocjN3vox10VoxMemHintE,"VoxAlloc(unsigned int, vox::VoxMemHint)"
+88b104,104,lib-vox-audio,_ZN3vox11EventXMLDefaSERKS0_,vox::EventXMLDef::operator=(vox::EventXMLDef const&)
+88b1fc,4,lib-vox-audio,_ZN3vox11EventXMLDefC1ERKS0_,vox::EventXMLDef::EventXMLDef(vox::EventXMLDef const&)
+88b5f0,88,lib-vox-audio,_ZN3vox11GroupXMLDefaSERKS0_,vox::GroupXMLDef::operator=(vox::GroupXMLDef const&)
+88b778,44,lib-vox-audio,_ZNK3vox10stringcompclERKSbIcSt11char_traitsIcENS_10SAllocatorIcLNS_10VoxMemHintE0EEEES8_,"vox::stringcomp::operator()(std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const&, std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const&) const"
+88b8b8,168,lib-vox-audio,_ZNK3vox15VoxSoundPackXML11GetGroupUidEPKc,vox::VoxSoundPackXML::GetGroupUid(char const*) const
+88b960,36,lib-vox-audio,_ZNK3vox15VoxSoundPackXML12GetGroupInfoEPKcRNS_12GroupInfoXMLE,"vox::VoxSoundPackXML::GetGroupInfo(char const*, vox::GroupInfoXML&) const"
+88b984,52,lib-vox-audio,_ZNK3vox15VoxSoundPackXML12GetGroupInfoEPKcRiRS2_RNS_14Vox3DSoundTypeE,"vox::VoxSoundPackXML::GetGroupInfo(char const*, int&, char const*&, vox::Vox3DSoundType&) const"
+88b9b8,164,lib-vox-audio,_ZNK3vox15VoxSoundPackXML10GetBankUidEPKc,vox::VoxSoundPackXML::GetBankUid(char const*) const
+88ba5c,36,lib-vox-audio,_ZNK3vox15VoxSoundPackXML11GetBankInfoEPKcRNS_11BankInfoXMLE,"vox::VoxSoundPackXML::GetBankInfo(char const*, vox::BankInfoXML&) const"
+88ba80,60,lib-vox-audio,_ZNK3vox15VoxSoundPackXML11GetBankInfoEPKcRiS3_S3_RNS_20PriorityBankBehaviorE,"vox::VoxSoundPackXML::GetBankInfo(char const*, int&, int&, int&, vox::PriorityBankBehavior&) const"
+88bb6c,204,lib-vox-audio,_ZN3vox15VoxSoundPackXML16GetEventSoundUidEiRi,"vox::VoxSoundPackXML::GetEventSoundUid(int, int&)"
+88bdac,20,lib-vox-audio,_ZN3vox15VoxSoundPackXML16GetEventSoundUidEPKcRi,"vox::VoxSoundPackXML::GetEventSoundUid(char const*, int&)"
+88bdd0,88,lib-vox-audio,_ZN3vox15VoxSoundPackXML30GetEmitterInfoFromSoundOrEventEPKcRNS_14EmitterInfoXMLE,"vox::VoxSoundPackXML::GetEmitterInfoFromSoundOrEvent(char const*, vox::EmitterInfoXML&)"
+88be28,172,lib-vox-audio,_ZN3vox15VoxSoundPackXML10ResetEventEi,vox::VoxSoundPackXML::ResetEvent(int)
+88bf10,28,lib-vox-audio,_ZN3vox15VoxSoundPackXML10ResetEventEPKc,vox::VoxSoundPackXML::ResetEvent(char const*)
+88c2cc,44,lib-vox-audio,_ZN3vox15VoxSoundPackXMLD1Ev,vox::VoxSoundPackXML::~VoxSoundPackXML()
+88c36c,160,lib-vox-audio,_ZN3vox15VoxSoundPackXMLD2Ev,vox::VoxSoundPackXML::~VoxSoundPackXML()
+88c910,4,lib-vox-audio,_Z7VoxFreePv,VoxFree(void*)
+88cc14,56,lib-vox-audio,_ZNK3vox15VoxSoundPackXML12GetGroupMaskEPKcRi,"vox::VoxSoundPackXML::GetGroupMask(char const*, int&) const"
+88d344,28,lib-vox-audio,_ZN3vox15VoxSoundPackXML7LoadXMLEPKc,vox::VoxSoundPackXML::LoadXML(char const*)
+88ec4c,36,lib-vox-audio,_ZN3vox15VoxSoundPackXMLC1EPKc,vox::VoxSoundPackXML::VoxSoundPackXML(char const*)
+88ecc4,32,lib-vox-audio,_ZN3vox15VoxSoundPackXMLC2EPKc,vox::VoxSoundPackXML::VoxSoundPackXML(char const*)
+88ed3c,4,lib-vox-audio,_ZN3vox21DriverSourceInterface15SetDSPParameterEiPv,"vox::DriverSourceInterface::SetDSPParameter(int, void*)"
+88ed40,4,lib-vox-audio,_ZN3vox15DriverInterface7RampOutEv,vox::DriverInterface::RampOut()
+88ed44,4,lib-vox-audio,_ZN3vox15DriverInterface6RampInEv,vox::DriverInterface::RampIn()
+88ed48,4,lib-vox-audio,_ZN3vox15DriverInterface15SetDSPParameterEiPv,"vox::DriverInterface::SetDSPParameter(int, void*)"
+88ed4c,4,lib-vox-audio,_ZN3vox15DriverInterface19SetStaticBusRoutingEPc,vox::DriverInterface::SetStaticBusRouting(char*)
+88ed50,4,lib-vox-audio,_ZN3vox15DriverInterface20SetDynamicBusRoutingEPc,vox::DriverInterface::SetDynamicBusRouting(char*)
+88ed54,4,lib-vox-audio,_ZN3vox15DriverInterface18SetSFXPresetActiveEibf,"vox::DriverInterface::SetSFXPresetActive(int, bool, float)"
+88ed58,8,lib-vox-audio,_ZN3vox15DriverInterface13SetOutputModeENS_13VoxOutputModeE,vox::DriverInterface::SetOutputMode(vox::VoxOutputMode)
+88ed60,8,lib-vox-audio,_ZN3vox15DriverInterface13GetOutputModeEv,vox::DriverInterface::GetOutputMode()
+88ed68,8,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface20AllowBufferReferenceEv,vox::DriverCallbackSourceInterface::AllowBufferReference()
+88ed70,8,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface14GetBufferCountEv,vox::DriverCallbackSourceInterface::GetBufferCount()
+88ed8c,24,lib-vox-audio,_Z12VoxSetJavaVMP7_JavaVM,VoxSetJavaVM(_JavaVM*)
+88edac,80,lib-vox-audio,VoxSetDataThreshold,VoxSetDataThreshold
+88ee1c,28,lib-vox-audio,VoxSetJavaVMC,VoxSetJavaVMC
+88ee38,20,lib-vox-audio,_Z21VoxSetAndroidAPILeveli,VoxSetAndroidAPILevel(int)
+88ee58,4,lib-vox-audio,_ZN3vox19DriverAndroidSource10PrintDebugEv,vox::DriverAndroidSource::PrintDebug()
+88ee5c,4,lib-vox-audio,_ZN3vox13DriverAndroid8_InitOSLEPv,vox::DriverAndroid::_InitOSL(void*)
+88ee60,4,lib-vox-audio,_ZN3vox13DriverAndroid12_ShutdownOSLEv,vox::DriverAndroid::_ShutdownOSL()
+88ee64,4,lib-vox-audio,_ZN3vox13DriverAndroid11_SuspendOSLEv,vox::DriverAndroid::_SuspendOSL()
+88ee68,4,lib-vox-audio,_ZN3vox13DriverAndroid10_ResumeOSLEv,vox::DriverAndroid::_ResumeOSL()
+88ee6c,4,lib-vox-audio,_ZN3vox13DriverAndroid10PrintDebugEv,vox::DriverAndroid::PrintDebug()
+88ee70,4,lib-vox-audio,_ZN3vox13DriverAndroid9_UpdateATEf,vox::DriverAndroid::_UpdateAT(float)
+88ee74,4,lib-vox-audio,_ZN3vox13DriverAndroid10_UpdateOSLEf,vox::DriverAndroid::_UpdateOSL(float)
+88ee78,28,lib-vox-audio,_ZN3vox13DriverAndroid6UpdateEf,vox::DriverAndroid::Update(float)
+88ef6c,24,lib-vox-audio,_ZN3vox13DriverAndroid9_ResumeATEv,vox::DriverAndroid::_ResumeAT()
+88f028,28,lib-vox-audio,_ZN3vox13DriverAndroid6ResumeEv,vox::DriverAndroid::Resume()
+88f044,16,lib-vox-audio,_ZN3vox13DriverAndroid10_SuspendATEv,vox::DriverAndroid::_SuspendAT()
+88f130,28,lib-vox-audio,_ZN3vox13DriverAndroid7SuspendEv,vox::DriverAndroid::Suspend()
+88f14c,220,lib-vox-audio,_ZN3vox13DriverAndroid12DoCallbackATERP7_jarray,vox::DriverAndroid::DoCallbackAT(_jarray*&)
+88f328,56,lib-vox-audio,_ZN3vox13DriverAndroid16UpdateThreadedATEPv,vox::DriverAndroid::UpdateThreadedAT(void*)
+88f59c,24,lib-vox-audio,_ZN3vox13DriverAndroid19DestroyDriverSourceEPNS_21DriverSourceInterfaceE,vox::DriverAndroid::DestroyDriverSource(vox::DriverSourceInterface*)
+88f618,36,lib-vox-audio,_ZN3vox13DriverAndroid11_ShutdownATEv,vox::DriverAndroid::_ShutdownAT()
+88f644,28,lib-vox-audio,_ZN3vox13DriverAndroid8ShutdownEv,vox::DriverAndroid::Shutdown()
+88f660,360,lib-vox-audio,_ZN3vox13DriverAndroid7_InitATEPv,vox::DriverAndroid::_InitAT(void*)
+88f9a0,24,lib-vox-audio,_ZN3vox13DriverAndroid4InitEPv,vox::DriverAndroid::Init(void*)
+88f9ec,52,lib-vox-audio,_ZN3vox13DriverAndroidD1Ev,vox::DriverAndroid::~DriverAndroid()
+88fa28,20,lib-vox-audio,_ZN3vox13DriverAndroidD0Ev,vox::DriverAndroid::~DriverAndroid()
+88fa44,52,lib-vox-audio,_ZN3vox13DriverAndroidD2Ev,vox::DriverAndroid::~DriverAndroid()
+88fa80,60,lib-vox-audio,_ZN3vox13DriverAndroidC1Ev,vox::DriverAndroid::DriverAndroid()
+88fac4,16,lib-vox-audio,_ZN3vox12CreateDriverEv,vox::CreateDriver()
+88fae4,32,lib-vox-audio,_ZN3vox13DriverAndroidC2Ev,vox::DriverAndroid::DriverAndroid()
+88fb28,44,lib-vox-audio,_ZN3vox19DriverAndroidSourceD1Ev,vox::DriverAndroidSource::~DriverAndroidSource()
+88fb5c,20,lib-vox-audio,_ZN3vox19DriverAndroidSourceD0Ev,vox::DriverAndroidSource::~DriverAndroidSource()
+88fb78,44,lib-vox-audio,_ZN3vox19DriverAndroidSourceD2Ev,vox::DriverAndroidSource::~DriverAndroidSource()
+88fbac,52,lib-vox-audio,_ZN3vox19DriverAndroidSourceC1EPvS1_j,"vox::DriverAndroidSource::DriverAndroidSource(void*, void*, unsigned int)"
+88fbe8,28,lib-vox-audio,_ZN3vox13DriverAndroid18CreateDriverSourceEPvS1_i,"vox::DriverAndroid::CreateDriverSource(void*, void*, int)"
+88fc8c,52,lib-vox-audio,_ZN3vox19DriverAndroidSourceC2EPvS1_j,"vox::DriverAndroidSource::DriverAndroidSource(void*, void*, unsigned int)"
+88fcc8,4,lib-vox-audio,_ZN3vox21DriverSourceInterfaceD1Ev,vox::DriverSourceInterface::~DriverSourceInterface()
+88fccc,4,lib-vox-audio,_ZN3vox21DriverSourceInterface6UpdateEf,vox::DriverSourceInterface::Update(float)
+88fcd0,8,lib-vox-audio,_ZN3vox21DriverSourceInterface20AllowBufferReferenceEv,vox::DriverSourceInterface::AllowBufferReference()
+88fcd8,4,lib-vox-audio,_ZN3vox21DriverSourceInterface18FreeDisposableDataEiRiS1_,"vox::DriverSourceInterface::FreeDisposableData(int, int&, int&)"
+88fcdc,4,lib-vox-audio,_ZN3vox15DriverInterfaceD1Ev,vox::DriverInterface::~DriverInterface()
+88fce0,4,lib-vox-audio,_ZN3vox15DriverInterface6UpdateEf,vox::DriverInterface::Update(float)
+88fce4,24,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface6UpdateEf,vox::DriverCallbackSourceInterface::Update(float)
+88fd14,68,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface21GetNbAvailableSamplesEi,vox::DriverCallbackSourceInterface::GetNbAvailableSamples(int)
+88fdd4,308,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface25FillBufferStereo16NoInterEPii,"vox::DriverCallbackSourceInterface::FillBufferStereo16NoInter(int*, int)"
+890148,60,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface13FreeAllBufferEv,vox::DriverCallbackSourceInterface::FreeAllBuffer()
+890198,4,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface15Set3DParametersENS_18ListenerParametersENS_22Vox3DGeneralParametersE,"vox::DriverCallbackSourceInterface::Set3DParameters(vox::ListenerParameters, vox::Vox3DGeneralParameters)"
+890254,32,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface23SetDriverCallbackPeriodEf,vox::DriverCallbackSourceInterface::SetDriverCallbackPeriod(float)
+890288,24,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface19SetDriverSampleRateEi,vox::DriverCallbackSourceInterface::SetDriverSampleRate(int)
+8902a8,28,lib-vox-audio,_ZN3vox23DriverCallbackInterface4InitEPv,vox::DriverCallbackInterface::Init(void*)
+8902e4,108,lib-vox-audio,_ZN3vox23DriverCallbackInterface15_Set3DParameterEiPv,"vox::DriverCallbackInterface::_Set3DParameter(int, void*)"
+89039c,32,lib-vox-audio,_ZN3vox23DriverCallbackInterface19SetDefaultParameterEv,vox::DriverCallbackInterface::SetDefaultParameter()
+8904e8,24,lib-vox-audio,_ZN3vox23DriverCallbackInterface13GetWorkBufferEi,vox::DriverCallbackInterface::GetWorkBuffer(int)
+890548,112,lib-vox-audio,_ZN3vox23DriverCallbackInterface11_FillBufferEPsi,"vox::DriverCallbackInterface::_FillBuffer(short*, int)"
+8906a0,28,lib-vox-audio,_ZN3vox23DriverCallbackInterface10FillBufferEPsi,"vox::DriverCallbackInterface::FillBuffer(short*, int)"
+8906e4,28,lib-vox-audio,_ZN3vox23DriverCallbackInterface14Set3DParameterEiPv,"vox::DriverCallbackInterface::Set3DParameter(int, void*)"
+89071c,36,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface18FreeDisposableDataEiRiS1_,"vox::DriverCallbackSourceInterface::FreeDisposableData(int, int&, int&)"
+8909e8,28,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface14Set3DParameterEiPv,"vox::DriverCallbackSourceInterface::Set3DParameter(int, void*)"
+890af8,20,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface7CleanupEv,vox::DriverCallbackSourceInterface::Cleanup()
+890b28,24,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface13SetByteOffsetEi,vox::DriverCallbackSourceInterface::SetByteOffset(int)
+890b50,20,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface13GetByteOffsetEv,vox::DriverCallbackSourceInterface::GetByteOffset()
+890b78,20,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface8GetPitchEv,vox::DriverCallbackSourceInterface::GetPitch()
+890bb0,20,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface7GetGainEv,vox::DriverCallbackSourceInterface::GetGain()
+890be8,24,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface8SetPitchEf,vox::DriverCallbackSourceInterface::SetPitch(float)
+890ccc,24,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface7SetGainEf,vox::DriverCallbackSourceInterface::SetGain(float)
+890d40,28,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface10UploadDataEPvi,"vox::DriverCallbackSourceInterface::UploadData(void*, int)"
+890e0c,20,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface8NeedDataEv,vox::DriverCallbackSourceInterface::NeedData()
+890e8c,20,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface8GetStateEv,vox::DriverCallbackSourceInterface::GetState()
+890ee8,20,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface5ResetEv,vox::DriverCallbackSourceInterface::Reset()
+890f48,20,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface5PauseEv,vox::DriverCallbackSourceInterface::Pause()
+890f84,20,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface4StopEv,vox::DriverCallbackSourceInterface::Stop()
+890fd0,20,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface4PlayEv,vox::DriverCallbackSourceInterface::Play()
+891000,12,lib-vox-audio,_ZN3vox15DriverInterfaceD0Ev,vox::DriverInterface::~DriverInterface()
+891014,12,lib-vox-audio,_ZN3vox21DriverSourceInterfaceD0Ev,vox::DriverSourceInterface::~DriverSourceInterface()
+891028,48,lib-vox-audio,_ZN3vox23DriverCallbackInterfaceD1Ev,vox::DriverCallbackInterface::~DriverCallbackInterface()
+891104,20,lib-vox-audio,_ZN3vox23DriverCallbackInterfaceD0Ev,vox::DriverCallbackInterface::~DriverCallbackInterface()
+891120,48,lib-vox-audio,_ZN3vox23DriverCallbackInterfaceD2Ev,vox::DriverCallbackInterface::~DriverCallbackInterface()
+8911fc,68,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterfaceD1Ev,vox::DriverCallbackSourceInterface::~DriverCallbackSourceInterface()
+891248,20,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterfaceD0Ev,vox::DriverCallbackSourceInterface::~DriverCallbackSourceInterface()
+891264,68,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterfaceD2Ev,vox::DriverCallbackSourceInterface::~DriverCallbackSourceInterface()
+8912b0,124,lib-vox-audio,_ZN3vox23DriverCallbackInterfaceC1Ev,vox::DriverCallbackInterface::DriverCallbackInterface()
+891334,124,lib-vox-audio,_ZN3vox23DriverCallbackInterfaceC2Ev,vox::DriverCallbackInterface::DriverCallbackInterface()
+8913b8,192,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterfaceC1EPvS1_j,"vox::DriverCallbackSourceInterface::DriverCallbackSourceInterface(void*, void*, unsigned int)"
+8914bc,120,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterfaceC2EPvS1_j,"vox::DriverCallbackSourceInterface::DriverCallbackSourceInterface(void*, void*, unsigned int)"
+8915c0,204,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface11GetWorkDataEPhii,"vox::DriverCallbackSourceInterface::GetWorkData(unsigned char*, int, int)"
+891860,172,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface18FillBufferStereo16EPii,"vox::DriverCallbackSourceInterface::FillBufferStereo16(int*, int)"
+891b80,80,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface16GetStereoPanningEPiS1_,"vox::DriverCallbackSourceInterface::GetStereoPanning(int*, int*)"
+891ed0,36,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface15GetDopplerPitchEv,vox::DriverCallbackSourceInterface::GetDopplerPitch()
+892114,72,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface15GetDistanceGainEv,vox::DriverCallbackSourceInterface::GetDistanceGain()
+892460,12,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface18GetDirectionalGainEv,vox::DriverCallbackSourceInterface::GetDirectionalGain()
+89278c,72,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface23FillBufferMono16NoInterEPii,"vox::DriverCallbackSourceInterface::FillBufferMono16NoInter(int*, int)"
+892bd0,64,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface16FillBufferMono16EPii,"vox::DriverCallbackSourceInterface::FillBufferMono16(int*, int)"
+892f68,12,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface10FillBufferEPii,"vox::DriverCallbackSourceInterface::FillBuffer(int*, int)"
+892f80,4,lib-vox-audio,_ZN3vox5Mutex4LockEv,vox::Mutex::Lock()
+893108,32,lib-vox-audio,_ZN3vox29DriverCallbackSourceInterface4InitEv,vox::DriverCallbackSourceInterface::Init()
+893464,20,lib-vox-audio,_ZN3vox5Mutex7TryLockEv,vox::Mutex::TryLock()
+893478,4,lib-vox-audio,_ZN3vox5Mutex6UnlockEv,vox::Mutex::Unlock()
+89347c,4,lib-vox-audio,_ZN3vox5Mutex4LockEv,vox::Mutex::Lock()
+893480,20,lib-vox-audio,_ZN3vox16AccessController18ReleaseWriteAccessEv,vox::AccessController::ReleaseWriteAccess()
+8934ac,20,lib-vox-audio,_ZN3vox16AccessController14GetWriteAccessEv,vox::AccessController::GetWriteAccess()
+89351c,20,lib-vox-audio,_ZN3vox16AccessController17ReleaseReadAccessEv,vox::AccessController::ReleaseReadAccess()
+893548,8,lib-vox-audio,_ZN3vox16AccessController13GetReadAccessEv,vox::AccessController::GetReadAccess()
+893590,4,lib-vox-audio,_ZN3vox5MutexC1ERKS0_,vox::Mutex::Mutex(vox::Mutex const&)
+89359c,12,lib-vox-audio,_ZN3vox5MutexC2ERKS0_,vox::Mutex::Mutex(vox::Mutex const&)
+8935a8,8,lib-vox-audio,_ZN3vox5MutexD1Ev,vox::Mutex::~Mutex()
+8935bc,20,lib-vox-audio,_ZN3vox5MutexD2Ev,vox::Mutex::~Mutex()
+8935d0,4,lib-vox-audio,_ZN3vox5MutexC1Ev,vox::Mutex::Mutex()
+8935e8,16,lib-vox-audio,_ZN3vox5MutexC2Ev,vox::Mutex::Mutex()
+893600,4,lib-vox-audio,_ZN3vox9VoxThread14GetCurThreadIdEv,vox::VoxThread::GetCurThreadId()
+893604,12,lib-vox-audio,_ZN3vox9VoxThread5SleepEj,vox::VoxThread::Sleep(unsigned int)
+893610,20,lib-vox-audio,_ZN3vox9VoxThread7_UpdateEv,vox::VoxThread::_Update()
+893700,16,lib-vox-audio,_ZN3vox9VoxThread6UpdateEPv,vox::VoxThread::Update(void*)
+893710,4,lib-vox-audio,_ZN3vox10funcUpdateEPv,vox::funcUpdate(void*)
+893714,12,lib-vox-audio,_ZN3vox9VoxThread4StopEv,vox::VoxThread::Stop()
+89374c,28,lib-vox-audio,_ZN3vox9VoxThreadD1Ev,vox::VoxThread::~VoxThread()
+893768,28,lib-vox-audio,_ZN3vox9VoxThreadD2Ev,vox::VoxThread::~VoxThread()
+893784,268,lib-vox-audio,_ZN3vox9VoxThreadC1EPFvPvS1_ES1_S1_Pc,"vox::VoxThread::VoxThread(void (*)(void*, void*), void*, void*, char*)"
+8938b4,16,lib-vox-audio,_ZN3vox9VoxThreadC2EPFvPvS1_ES1_S1_Pc,"vox::VoxThread::VoxThread(void (*)(void*, void*), void*, void*, char*)"
+8939e4,4,lib-vox-audio,_ZN3vox13FileInterfaceD1Ev,vox::FileInterface::~FileInterface()
+8939e8,8,lib-vox-audio,_ZN3vox13FileInterface10GetFilePtrEv,vox::FileInterface::GetFilePtr()
+8939f0,4,lib-vox-audio,_ZN3vox11FileLimitedD1Ev,vox::FileLimited::~FileLimited()
+8939f4,8,lib-vox-audio,_ZN3vox11FileLimited5WriteEPKvii,"vox::FileLimited::Write(void const*, int, int)"
+8939fc,80,lib-vox-audio,_ZN3vox13FileInterface4ReadEPvii,"vox::FileInterface::Read(void*, int, int)"
+893a54,12,lib-vox-audio,_ZN3vox13FileInterface4SeekEiNS_17VoxFileSeekOriginE,"vox::FileInterface::Seek(int, vox::VoxFileSeekOrigin)"
+893a98,60,lib-vox-audio,_ZN3vox13FileInterface4TellEv,vox::FileInterface::Tell()
+893adc,76,lib-vox-audio,_ZN3vox13FileInterface5WriteEPKvii,"vox::FileInterface::Write(void const*, int, int)"
+893b34,64,lib-vox-audio,_ZN3vox11FileLimitedC2Ev,vox::FileLimited::FileLimited()
+893b7c,64,lib-vox-audio,_ZN3vox11FileLimitedC1Ev,vox::FileLimited::FileLimited()
+893bc4,104,lib-vox-audio,_ZN3vox11FileLimited4ReadEPvii,"vox::FileLimited::Read(void*, int, int)"
+893c74,244,lib-vox-audio,_ZN3vox11FileLimited4SeekEiNS_17VoxFileSeekOriginE,"vox::FileLimited::Seek(int, vox::VoxFileSeekOrigin)"
+893d70,80,lib-vox-audio,_ZN3vox11FileLimitedC1EPvii,"vox::FileLimited::FileLimited(void*, int, int)"
+893dc8,80,lib-vox-audio,_ZN3vox11FileLimitedC2EPvii,"vox::FileLimited::FileLimited(void*, int, int)"
+893e20,8,lib-vox-audio,_ZN3vox11FileLimited4TellEv,vox::FileLimited::Tell()
+893e60,12,lib-vox-audio,_ZN3vox13FileInterfaceD0Ev,vox::FileInterface::~FileInterface()
+893e74,12,lib-vox-audio,_ZN3vox11FileLimitedD0Ev,vox::FileLimited::~FileLimited()
+893e88,100,lib-vox-audio,_ZN3vox19FileSystemInterface12GetDirectoryEPciS1_,"vox::FileSystemInterface::GetDirectory(char*, int, char*)"
+893f4c,68,lib-vox-audio,_ZN3vox19FileSystemInterface12PopDirectoryEv,vox::FileSystemInterface::PopDirectory()
+893ff0,92,lib-vox-audio,_ZN3vox19FileSystemInterface9CloseFileEPNS_13FileInterfaceE,vox::FileSystemInterface::CloseFile(vox::FileInterface*)
+89405c,84,lib-vox-audio,_ZN3vox19FileSystemInterfaceD1Ev,vox::FileSystemInterface::~FileSystemInterface()
+8940c0,20,lib-vox-audio,_ZN3vox19FileSystemInterfaceD0Ev,vox::FileSystemInterface::~FileSystemInterface()
+8940dc,84,lib-vox-audio,_ZN3vox19FileSystemInterfaceD2Ev,vox::FileSystemInterface::~FileSystemInterface()
+894140,72,lib-vox-audio,_ZN3vox19FileSystemInterface15DestroyInstanceEv,vox::FileSystemInterface::DestroyInstance()
+8941ec,152,lib-vox-audio,_ZN3vox19FileSystemInterface13PushDirectoryEPc,vox::FileSystemInterface::PushDirectory(char*)
+894290,72,lib-vox-audio,_ZN3vox19FileSystemInterface10SetArchiveEPKcbbb,"vox::FileSystemInterface::SetArchive(char const*, bool, bool, bool)"
+894330,136,lib-vox-audio,_ZN3vox19FileSystemInterface8OpenFileEPcNS_17VoxFileAccessModeE,"vox::FileSystemInterface::OpenFile(char*, vox::VoxFileAccessMode)"
+8945a4,48,lib-vox-audio,_ZN3vox19FileSystemInterface11GetInstanceEv,vox::FileSystemInterface::GetInstance()
+8945dc,132,lib-vox-audio,_ZN3vox15FileSystemStdioC2Ev,vox::FileSystemStdio::FileSystemStdio()
+894684,24,lib-vox-audio,_ZN3vox15FileSystemStdioC1Ev,vox::FileSystemStdio::FileSystemStdio()
+89472c,44,lib-vox-audio,_ZN3vox15FileSystemStdioD1Ev,vox::FileSystemStdio::~FileSystemStdio()
+894760,20,lib-vox-audio,_ZN3vox15FileSystemStdioD0Ev,vox::FileSystemStdio::~FileSystemStdio()
+89477c,44,lib-vox-audio,_ZN3vox15FileSystemStdioD2Ev,vox::FileSystemStdio::~FileSystemStdio()
+8947b0,16,lib-vox-audio,_ZN3vox16VoxNewFileSystemEv,vox::VoxNewFileSystem()
+8947d0,4,lib-vox-audio,_ZN3vox10closeStdIOEPv,vox::closeStdIO(void*)
+8947d4,212,lib-vox-audio,_ZN3vox9openStdIOEPKcNS_17VoxFileAccessModeE,"vox::openStdIO(char const*, vox::VoxFileAccessMode)"
+8948d8,4,lib-vox-audio,_ZN3vox9tellStdIOEPv,vox::tellStdIO(void*)
+8948dc,24,lib-vox-audio,_ZN3vox9seekStdIOEPviNS_17VoxFileSeekOriginE,"vox::seekStdIO(void*, int, vox::VoxFileSeekOrigin)"
+8948f4,4,lib-vox-audio,_ZN3vox10writeStdIOEPKviiPv,"vox::writeStdIO(void const*, int, int, void*)"
+8948f8,4,lib-vox-audio,_ZN3vox9readStdIOEPviiS0_,"vox::readStdIO(void*, int, int, void*)"
+8948fc,8,lib-vox-audio,_ZN3vox10CZipReader12getFileCountEv,vox::CZipReader::getFileCount()
+894904,32,lib-vox-audio,_ZN3vox13SZipFileEntryC1ERKS0_,vox::SZipFileEntry::SZipFileEntry(vox::SZipFileEntry const&)
+894980,20,lib-vox-audio,_ZN3vox13SZipFileEntryC1Ev,vox::SZipFileEntry::SZipFileEntry()
+894a3c,12,lib-vox-audio,_ZN3vox13SZipFileEntryaSERKS0_,vox::SZipFileEntry::operator=(vox::SZipFileEntry const&)
+894bac,44,lib-vox-audio,_ZNK3vox10StringCompclERKSbIcSt11char_traitsIcENS_10SAllocatorIcLNS_10VoxMemHintE0EEEES8_,"vox::StringComp::operator()(std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const&, std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> > const&) const"
+894cec,28,lib-vox-audio,_ZN3vox13SZipFileEntryD1Ev,vox::SZipFileEntry::~SZipFileEntry()
+894da8,36,lib-vox-audio,_ZN3vox10CZipReaderD1Ev,vox::CZipReader::~CZipReader()
+894e44,20,lib-vox-audio,_ZN3vox10CZipReaderD0Ev,vox::CZipReader::~CZipReader()
+894e60,36,lib-vox-audio,_ZN3vox10CZipReaderD2Ev,vox::CZipReader::~CZipReader()
+894efc,8,lib-vox-audio,_ZN3vox10CZipReader22deletePathFromFilenameERSbIcSt11char_traitsIcENS_10SAllocatorIcLNS_10VoxMemHintE0EEEE,"vox::CZipReader::deletePathFromFilename(std::basic_string<char, std::char_traits<char>, vox::SAllocator<char, (vox::VoxMemHint)0> >&)"
+894f74,16,lib-vox-audio,_ZN3vox10CZipReader15extractFilenameEPNS_13SZipFileEntryE,vox::CZipReader::extractFilename(vox::SZipFileEntry*)
+89544c,4,lib-vox-audio,_ZN3vox10CZipReader11getFileInfoEPKcRiS3_,"vox::CZipReader::getFileInfo(char const*, int&, int&)"
+895c64,4,lib-vox-audio,_ZN3vox10CZipReader15scanLocalHeaderEv,vox::CZipReader::scanLocalHeader()
+895e80,68,lib-vox-audio,_ZN3vox10CZipReaderC1EPKcbb,"vox::CZipReader::CZipReader(char const*, bool, bool)"
+895f5c,60,lib-vox-audio,_ZN3vox10CZipReaderC2EPKcbb,"vox::CZipReader::CZipReader(char const*, bool, bool)"
+896068,4,lib-vox-audio,_ZN3vox18VoxMSWavSubDecoder17GoToNextDataChunkEv,vox::VoxMSWavSubDecoder::GoToNextDataChunk()
+8961a4,16,lib-vox-audio,mpc_bits_read,mpc_bits_read
+896220,208,lib-vox-audio,mpc_bits_golomb_dec,mpc_bits_golomb_dec
+89630c,100,lib-vox-audio,mpc_bits_log_dec,mpc_bits_log_dec
+896378,120,lib-vox-audio,mpc_bits_get_size,mpc_bits_get_size
+8963f0,128,lib-vox-audio,mpc_bits_get_block,mpc_bits_get_block
+896470,124,lib-vox-audio,mpc_bits_read,mpc_bits_read
+8964ec,108,lib-vox-audio,mpc_bits_can_dec,mpc_bits_can_dec
+8965b4,180,lib-vox-audio,mpc_bits_enum_dec,mpc_bits_enum_dec
+896678,32,lib-vox-audio,mpc_decoder_set_streaminfo,mpc_decoder_set_streaminfo
+896708,408,lib-vox-audio,mpc_decoder_read_bitstream_sv8,mpc_decoder_read_bitstream_sv8
+897050,4,lib-vox-audio,mpc_decoder_exit,mpc_decoder_exit
+897054,8,lib-vox-audio,mpc_decoder_reset_scf,mpc_decoder_reset_scf
+897080,56,lib-vox-audio,mpc_decoder_setup,mpc_decoder_setup
+8970b8,16,lib-vox-audio,mpc_decoder_init,mpc_decoder_init
+897110,388,lib-vox-audio,mpc_decoder_read_bitstream_sv7,mpc_decoder_read_bitstream_sv7
+898104,424,lib-vox-audio,mpc_decoder_decode_frame,mpc_decoder_decode_frame
+898e60,76,lib-vox-audio,mpc_synthese_filter_float_internal,mpc_synthese_filter_float_internal
+89a2c4,84,lib-vox-audio,mpc_random_int,mpc_random_int
+89a31c,40,lib-vox-audio,mpc_decoder_synthese_filter_float,mpc_decoder_synthese_filter_float
+89a3a4,180,lib-vox-audio,huff_fill_lut,huff_fill_lut
+89a458,4,lib-vox-audio,can_fill_lut,can_fill_lut
+89a54c,172,lib-vox-audio,huff_init_lut,huff_init_lut
+8a0364,28,lib-vox-audio,FUN_008a0364,FUN_008a0364
+8a2330,12,lib-vox-audio,FUN_008a2330,FUN_008a2330
+8a7e90,220,lib-vox-audio,FUN_008a7e90,FUN_008a7e90

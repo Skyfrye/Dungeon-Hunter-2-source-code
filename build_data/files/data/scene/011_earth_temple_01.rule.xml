@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/earth_temple"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\011_earth_temple_01.pyscript"
+	camera_znear="900"
+	camera_zfar="10000"
+	music="EarthTempleAmbientMusic"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	light_set="data/3D/Light/earthtemple.lightset_xml"
+	fixed_light_set="data/3D/Light/earthtemple_es1_1.lightset_xml"
+	prog_vertex_buffer_size="492936"
+	prog_index_buffer_size="91368"
+	fix_vertex_buffer_size="1417608"
+	fix_index_buffer_size="135846"
+>
+
+	<list name="deadends" random="true">
+		<elem name="deadend_earthtemp_e_" gameplay="et01_deadend_earthtemp_e__01.mgp" visual="et01_deadend_earthtemp_e__01.mvp"/>
+		<elem name="deadend_earthtemp_n_" gameplay="et01_deadend_earthtemp_n__01.mgp" visual="et01_deadend_earthtemp_n__01.mvp"/>
+		<elem name="deadend_earthtemp_s_" gameplay="et01_deadend_earthtemp_s__01.mgp" visual="et01_deadend_earthtemp_s__01.mvp"/>
+		<elem name="deadend_earthtemp_w_" gameplay="et01_deadend_earthtemp_w__01.mgp" visual="et01_deadend_earthtemp_w__01.mvp"/>
+	</list>
+	
+	<list name="objective_rooms" random="true">
+		<elem name="straight_earthtemp_ew_" gameplay="et01_straight_objrootdoors_ew__01.mgp" visual="et01_straight_objrootdoors_ew__01.mvp"/>
+	</list>
+	
+	<list name="start" random="true">
+		<elem name="entry_earthtemp_w_" gameplay="et01_entry_earthtemp_w__01.mgp" visual="et01_entry_earthtemp_w__01.mvp"/>
+	</list>
+	
+	<list name="end" random="true">
+		<elem name="deadend_earthtemp_e_" gameplay="et01_deadend_toet02_e__01.mgp" visual="et01_deadend_toet02_e__01.mvp"/>
+		<elem name="deadend_earthtemp_n_" gameplay="et01_deadend_toet02_n__01.mgp" visual="et01_deadend_toet02_n__01.mvp"/>
+		<elem name="deadend_earthtemp_s_" gameplay="et01_deadend_toet02_s__01.mgp" visual="et01_deadend_toet02_s__01.mvp"/>
+		<elem name="deadend_earthtemp_w_" gameplay="et01_deadend_toet02_w__01.mgp" visual="et01_deadend_toet02_w__01.mvp"/>		
+	</list>
+
+	<list name="path" random="true" replacement="true">
+		<elem name="corner_earthtemp_ne_" gameplay="et01_corner_earthtemp_ne__01.mgp" visual="et01_corner_earthtemp_ne__01.mvp"/>
+		<elem name="corner_earthtemp_nw_" gameplay="et01_corner_earthtemp_nw__01.mgp" visual="et01_corner_earthtemp_nw__01.mvp"/>
+		<elem name="corner_earthtemp_se_" gameplay="et01_corner_earthtemp_se__01.mgp" visual="et01_corner_earthtemp_se__01.mvp"/>
+		<elem name="corner_earthtemp_sw_" gameplay="et01_corner_earthtemp_sw__01.mgp" visual="et01_corner_earthtemp_sw__01.mvp"/>
+		<elem name="straight_earthtemp_ew_" gameplay="et01_straight_earthtemp_ew__01.mgp" visual="et01_straight_earthtemp_ew__01.mvp"/>
+		<elem name="straight_earthtemp_ns_" gameplay="et01_straight_earthtemp_ns__01.mgp" visual="et01_straight_earthtemp_ns__01.mvp"/>
+	</list>
+
+
+<RootRule name="#start">
+	<Forceblock name="#objective_rooms[0]">
+		<path name="#path" length="3,5" dontGoBack="false">
+			<Forceblock name="#end"/>
+		</path>
+	</Forceblock>
+</RootRule>
+</rules>

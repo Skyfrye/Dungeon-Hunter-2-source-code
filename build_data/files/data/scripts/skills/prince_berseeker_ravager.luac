@@ -1,0 +1,64 @@
+--[[	Ravager
+
+	Increases the damage when Using 2 handed weapons. As the player train that skill He will be allowed to wear
+	2h weapons in 1 hand.
+
+--]]
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Berserk_Ravager");
+local BUFF_ID		= GetPyOID("ClassTable", "Skill_Berserk_Ravager_buff");
+local buff			= nil;
+local buff2			= nil;
+
+-- Cached values
+local skill_level	= 0;
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level=slvl;
+	end
+	
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	if (buff) then
+		RemoveBuff(CLASS_ID, buff);
+	end
+	if (buff2) then
+		RemoveBuff(BUFF_ID, buff2);
+	end
+	if (slvl~=0) then
+		buff = CreateBuff(CLASS_ID, 0, false, skill_level);
+		ApplyBuff(CLASS_ID, buff);
+	end
+	if(slvl > 6) then
+		SetProp(GetPyStruct("CharacterProperties", "Special_Equip_2H_In_One"), ToFixed(slvl));
+		buff2 = CreateBuff(BUFF_ID, 0, false, skill_level);
+		ApplyBuff(BUFF_ID, buff2);
+	end
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

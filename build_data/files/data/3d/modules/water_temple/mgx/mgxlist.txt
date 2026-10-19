@@ -1,0 +1,17 @@
+corner_watertemp_ne_00.mgx
+corner_watertemp_se_00.mgx
+corner_watertemp_sw_00.mgx
+corner_watertemp_wn_00.mgx
+deadend_watertemp_e_00.mgx
+deadend_watertemp_n_00.mgx
+deadend_watertemp_s_00.mgx
+deadend_watertemp_w_00.mgx
+objend_watertemp_s_00.mgx
+objmid_watertemp_ns_00.mgx
+objstart_watertemp_s_.mgx
+objstart_watertemp_s_00.mgx
+objstart_watertemp_w_00.mgx
+straight_watertemp_ew_00.mgx
+straight_watertemp_ns_00.mgx
+t_watertemp_nsw_00.mgx
+t_watertemp_wse_00.mgx

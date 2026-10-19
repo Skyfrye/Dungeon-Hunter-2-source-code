@@ -1,0 +1,193 @@
+--[[	Stone Escape
+
+	Stone Escape : Teleport + summon entity + explosion at start point
+	Teleports the mage instantly in the direction he is facing. The mage can pass
+	trough enemies and game objects but not trough doors. A stone copy of himself
+	remains at his starting position for a second before exploding dealing earth
+	damage with chance to stun nearby enemies.
+
+	Mana Cost: 10			|	+ 2 mana cost
+	Cast time: 1.5 sec	|
+
+	Cool down: 3 sec		|	-0,25 cooldown
+
+	05/21/2010 	Skill is working almost fully.
+					Added the ability to get the Cooldown time from the class
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local MOVE_RANGE	= 650.0;		-- Teleportation range
+local statue;						-- The statue gameobject
+
+local COOLDOWN_BASE = 5200.0;
+local COOLDOWN_LEVEL = 200;
+
+local TELEPORT_FX	= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_mage_stone_escape_magefx");
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Mage_StoneEscape");
+local PROJECTILE_ID	= GetPyOID("ProjectileTable", "TeleportTool");
+
+local TNT_DELAY	= 2200.0;
+local RANGE			= 650.0;		-- Explosion radius
+local ANGLE			= 360.0;		-- Explosion area
+
+local USE_COOLDOWN	= false;
+
+-- Cached values
+local skill_level = 0;
+local mana_cost;
+local x,y,z;					-- the projectile coordinate
+local oldx, oldy, oldz;			-- Old positions of the mage
+local projectile;				-- The test projectile
+
+local cooldown;
+
+local traces = false;
+
+local function DoExplosion(timerID, statueDummy)
+-- Temp: Let the damage done in the parent, because the skill of the dummy is really low.
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	TargetListSearch(RANGE, ANGLE, statueDummy);
+	-- Play the explosion FX
+	if(not IsTargetListEmpty()) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+		if (traces) then Trace ("[Doppleganger] The current skill level is level "..skill_level); end
+		local estimated_damage = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_MaxDamage")));
+		local estimated_damage_min = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_MinDamage")));
+		if (traces) then Trace ("[Doppleganger] The estimated minimum damage is "..estimated_damage_min.." points."); end
+		if (traces) then Trace ("[Doppleganger] The estimated maximum damage is "..estimated_damage.." points."); end
+		if (traces) then Trace ("[Doppleganger] Stone Statue Explode! BOOOOM!"); end
+		repeat
+			local target = GetTargetListTop();
+			PopTargetList();
+			local dmg = 0;
+			if (not target:IsCharacter()) then
+				SkillCombatRoll(target);
+			else
+				dmg = SkillCombatRoll(target);
+			end
+
+			if ((dmg>0) and (dmg ~= nil)) then
+				if (traces) then Trace ("[Doppleganger] Statue blast does "..FromFixed(dmg).." points of real damage! Poor guy!"); end
+			end
+		until(IsTargetListEmpty())
+	end
+
+	if (statueDummy:GetHP() > 0) then
+		statueDummy:Kill();
+	end
+end
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	cooldown	= FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Cooldown"),true));
+
+	if(cooldown < 0) then cooldown = 0; end
+	if (cooldown==0) then
+		cooldown = COOLDOWN_BASE - (COOLDOWN_LEVEL * skill_level);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return (not HasSkillCooldown() and HasMana(mana_cost)), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	oldx, oldy, oldz = GetPosition();
+	-- SetSkillCooldown(cooldown);
+	PlayFX(TELEPORT_FX, oldx, oldy, oldz);
+
+	-- Hack to validate the path... if it doesn't work, we will have to add a method in PFWorld
+	MoveTo(0.0, MOVE_RANGE, 0.0, true);
+
+	if(HasPath()) then
+		Stop();
+	end
+	-- [[ Version 2.0
+	x = nil; y = nil; z = nil;
+	projectile = SpawnSkillProjectile(PROJECTILE_ID, 0.0);
+	UseMana(mana_cost);
+	--]]
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	-- If we have coordinates, it means we have hit something (or reach the end of the map)
+	-- Otherwise it means the projectile hasn't expired yet (the animation was faster)
+	if(not x) then
+		local hack = GetSelf();
+
+		-- Should be valid if `x` is not set, but just in case
+		if(projectile) then
+			hack._this = projectile;
+		end
+
+		x, y, z = hack:GetPosition();
+	end
+
+	WarpTo(x, y, z);
+	PlayFX(TELEPORT_FX, x, y, z);
+
+	-- Will summon a statue to explode at the old position and try to set it's level to the user level
+	if (traces) then Trace ("[Doppleganger] Spawning the statue"); end
+	local plvl = GetProp(GetPyStruct("CharacterProperties", "Level"));
+	statue = Summon(GetPyOID("CharacterTable", "Dummy"),false, oldx, oldy, oldz);
+	statue:SetMaster(GetSelf());
+
+	if (traces) then Trace("[Doppleganger] Dummy Statue is now sumonned!") end
+
+	statue:SetProp(GetPyStruct("CharacterProperties", "Level"), ToFixed(plvl));
+	StartSkillTimerCB(TNT_DELAY, false, DoExplosion, statue);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target, proj)
+	-- We expired
+	local hack = GetSelf();
+	hack._this = proj;
+	x, y, z = hack:GetPosition();
+
+	projectile = nil;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkillCheck_(target, proj)
+	if(target and (target:IsDoor() or target:IsDecor())) then
+		return true;
+	end
+
+	return false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkillEx({	update=OnSkillUpdate_,
+					check=OnSkillCheck_,
+					pre=OnPreSkill_,
+					skill=OnSkill_,
+					delayed=OnDelayedSkill_,
+					delayed_check=OnDelayedSkillCheck_,
+					info=OnSkillInfo_,
+					});

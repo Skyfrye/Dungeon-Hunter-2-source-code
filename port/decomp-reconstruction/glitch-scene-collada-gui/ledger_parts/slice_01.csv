@@ -1,0 +1,101 @@
+elf_address,symbol,status,source_file,notes
+0x536954,_ZN6glitch3gui15CGUIEnvironment13addStaticTextEPKwRKNS_4core4rectIiEEbbPNS0_11IGUIElementEib,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x5369e0,_ZN6glitch3gui15CGUIEnvironment14addModalScreenEPNS0_11IGUIElementE,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x536a28,_ZN6glitch3gui15CGUIEnvironment20addColorSelectDialogEPKwbPNS0_11IGUIElementEi,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x536abc,_ZN6glitch3gui15CGUIEnvironment17addFileOpenDialogEPKwbPNS0_11IGUIElementEi,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x536b50,_ZN6glitch3gui15CGUIEnvironment10addListBoxERKNS_4core4rectIiEEPNS0_11IGUIElementEib,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x536d44,_ZN6glitch3gui15CGUIEnvironment13addMeshViewerERKNS_4core4rectIiEEPNS0_11IGUIElementEiPKw,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x536de0,_ZN6glitch3gui15CGUIEnvironment8addImageERKNS_4core4rectIiEEPNS0_11IGUIElementEiPKw,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x536e7c,_ZN6glitch3gui15CGUIEnvironment8addImageERKN5boost13intrusive_ptrINS_5video8ITextureEEENS_4core10position2dIiEEbPNS0_11IGUIElementEiPKw,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x536f78,_ZN6glitch3gui15CGUIEnvironment8addTableERKNS_4core4rectIiEEPNS0_11IGUIElementEib,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x5370a0,_ZN6glitch3gui15CGUIEnvironment13addMessageBoxEPKwS3_biPNS0_11IGUIElementEi,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x5371e0,_ZN6glitch3gui15CGUIEnvironment9addWindowERKNS_4core4rectIiEEbPKwPNS0_11IGUIElementEi,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x5372bc,_ZN6glitch3gui15CGUIEnvironment9addButtonERKNS_4core4rectIiEEPNS0_11IGUIElementEiPKwSA_,skipped,,element factory: needs element constructor signature and vtable slots; not rebuilt
+0x537380,_ZN6glitch3gui15CGUIEnvironment7loadGUIEPNS_2io9IReadFileEPNS0_11IGUIElementE,skipped,,XML reader creation via file system vtable; needs IXMLReader layout
+0x537440,_ZN6glitch3gui15CGUIEnvironment10createSkinENS0_14EGUI_SKIN_TYPEE,skipped,,needs CGUISkin constructor and skin vtable slots
+0x5374f4,_ZN6glitch3gui15CGUIEnvironment20updateHoveredElementENS_4core10position2dIiEE,skipped,,needs getElementFromPoint and Timer layout
+0x537648,_ZN6glitch3gui15CGUIEnvironment7drawAllEv,skipped,,needs timer; root element and render-hook vtable slots
+0x537724,_ZN6glitch3gui11IGUIElementC2ENS0_17EGUI_ELEMENT_TYPEEPNS0_15IGUIEnvironmentEPS1_iNS_4core4rectIiEE.clone.1,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x5379b4,_ZNK6glitch3gui11IGUIElement14getNextElementEibbRPS1_S3_b.clone.2,skipped,,child list is a custom node list here; layout not mapped in gui_elements.hpp
+0x537b44,_ZN6glitch3gui15CGUIEnvironment14getNextElementEbb,skipped,,depends on IGUIElement::getNextElement linked-list traversal
+0x537c5c,_ZN6glitch3gui15CGUIEnvironment17postEventFromUserERKNS_6SEventE,skipped,,needs SEvent layout and element vtable slots
+0x537dac,_ZN6glitch3gui15CGUIEnvironment25registerGUIElementFactoryEPNS0_18IGUIElementFactoryE,reconstructed,glitch-scene-collada-gui/src/recon/slice_01.cpp,Grabs factory into list; reconstructed via recon01 stand-ins
+0x537e7c,_ZN6glitch3gui15CGUIEnvironment12OnPostRenderEj,skipped,,needs layout rect helpers and element vtable slots
+0x538234,_ZN6glitch3gui11IGUIElement14setToolTipTextEPKw,reconstructed,glitch-scene-collada-gui/src/recon/slice_01.cpp,Assigns tool-tip text at +0xe8 on IGUIElement stand-in
+0x538670,_ZN6glitch3gui15CGUIEnvironment15writeGUIElementEPNS_2io10IXMLWriterEPNS0_11IGUIElementE,skipped,,needs IXMLWriter and attributes layout
+0x539020,_ZN6glitch3gui11IGUIElementD2Ev,skipped,,destructor body needs full vtable and base layout; not rebuilt this pass
+0x539118,_ZN6glitch3gui15CGUIEnvironmentD1Ev,skipped,,destructor body needs full vtable and base layout; not rebuilt this pass
+0x539474,_ZN6glitch3gui15CGUIEnvironmentD0Ev,skipped,,deleting destructor D0 thunk; skipped per brief
+0x539490,_ZN6glitch3gui15CGUIEnvironmentD2Ev,skipped,,destructor body needs full vtable and base layout; not rebuilt this pass
+0x539bec,_ZN6glitch3gui11IGUIElementD1Ev,skipped,,destructor body needs full vtable and base layout; not rebuilt this pass
+0x539d08,_ZN6glitch3gui11IGUIElementD0Ev,skipped,,deleting destructor D0 thunk; skipped per brief
+0x539d44,_ZNK6glitch3gui15CGUIEnvironment7STTFontltERKS2_,reconstructed,glitch-scene-collada-gui/src/recon/slice_01.cpp,STTFont key ordering; name compare then key; layout via STTFontKey stand-in
+0x539ec8,_ZN6glitch3gui11IGUIElement7setNameEPKc,skipped,,name is std::string at +0x0c here; gui_elements.hpp maps name as const char* at +0x20
+0x539ef0,_ZN6glitch3gui15CGUIEnvironment15loadBuiltInFontEv,skipped,,needs memory read file and font load vtable slots
+0x53a0c0,_ZN6glitch3gui15CGUIEnvironmentC1ERKN5boost13intrusive_ptrINS_2io11IFileSystemEEEPNS_5video12IVideoDriverEPNS_11IOSOperatorE,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x53a2d0,_ZN6glitch3gui20createGUIEnvironmentERKN5boost13intrusive_ptrINS_2io11IFileSystemEEEPNS_5video12IVideoDriverEPNS_11IOSOperatorE,skipped,,depends on CGUIEnvironment constructor
+0x53a308,_ZN6glitch3gui15CGUIEnvironmentC2ERKN5boost13intrusive_ptrINS_2io11IFileSystemEEEPNS_5video12IVideoDriverEPNS_11IOSOperatorE,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x53a4dc,_ZN6glitch3gui15CGUIEnvironment16removeTTFontFaceEPKc,skipped,,font table layout not mapped
+0x53a694,_ZN6glitch3gui15CGUIEnvironment13getSpriteBankEPKc,skipped,,sprite bank table layout not mapped
+0x53a814,_ZN6glitch3gui15CGUIEnvironment16removeTTFontFaceEPNS_2io9IReadFileE,skipped,,font table layout not mapped
+0x53a9f0,_ZN6glitch3gui15CGUIEnvironment18addEmptySpriteBankEPKc,skipped,,sprite bank table layout not mapped
+0x53ab20,_ZN6glitch3gui15CGUIEnvironment12removeTTFontEPNS_2io9IReadFileEj,skipped,,TTF font table layout not mapped
+0x53ada8,_ZN6glitch3gui15CGUIEnvironment9getTTFontEPKcj,skipped,,TTF font loading needs file and font-face layout
+0x53b0cc,_ZN6glitch3gui15CGUIEnvironment9getTTFontEPNS_2io9IReadFileEj,skipped,,TTF font loading needs file and font-face layout
+0x53b7d4,_ZN6glitch3gui15CGUIEnvironment7getFontEPKc,skipped,,font lookup needs TTF and bitmap font layout
+0x53bce4,_ZN6glitch3gui15CGUIEnvironment12removeTTFontEPKcj,skipped,,TTF font table layout not mapped
+0x53bfac,_ZNK6glitch3gui18CGUIFileOpenDialog11getFileNameEv,skipped,,member at +0x1a4 type unmapped
+0x53bfb4,_ZN6glitch3gui18CGUIFileOpenDialog17sendSelectedEventEv,skipped,,event receiver at +0x24 and SEvent layout unmapped
+0x53bff4,_ZN6glitch3gui18CGUIFileOpenDialog15sendCancelEventEv,skipped,,event receiver at +0x24 and SEvent layout unmapped
+0x53c07c,_ZN6glitch3gui18IGUIFileOpenDialogC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x53c344,_ZN6glitch3gui18CGUIFileOpenDialog4drawEv,skipped,,needs draw helpers and font or image layout
+0x53c584,_ZN6glitch3gui18CGUIFileOpenDialogD2Ev,skipped,,destructor body needs full vtable and base layout; not rebuilt this pass
+0x53c6b8,_ZN6glitch3gui18IGUIFileOpenDialogD0Ev,skipped,,deleting destructor D0 thunk; skipped per brief
+0x53c734,_ZN6glitch3gui18CGUIFileOpenDialogD1Ev,skipped,,destructor body needs full vtable and base layout; not rebuilt this pass
+0x53c878,_ZN6glitch3gui18CGUIFileOpenDialogD0Ev,skipped,,deleting destructor D0 thunk; skipped per brief
+0x53c894,_ZN6glitch3gui18CGUIFileOpenDialog11fillListBoxEv,skipped,,file list layout not mapped
+0x53ca9c,_ZN6glitch3gui18CGUIFileOpenDialogC1EPKwPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEi,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x53d114,_ZN6glitch3gui18CGUIFileOpenDialogC2EPKwPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEi,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x53d74c,_ZN6glitch3gui18CGUIFileOpenDialog7onEventERKNS_6SEventE,skipped,,event dispatch needs SEvent layout and dialog child layout
+0x53dc28,_ZN6glitch3gui8CGUIFontC2EPNS0_15IGUIEnvironmentEPKc,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x53dd04,_ZN6glitch3gui8CGUIFontC1EPNS0_15IGUIEnvironmentEPKc,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x53dde0,_ZN6glitch3gui8CGUIFont12setMaxHeightEv,skipped,,needs glyph table layout
+0x53de64,_ZNK6glitch3gui8CGUIFont20getAreaFromCharacterEw,skipped,,needs glyph area table layout
+0x53dee4,_ZNK6glitch3gui8CGUIFont19getSpriteNoFromCharEPKw,skipped,,depends on getAreaFromCharacter
+0x53df04,_ZNK6glitch3gui8CGUIFont15getKerningWidthEPKwS3_,skipped,,depends on getAreaFromCharacter and kerning layout
+0x53df5c,_ZNK6glitch3gui8CGUIFont12getDimensionEPKw,skipped,,not rebuilt this pass; layout unmapped
+0x53e038,_ZN6glitch3gui8CGUIFont4drawEPKwRKNS_4core4rectIiEENS_5video6SColorEbbPS7_,skipped,,needs draw helpers and font or image layout
+0x53e1f0,_ZNK6glitch3gui8CGUIFont19getCharacterFromPosEPKwi,skipped,,needs glyph table layout
+0x53e988,_ZN6glitch3gui8CGUIFontD1Ev,skipped,,destructor body needs full vtable and base layout; not rebuilt this pass
+0x53ea1c,_ZN6glitch3gui8CGUIFontD2Ev,skipped,,destructor body needs full vtable and base layout; not rebuilt this pass
+0x53eaf0,_ZN6glitch3gui8CGUIFontD0Ev,skipped,,deleting destructor D0 thunk; skipped per brief
+0x53eb0c,_ZN6glitch3gui14IGUIFontBitmapD0Ev,skipped,,deleting destructor D0 thunk; skipped per brief
+0x53eb20,_ZN6glitch3gui8IGUIFontD0Ev,skipped,,deleting destructor D0 thunk; skipped per brief
+0x53ef08,_ZN6glitch3gui8CGUIFont18readPositions16bitERKN5boost13intrusive_ptrINS_5video6CImageEEERi,skipped,,needs image pixel layout
+0x53f354,_ZN6glitch3gui8CGUIFont18readPositions32bitERKN5boost13intrusive_ptrINS_5video6CImageEEERi,skipped,,needs image pixel layout
+0x53f7c0,_ZN6glitch3gui8CGUIFont11loadTextureERKN5boost13intrusive_ptrINS_5video6CImageEEEPKc,skipped,,needs image and texture vtable slots
+0x53fafc,_ZN6glitch3gui8CGUIFont4loadEPKc,skipped,,needs bitmap font file format and texture loading
+0x53fb60,_ZN6glitch3gui8CGUIFont4loadEPNS_2io9IReadFileE,skipped,,needs bitmap font file format and texture loading
+0x5404c0,_ZN6glitch3gui9CGUIImage8setImageERKN5boost13intrusive_ptrINS_5video8ITextureEEE,skipped,,needs texture reference layout
+0x54062c,_ZN6glitch3gui9IGUIImageC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x5408ec,_ZN6glitch3gui9CGUIImageC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x5409d8,_ZN6glitch3gui9CGUIImageC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x540ae8,_ZN6glitch3gui9CGUIImageD1Ev,skipped,,destructor body needs full vtable and base layout; not rebuilt this pass
+0x540b74,_ZN6glitch3gui9CGUIImageD0Ev,skipped,,deleting destructor D0 thunk; skipped per brief
+0x540b90,_ZN6glitch3gui9CGUIImageD2Ev,skipped,,destructor body needs full vtable and base layout; not rebuilt this pass
+0x540d24,_ZN6glitch3gui9IGUIImageD0Ev,skipped,,deleting destructor D0 thunk; skipped per brief
+0x540da0,_ZN6glitch3gui9CGUIImage4drawEv,skipped,,needs draw helpers and font or image layout
+0x54120c,_ZN6glitch3gui14CGUIInOutFader8setColorENS_5video6SColorE,skipped,,needs fader vtable slot 132 layout
+0x541348,_ZN6glitch3gui14CGUIInOutFader7fadeOutEj,skipped,,needs Timer and fader vtable slot 132 layout
+0x541388,_ZN6glitch3gui14CGUIInOutFader6fadeInEj,skipped,,needs Timer and fader vtable slot 132 layout
+0x5413c8,_ZNK6glitch3gui14CGUIInOutFader7isReadyEv,skipped,,needs Timer layout for getTime
+0x5413ec,_ZN6glitch3gui14IGUIInOutFaderC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x5416ac,_ZN6glitch3gui14CGUIInOutFaderC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x5417a0,_ZN6glitch3gui14CGUIInOutFaderC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,skipped,,constructor needs base class layout and vtable slots; not rebuilt
+0x5418b8,_ZN6glitch3gui14CGUIInOutFaderD1Ev,skipped,,destructor body needs full vtable and base layout; not rebuilt this pass
+0x541948,_ZN6glitch3gui14CGUIInOutFaderD0Ev,skipped,,deleting destructor D0 thunk; skipped per brief
+0x541a08,_ZN6glitch3gui14IGUIInOutFaderD0Ev,skipped,,deleting destructor D0 thunk; skipped per brief
+0x541a84,_ZN6glitch3gui14CGUIInOutFader4drawEv,skipped,,needs draw helpers and font or image layout
+0x541c84,_ZN6glitch3gui11CGUIListBox21recalculateItemHeightEv,skipped,,needs list item layout
+0x541dcc,_ZN6glitch3gui11CGUIListBox22updateAbsolutePositionEv,skipped,,needs base updateAbsolutePosition and recalculateItemHeight
+0x541de4,_ZN6glitch3gui11CGUIListBox13setSpriteBankEPNS0_14IGUISpriteBankE,reconstructed,glitch-scene-collada-gui/src/recon/slice_01.cpp,Sprite bank slot swap with drop and grab; stand-in refcount

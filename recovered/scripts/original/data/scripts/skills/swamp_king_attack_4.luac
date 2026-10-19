@@ -1,0 +1,73 @@
+--[[	SwampKingAttack1
+
+	Single target skill
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 400.0;
+
+local CLASS_ID			= GetPyOID("ClassTable", "SwampKingSkillAOEPushback");
+
+-- Cached values
+local target;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	PlaySound("sfx_serpent_submerge", false, 0, false);
+	
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(RANGE);
+
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+	else
+		target = nil;
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(target) then
+		ApplyPropClass(CLASS_ID);
+		
+		
+		repeat
+			local target = GetTargetListTop();
+			SkillCombatRoll(target);
+			PopTargetList();
+		until(IsTargetListEmpty())	
+	end
+	
+	PlayFX(GetPyOID("AnimatedEffectTable", "fx_swampking_blue_shockwave"));
+	PlaySound("sfx_serpent_shockwave.wav",false,0,false);
+	
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_, nil);

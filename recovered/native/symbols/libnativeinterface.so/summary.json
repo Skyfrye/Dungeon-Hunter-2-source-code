@@ -1,0 +1,74 @@
+{
+  "library": "libnativeinterface.so",
+  "sha256": "180b582cbb7e7004c94fe771f8c8013dad4c74a9317ee4baff08c542da4ff0da",
+  "file_size": 11320,
+  "machine": "EM_ARM",
+  "elf_class": 32,
+  "entry_address": 2276,
+  "sections": 18,
+  "symbol_table_rows": 42,
+  "symbol_tables": {
+    ".dynsym": 42
+  },
+  "defined_function_symbol_rows": 10,
+  "unique_defined_function_symbols": 10,
+  "unique_function_ranges": 10,
+  "exported_function_ranges": 10,
+  "zero_size_function_ranges": 0,
+  "instruction_count_per_unique_range": 881,
+  "class_groups": 1,
+  "assembly_files": 1,
+  "imports_unique": 19,
+  "relocations": 23,
+  "vtables": 0,
+  "typeinfo_symbols": 0,
+  "mapping_symbol_rows_unique_addresses": 0,
+  "arm_unwind_index_entries": 15,
+  "extracted_strings": 105,
+  "build_source_filenames": 0,
+  "coverage": [
+    {
+      "section": ".plt",
+      "address": 2064,
+      "size": 212,
+      "instruction_bytes": 0,
+      "mapped_data_bytes": 0,
+      "undecoded_bytes": 0,
+      "outside_function_ranges_bytes": 212,
+      "instruction_byte_fraction": 0.0,
+      "accounted_byte_fraction": 0.0
+    },
+    {
+      "section": ".text",
+      "address": 2276,
+      "size": 2428,
+      "instruction_bytes": 1830,
+      "mapped_data_bytes": 0,
+      "undecoded_bytes": 2,
+      "outside_function_ranges_bytes": 596,
+      "instruction_byte_fraction": 0.7537067545304778,
+      "accounted_byte_fraction": 0.7545304777594728
+    }
+  ],
+  "unresolved_decoder_ranges": 1,
+  "outside_function_ranges": 6,
+  "gameplay_symbol_examples": [],
+  "source_filename_examples": [],
+  "json_chunks": {
+    "symbols": [
+      "symbols-001.json"
+    ],
+    "relocations": [
+      "relocations-001.json"
+    ],
+    "vtables": [
+      "vtables-001.json"
+    ],
+    "strings": [
+      "strings-001.json"
+    ],
+    "function_index": [
+      "function-index-001.json"
+    ]
+  }
+}

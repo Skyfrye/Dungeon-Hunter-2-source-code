@@ -1,0 +1,2 @@
+Include("DW_Statue_settings");
+Include("generic_boss_core");

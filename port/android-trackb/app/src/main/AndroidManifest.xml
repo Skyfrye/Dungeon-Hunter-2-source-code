@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Reconstructed from the decoded AndroidManifest.xml of Dungeon-Hunter-2-HD-v1-0-2.apk (versionCode 102, versionName 1.0.2).
+  Everything is as in the original except the items listed below (all needed to build/install on current Android):
+    * package: moved to the Gradle `namespace`/`applicationId` (same value, com.gameloft.android.GAND.GloftD2SS)
+    * <uses-sdk> and versionCode/versionName: moved to app/build.gradle.kts (minSdk 26, targetSdk 35, compileSdk 37; build_release.py keeps the origdex variant at 28, see below)
+    * android:exported added on the three activities that carry an intent-filter (mandatory since API 31)
+    * android:debuggable removed (set by the build type)
+    * android:usesCleartextTraffic="true": the 2011 installer/billing code talks plain HTTP (cleartext is the pre-API-28 default)
+    * <uses-library org.apache.http.legacy required="false">: GLiveMain and the installer still use org.apache.http
+    * launcher: DataSetup (Track B addition, unpacks the user's data archive on first start, then starts DungeonHunter2).
+      Zirconia_DRM keeps its class but is no longer the launcher: its licence server is gone and the original ends in an error
+      dialog offline; the game never needed the check to run (FIRST-BOOT.md starts .DungeonHunter2 directly).
+    * DungeonHunter2 also handles screenSize|smallestScreenSize|density|layoutDirection (foldables: folding/unfolding must not recreate the activity and the native GL state)
+    * DungeonHunter2 theme Theme.Black.NoTitleBar.Fullscreen (black window background; the legacy theme's start/snapshot window was white when returning from multitasking)
+    * resizeableActivity=true + maxAspectRatio=4.0 (application and the two game activities): without them the system treats the 2011 app as a legacy one and
+      letterboxes it to its default maximum aspect ratio 1.86 (black bars left and right on 21:9 phones / foldable cover screens)
+    * READ_EXTERNAL_STORAGE added for DataSetup (reads the archive from Download); maxSdkVersion 32 / WRITE 28: the data root is the app-specific
+      external dir (/sdcard/Android/data/<pkg>/files/), which needs no permission at any target level (scoped storage, API 30+)
+    * Port (SDK1), targetSdk 35: BLUETOOTH/BLUETOOTH_ADMIN limited to API <= 30, BLUETOOTH_CONNECT + BLUETOOTH_SCAN (neverForLocation) added for API 31+
+      (GLBluetooth degrades to "unsupported" while they are not granted); enableOnBackInvokedCallback=false keeps Back as KEYCODE_BACK in the
+      game (onKeyDown/onKeyUp) - predictive back is opt-in at 35 and would be the default at 36
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="auto">
+
+    <uses-feature android:name="android.hardware.touchscreen.multitouch"/>
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation"/>
+    <uses-feature android:name="android.hardware.bluetooth"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+
+    <application
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        android:label="@string/icon_label"
+        android:icon="@drawable/icon"
+        android:usesCleartextTraffic="true"
+        android:enableOnBackInvokedCallback="false"
+        android:resizeableActivity="true"
+        android:maxAspectRatio="4.0">
+        <meta-data android:name="android.max_aspect" android:value="4.0"/>
+        <provider
+            android:name="com.gameloft.android.GAND.GloftD2SS.SessionProvider"
+            android:authorities="com.gameloft.android.GAND.GloftD2SS.reports"
+            android:exported="false"
+            android:grantUriPermissions="true"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <activity
+            android:label="@string/icon_label"
+            android:name="com.gameloft.android.GAND.GloftD2SS.DungeonHunter2"
+            android:maxAspectRatio="4.0"
+            android:resizeableActivity="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:exported="true"
+            android:multiprocess="false"
+            android:finishOnTaskLaunch="true"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="fontScale|uiMode|screenLayout|screenSize|smallestScreenSize|density|layoutDirection|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale|mnc|mcc"/>
+        <activity
+            android:name="com.gameloft.android.GAND.GloftD2SS.Zirconia_DRM"
+            android:exported="true"
+            android:configChanges="fontScale|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale|mnc|mcc"/>
+        <activity
+            android:label="@string/icon_label"
+            android:name="com.gameloft.android.GAND.GloftD2SS.DataSetup"
+            android:clearTaskOnLaunch="true"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gameloft.android.GAND.GloftD2SS.MyVideoView"
+            android:maxAspectRatio="4.0"
+            android:resizeableActivity="true"
+            android:exported="true"
+            android:multiprocess="false"
+            android:finishOnTaskLaunch="true"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="fontScale|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.gameloft.android.GAND.GloftD2SS.GLiveMain"
+            android:exported="true"
+            android:multiprocess="false"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|uiMode|screenLayout|navigation|keyboardHidden|keyboard|touchscreen|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gameloft.android.GAND.GloftD2SS.IGPActivity"
+            android:exported="true"
+            android:multiprocess="false"
+            android:finishOnTaskLaunch="true"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="portrait"
+            android:configChanges="fontScale|uiMode|screenLayout|navigation|keyboardHidden|keyboard|touchscreen|locale|mnc|mcc">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+    <uses-feature android:name="android.hardware.touchscreen"/>
+    <uses-feature android:glEsVersion="0x20000"/>
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="false"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"/>
+</manifest>

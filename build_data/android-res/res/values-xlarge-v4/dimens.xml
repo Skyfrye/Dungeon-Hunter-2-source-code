@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gi_menu_top_padding">15dp</dimen>
+    <dimen name="gi_menu_center_message_height">100dp</dimen>
+    <dimen name="gi_menu_center_buttons_height">75dp</dimen>
+    <dimen name="gi_menu_top">15dp</dimen>
+    <dimen name="gi_menu_bottom">20dp</dimen>
+    <dimen name="gi_menu_softkey">25dp</dimen>
+    <dimen name="gi_button_width">120dp</dimen>
+    <dimen name="gi_text_size">24dp</dimen>
+    <dimen name="gi_small_text_size">24dp</dimen>
+    <dimen name="gi_tittle_bar_size_h">100dp</dimen>
+    <dimen name="gi_logo_tittle_gap">10dp</dimen>
+    <dimen name="gi_text_tittle_size">36dp</dimen>
+    <dimen name="gi_menu_bottom_lr_margin">10dp</dimen>
+    <dimen name="gi_downloading_pading_h">90dp</dimen>
+    <dimen name="gi_downloading_pading_lr">40dp</dimen>
+    <dimen name="gi_downloading_pading_tb">15dp</dimen>
+    <dimen name="gi_small_text_gap">10dp</dimen>
+    <dimen name="progress_bar_indet_gap">20dp</dimen>
+    <dimen name="gi_textview_pading_lr">60dp</dimen>
+    <dimen name="gi_textview_pading_top">40dp</dimen>
+    <dimen name="gi_textview_pading_botton">20dp</dimen>
+    <dimen name="gi_webview_padding_t">25dp</dimen>
+    <dimen name="gi_webview_padding_b">40dp</dimen>
+    <dimen name="gi_main_layout_padding">20dp</dimen>
+    <dimen name="gi_notif_toast_sizeH">80dp</dimen>
+    <dimen name="gi_notif_toast_image_padding">10dp</dimen>
+    <dimen name="gi_notif_toast_image_size">75dp</dimen>
+    <dimen name="gi_notif_toast_sizeW">480dp</dimen>
+    <dimen name="gi_notif_toast_text_sizeH">40dp</dimen>
+    <dimen name="gi_notif_toast_text_size">16dp</dimen>
+    <dimen name="gi_notif_toast_title_size">28dp</dimen>
+</resources>

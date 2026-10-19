@@ -1,0 +1,2 @@
+infectedvillage_01.mgx
+infectedvillage_02.mgx

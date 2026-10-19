@@ -1,0 +1,250 @@
+--[[	Terror (DH1 - Fear)
+
+	Enemies turn against each other
+	Mana Cost: 15
+	Cast time: 1.5 sec
+	Cool down: 3 sec
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local MANA_BASE		= ToFixed(15);	-- Base mana cost
+local MANA_PLVL		= ToFixed(0);	-- Mana cost per player level
+local MANA_SLVL		= ToFixed(3);	-- Mana cost per skill level
+
+local RANGE				= 650.0;
+local ANGLE				= 240.0;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Illusionist_Terror");
+local BUFF_ID			= GetPyOID("ClassTable", "FactionBuff");
+local BUFF_EFFECT_ID	= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_illusionist_terror");
+
+local BUFF_DURATION	= 0;
+local TIME_BASE		= 2000;
+local TIME_INC			= 1000;
+
+local CST_SCARED	= GetPyCst("AIStates", "Scared");
+
+local SLOT1_ITEM 	= 	nil;
+local SLOT1_BUFF	= 	nil;	
+local SLOT2_ITEM	=	nil;
+local SLOT2_BUFF	=	nil;
+local SLOT3_ITEM	=	nil;
+local SLOT3_BUFF	=	nil;
+
+local newest		= 	0;
+local newest1		= 	0;
+local oldest		= 	0;
+
+-- Cached values
+local skill_level		= 0;
+local mana_cost;
+local traces			= false;
+
+-- A simple way to count the items
+local function listcount()
+	local count = 0;
+	if (SLOT1_ITEM~=nil) then count=count+1; end
+	if (SLOT2_ITEM~=nil) then count=count+1; end
+	if (SLOT3_ITEM~=nil) then count=count+1; end
+	if (traces) then Trace("Skill Confusion: Counting "..count.." items."); end
+	return count;
+end
+
+-- This function update the newest and oldest item.
+-- We alway want to remove the oldest item first.
+local function update_oldest(number)
+	local items = listcount();
+	if (items == 3) then
+		oldest	= newest1;
+		newest1 	= newest;
+		newest 	= number;
+	end
+	if (items==2) then 
+		oldest	= newest;
+		newest1 	= newest;
+		newest 	= number;
+	end
+	if (items==1) then
+		oldest	= number;
+		newest1 	= number;
+		newest 	= number;
+	end
+	if (traces) then Trace("Skill Confusion: Slot "..oldest.." is the oldest slot."); end
+end
+-- This function remove the buff on the object, then release the slot
+local function delete_slot(timer, slot)
+	if (traces) then Trace("Skill Confusion: Slot "..slot.." will be freed."); end
+	if (slot==1) then
+		if (SLOT1_BUFF~=nil) then
+			RemoveBuff(BUFF_ID, SLOT1_BUFF);
+		end
+		SLOT1_BUFF = nil;
+		SLOT1_ITEM = nil;
+		return;
+	end
+	if (slot==2) then
+		if (SLOT2_BUFF~=nil) then
+			RemoveBuff(BUFF_ID, SLOT2_BUFF);
+		end
+		SLOT2_BUFF = nil;
+		SLOT2_ITEM = nil;
+		return;
+	end
+	if (slot==3) then
+		if (SLOT3_BUFF~=nil) then
+			RemoveBuff(BUFF_ID, SLOT3_BUFF);
+		end
+		SLOT3_BUFF = nil;
+		SLOT3_ITEM = nil;
+		return;
+	end
+end
+
+-- This put the item in a specified slot, apply the buff on it, and initiate a timer to remove it after the buff is exausted
+local function add_slot(slot, item)
+	-- Create a slot containing the NPC
+	-- Create a buff and will call a remove of the buff and slot after the buff is ended
+	
+	-- Since we will use a slot for a new thing, we use the mana also.
+	UseMana(mana_cost);
+	
+	-- Then do the initial damage
+	ApplyPropClass(CLASS_ID);
+	SkillCombatRoll(item);
+	if (traces) then Trace("Skill Confusion: "..item:GetName().." will be placed in slot "..slot); end
+	if (slot==1) then
+		SLOT1_ITEM = item;
+		SLOT1_BUFF = item:CreateBuff(BUFF_ID, BUFF_DURATION, false, skill_level, BUFF_EFFECT_ID);
+		item:ApplyBuff(BUFF_ID, SLOT1_BUFF);
+		StartSkillTimerCB(BUFF_DURATION, false, delete_slot, 1);
+		update_oldest(1);
+	end
+	if (slot==2) then
+		SLOT2_ITEM = item;
+		SLOT2_BUFF = item:CreateBuff(BUFF_ID, BUFF_DURATION, false, skill_level, BUFF_EFFECT_ID);
+		item:ApplyBuff(BUFF_ID, SLOT2_BUFF);
+		StartSkillTimerCB(BUFF_DURATION, false, delete_slot, 2);
+		update_oldest(2);
+	end
+	if (slot==3) then
+		SLOT3_ITEM = item;
+		SLOT3_BUFF = item:CreateBuff(BUFF_ID, BUFF_DURATION, false, skill_level, BUFF_EFFECT_ID);
+		item:ApplyBuff(BUFF_ID, SLOT3_BUFF);
+		StartSkillTimerCB(BUFF_DURATION, false, delete_slot, 3);
+		update_oldest(3);
+	end
+end
+
+-- This check for a free slot, if not then replace the oldest slots with the item
+local function check_slots(item)
+	if (SLOT1_ITEM==nil) then
+		add_slot(1, item);
+		if (traces) then Trace ("Skill Confusion: Slot 1 selected"); end;
+		return;
+	end
+	if (SLOT2_ITEM==nil) then
+		add_slot(2, item);
+		if (traces) then Trace ("Skill Confusion: Slot 2 selected"); end;
+		return;
+	end
+	if (SLOT3_ITEM==nil) then
+		add_slot(3, item);
+		if (traces) then Trace ("Skill Confusion: Slot 3 selected"); end;
+		return;
+	end
+	-- If the slots are full, replace the oldest one with the item
+	if (listcount()==3) then
+		delete_slot(0, oldest);
+		add_slot(oldest, item);
+		if (traces) then Trace ("Skill Confusion: Slot "..oldest.." replaced."); end;
+		return;
+	end
+	Trace ("Skill Confusion: Logic error-> No slots selected or replaced!");
+end
+
+-- This will check that we don't have a duplicate converted.
+local function not_there(item)
+	if (item) then
+		if (SLOT1_ITEM~=nil and SLOT1_ITEM:GetName()==item:GetName()) then
+			if (traces) then Trace ("Skill Confusion:"..item:GetName().." = "..SLOT1_ITEM:GetName()..". Then reject!"); end
+			return false;
+		end
+		if (SLOT2_ITEM~=nil and SLOT2_ITEM:GetName()==item:GetName()) then
+			if (traces) then Trace ("Skill Confusion:"..item:GetName().." = "..SLOT2_ITEM:GetName()..". Then reject!"); end
+			return false;
+		end
+		if (SLOT3_ITEM~=nil and SLOT3_ITEM:GetName()==item:GetName()) then
+			if (traces) then Trace ("Skill Confusion:"..item:GetName().." = "..SLOT3_ITEM:GetName()..". Then reject!"); end
+			return false;
+		end
+	end
+	if (traces) then Trace ("Skill Confusion:"..item:GetName().." have no slot match at all!"); end
+	return true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	BUFF_DURATION = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Fear_Duration"), true));
+	-- Failsafe in case the SNS_duration is overidden by another skill
+	if (BUFF_DURATION==0) then
+		BUFF_DURATION = TIME_BASE+(TIME_INC*slvl);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+-- Search for a target, convert it and will use the mana if there is one found.
+local function OnSkill_()
+	local found = false;
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	TargetListSearch(RANGE, ANGLE);
+	repeat 
+		if(not IsTargetListEmpty()) then
+			local target = GetTargetListTop();
+			PopTargetList();
+			-- Check the slots if the target is not already in the slots
+			if (not_there(target)) then 
+				found=true; 
+				LookAt(target);	
+				check_slots(target);
+			end
+		end
+	until(IsTargetListEmpty() or found)
+	if (traces and not found) then Trace("Skill Confusion: No target founds"); end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

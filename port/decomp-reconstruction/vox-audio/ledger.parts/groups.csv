@@ -1,0 +1,19 @@
+elf_address,symbol,status,source_file,notes
+0x88199c,_ZN3vox12SegmentGroupC2ERS0_,reconstructed,vox-audio/src/groups/group_copy_ctors.cpp,"SegmentGroup copy C2: valid set to 1, select mode and the six state words copied"
+0x881a08,_ZN3vox12SegmentGroupC1ERS0_,reconstructed,vox-audio/src/groups/group_copy_ctors.cpp,SegmentGroup copy C1: same body as C2
+0x881ad0,_ZN3vox11RandomGroupC2EPNS_10GroupInfosEi,partial,vox-audio/src/groups/random_group_lifetime.cpp,"RandomGroup(GroupInfos*, int) C2: base ctor, sentinel, field_0c window and raw value, total weight 0. The original does not write +0x38 count, +0x44 current, +0x50, +0x54; port defaults 0, -1, 0, 0"
+0x881b40,_ZN3vox11RandomGroupC1EPNS_10GroupInfosEi,partial,vox-audio/src/groups/random_group_lifetime.cpp,"RandomGroup(GroupInfos*, int) C1: same body as C2; same unwritten-field note"
+0x881bb0,_ZN3vox11RandomGroup8GetStateEPNS_16RandomGroupStateE,reconstructed,vox-audio/src/groups/random_group_state.cpp,"RandomGroup::GetState: eleven fields, element vector and removed-list addresses (RandomGroupState)"
+0x882918,_ZN3vox11RandomGroupD1Ev,reconstructed,vox-audio/src/groups/random_group_lifetime.cpp,"RandomGroup D1: frees vector elements, removed-list payloads and nodes; vector buffer by member dtor"
+0x8829fc,_ZN3vox11RandomGroupD2Ev,reconstructed,vox-audio/src/groups/random_group_lifetime.cpp,RandomGroup D2: same body as D1
+0x882c84,_ZN3vox11RandomGroupD0Ev,reconstructed,vox-audio/src/groups/random_group_lifetime.cpp,RandomGroup D0: compiler-generated deleting variant around the D1 body
+0x882ca0,_ZN3vox11RandomGroup21GetActiveElementIndexEv,reconstructed,vox-audio/src/groups/random_group_position.cpp,GetActiveElementIndex: weighted pick from lrand48 modulo total weight; -1 for empty vector; zero divisor gives 0 as the ARM helper
+0x882d94,_ZN3vox11RandomGroup23GetGroupElementPositionEv,reconstructed,vox-audio/src/groups/random_group_position.cpp,"GetGroupElementPosition: current value, window move to removed list and back, cycle and remaining advance. Current index not range-checked, as the original"
+0x882f48,_ZN3vox11RandomGroup8SetStateEPNS_16RandomGroupStateE,reconstructed,vox-audio/src/groups/random_group_state.cpp,"RandomGroup::SetState(RandomGroupState*): scalars, element pointers, removed list copied from the state"
+0x883088,_ZN3vox11RandomGroup5ResetEi,reconstructed,vox-audio/src/groups/random_group_state.cpp,"RandomGroup::Reset: removed elements return to the vector, cycle restarts from element count, mode 0 restores second word pair"
+0x88317c,_ZN3vox11RandomGroupC1ERS0_,reconstructed,vox-audio/src/groups/random_group_lifetime.cpp,"RandomGroup copy C1: element records copied into new 8-byte blocks, count from 0 upward, removed list not copied"
+0x8832c0,_ZN3vox11RandomGroupC2ERS0_,reconstructed,vox-audio/src/groups/random_group_lifetime.cpp,RandomGroup copy C2: same body as C1
+0x883404,_ZN3vox11RandomGroup18SetToPreviousStateEv,partial,vox-audio/src/groups/random_group_state.cpp,"SetToPreviousState: saved values restored, window reinsert path. Partial: when the window is set and the removed list is empty the original reads the sentinel word after it, which the port reads as the element slot (null)"
+0x8834f0,_ZN3vox11RandomGroup8SetStateERS0_,partial,vox-audio/src/groups/random_group_state.cpp,"RandomGroup::SetState(RandomGroup&): base copy, scalars and element pointers copied. Partial: when this vector is longer than the source the pseudocode relinks the head, which leaves the ring open if the removed list is not empty; the port keeps the same steps. Empty list reads null in place of the count word"
+0x8839fc,_ZN3vox15SequentialGroupC1ERS0_,reconstructed,vox-audio/src/groups/group_copy_ctors.cpp,"SequentialGroup copy C1: SegmentGroup copy, indices, element vector copied"
+0x883ab8,_ZN3vox15SequentialGroupC2ERS0_,reconstructed,vox-audio/src/groups/group_copy_ctors.cpp,SequentialGroup copy C2: same body as C1

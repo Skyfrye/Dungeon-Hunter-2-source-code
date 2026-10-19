@@ -1,0 +1,148 @@
+--[[	Berserk
+
+	Attack with increased damage at the cost of health down to a limit of 10%
+	The impact deal very strong melee damage and greatly push back the affected 
+	enemies standing in the  weapon path. This skill also has low chances to stun
+	the affected enemies. 
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 200.0;
+
+local STUN_CLASS_ID			= GetPyOID("ClassTable", "Skill_Berserk_Berserk_Stun");
+local DAM_CLASS_ID			= GetPyOID("ClassTable", "Skill_Berserk_Berserk_Damage");
+local KB_CLASS_ID				= GetPyOID("ClassTable", "Skill_Berserk_Berserk_KnockBack");
+
+-- Cached values
+local skill_level		= 0;
+local skill_inc		= 0;
+
+local mana_cost;
+local target;
+
+-- Debug
+local traces			= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(DAM_CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(slvl));
+	mana_cost	= CalcManaCost(DAM_CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(RANGE);
+	TargetListBackup("MaxAngleSearch");
+	
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+	else
+		target = nil;
+	end
+	-- Remove Health from the avatar each time the skill is used, unless there is
+	-- 10% left
+	local health, HPMax, HPPercentCurr = GetPropHP(); -- Get the current health of the avatar
+	local hp_leech = (health/10); -- Define the HP that will be leeched from the avatar
+	
+	if (traces) then 
+		Trace ("[Skills | Berserk]The player avatar have "..health.." health points actually.");
+		Trace ("[Skills | Berserk]The player avatar will have "..hp_leech.." health points removed!");
+	end
+	
+	if (HPPercentCurr > 10) then
+		SetProp(GetPyStruct("CharacterProperties", "HP"),ToFixed(health-hp_leech));
+	end
+	
+	if (traces) then Trace("[Skills | Berserk] consumes "..FromFixed(mana_cost).." mana..."); end
+	
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+
+	if (skill_inc > 2) then
+		skill_inc = 0;
+	end
+	
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	
+	TargetListSearch(RANGE, 360, "MaxAngleSearch");
+	
+
+
+	if (skill_inc == 0) then
+		if(not IsTargetListEmpty()) then
+			
+			repeat
+				local target,_,_, character = GetTargetListTop();
+				PopTargetList();
+				
+				if (target:IsCharacter()) then
+					SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+					ApplyPropClass(STUN_CLASS_ID);
+					SkillCombatRoll(target);
+				end
+			until(IsTargetListEmpty())
+			ClearProps();
+		end
+	
+	elseif (skill_inc == 1) then
+		if(not IsTargetListEmpty()) then
+			SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+			ApplyPropClass(DAM_CLASS_ID);
+			local target,_,_, character = GetTargetListTop();
+			SkillCombatRoll(target);
+			ClearProps();
+		end
+		
+	elseif (skill_inc == 2) then
+		if(not IsTargetListEmpty()) then
+			SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+			ApplyPropClass(KB_CLASS_ID);
+			local target,_,_, character = GetTargetListTop();
+			SkillCombatRoll(target);
+			ClearProps();
+		end
+	end
+	
+	skill_inc = skill_inc + 1;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

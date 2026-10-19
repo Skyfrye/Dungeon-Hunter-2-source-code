@@ -1,0 +1,30 @@
+# Host that leaves: after 3 s of play the host leaves the room and quits (the joiner runs mp_join_hostquit.txt).
+# Host side of the disconnect test: the joiner leaves the room at frame 3600 (mp_join_dc.txt); the host must go on playing.
+# Multiplayer host (LAN/WiFi, mode 1): title -> main menu -> create a room, wait for a joiner, start the game, then play.
+# Run both instances with host-runner/run_mp.sh (loopback: DH2_NET_SHARE_PORT=1 lets both listen on the broadcast port 6776).
+60 tap 1000 700
+300 mp init 1
+330 mp create
+500 mp status
+1500 mp status
+1700 mp start
+# the loading movie waits for a tap on its continue button once every player is loaded and ready to roll
+2000 tap 1200 540
+2100 tap 1200 540
+2200 tap 1200 540
+2300 tap 1200 540
+2400 tap 1200 540
+2500 tap 1200 540
+2600 tap 1200 540
+2700 tap 1200 540
+2800 tap 1200 540
+2900 tap 1200 540
+2300 mp status
+3000 hunt 1000 2000
+3100 levelstat mp
+3100 mp status
+3500 mp status
+
+
+3600 mp leave
+3700 quit

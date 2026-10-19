@@ -1,0 +1,157 @@
+[
+  {
+    "entry_address": 9960,
+    "function_word": 2147475964,
+    "function_address": 2276,
+    "function_symbols": [],
+    "unwind_word": 2147594416,
+    "unwind_kind": "inline-compact",
+    "extab_address": null
+  },
+  {
+    "entry_address": 9968,
+    "function_word": 2147476016,
+    "function_address": 2336,
+    "function_symbols": [
+      "Java_com_samsung_zirconia_NativeInterface_checkLicenseFile2"
+    ],
+    "unwind_word": 2159063216,
+    "unwind_kind": "inline-compact",
+    "extab_address": null
+  },
+  {
+    "entry_address": 9976,
+    "function_word": 2147476012,
+    "function_address": 2340,
+    "function_symbols": [],
+    "unwind_word": 2147483532,
+    "unwind_kind": "extab-prel31",
+    "extab_address": 9864
+  },
+  {
+    "entry_address": 9984,
+    "function_word": 2147476128,
+    "function_address": 2464,
+    "function_symbols": [],
+    "unwind_word": 2158670000,
+    "unwind_kind": "inline-compact",
+    "extab_address": null
+  },
+  {
+    "entry_address": 9992,
+    "function_word": 2147476168,
+    "function_address": 2512,
+    "function_symbols": [
+      "Java_com_samsung_zirconia_NativeInterface_storeLicenseKey"
+    ],
+    "unwind_word": 2147483528,
+    "unwind_kind": "extab-prel31",
+    "extab_address": 9876
+  },
+  {
+    "entry_address": 10000,
+    "function_word": 2147476456,
+    "function_address": 2808,
+    "function_symbols": [],
+    "unwind_word": 2147483532,
+    "unwind_kind": "extab-prel31",
+    "extab_address": 9888
+  },
+  {
+    "entry_address": 10008,
+    "function_word": 2147476528,
+    "function_address": 2888,
+    "function_symbols": [],
+    "unwind_word": 2147483536,
+    "unwind_kind": "extab-prel31",
+    "extab_address": 9900
+  },
+  {
+    "entry_address": 10016,
+    "function_word": 2147476800,
+    "function_address": 3168,
+    "function_symbols": [
+      "Java_com_samsung_zirconia_NativeInterface_doPassphraseTest"
+    ],
+    "unwind_word": 2147483540,
+    "unwind_kind": "extab-prel31",
+    "extab_address": 9912
+  },
+  {
+    "entry_address": 10024,
+    "function_word": 2147476984,
+    "function_address": 3360,
+    "function_symbols": [
+      "CheckLicenseFile"
+    ],
+    "unwind_word": 2147483544,
+    "unwind_kind": "extab-prel31",
+    "extab_address": 9924
+  },
+  {
+    "entry_address": 10032,
+    "function_word": 2147477244,
+    "function_address": 3628,
+    "function_symbols": [
+      "Java_com_samsung_zirconia_NativeInterface_checkLicenseFile"
+    ],
+    "unwind_word": 2147483548,
+    "unwind_kind": "extab-prel31",
+    "extab_address": 9936
+  },
+  {
+    "entry_address": 10040,
+    "function_word": 2147477412,
+    "function_address": 3804,
+    "function_symbols": [
+      "SHA1Reset"
+    ],
+    "unwind_word": 2159063216,
+    "unwind_kind": "inline-compact",
+    "extab_address": null
+  },
+  {
+    "entry_address": 10048,
+    "function_word": 2147477460,
+    "function_address": 3860,
+    "function_symbols": [
+      "SHA1ProcessMessageBlock"
+    ],
+    "unwind_word": 2147483544,
+    "unwind_kind": "extab-prel31",
+    "extab_address": 9948
+  },
+  {
+    "entry_address": 10056,
+    "function_word": 2147477984,
+    "function_address": 4392,
+    "function_symbols": [
+      "SHA1Input"
+    ],
+    "unwind_word": 2159085739,
+    "unwind_kind": "inline-compact",
+    "extab_address": null
+  },
+  {
+    "entry_address": 10064,
+    "function_word": 2147478076,
+    "function_address": 4492,
+    "function_symbols": [
+      "SHA1PadMessage"
+    ],
+    "unwind_word": 2158670000,
+    "unwind_kind": "inline-compact",
+    "extab_address": null
+  },
+  {
+    "entry_address": 10072,
+    "function_word": 2147478244,
+    "function_address": 4668,
+    "function_symbols": [
+      "SHA1Result"
+    ],
+    "unwind_word": 2158538928,
+    "unwind_kind": "inline-compact",
+    "extab_address": null
+  }
+]

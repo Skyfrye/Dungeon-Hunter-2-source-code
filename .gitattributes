@@ -1,0 +1,4 @@
+# Ledgers are read by tools/decomp_progress.py and the category workers. Keep them LF so
+# the rows diff cleanly and merges do not turn every line into a conflict.
+port/decomp-reconstruction/**/ledger.csv text eol=lf
+port/decomp-reconstruction/**/ledger.parts/*.csv text eol=lf

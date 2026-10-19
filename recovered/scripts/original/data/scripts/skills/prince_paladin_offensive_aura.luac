@@ -1,0 +1,152 @@
+--[[	Offensive Aura
+
+	Activating this skill has an immediate effect on the warrior and his nearby
+	allies. It also has a temporary effect which vanish at the end of the spell
+	duration. The warrior and his nearby allies gets surrounded by magic energy
+	The aura remains on the warrior and his allies until the player stops it or
+	the caster is too low on MP to sustain it
+	
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+
+local RANGE				= 300.0;
+
+local BUFF_ID		= GetPyOID("ClassTable", "Skill_Paladin_OffensiveAura");
+local BUFF_FX		= GetPyOID("AnimatedEffectTable", "skill_dh2_prince_warrior_paladin_offensive_aura");
+local BUFF_FX2		= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_warrior_paladin_offensive_aura");
+local BUFF_PERSIST= GetPyOID("AnimatedEffectTable", "skill_dh2_prince_warrior_paladin_offensive_aura_persist");
+local BUFF_TIME	= 12000;
+
+local CST_CHR_FILTER	= GetPyCst("AITargetList_CharacterFilter", "Player");
+local CST_OBJ_FILTER	= GetPyCst("AITargetList_ObjectFilter", "NONE");
+local CST_SORTING		= GetPyCst("AITargetList_Sorting", "NoSort");
+
+-- Cached values
+local skill_level	= 0;
+local mana_cost;
+local buff;
+local memory_buff	= {} ; -- the multiplayers
+local playercounter = 0;
+local buff_timer	= -1;
+local target
+local traces		= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function BuffExpired(timerId)
+	if(buff and buff_timer == timerId) then
+		if (traces) then Trace("[SKILLS: Offensive aura] Buff expired"); end
+		buff = nil;
+		buff_timer = -1;
+	end
+end
+-- ----------------------------------------------------------------------------------------------
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(BUFF_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if (slvl~=skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	if (buff and slvl==0) then
+		RemoveBuff(BUFF_ID, buff);
+	end
+	if(buff and slvl ~= 0) then
+		SetBuffProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(slvl));
+	end
+	if(slvl ~= 0) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(slvl));
+		mana_cost	= CalcManaCost(BUFF_ID, slvl);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	if(buff) then
+		if (traces) then Trace("[SKILLS: Offensive aura] Deactivating the buff"); end
+		if (playercounter>0) then
+			-- destroy and delete the multiplayer buffs
+			for i in pairs(memory_buff) do
+				RemoveBuff(BUFF_ID, memory_buff[i]);
+				memory_buff[i]=nil;
+				table.remove(memory_buff,i);
+				playercounter=0;
+			end
+		end
+		RemoveBuff(BUFF_ID, buff);
+		buff = nil;
+		StopTimerCB(buff_timer);
+		buff_timer = -1;
+	end
+  
+	if (traces) then Trace("[SKILLS: Offensive aura] Wasting mana right away..."); end
+	UseMana(mana_cost);
+
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if (not buff) then
+		if (traces) then Trace("[SKILLS: Offensive aura] Activating the buff"); end
+		SetTargetListCharacterFilter(CST_CHR_FILTER);
+		SetTargetListObjectFilter(CST_OBJ_FILTER);
+		SetTargetListSorting(CST_SORTING);
+		buff = CreateBuff(BUFF_ID, BUFF_TIME, false, GetCurrentSkillInfo(),BUFF_PERSIST);
+		-- Apply the buff to all allies from a 60 meter radius
+		TargetListSearch(6000, 360);
+		Trace ("Searching for players!!!"..GetTargetListSize());
+		repeat
+			if (not IsTargetListEmpty()) then 
+				Trace ("Searching for players!!!"..GetTargetListSize());
+				playercounter=playercounter+1;
+				local target = GetTargetListTop();
+				if (target:GetName() ~= GetSelf():GetName()) then 
+					target:PlayFX(BUFF_FX2);
+					local playerbuff =  target:CreateBuff(BUFF_ID, BUFF_TIME, false, skill_level,BUFF_PERSIST);
+					target:ApplyBuff(BUFF_ID, playerbuff);
+					Trace ("Found another player here!!!");
+					-- keep the buff in memory to later delete them
+					table.insert(memory_buff,playerbuff);
+				end
+				PopTargetList();
+			else
+				-- not targets
+				if (traces) then Trace ("[SKILLS: Offensive aura] No other target"); end
+			end
+		until(IsTargetListEmpty())
+		ApplyBuff(BUFF_ID, buff);
+		PlayFX(BUFF_FX);
+		-- Even if the buff has a duration, there is no callbacks associated with it,
+		-- so we keep our own timer.
+		buff_timer = StartSkillTimerCB(BUFF_TIME, 0, BuffExpired);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+local function OnBuffered_()
+	if (traces) then Trace("[SKILLS: Offensive aura] checking for a buffered function now."); end
+end
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnBuffered_, OnSkillInfo_);

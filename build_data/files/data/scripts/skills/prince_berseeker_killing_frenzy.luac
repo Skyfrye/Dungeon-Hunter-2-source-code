@@ -1,0 +1,119 @@
+--[[	Killing Frenzy
+
+	Each kill give a damage bonus for a short duration
+
+--]]
+-- Data
+local BUFF_ID			= GetPyOID("ClassTable", "Skill_Berserk_KillingFrenzy");
+local BUFF_FX			= GetPyOID("AnimatedEffectTable", "active_buff_fx");
+local BUFF_DELAY		= 1500;
+local BUFF_MAX_DELAY	= 5000;
+
+local MAX_COUNTER		= 5;
+
+local CURR_COUNTER	= 0;
+
+-- Cached values
+local skill_level			= 0;
+
+local canResetBuff		= true;
+
+local buff;
+local timer_resetBuff;
+
+local traces			=true;
+
+-- ----------------------------------------------------------------------------------------------
+local function resetBuff()
+	if (timer_resetBuff) then
+		if (buff) then
+			RemoveBuff(BUFF_ID, buff);
+		end
+		buff = nil;
+		if (traces) then Trace("Buff removed"); end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnTargetHit_Skill(attacker, defender)
+	if (skill_level > 0) then
+		if (attacker:GetID() == GetID()) then
+			if (CanAttackInMelee()) then
+				
+				if (CURR_COUNTER == 0 or not buff) then
+					CURR_COUNTER = 1;
+					if (traces) then Trace("Buff level 1, 60%% speed increase"); end
+					if (not buff) then
+						buff = CreateBuff(BUFF_ID, 0, true, skill_level, BUFF_FX);
+						SetBuffProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(CURR_COUNTER*skill_level), buff);
+						ApplyBuff(BUFF_ID, buff);
+						--PlaySound("sfx_passive_skill_activate_4",false,0,false);
+					end
+					timer_resetBuff = StartSkillTimerCB(BUFF_DELAY, false, resetBuff);
+				elseif (CURR_COUNTER < MAX_COUNTER and buff) then
+					CURR_COUNTER = CURR_COUNTER + 1;
+					RemoveBuff(BUFF_ID, buff);
+					buff = nil;
+					if (traces) then	Trace("Buff level "..CURR_COUNTER..", "..(50+(CURR_COUNTER*10)).."%% speed increase"); end
+					buff = CreateBuff(BUFF_ID, 0, true, skill_level, BUFF_FX);
+					
+					SetBuffProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(CURR_COUNTER*skill_level), buff);
+					
+					ApplyBuff(BUFF_ID, buff);
+					
+					StopTimerCB(timer_resetBuff);
+					timer_resetBuff = nil;
+					timer_resetBuff = StartSkillTimerCB(BUFF_DELAY, false, resetBuff);
+				elseif (CURR_COUNTER == MAX_COUNTER and buff) then
+					CURR_COUNTER = 5;
+					if (traces) then	Trace("Buff level 5"); end
+					RemoveBuff(BUFF_ID, buff);
+					buff = nil;
+					buff = CreateBuff(BUFF_ID, 0, true, skill_level, BUFF_FX);
+					
+					SetBuffProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(CURR_COUNTER*skill_level), buff);
+					
+					ApplyBuff(BUFF_ID, buff);
+					
+					StopTimerCB(timer_resetBuff);
+					timer_resetBuff = nil;
+					timer_resetBuff = StartSkillTimerCB(BUFF_MAX_DELAY, false, resetBuff);
+				end
+			end
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(BUFF_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

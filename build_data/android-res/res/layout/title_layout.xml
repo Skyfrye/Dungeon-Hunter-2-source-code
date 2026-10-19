@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/data_downloader_title_layout">
+    <ImageView
+        android:id="@+id/data_downloader_title_background"
+        android:src="@drawable/data_downloader_title_background"
+        style="@style/data_downloader_title_background_style"/>
+    <ImageView
+        android:id="@+id/data_downloader_title_logo"
+        android:src="@drawable/data_downloader_title_logo"
+        style="@style/data_downloader_title_logo_style"/>
+    <com.gameloft.layout.DataDownloaderTextView
+        android:id="@+id/data_downloader_title_text"
+        android:text="@string/app_name"
+        style="@style/data_downloader_title_text_style"/>
+</FrameLayout>

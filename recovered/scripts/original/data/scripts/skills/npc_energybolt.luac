@@ -1,0 +1,82 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Energy Bolt Skill: 
+-- 
+-- - Directed at the Resurrecting God to simulate a summoning ritual
+-- ----------------------------------------------------------------------------------------------------
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE 			= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMaxDistance")));
+
+local PROJECTILE_ID		= GetProp(GetPyStruct("CharacterProperties", "RangeProjectileID"));
+local CLASS_ID			= GetPyOID("ClassTable", "NPC_SlowEnergyBolt");
+local g_target			= -1;
+local g_player			= -1;
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	if (g_player == -1) then
+		SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Friend"));
+		SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+		SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+		
+		TargetListSearch(RANGE);
+		
+		if(not IsTargetListEmpty()) then
+			g_player = GetTargetListTop();
+		end
+	end
+
+	if (g_target == -1) then
+		SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+		SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+		SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+		
+		TargetListSearch(RANGE);
+		
+		if(not IsTargetListEmpty()) then
+			g_target = GetTargetListTop();
+			LookAt(g_target);
+		end
+		
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	SpawnSkillProjectile(PROJECTILE_ID);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target)
+	if (target) then
+		local target1 = target:GetProp(GetPyStruct("CharacterProperties", "AIFaction"));
+		local playertarget = g_player:GetProp(GetPyStruct("CharacterProperties", "AIFaction"));
+		
+		if(target1 == playertarget) then
+			ApplyPropClass(CLASS_ID);
+			SkillCombatRoll(target);
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_);

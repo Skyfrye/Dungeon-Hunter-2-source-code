@@ -1,0 +1,94 @@
+--[[	New Mirror based from Magnetic Shield
+
+	When hit, the attacker gets stunned or knocked back
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Illusionist_Mirror");
+
+
+-- Cached values
+local skill_level	= 0;
+local buff			= nil;
+local STUN			= 0;
+local DURATION		= 0;
+local traces		= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- FUNCTIONS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnTargetHit_Skill(attacker, defender)
+	if (skill_level > 0) then
+		if (defender:GetID() == GetID() and attacker:TargetInMeleeRange()) then
+			if (traces) then Trace("Being Attacked!!!"); end
+			local proc_chance = GetRand(0,100);
+			if (traces) then Trace ("Duration is "..DURATION.." Chances are "..STUN..":"..proc_chance); end
+			if (proc_chance < STUN) then
+				attacker:SetStunState(DURATION,true);
+				if (traces) then Trace("Stun will be applied!!!"); end
+			end
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local plvl = GetProp(GetPyStruct("CharacterProperties", "Level"));
+	local slvl = GetCurrentSkillInfo();
+	if (traces) then Trace("Skill Magnetic shield"); end
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	if (buff) then
+		RemoveBuff(CLASS_ID, buff);
+	end
+	
+	local mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	STUN = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"), true));
+	DURATION = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp2"), true));
+	-- apply the buff on the MC, mainly the Bonus Armor
+	if (slvl~=0) then 
+		buff = CreateBuff(CLASS_ID, 0, false, skill_level);
+		ApplyBuff(CLASS_ID, buff);
+	end
+end
+
+
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return false, skill_level > 0;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

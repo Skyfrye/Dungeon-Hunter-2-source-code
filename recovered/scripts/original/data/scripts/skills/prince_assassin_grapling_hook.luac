@@ -1,0 +1,119 @@
+--[[	Grappling Hook
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 1000;
+local ANGLE				= 220;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Assassin_GrapplingHook");
+local PROJECTILE_ID	= GetPyOID("ProjectileTable", "GrapplingHook");
+
+
+-- Cached values
+local skill_level = 0;
+local mana_cost;
+local target			= nil;
+local buff				= nil;
+local duration			= 0;
+
+local traces			= true;
+
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(slvl));
+		mana_cost	= CalcManaCost(CLASS_ID, slvl);
+		duration = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Duration"), true));
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(RANGE, ANGLE);
+
+	if(not IsTargetListEmpty()) then
+		LookAt( (GetTargetListTop()) );
+	end
+	
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	PlaySound("sfx_skill_rogue_ass_throwing_knife",false,0,false);
+	SpawnSkillProjectile(PROJECTILE_ID);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target)
+	if(target) then
+		if(target:IsCharacter()) then
+			SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+			ApplyPropClass(CLASS_ID);
+
+			SkillCombatRoll(target);
+			if (not IsBoss(target)) then
+					if (not IsMiniBoss(target)) then
+						target:SetStunState(duration, true);
+					end
+			end
+
+			if(target:GetState() == GetPyCst("AIStates", "Stunned")) then
+				if (traces) then Trace(""..target:GetName().." is stunned... bringing him to papa"); end
+				--TODO: check if the button is still pressed
+				--TODO: deal with a better looking animation than stun?
+				--TODO: need to speed up the pulling
+				if (not IsBoss(target)) then
+					if (not IsMiniBoss(target)) then
+						target:HeadTo(GetPosition());
+					end
+				end
+			end
+		else
+			SkillCombatRoll(target);
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+--RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_, OnSkillInfo_);
+RegisterSkillEx({	update=OnSkillUpdate_,
+						check=OnSkillCheck_,
+						pre=OnPreSkill_,
+						skill=OnSkill_,
+						post=OnPostSkill_,
+						delayed=OnDelayedSkill_,
+						info=OnSkillInfo_,
+						});

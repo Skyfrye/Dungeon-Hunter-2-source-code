@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "bundles": [
+    {
+      "path": "recovered/native/bundles/assembly.tar.gz",
+      "files": 3625,
+      "uncompressed_file_bytes": 134762768,
+      "archive_bytes": 14937162,
+      "sha256": "e7bdc73d7db5c0b8320815f92c7d27c9c86c17710649645c027a4df4081e5601"
+    },
+    {
+      "path": "recovered/native/bundles/symbols.tar.gz",
+      "files": 71,
+      "uncompressed_file_bytes": 166746022,
+      "archive_bytes": 18096661,
+      "sha256": "f2dd9d64a9f19a66cfd05e194d30c7482c399ef07d7b488d737ac929652481ca"
+    }
+  ]
+}

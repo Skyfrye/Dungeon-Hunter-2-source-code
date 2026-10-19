@@ -1,0 +1,206 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Wind Dragon Inside cone sweep Skill: 
+-- 
+-- - Double Cone attack that start from both sides and converges to the middle
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE 				= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMaxDistance")));
+local ATTACK_RANGE 		= 1700.0;
+
+local SIDE_ANGLES			= 10.0;
+
+local ANGLE_MAX_SEARCH	= 180.0;
+
+local DEAD_ANGLE_INIT	= ANGLE_MAX_SEARCH - (SIDE_ANGLES * 2);
+local DEAD_ANGLE			= DEAD_ANGLE_INIT;
+local DEAD_ANGLE_INC		= 15.0;
+
+local ANGLE_MAX_INIT		= DEAD_ANGLE + (SIDE_ANGLES * 2);
+local ANGLE_MAX 			= ANGLE_MAX_INIT
+
+local CLASS_ID				= GetPyOID("ClassTable", "WindDragon_BreathSweep");
+
+-- Cached values
+local timer_time 			= 100;
+local timer_id 			= -1;
+local flag 					= false;
+local target_list 		= {};
+local target_list_size	= 0;
+local sweep_tick_inc		= 0;
+
+local traces				= false;
+
+
+local function getNewTarchetSearchList()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	
+	if (traces) then 
+		Trace("SKILL INSIDE SWEEP_ ANGLE_MAX: "..ANGLE_MAX); 
+		Trace("DEAD_ANGLE: "..DEAD_ANGLE);
+	end
+	
+	TargetListSearch(ATTACK_RANGE, ANGLE_MAX);
+	TargetListBackup("insideSweep");
+	
+	if(not IsTargetListEmpty()) then
+		target_list = {};
+		
+		repeat
+			local target = GetTargetListTop()
+			table.insert(target_list, target);
+			PopTargetList();
+		until(IsTargetListEmpty())
+		
+		else
+			target_list = {};
+	end
+	
+	target_list_size = #target_list;
+end
+
+local function getDeadAngleTargetSearchList()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	
+	TargetListSearch(ATTACK_RANGE, DEAD_ANGLE, "insideSweep");
+	
+	if(not IsTargetListEmpty()) then
+		repeat
+			local temp_target = GetTargetListTop();
+			local temp_target_ID = temp_target:GetID();
+			
+			if (#target_list > 1) then
+				for k,v in ipairs(target_list) do
+					local target_ID = v:GetID();
+					if (temp_target_ID == target_ID) then
+						table.remove(target_list, k);
+					end
+					
+				end
+			elseif (#target_list == 1) then
+				local target_ID = target_list[1]:GetID();
+				if (temp_target_ID == target_ID) then
+					target_list = {};
+					if (traces) then Trace("#target_list: "..#target_list); end
+				end
+			end
+			PopTargetList();
+		until(IsTargetListEmpty())
+	end
+	
+	target_list_size = #target_list;
+end
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	
+	sweep_tick_inc = 0;
+	
+	DEAD_ANGLE = DEAD_ANGLE_INIT;
+	ANGLE_MAX = ANGLE_MAX_INIT;
+	
+	if (traces) then Trace("DEAD_ANGLE: "..DEAD_ANGLE); end
+	
+	TargetListSearch(RANGE, ANGLE_MAX_SEARCH);
+	TargetListBackup("insideSweep");
+	
+	getNewTarchetSearchList();
+	
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function DoDamage()
+	local curr_index = 1;
+	if (traces) then Trace("WinDragon: Inside Sweep: Calling the damage!"); end
+	getNewTarchetSearchList();
+	
+	if(target_list_size > 0) then
+		getDeadAngleTargetSearchList();
+		
+		if(target_list_size > 0) then
+			if (target_list_size > 1) then
+				repeat
+					if (target_list[curr_index]:GetID()~=nil) then
+						SkillCombatRoll(target_list[curr_index]);
+						target_list[curr_index]:PlayFX(GetPyOID("AnimatedEffectTable", "spell_earth_hurt"));
+					else
+						if (traces) then Trace("The target list item "..curr_index.." is nil, Why?"); end
+					end
+					curr_index = curr_index + 1;
+				until(curr_index > #target_list)
+			else
+				if (target_list[1]:GetID()~=nil) then
+					SkillCombatRoll(target_list[1]);
+					target_list[1]:PlayFX(GetPyOID("AnimatedEffectTable", "spell_wind_hurt"));
+					if (traces) then Trace("The target is:"..target_list[1]:GetName()); end
+				else
+					if (traces) then Trace("The target list item 1 is nil, Why?:"); end
+				end
+			end	
+			curr_index = 1;
+		end
+	end
+	
+	if (sweep_tick_inc == 0) then
+		if (DEAD_ANGLE <= 0) then
+			sweep_tick_inc = 1;
+		else
+			if (traces) then Trace("Increasing angles...."); end
+			DEAD_ANGLE = DEAD_ANGLE - DEAD_ANGLE_INC;
+			ANGLE_MAX = DEAD_ANGLE + (SIDE_ANGLES * 2);
+			if (ANGLE_MAX<0) then ANGLE_MAX=0; end
+			if (DEAD_ANGLE<0) then DEAD_ANGLE=0; end
+		end
+	end
+	
+	if (sweep_tick_inc == 1) then
+		StopTimerCB(timer_id);
+		target_list_size = 0;
+		flag = false;
+	end
+	
+end
+
+local function OnSkill_()
+	Trace("Dragon Inside Sweep");
+	ApplyPropClass(CLASS_ID);
+	if( not flag ) then
+		flag = true;
+   	timer_id = StartSkillTimerCB(timer_time, true, DoDamage);
+	end	
+end
+
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	if( flag ) then
+		StopTimerCB(timer_id);
+		target_list_size = 0;
+		flag = false;
+	end	
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_);

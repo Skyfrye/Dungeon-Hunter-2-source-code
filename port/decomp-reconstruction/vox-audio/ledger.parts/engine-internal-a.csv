@@ -1,0 +1,68 @@
+elf_address,symbol,status,source_file,notes
+0x8616f8,_ZN3vox9VoxEngine13SuspendEngineEv,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861734,_ZN3vox9VoxEngine12ResumeEngineEv,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861770,_ZN3vox9VoxEngine17IsEngineSuspendedEv,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: reports suspended (1)
+0x8617c0,_ZN3vox9VoxEngine13SetMasterGainEff,partial,vox-audio/src/voxengine.cpp,forwards to VoxEngineInternal; target returns the unlock result; void facade drops it
+0x8617fc,_ZN3vox9VoxEngine12SetGroupGainEjff,partial,vox-audio/src/voxengine.cpp,forwards to VoxEngineInternal; target returns the unlock result; void facade drops it
+0x861840,_ZN3vox9VoxEngine21UpdateSourcesThreadedEv,partial,vox-audio/src/voxengine.cpp,forwards to VoxEngineInternal; target VoxEngineInternal::UpdateSources (vtable +0x18) is skipped in the ledger
+0x861880,_ZN3vox9VoxEngine12GetDebugInfoERNS_9DebugInfoE,partial,vox-audio/src/voxengine.cpp,forwards to VoxEngineInternal; target VoxEngineInternal::GetDebugInfo is skipped (DebugChunk layout unknown)
+0x8618a8,_ZN3vox9VoxEngine10PrintDebugEv,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x8618d0,_ZN3vox9VoxEngine13SetOutputModeENS_13VoxOutputModeE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x8618f8,_ZN3vox9VoxEngine13GetOutputModeEv,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns -1
+0x861928,_ZN3vox9VoxEngine24SetInteractiveMusicStateERNS_13EmitterHandleEPKc,partial,vox-audio/src/voxengine.cpp,forwards to VoxEngineInternal; target VoxEngineInternal::SetInteractiveMusicState is skipped in the ledger
+0x861950,_ZN3vox9VoxEngine22SetDSPEmitterParameterERNS_13EmitterHandleEiPv,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861978,_ZN3vox9VoxEngine18SetSFXPresetActiveEibf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x8619a0,_ZN3vox9VoxEngine16SetRoutingVolumeEPcS1_NS_22VoxDSPGeneralParameter14BusRoutingTypeEfff,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x8619e0,_ZN3vox9VoxEngine20SetDynamicBusRoutingEPc,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861a08,_ZN3vox9VoxEngine19SetStaticBusRoutingEPc,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861a30,_ZN3vox9VoxEngine22Get3DGeneralParameteriEiRi,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861a58,_ZN3vox9VoxEngine22Get3DGeneralParameterfEiRf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861a80,_ZN3vox9VoxEngine21Get3DGeneralParameterERNS_22Vox3DGeneralParametersE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861aa8,_ZN3vox9VoxEngine24Get3DListenerOrientationERfS1_S1_S1_S1_S1_,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861ae8,_ZN3vox9VoxEngine21Get3DListenerVelocityERfS1_S1_,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861b10,_ZN3vox9VoxEngine21Get3DListenerPositionERfS1_S1_,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861b38,_ZN3vox9VoxEngine22Set3DGeneralParameteriEii,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861b60,_ZN3vox9VoxEngine22Set3DGeneralParameterfEif,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861b88,_ZN3vox9VoxEngine21Set3DGeneralParameterERKNS_22Vox3DGeneralParametersE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861bb0,_ZN3vox9VoxEngine24Set3DListenerOrientationEffffff,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861bf0,_ZN3vox9VoxEngine21Set3DListenerVelocityEfff,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861c18,_ZN3vox9VoxEngine21Set3DListenerPositionEfff,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861c40,_ZN3vox9VoxEngine22Get3DEmitterParameteriERNS_13EmitterHandleEiRi,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861c68,_ZN3vox9VoxEngine22Get3DEmitterParameterfERNS_13EmitterHandleEiRf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861c90,_ZN3vox9VoxEngine22Get3DEmitterParametersERNS_13EmitterHandleERNS_22Vox3DEmitterParametersE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861cb8,_ZN3vox9VoxEngine21Get3DEmitterDirectionERNS_13EmitterHandleERfS3_S3_,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861cf0,_ZN3vox9VoxEngine20Get3DEmitterVelocityERNS_13EmitterHandleERfS3_S3_,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861d28,_ZN3vox9VoxEngine20Get3DEmitterPositionERNS_13EmitterHandleERfS3_S3_,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861d60,_ZN3vox9VoxEngine22Set3DEmitterParameteriERNS_13EmitterHandleEii,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861d88,_ZN3vox9VoxEngine22Set3DEmitterParameterfERNS_13EmitterHandleEif,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861db0,_ZN3vox9VoxEngine22Set3DEmitterParametersERNS_13EmitterHandleERKNS_22Vox3DEmitterParametersE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861dd8,_ZN3vox9VoxEngine21Set3DEmitterDirectionERNS_13EmitterHandleEfff,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861e10,_ZN3vox9VoxEngine20Set3DEmitterVelocityERNS_13EmitterHandleEfff,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861e48,_ZN3vox9VoxEngine20Set3DEmitterPositionERNS_13EmitterHandleEfff,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x861e80,_ZN3vox9VoxEngine12GetGroupGainEi,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x861eb0,_ZN3vox9VoxEngine13GetMasterGainEv,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x861ee0,_ZN3vox9VoxEngine9GetStatusERNS_13EmitterHandleE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x861f08,_ZN3vox9VoxEngine6IsDoneERNS_13EmitterHandleE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: reports done (1)
+0x861f38,_ZN3vox9VoxEngine9IsPlayingERNS_13EmitterHandleE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x861f60,_ZN3vox9VoxEngine7IsAliveERNS_13EmitterHandleE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x861f88,_ZN3vox9VoxEngine7IsValidERNS_13EmitterHandleE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x861fb0,_ZN3vox9VoxEngine7IsReadyERNS_13EmitterHandleE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x861fd8,_ZN3vox9VoxEngine13SetPlayCursorERNS_13EmitterHandleEf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x862000,_ZN3vox9VoxEngine13GetPlayCursorERNS_13EmitterHandleE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x862030,_ZN3vox9VoxEngine8GetGroupERNS_13EmitterHandleE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x862058,_ZN3vox9VoxEngine8SetGroupERNS_13EmitterHandleEi,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x862080,_ZN3vox9VoxEngine17ResumeAllEmittersEjf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x8620a8,_ZN3vox9VoxEngine16PauseAllEmittersEjf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x8620d0,_ZN3vox9VoxEngine15StopAllEmittersEjf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x8620f8,_ZN3vox9VoxEngine15PlayAllEmittersEjf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x862120,_ZN3vox9VoxEngine14GetAllEmittersEPNS_13EmitterHandleEi,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x862148,_ZN3vox9VoxEngine6ResumeERNS_13EmitterHandleEf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x862170,_ZN3vox9VoxEngine5PauseERNS_13EmitterHandleEf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x862198,_ZN3vox9VoxEngine4StopERNS_13EmitterHandleEf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x8621c0,_ZN3vox9VoxEngine4PlayERNS_13EmitterHandleEbf,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x8621e8,_ZN3vox9VoxEngine8GetPitchERNS_13EmitterHandleE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x862218,_ZN3vox9VoxEngine8SetPitchERNS_13EmitterHandleEff,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x862240,_ZN3vox9VoxEngine7SetLoopERNS_13EmitterHandleEb,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x862268,_ZN3vox9VoxEngine7GetGainERNS_13EmitterHandleE,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: returns 0
+0x862298,_ZN3vox9VoxEngine7SetGainERNS_13EmitterHandleEff,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing
+0x8622c0,_ZN3vox9VoxEngine20SetAutoKillAfterDoneERNS_13EmitterHandleEb,reconstructed,vox-audio/src/voxengine.cpp,tail call to VoxEngineInternal with the same arguments; no engine: nothing

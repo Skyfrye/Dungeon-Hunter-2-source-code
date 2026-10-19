@@ -1,0 +1,59 @@
+
+
+-- When the character spots an ally
+function follower_OnFriendSpotted(friend)
+	if(not HasMaster()) then
+		--Trace("Follower "..GetName().." got a new master: "..friend:GetName());
+
+		SetMaster(friend);
+		g_master = friend;	-- Caching the master
+	end
+end
+AddToVFTable("OnFriendSpotted", "follower_OnFriendSpotted");
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- When the character's master gets out of sight
+function follower_OnMasterOutOfSight()
+	WarpBehind(g_master);
+end
+AddToVFTable("OnMasterOutOfSight", "follower_OnMasterOutOfSight");
+
+
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- When the character's master is out of attack range
+function follower_OnMasterOutOfRange()
+	if(GetState() ~= GetPyCst("AIStates", "Move")) then
+		--Trace(""..GetName().." has its master "..g_master:GetName().." out of range");
+		MoveTo(g_master);
+	end
+	ClearTarget();
+end
+AddToVFTable("OnMasterOutOfRange", "follower_OnMasterOutOfRange");
+
+
+-- When the character's master is in range of a ranged attack
+function follower_OnMasterInRangedRange()
+	Stop();
+end
+AddToVFTable("OnMasterInRangedRange", "follower_OnMasterInRangedRange");
+
+
+-- When the character's master is too close to be in ranged attack range
+function follower_OnMasterInCloseRange()
+	Stop();
+end
+AddToVFTable("OnMasterInCloseRange", "follower_OnMasterInCloseRange");
+
+
+-- When the character's master is in range of a melee attack
+function follower_OnMasterInMeleeRange()
+	Stop();
+end
+AddToVFTable("OnMasterInMeleeRange", "follower_OnMasterInMeleeRange");

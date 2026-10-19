@@ -1,0 +1,111 @@
+--[[	Energy Balance
+
+	Bonus to elemental weapons damage +faeries effects
+
+--]]
+
+local CST_FIRE				= GetPyCst("Elemental", "Fire");
+local CST_LIGHTNING		= GetPyCst("Elemental", "Lightning");
+local CST_WATER			= GetPyCst("Elemental", "Water");
+local CST_EARTH			= GetPyCst("Elemental", "Earth");
+local CST_AIR				= GetPyCst("Elemental", "Air");
+
+local ELEMENTS			= {nil, nil, nil, nil, nil};
+
+ELEMENTS[CST_FIRE]		=	{
+								BUFF_ID		= GetPyOID("ClassTable", "Skill_Paladin_EnergyBalance_Fire"),
+							};
+ELEMENTS[CST_LIGHTNING]	=	{
+								BUFF_ID		= GetPyOID("ClassTable", "Skill_Paladin_EnergyBalance_Lightning"),
+							};
+ELEMENTS[CST_WATER]		=	{
+								BUFF_ID		= GetPyOID("ClassTable", "Skill_Paladin_EnergyBalance_Water"),
+							};
+ELEMENTS[CST_EARTH]		=	{
+								BUFF_ID		= GetPyOID("ClassTable", "Skill_Paladin_EnergyBalance_Earth"),
+							};
+ELEMENTS[CST_AIR]		=	{
+								BUFF_ID		= GetPyOID("ClassTable", "Skill_Paladin_EnergyBalance_Air"),
+							};
+
+local BUFF_DELAY	= 3000;
+
+-- Cached values
+local skill_level	= 0;
+local timer_buff;
+local self_buff;
+
+
+
+-- ----------------------------------------------------------------------------------------------
+-- EVENTS
+-- ----------------------------------------------------------------------------------------------
+local function GetData()
+	local element	= GetEquippedFaeryElement();
+	local data		= ELEMENTS[element];
+
+	if(not data) then
+		return ELEMENTS[CST_LIGHTNING];
+	end
+
+	return data;
+end
+
+
+local function updateSelfBuff()
+	local data = GetData();
+	local slvl = GetCurrentSkillInfo();
+	
+	self_buff = CreateBuff(data.BUFF_ID, BUFF_DELAY, false, slvl);
+	ApplyBuff(data.BUFF_ID, self_buff);
+end
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	local data = GetData();
+	SetTempProps(data.BUFF_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local data = GetData();
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level = slvl;
+	end
+	if (self_buff) then
+		RemoveBuff(data.BUFF_ID, self_buff);
+		self_buff=nil;
+	end
+	if (timer_buff) then
+		StopTimerCB(timer_buff);
+		timer_buff=nil;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	if(slvl~=0) then
+		self_buff = CreateBuff(data.BUFF_ID, BUFF_DELAY, false, slvl);
+		ApplyBuff(data.BUFF_ID, self_buff);
+		timer_buff = StartSkillTimerCB(BUFF_DELAY, true, updateSelfBuff);
+	end
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

@@ -1,0 +1,38 @@
+# (a) Level up with the binary's cheat path, spend attribute and skill points in the hero screen, check that stats and skills change.
+# cheats 1 = handle_cheats_inGame; cheat LevelUp = SavegameManager::toggleOption("LevelUp") (what Application::_Update's debug touch region calls).
+60 tap 1000 700
+200 tap 2148 322
+300 tap 2136 368
+420 tap 1200 540
+700 herostat
+700 cheats 1
+710 cheat LevelUp
+711 cheat LevelUp
+712 cheat LevelUp
+713 cheat GiveGold
+720 herostat
+# hero screen, attributes tab: + strength, dexterity, stamina, energy
+730 click 260 140
+800 click 110 540
+830 click 110 680
+860 click 110 820
+890 click 110 980
+920 click 110 540
+950 click 110 540
+# skills tab: first skill, upgrade twice; second skill, upgrade once
+990 click 1490 56
+1050 click 160 280
+1080 click 1820 1000
+1110 click 1820 1000
+1140 click 460 280
+1170 click 1820 1000
+1230 click 80 56
+1260 click 900 560
+1290 click 80 56
+1300 herostat
+# fight with the new levels and skills
+1310 auto 1
+1310 hunt 1200 3500
+2520 herostat
+2530 levelstat levelup
+2540 quit

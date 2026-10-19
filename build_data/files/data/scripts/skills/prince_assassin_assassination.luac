@@ -1,0 +1,124 @@
+--[[	Assassination
+
+		A one shot quick and silent kill (one shot applies for BaseMonsters or lower,
+	 	with level = player's level +2 )
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 100.00;
+local ANGLE				= 180.0;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Assassin_Assassination");
+local BOSS_CLASS_ID	= GetPyOID("ClassTable", "Skill_Assassin_Assassination_boss");
+local USE_COOLDOWN	= true;
+
+
+-- Cached values
+local skill_level		= 0;
+local mana_cost;
+local target;
+
+local cooldown;
+local traces		 = false;
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+	return cooldown;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(slvl));
+		mana_cost	= CalcManaCost(CLASS_ID, slvl);
+		cooldown = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Cooldown"), true));
+		if(cooldown < 0) then cooldown = 0; end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return (not HasSkillCooldown() and HasMana(mana_cost)), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	-- We only target enemies
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	-- We only target destructible objects
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	-- Look for target in front of us prior to looking for the distance
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+
+	TargetListSearch(RANGE);
+	TargetListBackup("MaxAngleSearch");
+
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+	else
+		target = nil;
+	end
+	UseMana(mana_cost);
+	SetSkillCooldown(cooldown);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(target) then
+		-- Because OnSkill() is only called once for Instant skill type, we can ApplyPropClass() here
+		TargetListSearch(RANGE, ANGLE, "MaxAngleSearch");
+		local target,_,_, character = GetTargetListTop();
+		if (character) then
+			
+			local level = GetProp(GetPyStruct("CharacterProperties", "Level"));
+			local en_level =  target:GetProp(GetPyStruct("CharacterProperties", "Level"));
+			if (level==nil) then level=0; end
+			if (en_level==nil) then en_level=0; end
+			if (traces) then Trace("[Skills/Assassinate] Player level is Level "..FromFixed(level).." and ennemy level is Level "..FromFixed(en_level)); end
+			if (en_level<level+2) then 
+				if (not IsBoss(target)) then
+					-- Level match and not a boss do a single kill
+					target:Kill(GetSelf());
+					PlaySound("sfx_passive_skill_activate_4",false,0,false); 
+				else
+					-- Add a critical damage to boss, need another CLASS_ID
+					SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+					ApplyPropClass(BOSS_CLASS_ID);
+					SkillCombatRoll(target);
+				end 
+			else
+				if (not IsBoss(target)) then
+					-- Apply a damage to a monster when it's not a boss and not a single kill
+					SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+					ApplyPropClass(CLASS_ID);
+					SkillCombatRoll(target);
+				else
+					-- Add a critical damage to boss, need another CLASS_ID
+					SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+					ApplyPropClass(BOSS_CLASS_ID);
+					SkillCombatRoll(target);
+				end
+			end
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

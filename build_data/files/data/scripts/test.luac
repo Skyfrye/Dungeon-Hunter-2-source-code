@@ -1,0 +1,47 @@
+--[[
+Trace("Test: "..GetPyStruct("CharAnim", "Attack2H"));
+
+
+function EmptyBodyNoArgs()
+end
+
+function EmptyBodyOneArg(arg)
+end
+
+function OneCallbackNoArgs()
+	--Trace(".");
+	SetInt("myint", 1);
+end
+
+function OneCallbackOneArg(arg)
+	--Trace("."..arg);
+	SetInt("myint", arg);
+end
+
+
+function MyTest()
+	local v = GetStuff();
+
+	WhatAmI(v);
+
+	MyFunc(v);
+	MyMethod();
+	v:MyObjFunc();
+	v:MyObjMethod();
+end
+
+
+function WhatAmI(v)
+	Trace("You are a \""..type(v).."\"");
+
+	if(type(v) == "table") then
+		for k,v in pairs(v) do
+			Trace("\t["..tostring(k).."] = "..tostring(v));
+		end
+	end
+end
+
+
+
+Trace("File Loaded");
+--]]

@@ -1,0 +1,94 @@
+; ARM ELF recovered assembly. Addresses are original ELF virtual addresses.
+; .byte marks mapped data or bytes Capstone could not decode.
+; This is an annotated listing, not assembler-ready source.
+
+; FUNCTION 0x00459370, declared_size=84, range_size=84, mode=arm
+; class-group: Script_PlayCamera
+; alias: _ZNK17Script_PlayCamera10IsBlockingEv
+; demangled: Script_PlayCamera::IsBlocking() const
+; decoder-mode: arm
+00459370  10 40 2d e9                                      push {r4, lr}
+00459374  0c 20 90 e5                                      ldr r2, [r0, #0xc]
+00459378  3c 30 9f e5                                      ldr r3, [pc, #0x3c]
+0045937c  0c 20 d2 e5                                      ldrb r2, [r2, #0xc]
+00459380  03 30 8f e0                                      add r3, pc, r3
+00459384  00 00 52 e3                                      cmp r2, #0
+00459388  01 00 00 1a                                      bne #0x459394
+0045938c  00 00 a0 e3                                      mov r0, #0
+00459390  10 80 bd e8                                      pop {r4, pc}
+00459394  24 20 9f e5                                      ldr r2, [pc, #0x24]
+00459398  02 00 93 e7                                      ldr r0, [r3, r2]
+0045939c  7c 18 fb eb                                      bl #0x31f594
+004593a0  00 00 50 e3                                      cmp r0, #0
+004593a4  f8 ff ff 0a                                      beq #0x45938c
+004593a8  28 31 90 e5                                      ldr r3, [r0, #0x128]
+004593ac  00 00 53 e3                                      cmp r3, #0
+004593b0  f5 ff ff 0a                                      beq #0x45938c
+004593b4  84 00 d3 e5                                      ldrb r0, [r3, #0x84]
+004593b8  10 80 bd e8                                      pop {r4, pc}
+; mapping-symbol data/literal pool
+004593bc  10 b7 53 00 f4 37 00 00                          .byte 0x10, 0xb7, 0x53, 0x00, 0xf4, 0x37, 0x00, 0x00
+
+; FUNCTION 0x00460110, declared_size=244, range_size=244, mode=arm
+; class-group: Script_PlayCamera
+; alias: _ZN17Script_PlayCamera7ExecuteEbi
+; demangled: Script_PlayCamera::Execute(bool, int)
+; decoder-mode: arm
+00460110  f0 45 2d e9                                      push {r4, r5, r6, r7, r8, sl, lr}
+00460114  d0 40 9f e5                                      ldr r4, [pc, #0xd0]
+00460118  d0 50 9f e5                                      ldr r5, [pc, #0xd0]
+0046011c  d0 20 9f e5                                      ldr r2, [pc, #0xd0]
+00460120  04 40 8f e0                                      add r4, pc, r4
+00460124  05 30 94 e7                                      ldr r3, [r4, r5]
+00460128  02 70 94 e7                                      ldr r7, [r4, r2]
+0046012c  24 d0 4d e2                                      sub sp, sp, #0x24
+00460130  00 30 93 e5                                      ldr r3, [r3]
+00460134  01 80 a0 e1                                      mov r8, r1
+00460138  04 60 8d e2                                      add r6, sp, #4
+0046013c  1c 30 8d e5                                      str r3, [sp, #0x1c]
+00460140  0c a0 90 e5                                      ldr sl, [r0, #0xc]
+00460144  07 00 a0 e1                                      mov r0, r7
+00460148  ce 5d fb eb                                      bl #0x337888
+0046014c  a4 10 9f e5                                      ldr r1, [pc, #0xa4]
+00460150  0d 20 a0 e1                                      mov r2, sp
+00460154  06 00 a0 e1                                      mov r0, r6
+00460158  01 10 8f e0                                      add r1, pc, r1
+0046015c  e2 cf fa eb                                      bl #0x3140ec
+00460160  06 10 a0 e1                                      mov r1, r6
+00460164  07 00 a0 e1                                      mov r0, r7
+00460168  46 5e fb eb                                      bl #0x337a88
+0046016c  06 00 a0 e1                                      mov r0, r6
+00460170  37 e0 fa eb                                      bl #0x318254
+00460174  80 30 9f e5                                      ldr r3, [pc, #0x80]
+00460178  03 00 94 e7                                      ldr r0, [r4, r3]
+0046017c  04 fd fa eb                                      bl #0x31f594
+00460180  00 00 50 e3                                      cmp r0, #0
+00460184  08 00 00 0a                                      beq #0x4601ac
+00460188  28 01 90 e5                                      ldr r0, [r0, #0x128]
+0046018c  00 00 50 e3                                      cmp r0, #0
+00460190  05 00 00 0a                                      beq #0x4601ac
+00460194  00 00 58 e3                                      cmp r8, #0
+00460198  08 10 9a 05                                      ldreq r1, [sl, #8]
+0046019c  09 00 00 1a                                      bne #0x4601c8
+004601a0  00 20 a0 e3                                      mov r2, #0
+004601a4  02 30 a0 e1                                      mov r3, r2
+004601a8  d5 bd fe eb                                      bl #0x40f904
+004601ac  05 30 94 e7                                      ldr r3, [r4, r5]
+004601b0  1c 20 9d e5                                      ldr r2, [sp, #0x1c]
+004601b4  00 30 93 e5                                      ldr r3, [r3]
+004601b8  03 00 52 e1                                      cmp r2, r3
+004601bc  09 00 00 1a                                      bne #0x4601e8
+004601c0  24 d0 8d e2                                      add sp, sp, #0x24
+004601c4  f0 85 bd e8                                      pop {r4, r5, r6, r7, r8, sl, pc}
+004601c8  30 20 9f e5                                      ldr r2, [pc, #0x30]
+004601cc  80 30 90 e5                                      ldr r3, [r0, #0x80]
+004601d0  1c 10 a0 e3                                      mov r1, #0x1c
+004601d4  02 20 94 e7                                      ldr r2, [r4, r2]
+004601d8  00 20 92 e5                                      ldr r2, [r2]
+004601dc  91 23 23 e0                                      mla r3, r1, r3, r2
+004601e0  10 10 93 e5                                      ldr r1, [r3, #0x10]
+004601e4  ed ff ff ea                                      b #0x4601a0
+004601e8  48 b8 fa eb                                      bl #0x30e310
+; mapping-symbol data/literal pool
+004601ec  70 49 53 00 ac 40 00 00 84 08 00 00 28 cf 46 00  .byte 0x70, 0x49, 0x53, 0x00, 0xac, 0x40, 0x00, 0x00, 0x84, 0x08, 0x00, 0x00, 0x28, 0xcf, 0x46, 0x00
+004601fc  f4 37 00 00 d4 3d 00 00                          .byte 0xf4, 0x37, 0x00, 0x00, 0xd4, 0x3d, 0x00, 0x00

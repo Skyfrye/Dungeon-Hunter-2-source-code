@@ -1,0 +1,105 @@
+--[[	Balrog flames
+
+	This skill will do:
+	1 - Search for a player and face him
+	2 - Do a search for a player in a specific radius and do damage at specific time intervals
+	3 - Repeat the search and damage until what is specified.
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+--local RANGE 			= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMaxDistance")));
+local RANGE 			= 800; 		-- Harcoded the distance to match the Flame FX
+local ANGLE				= 75.0;		-- The current angle of the flames that are covered
+
+local DAMAGE_TICK		= 500.0; 	-- The duration before doing damage to the target
+local DAMAGE_REPEAT	= 2;			-- How many times the damage will repeat (tick will repeat) tick duration X repeat = total duration.
+
+local CLASS_ID			= GetPyOID("ClassTable", "Balrog_FlamesAttack");
+
+local target 			= -1;
+local traces 			= false;
+local count				= 0;
+local skill_level		= 1;
+
+
+local function doDamage(timer)
+	-- This will do a specific search for players in a radius.
+	-- "Player" is used since the search is repeated and it is only checkig for that and more efficient for the task
+	TargetListSearch(RANGE,ANGLE);
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+		-- Now doing the damage based on the character class "Balrog_FlamesAttack"
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+		local damage = SkillCombatRoll(target);
+		if (traces) then 
+			if (damage>0) then 
+				Trace ("The character named:"..target:GetName().." got "..FromFixed(damage).." damage points!");
+			else
+				Trace ("The fire missed "..target:GetName());
+			end
+		end
+	end
+	-- Increment the tick counter
+	count=count+1;
+	if (count>=DAMAGE_REPEAT or IsTargetListEmpty()) then 
+		-- Stop the counter after the repeat time is reached
+		StopTimerCB(timer);
+		count=0;
+		if (traces) then Trace("The fire is exausted."); end
+	end
+end
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	if (traces) then Trace ("The Balrog flame as been invoqued"); end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	-- This will only align the Ballrog with it's first target
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	
+	TargetListSearch(RANGE, 360);
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+		SetTarget(target);
+	end
+	if (traces) then Trace ("The Balrog pre-skill is invoked"); end
+	
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	-- This will initiate the attack, it need the animation event onskill() to work
+	-- It will start an infinite timer until the attack is completed
+	if (traces) then Trace ("The Balrog skill is invoked"); end
+	StartSkillTimerCB(DAMAGE_TICK, true, doDamage);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_);

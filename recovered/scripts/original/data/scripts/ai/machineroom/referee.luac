@@ -1,0 +1,725 @@
+Include("machineroom/waves_easy");	-- HARDCODED for now
+
+--[[ EXPOSED INTS
+	num_players
+	num_monsters
+	num_waves
+	wave_number
+	wave_time
+	wave_total_time
+	game_state
+		0 : Game has not started yet
+		1 : Game is in progress
+		2 : Game is over
+--]]
+
+-- ############################################
+-- ==============================================================================
+-- ** Game Logic
+-- ==============================================================================
+local TICK_TIME						= 100;
+local WARMUP_TICK_TIME				= 3000; 	-- [NEW] Warmup
+local WARMUP_TICK_TIME_START 		= 1500;	
+
+local WT_MONSTER					= 0;			-- Wave ends when no monsters are alive
+local WT_TIMEOUT					= 1;			-- Wave ends when the time runs out
+
+GS_WAITING							= 0;			-- Waiting to start
+GS_WARMUP							= 1;			-- Warmup
+GS_PROGRESS							= 2;			-- In progress
+GS_OVER								= 3;			-- Game is over
+
+
+g_game_state						= GS_WAITING;
+g_current_wave						= 0;
+g_hasStartedAI						= false;
+
+g_wave_type							= WT_MONSTER;	-- See the WT_* constants
+g_wave_time							= 0;
+
+g_wave_extra_time					= 0;
+
+g_warmup_delay						= 5; 			-- [NEW] Warmup
+g_warmup_timer						= nil; 		-- [NEW] Warmup
+g_destcheck_timer 					= nil;		-- [NEW] Destination check timer
+g_wave_ready						= false; 	-- Checks if the incoming wave is ready to start
+g_timeout_ended						= false;
+-- ------------------------------------------------------------------------------
+local function IsWaitingToStart()	return g_game_state == GS_WAITING;	end
+local function IsInWamrup()			return g_game_state == GS_WARMUP;	end
+local function IsInProgress()		return g_game_state == GS_PROGRESS;	end
+
+
+
+
+--------------------------------
+g_monsters							= {};
+local g_monster_alives				= 0;
+local g_monster_spawns				= {};
+local g_spot_maxNum					= 1;
+local hostPlayer					= GetHostPlayer();
+local numPlayers					= GetNumPlayers();
+local g_hasSpawnedQueen				= false;
+
+
+--------------------------------
+local g_players_all_dead			= false;
+
+
+
+---------------------------------
+local g_wave_timer;
+local g_wave_to_timer;
+local g_tick_timer;
+
+
+
+-- ############################################
+
+
+
+
+
+-- ==============================================================================
+-- ** Prototypes
+-- ==============================================================================
+local AddPlayer;
+local UpdatePlayers;
+local UpdateMonsters;
+local UpdateAI;
+
+local g_timer_playerPos;
+
+
+function InitVars()
+	TICK_TIME						= 100;
+	WARMUP_TICK_TIME				= 3000; 	-- [NEW] Warmup
+	WARMUP_TICK_TIME_START 			= 1500;	
+
+	WT_MONSTER						= 0;			-- Wave ends when no monsters are alive
+	WT_TIMEOUT						= 1;			-- Wave ends when the time runs out
+
+	GS_WAITING						= 0;			-- Waiting to start
+	GS_WARMUP						= 1;			-- Warmup
+	GS_PROGRESS						= 2;			-- In progress
+	GS_OVER							= 3;			-- Game is over
+
+	g_last_wave 					= false;
+
+	g_game_state					= GS_WAITING;
+	g_current_wave					= 0;
+
+	g_wave_type						= WT_MONSTER;	-- See the WT_* constants
+	g_wave_time						= 0;
+	g_hasStartedAI					= false;
+
+	g_wave_extra_time				= 0;
+
+	g_wave_ready					= false; 	-- Checks if the incoming wave is ready to start
+	g_timeout_ended					= false;
+
+	g_monsters						= {};
+	g_monster_alives				= 0;
+	g_monster_spawns				= {};
+	g_spot_maxNum					= 1;
+
+	g_players_all_dead				= false;
+	g_hasSpawnedQueen				= false;
+
+	
+	g_vip_point 					= 1;
+	g_canAddObject 					= true;
+	g_canApplyDebuff				= true;
+	g_safezone_radius				= 1100;
+	g_safezone_radius_max			= 30000;
+
+	DEBUFF_DELAY 					= 3000;
+	DEBUFF_ID						= GetPyOID("ClassTable", "MachineRoom_AreaDebuff");
+	VIP_BUFF_FX						= GetPyOID("AnimatedEffectTable", "active_buff_fx");
+
+	g_players						= {};
+	g_dest_spawns 					= {};
+	g_players_debuff				= {};
+	
+	hostPlayer						= GetHostPlayer();
+	numPlayers						= GetNumPlayers();
+	playerIsAlive 					= true;
+
+	g_starting_point				= -1;
+	g_warmup_delay					= 5; 			-- [NEW] Warmup
+	
+	
+	if (g_tick_timer ~= nil) then
+		StopTimerCB(g_tick_timer);
+		g_tick_timer = nil;
+	end
+	if (g_timer_playerPos ~= nil) then
+		StopTimerCB(g_timer_playerPos);
+		g_timer_playerPos = nil;
+	end
+	if (g_debuff_timer ~= nil) then
+		StopTimerCB(g_debuff_timer);
+		g_debuff_timer = nil;
+	end
+	if (g_timer_addPlayer ~= nil) then
+		StopTimerCB(g_timer_addPlayer);
+		g_timer_addPlayer = nil;
+	end
+	
+	if (g_warmup_timer ~= nil) then
+		StopTimerCB(g_warmup_timer);
+		g_warmup_timer		= nil;
+	end 		-- [NEW] Warmup
+	if (g_destcheck_timer ~= nil) then
+		StopTimerCB(g_destcheck_timer);
+		g_destcheck_timer = nil;
+	end		-- [NEW] Destination check timer
+	
+	traces = false;
+	
+	
+	function IsWaitingToStart()	return g_game_state == GS_WAITING;	end
+	function IsInWamrup()		return g_game_state == GS_WARMUP;	end
+	function IsInProgress()		return g_game_state == GS_PROGRESS;	end
+end
+
+
+-- ==============================================================================
+-- ** Events
+-- ==============================================================================
+local function StopTimers()
+	if(g_wave_timer ~= nil) then	StopTimerCB(g_wave_timer);		g_wave_timer = nil;		end
+	if(g_wave_to_timer ~= nil) then	StopTimerCB(g_wave_to_timer);	g_wave_to_timer = nil;	end
+	if(g_tick_timer ~= nil) then	StopTimerCB(g_tick_timer);		g_tick_timer = nil;		end
+	if(g_debuff_timer ~= nil) then	StopTimerCB(g_debuff_timer);	g_debuff_timer = nil;	end
+end
+
+-- ------------------------------------------------------------------------------
+local function UpdatePlayersWithPosition()
+	UpdatePlayers();
+	UpdatePlayerPosition();
+end
+
+-- ------------------------------------------------------------------------------
+function referee_OnInit()
+	if (traces) then Trace("Init Running!!"); end
+	
+	local allPlayersHaveDied = g_players_all_dead;
+	
+	InitVars();
+	
+	g_timer_addPlayer = StartTimerCB(1500, true, referee_playersearch);
+	
+	-- Escort GameType Only (TODO) --
+	InitPathingLocations();
+	-- --------------------------- --
+	
+	UpdatePlayersWithPosition();
+	
+	if (allPlayersHaveDied) then
+		KillRemainingMonsters();
+	end
+	
+	g_timer_playerPos = StartTimerCB(500, true, UpdatePlayersWithPosition);
+	
+	EnableCollisions(false);
+end
+AddToVFTable("OnInitFinal", "referee_OnInit");
+
+
+-- ------------------------------------------------------------------------------
+function referee_CheckForLastWave()
+
+	if (g_last_wave == true) then
+	
+		if (not g_hasSpawnedQueen) then
+			CallPyScript("Boss_intro");
+			g_hasSpawnedQueen = true;
+		end
+	end
+end
+
+-- ------------------------------------------------------------------------------
+function referee_OnUpdate()
+	UpdatePlayers();
+	UpdateMonsters();
+	UpdateAI();
+	referee_CheckForLastWave();
+end
+AddToVFTable("OnUpdate", "referee_OnUpdate");
+
+-- ------------------------------------------------------------------------------
+function referee_OnDied()
+	Trace("Dying now...");
+end
+AddToVFTable("OnDied", "referee_OnDied");
+
+-- ------------------------------------------------------------------------------
+function referee_OnTerminate()
+	StopTimers();
+	KillRemainingMonsters();
+end
+AddToVFTable("OnTerminate", "referee_OnTerminate");
+
+-- ==============================================================================
+-- ** Players
+-- ==============================================================================
+function referee_playersearch()
+
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	TargetListSearch(8000, 360);
+	
+	repeat
+		if (not IsTargetListEmpty()) then 
+		
+			local target = GetTargetListTop();
+			PopTargetList();
+			
+			local targetAlreadyInTable = false;
+			if (#g_players > 0) then
+			
+				for index, player in pairs(g_players) do
+				
+					if ((target:GetID() == player:GetID()) or (target:IsDead())) then
+						targetAlreadyInTable = true;
+					end
+				end
+			end
+			
+			if (not targetAlreadyInTable) then
+				AddPlayer(target);
+			end
+		end
+		
+	until(IsTargetListEmpty())
+end
+
+
+-- ------------------------------------------------------------------------------
+AddPlayer = function(player)
+	local playerID = player:GetID();
+	local canAddPlayer = false;
+	
+	Trace("Adding " .. player:GetName());
+	
+	if (player ~= nil) then
+	
+		if (#g_players > 0) then
+		
+			local playerAlreadyInPlayerTable = false;
+			
+			--Table is not empty, look if player has already been added
+			for index, object in pairs(g_players) do
+				if (playerID == object:GetID()) then
+					playerAlreadyInPlayerTable = true;
+				end
+			end
+			
+			if (not playerAlreadyInPlayerTable) then
+				--Player wasn't found in table, go ahead and add player
+				canAddPlayer = true;
+			end
+		else
+			--Table is empty, go ahead and add a player
+			canAddPlayer = true;
+		end
+	end
+	
+	if (canAddPlayer) then
+		table.insert(g_players, player);
+		SetMaster(player);
+	end
+	
+	if (#g_players > 0) then
+	
+		local selfReferee = GetSelf();
+		if (selfReferee ~= nil) then
+			player:WarpTo(selfReferee:GetPosition());
+		end
+	end
+
+	if (traces) then Trace("#g_players: "..#g_players); end
+end
+
+-- ------------------------------------------------------------------------------
+UpdatePlayers = function()
+
+	if (#g_players > 0) then
+	
+		for id, player in pairs(g_players) do
+			if (player:IsConnected()) then
+				if(player:IsDead()) then
+					table.remove(g_players, id);
+				end
+			else
+				table.remove(g_players, id);
+			end
+		end
+		
+		if (#g_players < 1) then
+			g_players_all_dead = true;
+		end
+	end
+end
+
+
+-- ==============================================================================
+-- ** Monsters
+-- ==============================================================================
+-- ------------------------------------------------------------------------------
+-- ------------------------------------------------------------------------------
+UpdateMonsters = function()
+
+	if (#g_monsters > 0) then
+	
+		for index, monster in pairs(g_monsters) do
+			if (monster:IsDead()) then
+				table.remove(g_monsters, index);
+				g_monster_alives = g_monster_alives - 1;
+				if (traces) then Trace("Update Monsters, remove dead one."); end
+			end
+		end
+	end
+
+	SetInt("num_monsters", g_monster_alives);
+end
+
+-- ------------------------------------------------------------------------------
+KillRemainingMonsters = function()
+	--if (traces) then 
+	Trace("Kill Remaining monster"); --end
+	
+	if (#g_monsters > 0) then
+	
+		for index, monster in pairs(g_monsters) do
+			Trace("Killing: " .. monster:GetName());
+			monster:Kill();
+			table.remove(g_monsters, index);
+			g_monster_alives = g_monster_alives - 1;
+		end
+	end
+	
+	-- We let the UpdateMonsters() clean up the list
+	UpdateMonsters();
+end
+
+-- ------------------------------------------------------------------------------
+local function SpawnMonster(name)
+	if(name ~= nil) then
+		
+		if (type(name) == "string") then
+			local monster = GetObjectByName(name);
+			CallPyScript(name);
+			table.insert(g_monsters, monster);
+			g_monster_alives = g_monster_alives + 1;
+		else
+			Trace("Name is not a string!");
+		end
+	end
+end
+
+
+-- ==============================================================================
+-- ** Timers
+-- ==============================================================================
+
+-- ------------------------------------------------------------------------------
+local function StartTickTimer(delay, cb)
+	if(g_tick_timer) then
+		StopTimerCB(g_tick_timer);
+	end
+	if (traces) then Trace("Start tick timer"); end
+	g_tick_timer = StartTimerCB(delay, true, cb);
+end
+
+-- ------------------------------------------------------------------------------
+local function StartWaveTimer(delay, cb)
+	if (g_wave_to_timer) then
+		StopTimerCB(g_wave_to_timer);
+	end
+	
+	if(g_wave_timer) then
+		StopTimerCB(g_wave_timer);
+	end
+
+	g_wave_to_timer = StartTimerCB(delay, false, cb);
+	g_wave_timer = StartTimerCB(delay, false, cb);
+end
+
+
+-- ------------------------------------------------------------------------------
+local function EndGame(is_game_over)
+	if(not IsInProgress()) then return; end
+	
+	g_game_state = GS_OVER;
+	
+	StopTimers();
+
+	if(is_game_over) then
+		KillRemainingMonsters();
+	end
+end
+
+-- ------------------------------------------------------------------------------
+local function Tick()
+	if (not g_last_wave) then
+		g_wave_time = g_wave_time - TICK_TIME;
+	end
+end
+
+-- ------------------------------------------------------------------------------
+local function TOWaveOutOfTime()
+	
+	if(g_wave_type == WT_TIMEOUT) then
+		g_timeout_ended = true;
+	end
+end
+
+
+-- ------------------------------------------------------------------------------
+local function EndWave()
+	local waves = WAVES or {};
+	
+	--
+	g_current_wave = g_current_wave + 1;
+	Trace("Current Wave is: " .. g_current_wave);
+	--
+
+	if(g_current_wave <= #waves) then
+
+		local wave = waves[g_current_wave];
+
+		-- We call the specified callback, if one exists
+		if(type(wave.precb) == "function") then
+		
+			wave.precb(g_current_wave, wave.precbdata);
+		end
+
+		-- We handle the new time
+		if (not g_last_wave) then
+		
+			g_wave_time = wave.delay;
+		end
+		
+		-- Wave type 0 : Monsters
+		if(type(wave.waves) == "table" and #wave.waves > 0) then
+		
+			g_wave_type = WT_MONSTER;
+			
+			-- We summon the new batch of monsters
+			for _, currentWave in ipairs(wave.waves) do
+			
+				-- We check if we have enough players for that wave
+				if(currentWave.num_players <= #g_players) then
+				
+					for _, monster in ipairs(currentWave.monsters) do
+						local monsterName = monster.name;
+						
+						if ((type(monsterName) == "string") and (monsterName ~= nil)) then
+							
+							Trace("Spawning monster: " .. monsterName);
+							SpawnMonster(monsterName);
+						end
+					end
+				end
+			end
+
+		else
+			g_wave_type = WT_TIMEOUT;
+			g_timeout_ended = false;
+			StartWaveTimer(g_wave_time, TOWaveOutOfTime);
+			
+			-- Nothing to do, we wait...
+		end
+
+		-- We update the information
+		SetInt("wave_time",			g_wave_time);
+		SetInt("wave_total_time",	g_wave_time);
+		SetInt("wave_number",		g_current_wave);
+		SetInt("num_waves",			#waves);
+
+	else
+
+		EndGame(false);
+
+		SetInt("wave_number", 0);
+	end
+end
+
+-- ------------------------------------------------------------------------------
+local function StartGame()
+	if (traces) then Trace("StartGame()"); end
+	
+	g_game_state		= GS_PROGRESS;
+	
+	g_current_wave		= 0;
+	g_wave_extra_time	= 0;
+	
+	Trace("[Referee] Let the game begins!");
+	
+	StartTickTimer(TICK_TIME, Tick);
+end
+
+-- ------------------------------------------------------------------------------
+local function StartFirstWave()
+
+	if (hasReachDestination()) then
+	
+		if (traces) then Trace("[Referee] VIP is ready, sending new wave..."); end
+		
+		if (g_destcheck_timer) then
+			StopTimerCB(g_destcheck_timer);
+			g_destcheck_timer = nil;
+		end
+		
+		g_wave_ready = true;
+		
+		StartGame();
+		EndWave();	-- So it starts the new wave
+	end
+end
+
+-- ------------------------------------------------------------------------------
+local function StartNextWave()
+
+	if (traces) then Trace("StartNextWave()"); end
+	
+	if (hasReachDestination()) then
+		if (traces) then Trace("[Referee] VIP is ready, sending new wave..."); end
+		
+		if (g_destcheck_timer) then
+			StopTimerCB(g_destcheck_timer);
+			g_destcheck_timer = nil;
+		end
+		
+		g_wave_ready = true;
+		EndWave();	-- So it starts the new wave
+	end
+end
+
+-- ------------------------------------------------------------------------------
+local function Warmup()
+
+ 	if (traces) then Trace("Warmup()"); end
+	
+	if(not g_players_all_dead) then
+	
+		if (g_warmup_delay == 0) then
+			StopTimerCB(g_warmup_timer);
+			g_warmup_timer = nil;
+			
+			if (traces) then Trace("Warmup Function!!!!!!!!!!!!!"); end
+
+			goToNextDestination();
+			g_destcheck_timer = StartTimerCB(WARMUP_TICK_TIME, true, StartFirstWave);
+			
+		elseif (g_warmup_delay == 2) then
+			playAlarmAnimation();
+			Trace("[Referee] Game begins in "..g_warmup_delay.."...");
+			g_warmup_delay = g_warmup_delay -1
+			
+		else
+			Trace("[Referee] Game begins in "..g_warmup_delay.."...");
+			g_warmup_delay = g_warmup_delay -1
+		end
+		
+	else
+		if (g_warmup_timer~=nil) then
+			Trace("All players are dead!");
+			StopTimerCB(g_warmup_timer);
+			g_warmup_timer = nil;
+		end
+	end
+end
+
+-- ------------------------------------------------------------------------------
+-- Hack solution for keeping multiplayer synced
+-- ------------------------------------------------------------------------------
+local function CanStartAI()
+
+	if (not g_hasStartedAI) then
+		local hellhole = GetObjectByName("Hellhole");
+		
+		if (hellhole ~= nil) then
+			if (hellhole:IsDead() or (hellhole:GetHP() <= 0)) then
+				
+				Trace("Hellhole is DEAD!!");
+				g_hasStartedAI = true;
+			end
+		else
+			Trace("Hellhole is NIL!!");
+		end
+	end
+	
+	return g_hasStartedAI;
+end
+
+
+-- ------------------------------------------------------------------------------
+local function WarpEverybodyToStartPostition()
+	local selfReferee = GetSelf();
+	local waypoint = GetObjectByName("vip_start")
+	
+	if (selfReferee ~= nil) then
+		WarpTo(waypoint:GetPosition());
+		
+		if (#g_players > 0) then
+			for index, player in pairs(g_players) do
+				player:WarpTo(waypoint:GetPosition());
+			end
+		end
+	end
+end
+
+
+-- ------------------------------------------------------------------------------
+UpdateAI = function()
+	-- --------------------------------------------
+	-- BEFORE THE GAME
+	
+	if(IsWaitingToStart()) then
+	
+		if(#g_players > 0 and CanStartAI()) then
+		
+			if (not IsInWamrup()) then
+				g_game_state = GS_WARMUP;
+				KillRemainingMonsters();
+				WarpEverybodyToStartPostition();
+				
+				if (not g_warmup_timer) then
+					g_warmup_timer = StartTimerCB(WARMUP_TICK_TIME_START, true, Warmup);
+				end
+			end
+		end
+
+	-- --------------------------------------------
+	-- DURING THE GAME
+	
+	elseif(IsInProgress()) then
+		
+		if(g_players_all_dead) then
+			EndGame(true);
+			StopTimers();
+
+		elseif(g_wave_type == WT_MONSTER and g_monster_alives == 0) then
+			if (not g_destcheck_timer) then
+				StartTimerCB(1000, false, playAlarmAnimation);
+				StartTimerCB(3000, false, goToNextDestination);
+				g_destcheck_timer = StartTimerCB(WARMUP_TICK_TIME, true, StartNextWave);
+				-- ------------------------------------------------------------------ --
+			end
+			
+		elseif(g_wave_type == WT_TIMEOUT and g_timeout_ended) then
+			if (not g_destcheck_timer) then
+				if (traces) then Trace("Monster Check!"); end
+				g_timeout_ended = false;
+				StartTimerCB(1000, false, playAlarmAnimation);
+				StartTimerCB(3000, false, goToNextDestination);
+				g_destcheck_timer = StartTimerCB(WARMUP_TICK_TIME, true, StartNextWave);
+				-- ------------------------------------------------------------------ --
+			end
+		end
+	end
+end

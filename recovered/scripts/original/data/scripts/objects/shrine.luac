@@ -1,0 +1,62 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Shrine/Cauldron generic behavior
+-- 
+-- Apply a buff on the player(s) when triggered
+-- ----------------------------------------------------------------------------------------------------
+
+-- DATA
+local SHRINE_FX		= nil;
+
+local BUFF_ID			= GetPyOID("ClassTable", "Shrine_Quickness_buff");
+
+local BUFF_FX			= nil;
+local BUFF_ICON		= nil;
+
+local BUFF_DURATION	= 25000;
+
+local BUFF_AOE			= false; -- If set to true, will give the Buff to all players in a limited range.
+local BUFF_AOE_RANGE	= 1000;
+
+local g_buff;
+
+function OnTrigger(actor)
+	if(actor) then
+		local char_level = FromFixed(actor:GetProp(GetPyStruct("CharacterProperties", "Level")));
+		
+		if (BUFF_AOE) then
+			if (BUFF_AOE_RANGE ~= -1) then
+				SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+				SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+				SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+				
+				TargetListSearch(BUFF_AOE_RANGE);
+				
+				if(not IsTargetListEmpty()) then
+					repeat
+						local target = GetTargetListTop();
+						PopTargetList();
+						
+						g_buff = target:CreateBuff(BUFF_ID, BUFF_DURATION, false, char_level, BUFF_FX, BUFF_ICON);
+						target:ApplyBuff(BUFF_ID, g_buff);
+						
+						if (SHRINE_FX) then
+							target:PlayFX(SHRINE_FX);
+						end
+						
+					until(IsTargetListEmpty())
+				end
+			end
+		else
+			g_buff = actor:CreateBuff(BUFF_ID, BUFF_DURATION, false, char_level, BUFF_FX, BUFF_ICON);
+			actor:ApplyBuff(BUFF_ID, g_buff);
+		end
+	end
+	
+	if (SHRINE_FX) then
+		actor:PlayFX(SHRINE_FX);
+	end
+end
+
+
+function OnAnimEvent(event)
+end

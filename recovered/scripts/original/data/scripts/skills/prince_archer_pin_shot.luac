@@ -1,0 +1,186 @@
+--[[	Pin Shot
+
+	shot in enemies feet that pin them(stun?) on the spot for a short duration
+	20 may 2010, this version seem to work.
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+
+local RANGE				  = 600.0;
+local SWITCH_TARGET_DELAY = 750;
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Archer_PinShot");
+local AIR_PROJECTILE_ID	= GetPyOID("ProjectileTable", "ArrowPinShot");
+local USE_COOLDOWN	= true;
+
+local firstTarget = nil;
+local secondTarget = nil;
+local thirdTarget = nil;
+local canAttackTarget = false;
+
+-- Cached values
+local skill_level		= 0;
+local mana_cost;
+local duration;
+
+local cooldown;
+local traces			= false;
+
+RegisterAnim(GetPyOID("AnimDict", "skill_dh2_prince_rogue_archer_pinning_shot"));
+
+
+-- ----------------------------------------------------------------------------------------------
+local function PinShot(timerID, target)
+	PlayAnim(GetPyOID("AnimDict", "skill_dh2_prince_rogue_archer_pinning_shot"));
+	SpawnSkillProjectile(AIR_PROJECTILE_ID);
+end
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+	return cooldown_timer;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	
+	ClearProps(true);
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	ApplyPropClass(CLASS_ID, true);
+	
+	local pinned_ennemies = 1;
+	if (skill_level > 4 and skill_level < 10) then pinned_ennemies = 2; end
+	if (skill_level > 9) then pinned_ennemies = 3; end
+	
+	SetProp(GetPyStruct("CharacterProperties", "TempProp1"), ToFixed(pinned_ennemies),true);
+	
+	mana_cost = GetProp(GetPyStruct("CharacterProperties", "SnS_ManaCost"), true)
+	duration = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Duration"), true));
+	cooldown = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Cooldown"), true));
+	if(cooldown==nil or cooldown < 0) then cooldown = 0; end
+	if (traces) then Trace ("[Skills | Pin Shot] Here is the duration "..duration.." and the cooldown "..cooldown); end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	if(not HasBow()) then
+		return false, false
+	end
+	return (not HasSkillCooldown() and HasMana(mana_cost)), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	TargetListSearch(RANGE);
+	if(not IsTargetListEmpty()) then
+		local target = GetTargetListTop();
+		LookAt(target);
+		if (traces) then Trace ("[Skills | Pin Shot] Initial check: "..GetTargetListSize().." Potential target(s)"); end
+	end
+	UseMana(mana_cost);
+	SetSkillCooldown(cooldown);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	firstTarget = nil;
+	secondTarget = nil;
+	thirdTarget = nil;
+	local count = GetTargetListSize();
+	
+	if(not IsTargetListEmpty()) then 
+		local target = GetTargetListTop();
+		if (traces) then Trace("Target is: " .. target:GetName()); end
+		LookAt(target);
+		PopTargetList();
+		SpawnSkillProjectile(AIR_PROJECTILE_ID);
+	end
+	if (count>1 and skill_level>4) then
+		if (traces) then Trace ("[Skills | Pin Shot] Nice! My skill level is higher than 4! I'm selecting second target! targets:"..count); end
+		target = GetTargetListTop();
+		if (traces) then Trace("Target is: " .. target:GetName()); end
+		LookAt(target);
+		StartSkillTimerCB(SWITCH_TARGET_DELAY, false, PinShot, target);
+		PopTargetList();
+	end 
+	if (count>2 and skill_level>9) then
+		if (traces) then Trace ("Wow! It's higher than 9! I'm selecting a third target! targets:"..count); end
+		target = GetTargetListTop();
+		if (traces) then Trace("Target is: " .. target:GetName()); end
+		LookAt(target);
+		StartSkillTimerCB((SWITCH_TARGET_DELAY + SWITCH_TARGET_DELAY), false, PinShot, target);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target)
+	canAttackTarget = false;
+	
+	if (target) then
+		local targetName = target:GetName();
+		
+		if (firstTarget ~= nil) then
+			
+			if (targetName ~= firstTarget:GetName()) then
+				
+				if (secondTarget ~= nil) then
+					
+					if (targetName == secondTarget:GetName()) then
+						if (traces) then Trace("Skipping!  I already attacked that target!"); end
+					end
+				else
+					secondTarget = target;
+					canAttackTarget = true;
+				end
+			else
+				if (traces) then Trace("Skipping!  I already attacked that target!"); end
+			end
+		else
+			firstTarget = target;
+			canAttackTarget = true;
+		end
+		
+		if (canAttackTarget) then
+			SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+			ApplyPropClass(CLASS_ID);
+			local dmg=SkillCombatRoll(target);
+			
+			if (dmg~=nil) then
+				target:SetStunState(duration,true);
+				
+				if (traces) then 
+					Trace("");
+					Trace("Target is: " .. target:GetName());
+					Trace ("Pin Shot: The target got "..FromFixed(dmg).." damage, and is pinned for "..(duration/1000).." seconds.");
+				end
+			end
+		end
+	end
+end
+
+
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_, OnSkillInfo_);

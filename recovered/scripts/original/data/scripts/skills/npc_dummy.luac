@@ -1,0 +1,119 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Dummy Stone Statue Explosion: For the stone escape spell (now: DoppelGanger)
+-- 
+-- 
+-- ----------------------------------------------------------------------------------------------------
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local STATUE_FX	= GetPyOID("AnimatedEffectTable", "skill_dh2_prince_mage_stone_escape_idle");
+local EXPLODE_FX	= GetPyOID("AnimatedEffectTable", "skill_dh2_prince_mage_stone_escape_death");
+local TARGET		= GetPyOID("AnimatedEffectTable", "elem_dmg_02_water");
+local TNT_DELAY	= 2000.0;	-- Time before the hurt
+local RANGE			= 650.0;		-- Explosion radius
+local ANGLE			= 360.0;		-- Explosion area
+local timer_id_steal = -1;
+local timer_statuefx	= -1;
+local skill_level 		= 0;
+local traces				= false;
+local traces2				= false;
+local first_check		= true;
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+
+local function RemoveTarget()
+	if (traces2) then Trace ("[Doppleganger] Stone Statue: Removing targets of the enemies"); end
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	TargetListSearch(RANGE, ANGLE);
+	if(not IsTargetListEmpty()) then
+		repeat
+	
+			local target = GetTargetListTop();
+			PopTargetList();
+			target:ClearTarget();
+			target:ClearAggro(GetSelf());
+			--target:PlayFX(TARGET);
+		until(IsTargetListEmpty())
+	end
+end
+
+local function StealTargets(timer_id)
+	timer_id_steal=timer_id;
+	if (traces2) then Trace ("[Doppleganger] Stone Statue: Stealing targets of the enemies"); end
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	TargetListSearch(RANGE, ANGLE);
+	if(not IsTargetListEmpty()) then
+		repeat
+	
+			local target = GetTargetListTop();
+			PopTargetList();
+			target:SetTarget(GetSelf());
+			target:AddAggro(GetSelf(), 1000);
+			--target:PlayFX(TARGET);
+		until(IsTargetListEmpty())
+	end
+end
+
+local function killstatue()
+	Kill();
+end
+-- ----------------------------------------------------------------------------------------------
+local function DoExplosion()
+	-- Stop the timers
+	StopTimerCB(timer_id_steal);
+	-- Play the explosion FX
+	PlayFX(EXPLODE_FX); 
+	-- Do the damage around
+	RemoveTarget();
+	StartSkillTimerCB(2000, false, killstatue);
+	PlaySound("sfx_skill_mage_doppelganger_statue_explode", false, 0, false);
+end
+
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	skill_level	= slvl;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	if (first_check) then 
+		first_check=false;
+		-- Start the timers events, 1 for the explosion, 1 for stealing targets, 1 for the animation FX
+		timer_statuefx = StartSkillTimerCB(TNT_DELAY, false, DoExplosion);
+		timer_id_steal = StartSkillTimerCB(350, true, StealTargets);
+		--timer_statuefx = StartSkillTimerCB(250, true, function() PlayFX(STATUE_FX); end);
+		PlayFX(STATUE_FX);
+ 	end
+	return false, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	if (traces) then Trace ("[Doppleganger] On Dummy Preskill called!"); end
+	
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if (traces) then Trace ("[Doppleganger] On Dummy skill called!"); end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target)
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_);

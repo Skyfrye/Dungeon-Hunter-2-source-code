@@ -1,0 +1,77 @@
+--[[	Contaminate -> OutBreak (new name: numbing stud)
+
+	Increase damage when in sneak mode or attacking a stunned opponent
+
+--]]
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Assassin_Contaminate");
+local BUFF_ID		= GetPyOID("ClassTable", "Debuff_Slow");
+local BUFF_PERSIST	= GetPyOID("AnimatedEffectTable", "AUTO_DEBUFF_SLOW");
+
+-- Cached values
+local skill_level		= 0;
+local buff				= nil;
+local duration			= 0;
+local SLOW				= 0;
+
+local traces			= false;
+
+
+local function OnTargetHit_Skill(attacker, defender)
+		if (skill_level > 0) then
+		if (defender:GetID() == GetID() and attacker:TargetInMeleeRange()) then
+			local proc_chance = GetRand(0,100);
+			local enemy_proc = GetRand(0,FromFixed(attacker:GetProp(GetPyStruct("CharacterProperties", "Slow_Resist_Chance"))));
+			
+			if (traces) then
+				Trace("Ennemy Resist Chance is "..enemy_proc.."%%");
+				Trace("Base Slow chances are "..SLOW.."%%");
+			end
+			local slow_final = SLOW;
+			if (slow_final<0) then slow_final=0; end
+			if (traces) then Trace("Now Slow chances are "..slow_final.."%%"); end
+			if (proc_chance < slow_final) then
+				local buff = attacker:CreateBuff(BUFF_ID, duration, false, skill_level, BUFF_PERSIST);
+				attacker:ApplyBuff(BUFF_ID, buff);
+				if (traces) then Trace("Slow DEBUFF will be applied to "..attacker:GetName()); end
+			end
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(slvl));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	duration = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp2"), true));
+	SLOW = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"), true));
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

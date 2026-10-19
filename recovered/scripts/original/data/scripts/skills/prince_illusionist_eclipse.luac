@@ -1,0 +1,99 @@
+--[[	Eclipse (Active Buff)
+
+	Blinds enemies: they attack at close range but can't move or target MC
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 600.0;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Illusionist_Eclipse");
+
+local FX				= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_mage_illusionist_eclipse");
+local BUFF_FX			= GetPyOID("AnimatedEffectTable", "skill_dh2_prince_mage_illusionist_eclipse_persist");
+
+
+-- Cached values
+local skill_level		= 0;
+local mana_cost;
+
+-- Buff Variables
+local bufftime;
+local buff			= nil;
+local traces		= false;
+
+-- ----------------------------------------------------------------------------------------------
+--	CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local plvl = GetProp(GetPyStruct("CharacterProperties", "Level"));
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		mana_cost	= CalcManaCost(CLASS_ID, slvl);
+		bufftime = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Duration"), true));
+		if (traces) then Trace("[Skills | Eclipse] current value is:"..(bufftime/1000).."seconds of cooldown"); end
+		if(bufftime == 0) then 
+			bufftime = 3000 + (1000 * slvl); 
+			if (traces) then Trace("[Skills | Eclipse] Bufftime value failed"); end 
+		end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost, false);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	TargetListSearch(RANGE);
+	if(not IsTargetListEmpty()) then
+		local target = GetTargetListTop();
+		LookAt(target);
+	end
+	if (traces) then Trace("[SKILL: Illusionist Eclipse] consumes "..FromFixed(mana_cost).." mana..."); end
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if (traces) then Trace ("[SKILL: Illusionist Eclipse] The duration of the BUFF is "..(bufftime/1000).." seconds."); end
+	TargetListSearch(RANGE);
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	if (buff) then RemoveBuff(CLASS_ID, buff); end
+	if (traces) then Trace("Current time of the buff is "..bufftime.." seconds"); end
+	repeat
+		if(not IsTargetListEmpty()) then
+			local target,_,_, character = GetTargetListTop();
+			PopTargetList();
+			if (not target:IsPlayer()) then
+				if(character) then
+					target:PlayFX(FX);
+					buff = target:CreateBuff(CLASS_ID, bufftime , false, skill_level, BUFF_FX);
+					target:ApplyBuff(CLASS_ID, buff);
+				end
+			end
+		end
+	until (IsTargetListEmpty())
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

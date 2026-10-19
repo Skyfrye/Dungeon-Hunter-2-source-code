@@ -1,0 +1,10 @@
+XPlayerURL: http://gllive.gameloft.com/ope/GenericXPlayer_v1.php
+GGI: 22347
+XPPHPVerNo: 4
+ChatServer: gllive.gameloft.com
+ChatDomian: gllive.gameloft.com
+ChatRoomDomian: conference.gllive.gameloft.com
+UPNPPort: 51020
+UPNPPortTry: 3
+BroadcastPort: 7654
+GameVer: 1.1.5

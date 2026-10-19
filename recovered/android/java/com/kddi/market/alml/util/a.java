@@ -1,0 +1,72 @@
+package com.kddi.market.alml.util;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class a {
+    public static final int A = -27;
+    public static final int B = -28;
+    public static final int C = -30;
+    public static final int D = -31;
+    public static final int E = -40;
+    public static final int F = -41;
+    public static final int G = -40;
+    public static final int H = -41;
+    public static final int I = -42;
+    public static final int J = -43;
+    public static final int K = -45;
+    public static final int L = -46;
+    public static final int M = -48;
+    public static final int N = -49;
+    public static final int O = -54;
+    public static final int P = -56;
+    public static final int Q = -57;
+    public static final int R = -98;
+    public static final int S = -99;
+    public static final int T = -1;
+    public static final int U = -2;
+    public static final int V = 0;
+    public static final int W = 1;
+    public static final int X = 2;
+    public static final int Y = -1;
+    public static final int Z = 0;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final int f230a = 0;
+    public static final int aa = 1;
+    public static final int ab = 2;
+    public static final int ac = -1;
+    public static final int ad = 0;
+    public static final int ae = 1;
+    public static final int af = 2;
+    public static final int ag = -1;
+    public static final int ah = 1;
+    public static final int ai = 9;
+    public static final int aj = 0;
+    public static final String ak = "error_code";
+    public static final String al = "error_message";
+    public static final String am = "intent";
+    public static final int b = -1;
+    public static final int c = -2;
+    public static final int d = -3;
+    public static final int e = -4;
+    public static final int f = -5;
+    public static final int g = -6;
+    public static final int h = -7;
+    public static final int i = -8;
+    public static final int j = -9;
+    public static final int k = -90;
+    public static final int l = -91;
+    public static final int m = -92;
+    public static final int n = -93;
+    public static final int o = -10;
+    public static final int p = -11;
+    public static final int q = -12;
+    public static final int r = -13;
+    public static final int s = -14;
+    public static final int t = -20;
+    public static final int u = -21;
+    public static final int v = -22;
+    public static final int w = -23;
+    public static final int x = -24;
+    public static final int y = -25;
+    public static final int z = -26;
+}

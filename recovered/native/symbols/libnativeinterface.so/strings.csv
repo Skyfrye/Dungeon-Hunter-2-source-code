@@ -1,0 +1,106 @@
+section_index,section,file_offset,address,encoding,byte_length,text
+3,.dynstr,1209,1209,ascii,22,__aeabi_unwind_cpp_pr0
+3,.dynstr,1232,1232,ascii,59,Java_com_samsung_zirconia_NativeInterface_checkLicenseFile2
+3,.dynstr,1292,1292,ascii,9,SHA1Reset
+3,.dynstr,1302,1302,ascii,9,SHA1Input
+3,.dynstr,1312,1312,ascii,10,SHA1Result
+3,.dynstr,1323,1323,ascii,16,__stack_chk_fail
+3,.dynstr,1340,1340,ascii,17,__stack_chk_guard
+3,.dynstr,1358,1358,ascii,22,__aeabi_unwind_cpp_pr1
+3,.dynstr,1381,1381,ascii,6,strlen
+3,.dynstr,1388,1388,ascii,7,tolower
+3,.dynstr,1396,1396,ascii,57,Java_com_samsung_zirconia_NativeInterface_storeLicenseKey
+3,.dynstr,1454,1454,ascii,6,wcslen
+3,.dynstr,1461,1461,ascii,5,fopen
+3,.dynstr,1467,1467,ascii,6,fwrite
+3,.dynstr,1474,1474,ascii,6,fclose
+3,.dynstr,1481,1481,ascii,7,sprintf
+3,.dynstr,1489,1489,ascii,16,__aeabi_uidivmod
+3,.dynstr,1506,1506,ascii,7,strncpy
+3,.dynstr,1514,1514,ascii,58,Java_com_samsung_zirconia_NativeInterface_doPassphraseTest
+3,.dynstr,1573,1573,ascii,6,malloc
+3,.dynstr,1580,1580,ascii,6,memset
+3,.dynstr,1587,1587,ascii,4,free
+3,.dynstr,1592,1592,ascii,16,CheckLicenseFile
+3,.dynstr,1609,1609,ascii,5,fread
+3,.dynstr,1615,1615,ascii,6,strcat
+3,.dynstr,1622,1622,ascii,6,memcmp
+3,.dynstr,1629,1629,ascii,58,Java_com_samsung_zirconia_NativeInterface_checkLicenseFile
+3,.dynstr,1688,1688,ascii,23,SHA1ProcessMessageBlock
+3,.dynstr,1712,1712,ascii,14,SHA1PadMessage
+3,.dynstr,1727,1727,ascii,7,libc.so
+3,.dynstr,1735,1735,ascii,12,libstdc++.so
+3,.dynstr,1748,1748,ascii,7,libm.so
+3,.dynstr,1756,1756,ascii,8,libdl.so
+3,.dynstr,1765,1765,ascii,13,__exidx_start
+3,.dynstr,1779,1779,ascii,11,__exidx_end
+3,.dynstr,1791,1791,ascii,12,__data_start
+3,.dynstr,1804,1804,ascii,6,_edata
+3,.dynstr,1811,1811,ascii,11,__bss_start
+3,.dynstr,1823,1823,ascii,13,__bss_start__
+3,.dynstr,1837,1837,ascii,11,__bss_end__
+3,.dynstr,1849,1849,ascii,7,__end__
+3,.dynstr,1857,1857,ascii,21,libnativeinterface.so
+7,.text,2299,2299,ascii,5,xBpZx
+7,.text,2317,2317,ascii,5,pZxBp
+7,.text,2514,2514,ascii,8,_FVFMFDF
+7,.text,2573,2573,ascii,4,FIF 
+7,.text,2642,2642,ascii,6,(I@FyD
+7,.text,2734,2734,ascii,4,IFRF
+7,.text,2810,2810,ascii,4,OFFF
+7,.text,2853,2853,ascii,7,4+psxkp
+7,.text,2866,2866,ascii,4,KF(3
+7,.text,2890,2890,ascii,4,OFFF
+7,.text,2899,2899,ascii,5,F@J{D
+7,.text,3016,3016,ascii,4,EC@F
+7,.text,3108,3108,ascii,5,xC|Dd
+7,.text,3114,3114,ascii,4,chJF
+7,.text,3170,3170,ascii,8,_FVFMFDF
+7,.text,3205,3205,ascii,5,FQF[Y
+7,.text,3316,3316,ascii,4,YFBF
+7,.text,3362,3362,ascii,8,_FVFMFDF
+7,.text,3372,3372,ascii,6,;O<J<M
+7,.text,3507,3507,ascii,4,Tih0
+7,.text,3557,3557,ascii,5,!DBDA
+7,.text,3630,3630,ascii,4,OFFF
+7,.text,3659,3659,ascii,5,G MAF
+7,.text,3665,3665,ascii,8,"""}D(`#h "
+7,.text,3677,3677,ascii,5,Gh`#h
+7,.text,3727,3727,ascii,5,M}Djh
+7,.text,3862,3862,ascii,8,_FVFMFDF
+7,.text,3887,3887,ascii,4,x\x-
+7,.text,3923,3923,ascii,5,jZkb@
+7,.text,4077,4077,ascii,4,FVF!
+7,.text,4083,4083,ascii,5,FDFcF
+7,.text,4165,4165,ascii,6,"""gFFF2"
+7,.text,4262,4262,ascii,4,aF]F
+7,.text,4319,4319,ascii,4,F@F!
+7,.text,4466,4466,ascii,4,gf@+
+7,.text,4497,4497,ascii,4,m7(?
+7,.text,4575,4575,ascii,4,"iT"" "
+7,.text,4599,4599,ascii,5,"TciX"""
+8,.rodata,4712,4712,ascii,4,%02x
+8,.rodata,4724,4724,ascii,1024,"When William McKinley won the presidential election in November 1896, the question of Hawaii's annexation to the U.S. was again opened. The previous president, Grover Cleveland, was a friend of Queen Liliuokalani. He had remained opposed to annexation until the end of his term, but McKinley was open to persuasion by U.S. expansionists and by annexationists from Hawaii. He agreed to meet with a committee of annexationists from Hawaii, Lorrin Thurston, Francis Hatch and William Kinney. After negotiations, in June 1897, McKinley agreed to a treaty of annexation with these representatives of the Republic of Hawaii.[29] The president then submitted the treaty to the U.S. Senate for approval. Despite some opposition in the islands, the Newlands Resolution was passed by the House June 15, 1898, by a vote of 209 to 91, and by the Senate on July 6, 1898, by a vote of 42 to 21, annexing Hawaii as a U.S. territory. Its legality continues to be questioned because it was a United States Government resolution, not a treaty"
+8,.rodata,5752,5752,ascii,1024,"Samsung has sixteen products that have dominated the world's market share, including: DRAM, color cathode-ray tube TVs (CPT, CDT), SRAM, TFT-LCD glass substrates, TFT-LCD, STN-LCD, tuner, CDMA handset, color television (CTV), monitor, flash memory, LCD Driver IC (LDI), PDP module, PCB for handheld (mobile phone plates), Flame Retardant ABS, and Dimethyl Formamide (DMF).[12] Plus in the Television market, Samsung and LG make the only screens for LCD TFT televisions and then later sell them on to the other companies. According to Interbrand and BusinessWeek, Samsung's brand value ranked 43rd (USD 5.2billion) in 2000, 42nd (USD 6.4 billion) in 2001, 34th (USD 8.3 billion) in 2002, 25th (USD 10.8 billion) in 2003, 21st (USD 12.5 billion) in 2004, and 20th (14.9 billion) in 2005 among top global companies. In terms of export that directly contributes to the Korean economy, Samsung took up 18.1% of the all exports with USD 31.2 billion in 2000 and 20.7% with USD 52.7 billion in 2004. In addition, Samsung's tax paym"
+8,.rodata,6780,6780,ascii,1024,"Situated among the inland prefectures of the Northern portion of the Kanto region, Tochigi is contiguous with the four prefectures of Ibaraki, Gunma, Saitama, and Fukushima. The climate of Tochigi may be classified as a humid temperate zone in which there are broad variations in temperature. Winters are arid with dry winds, while summers are humid and puncuated with frequent thunderstorms. The population of Tochigi as of March, 2007, was approximately 2,014,900 and was increasing up until 2005.[citation needed] In 2006, the population started to decrease mirroring that of the nation's population decrease. About 500,000 people live in the prefectural capital city of Utsunomiya, with the remainder dispersed over 14 other cities and 17 towns.[citation needed] Situated in the center of the prefecture is the largest open plain in the Kanto region. To the north stand the mountains Shirane (2,578 m), Nantai (2,484 m) and Nasudake (1,917 m). Originating in this region are the Kinugawa, Nakagawa, and Watarase Rivers, "
+8,.rodata,7808,7808,ascii,1024,"A touchscreen is a display which can detect the presence and location of a touch within the display area. The term generally refers to touch or contact to the display of the device by a finger or hand. Touchscreens can also sense other passive objects, such as a stylus. However, if the object sensed is active, as with a light pen, the term touchscreen is generally not applicable. The ability to interact directly with a display typically indicates the presence of a touchscreen. Until the early 1980s, most consumer touchscreens could only sense one point of contact at a time, and few have had the capability to sense how hard one is touching. This is starting to change with the commercialisation of multi-touch technology. The touchscreen has two main attributes. First, it enables one to interact with what is displayed directly on the screen, where it is displayed, rather than indirectly with a mouse or touchpad. Secondly, it lets one do so without requiring any intermediate device, again, such as a stylus that n"
+8,.rodata,8836,8836,ascii,1024,"Calligraphy has arguably become the most venerated form of Islamic art because it provides a link between the languages of the Muslims with the religion of Islam. The holy book of Islam, the Qur'an, has played an important role in the development and evolution of the Arabic language, and by extension, calligraphy in the Arabic alphabet. Proverbs and complete passages from the Qur'an are still active sources for Islamic calligraphy. The Arabic alphabet consists of 28 letters and 18 different forms of writing. The Diwani script is a cursive style of Arabic calligraphy developed during the reign of the early Ottoman Turks (16th and early 17th centuries). It was invented by Housam Roumi and reached its height of popularity under Suleyman I the Magnificent (1520-66). As decorative as it was communicative, Diwani was distinguished by the complexity of the line within the letter and the close juxtaposition of the letters within the word. A variation of the Diwani, the Diwani Al Jali, is characterized by its abundanc"
+15,.comment,10377,,ascii,16,GCC: (GNU) 4.4.3
+15,.comment,10395,,ascii,16,GCC: (GNU) 4.4.3
+16,.ARM.attributes,10417,,ascii,5,aeabi
+17,.shstrtab,10454,,ascii,9,.shstrtab
+17,.shstrtab,10464,,ascii,5,.hash
+17,.shstrtab,10470,,ascii,7,.dynsym
+17,.shstrtab,10478,,ascii,7,.dynstr
+17,.shstrtab,10486,,ascii,8,.rel.dyn
+17,.shstrtab,10495,,ascii,8,.rel.plt
+17,.shstrtab,10504,,ascii,5,.text
+17,.shstrtab,10510,,ascii,7,.rodata
+17,.shstrtab,10518,,ascii,10,.ARM.extab
+17,.shstrtab,10529,,ascii,10,.ARM.exidx
+17,.shstrtab,10540,,ascii,12,.data.rel.ro
+17,.shstrtab,10553,,ascii,8,.dynamic
+17,.shstrtab,10562,,ascii,4,.got
+17,.shstrtab,10567,,ascii,4,.bss
+17,.shstrtab,10572,,ascii,8,.comment
+17,.shstrtab,10581,,ascii,15,.ARM.attributes

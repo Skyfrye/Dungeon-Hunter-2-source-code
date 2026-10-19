@@ -1,0 +1,98 @@
+--[[	Killing Streak AKA Bloodlust
+
+	Each kill give a damage bonus for a short duration
+
+--]]
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Berserk_KillingStreak");
+local DUMMY_ID		= GetPyOID("ClassTable", "Skill_Berserk_KillingStreak_dummy");
+local BUFF_FX		= GetPyOID("AnimatedEffectTable", "active_buff_fx");
+local FX 			= GetPyOID("AnimatedEffectTable", "skill_dh2_prince_warrior_berseker_killing_streak");
+
+-- Cached values
+local skill_level	= 0;
+local bufftime		= 0;
+local buff			= nil;
+
+local BUFFTIME_BASE = 4000;
+local BUFFTIME_LEVEL = 500;
+
+local traces		= false;
+
+-- ----------------------------------------------------------------------------------------------
+local function OnTargetHit_Skill(attacker, defender)
+	if (skill_level > 0 and attacker:GetID() == GetID() and defender:IsDead()) then
+		if (traces) then Trace ("Applying the buff over the player:"..(bufftime/1000).." secs."); end
+		PlayFX(FX)
+		buff = CreateBuff(CLASS_ID, bufftime , true, skill_level);
+		local buff2 = CreateBuff(DUMMY_ID, bufftime , false, skill_level, BUFF_FX );
+		ApplyBuff(CLASS_ID, buff);
+		ApplyBuff(DUMMY_ID, buff2);
+		PlaySound("sfx_passive_skill_activate_2",false,0,false);
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvlHasChanged = false;
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+		slvlHasChanged = true;
+	end
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	bufftime = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Cooldown"), true));
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	if (bufftime==0) then
+		if (traces) then Trace("the bufftime cannot be retrieved! Using hardcoded version."); end
+		bufftime = BUFFTIME_BASE + (BUFFTIME_LEVEL*slvl);
+	else
+		if (traces) then Trace("The bufftime was loaded successfully."); end
+	end
+
+	if (buff and slvl==0) then
+		RemoveBuff(CLASS_ID, buff);
+		RemoveBuff(DUMMY_ID, buff2);
+	end
+
+	if (buff and slvl>0 and slvlHasChanged) then
+		if (traces) then Trace("We changed the skill level while doing the buff"); end
+		PlayFX(FX)
+
+		if (buff) then
+			RemoveBuff(CLASS_ID, buff);
+			RemoveBuff(DUMMY_ID, buff2);
+		end
+		buff = nil;
+
+		buff = CreateBuff(CLASS_ID, bufftime , true, slvl);
+		local buff2 = CreateBuff(DUMMY_ID, bufftime , false, skill_level, BUFF_FX );
+		ApplyBuff(CLASS_ID, buff);
+		ApplyBuff(DUMMY_ID, buff2);
+		PlaySound("sfx_passive_skill_activate_2",false,0,false);
+	end
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

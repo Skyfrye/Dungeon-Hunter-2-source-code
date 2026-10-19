@@ -1,0 +1,182 @@
+[
+  {
+    "tag": "DT_PLTGOT",
+    "value": 903920,
+    "string": null
+  },
+  {
+    "tag": "DT_PLTRELSZ",
+    "value": 10760,
+    "string": null
+  },
+  {
+    "tag": "DT_JMPREL",
+    "value": 193732,
+    "string": null
+  },
+  {
+    "tag": "DT_PLTREL",
+    "value": 17,
+    "string": null
+  },
+  {
+    "tag": "DT_REL",
+    "value": 143668,
+    "string": null
+  },
+  {
+    "tag": "DT_RELSZ",
+    "value": 50064,
+    "string": null
+  },
+  {
+    "tag": "DT_RELENT",
+    "value": 8,
+    "string": null
+  },
+  {
+    "tag": "DT_RELCOUNT",
+    "value": 1917,
+    "string": null
+  },
+  {
+    "tag": "DT_SYMTAB",
+    "value": 496,
+    "string": null
+  },
+  {
+    "tag": "DT_SYMENT",
+    "value": 16,
+    "string": null
+  },
+  {
+    "tag": "DT_STRTAB",
+    "value": 39312,
+    "string": null
+  },
+  {
+    "tag": "DT_STRSZ",
+    "value": 81454,
+    "string": null
+  },
+  {
+    "tag": "DT_HASH",
+    "value": 120768,
+    "string": null
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 81370,
+    "string": "liblog.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 81380,
+    "string": "libz.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 6785,
+    "string": "libm.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 295,
+    "string": "libdl.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 81388,
+    "string": "libEGL.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 81398,
+    "string": "libGLESv1_CM.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 81414,
+    "string": "libGLESv2.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 81427,
+    "string": "libandroid.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 21,
+    "string": "libc.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 81441,
+    "string": "libstdc++.so"
+  },
+  {
+    "tag": "DT_SONAME",
+    "value": 29,
+    "string": "libStormGLOFT.so"
+  },
+  {
+    "tag": "DT_FINI_ARRAY",
+    "value": 873872,
+    "string": null
+  },
+  {
+    "tag": "DT_FINI_ARRAYSZ",
+    "value": 8,
+    "string": null
+  },
+  {
+    "tag": "DT_INIT_ARRAY",
+    "value": 873880,
+    "string": null
+  },
+  {
+    "tag": "DT_INIT_ARRAYSZ",
+    "value": 24,
+    "string": null
+  },
+  {
+    "tag": "DT_FLAGS",
+    "value": 8,
+    "string": null
+  },
+  {
+    "tag": "DT_FLAGS_1",
+    "value": 1,
+    "string": null
+  },
+  {
+    "tag": "DT_VERSYM",
+    "value": 138692,
+    "string": null
+  },
+  {
+    "tag": "DT_VERDEF",
+    "value": 143544,
+    "string": null
+  },
+  {
+    "tag": "DT_VERDEFNUM",
+    "value": 1,
+    "string": null
+  },
+  {
+    "tag": "DT_VERNEED",
+    "value": 143572,
+    "string": null
+  },
+  {
+    "tag": "DT_VERNEEDNUM",
+    "value": 3,
+    "string": null
+  },
+  {
+    "tag": "DT_NULL",
+    "value": 0,
+    "string": null
+  }
+]

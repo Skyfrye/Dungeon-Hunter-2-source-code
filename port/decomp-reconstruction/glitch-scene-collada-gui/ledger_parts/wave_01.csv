@@ -1,0 +1,101 @@
+elf_address,symbol,status,source_file,notes
+0x535b58,_ZN6glitch3gui15CGUIEnvironment14getElementByIdEiPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,"recursive id search; vtable slots +116, +84, +104 and env slot +68 not named in layouts; CGUIEnvironment has no layout"
+0x535d10,_ZN6glitch3gui11IGUIElement11removeChildEPS1_,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,list unlink mapped; IReferenceCounted::drop on the child via the vtable-16 offset not named in layouts
+0x535d70,_ZN6glitch3gui11IGUIElement12bringToFrontEPS1_,reconstructed,glitch-scene-collada-gui/src/recon/v2/wave_01.cpp,child list move from the sentinel at childrenNext/childrenPrev; test doubles for GlitchAlloc/GlitchFree; test recon_v2_wave_01_test
+0x535dec,_ZN6glitch3gui11IGUIElement8addChildEPS1_,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,refcount grab goes through the vtable-16 virtual-base offset and a vtable +28 call on the child; neither named in layouts
+0x536388,_ZN6glitch3gui15CGUIEnvironment7loadGUIEPKcPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,read-file factory slot not mapped; CGUIEnvironment has no layout
+0x53644c,_ZN6glitch3gui15CGUIEnvironment16getElementByNameEPKcPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,"recursive name search; vtable slots +116, +92, +104 and env slot +72 not named; LC_API_STRCMP_0 not mapped; CGUIEnvironment has no layout"
+0x5364f4,_ZN6glitch3gui15CGUIEnvironment11addComboBoxERKNS_4core4rectIiEEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,"allocates 0x190 bytes and runs CGUIComboBox ctor 0x6ab38c, not in this wave; drop of the result not named; CGUIEnvironment has no layout"
+0x536574,_ZN6glitch3gui15CGUIEnvironment13addInOutFaderEPKNS_4core4rectIiEEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element ctor not in layouts (no layout for the element class); result refcount drop not named; CGUIEnvironment has no layout
+0x536628,_ZN6glitch3gui15CGUIEnvironment10addToolBarEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element ctor not in layouts (no layout for the element class); result refcount drop not named; CGUIEnvironment has no layout
+0x53669c,_ZN6glitch3gui15CGUIEnvironment7addMenuEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element ctor not in layouts (no layout for the element class); result refcount drop not named; CGUIEnvironment has no layout
+0x536724,_ZN6glitch3gui15CGUIEnvironment14addContextMenuERKNS_4core4rectIiEEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,"allocates 0x18c bytes and runs CGUIContextMenu ctor 0x6adfb8/0x6ae100 path, not in this wave; drop of the result not named; CGUIEnvironment has no layout"
+0x5367ac,_ZN6glitch3gui15CGUIEnvironment6addTabERKNS_4core4rectIiEEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element ctor not in layouts (no layout for the element class); result refcount drop not named; CGUIEnvironment has no layout
+0x536810,_ZN6glitch3gui15CGUIEnvironment13addTabControlERKNS_4core4rectIiEEPNS0_11IGUIElementEbbi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element ctor not in layouts (no layout for the element class); result refcount drop not named; CGUIEnvironment has no layout
+0x536880,_ZN6glitch3gui15CGUIEnvironment10addSpinBoxEPKwRKNS_4core4rectIiEEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element ctor not in layouts (no layout for the element class); result refcount drop not named; CGUIEnvironment has no layout
+0x5368e8,_ZN6glitch3gui15CGUIEnvironment10addEditBoxEPKwRKNS_4core4rectIiEEbPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element ctor not in layouts (no layout for the element class); result refcount drop not named; CGUIEnvironment has no layout
+54e138,_ZN6glitch3gui11CGUISpinBox8setValueEf,partial,,no CGUISpinBox / IGUISpinBox layout header; setValue swprintf varargs and vtable refresh not rebuilt; format arguments unclear
+54e194,_ZN6glitch3gui11IGUISpinBoxC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,,no CGUISpinBox / IGUISpinBox layout header; IGUISpinBox base ctor layout not reconstructed; base vtable and string blocks only
+54e4d8,_ZN6glitch3gui11CGUISpinBoxC2EPKwPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiRKNS_4core4rectIiEE,partial,,no CGUISpinBox / IGUISpinBox layout header; CGUISpinBox ctor layout dependent; child edit box and buttons not rebuilt
+54eaac,_ZN6glitch3gui11CGUISpinBoxC1EPKwPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiRKNS_4core4rectIiEE,partial,,no CGUISpinBox / IGUISpinBox layout header; CGUISpinBox ctor alternate variant; same gap as 0x54e4d8
+54f228,_ZN6glitch3gui11CGUISpinBox7onEventERKNS_6SEventE,partial,,no CGUISpinBox / IGUISpinBox layout header; event dispatch via vtable slots and parent callback not rebuilt
+54f3d8,_ZN6glitch3gui11CGUISpinBoxD1Ev,partial,,no CGUISpinBox / IGUISpinBox layout header; full destructor; not rebuilt
+54f4e0,_ZN6glitch3gui11CGUISpinBoxD2Ev,partial,,no CGUISpinBox / IGUISpinBox layout header; base-object destructor variant; layout dependent not rebuilt
+54f5bc,_ZN6glitch3gui11IGUISpinBoxD0Ev,partial,,no CGUISpinBox / IGUISpinBox layout header; IGUISpinBox destructor; base IGUIElement dtor call not rebuilt
+54f638,_ZN6glitch3gui11CGUISpinBox16setDecimalPlacesEi,partial,src/recon/slice_03.cpp,no CGUISpinBox / IGUISpinBox layout header; format string built from decimal places; setValue(getValue()) refresh via vtable slots +0x80 +0x84 not called
+54f930,_ZN6glitch3gui14CGUISpriteBank12draw2DSpriteEjRKNS_4core10position2dIiEEPKNS2_4rectIiEERKNS_5video6SColorEjjbb,partial,,no CGUISpriteBank layout; C2DDriver layout absent; draw2DImage path and rect math depend on C2DDriver layout; not rebuilt
+54fbc0,_ZN6glitch3gui14CGUISpriteBankD1Ev,partial,src/recon/slice_03.cpp,no CGUISpriteBank layout; C2DDriver layout absent; texture drop and driver texture drop reconstructed; sprite and position buffer release not modelled
+54fc68,_ZN6glitch3gui14CGUISpriteBankD2Ev,partial,src/recon/slice_03.cpp,no CGUISpriteBank layout; C2DDriver layout absent; alias of 0x54fbc0; same gap
+54ffcc,_ZNK6glitch3gui14CGUIStaticText13getTextHeightEv,partial,,no CGUIStaticText layout; font vtable metrics unmapped; text height uses font vtable metrics and multiline scale; not rebuilt
+55009c,_ZNK6glitch3gui14CGUIStaticText12getTextWidthEv,partial,,no CGUIStaticText layout; font vtable metrics unmapped; text width uses font vtable and per-line loop; not rebuilt
+550354,_ZN6glitch3gui14IGUIStaticTextC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,,no CGUIStaticText layout; font vtable metrics unmapped; IGUIStaticText base ctor; layout dependent
+55061c,_ZN6glitch3gui14CGUIStaticTextC1EPKwbPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiRKNS_4core4rectIiEEb,partial,,no CGUIStaticText layout; font vtable metrics unmapped; CGUIStaticText ctor; font and string setup partly visible; not rebuilt
+550f98,_ZN6glitch3gui14CGUIStaticTextD1Ev,partial,,no CGUIStaticText layout; font vtable metrics unmapped; full destructor; font drop and string vector release not rebuilt
+551048,_ZN6glitch3gui14CGUIStaticTextD2Ev,partial,,no CGUIStaticText layout; font vtable metrics unmapped; base-object destructor variant; not rebuilt
+5510cc,_ZN6glitch3gui14IGUIStaticTextD0Ev,partial,,no CGUIStaticText layout; font vtable metrics unmapped; IGUIStaticText destructor; base dtor call not rebuilt
+551204,_ZN6glitch3gui14CGUIStaticText9breakTextEv,partial,,no CGUIStaticText layout; font vtable metrics unmapped; line wrap over 12 KB body with font metrics; not rebuilt
+551820,_ZN6glitch3gui14CGUIStaticText22updateAbsolutePositionEv,partial,,no CGUIStaticText layout; font vtable metrics unmapped; calls IGUIElement updateAbsolutePosition and breakText; not rebuilt
+551840,_ZN6glitch3gui14CGUIStaticText15setOverrideFontEPNS0_8IGUIFontE,partial,,no CGUIStaticText layout; font vtable metrics unmapped; font swap with reference counts; breakText call not rebuilt
+551888,_ZN6glitch3gui14CGUIStaticText4drawEv,partial,,no CGUIStaticText layout; font vtable metrics unmapped; draw over font and clip; not rebuilt
+551e34,_ZN6glitch3gui14CGUIStaticText7setTextEPKw,partial,,no CGUIStaticText layout; font vtable metrics unmapped; string assign reconstructed in principle; breakText call not rebuilt
+551e64,_ZN6glitch3gui14CGUIStaticTextC2EPKwbPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiRKNS_4core4rectIiEEb,partial,,no CGUIStaticText layout; font vtable metrics unmapped; alternate ctor variant; same gap as 0x55061c
+552244,_ZN6glitch3gui14CGUITabControl17needScrollControlEib,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); scroll width accumulation via font vtable; not rebuilt"
+552378,_ZN6glitch3gui14CGUITabControl9selectTabENS_4core10position2dIiEE,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); tab hit test with font metrics; not rebuilt"
+55251c,_ZN6glitch3gui14CGUITabControl20recalculateScrollBarEv,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); scroll bar recalculation; not rebuilt"
+5525bc,_ZN6glitch3gui14CGUITabControl16setTabExtraWidthEi,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); clamps extra width then calls recalculateScrollBar; not rebuilt"
+5525c8,_ZN6glitch3gui14CGUITabControl12setTabHeightEi,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); sets tab height and recalculates; not rebuilt"
+5525dc,_ZN6glitch3gui14CGUITabControl10scrollLeftEv,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); scroll offset decrement then recalculate; not rebuilt"
+5525f0,_ZN6glitch3gui14CGUITabControl11scrollRightEv,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); scroll offset increment guarded by needScrollControl; not rebuilt"
+55263c,_ZN6glitch3gui14CGUITabControl23setTabVerticalAlignmentENS0_14EGUI_ALIGNMENTE,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); vertical alignment of tabs; not rebuilt"
+552810,_ZN6glitch3gui14CGUITabControl12setActiveTabEi,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); active tab index set and selected flags via vtable; not rebuilt"
+5528d4,_ZN6glitch3gui14CGUITabControl12setActiveTabEPNS0_11IGUIElementE,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); linear search then setActiveTab(int) via vtable; not rebuilt"
+552944,_ZN6glitch3gui14CGUITabControl22updateAbsolutePositionEv,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); calls IGUIElement updateAbsolutePosition and recalculateScrollBar; not rebuilt"
+552a60,_ZN6glitch3gui14CGUITabControl11removeChildEPNS0_11IGUIElementE,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); child removal and active tab fix-up; not rebuilt"
+552c24,_ZN6glitch3gui11IGUIElementC2ENS0_17EGUI_ELEMENT_TYPEEPNS0_15IGUIEnvironmentEPS1_iNS_4core4rectIiEE,partial,,"IGUIElement layout covers the fields, but string storage +0xa0..+0xdf and tool-tip storage +0xe8..+0x127 are not decoded and the ctor writes them"
+552ec0,_ZN6glitch3gui14IGUITabControlC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); IGUITabControl base ctor; not rebuilt"
+552f44,_ZN6glitch3gui14CGUITabControlC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementERKNS_4core4rectIiEEbbi,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); CGUITabControl ctor; not rebuilt"
+5533b0,_ZN6glitch3gui14CGUITabControlC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementERKNS_4core4rectIiEEbbi,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); alternate CGUITabControl ctor; same gap as 0x552f44"
+5537cc,_ZN6glitch3gui7IGUITabC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); IGUITab base ctor; not rebuilt"
+553850,_ZN6glitch3gui7CGUITabC1EiPNS0_15IGUIEnvironmentEPNS0_11IGUIElementERKNS_4core4rectIiEEi,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); CGUITab ctor; not rebuilt"
+553994,_ZN6glitch3gui7CGUITabC2EiPNS0_15IGUIEnvironmentEPNS0_11IGUIElementERKNS_4core4rectIiEEi,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); alternate CGUITab ctor; same gap as 0x553850"
+553a94,_ZN6glitch3gui14CGUITabControl6addTabEPNS0_7CGUITabE,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); adds tab with vector growth; not rebuilt"
+553fa4,_ZN6glitch3gui7CGUITabD1Ev,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); full destructor; not rebuilt"
+5540e4,_ZN6glitch3gui14CGUITabControlD1Ev,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); CGUITabControl destructor; not rebuilt"
+554210,_ZN6glitch3gui14CGUITabControlD2Ev,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); CGUITabControl base-object destructor; not rebuilt"
+554310,_ZN6glitch3gui14CGUITabControl7onEventERKNS_6SEventE,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); event handling via tab vtable; not rebuilt"
+5543ec,_ZN6glitch3gui14CGUITabControl6addTabEPKwi,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); creates tab from text then addTab; not rebuilt"
+554598,_ZN6glitch3gui7IGUITabD0Ev,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); IGUITab destructor; not rebuilt"
+554614,_ZN6glitch3gui14IGUITabControlD0Ev,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); IGUITabControl destructor; not rebuilt"
+554690,_ZN6glitch3gui7CGUITab4drawEv,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); tab draw; not rebuilt"
+554738,_ZN6glitch3gui14CGUITabControl4drawEv,partial,,"no tab layout header (CGUITabControl, CGUITab, IGUITab, IGUITabControl); tab control draw over 1960 byte body; not rebuilt"
+554fa8,_ZN6glitch3gui9CGUITable15setActiveColumnEib,partial,,"no table layout header (CGUITable, IGUITable, Cell); active column change with ordering; not rebuilt"
+555348,_ZN6glitch3gui9CGUITable17recalculateWidthsEv,partial,,"no table layout header (CGUITable, IGUITable, Cell); column width recalculation; not rebuilt"
+5553b8,_ZN6glitch3gui9CGUITable18recalculateHeightsEv,partial,,"no table layout header (CGUITable, IGUITable, Cell); row height recalculation; not rebuilt"
+5554f0,_ZN6glitch3gui9CGUITable15checkScrollbarsEv,partial,,"no table layout header (CGUITable, IGUITable, Cell); scroll bar range checks over 956 byte body; not rebuilt"
+5558ac,_ZN6glitch3gui9CGUITable15refreshControlsEv,partial,,"no table layout header (CGUITable, IGUITable, Cell); control refresh loop; not rebuilt"
+555944,_ZN6glitch3gui9CGUITable15dragColumnStartEii,partial,,"no table layout header (CGUITable, IGUITable, Cell); column drag start; not rebuilt"
+555a3c,_ZN6glitch3gui9CGUITable16dragColumnUpdateEi,partial,,"no table layout header (CGUITable, IGUITable, Cell); column drag update; not rebuilt"
+555ac8,_ZN6glitch3gui9CGUITable18selectColumnHeaderEii,partial,,"no table layout header (CGUITable, IGUITable, Cell); column header selection; not rebuilt"
+555bb0,_ZN6glitch3gui9CGUITable9selectNewEib,partial,,"no table layout header (CGUITable, IGUITable, Cell); row selection; not rebuilt"
+555cc4,_ZN6glitch3gui9CGUITable12selectColumnEib,partial,,"no table layout header (CGUITable, IGUITable, Cell); column selection; not rebuilt"
+555de8,_ZN6glitch3gui9CGUITable12getRowColumnEjjRiS2_,partial,,"no table layout header (CGUITable, IGUITable, Cell); row and column lookup by position; not rebuilt"
+556090,_ZN6glitch3gui9CGUITable4CellC1ERKS2_,partial,,"no table layout header (CGUITable, IGUITable, Cell); Cell copy ctor; string member copy not modelled"
+556134,_ZN6glitch3gui9IGUITableC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,,"no table layout header (CGUITable, IGUITable, Cell); IGUITable base ctor; not rebuilt"
+5563fc,_ZN6glitch3gui9CGUITableC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEbbb,partial,,"no table layout header (CGUITable, IGUITable, Cell); CGUITable ctor; not rebuilt"
+55664c,_ZN6glitch3gui9CGUITableC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEbbb,partial,,"no table layout header (CGUITable, IGUITable, Cell); alternate CGUITable ctor; same gap as 0x5563fc"
+556850,_ZN6glitch3gui9CGUITable4CellC1Ev,partial,,"no table layout header (CGUITable, IGUITable, Cell); Cell default ctor; not rebuilt"
+5568a0,_ZN6glitch3gui9CGUITable7onEventERKNS_6SEventE,partial,,"no table layout header (CGUITable, IGUITable, Cell); table event handling; not rebuilt"
+556ea0,_ZN6glitch3gui9CGUITable4drawEv,partial,,"no table layout header (CGUITable, IGUITable, Cell); table draw over 2548 byte body; not rebuilt"
+557b14,_ZN6glitch3gui9IGUITableD0Ev,partial,,"no table layout header (CGUITable, IGUITable, Cell); IGUITable destructor; not rebuilt"
+557b90,_ZN6glitch3gui9CGUITable4CellD1Ev,partial,,"no table layout header (CGUITable, IGUITable, Cell); Cell destructor; not rebuilt"
+557c90,_ZN6glitch3gui9CGUITableD1Ev,partial,,"no table layout header (CGUITable, IGUITable, Cell); CGUITable destructor; not rebuilt"
+557d80,_ZN6glitch3gui9CGUITableD2Ev,partial,,"no table layout header (CGUITable, IGUITable, Cell); CGUITable base-object destructor; not rebuilt"
+5583e0,_ZN6glitch3gui9CGUITable4CellaSERKS2_,partial,,"no table layout header (CGUITable, IGUITable, Cell); Cell copy assignment; not rebuilt"
+558770,_ZN6glitch3gui9CGUITable9clearRowsEv,partial,,"no table layout header (CGUITable, IGUITable, Cell); clears rows; not rebuilt"
+5587c8,_ZN6glitch3gui9CGUITable5clearEv,partial,,"no table layout header (CGUITable, IGUITable, Cell); clears rows and columns; not rebuilt"
+5588d8,_ZN6glitch3gui9CGUITable9removeRowEj,partial,,"no table layout header (CGUITable, IGUITable, Cell); row removal; not rebuilt"
+558968,_ZN6glitch3gui9CGUITable8swapRowsEjj,partial,,"no table layout header (CGUITable, IGUITable, Cell); row swap; not rebuilt"
+558a18,_ZN6glitch3gui9CGUITable9orderRowsEiNS0_18EGUI_ORDERING_MODEE,partial,,"no table layout header (CGUITable, IGUITable, Cell); row ordering; not rebuilt"
+558e28,_ZN6glitch3gui9CGUITable9breakTextERKSbIwSt11char_traitsIwENS_4core10SAllocatorIwLNS_6memory13E_MEMORY_HINTE0EEEERS9_j,partial,,"no table layout header (CGUITable, IGUITable, Cell); wide string line break over 672 byte body; not rebuilt"
+5590d4,_ZN6glitch3gui9CGUITable11setCellTextEjjPKwNS_5video6SColorE,partial,,"no table layout header (CGUITable, IGUITable, Cell); cell text with colour; not rebuilt"
+5591dc,_ZN6glitch3gui9CGUITable11setCellTextEjjPKw,partial,,"no table layout header (CGUITable, IGUITable, Cell); cell text; not rebuilt"

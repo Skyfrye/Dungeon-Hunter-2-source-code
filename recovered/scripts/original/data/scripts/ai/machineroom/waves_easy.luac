@@ -1,0 +1,272 @@
+
+g_last_wave = false;
+
+-- Example of a "precb" callback
+local function PreCB(wave_id, data)
+	g_last_wave = true;
+end
+
+WAVES = {
+	{	delay = 20000,
+		delay_keep = 15000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{name="Skeleton_01"},
+					{name="Skeleton_02"},
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+					{name="Skeleton_03"},
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+					{name="Skeleton_04"},
+				},
+			},
+		},
+	},
+	{	delay = 1000,
+		delay_keep = 1000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+				},
+			},
+		},
+	},
+	{	delay = 20000,
+		delay_keep = 15000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{name="Skeleton_05"},
+					{name="Skeleton_06"},
+					{name="Skeleton_07"},
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+					{name="Skeleton_08"},
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+					{name="Skeleton_09"},
+				},
+			},
+		},
+	},
+	{	delay = 20000,
+		delay_keep = 15000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{name="Skeleton_10"},
+					{name="Skeleton_11"},
+					{name="Skeleton_12"},
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+					{name="Skeleton_13"},
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+					{name="Skeleton_14"},
+				},
+			},
+		},
+	},
+	{	delay = 20000,
+		delay_keep = 15000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{name="Skeleton_15"},
+					{name="Skeleton_16"},
+					{name="Skeleton_17"},
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+					{name="Skeleton_18"},
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+					{name="Skeleton_19"},
+				},
+			},
+		},
+	},
+	{	delay = 20000,
+		delay_keep = 15000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{name="Skeleton_20"},
+					{name="Skeleton_21"},
+					{name="Skeleton_22"},
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+					{name="Skeleton_23"},
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+					{name="Skeleton_24"},
+				},
+			},
+		},
+	},
+	{	delay = 20000,
+		delay_keep = 15000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{name="Skeleton_25"},
+					{name="Skeleton_26"},
+					{name="Skeleton_27"},
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+					{name="Skeleton_28"},
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+					{name="Skeleton_29"},
+				},
+			},
+		},
+	},
+	{	delay = 20000,
+		delay_keep = 15000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{name="Skeleton_30"},
+					{name="Skeleton_31"},
+					{name="Skeleton_32"},
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+					{name="Skeleton_33"},
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+					{name="Skeleton_34"},
+				},
+			},
+		},
+	},
+	{	delay = 20000,
+		delay_keep = 15000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{name="Skeleton_35"},
+					{name="Skeleton_36"},
+					{name="Skeleton_37"},
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+					{name="Skeleton_38"},
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+					{name="Skeleton_39"},
+				},
+			},
+		},
+	},
+	{	delay = 20000,
+		delay_keep = 15000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{name="Skeleton_40"},
+					{name="Skeleton_41"},
+					{name="Skeleton_42"},
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+					{name="Skeleton_43"},
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+					{name="Skeleton_44"},
+				},
+			},
+		},
+	},
+	{	delay = 20000,
+		delay_keep = 15000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{name="Skeleton_45"},
+					{name="Skeleton_46"},
+					{name="Skeleton_47"},
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+					{name="Skeleton_48"},
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+					{name="Skeleton_49"},
+				},
+			},
+		},
+	},
+	{	delay = 20000,
+		delay_keep = 15000,
+		waves = {
+			{	num_players = 1,
+				monsters = {
+					{name="Skeleton_50"},
+					{name="Skeleton_51"},
+					{name="Skeleton_52"},
+				},
+			},
+			{	num_players = 2,
+				monsters = {
+					{name="Skeleton_53"},
+				},
+			},
+			{	num_players = 3,
+				monsters = {
+					{name="Skeleton_54"},
+				},
+			},
+		},
+	},
+	{	precb = PreCB,
+		delay = 100,
+		delay_keep = 100,
+	},
+};

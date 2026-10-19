@@ -1,0 +1,54 @@
+--[[	Elemental Mastery
+
+	Increases all elemental damage and boost all resistances
+
+--]]
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Mage_ElementalMastery");
+local STRCT_SNS_LVL	= GetPyStruct("CharacterProperties", "SnS_Level");
+
+-- Cached values
+local skill_level	=	0;
+local buff = nil;
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	if (buff) then
+		RemoveBuff(CLASS_ID, buff);
+		buff = nil;
+	end
+	if (slvl~=0) then 
+		SetProp(STRCT_SNS_LVL, ToFixed(skill_level));
+		buff = CreateBuff(CLASS_ID, 0, false, slvl);
+		ApplyBuff(CLASS_ID, buff);
+	end
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

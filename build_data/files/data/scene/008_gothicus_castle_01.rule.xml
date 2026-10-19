@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/castle"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\008_gothicus_castle_01.pyscript"
+	camera_znear="900"
+	camera_zfar="5000"
+	music="GothicusCastleHubAmbientMusic"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	light_set="data/3D/Light/castle.lightset_xml"
+	fixed_light_set="data/3D/Light/castle_es1_1.lightset_xml"
+	prog_vertex_buffer_size="343896"
+	prog_index_buffer_size="75024"
+	fix_vertex_buffer_size="1759968"
+	fix_index_buffer_size="102066"
+>
+
+	<list name="deadends" random="true">
+		<elem name="deadend_n" gameplay="gc01_deadend_n_01.mgp" visual="gc01_deadend_n_01.mvp"/>
+	</list>
+	
+	<list name="tmodules" random="true">
+		<elem name="t_new" gameplay="gc01_t_new_01.mgp" visual="gc01_t_new_01.mvp"/>
+	</list>
+
+	<list name="objective_rooms" random="true">
+		<elem name="entrance_ns" gameplay="gc01_entrance_ns_01.mgp" visual="gc01_entrance_ns_01.mvp"/>
+		<elem name="kingroom_s" gameplay="gc01_kingroom_s_01.mgp" visual="gc01_kingroom_s_01.mvp"/>
+		<elem name="objectiveroom_s" gameplay="gc01_objectiveroom_s_01.mgp" visual="gc01_objectiveroom_s_01.mvp"/>
+	</list>
+
+	<list name="path" random="true">
+		<elem name="corner_se" gameplay="gc01_corner_se_01.mgp" visual="elemental_corner_se_01.mvp"/>
+		<elem name="corner_wn" gameplay="gc01_corner_wn_01.mgp" visual="elemental_corner_wn_01.mvp"/>
+		<elem name="corner_ws" gameplay="gc01_corner_ws_01.mgp" visual="gc01_corner_ws_01.mvp"/>
+		<elem name="straighta_ns" gameplay="gc01_straighta_ns_01.mgp" visual="elemental_straighta_ns_01.mvp"/>
+		<elem name="straightb_ew" gameplay="gc01_straightb_ew_01.mgp" visual="elemental_straightb_ew_01.mvp"/>
+	</list>
+
+<RootRule name="#objective_rooms[1]">
+	<ForceBlock name="#path[1]">
+		<ForceBlock name="#path[4]">
+			<ForceBlock name="#path[0]">
+				<ForceBlock name="#objective_rooms[0]">		
+					<ForceBlock name="#path[3]">
+						<ForceBlock name="#deadends[0]"/>
+					</ForceBlock>
+				</ForceBlock>
+			</ForceBlock>
+		</ForceBlock>
+	</ForceBlock>
+</RootRule>
+</rules>

@@ -1,0 +1,27 @@
+--[[	Trap Example Script
+
+	Example of what a trap script would looks like.
+
+--]]
+
+
+-- 0 : actor represents what triggered the trap
+--	R : the function must indicates if the trap was indeed triggered (in case you want to check for immaterial or flying or whatever)
+function OnTrigger(actor)
+	--if(actor:IsFlying() or actor:IsImmaterial()) then
+	--	return false;
+	--end
+
+	return true;
+end
+
+
+-- 0 : victim represents someone who did get caught by the trap
+function OnDamageRoll(victim)
+	-- Deal damages here
+end
+
+
+-- 0 : event name
+function OnAnimEvent(event)
+end

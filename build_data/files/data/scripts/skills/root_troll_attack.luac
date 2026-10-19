@@ -1,0 +1,83 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Root Troll Bash down Skill: 
+-- 
+-- - Normal melee attack (Bash down).
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+--local RANGE				= 100.0;
+local RANGE				= 400.0; -- 350 is the melee range + 50 for the Mc body
+
+local CLASS_ID			= GetPyOID("ClassTable", "Root_Troll_Attack");
+
+-- Cached values
+local target;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(RANGE);
+	-- that search get the first target in front
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+		PlayFX(GetPyOID("AnimatedEffectTable", "Root_Slam"));
+	else
+		target = nil;
+		--Trace("there is nobody to attack here!!!")
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(target) then
+		SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+		SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+		SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+		TargetListSearch((RANGE+60), 145, 0,-60,0, true);
+		-- Will do a target list search for the range, with a relative offset of -60 so the "pie" is getting the player
+		repeat -- get all the players in range multiplayer
+			if(not IsTargetListEmpty()) then
+				local newTarget = GetTargetListTop();
+				PopTargetList();
+				ApplyPropClass(CLASS_ID);
+				local dmg = SkillCombatRoll(newTarget);
+				if(dmg > 0) then
+					target:PlayFX(GetPyOID("AnimatedEffectTable", "spell_earth_hurt"));
+				end
+			end
+		until (IsTargetListEmpty()) 
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

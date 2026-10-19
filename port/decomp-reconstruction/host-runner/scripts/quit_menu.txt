@@ -1,0 +1,15 @@
+# continue the saved hero, open the pause menu, quit to the main menu (Yes), continue again, quit again (level teardown twice)
+60 tap 1000 700
+200 tap 2148 322
+300 tap 2136 368
+420 tap 1200 540
+800 click 176 340
+860 click 1190 678
+920 click 912 604
+1100 tap 2148 322
+1200 tap 2136 368
+1330 tap 1200 540
+1700 click 176 340
+1760 click 1190 678
+1820 click 912 604
+2000 quit

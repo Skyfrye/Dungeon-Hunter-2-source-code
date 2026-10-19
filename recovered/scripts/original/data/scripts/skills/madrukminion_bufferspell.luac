@@ -1,0 +1,67 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Madruk Buffer Minion Skill: 
+-- 
+-- - Apply a temporary buff on Madruk at regular intervals until the buffer's death.
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE 			= 1000;
+local BUFF_DURATION		= 3000;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Madruk_Buff_AttDef");
+local target;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	PlayFX(GetPyOID("AnimatedEffectTable", "Madruk_orange_faery_cast"));
+
+	if(not target) then
+		SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Friend"));
+		SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+		SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+		
+		TargetListSearch(RANGE);
+		if(not IsTargetListEmpty()) then
+			target = GetTargetListTop();
+			LookAt(target);
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(target) then
+		buff = target:CreateBuff(CLASS_ID, BUFF_DURATION);
+		target:ApplyBuff(CLASS_ID, buff);
+		
+		target:PlayFX(GetPyOID("AnimatedEffectTable", "Madruk_shield"));
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target)
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_);

@@ -1,0 +1,6 @@
+# Bluetooth (mode 2) on the host: no Bluetooth device behind the JNI stub, the game must stay in its menus.
+60 tap 1000 700
+300 mp init 2
+330 mp create
+600 mp status
+1200 mp status

@@ -1,0 +1,74 @@
+{
+  "library": "libStormGLOFT.so",
+  "sha256": "be6beaab782944e5ce39cca8e850fd03de654e4236c9329621043adcbee291e1",
+  "file_size": 907744,
+  "machine": "EM_ARM",
+  "elf_class": 32,
+  "entry_address": 0,
+  "sections": 27,
+  "symbol_table_rows": 2426,
+  "symbol_tables": {
+    ".dynsym": 2426
+  },
+  "defined_function_symbol_rows": 1596,
+  "unique_defined_function_symbols": 1596,
+  "unique_function_ranges": 1500,
+  "exported_function_ranges": 1500,
+  "zero_size_function_ranges": 14,
+  "instruction_count_per_unique_range": 119668,
+  "class_groups": 139,
+  "assembly_files": 139,
+  "imports_unique": 126,
+  "relocations": 7603,
+  "vtables": 93,
+  "typeinfo_symbols": 172,
+  "mapping_symbol_rows_unique_addresses": 0,
+  "arm_unwind_index_entries": 1887,
+  "extracted_strings": 12072,
+  "build_source_filenames": 0,
+  "coverage": [
+    {
+      "section": ".plt",
+      "address": 204492,
+      "size": 16160,
+      "instruction_bytes": 0,
+      "mapped_data_bytes": 0,
+      "undecoded_bytes": 0,
+      "outside_function_ranges_bytes": 16160,
+      "instruction_byte_fraction": 0.0,
+      "accounted_byte_fraction": 0.0
+    },
+    {
+      "section": ".text",
+      "address": 220656,
+      "size": 504194,
+      "instruction_bytes": 321490,
+      "mapped_data_bytes": 0,
+      "undecoded_bytes": 418,
+      "outside_function_ranges_bytes": 182286,
+      "instruction_byte_fraction": 0.6376315465872263,
+      "accounted_byte_fraction": 0.6384605925496932
+    }
+  ],
+  "unresolved_decoder_ranges": 161,
+  "outside_function_ranges": 230,
+  "gameplay_symbol_examples": [],
+  "source_filename_examples": [],
+  "json_chunks": {
+    "symbols": [
+      "symbols-001.json"
+    ],
+    "relocations": [
+      "relocations-001.json"
+    ],
+    "vtables": [
+      "vtables-001.json"
+    ],
+    "strings": [
+      "strings-001.json"
+    ],
+    "function_index": [
+      "function-index-001.json"
+    ]
+  }
+}

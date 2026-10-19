@@ -1,0 +1,17 @@
+--[[ Death Scripts
+
+	IMPORTANT NOTES:
+		-	Don't rename the file
+		-	Don't rename the core functions. You can add sub functions however.
+		-	This file will be included with many different others in the same instance
+			of a script, so keep the nomenclature name clash safe, using the prefix "DS"
+			for anything that is global.
+--]]
+
+function LocalGameOver()
+	-- PlaySound(Sound, IsLooping, Millisec of fading, stop all musics)
+	PlaySound("Lose", false, 0, true);
+	-- TODO
+	Trace("Everyone is dead in Coop...");
+	Trace("TODO: black screen, reload, sound, music, ads, insults, whatever...");
+end

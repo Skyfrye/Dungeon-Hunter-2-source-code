@@ -1,0 +1,441 @@
+-- FLAGS
+local attack_flag 			= true; -- checks if the character is ready to attack.
+local first_melee_flag 		= true; -- checks if the first melee attack can be initialized.
+local summon_flag 			= true; -- checks if the character's helpers can be summoned.
+local musicStarted_flag		= false; -- checks if the boss music has started or not.
+local canUseDyingAttack		= true;	-- check if the boss can perform his dying attack.
+local hasChangedForm		= false; -- check if Madruk has changed to MadrukTorso
+
+-- CONSTANTS
+local g_healer_oid 			= GetPyOID("CharacterTable", "MadrukHealerMinion");
+local g_buffer_oid 			= GetPyOID("CharacterTable", "MadrukBufferMinion");
+
+-- DATA
+local meleeAttack_prob 		= 50; -- chances in PCT to perform a melee attack when in melee range.
+local meleeAtkInRanged_prob = 30; -- chances in PCT to perform a melee attack in ranged range.
+local rangedAttack_prob 	= 50; -- chances in PCT to perform a ranged attack in ranged range.
+local normalAttack_prob 	= 70; -- chances in PCT to perform a regular attack.
+
+
+-- TIMERS
+local ATTACK_DELAY 			= 2000; -- Timer attack delay.
+local RESPAWN_DELAY 		= 17000; -- Timer for character's helpers respawns.
+local HELPER_CHECK_DELAY 	= 5000; -- Timer to check if helpers are still alive.
+
+-- CACHED VALUES
+local timer_attack_flag;
+local timer_helper_flag;
+local timer_summonBuffer_flag;
+local timer_summonHealer_flag;
+local helpers_array = { Healer, Buffer };
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+--RegisterSummon(g_summon_oid);
+RegisterSummon(g_healer_oid);
+RegisterSummon(g_buffer_oid);
+-- -------------------------------------------------------------------------------
+local allowed					= false;	-- check if the NPc is really spawned before allowing it to attack and move
+
+local function InitVars()
+	-- FLAGS
+	attack_flag 			= true; -- checks if the character is ready to attack.
+	first_melee_flag 		= true; -- checks if the first melee attack can be initialized.
+	summon_flag 			= true; -- checks if the character's helpers can be summoned.
+	musicStarted_flag		= false; -- checks if the boss music has started or not.
+	canUseDyingAttack		= true;	-- check if the boss can perform his dying attack.
+	hasChangedForm			= false; -- check if Madruk has changed to MadrukTorso
+
+	-- CONSTANTS
+	--g_summon_oid = GetPyOID("CharacterTable", "MadrukTorso");
+	g_healer_oid = GetPyOID("CharacterTable", "MadrukHealerMinion");
+	g_buffer_oid = GetPyOID("CharacterTable", "MadrukBufferMinion");
+
+	-- DATA
+	meleeAttack_prob = 50; -- chances in PCT to perform a melee attack when in melee range.
+	meleeAtkInRanged_prob = 30; -- chances in PCT to perform a melee attack in ranged range.
+	rangedAttack_prob = 50; -- chances in PCT to perform a ranged attack in ranged range.
+	normalAttack_prob = 70; -- chances in PCT to perform a regular attack.
+
+
+	-- TIMERS
+	ATTACK_DELAY = 2000; -- Timer attack delay.
+	RESPAWN_DELAY = 15000; -- Timer for character's helpers respawns.
+	HELPER_CHECK_DELAY = 5000; -- Timer to check if helpers are still alive.
+	allowed					= false;	-- check if the NPc is really spawned before allowing it to attack and move
+	if (timer_summonHealer_flag) then
+		StopTimerCB(timer_summonHealer_flag)
+		timer_summonHealer_flag = nil;
+	end
+	if (timer_summonBuffer_flag) then
+		StopTimerCB(timer_summonBuffer_flag)
+		timer_summonBuffer_flag = nil;
+	end
+	if (timer_attack_flag) then
+		StopTimerCB(timer_attack_flag)
+		timer_attack_flag = nil;
+	end
+	if (timer_helper_flag) then
+		StopTimerCB(timer_helper_flag)
+		timer_helper_flag = nil;
+	end
+end
+
+function getAIState(object, traces) -- Debug function -- to be removed
+	local state = object:GetState();
+	if( state == GetPyCst("AIStates", "Dead")) then
+		if (traces) then Trace("--> State: Dead"); end
+		return "Dead";
+	end
+	if( state == GetPyCst("AIStates", "Idle")) then
+		if (traces) then Trace("--> State: Idle"); end
+		return "Idle";
+	end
+	if( state == GetPyCst("AIStates", "Limbus")) then
+		if (traces) then Trace("--> State: Limbus"); end
+		return "Limbus";
+	end
+	if( state == GetPyCst("AIStates", "Spawn")) then
+		if (traces) then Trace("--> State: Spawn"); end
+		return "Spawn";
+	end
+	if( state == GetPyCst("AIStates", "Despawn")) then
+		if (traces) then Trace("--> State: Despawn"); end
+		return "Despawn";
+	end
+	if( state == GetPyCst("AIStates", "Move")) then
+		if (traces) then Trace("--> State: Move"); end
+		return "Move";
+	end
+	if( state == GetPyCst("AIStates", "Attack")) then
+		if (traces) then Trace("--> State: Attack"); end
+		return "Attack";
+	end
+	if( state == GetPyCst("AIStates", "Skill")) then
+		if (traces) then Trace("--> State: Skill"); end
+		return "Skill";
+	end
+	if( state == GetPyCst("AIStates", "Cast")) then
+		if (traces) then Trace("--> State: Cast"); end
+		return "Cast";
+	end
+	if( state == GetPyCst("AIStates", "Scared")) then
+		if (traces) then Trace("--> State: Scared"); end
+		return "Scared";
+	end
+	if( state == GetPyCst("AIStates", "Stunned")) then
+		if (traces) then Trace("--> State: Stunned"); end
+		return "Stunned";
+	end
+	if( state == GetPyCst("AIStates", "KnockedBack")) then
+		if (traces) then Trace("--> State: KnockedBack"); end
+		return "KnockedBack";
+	end
+
+	if( state == GetPyCst("AIStates", "Injured")) then
+		if (traces) then Trace("--> State: Injured"); end
+		return "Injured";
+	end
+	if( state == GetPyCst("AIStates", "Interact")) then
+		if (traces) then Trace("--> State: Interact"); end
+		return "Interact";
+	end
+	if( state == GetPyCst("AIStates", "Anim")) then
+		if (traces) then Trace("--> State: Anim"); end
+		return "Anim";
+	end
+	if( state == GetPyCst("AIStates", "Reviving")) then
+		if (traces) then Trace("--> State: Reviving"); end
+		return "Reviving";
+	end
+	if( state == GetPyCst("AIStates", "Revived")) then
+		if (traces) then Trace("--> State: Revived"); end
+		return "Revived";
+	end
+	if( state == GetPyCst("AIStates", "PreSpawn")) then
+		if (traces) then Trace("--> State: PreSpawn"); end
+		return "PreSpawn";
+	end
+	return "No state";
+end
+
+local function isAttackReady()
+	attack_flag = true;
+end
+
+
+-- -------------------------------------------------------------------------------
+-- EVENTS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+local function isAttackReady()
+	attack_flag = true;
+end
+
+local function Do_RangedAttack()
+	local prob_pct = GetRand(1,100);
+	
+	attack_flag = false;
+	
+	if (prob_pct < normalAttack_prob) then
+		DoSkill(2);
+	else
+		DoSkill(3);
+	end
+end
+
+local function Do_MeleeAttack()
+	local prob_pct = GetRand(1,100);
+	attack_flag = false;
+	
+	if (prob_pct < normalAttack_prob) then
+		DoSkill(0);
+	else
+		DoSkill(1);
+	end
+end
+
+local function SummonHelpers(timerID, helperType)
+	if (helperType == "ALL") then
+		helpers_array.Healer = Summon(g_healer_oid, false, -460.0, -460.0, 0.0, true);
+		helpers_array.Buffer = Summon(g_buffer_oid, false, 460.0, -460.0, 0.0, true);
+		helpers_array.Healer:LOCK();
+		helpers_array.Buffer:LOCK();
+	elseif (helperType == "Healer") then
+		helpers_array.Healer = Summon(g_healer_oid, false, -460.0, -460.0, 0.0, true);
+		helpers_array.Healer:LOCK();
+	elseif (helperType == "Buffer") then
+		helpers_array.Buffer = Summon(g_buffer_oid, false, 460.0, -460.0, 0.0, true);
+		helpers_array.Buffer:LOCK();
+	end
+	
+end
+
+local function isHelpersAlive()
+	if (helpers_array.Healer ~= "NONE" and helpers_array.Healer ~= nil) then
+		if (helpers_array.Healer:GetHP() <= 0) then
+			helpers_array.Healer:UNLOCK();
+			helpers_array.Healer = "NONE";
+			timer_summonHealer_flag = StartTimerCB(RESPAWN_DELAY, false, SummonHelpers, "Healer");
+		end
+	end
+	
+	if (helpers_array.Buffer ~= "NONE" and helpers_array.Buffer ~= nil) then
+		if (helpers_array.Buffer:GetHP() <= 0) then
+			helpers_array.Buffer:UNLOCK();
+			helpers_array.Buffer = "NONE";
+			timer_summonBuffer_flag = StartTimerCB(RESPAWN_DELAY, false, SummonHelpers, "Buffer");
+		end
+	end
+end
+
+-- -------------------------------------------------------------------------------
+
+
+
+-- -------------------------------------------------------------------------------
+-- CALLBACKS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+function madruk_OnInit()
+	OnInit();
+	InitVars();
+----------------------------------------------------------------------------------------
+-- Dynamic level for monster. Monster must have there LevelMax param set to use dynamic level
+----------------------------------------------------------------------------------------
+	local m_lvl_max = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMax")));
+	local m_lvl_min = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMin")));
+	local m_lvl_offset = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelOffset")));
+	local pl_lvl = GetHostPlayerLevel();
+	local pl_diff = GetHostPlayerDifficulty();
+	local m_lvl = pl_lvl;
+	local m_level_min, m_level_max = GetCurrentLevelRange(pl_diff);
+
+	if(m_lvl_max > -1 ) then
+		if(m_level_max and m_level_max > -1 ) then
+			if( m_lvl <= m_level_min ) then
+				m_lvl = m_level_min;
+			else
+				if( m_lvl >= m_level_max ) then
+					m_lvl = m_level_max;
+				end
+			end
+		else
+			if( m_lvl <= m_lvl_min ) then
+				m_lvl = m_lvl_min;
+			else
+				if( m_lvl >= m_lvl_max ) then
+					m_lvl = m_lvl_max;
+				end
+			end
+		end
+		m_lvl = m_lvl + m_lvl_offset;
+
+		SetLevel(ToFixed(m_lvl));
+	end
+----------------------------------------------------------------------------------------
+-- End Dynamic level for monster
+----------------------------------------------------------------------------------------
+
+
+	
+end
+AddToVFTable("OnInit", "madruk_OnInit");
+
+
+
+-- -------------------------------------------------------------------------------
+function madruk_OnEnemySpotted(enemy)
+	if (allowed) then
+		if (summon_flag == true) then
+			summon_flag = false;
+			SummonHelpers(nil, "ALL");
+		end
+	
+		if (not musicStarted_flag) then
+			musicStarted_flag = true;
+			PlayMusic("HellKingTwoLoopMusic", 500);
+		end
+	
+		if(not HasTarget()) then
+ 			AddAggro(enemy, 0);
+ 			SetTarget(enemy);
+ 		end
+ 	end
+end
+AddToVFTable("OnEnemySpotted", "madruk_OnEnemySpotted");
+
+
+
+-- -------------------------------------------------------------------------------
+function madruk_OnTargetOutOfRange()
+	if (allowed) then
+		if (first_melee_flag == false) then
+			first_melee_flag = true;
+		end
+	
+		if(state == GetPyCst("AIStates", "Idle")
+			or	not HasPath()
+			and attack_flag == true)
+		then
+
+			local prob_pct = GetRand(1,100);
+			local state = GetState();
+		
+			if(prob_pct < meleeAtkInRanged_prob) then
+				MoveTo(GetTarget());
+			else
+				Do_RangedAttack();
+			end
+		end
+	end
+end
+AddToVFTable("OnTargetOutOfRange", "madruk_OnTargetOutOfRange");
+
+
+
+-- -------------------------------------------------------------------------------
+function madruk_OnTargetInRangedRange()
+	if (allowed) then
+		if(state == GetPyCst("AIStates", "Idle")
+			or	not HasPath()
+			and attack_flag == true)
+		then
+	
+			local prob_pct = GetRand(1,100);
+			local state = GetState();
+		
+			if(prob_pct < meleeAtkInRanged_prob) then
+				MoveTo(GetTarget());
+				attack_flag = false;
+			else
+				Do_RangedAttack();
+			end
+		end
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "madruk_OnTargetInRangedRange");
+
+
+
+-- -------------------------------------------------------------------------------
+function madruk_OnTargetInCloseRange()
+	if (allowed) then 
+		if (first_melee_flag == true and attack_flag == true) then
+			DoSkill(0);
+			first_melee_flag = false;
+		elseif (attack_flag == true) then
+			Do_MeleeAttack();
+		end
+	end
+end
+AddToVFTable("OnTargetInCloseRange", "madruk_OnTargetInCloseRange");
+
+
+
+-- -------------------------------------------------------------------------------
+function madruk_OnUpdate(timestamp)
+	OnUpdate(timestamp);
+	local HPCurr, HPMax, HPPercentCurr = GetPropHP();
+	
+	if(HPPercentCurr <= 50) then
+		hasChangedForm = true;
+		CallPyScript("end_MadrukPhase2");
+	end
+	
+	if (allowed==false) then
+		local check = getAIState(GetSelf(), false);
+		if (check=="Idle") then
+			allowed = true;
+			timer_attack_flag = StartTimerCB(ATTACK_DELAY, true, isAttackReady);
+			timer_helper_flag = StartTimerCB(HELPER_CHECK_DELAY, true, isHelpersAlive);
+		end
+	end
+	
+end
+AddToVFTable("OnUpdate", "madruk_OnUpdate");
+
+-- -------------------------------------------------------------------------------
+function madruk_OnTargetDied()
+	Stop();
+	if (HasTarget()) then
+		ClearAggro(GetTarget());
+		ClearTarget();
+	end
+end
+AddToVFTable("OnTargetDied", "madruk_OnTargetDied");
+
+-- -------------------------------------------------------------------------------
+local function madruk_OnEndGameCleanUp()
+	if ((helpers_array.Healer ~= nil) and (helpers_array.Healer ~= "NONE")) then
+		helpers_array.Healer:UNLOCK();
+		helpers_array.Healer:Kill();
+		helpers_array.Healer = nil;
+	end
+	if ((helpers_array.Buffer ~= nil) and (helpers_array.Buffer ~= "NONE")) then
+		helpers_array.Buffer:UNLOCK();
+		helpers_array.Buffer:Kill();
+		helpers_array.Buffer = nil;
+	end
+	
+	if (timer_attack_flag) then 		StopTimerCB(timer_attack_flag); end
+	if (timer_helper_flag) then 		StopTimerCB(timer_helper_flag); end
+	if (timer_summonBuffer_flag) then	StopTimerCB(timer_summonBuffer_flag); end
+	if (timer_summonHealer_flag) then 	StopTimerCB(timer_summonHealer_flag); end
+end
+
+-- -------------------------------------------------------------------------------
+function madruk_OnDied(killer)
+	if (not hasChangedForm) then
+		CallPyScript("end_MadrukPhase2");
+	end
+
+	PlaySound("HellKingThreeIntroMusic", false, 0, false);
+	madruk_OnEndGameCleanUp();
+end
+AddToVFTable("OnDied", "madruk_OnDied");
+
+-- -------------------------------------------------------------------------------
+function madruk_OnTerminate()
+	madruk_OnEndGameCleanUp();
+end
+AddToVFTable("OnTerminate", "madruk_OnTerminate");

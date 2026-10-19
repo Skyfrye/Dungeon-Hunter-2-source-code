@@ -1,0 +1,62 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Madruk AOE Knockback Skill: 
+-- 
+-- - Low damage with 100% AOE knockback chances.
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+
+local RANGE			= 300.0;
+
+local CLASS_ID		= GetPyOID("ClassTable", "MadrukAOEPushback");
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+
+	TargetListSearch(RANGE);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(not IsTargetListEmpty()) then
+		ApplyPropClass(CLASS_ID);
+
+		repeat
+			local target = GetTargetListTop();
+			PopTargetList();
+
+			SkillCombatRoll(target);
+		until(IsTargetListEmpty())
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

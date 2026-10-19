@@ -1,0 +1,58 @@
+<Module
+>
+	<GameObject
+		type="Light"
+		name="_prim_PlayerLight"
+		position="0.0,0.0,0.0"
+		scale="1.0,1.0,1.0"
+		debugcolor="255.0,229.0,0.0"
+		rotation="0.0,0.0,0.0"
+		radius="3.5"
+		attenuation="0.0,0.0,7.2"
+		ambientColor="255.0,255.0,255.0"
+		diffuseColor="232.0,130.0,38.2"
+		specularColor="242.0,186.0,122.0"
+		gametype="LightPoint"
+		attachedTo="Player"
+		attachedOffset="0.0,0.0,200.0"
+		automatic="1"
+		_templateName="PlayerLight"
+	/>
+	
+	<GameObject
+		type="Light"
+		name="_prim_PlayerArmorLight"
+		position="0.0,0.0,0.0"
+		scale="1.0,1.0,1.0"
+		debugcolor="255.0,229.0,0.0"
+		rotation="0.0,0.0,0.0"
+		radius="3.5"
+		attenuation="1.25,5.1,5.0"
+		ambientColor="230.0,242.0,255.0"
+		diffuseColor="4.0,105.0,130.0" 
+		specularColor="255.0,171.0,84.0"
+		gametype="LightPoint"
+		attachedTo="Player"
+		attachedOffset="50.0,25.0,425.0"
+		_templateName="PlayerLight"
+	/>
+	
+	<GameObject
+		type="Light"
+		name="_prim_LightOff"
+		position="0.0,0.0,0.0"
+		scale="1.0,1.0,1.0"
+		debugcolor="255.0,229.0,0.0"
+		rotation="0.0,0.0,0.0"
+		radius="3.5"
+		attenuation="0.0,0.0,7.2"
+		ambientColor="255.0,255.0,255.0"
+		diffuseColor="0.0,0.0,0.0"
+		specularColor="0.0,0.0,0.0"
+		gametype="LightPoint"
+		attachedTo="Player"
+		attachedOffset="1000000.0,1000000.0,1000000.0"
+		_templateName="PlayerLight"
+	/>
+
+</Module>

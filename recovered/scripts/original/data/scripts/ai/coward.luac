@@ -1,0 +1,2 @@
+Include("monster");
+Include("coward_core");

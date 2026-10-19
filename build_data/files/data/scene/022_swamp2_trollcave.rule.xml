@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/swamp"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\022_SWAMP2_TROLL_CAVE.pyscript"
+	camera_znear="900"
+	camera_zfar="5000"
+	music="SwampHubAmbientMusic"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	light_set="data/3D/Light/swampcave.lightset_xml"
+	fixed_light_set="data/3D/Light/swampcave_es1_1.lightset_xml"
+	prog_vertex_buffer_size="152488"
+	prog_index_buffer_size="38416"
+	fix_vertex_buffer_size="368308"
+	fix_index_buffer_size="61570"
+>
+
+<!-- TEST -->
+	<list name="start" random="true">
+		<elem name="deadend_swpcave_w_00" gameplay="trollcave_deadend_swpcave_w_00.mgp" visual="trollcave_deadend_swpcave_w_00.mvp"/>
+	</list>
+
+	<list name="deadends2" random="true">
+		<elem name="deadend_swpcave_n_00" gameplay="trollcave_deadend_swpcave_n_00.mgp" visual="trollcave_deadend_swpcave_n_00.mvp"/>
+		<elem name="deadend_swpcave_n_00" gameplay="trollcave_deadend_swpcave_n_00.mgp" visual="trollcave_deadend_swpcave_n_00.mvp"/>
+		<elem name="deadend_swpcave_n_00" gameplay="trollcave_deadend_swpcave_n_00.mgp" visual="trollcave_deadend_swpcave_n_00.mvp"/>
+		<elem name="deadend_swpcave_n_00" gameplay="trollcave_deadend_swpcave_merchant_n_00.mgp" visual="trollcave_deadend_swpcave_n_00.mvp"/>
+	</list>
+	
+	<list name="deadends3" random="true">
+		<elem name="deadend_swpcave_s_00" gameplay="trollcave_deadend_swpcave_s_00.mgp" visual="trollcave_deadend_swpcave_s_00.mvp"/>
+	</list>
+
+	<list name="bossroom" random="true">
+		<elem name="t_swpcave_nse_00" gameplay="trollcave_t_swpcave_nse_01.mgp" visual="trollcave_t_swpcave_nse_01.mvp"/>
+	</list>
+	
+	<list name="straight" random="true">
+		<elem name="straight_swpcave_we_00" gameplay="trollcave_straight_swpcave_we_01.mgp" visual="trollcave_straight_swpcave_we_01.mvp"/>
+	</list>	
+	
+	<list name="path_road" random="true">
+		<elem name="straight_swpcave_we_00" gameplay="trollcave_straight_swpcave_we_00.mgp" visual="trollcave_straight_swpcave_we_00.mvp"/>
+		<elem name="straight_swpcave_ns_00" gameplay="trollcave_straight_swpcave_ns_00.mgp" visual="trollcave_straight_swpcave_ns_00.mvp"/>
+		<elem name="corner_swpcave_nw_00" gameplay="trollcave_corner_swpcave_nw_00.mgp" visual="trollcave_corner_swpcave_nw_00.mvp"/>
+		<elem name="corner_swpcave_se_00" gameplay="trollcave_corner_swpcave_se_00.mgp" visual="trollcave_corner_swpcave_se_00.mvp"/>
+		<elem name="corner_swpcave_sw_00" gameplay="trollcave_corner_swpcave_sw_00.mgp" visual="trollcave_corner_swpcave_sw_00.mvp"/>
+		<elem name="corner_swpcave_sw_00" gameplay="trollcave_corner_swpcave_sw_01.mgp" visual="trollcave_corner_swpcave_sw_00.mvp"/>
+		<elem name="corner_swpcave_ne_00" gameplay="trollcave_corner_swpcave_ne_00.mgp" visual="trollcave_corner_swpcave_ne_00.mvp"/>
+	</list>
+
+	<RootRule name="#start">
+		<ForceBlock name="#straight">
+			<Path name="#path_road" length="3,5" dontGoBack="true">
+				<ForceBlock name="#bossroom">
+					<ForceBlock name="#deadends2"/>
+					<ForceBlock name="#deadends3"/>
+				</ForceBlock>
+			</Path>
+		</ForceBlock>
+	</RootRule>
+</rules>
+
+<!--<RootRule name="#path_swamp2[1]">
+	<ForceBlock name="#path_swamp2[3]">
+		<Path name="#path_swamp2" length="5" dontgoback=True>
+			<ForceBlock name="#deadends[1]"/>
+		</Path>
+	</ForceBlock>
+	<EndPath exit="north"/>
+</RootRule>
+</rules>-->

@@ -1,0 +1,2 @@
+Include("myBossName_settings");
+Include("generic_boss_core");

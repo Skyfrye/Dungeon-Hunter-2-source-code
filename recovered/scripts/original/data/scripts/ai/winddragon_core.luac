@@ -1,0 +1,464 @@
+-- FLAGS
+local attack_flag				= false; -- checks if the character is ready to attack.
+local musicStarted_flag 		= false; -- checks if the boss music has started.
+local sp_attack_flag			= false;
+
+-- CONSTANTS
+local STATE_SKILL				= GetPyCst("AIStates", "Skill");
+local STATE_IDLE				= GetPyCst("AIStates", "Idle");
+
+-- CACHED VALUES
+local timer_attack_flag 		= nil;
+local timer_spot_targeting 		= nil;
+local timer_sp_attack_flag 		= nil;
+local allowed					= false;	-- check if the NPc is really spawned before allowing it to attack and move
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- EVENTS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+local function InitVars()
+	attack_flag				= false; 
+	musicStarted_flag 		= false; 
+	sp_attack_flag			= false;
+	allowed					= false;	-- check if the NPc is really spawned before allowing it to attack and move
+	if (timer_attack_flag) then
+		StopTimerCB(timer_attack_flag);
+		timer_attack_flag = nil;
+	end
+	if (timer_spot_targeting) then
+		StopTimerCB(timer_spot_targeting);
+		timer_spot_targeting = nil;
+	end
+	if (timer_sp_attack_flag) then
+		StopTimerCB(timer_sp_attack_flag);
+		timer_sp_attack_flag = nil;
+	end
+	
+end
+
+-- -------------------------------------------------------------------------------
+function getAIState(object, traces) -- To get the AI states and used also for AI debugging
+	local state = object:GetState();
+	if( state == GetPyCst("AIStates", "Dead")) then
+		if (traces) then Trace("--> State: Dead"); end
+		return "Dead";
+	end
+	if( state == GetPyCst("AIStates", "Idle")) then
+		if (traces) then Trace("--> State: Idle"); end
+		return "Idle";
+	end
+	if( state == GetPyCst("AIStates", "Limbus")) then
+		if (traces) then Trace("--> State: Limbus"); end
+		return "Limbus";
+	end
+	if( state == GetPyCst("AIStates", "Spawn")) then
+		if (traces) then Trace("--> State: Spawn"); end
+		return "Spawn";
+	end
+	if( state == GetPyCst("AIStates", "Despawn")) then
+		if (traces) then Trace("--> State: Despawn"); end
+		return "Despawn";
+	end
+	if( state == GetPyCst("AIStates", "Move")) then
+		if (traces) then Trace("--> State: Move"); end
+		return "Move";
+	end
+	if( state == GetPyCst("AIStates", "Attack")) then
+		if (traces) then Trace("--> State: Attack"); end
+		return "Attack";
+	end
+	if( state == GetPyCst("AIStates", "Skill")) then
+		if (traces) then Trace("--> State: Skill"); end
+		return "Skill";
+	end
+	if( state == GetPyCst("AIStates", "Cast")) then
+		if (traces) then Trace("--> State: Cast"); end
+		return "Cast";
+	end
+	if( state == GetPyCst("AIStates", "Scared")) then
+		if (traces) then Trace("--> State: Scared"); end
+		return "Scared";
+	end
+	if( state == GetPyCst("AIStates", "Stunned")) then
+		if (traces) then Trace("--> State: Stunned"); end
+		return "Stunned";
+	end
+	if( state == GetPyCst("AIStates", "KnockedBack")) then
+		if (traces) then Trace("--> State: KnockedBack"); end
+		return "KnockedBack";
+	end
+
+	if( state == GetPyCst("AIStates", "Injured")) then
+		if (traces) then Trace("--> State: Injured"); end
+		return "Injured";
+	end
+	if( state == GetPyCst("AIStates", "Interact")) then
+		if (traces) then Trace("--> State: Interact"); end
+		return "Interact";
+	end
+	if( state == GetPyCst("AIStates", "Anim")) then
+		if (traces) then Trace("--> State: Anim"); end
+		return "Anim";
+	end
+	if( state == GetPyCst("AIStates", "Reviving")) then
+		if (traces) then Trace("--> State: Reviving"); end
+		return "Reviving";
+	end
+	if( state == GetPyCst("AIStates", "Revived")) then
+		if (traces) then Trace("--> State: Revived"); end
+		return "Revived";
+	end
+	if( state == GetPyCst("AIStates", "PreSpawn")) then
+		if (traces) then Trace("--> State: PreSpawn"); end
+		return "PreSpawn";
+	end
+	return "No state";
+end
+
+-- -------------------------------------------------------------------------------
+local function isAttackReady()
+	attack_flag = true;
+end
+
+-- -------------------------------------------------------------------------------
+local function Do_SpecialAttack()
+	sp_attack_flag = true;
+end
+
+-- -------------------------------------------------------------------------------
+local function Do_RangedAttack()
+	local state = GetState(); 
+	
+	if (state ~= STATE_SKILL) then
+		if (attack_flag) then
+			if (sp_attack_flag) then
+				if (isUsingSkills) then
+					Trace("Skill 2");
+					DoSkill(2);
+				else
+					Trace("Skill 0");
+					DoSkill(0);
+				end
+				sp_attack_flag = false;
+			else
+				Trace("Using Ranged Attack!");
+				if (firstRangedSkill_prob == -1) then
+					DoSkill(1);
+				else
+					local rnd_roll = GetRand(1,100);
+					if (rnd_roll < firstRangedSkill_prob) then
+						Trace("Skill 1");
+						DoSkill(1);
+					else
+						if (timed_specialAttack) then
+							Trace("Skill 4");
+							DoSkill(4);
+						else
+							Trace("Skill 3");
+							DoSkill(3);
+						end
+					end
+				end
+			end
+			attack_flag = false;
+		end
+	end
+end
+
+-- -------------------------------------------------------------------------------
+local function Do_MeleeAttack()
+	local state = GetState(); 
+	
+	if (state ~= STATE_SKILL) then
+		if (attack_flag) then
+			if ( sp_attack_flag ) then
+				if (isUsingSkills) then
+					DoSkill(2);
+				else
+					DoSkill(0);
+				end
+				sp_attack_flag = false;
+			else 
+				if (firstMeleeSkill_prob == -1) then
+					DoSkill(0);
+				else
+					local rnd_roll = GetRand(1,100);
+					if (rnd_roll < firstMeleeSkill_prob) then
+						DoSkill(0);
+					else
+						if (not timed_specialAttack) then
+							DoSkill(2);
+						else
+							DoSkill(3);
+						end
+					end
+				end
+			end
+			attack_flag = false;
+		end
+	end
+end
+
+-- -------------------------------------------------------------------------------
+
+
+
+
+-- -------------------------------------------------------------------------------
+-- Search functions
+-- -------------------------------------------------------------------------------
+function searchForEfficientTarget()
+	
+	if (HasTarget()) then
+		ClearAggro(GetTarget());
+		ClearTarget();
+	end
+	
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+	
+	TargetListSearch(RANGED_RANGE);
+	
+	local targetChosen = false;
+	
+	if (not IsTargetListEmpty()) then
+		repeat
+		
+			local myTarget = GetTargetListTop();
+			
+			if (myTarget:IsPlayer()) then
+				targetChosen = true;
+			end
+			
+			if (targetChosen) then
+				SetTarget(myTarget);
+				AddAggro(myTarget, 10);
+				--LookAt(myTarget);
+			end
+			
+			PopTargetList();
+			
+		until (IsTargetListEmpty() or targetChosen)
+	end
+end
+
+-- -------------------------------------------------------------------------------
+-- CALLBACKS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+function myBoss_OnInit()
+
+
+----------------------------------------------------------------------------------------
+-- Dynamic level for monster. Monster must have there LevelMax param set to use dynamic level
+----------------------------------------------------------------------------------------
+	local m_lvl_max = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMax")));
+	local m_lvl_min = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMin")));
+	local m_lvl_offset = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelOffset")));
+	local pl_lvl = GetHostPlayerLevel();
+	local pl_diff = GetHostPlayerDifficulty();
+	local m_lvl = pl_lvl;
+	local m_level_min, m_level_max = GetCurrentLevelRange(pl_diff);
+
+	if(m_lvl_max > -1 ) then
+		if(m_level_max and m_level_max > -1 ) then
+			if( m_lvl <= m_level_min ) then
+				m_lvl = m_level_min;
+			else
+				if( m_lvl >= m_level_max ) then
+					m_lvl = m_level_max;
+				end
+			end
+		else
+			if( m_lvl <= m_lvl_min ) then
+				m_lvl = m_lvl_min;
+			else
+				if( m_lvl >= m_lvl_max ) then
+					m_lvl = m_lvl_max;
+				end
+			end
+		end
+		m_lvl = m_lvl + m_lvl_offset;
+
+		SetLevel(ToFixed(m_lvl));
+	end
+----------------------------------------------------------------------------------------
+-- End Dynamic level for monster
+----------------------------------------------------------------------------------------
+	InitVars();
+	timer_attack_flag = StartTimerCB(ATTACK_DELAY, true, isAttackReady);
+	if (isMeleeOnly) then
+		MELEE_RANGE		= 400;
+		RANGED_RANGE	= 2500;
+	elseif (RANGED_RANGE == 0) then
+		Trace("[WARNING] RangeMinDistance/RangeMaxDistance is not set in the characterproperties.pyarray file!");
+	end
+	
+	
+end
+AddToVFTable("OnInitFinal", "myBoss_OnInit");
+
+
+
+-- -------------------------------------------------------------------------------
+function myBoss_OnUpdate(timestamp)
+	-- will check that the AI awaken before starting the timers
+	-- will also set the "allowed" so everything will be blocked until the boss is spawned.
+	if (allowed==false) then
+		local check = getAIState(GetSelf(), false);
+		if (check=="Idle") then
+			allowed = true;
+			if (timed_spotTargeting) then
+				timer_spot_targeting = StartTimerCB(SEARCH_DELAY, true, searchForEfficientTarget);
+			end
+			
+			if (timed_specialAttack) then
+				timer_sp_attack_flag = StartTimerCB(SP_ATTACK_DELAY, true, Do_SpecialAttack);
+			end	
+		end
+	end
+end
+AddToVFTable("OnUpdate", "myBoss_OnUpdate");
+
+
+-- -------------------------------------------------------------------------------
+local function myBoss_EndGameCleanup()
+	if (BOSS_MUSIC ~= "") then
+		if (LEVEL_MUSIC ~= "") then
+			PlayMusic(LEVEL_MUSIC, 1000);
+		else
+			CallPyScript("ResumeLevelMusic");
+		end
+		musicStarted_flag = false;
+	end
+	
+	if (timer_attack_flag) then
+		StopTimerCB(timer_attack_flag);
+	end
+end
+
+
+-- -------------------------------------------------------------------------------
+function myBoss_OnDied(killer)
+	myBoss_EndGameCleanup();
+end
+AddToVFTable("OnDied", "myBoss_OnDied");
+
+
+-- -------------------------------------------------------------------------------
+function myBoss_OnTerminate()
+	myBoss_EndGameCleanup();
+end
+AddToVFTable("OnTerminate", "myBoss_OnTerminate");
+
+
+-- -------------------------------------------------------------------------------
+function myBoss_OnEnemySpotted(enemy)
+	if (allowed) then
+		if (BOSS_MUSIC ~= "") then
+			local state = GetState();
+			if (not musicStarted_flag and state == STATE_IDLE) then
+				musicStarted_flag = true;
+				PlayMusic(BOSS_MUSIC, 500);
+			end
+		else
+			Trace("No Boss music set for that boss! will be flagged by QA testers!!");
+		end
+
+		if(not HasTarget()) then
+			searchForEfficientTarget();
+		end
+	end
+end
+AddToVFTable("OnEnemySpotted", "myBoss_OnEnemySpotted");
+
+
+
+-- -------------------------------------------------------------------------------
+function myBoss_OnTargetOutOfSight()
+	if (allowed) then
+		Stop();
+		ClearAggro(GetTarget());
+		ClearTarget();
+		musicStarted_flag = false;
+	end
+end
+AddToVFTable("OnTargetOutOfSight", "myBoss_OnTargetOutOfSight");
+
+
+
+-- -------------------------------------------------------------------------------
+function myBoss_OnTargetInSight()
+end
+AddToVFTable("OnTargetInSight", "myBoss_OnTargetInSight");
+
+
+
+-- -------------------------------------------------------------------------------
+function myBoss_OnTargetOutOfRange()
+	if (allowed) then
+		if (HasTarget()) then
+			MoveTo(GetTarget());
+		else
+			searchForEfficientTarget();
+			MoveTo(GetTarget());
+		end
+	end
+end
+AddToVFTable("OnTargetOutOfRange", "myBoss_OnTargetOutOfRange");
+
+
+
+-- -------------------------------------------------------------------------------
+-- RANGED CALLBACKS
+-- -------------------------------------------------------------------------------
+function myBoss_OnTargetInRangedRange()
+	if (allowed) then 
+		if (isUsingSkills and not isMeleeOnly) then
+			Do_RangedAttack();
+		elseif (not isMeleeOnly) then
+			Stop();
+			Attack(GetTarget());
+		else
+			MoveTo(GetTarget());
+		end
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "myBoss_OnTargetInRangedRange");
+-- -------------------------------------------------------------------------------
+function myBoss_OnTargetInCloseRange()
+	if (allowed) then
+		if (isUsingSkills) then
+			Do_MeleeAttack();
+		else
+			Stop();
+			Attack(GetTarget());
+		end
+	end
+end
+AddToVFTable("OnTargetInCloseRange", "myBoss_OnTargetInCloseRange");
+-- -------------------------------------------------------------------------------
+
+
+
+-- -------------------------------------------------------------------------------
+-- MELEE CALLBACKS
+-- -------------------------------------------------------------------------------
+function myBoss_OnTargetInMeleeRange()
+	if (allowed) then
+		if (isUsingSkills) then
+			Do_MeleeAttack();
+		else
+			Stop();
+			Attack(GetTarget());
+		end
+	end
+end
+AddToVFTable("OnTargetInMeleeRange", "myBoss_OnTargetInMeleeRange");
+-- -------------------------------------------------------------------------------

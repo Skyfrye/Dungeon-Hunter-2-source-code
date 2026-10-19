@@ -1,0 +1,60 @@
+-- ----------------------------------------------------------------------------------------------------
+-- XP Major Cauldron
+-- 
+-- Apply a major XP buff on all players surrounding the Cauldron.
+-- ----------------------------------------------------------------------------------------------------
+
+-- DATA
+local SHRINE_FX		= GetPyOID("AnimatedEffectTable", "spell_dh2_cauldron_blue");
+
+local BUFF_ID			= GetPyOID("ClassTable", "Shrine_XP_Major_buff");
+
+local BUFF_FX			= GetPyOID("AnimatedEffectTable", "spell_dh2_cauldron_blue_persist");
+local BUFF_ICON		= nil;
+
+local BUFF_DURATION	= 25000;
+
+local BUFF_AOE			= true; -- If set to true, will give the Buff to all players in a limited range.
+local BUFF_AOE_RANGE	= 1000;
+
+local g_buff;
+
+function OnTrigger(actor)
+	if(actor) then
+		local char_level = FromFixed(actor:GetProp(GetPyStruct("CharacterProperties", "Level")));
+		
+		if (BUFF_AOE) then
+			if (BUFF_AOE_RANGE ~= -1) then
+				SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+				SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+				SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+				
+				TargetListSearch(BUFF_AOE_RANGE);
+				
+				if(not IsTargetListEmpty()) then
+					repeat
+						local target = GetTargetListTop();
+						PopTargetList();
+						
+						g_buff = target:CreateBuff(BUFF_ID, BUFF_DURATION, false, char_level, BUFF_FX, BUFF_ICON);
+						target:ApplyBuff(BUFF_ID, g_buff);
+						
+						if (SHRINE_FX) then
+							target:PlayFX(SHRINE_FX);
+						end
+						
+					until(IsTargetListEmpty())
+				end
+			end
+		end
+		g_buff = actor:CreateBuff(BUFF_ID, BUFF_DURATION, false, char_level, BUFF_FX, BUFF_ICON);
+		actor:ApplyBuff(BUFF_ID, g_buff);
+		if (SHRINE_FX) then
+			actor:PlayFX(SHRINE_FX);
+		end
+	end
+end
+
+
+function OnAnimEvent(event)
+end

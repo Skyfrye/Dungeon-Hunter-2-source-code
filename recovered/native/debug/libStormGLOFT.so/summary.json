@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "input_name": "libStormGLOFT.so",
+  "input_sha256": "be6beaab782944e5ce39cca8e850fd03de654e4236c9329621043adcbee291e1",
+  "elf_machine": "EM_ARM",
+  "elf_class": 32,
+  "dwarf_compilation_units": 0,
+  "recovered_original_function_bodies": 0,
+  "status": "no_DWARF_debug_info"
+}

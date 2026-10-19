@@ -1,0 +1,475 @@
+Include("soundtest/waves_sdd");
+
+--[[ TODO
+
+	-	Avoir un callback pour fin de jeu
+		>	Spécifie le temps restant ou "manquant"
+
+	-	Pré-caché les bdae des monstres en parsant d'avance la liste des waves
+		>	Ou bien utiliser le GetPyOID() avec "CharacterTable"...
+
+--]]
+
+--[[ EXPOSED INTS
+	num_players
+	num_monsters
+	num_waves
+	wave_number
+	wave_time
+	wave_total_time
+	game_state
+		0 : Game has not started yet
+		1 : Game is in progress
+		2 : Game is over
+--]]
+
+
+
+-- ==============================================================================
+-- ** Prototypes
+-- ==============================================================================
+local InitSpawnLocations;
+local AddPlayer;
+local UpdatePlayers;
+local UpdateMonsters;
+local UpdateAI;
+
+
+
+-- ==============================================================================
+-- ** Events
+-- ==============================================================================
+-- ------------------------------------------------------------------------------
+function referee_OnInit()
+	InitSpawnLocations();
+	
+	if (g_game_type == nil) then
+		GT_ARENA_PvE			= GetPyCst("GameTypes", "ArenaPvE");
+		GT_ARENA_Escort			= GetPyCst("GameTypes", "Escort");
+		
+		g_game_type = GT_ARENA_PvE;
+		SetGameType(g_game_type);
+		Trace("ARENA PVE!");
+	end
+end
+AddToVFTable("OnInitFinal", "referee_OnInit");
+
+-- ------------------------------------------------------------------------------
+function referee_OnFriendSpotted(friend)
+	AddPlayer(friend);
+end
+AddToVFTable("OnFriendSpotted", "referee_OnFriendSpotted");
+AddToVFTable("OnNeutralSpotted", "referee_OnFriendSpotted");
+
+-- ------------------------------------------------------------------------------
+function referee_OnUpdate()
+	UpdatePlayers();
+	UpdateMonsters();
+	UpdateAI();
+end
+AddToVFTable("OnUpdate", "referee_OnUpdate");
+
+
+
+-- ==============================================================================
+-- ** Players
+-- ==============================================================================
+local g_players				= {};
+local g_players_total		= 0;
+local g_players_all_dead	= false;
+
+-- ------------------------------------------------------------------------------
+AddPlayer = function(player)
+	local players = g_players;
+
+	if(not player or players[player:GetID()]) then
+		return;
+	end
+
+	if(string.find(player:GetName(), "Player", 1, true) == 1) then
+		players[player:GetID()]	= {obj = player};
+		g_players_total			= g_players_total + 1;
+	end
+end
+
+-- ------------------------------------------------------------------------------
+UpdatePlayers = function()
+	local num_alive	= 0;
+
+	for id, pdata in pairs(g_players) do
+		if(not pdata.obj:IsConnected()) then
+			Trace("[Referee] We have a quitter! ("..pdata.obj:GetName()..")");
+			g_players[id]	= nil;
+			g_players_total	= g_players_total - 1;
+		elseif(not pdata.obj:IsDead()) then
+			num_alive = num_alive + 1;
+		end
+	end
+
+	g_players_all_dead = (num_alive == 0);
+
+	SetInt("num_players", g_players_total);
+end
+
+
+
+-- ==============================================================================
+-- ** Monsters
+-- ==============================================================================
+local g_monsters		= {};
+local g_monster_alives	= 0;
+local g_monster_spawns	= {};
+
+-- ------------------------------------------------------------------------------
+InitSpawnLocations = function()
+	local spawns	= g_monster_spawns;
+	local objects	= {};
+	local num_found	= 0;
+
+	repeat
+		objects		= {GetGameObjectsByType("Dummy", num_found)};
+		num_found	= num_found + #objects;
+
+		for i, obj in ipairs(objects) do
+			local obj_name = obj:GetName();
+			
+			
+			if (g_game_type == GT_ARENA_PvE) then
+				for name in string.gmatch(obj_name, "monster_(%a+)_") do
+					Trace("[Referee]  Adding `"..name.."`: "..obj_name);
+	
+					if(not spawns[name]) then
+						spawns[name] = {};
+					end
+	
+					table.insert(spawns[name], obj);
+				end
+			elseif (g_game_type == GT_ARENA_Escort) then
+				for name in string.gmatch(obj_name, "monster_(%a+%d+%a+)_") do
+					Trace("[Referee]  Adding `"..name.."`: "..obj_name);
+	
+					if(not spawns[name]) then
+						spawns[name] = {};
+					end
+	
+					table.insert(spawns[name], obj);
+				end
+			end
+		end
+	until(#objects == 0)
+
+	Trace("[Referee] Found "..num_found.." spawn locations");
+end
+
+-- ------------------------------------------------------------------------------
+UpdateMonsters = function()
+	local monsters = g_monsters;
+
+	for i=#monsters, 1, -1 do
+		local monster = monsters[i];
+
+		if(monster:IsDead()) then
+			table.remove(monsters, i);
+			g_monster_alives = g_monster_alives - 1;
+		end
+	end
+
+	SetInt("num_monsters", g_monster_alives);
+end
+
+-- ------------------------------------------------------------------------------
+local function SpawnMonster(monster_oid, monster_type)
+	local spawns	= g_monster_spawns;
+	local spots		= spawns[monster_type];
+
+	if(not spots) then
+		local mtype;
+		for k,v in pairs(spawns) do
+			mtype = k;
+			spots = v;
+			break;
+		end
+
+		if(not spots) then
+			Trace("[Referee] Can't spawn the monster, can't find a spot for the type "..tostring(monster_type));
+			return;
+		else
+			Trace("[Referee] Couldn't find a spot for the type "..tostring(monster_type).."; using "..mtype.." instead");
+		end
+	end
+
+	local spot		= spots[GetRand(1, #spots+1)];
+	local monster	= Summon(monster_oid, true, spot);
+
+	table.insert(g_monsters, monster);
+	g_monster_alives = g_monster_alives + 1;
+
+	--TODO: have another way to make them move, in case they spawn far away
+	if (g_game_type == GT_ARENA_PvE) then
+		monster:MoveTo(GetPosition());
+	elseif (g_game_type == GT_ARENA_Escort) then
+		monster:MoveTo(GetMaster():GetPosition());
+	end
+end
+
+-- ------------------------------------------------------------------------------
+local function KillAllMonsters()
+	local monsters = g_monsters;
+
+	for i, monster in ipairs(monsters) do
+		monster:Kill(GetSelf());	-- Killed by the referee
+	end
+
+	-- We let the UpdateMonsters() clean up the list
+	UpdateMonsters();
+end
+
+
+
+-- ==============================================================================
+-- ** Timers
+-- ==============================================================================
+local g_wave_timer;
+local g_wave_to_timer;
+local g_tick_timer;
+
+-- ------------------------------------------------------------------------------
+local function StartTickTimer(delay, cb)
+	if(g_tick_timer) then
+		StopTimerCB(g_tick_timer);
+	end
+
+	g_tick_timer = StartTimerCB(delay, true, cb);
+end
+
+-- ------------------------------------------------------------------------------
+local function StartWaveTimer(delay, cb)
+	if (g_wave_to_timer) then
+		StopTimerCB(g_wave_to_timer);
+	end
+	
+	if(g_wave_timer) then
+		StopTimerCB(g_wave_timer);
+	end
+	
+	g_wave_to_timer = StartTimerCB(delay, false, cb);
+	g_wave_timer = StartTimerCB(delay, false, cb);
+end
+
+-- ------------------------------------------------------------------------------
+local function StopTimers()
+	if(g_wave_timer) then	StopTimerCB(g_wave_timer);	g_wave_timer = nil;	end
+	if(g_wave_to_timer) then	StopTimerCB(g_wave_to_timer);	g_wave_to_timer = nil;	end
+	if(g_tick_timer) then	StopTimerCB(g_tick_timer);	g_tick_timer = nil;	end
+end
+
+
+
+-- ==============================================================================
+-- ** Game Logic
+-- ==============================================================================
+local TICK_TIME			= 100;
+
+local WT_MONSTER		= 0;			-- Wave ends when no monsters are alive
+local WT_TIMEOUT		= 1;			-- Wave ends when the time runs out
+
+local GS_WAITING		= 0;			-- Waiting to start
+local GS_PROGRESS		= 1;			-- In progress
+local GS_OVER			= 2;			-- Game is over
+
+local EndWave;
+
+local g_game_state		= GS_WAITING;
+local g_current_wave	= 0;
+local g_wave_type		= WT_MONSTER;	-- See the WT_* constants
+local g_wave_time		= 0;
+
+-- ------------------------------------------------------------------------------
+local function IsWaitingToStart()	return g_game_state == GS_WAITING;	end
+local function IsInProgress()		return g_game_state == GS_PROGRESS;	end
+local function IsOver()				return g_game_state == GS_OVER;		end
+
+-- ------------------------------------------------------------------------------
+local function EndGame(is_game_over)
+	if(not IsInProgress()) then return; end
+
+	g_game_state = GS_OVER;
+
+	StopTimers();
+
+	if(is_game_over) then
+		--TODO: Put a mocking remark
+		Trace("[Referee] YOU SUCK!");
+	else
+		--TODO: Give reward
+		Trace("[Referee] Congratulations! But no cakes for you!");
+	end
+end
+
+-- ------------------------------------------------------------------------------
+local function Tick()
+	g_wave_time = g_wave_time - TICK_TIME;
+	
+	if(g_wave_time < 0) then
+		SetInt("wave_time", 0);
+	else
+		SetInt("wave_time", g_wave_time);
+	end
+end
+
+-- ------------------------------------------------------------------------------
+local function TOWaveOutOfTime()
+	Trace("[Referee] You ran out of time...");
+	
+	if(g_wave_type == WT_TIMEOUT) then
+		EndWave();
+	end
+end
+
+-- ------------------------------------------------------------------------------
+local function OutOfTime()
+	Trace("[Referee] You ran out of time...");
+	
+-- 	if(g_wave_type == WT_TIMEOUT) then
+-- 		EndWave();
+-- 	end
+end
+
+-- ------------------------------------------------------------------------------
+EndWave = function()
+	local waves = WAVES or {};
+	
+	if (g_game_type == GT_ARENA_Escort) then
+		GetMaster():SetProp(canStartNewWave, ToFixed(0));
+	end
+
+	-- OLD WAVE
+	if(g_current_wave <= #waves and g_current_wave > 0) then
+		local wave = waves[g_current_wave];
+
+		if(type(wave.postcb) == "function") then
+			wave.postcb(g_current_wave, g_wave_time, wave.postcbdata);
+		end
+	end
+
+
+	--
+	g_current_wave = g_current_wave + 1;
+	--
+
+
+	-- NEW WAVE
+	if(g_current_wave <= #waves) then
+		Trace("[Referee] Handling wave "..g_current_wave);
+
+		local wave = waves[g_current_wave];
+
+		-- We call the specified callback, if one exists
+		if(type(wave.precb) == "function") then
+			wave.precb(g_current_wave, wave.precbdata);
+		end
+
+		-- We handle the new time
+		g_wave_time = wave.delay;
+		StartWaveTimer(g_wave_time, OutOfTime);
+
+		-- Wave type 0 : Monsters
+		if(type(wave.waves) == "table" and #wave.waves > 0) then
+			g_wave_type = WT_MONSTER;
+			
+			-- We summon the new batch of monsters
+			for _, w in ipairs(wave.waves) do
+				-- We check if we have enough players for that wave
+				if(w.num_players <= g_players_total) then
+					for _, m in ipairs(w.monsters) do
+						SpawnMonster(m.oid, m.mtype);
+					end
+				end
+			end
+
+		else
+			g_wave_type = WT_TIMEOUT;
+			StartWaveTimer(g_wave_time, TOWaveOutOfTime);
+			
+			-- Nothing to do, we wait...
+		end
+
+		-- We update the information
+		SetInt("wave_time",			g_wave_time);
+		SetInt("wave_total_time",	g_wave_time);
+		SetInt("wave_number",		g_current_wave);
+		SetInt("num_waves",			#waves);
+
+	else
+		Trace("[Referee] No more waves!");
+
+		EndGame(false);
+
+		SetInt("wave_number", 0);
+	end
+end
+
+-- ------------------------------------------------------------------------------
+local function StartGame()
+	g_game_state	= GS_PROGRESS;
+	g_current_wave	= 0;
+
+	Trace("[Referee] Let the game begins!");
+
+	StartTickTimer(TICK_TIME, Tick);
+	EndWave();	-- So it starts the new wave
+end
+
+-- ------------------------------------------------------------------------------
+UpdateAI = function()
+	-- --------------------------------------------
+	-- BEFORE THE GAME
+	if(IsWaitingToStart()) then
+		--Trace("[Referee] Waiting for players : "..g_players_total.." players found");
+
+		-- Temporary check for a gametype (for a better handling of the game start behavior)
+		if (g_game_type == GT_ARENA_PvE) then
+			if(g_players_total > 0) then
+				StartGame();
+			end
+		elseif (g_game_type == GT_ARENA_Escort) then
+			if (HasMaster()) then
+				local myInt = FromFixed(GetMaster():GetProp(canStartNewWave));
+				if(g_players_total > 0 and myInt == 1) then
+					GetMaster():SetProp(canStartNewWave, ToFixed(0));
+					StartGame();
+				end
+			end
+		end
+
+	-- --------------------------------------------
+	-- DURING THE GAME
+	elseif(IsInProgress()) then
+		
+		if(g_players_all_dead) then
+			EndGame(true);
+
+		elseif(g_game_type == GT_ARENA_PvE and g_wave_type == WT_MONSTER and g_monster_alives == 0) then
+			EndWave();
+
+		elseif (g_game_type == GT_ARENA_Escort and HasMaster()) then
+			local myInt = FromFixed(GetMaster():GetProp(canStartNewWave));
+			if (myInt == 1) then
+				EndWave();
+			end
+
+		elseif (g_game_type == GT_ARENA_Escort and not HasMaster()) then
+			Trace("Escort is DEAD! Gameover...");
+			EndGame(true);
+		else
+			--Trace("[Referee] Monsters Left : "..g_monster_alives);
+		end
+
+	-- --------------------------------------------
+	-- AFTER THE GAME
+	elseif(IsOver()) then
+		--
+	end
+
+	SetInt("game_state", g_game_state);
+end

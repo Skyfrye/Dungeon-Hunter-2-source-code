@@ -1,0 +1,63 @@
+--[[	Container Example Script
+
+	Example of what a container script would looks like.
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+-- Chance in % to spawn a desert spider when destroying an object
+local prob_spawn = 25;
+-- Chance in % to spawn a stronger enemy when destroying an object
+local prob_spawnb = 25;
+
+
+-- Cached values
+local calc_spawn;
+-- ----------------------------------------------------------------------------------------------
+
+
+-- 0 : actor represents what triggered the container to get opened
+function OnOpen(actor)
+
+calc_spawn = GetRand(0,100);
+
+--Trace("calc_spawn random 100: "..calc_spawn);
+
+if(calc_spawn < prob_spawn) then
+	if(calc_spawn < prob_spawnb) then
+		Summon(GetPyOID("CharacterTable", "RD_BigSpider"), true, 0.0, 0.0, 0.0, true);
+	else
+		Summon(GetPyOID("CharacterTable", "RD_Spider"), true, 0.0, 0.0, 0.0, true);
+	end
+	calc_spawn = -1;
+end
+
+end
+
+-- 	if(actor) then
+-- 		--Trace(GetName().." was opened by "..actor:GetName());
+-- 
+-- 		local dmg = DealDamages(actor, GetPyOID("GameObjectDamager", "Level01Damage"), GetPyCst("Elemental", "Fire"));
+-- 
+-- 		if(not dmg or dmg > 0) then
+-- 			if(dmg) then
+-- 				--Trace(FromFixed(dmg) .. " damages done to a Character!");
+-- 			else
+-- 				--Trace(" damaged a GameObject");
+-- 			end
+-- 
+-- 			--actor:PlayFX(GetPyOID("AnimatedFXTable", "blahblahblah"));
+-- 		end
+-- 	else
+-- 		--Trace(GetName().." was opened miraculously");
+-- 	end
+-- end
+
+
+-- 0 : event name
+function OnAnimEvent(event)
+end

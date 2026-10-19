@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+
+<RootRule folder="./test" start="block_1x1_05" gameplay="gameplay/test_master.gameplay_xml">
+	<ForceBlock name="block_1x1_15" gameplay="miniboss01.gameplay_xml">
+		<Path length="4,6" dontGoBack="True">
+			<ForceBlock name="block_1x1_07" random="true">
+				<Path length="4,6" dontGoBack="True">
+					<ForceBlock name="block_1x1_04"/>
+				</Path>
+				<Path length="5,8"/>
+			</ForceBlock>
+		</Path>
+		<Path length="5,15" dontGoBack="True"/>
+		<Path length="5,15" dontGoBack="True"/>
+	</ForceBlock>
+	<ForceBlock name="block_1x1_12">
+		<ForceBlock name="block_1x1_10_stairs">
+			<ForceBlock name="block_1x1_02"/>
+		</ForceBlock>
+	</ForceBlock>
+	
+</RootRule>
+</rules>

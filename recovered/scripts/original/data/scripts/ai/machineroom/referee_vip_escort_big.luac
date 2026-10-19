@@ -1,0 +1,160 @@
+local g_timer_playerPos;
+
+-- TIMERS
+local DEBUFF_DELAY 				= 3000;
+local DEBUFF_ID					= GetPyOID("ClassTable", "MachineRoom_AreaDebuff");
+local BUFF_FX						= GetPyOID("AnimatedEffectTable", "active_buff_fx");
+
+-- DATA
+local g_vip_point 				= 1;
+local g_canAddObject 			= true;
+local g_canApplyDebuff			= true;
+local g_safezone_radius			= 1250;
+local g_safezone_radius_max	= 30000;
+
+local g_debuff_timer;
+local g_debuff;
+
+-- ==============================================================================
+-- ** Players
+-- ==============================================================================
+local g_players				= {};
+local g_dest_spawns 			= {};
+local g_players_debuff		= {};
+local g_players_total		= 0;
+local g_players_all_dead	= false;
+
+-- ------------------------------------------------------------------------------
+ApplyPlayerDebuff = function()
+	if (#g_players_debuff > 0) then
+		for k, v in pairs(g_players_debuff) do
+			local buff = v:CreateBuff(DEBUFF_ID, DEBUFF_DELAY, false, 0, BUFF_FX);
+			v:ApplyBuff(DEBUFF_ID, buff);
+		end
+	end
+end
+
+-- ------------------------------------------------------------------------------
+startDebuffTimer = function()
+	g_debuff_timer = StartTimerCB(DEBUFF_DELAY, true, ApplyPlayerDebuff);
+end
+
+-- ------------------------------------------------------------------------------
+AddPlayer = function(player)
+	local players = g_players;
+
+	if(not player or players[player:GetID()]) then
+		return;
+	end
+
+	if(string.find(player:GetName(), "Player", 1, true) == 1) then
+		players[player:GetID()]	= {obj = player};
+		SetMaster(player);
+		g_players_total			= g_players_total + 1;
+	end
+end
+
+-- ------------------------------------------------------------------------------
+UpdatePlayers = function()
+	local num_alive = 0;
+
+	for id, pdata in pairs(g_players) do
+		if(not pdata.obj:IsConnected()) then
+			g_players[id]	= nil;
+			g_players_total	= g_players_total - 1;
+		elseif(not pdata.obj:IsDead()) then
+			num_alive = num_alive + 1;
+		end
+	end
+
+	g_players_all_dead = (num_alive == 0);
+
+	SetInt("num_players", g_players_total);
+end
+
+
+-- ------------------------------------------------------------------------------
+UpdatePlayerPosition = function()
+	for j, player in pairs(g_players) do
+		local distance = FromFixed(GetDistanceBetween(GetName(), player.obj:GetName()));
+		
+		if (distance > g_safezone_radius_max) then
+			Trace("Player reached point of no return! Killing him automatically...");
+			player.obj:Kill();
+		end
+		
+		if (distance > g_safezone_radius and g_canApplyDebuff) then
+			g_canApplyDebuff = false;
+			
+			if (#g_players_debuff == 0) then
+				local buff = player.obj:CreateBuff(DEBUFF_ID, DEBUFF_DELAY, false, 0, BUFF_FX);
+				player.obj:ApplyBuff(DEBUFF_ID, buff);
+				table.insert(g_players_debuff, player.obj);
+			else
+				local canAddplayer = true;
+				
+				for k, v in pairs(g_players_debuff) do
+					local playerID = v:GetID();
+					local curr_playerID = player.obj:GetID();
+					
+					if (playerID == curr_playerID) then
+						canAddplayer = false;
+					end
+				end
+				
+				if (canAddplayer) then
+					local buff = player.obj:CreateBuff(DEBUFF_ID, DEBUFF_DELAY, false, 0, BUFF_FX);
+					player.obj:ApplyBuff(DEBUFF_ID, buff);
+					table.insert(g_players_debuff, player.obj);
+				end
+			end
+			
+			Trace("[Referee] Player is exiting the safe zone! Applying debuff!!!!");
+		elseif (distance < g_safezone_radius and not g_canApplyDebuff) then
+			g_canApplyDebuff = true;
+			
+			if (#g_players_debuff == 1) then
+				if (g_players_debuff[1]:GetID() == player.obj:GetID()) then
+					g_players_debuff = {};
+				end
+			elseif (#g_players_debuff > 1) then
+				for k, v in pairs(g_players_debuff) do
+					local playerID = v:GetID();
+					local curr_playerID = player.obj:GetID();
+					
+					if (playerID == curr_playerID) then
+						table.remove(g_players_debuff, k);
+					end
+				end
+			end
+			Trace("[Referee] Player is entering the safe zone. Removing debuff...");
+		end
+	end
+end
+
+
+-- ==============================================================================
+-- ** Events
+-- ==============================================================================
+-- ------------------------------------------------------------------------------
+function referee_OnInit()
+	startDebuffTimer();
+	
+	g_timer_playerPos = StartTimerCB(1000, true, UpdatePlayerPosition);
+	
+	EnableCollisions(false);
+end
+AddToVFTable("OnInitFinal", "referee_OnInit");
+
+-- ------------------------------------------------------------------------------
+function referee_OnFriendSpotted(friend)
+	AddPlayer(friend);
+end
+AddToVFTable("OnFriendSpotted", "referee_OnFriendSpotted");
+AddToVFTable("OnNeutralSpotted", "referee_OnFriendSpotted");
+
+-- ------------------------------------------------------------------------------
+function referee_OnUpdate()
+	UpdatePlayers();
+end
+AddToVFTable("OnUpdate", "referee_OnUpdate");

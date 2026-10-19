@@ -1,0 +1,672 @@
+{
+ "core-platform": {
+  "functions": 653,
+  "bytes": 79855,
+  "top_owners": [
+   [
+    "<global>",
+    329
+   ],
+   [
+    "Console",
+    43
+   ],
+   [
+    "FileSystemWin32",
+    39
+   ],
+   [
+    "TouchScreenBase",
+    28
+   ],
+   [
+    "slim",
+    28
+   ],
+   [
+    "ADevice",
+    17
+   ],
+   [
+    "TouchScreenIPhone",
+    15
+   ],
+   [
+    "lib-libnativeinterface",
+    15
+   ],
+   [
+    "FileSystemBase",
+    14
+   ],
+   [
+    "Device",
+    11
+   ],
+   [
+    "TouchScreenPS3",
+    10
+   ],
+   [
+    "TouchScreenWin32",
+    10
+   ]
+  ]
+ },
+ "game-anim": {
+  "functions": 365,
+  "bytes": 39060,
+  "top_owners": [
+   [
+    "CharAnimator",
+    41
+   ],
+   [
+    "v2Controllable",
+    31
+   ],
+   [
+    "v2MixedController",
+    31
+   ],
+   [
+    "v2Controller",
+    28
+   ],
+   [
+    "AnimatedFX",
+    23
+   ],
+   [
+    "AnimationSet",
+    22
+   ],
+   [
+    "AnimatorBlender",
+    21
+   ],
+   [
+    "AnimController",
+    21
+   ],
+   [
+    "AnimatorSynchronizedBlender",
+    20
+   ],
+   [
+    "AnimatorSet",
+    17
+   ],
+   [
+    "AnimSetManager",
+    15
+   ],
+   [
+    "BlendedAnimSetController",
+    14
+   ]
+  ]
+ },
+ "game-app": {
+  "functions": 1409,
+  "bytes": 212376,
+  "top_owners": [
+   [
+    "<global>",
+    432
+   ],
+   [
+    "rnd",
+    156
+   ],
+   [
+    "lib-lua",
+    106
+   ],
+   [
+    "Application",
+    66
+   ],
+   [
+    "LuaScript",
+    51
+   ],
+   [
+    "sfc",
+    35
+   ],
+   [
+    "IStreamBase",
+    28
+   ],
+   [
+    "StreamReader",
+    21
+   ],
+   [
+    "StateMachine",
+    21
+   ],
+   [
+    "ScriptManager",
+    21
+   ],
+   [
+    "DebugSwitches",
+    14
+   ],
+   [
+    "InputManager",
+    14
+   ]
+  ]
+ },
+ "game-character": {
+  "functions": 1143,
+  "bytes": 203836,
+  "top_owners": [
+   [
+    "Character",
+    391
+   ],
+   [
+    "CharAI",
+    180
+   ],
+   [
+    "CharProperties",
+    80
+   ],
+   [
+    "PlayerManager",
+    61
+   ],
+   [
+    "CharStateMachine",
+    54
+   ],
+   [
+    "AISDefault",
+    52
+   ],
+   [
+    "AISExternal",
+    33
+   ],
+   [
+    "PlayerInfo",
+    24
+   ],
+   [
+    "CharAIScript",
+    17
+   ],
+   [
+    "CharAISkillScript",
+    16
+   ],
+   [
+    "CharTimers",
+    16
+   ],
+   [
+    "SpawnSpot",
+    13
+   ]
+  ]
+ },
+ "game-items-save": {
+  "functions": 831,
+  "bytes": 108416,
+  "top_owners": [
+   [
+    "PlayerSavegame",
+    104
+   ],
+   [
+    "ItemInventory",
+    84
+   ],
+   [
+    "SimpleTypeProperty",
+    57
+   ],
+   [
+    "Quest",
+    45
+   ],
+   [
+    "ItemObject",
+    36
+   ],
+   [
+    "ObjectiveTemplate_InteractWith",
+    36
+   ],
+   [
+    "ItemInstance",
+    32
+   ],
+   [
+    "SavegameManager",
+    31
+   ],
+   [
+    "QuestSavegame",
+    27
+   ],
+   [
+    "PropertyMap",
+    26
+   ],
+   [
+    "ObjectiveList",
+    24
+   ],
+   [
+    "ObjectiveTemplate_KillCharacter",
+    24
+   ]
+  ]
+ },
+ "game-ui": {
+  "functions": 808,
+  "bytes": 140820,
+  "top_owners": [
+   [
+    "lib-gameswf",
+    104
+   ],
+   [
+    "MenuBase",
+    96
+   ],
+   [
+    "MenuManager",
+    50
+   ],
+   [
+    "MenuFX",
+    38
+   ],
+   [
+    "MenuMessageManager",
+    35
+   ],
+   [
+    "HUDMinimap",
+    31
+   ],
+   [
+    "StringManager",
+    31
+   ],
+   [
+    "MenuCharMenu_Map",
+    28
+   ],
+   [
+    "MenuMainMenu",
+    20
+   ],
+   [
+    "FlashAnimManager",
+    19
+   ],
+   [
+    "HUDControls",
+    19
+   ],
+   [
+    "MenuWorldMap",
+    19
+   ]
+  ]
+ },
+ "game-world": {
+  "functions": 1527,
+  "bytes": 259396,
+  "top_owners": [
+   [
+    "GameObject",
+    141
+   ],
+   [
+    "Level",
+    71
+   ],
+   [
+    "ObjectManager",
+    63
+   ],
+   [
+    "VisualObject",
+    61
+   ],
+   [
+    "SceneManager",
+    60
+   ],
+   [
+    "ObjectSearcher",
+    58
+   ],
+   [
+    "PFWorld",
+    50
+   ],
+   [
+    "VisualFXManager",
+    37
+   ],
+   [
+    "Container",
+    36
+   ],
+   [
+    "CRoomAttributes",
+    35
+   ],
+   [
+    "TriggerTrap",
+    33
+   ],
+   [
+    "Door",
+    32
+   ]
+  ]
+ },
+ "glitch-core-io": {
+  "functions": 1336,
+  "bytes": 161244,
+  "top_owners": [
+   [
+    "engine-glitch",
+    1336
+   ]
+  ]
+ },
+ "glitch-scene-collada-gui": {
+  "functions": 4735,
+  "bytes": 697916,
+  "top_owners": [
+   [
+    "engine-glitch",
+    4735
+   ]
+  ]
+ },
+ "glitch-video": {
+  "functions": 1701,
+  "bytes": 361552,
+  "top_owners": [
+   [
+    "engine-glitch",
+    1701
+   ]
+  ]
+ },
+ "net-session-online": {
+  "functions": 1244,
+  "bytes": 163064,
+  "top_owners": [
+   [
+    "lib-online-glx",
+    881
+   ],
+   [
+    "CMessage",
+    44
+   ],
+   [
+    "CMessaging",
+    43
+   ],
+   [
+    "CEventQueue",
+    33
+   ],
+   [
+    "GameCenter",
+    28
+   ],
+   [
+    "MultiplayerCallback",
+    24
+   ],
+   [
+    "CSignInGLLiveObserver",
+    17
+   ],
+   [
+    "CSignInGLLive",
+    14
+   ],
+   [
+    "CEvent",
+    11
+   ],
+   [
+    "CSignIn",
+    11
+   ],
+   [
+    "CEventQueueBase",
+    10
+   ],
+   [
+    "CMsgDropLoot",
+    9
+   ]
+  ]
+ },
+ "net-transport": {
+  "functions": 1048,
+  "bytes": 92060,
+  "top_owners": [
+   [
+    "CConnectionManager",
+    56
+   ],
+   [
+    "CNetPlayerManager",
+    51
+   ],
+   [
+    "NetStructByteArray",
+    50
+   ],
+   [
+    "DataPacketLobby",
+    50
+   ],
+   [
+    "ConnectionLobby",
+    48
+   ],
+   [
+    "NetStructMemberType",
+    43
+   ],
+   [
+    "DefaultDataPacket",
+    42
+   ],
+   [
+    "CAndroidSocket",
+    36
+   ],
+   [
+    "LCAndroidSocket",
+    36
+   ],
+   [
+    "CTransportManager",
+    35
+   ],
+   [
+    "Connection",
+    35
+   ],
+   [
+    "CPacketManager",
+    33
+   ]
+  ]
+ },
+ "pydata-accessors": {
+  "functions": 2273,
+  "bytes": 308008,
+  "top_owners": [
+   [
+    "Structs",
+    1862
+   ],
+   [
+    "Arrays",
+    392
+   ],
+   [
+    "PyDataArrays",
+    10
+   ],
+   [
+    "PyDataConstants",
+    9
+   ]
+  ]
+ },
+ "skip-runtime-stl": {
+  "functions": 5806,
+  "bytes": 705522,
+  "top_owners": [
+   [
+    "runtime-stl",
+    5806
+   ]
+  ]
+ },
+ "skip-thunk": {
+  "functions": 398,
+  "bytes": 4708,
+  "top_owners": [
+   [
+    "thunk",
+    398
+   ]
+  ]
+ },
+ "skip-wrapper-stormgloft": {
+  "functions": 3333,
+  "bytes": 458258,
+  "top_owners": [
+   [
+    "wrapper-stormgloft",
+    3333
+   ]
+  ]
+ },
+ "tinyxml-and-c-libs": {
+  "functions": 1846,
+  "bytes": 549592,
+  "top_owners": [
+   [
+    "lib-image-zip-font",
+    1495
+   ],
+   [
+    "<global>",
+    132
+   ],
+   [
+    "TiXmlNode",
+    37
+   ],
+   [
+    "TiXmlElement",
+    37
+   ],
+   [
+    "TiXmlDeclaration",
+    19
+   ],
+   [
+    "TiXmlDocument",
+    17
+   ],
+   [
+    "TiXmlAttribute",
+    16
+   ],
+   [
+    "TiXmlBase",
+    14
+   ],
+   [
+    "TiXmlPrinter",
+    13
+   ],
+   [
+    "TiXmlComment",
+    13
+   ],
+   [
+    "TiXmlText",
+    12
+   ],
+   [
+    "TiXmlVisitor",
+    10
+   ]
+  ]
+ },
+ "vendor-box2d": {
+  "functions": 318,
+  "bytes": 29816,
+  "top_owners": [
+   [
+    "lib-box2d",
+    318
+   ]
+  ]
+ },
+ "vendor-gameswf": {
+  "functions": 2370,
+  "bytes": 424684,
+  "top_owners": [
+   [
+    "lib-gameswf",
+    2370
+   ]
+  ]
+ },
+ "vendor-lua": {
+  "functions": 471,
+  "bytes": 87588,
+  "top_owners": [
+   [
+    "lib-lua",
+    471
+   ]
+  ]
+ },
+ "vox-audio": {
+  "functions": 1140,
+  "bytes": 114012,
+  "top_owners": [
+   [
+    "lib-vox-audio",
+    1080
+   ],
+   [
+    "<global>",
+    56
+   ],
+   [
+    "AdpcmState",
+    4
+   ]
+  ]
+ }
+}

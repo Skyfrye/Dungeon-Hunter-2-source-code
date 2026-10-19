@@ -1,0 +1,101 @@
+elf_address,symbol,status,source_file,notes
+0x31f410,_ZNK6glitch8debugger10CTweakable15getInstanceNameEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,getInstanceName returns +0x68 id
+0x31f418,_ZNK6glitch8debugger10CTweakable6getXMLEv,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,returns std::string& of xml name; original returns member address as char*
+0x31f420,_ZN6glitch8debugger10CTweakable10onSetValueERKSs,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,empty virtual body
+0x320294,_ZN6glitch8debugger10CTweakable8SMappingaSERKS2_,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,copies type value name text
+0x328994,_ZN6glitch8debugger10CTweakable11writeValuesEPNS_2io10IWriteFileE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,XML writer not mapped; writes nothing yet
+0x329d64,_ZN6glitch8debugger10CTweakable6SGroupD1Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,SGroup member-wise destructor; compiler generated in idiomatic C++
+0x32a088,_ZN6glitch8debugger10CTweakableD1Ev,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,D1 dtor; clears map and names; members destroyed implicitly
+0x32a124,_ZN6glitch8debugger10CTweakableD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D0 deleting destructor; compiler thunk
+0x32b3b4,_ZN6glitch8debugger10CTweakable8setValueERNS_2io11CAttributesEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,10-way type switch needs CAttributes getters; stub returns null
+0x32b650,_ZN6glitch8debugger10CTweakable9loadGroupERNS_2io11CAttributesEb.clone.25,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,attribute group recursion needs attribute walker; stub returns 0
+0x32b6b8,_ZN6glitch8debugger10CTweakable7loadXMLEPKcb,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,file read and XML attribute reader not mapped; stub
+0x32bb98,_ZN6glitch8debugger10CTweakable20registerVariableNameEPKc,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,adds name to list when not already mapped
+0x32cfc8,_ZN6glitch8debugger10CTweakableC2EPNS_7IDeviceE,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,members start empty; device pointer stored
+0x32d088,_ZN6glitch8debugger10CTweakable8SMappingC1ENS_2io16E_ATTRIBUTE_TYPEEPv,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,ctor sets type and value
+0x32eeb8,_ZN6glitch8debugger10CTweakable16registerVariableEPKcRNS_5video6SColorE,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,registers SColor mapping type 5
+0x32ef4c,_ZN6glitch8debugger10CTweakable16registerVariableEPKcRf,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,registers float mapping type 1
+0x32efe0,_ZN6glitch8debugger10CTweakable16registerVariableEPKcRi,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,registers int mapping type 0
+0x34f038,_ZNK6glitch13ISharedObjectINS_2io5CFileEE4dropEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,ISharedObject drop as header template; deletes at zero
+0x3538ac,_ZNK6glitch5scene13CSceneManager21STransparentNodeEntryltERKS2_,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,renderer sort comparator (transparent node entry); renderer session owns it
+0x3539e8,_ZNK6glitch5scene13CSceneManager17SDefaultNodeEntryltERKS2_,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,renderer sort comparator (default node entry); renderer session owns it
+0x353c7c,_ZN6glitch5scene13CSceneManager10renderListINS1_24SRenderDataSortNodeEntryEEEvNS0_24E_SCENE_NODE_RENDER_PASSERSt6vectorIT_NS_4core10SAllocatorIS6_LNS_6memory13E_MEMORY_HINTE0EEEEbb.clone.10,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,renderList render pass; renderer session owns it
+0x353f50,_ZN6glitch5scene13CSceneManager10renderListINS1_18SUnsortedNodeEntryEEEvNS0_24E_SCENE_NODE_RENDER_PASSERSt6vectorIT_NS_4core10SAllocatorIS6_LNS_6memory13E_MEMORY_HINTE0EEEEbb.clone.4,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,renderList render pass (unsorted); renderer session owns it
+0x35aa6c,_ZN6glitch7collada21CSkinnedMeshSceneNodeD1Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D1 vtable-only destructor chain; skinned mesh node
+0x35abc4,_ZN6glitch5scene14IMeshSceneNodeD1Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D1 vtable-only destructor chain; mesh scene node
+0x35ac30,_ZNK6glitch7collada21CSkinnedMeshSceneNode25getAbsoluteTransformationEv,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,skinned mesh transform; animation session owns it
+0x35b3dc,_ZN6glitch5scene14IMeshSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D0 deleting destructor; compiler thunk
+0x35b514,_ZN6glitch7collada21CSkinnedMeshSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D0 deleting destructor; compiler thunk
+0x35b5b0,_ZN6glitch7collada28CModularSkinnedMeshSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D0 deleting destructor; compiler thunk
+0x35b7d8,_ZN6glitch7collada28CModularSkinnedMeshSceneNodeD1Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D1 vtable-only destructor chain; modular skinned mesh node
+0x35bec8,_ZNK6glitch5scene12SViewFrustum10intersectsERKNS_4core8aabbox3dIfEE,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,frustum box test then six plane tests
+0x35c2a4,_ZN6glitch5scene15CEmptySceneNodeD1Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D1 vtable-only destructor chain; empty scene node
+0x35c318,_ZN6glitch5scene16CCameraSceneNodeD1Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D1 vtable-only destructor chain; camera scene node
+0x35c3c4,_ZN6glitch5scene16ICameraSceneNodeD1Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D1 vtable-only destructor chain; camera interface
+0x35c444,_ZN6glitch7collada10CSceneNodeD1Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D1 vtable-only destructor chain; collada scene node
+0x35c4e0,_ZN6glitch7collada10CSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D0 deleting destructor; compiler thunk
+0x35db04,_ZN6glitch5scene15CEmptySceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D0 deleting destructor; compiler thunk
+0x35dba8,_ZN6glitch5scene16ICameraSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D0 deleting destructor; compiler thunk
+0x362368,_ZN6glitch21intrusive_ptr_releaseEPKNS_24ISharedMemoryBlockHeaderINS_5video27CMaterialVertexAttributeMapEEE,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,material vertex attribute map release; renderer session owns it
+0x362b60,_ZN6glitch7collada28CModularSkinnedMeshSceneNodeD2Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D2 base-subobject vtable chain; compiler generated
+0x3662c4,_ZN6glitch7collada18ISceneNodeAnimator11onUnbindAllEv,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,thunk forwards to forceUnbindAll; not reimplemented
+0x367870,_ZNK6glitch7collada37CSceneNodeAnimatorSynchronizedBlender14getNumSegmentsEv,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,forwards to first segment virtual; stand-in ISyncSegment interface
+0x367898,_ZNK6glitch7collada37CSceneNodeAnimatorSynchronizedBlender24getSynchronizationLengthEij,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,forwards to segment index; stand-in ISyncSegment interface
+0x3678c4,_ZNK6glitch7collada37CSceneNodeAnimatorSynchronizedBlender24getSynchronizationLengthEj,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,weighted sum of segment lengths; uses stand-in weights
+0x367948,_ZNK6glitch7collada37CSceneNodeAnimatorSynchronizedBlender27getSynchronizationTimestampEij,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,forwards to segment index; stand-in ISyncSegment interface
+0x367974,_ZNK6glitch7collada37CSceneNodeAnimatorSynchronizedBlender27getSynchronizationTimestampEj,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,weighted sum of segment timestamps; uses stand-in weights
+0x3679f8,_ZNK6glitch7collada37CSceneNodeAnimatorSynchronizedBlender25getSynchronizationSegmentEii,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,forwards to segment index; stand-in ISyncSegment interface
+0x367a24,_ZNK6glitch7collada37CSceneNodeAnimatorSynchronizedBlender25getSynchronizationSegmentEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,slot +156 called without argument in pseudo; uses timestamp per segment
+0x367a88,_ZN6glitch7collada37CSceneNodeAnimatorSynchronizedBlender16normalizeWeightsEv,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,normalises weights; original return value dropped (void here)
+0x367b44,_ZNK6glitch7collada37CSceneNodeAnimatorSynchronizedBlender28getSynchronizationPercentageEv,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,forwards to first segment percentage; stand-in interface
+0x368e30,_ZNK6glitch7collada33CSceneNodeAnimatorSynchronizedSet25getSynchronizationSegmentEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,segment lookup via stand-in getSegmentTimestamp (slot +156)
+0x368ed4,_ZNK6glitch7collada33CSceneNodeAnimatorSynchronizedSet28getSynchronizationPercentageEv,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,weight over stand-in total length (slot +72)
+0x3ef3c8,_ZN6glitch5scene23ISegmentCompileCallbackD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D0 deleting destructor; compiler thunk
+0x404ab0,_ZN6glitch8debugger10CTweakableD2Ev,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,D2 shares the body of 0x32a088
+0x50cacc,_ZNK6glitch5scene12SViewFrustum25intersectsWithoutBoxTest3ERKNS_4core8aabbox3dIfEE,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,frustum test without box check; planes 2 3 then 0
+0x50cdb0,_ZN6glitch5scene15CBatchSceneNode18addVisibleSegmentsINS0_23SFrustumBoxIntersector3EEEvjT_,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,culling pass for batch scene node; renderer session owns it
+0x50cf04,_ZNK6glitch5scene13CBatchMeshExtIP10GameObjectE20saveSegmentExtraDataEPKvPNS_2io10IWriteFileENS_2os8E_ENDIANE,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,empty body
+0x50cf74,_ZN6glitch5scene13CBatchMeshExtIP10GameObjectED1Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D1 vtable-only destructor chain; batch mesh ext
+0x50d15c,_ZN6glitch5scene13CBatchMeshExtIP10GameObjectED0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D0 deleting destructor; compiler thunk
+0x50d198,_ZN6glitch5scene15CBatchSceneNode18addVisibleSegmentsINS0_20SUniverseIntersectorEEEvjT_,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,culling pass for batch scene node; renderer session owns it
+0x50d2c0,_ZN6glitch5scene15CBatchSceneNode18addVisibleSegmentsINS0_15SBoxIntersectorEEEvjT_,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,culling pass for batch scene node; renderer session owns it
+0x50d49c,_ZN6glitch5scene15CBatchSceneNode18addVisibleSegmentsINS0_22SFrustumBoxIntersectorEEEvjT_,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,culling pass for batch scene node; renderer session owns it
+0x533f28,_ZN6glitch11CIrrFactory20createGUIEnvironmentERKN5boost13intrusive_ptrINS_2io11IFileSystemEEEPNS_5video12IVideoDriverEPNS_11IOSOperatorE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,CGUIEnvironment ctor not mapped; returns new stand-in environment
+0x533fb0,_ZN6glitch11CIrrFactory16createFileSystemEv,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,CFileSystem ctor not mapped; returns this
+0x534090,_ZN6glitch11CIrrFactoryD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,D0 deleting destructor; compiler thunk
+0x534740,_ZN6glitch3gui11IGUIElement19setRelativePositionERKNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,parent-scaled alignment applied; updateAbsolutePosition stand-in
+0x534840,_ZN6glitch3gui11IGUIElement12setAlignmentENS0_14EGUI_ALIGNMENTES2_S2_S2_,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,stores alignment modes; only left scale branch reconstructed
+0x534920,_ZN6glitch3gui11IGUIElement22updateAbsolutePositionEv,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,updateAbsolutePosition 1112-byte layout recompute; not rebuilt this pass
+0x534dd0,_ZN6glitch3gui11IGUIElement19getElementFromPointERKNS_4core10position2dIiEE,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,children first then self hit test
+0x534e90,_ZN6glitch3gui11IGUIElement6removeEv,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,parent removeChild call; no-parent case returns 1 not this pointer
+0x534eb8,_ZN6glitch3gui11IGUIElement4drawEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,draws visible children
+0x534ef8,_ZN6glitch3gui11IGUIElement12OnPostRenderEj,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,post-render visible children
+0x534f40,_ZN6glitch3gui11IGUIElement4moveENS_4core10position2dIiEE,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,moves relative rect by delta
+0x534fe8,_ZN6glitch3gui11IGUIElement7onEventERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,parent forwarding call has no event argument in pseudo
+0x53501c,_ZNK6glitch3gui11IGUIElement16getElementFromIdEib,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,child id match then recursive lookup; slot +108 as direct call
+0x5353c8,_ZN6glitch3gui15CGUIEnvironment8setFocusEPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,focus set without focus reference counting
+0x5355a0,_ZN6glitch3gui15CGUIEnvironment11removeFocusEPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,focus removal; element handler decision simplified
+0x535658,_ZN6glitch3gui15CGUIEnvironment5clearEv,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,clears focus only; root child walk not mapped
+0x535778,_ZN6glitch3gui15CGUIEnvironment7setSkinEPNS0_8IGUISkinE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,skin pointer swap; skin reference counting not mapped
+0x5357d0,_ZNK6glitch3gui15CGUIEnvironment27getDefaultGUIElementFactoryEv,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,factory lookup slot +224 not mapped; returns null
+0x535818,_ZN6glitch3gui15CGUIEnvironment13addGUIElementEPKcPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,factory fan-out not mapped; returns 0
+0x535884,_ZN6glitch3gui15CGUIEnvironment7saveGUIEPKcPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,writer slots not mapped; returns 0
+0x5358e0,_ZN6glitch3gui15CGUIEnvironment7saveGUIEPNS_2io10IWriteFileEPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,writer slots not mapped; returns 0
+0x535b58,_ZN6glitch3gui15CGUIEnvironment14getElementByIdEiPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,recursive id search; environment slot +68 as direct recursion
+0x535c10,_ZN6glitch3gui15CGUIEnvironment17getRootGUIElementEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,returns embedded root element
+0x535cfc,_ZN6glitch3gui15IGUIEnvironmentD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_00.cpp,IGUIEnvironment deleting destructor; compiler thunk
+0x535d10,_ZN6glitch3gui11IGUIElement11removeChildEPS1_,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,child unlink; reference drop stand-in
+0x535d70,_ZN6glitch3gui11IGUIElement12bringToFrontEPS1_,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,child moved to end of list; list ops stand-in
+0x535dec,_ZN6glitch3gui11IGUIElement8addChildEPS1_,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,parent set and child appended; reference add stand-in; returns this
+0x5362c8,_ZN6glitch3gui11IGUIElement7setTextEPKw,reconstructed,glitch-scene-collada-gui/src/recon/slice_00.cpp,assigns wide text
+0x536388,_ZN6glitch3gui15CGUIEnvironment7loadGUIEPKcPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,read-file factory slot not mapped; returns 0
+0x53644c,_ZN6glitch3gui15CGUIEnvironment16getElementByNameEPKcPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,name compare and child walk reconstructed; slot calls simplified
+0x5364f4,_ZN6glitch3gui15CGUIEnvironment11addComboBoxERKNS_4core4rectIiEEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element constructor not mapped; returns null
+0x536574,_ZN6glitch3gui15CGUIEnvironment13addInOutFaderEPKNS_4core4rectIiEEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element constructor not mapped; returns null
+0x536628,_ZN6glitch3gui15CGUIEnvironment10addToolBarEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element constructor not mapped; returns null
+0x53669c,_ZN6glitch3gui15CGUIEnvironment7addMenuEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element constructor not mapped; returns null
+0x536724,_ZN6glitch3gui15CGUIEnvironment14addContextMenuERKNS_4core4rectIiEEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element constructor not mapped; returns null
+0x5367ac,_ZN6glitch3gui15CGUIEnvironment6addTabERKNS_4core4rectIiEEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element constructor not mapped; returns null
+0x536810,_ZN6glitch3gui15CGUIEnvironment13addTabControlERKNS_4core4rectIiEEPNS0_11IGUIElementEbbi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element constructor not mapped; returns null
+0x536880,_ZN6glitch3gui15CGUIEnvironment10addSpinBoxEPKwRKNS_4core4rectIiEEPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element constructor not mapped; returns null
+0x5368e8,_ZN6glitch3gui15CGUIEnvironment10addEditBoxEPKwRKNS_4core4rectIiEEbPNS0_11IGUIElementEi,partial,glitch-scene-collada-gui/src/recon/slice_00.cpp,concrete element constructor not mapped; returns null

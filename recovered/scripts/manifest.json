@@ -1,0 +1,1772 @@
+{
+  "complete_game": false,
+  "gameplay_tested": false,
+  "kind": "Exact plaintext source from the owner complete-cache archive, despite .luac extension",
+  "cache_archive_sha256": "3fdf4e4c21d45a780a7c35fb4042abde0e88e76bf75416aad1f227481560b679",
+  "cache_archive_bytes": 433189197,
+  "files": [
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/_commons.luac",
+      "cache_path": "data/scripts/ai/_commons.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/_commons.luac",
+      "bytes": 13535,
+      "sha256": "20d34968e9983e14c24223085ab40d55d47f9387dfdbbf3ff7e6b39aea91252c",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/assassin1.luac",
+      "cache_path": "data/scripts/ai/assassin1.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/assassin1.luac",
+      "bytes": 61,
+      "sha256": "e353e65d4e5daecc6c22518d87068b9b96b4786a75fa9e11f5eaa964072a3fe3",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/assassin1_settings.luac",
+      "cache_path": "data/scripts/ai/assassin1_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/assassin1_settings.luac",
+      "bytes": 1990,
+      "sha256": "6493ba57d05f6da955336552f577911d8b0538018eac5aeee98733610c7cbd42",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/assassin2.luac",
+      "cache_path": "data/scripts/ai/assassin2.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/assassin2.luac",
+      "bytes": 61,
+      "sha256": "374a24c6d6129aba6e407f09c8a67717cf9f1e9af8a63f3ad44082762cccfe44",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/assassin2_settings.luac",
+      "cache_path": "data/scripts/ai/assassin2_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/assassin2_settings.luac",
+      "bytes": 1989,
+      "sha256": "88f26e86ed366dea4a01ddcac374c3302d5f3e11b4bffdce98aa6cfec9d8e175",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/assassin3.luac",
+      "cache_path": "data/scripts/ai/assassin3.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/assassin3.luac",
+      "bytes": 61,
+      "sha256": "adc20ccad1012dc530442b7485b83054b148874ed1d842f0add55485bc128ca8",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/assassin3_settings.luac",
+      "cache_path": "data/scripts/ai/assassin3_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/assassin3_settings.luac",
+      "bytes": 1983,
+      "sha256": "ff294bdeaede0ab04747e2a30baa5bfc8c7b7d0101566bfc8d864ed971bc29ee",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/assassindemon.luac",
+      "cache_path": "data/scripts/ai/assassindemon.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/assassindemon.luac",
+      "bytes": 65,
+      "sha256": "de89300743783326f0278d099b820ec75c357a193cf418c7d6ba544fe9b2b3be",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/assassindemon_settings.luac",
+      "cache_path": "data/scripts/ai/assassindemon_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/assassindemon_settings.luac",
+      "bytes": 1964,
+      "sha256": "dc978b26af446879c61c30ba7d8198d067eef7003c006b90615f3f2861660e48",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/attacking_follower.luac",
+      "cache_path": "data/scripts/ai/attacking_follower.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/attacking_follower.luac",
+      "bytes": 5459,
+      "sha256": "6a9c560b8a7904a19518db0fcecba593c63061fdabe34abedc8f2c88f0a3438c",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/balrog.luac",
+      "cache_path": "data/scripts/ai/balrog.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/balrog.luac",
+      "bytes": 58,
+      "sha256": "0d3d433f0893ef54b16378b3ce5e7338f4a0a79185bbf68ebbd04e01139a0d30",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/balrog_settings.luac",
+      "cache_path": "data/scripts/ai/balrog_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/balrog_settings.luac",
+      "bytes": 1977,
+      "sha256": "8c63fb514eff17f5ba9cf53316272fffb38890c80bb9c42353ac53ffbd104421",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/coward.luac",
+      "cache_path": "data/scripts/ai/coward.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/coward.luac",
+      "bytes": 44,
+      "sha256": "0de5b2965b4da7c7de3c800d4ba148cb168ab31836ba5b7f991ac647abf64b36",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/coward_core.luac",
+      "cache_path": "data/scripts/ai/coward_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/coward_core.luac",
+      "bytes": 2695,
+      "sha256": "ff18ad1d56a4298e43ca4b4809875e25dd65c64e9f6fd51078e2f5f259161e24",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/darkqueen1.luac",
+      "cache_path": "data/scripts/ai/darkqueen1.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/darkqueen1.luac",
+      "bytes": 60,
+      "sha256": "5bf7e64f1d10926c869f51e317d617794fe3ed6e4cb380cd4b34e74c6749fb32",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/darkqueen1_core.luac",
+      "cache_path": "data/scripts/ai/darkqueen1_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/darkqueen1_core.luac",
+      "bytes": 15254,
+      "sha256": "da091bb399bb87bce647468419730b7cb37d7cb92608d98893c1bd9d0f55fedc",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/darkqueen1_settings.luac",
+      "cache_path": "data/scripts/ai/darkqueen1_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/darkqueen1_settings.luac",
+      "bytes": 1982,
+      "sha256": "da0a25d3360324dc00beb4f624a61de4591c081004d968892ac3d7156ae67392",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/darkqueen2.luac",
+      "cache_path": "data/scripts/ai/darkqueen2.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/darkqueen2.luac",
+      "bytes": 62,
+      "sha256": "604617ba56f749b6e664875e2f20f8493261d11692cd659b8324c4996266c071",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/darkqueen2_settings.luac",
+      "cache_path": "data/scripts/ai/darkqueen2_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/darkqueen2_settings.luac",
+      "bytes": 1975,
+      "sha256": "1b63e9d4e828dff4bb3e07e4e908bea7e282aa47832730d6e362d37818c190e3",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/dummy.luac",
+      "cache_path": "data/scripts/ai/dummy.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/dummy.luac",
+      "bytes": 3198,
+      "sha256": "a0744a21f63018213ae08b0ad68d526ae1ab98fb93dd5dc9ba871ce84f296f1d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/dw_statue.luac",
+      "cache_path": "data/scripts/ai/dw_statue.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/dw_statue.luac",
+      "bytes": 61,
+      "sha256": "0d70afbce73de977b1dfc2db4ad65d3a10654c9bf913568502275a0e15ce2b29",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/dw_statue_settings.luac",
+      "cache_path": "data/scripts/ai/dw_statue_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/dw_statue_settings.luac",
+      "bytes": 1935,
+      "sha256": "cddfe5a39549c94d742c0a3824bd902eca87429d39d606a32159c36c9c87cbeb",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/edwardboss.luac",
+      "cache_path": "data/scripts/ai/edwardboss.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/edwardboss.luac",
+      "bytes": 60,
+      "sha256": "8a998528623b2fb20d875384113358ec760882838c2b1c74de491ae0ed0683ff",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/edwardboss_core.luac",
+      "cache_path": "data/scripts/ai/edwardboss_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/edwardboss_core.luac",
+      "bytes": 10658,
+      "sha256": "368a1f578bab3752bfaab8fa97bd4d37481ea3cc0385ba4ee9fd101ca961a828",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/edwardboss_settings.luac",
+      "cache_path": "data/scripts/ai/edwardboss_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/edwardboss_settings.luac",
+      "bytes": 2006,
+      "sha256": "72b77a01b0530ebb7b22d1edb4f4e2c78663445e849d564a193a80d7f75faecc",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/emissary.luac",
+      "cache_path": "data/scripts/ai/emissary.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/emissary.luac",
+      "bytes": 60,
+      "sha256": "5644cf78dc75d1ff2e5894023a31caa21c2b7301ffe389ee390013cf60091a75",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/emissary_settings.luac",
+      "cache_path": "data/scripts/ai/emissary_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/emissary_settings.luac",
+      "bytes": 1983,
+      "sha256": "3fb3e7267940ecf4d7090fc05a4574576fe7c2ea75ff792a94997836d5c37308",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/energyspawner.luac",
+      "cache_path": "data/scripts/ai/energyspawner.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/energyspawner.luac",
+      "bytes": 3486,
+      "sha256": "7f3f1be7b33590941c1546aa580b16ed88f4b8dc1fbcf8d3363e3863f5c8f4a5",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/flaminite.luac",
+      "cache_path": "data/scripts/ai/flaminite.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/flaminite.luac",
+      "bytes": 58,
+      "sha256": "5c8cede61dab23f0e1093c95071f813c20b4b460931f6ca5c9d41dd247ec72a7",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/flaminite_core.luac",
+      "cache_path": "data/scripts/ai/flaminite_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/flaminite_core.luac",
+      "bytes": 14167,
+      "sha256": "ff160954e2f02d68edb655ad5a5531a5c849f20b87c7d98b876df1c0fb387519",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/flaminite_settings.luac",
+      "cache_path": "data/scripts/ai/flaminite_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/flaminite_settings.luac",
+      "bytes": 1959,
+      "sha256": "2649855eef924489f2310dc3ca96e2b56035dd9a4de345f30eabae7c8871d9d2",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/flaminiteed.luac",
+      "cache_path": "data/scripts/ai/flaminiteed.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/flaminiteed.luac",
+      "bytes": 63,
+      "sha256": "c0a8882339ffa89e52b723cd59d3598887a73bf518a015bbe08e0a668d58f2f8",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/flaminiteed_settings.luac",
+      "cache_path": "data/scripts/ai/flaminiteed_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/flaminiteed_settings.luac",
+      "bytes": 1932,
+      "sha256": "d0114dd78005a63bd22ca18ac0748d254ac19eb87d32fa51d77a11d35b6c755a",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/follower.luac",
+      "cache_path": "data/scripts/ai/follower.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/follower.luac",
+      "bytes": 1901,
+      "sha256": "2d281c3bc784bbc12356e37cff9e7bdcd44a13e1d45da1fcb21069b4fef48d9d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/generic_boss_core.luac",
+      "cache_path": "data/scripts/ai/generic_boss_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/generic_boss_core.luac",
+      "bytes": 15551,
+      "sha256": "aa5fc6811aa170a80efd20ee786d7fa70498cadca86255927bbc96df66a7aeea",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/largeplant.luac",
+      "cache_path": "data/scripts/ai/largeplant.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/largeplant.luac",
+      "bytes": 50,
+      "sha256": "73022b4fdf143733c7bdff13d56d331e63eb7a6af67f4fe4ddf8effcd2e9f91c",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/largeplant_core.luac",
+      "cache_path": "data/scripts/ai/largeplant_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/largeplant_core.luac",
+      "bytes": 5644,
+      "sha256": "a6096bfd92b416efd62eba824e9b63887c59a96390c41a60ed2fa82e5f8af346",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/machineroom/referee.luac",
+      "cache_path": "data/scripts/ai/machineroom/referee.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/machineroom/referee.luac",
+      "bytes": 19298,
+      "sha256": "9f0b9b62edbe2d35b85159826df909409cc8acff632539b8e4880ee0261e3c35",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/machineroom/referee_vip_escort.luac",
+      "cache_path": "data/scripts/ai/machineroom/referee_vip_escort.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/machineroom/referee_vip_escort.luac",
+      "bytes": 121,
+      "sha256": "7610c57ed02bc232632140894f98ce1ee3f314ce60eda3b7cbc997dbe49bca2c",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/machineroom/referee_vip_escort_big.luac",
+      "cache_path": "data/scripts/ai/machineroom/referee_vip_escort_big.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/machineroom/referee_vip_escort_big.luac",
+      "bytes": 5005,
+      "sha256": "2ba6592f7a946bb88b20601fe26484091b1c92b2890ba3538221cbfcaad404e8",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/machineroom/vip_core.luac",
+      "cache_path": "data/scripts/ai/machineroom/vip_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/machineroom/vip_core.luac",
+      "bytes": 5972,
+      "sha256": "2cde2c51e2ec4a47b89e512012cbd97784fdee84335e24242492d785829a31e9",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/machineroom/waves_easy.luac",
+      "cache_path": "data/scripts/ai/machineroom/waves_easy.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/machineroom/waves_easy.luac",
+      "bytes": 4518,
+      "sha256": "d04847ecd2cb20ee27b1aefbbd2c38c8801345b688509e2593bfc879f210eb3a",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/madruk.luac",
+      "cache_path": "data/scripts/ai/madruk.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/madruk.luac",
+      "bytes": 44,
+      "sha256": "cce7867a20295167065526c38193abe1fd2ed98794690757efaea52f202ca755",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/madruk_buffer.luac",
+      "cache_path": "data/scripts/ai/madruk_buffer.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/madruk_buffer.luac",
+      "bytes": 3052,
+      "sha256": "656ced4ef7e34e1899a12f82c870863f6bfe215b9635fead5f42c6f0694f6b24",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/madruk_core.luac",
+      "cache_path": "data/scripts/ai/madruk_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/madruk_core.luac",
+      "bytes": 14399,
+      "sha256": "db4425a8023b73e5a2c89ff13323c5859a6c2fef1b074490ed9d641c78c4a724",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/madruk_healer.luac",
+      "cache_path": "data/scripts/ai/madruk_healer.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/madruk_healer.luac",
+      "bytes": 3229,
+      "sha256": "eea3bbb17166e11424c8eca6beccb1e7913d71bb8b076acb41b6350681c97f71",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/madruk_torso.luac",
+      "cache_path": "data/scripts/ai/madruk_torso.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/madruk_torso.luac",
+      "bytes": 50,
+      "sha256": "71273416e54af5edd338aef8cb2a44bea311c9e8b3cf29554d188f19e99e8c2e",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/madruk_torso_core.luac",
+      "cache_path": "data/scripts/ai/madruk_torso_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/madruk_torso_core.luac",
+      "bytes": 11197,
+      "sha256": "a88528da836c6717d3292d4bd4ff09a043413ed1cdb99ba39a93064b521e06df",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/miniboss.luac",
+      "cache_path": "data/scripts/ai/miniboss.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/miniboss.luac",
+      "bytes": 777,
+      "sha256": "7114798daa0d7e77ef43ff8e1b1b2abfbef94a468f5ef62eb5aa0b4448a1c78c",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/miniboss_state.luac",
+      "cache_path": "data/scripts/ai/miniboss_state.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/miniboss_state.luac",
+      "bytes": 2388,
+      "sha256": "1916f43a0496b8d9f67169a52a184151980d5fa806d27d13c5bd55438bdd95a3",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/monster.luac",
+      "cache_path": "data/scripts/ai/monster.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/monster.luac",
+      "bytes": 7393,
+      "sha256": "84f07caaeb2c04f2024cc3e27d41f33806b2c53d6e8861bb3d8b371118fd0e1d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/mothcocoon.luac",
+      "cache_path": "data/scripts/ai/mothcocoon.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/mothcocoon.luac",
+      "bytes": 48,
+      "sha256": "e1afee27d71187c8059bf036c1aea58558e18b4baa10cd39dfada5988b90012a",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/mothcocoon_core.luac",
+      "cache_path": "data/scripts/ai/mothcocoon_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/mothcocoon_core.luac",
+      "bytes": 5202,
+      "sha256": "686676e994cf7509d45f4b08a4d8f73fa4948a6deff9bbab682eff866ae86ea2",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/mybossname.luac",
+      "cache_path": "data/scripts/ai/mybossname.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/mybossname.luac",
+      "bytes": 62,
+      "sha256": "58df48e662426049ed619aebe1aa2102cb8bf9f046fee1c7d4dc0043c1475557",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/mybossname_settings.luac",
+      "cache_path": "data/scripts/ai/mybossname_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/mybossname_settings.luac",
+      "bytes": 1911,
+      "sha256": "637f5bad0f5432240c18dbdac9bff6d191c9e11c3daa003dcb281f6777c76113",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/rene.luac",
+      "cache_path": "data/scripts/ai/rene.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/rene.luac",
+      "bytes": 9336,
+      "sha256": "631e7137c6ba49fca45e6cf0b37d1e45e4f42af4ca120106274e7e28d5f56fc7",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/resurrectinggod.luac",
+      "cache_path": "data/scripts/ai/resurrectinggod.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/resurrectinggod.luac",
+      "bytes": 4281,
+      "sha256": "4a966153f41619a657b98dc158fdd417f63270dd56bd3552cae857e4a0022839",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/roottroll.luac",
+      "cache_path": "data/scripts/ai/roottroll.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/roottroll.luac",
+      "bytes": 58,
+      "sha256": "ef9a6fa9781e94c13033a80fe50d596d77738071747385e81b2b4422036217bb",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/roottroll_core.luac",
+      "cache_path": "data/scripts/ai/roottroll_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/roottroll_core.luac",
+      "bytes": 11548,
+      "sha256": "0df5c0646bbfaa50f97fa5f97ca3ba711807fdc747a7eb50062d7a4cb62e2e9d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/roottroll_settings.luac",
+      "cache_path": "data/scripts/ai/roottroll_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/roottroll_settings.luac",
+      "bytes": 1957,
+      "sha256": "429727c93f9f7fbbda04e8af50889cad5f2dcb2ed38b26bbbfaa7f4d329fcca4",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/sandworm01.luac",
+      "cache_path": "data/scripts/ai/sandworm01.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/sandworm01.luac",
+      "bytes": 3529,
+      "sha256": "ac93f71d99f7e73134022a369c8b429701448276106d8db0ed1ca951f5c8e2b1",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/sandworm02.luac",
+      "cache_path": "data/scripts/ai/sandworm02.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/sandworm02.luac",
+      "bytes": 3537,
+      "sha256": "185bcedc428af1bb2cb8dc8ad64e711bbd78f3f113be411c2e8548c1b0166359",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/sandworm_core.luac",
+      "cache_path": "data/scripts/ai/sandworm_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/sandworm_core.luac",
+      "bytes": 14818,
+      "sha256": "16f26062059cf65d662651da36dffe8d08460a0a07356227fa6f6274ee09fde3",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/sandworm_queen.luac",
+      "cache_path": "data/scripts/ai/sandworm_queen.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/sandworm_queen.luac",
+      "bytes": 3536,
+      "sha256": "f0109d233892ef13799f0483f00fbe1413ca2af5f7a9fe05a517763507809c6b",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/sandworm_small.luac",
+      "cache_path": "data/scripts/ai/sandworm_small.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/sandworm_small.luac",
+      "bytes": 17635,
+      "sha256": "b08b58ad7827f089cb1f5f2544bbd92c403f89a6f84ed0bb703555b1a1786479",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/sandworm_small_core.luac",
+      "cache_path": "data/scripts/ai/sandworm_small_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/sandworm_small_core.luac",
+      "bytes": 14520,
+      "sha256": "0b39e21b8936ce7ac6adfa727f8755948b05b982f6bc6a3ee181cef0a248c6bc",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/soundtest/referee_sdd.luac",
+      "cache_path": "data/scripts/ai/soundtest/referee_sdd.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/soundtest/referee_sdd.luac",
+      "bytes": 13116,
+      "sha256": "bd1b4f3da71b15c034d2b49ec74e2734feabfa71ac57d94d913b33cd2eed96af",
+      "encoding": "single-byte source; bytes preserved without recoding"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/soundtest/waves_sdd.luac",
+      "cache_path": "data/scripts/ai/soundtest/waves_sdd.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/soundtest/waves_sdd.luac",
+      "bytes": 6508,
+      "sha256": "a86a28cfa3ff9f6c4975a42575ea4a4d6692cbf19ca6cc0cbff69a4af59e1c2d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/swampking_core.luac",
+      "cache_path": "data/scripts/ai/swampking_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/swampking_core.luac",
+      "bytes": 26341,
+      "sha256": "c6ea4676f14bfa5340a7c3f5160490202742781326b779bb85f6542649c9781b",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/winddragon.luac",
+      "cache_path": "data/scripts/ai/winddragon.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/winddragon.luac",
+      "bytes": 60,
+      "sha256": "e24997a6cc9864481aa781c845a178ebf5302f23d35dd36b1292517bddeb428d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/winddragon_core.luac",
+      "cache_path": "data/scripts/ai/winddragon_core.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/winddragon_core.luac",
+      "bytes": 13614,
+      "sha256": "004b967ead00af0fd5abb1590d5dea83b70fce1e78c665641272af4a0a3b885b",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/winddragon_settings.luac",
+      "cache_path": "data/scripts/ai/winddragon_settings.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/winddragon_settings.luac",
+      "bytes": 1970,
+      "sha256": "9e64131555fa7995b81c610e7a8a97ffa1f10bc286209ca458dca36f38ce20e8",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/ai/witch.luac",
+      "cache_path": "data/scripts/ai/witch.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/ai/witch.luac",
+      "bytes": 7602,
+      "sha256": "86daa21e1b918f3b5a4ea17bb379bc7110eeea0258d8360741ea12f3d634fb36",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/level/combat_formulas.luac",
+      "cache_path": "data/scripts/level/combat_formulas.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/level/combat_formulas.luac",
+      "bytes": 36004,
+      "sha256": "f83639a12c5c1910f9a23fff494f4013330943ad4ef8f4d91c33fe1eb975565f",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/level/death_scripts.luac",
+      "cache_path": "data/scripts/level/death_scripts.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/level/death_scripts.luac",
+      "bytes": 609,
+      "sha256": "439eb9a4627bb7d6b5076c41cda39f5cf4f36c798c56e744ad14df1711ffe777",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/container.luac",
+      "cache_path": "data/scripts/objects/container.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/container.luac",
+      "bytes": 745,
+      "sha256": "97d331c81230af6e5b893d957dcca83ee7d2931455ca89a76b6f4be8a1580a82",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/desert_spider_spawn_container.luac",
+      "cache_path": "data/scripts/objects/desert_spider_spawn_container.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/desert_spider_spawn_container.luac",
+      "bytes": 1718,
+      "sha256": "9b5c03ccefcd6c62c1fdb59fd0e9f51b9e3800cb5e1d52f21c3f29115ee913d3",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/lighthouse_spawn_container.luac",
+      "cache_path": "data/scripts/objects/lighthouse_spawn_container.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/lighthouse_spawn_container.luac",
+      "bytes": 1542,
+      "sha256": "2ee4015e5a516d7b0d684d1b93fa1e89dbf308f7488de9a6109b58084da70965",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/moth_spawn_container.luac",
+      "cache_path": "data/scripts/objects/moth_spawn_container.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/moth_spawn_container.luac",
+      "bytes": 1538,
+      "sha256": "68c87e4eb16ec991e0929be9e1bb71e93e9606c966b46848ee88edba32508d93",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/plant_spawn_container.luac",
+      "cache_path": "data/scripts/objects/plant_spawn_container.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/plant_spawn_container.luac",
+      "bytes": 2272,
+      "sha256": "17671a6192163785a1ae0e2ab32a35b6fc566496acdc4856955ec17747609f47",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/plant_spawn_container2.luac",
+      "cache_path": "data/scripts/objects/plant_spawn_container2.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/plant_spawn_container2.luac",
+      "bytes": 2182,
+      "sha256": "099da5a5284b2ae82eda596014c1a00a492e13853448a056b378d8b401bfb8ae",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/shrine.luac",
+      "cache_path": "data/scripts/objects/shrine.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/shrine.luac",
+      "bytes": 1783,
+      "sha256": "af73cf04df57a17765be97bcc848816b3dd9003e7ff878504dadf8a693b15b2f",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/shrine_buff.luac",
+      "cache_path": "data/scripts/objects/shrine_buff.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/shrine_buff.luac",
+      "bytes": 2316,
+      "sha256": "05096add4385cdc47192951eb5e8012fc2fbea713ad05cf29fedf6a40b0d49b2",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/shrine_resto.luac",
+      "cache_path": "data/scripts/objects/shrine_resto.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/shrine_resto.luac",
+      "bytes": 1392,
+      "sha256": "452d45bfb20d298d21f6207151393b03f5d23d4627d169df0110a38e04f91ff5",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/shrine_xp_major.luac",
+      "cache_path": "data/scripts/objects/shrine_xp_major.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/shrine_xp_major.luac",
+      "bytes": 1892,
+      "sha256": "c58e0046999137fea605464c410014ccf857377addd2662ac1c0b7ebe536f347",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/shrine_xp_minor.luac",
+      "cache_path": "data/scripts/objects/shrine_xp_minor.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/shrine_xp_minor.luac",
+      "bytes": 2077,
+      "sha256": "1bd272cc1f5e8b7ae6d58619f153c8aefe1abe0ab74923eee54fd71f8194b617",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/swampking_trap.luac",
+      "cache_path": "data/scripts/objects/swampking_trap.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/swampking_trap.luac",
+      "bytes": 597,
+      "sha256": "662382366139187665d727fc3243a21d72703c06cbd8d622bde119441a464c1e",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/trap.luac",
+      "cache_path": "data/scripts/objects/trap.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/trap.luac",
+      "bytes": 586,
+      "sha256": "040c2bb8c2df0a732751489d885d1a560f8a7a818f1b06b4c198afcf346c64b7",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/trigger.luac",
+      "cache_path": "data/scripts/objects/trigger.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/trigger.luac",
+      "bytes": 375,
+      "sha256": "e53aac14dd770536d04f3cbe0ca5c93ef86a9bb70a5f60e177bd0139d2d3d9c4",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/objects/zombie_spawn_container.luac",
+      "cache_path": "data/scripts/objects/zombie_spawn_container.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/objects/zombie_spawn_container.luac",
+      "bytes": 1542,
+      "sha256": "ddde3d0af1f81219d8a54a20dc462880e65be0eddfee1754d1db3b1746442a19",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/_commons.luac",
+      "cache_path": "data/scripts/skills/_commons.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/_commons.luac",
+      "bytes": 11291,
+      "sha256": "f3abf69124728bab3d344b56e8f3cb67127fbea4a8d1a7ab1d7401f2a2132e9d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/balrog_flames_skill.luac",
+      "cache_path": "data/scripts/skills/balrog_flames_skill.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/balrog_flames_skill.luac",
+      "bytes": 4254,
+      "sha256": "95e694bd5d4717b52e5b2661d31b5173aef651e6511b6f170e9b82a9e5e16aaa",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/darkqueen2_melee_00.luac",
+      "cache_path": "data/scripts/skills/darkqueen2_melee_00.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/darkqueen2_melee_00.luac",
+      "bytes": 2396,
+      "sha256": "f0eb5cc97212655f178939e941eb6aed58ee192b988bcf7d90e8f663e38b351f",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/darkqueen2_ranged_00.luac",
+      "cache_path": "data/scripts/skills/darkqueen2_ranged_00.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/darkqueen2_ranged_00.luac",
+      "bytes": 2478,
+      "sha256": "2093a81fe217c689520ba9369d0f2bf522e8dbfac2f964ad9c39f330c58736e1",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/darkqueen2_slave_ranged_00.luac",
+      "cache_path": "data/scripts/skills/darkqueen2_slave_ranged_00.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/darkqueen2_slave_ranged_00.luac",
+      "bytes": 2484,
+      "sha256": "ad96ec6d705606e6291154c798e25dccd8be8b33f12387ee9754cf93571ddbf6",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/darkqueen2_summons_00.luac",
+      "cache_path": "data/scripts/skills/darkqueen2_summons_00.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/darkqueen2_summons_00.luac",
+      "bytes": 5360,
+      "sha256": "56285854625fe5bca2df9b528a6dcc1a7d18dc81cb640aef92eef6150485005d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/edward_melee_00.luac",
+      "cache_path": "data/scripts/skills/edward_melee_00.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/edward_melee_00.luac",
+      "bytes": 2388,
+      "sha256": "d03eb47d1bdc4eb26c45389faa666439a1d6b2fabe6dbfb65a5c88919100391b",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/edward_melee_01.luac",
+      "cache_path": "data/scripts/skills/edward_melee_01.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/edward_melee_01.luac",
+      "bytes": 2628,
+      "sha256": "ef249bffc32da678e2c54d1fdb1b5c497e8177d089bbb4c2991befaffa01dad9",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/edward_ranged_00.luac",
+      "cache_path": "data/scripts/skills/edward_ranged_00.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/edward_ranged_00.luac",
+      "bytes": 2474,
+      "sha256": "9bb1645853281f3ededc704363c73b3b4ff33b9d70c596a5455148395beccf32",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/edward_rise.luac",
+      "cache_path": "data/scripts/skills/edward_rise.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/edward_rise.luac",
+      "bytes": 11088,
+      "sha256": "86068f22a94e743024effa9959ae2d05f21eade36ec5fde0b6c5017cc0aafe53",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/example.luac",
+      "cache_path": "data/scripts/skills/example.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/example.luac",
+      "bytes": 2650,
+      "sha256": "e2d83a8973c2c8615a916ca6fb5bb94faff3d090ff9d6d89e0634599f43e022f",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/faerie_celest.luac",
+      "cache_path": "data/scripts/skills/faerie_celest.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/faerie_celest.luac",
+      "bytes": 11449,
+      "sha256": "4ba609b50179669e73ab2c256fd2aa27d3740d05f85835464906353e2e0bdd7d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/faerie_hotty.luac",
+      "cache_path": "data/scripts/skills/faerie_hotty.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/faerie_hotty.luac",
+      "bytes": 4286,
+      "sha256": "74203596081458abf514627c81f8c914990026b6cd35e1ea5f7bc8532e0e2cb5",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/faerie_rocky.luac",
+      "cache_path": "data/scripts/skills/faerie_rocky.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/faerie_rocky.luac",
+      "bytes": 4090,
+      "sha256": "c406df3e43dc36b010ad27d35f4fb3024aba94bf988acf4d6aae77bd23794099",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/faerie_wetty.luac",
+      "cache_path": "data/scripts/skills/faerie_wetty.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/faerie_wetty.luac",
+      "bytes": 4187,
+      "sha256": "ecf30512862a1de28af4bea0e309a8c8beec3e93fe2a12b21e90aff5f7ee23d2",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/faerie_windy.luac",
+      "cache_path": "data/scripts/skills/faerie_windy.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/faerie_windy.luac",
+      "bytes": 3987,
+      "sha256": "da0cf493790834d073fe401456c5f0eb1984789cb71f965a9b4667bb2fe78aec",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/flaminite_slam.luac",
+      "cache_path": "data/scripts/skills/flaminite_slam.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/flaminite_slam.luac",
+      "bytes": 2834,
+      "sha256": "87c611e82c6703cb1b0bbe75ea93e030838c223d1c180ba1f7f240dd6aa6a54e",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/flaminite_sp_attack.luac",
+      "cache_path": "data/scripts/skills/flaminite_sp_attack.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/flaminite_sp_attack.luac",
+      "bytes": 3341,
+      "sha256": "88b347b998672c2500a81c3e85bb08a6bda1e65fa73ac99ef00953ac46c0320d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/generic_teleport_skill.luac",
+      "cache_path": "data/scripts/skills/generic_teleport_skill.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/generic_teleport_skill.luac",
+      "bytes": 5443,
+      "sha256": "12e050de88945096502f291c7aba0c5a43507935f6f1e7ce05538622657802c7",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/lighthouseemissary_melee_00.luac",
+      "cache_path": "data/scripts/skills/lighthouseemissary_melee_00.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/lighthouseemissary_melee_00.luac",
+      "bytes": 2610,
+      "sha256": "22778ab52b4569825b84a6296d5082a72eebfc472e11f2fbe15a280070bf865b",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/lighthouseemissary_ranged_00.luac",
+      "cache_path": "data/scripts/skills/lighthouseemissary_ranged_00.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/lighthouseemissary_ranged_00.luac",
+      "bytes": 4050,
+      "sha256": "e8a8c4380c81879add26e71ba1888c6c118963c6dc39110a831e51e1d3ef74e7",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/madruk_aoeknockback.luac",
+      "cache_path": "data/scripts/skills/madruk_aoeknockback.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/madruk_aoeknockback.luac",
+      "bytes": 2342,
+      "sha256": "d40e88cee6d2830f8e3b62479b12bed52fc1eee474b1fb2177857914881f758d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/madruk_dyingattack.luac",
+      "cache_path": "data/scripts/skills/madruk_dyingattack.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/madruk_dyingattack.luac",
+      "bytes": 1744,
+      "sha256": "a6a0f7ba6f6902ac86b8de9bc35a411c813bd5da8018b17eb954990d08991326",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/madruk_fastenergybolt.luac",
+      "cache_path": "data/scripts/skills/madruk_fastenergybolt.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/madruk_fastenergybolt.luac",
+      "bytes": 2711,
+      "sha256": "e6166901e81813612a7920ed42b17aa5c1e6a974297a27ea95000a99b03acb7c",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/madruk_slam.luac",
+      "cache_path": "data/scripts/skills/madruk_slam.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/madruk_slam.luac",
+      "bytes": 2536,
+      "sha256": "7a01eefb0eb7fb8d0eb540c50a46bfb0aff427cccee6afb7e50550ef4ed7edf2",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/madruk_slowenergybolt.luac",
+      "cache_path": "data/scripts/skills/madruk_slowenergybolt.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/madruk_slowenergybolt.luac",
+      "bytes": 2801,
+      "sha256": "e734a6371577631716fb3cbd7fd5e1d7a664dab8c2914939179d53ac05bdaf7b",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/madrukminion_bufferspell.luac",
+      "cache_path": "data/scripts/skills/madrukminion_bufferspell.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/madrukminion_bufferspell.luac",
+      "bytes": 2601,
+      "sha256": "16add6bb047d07f0ec8288d4f9b7d55de492a408ea6449fdc516b61105168bdb",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/madrukminion_healerspell.luac",
+      "cache_path": "data/scripts/skills/madrukminion_healerspell.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/madrukminion_healerspell.luac",
+      "bytes": 2962,
+      "sha256": "7ea351712454f1cc856c75b33144ea21091572494af0266fc89b3fc1f10abf57",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/madruktorso_beamray.luac",
+      "cache_path": "data/scripts/skills/madruktorso_beamray.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/madruktorso_beamray.luac",
+      "bytes": 2861,
+      "sha256": "d5963265bbcfa2f9012d3c816fababefb9a71fe146476bee3b79472aa75a8528",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/madruktorso_bite.luac",
+      "cache_path": "data/scripts/skills/madruktorso_bite.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/madruktorso_bite.luac",
+      "bytes": 2364,
+      "sha256": "5672540af3a16a743d2aeac52f688a6c7d1eda2cc1ce266f0b4e7ed6df2d73f6",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/madruktorso_drainlife.luac",
+      "cache_path": "data/scripts/skills/madruktorso_drainlife.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/madruktorso_drainlife.luac",
+      "bytes": 7396,
+      "sha256": "2026d3a3b8407aee44433410a0c0cd25e25e267e39f4eafab914f8721483db28",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/madruktorso_dyingattack.luac",
+      "cache_path": "data/scripts/skills/madruktorso_dyingattack.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/madruktorso_dyingattack.luac",
+      "bytes": 1757,
+      "sha256": "315a470267a068d6485346d6a0563948bd7ad56c9bceb58cb8fb17463388e5e6",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/npc_arrow_default.luac",
+      "cache_path": "data/scripts/skills/npc_arrow_default.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/npc_arrow_default.luac",
+      "bytes": 2465,
+      "sha256": "b4bda6bab0c74cc63626c20ec5a8a6c7a8463404171a6aac3defe4dfd99b8322",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/npc_dummy.luac",
+      "cache_path": "data/scripts/skills/npc_dummy.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/npc_dummy.luac",
+      "bytes": 4615,
+      "sha256": "fb17848741f749ecb6c1cc02395d2b0292add7641d18fe5bb9df47e590fdf711",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/npc_energybolt.luac",
+      "cache_path": "data/scripts/skills/npc_energybolt.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/npc_energybolt.luac",
+      "bytes": 3216,
+      "sha256": "b67bcccba8273c2bcc6b7bd49a98e6d9915ef9a2cb2d1886cc4203ea8305dcdf",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/npc_fireball.luac",
+      "cache_path": "data/scripts/skills/npc_fireball.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/npc_fireball.luac",
+      "bytes": 2525,
+      "sha256": "6eb7923499491118c9b5fa9699a0ab47d048d6c04971ae8e2fd60652ba52a475",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/npc_poisonball.luac",
+      "cache_path": "data/scripts/skills/npc_poisonball.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/npc_poisonball.luac",
+      "bytes": 2473,
+      "sha256": "979d99936f7b9124b08b94d8d77614e5598df9894d0ab215794b2cbe1ecb5aaa",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_archer_bowmastery.luac",
+      "cache_path": "data/scripts/skills/prince_archer_bowmastery.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_archer_bowmastery.luac",
+      "bytes": 1533,
+      "sha256": "f8ef9b845c2a9b72c47f0c4b87e99075e777131dbb24b063eb748f23160cbac4",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_archer_exploding_arrows.luac",
+      "cache_path": "data/scripts/skills/prince_archer_exploding_arrows.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_archer_exploding_arrows.luac",
+      "bytes": 5542,
+      "sha256": "ec49a127755c723cc786ca1bfaf6c95a2c66b9deb8409bfbc20b08d60fca2e14",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_archer_multihit.luac",
+      "cache_path": "data/scripts/skills/prince_archer_multihit.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_archer_multihit.luac",
+      "bytes": 4378,
+      "sha256": "1340d7e55d0f31ee155a9a879de1c81cc7144d48763223f1f48fb932fd74ef27",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_archer_pin_shot.luac",
+      "cache_path": "data/scripts/skills/prince_archer_pin_shot.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_archer_pin_shot.luac",
+      "bytes": 6442,
+      "sha256": "41232f3d687b88ba8be6c73d42d1b2061adc1187ff3d28860068f49a0e554433",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_archer_poison_arrows.luac",
+      "cache_path": "data/scripts/skills/prince_archer_poison_arrows.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_archer_poison_arrows.luac",
+      "bytes": 3369,
+      "sha256": "6c1038af7d7b56e3b4cb2455e52dda61ebfb7d13a5dc14cc6d9ef9a964447f09",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_archer_precision.luac",
+      "cache_path": "data/scripts/skills/prince_archer_precision.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_archer_precision.luac",
+      "bytes": 2624,
+      "sha256": "8cce1786c55c5ccc70de51d2e87d09102ca52fd4514f1dcce29ee6e79e8d4de9",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_archer_sidestep.luac",
+      "cache_path": "data/scripts/skills/prince_archer_sidestep.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_archer_sidestep.luac",
+      "bytes": 6039,
+      "sha256": "adece1999f438e7e4eb0bea6d000b31d3aeab61cac0b09e1f16e81b7c685d289",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_archer_volley.luac",
+      "cache_path": "data/scripts/skills/prince_archer_volley.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_archer_volley.luac",
+      "bytes": 6199,
+      "sha256": "176f7ff577d92004e54cbd0192b6759218a71a62376e9c7a574e2334615cd8c2",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_assassin_assassinate.luac",
+      "cache_path": "data/scripts/skills/prince_assassin_assassinate.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_assassin_assassinate.luac",
+      "bytes": 1459,
+      "sha256": "900d4f67a6d2a491a777bc097a05b516759848c689cb50646fb570022aa432f3",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_assassin_assassination.luac",
+      "cache_path": "data/scripts/skills/prince_assassin_assassination.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_assassin_assassination.luac",
+      "bytes": 4694,
+      "sha256": "e905f1a4932899e24c8c73a7cc96c8f75d597311cc34be70bb20f40a0d4d87a4",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_assassin_blade_deflect.luac",
+      "cache_path": "data/scripts/skills/prince_assassin_blade_deflect.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_assassin_blade_deflect.luac",
+      "bytes": 1536,
+      "sha256": "dc083bc0a960999c78a434c094bd4eb1dff67de627962b87c8a25dadd3343b65",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_assassin_blindness.luac",
+      "cache_path": "data/scripts/skills/prince_assassin_blindness.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_assassin_blindness.luac",
+      "bytes": 3987,
+      "sha256": "95d9616f130b5f717076a9ff4a2e4c183481288cc5f8a2753c404b4060f653fe",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_assassin_contaminate.luac",
+      "cache_path": "data/scripts/skills/prince_assassin_contaminate.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_assassin_contaminate.luac",
+      "bytes": 2698,
+      "sha256": "cbbfccceed15973755725cfd89229c776bf4f3d70c113fee8a28e2bb057a4192",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_assassin_grapling_hook.luac",
+      "cache_path": "data/scripts/skills/prince_assassin_grapling_hook.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_assassin_grapling_hook.luac",
+      "bytes": 3926,
+      "sha256": "f0106debd2942d3fc457b3160215347990eb949fa4fd8938e3e61ff5b1c41b82",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_assassin_poison_sting.luac",
+      "cache_path": "data/scripts/skills/prince_assassin_poison_sting.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_assassin_poison_sting.luac",
+      "bytes": 3810,
+      "sha256": "e4e70a0ce446ed721fc5f61500263b4e0b436a971c3468571185460374cd8e2f",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_assassin_treasure_hunter.luac",
+      "cache_path": "data/scripts/skills/prince_assassin_treasure_hunter.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_assassin_treasure_hunter.luac",
+      "bytes": 1454,
+      "sha256": "ce1fe91ff2f65b236f20e01bcda3f72b4badadcd6b7314d9cb2b45beb3c32c96",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_berseeker_berserk.luac",
+      "cache_path": "data/scripts/skills/prince_berseeker_berserk.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_berseeker_berserk.luac",
+      "bytes": 5036,
+      "sha256": "c42e06273dc408240f35f284d15420f7ffe8775de169caa85f368f190ea3471d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_berseeker_killing_frenzy.luac",
+      "cache_path": "data/scripts/skills/prince_berseeker_killing_frenzy.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_berseeker_killing_frenzy.luac",
+      "bytes": 3898,
+      "sha256": "8cb6f7deb84cf6f70f2197e0224d77fcea3b42926e8ffa3cad91ebd958015b29",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_berseeker_killing_streak.luac",
+      "cache_path": "data/scripts/skills/prince_berseeker_killing_streak.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_berseeker_killing_streak.luac",
+      "bytes": 3489,
+      "sha256": "22213d4e59746cabf95976b998616b9725d784852ea80a2ae3401259a820d80c",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_berseeker_ravager.luac",
+      "cache_path": "data/scripts/skills/prince_berseeker_ravager.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_berseeker_ravager.luac",
+      "bytes": 1876,
+      "sha256": "f86497cd855f75c6be698447e7a9d03edfaf7699af1dabe6a9c98dabe3dbf340",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_berseeker_survival.luac",
+      "cache_path": "data/scripts/skills/prince_berseeker_survival.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_berseeker_survival.luac",
+      "bytes": 2868,
+      "sha256": "674e12f46b10dcadfaff306a124a7bc03b5782bc747f866a8329b5d223bc9847",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_berseeker_toughness.luac",
+      "cache_path": "data/scripts/skills/prince_berseeker_toughness.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_berseeker_toughness.luac",
+      "bytes": 1403,
+      "sha256": "10f0cb6f411217843d003d11d410617805aa0bb9a0498ac785b1602e32e93250",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_berseeker_warcry.luac",
+      "cache_path": "data/scripts/skills/prince_berseeker_warcry.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_berseeker_warcry.luac",
+      "bytes": 5013,
+      "sha256": "0e7370e3d9c51bba008fd492899cc6fbd390a3928dd1f35dfe90ff04a7fb36d2",
+      "encoding": "single-byte source; bytes preserved without recoding"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_berseeker_whirling_drift.luac",
+      "cache_path": "data/scripts/skills/prince_berseeker_whirling_drift.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_berseeker_whirling_drift.luac",
+      "bytes": 3149,
+      "sha256": "87231a3a5723e2f47b243b4a7448c32edd337c826685cb8a0b203ee48975ce4a",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_illusionist_disciples.luac",
+      "cache_path": "data/scripts/skills/prince_illusionist_disciples.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_illusionist_disciples.luac",
+      "bytes": 3658,
+      "sha256": "18f6772993c106031b890f4e4a394f44e9e800549a2843f72e6405fa08ef3e1e",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_illusionist_eclipse.luac",
+      "cache_path": "data/scripts/skills/prince_illusionist_eclipse.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_illusionist_eclipse.luac",
+      "bytes": 3873,
+      "sha256": "2e4f3a04147534f20b60f1ec1084d3461fab7f7bc58f21cb2dacb0cdaa86b698",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_illusionist_figments.luac",
+      "cache_path": "data/scripts/skills/prince_illusionist_figments.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_illusionist_figments.luac",
+      "bytes": 4198,
+      "sha256": "50fab81c8433aaa4fbce8535e246a9c1a27c58ca682af611c36599c71d65dc23",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_illusionist_mesmerize.luac",
+      "cache_path": "data/scripts/skills/prince_illusionist_mesmerize.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_illusionist_mesmerize.luac",
+      "bytes": 2219,
+      "sha256": "4f20ac5ca177dcaffd3a7448f2294790beaa52159858553753bbc80e40425cfe",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_illusionist_mirror.luac",
+      "cache_path": "data/scripts/skills/prince_illusionist_mirror.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_illusionist_mirror.luac",
+      "bytes": 3469,
+      "sha256": "cb1a18b9b3f2982c4cfbd50407f014bc76e2e149930fd9901dcba1db7d4968d3",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_illusionist_petrify.luac",
+      "cache_path": "data/scripts/skills/prince_illusionist_petrify.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_illusionist_petrify.luac",
+      "bytes": 3060,
+      "sha256": "1821b831de3a0a69326dcfad90cd352001b1783490e0fa95334340efea6d1ae3",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_illusionist_terror.luac",
+      "cache_path": "data/scripts/skills/prince_illusionist_terror.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_illusionist_terror.luac",
+      "bytes": 8312,
+      "sha256": "757d0aad615b11c130da3940a4108dd49308bd25acfc32ede9b7166d387676b1",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_illusionist_timecontrol.luac",
+      "cache_path": "data/scripts/skills/prince_illusionist_timecontrol.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_illusionist_timecontrol.luac",
+      "bytes": 3956,
+      "sha256": "d4f28b4686af29d1eb078f77ce60eca5f4e52cc46725cd6965a678b14c86fa91",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_mage_chain_lightning.luac",
+      "cache_path": "data/scripts/skills/prince_mage_chain_lightning.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_mage_chain_lightning.luac",
+      "bytes": 9037,
+      "sha256": "cf71fca1dda047016f19e83d5232f2d75d30d35a1e58dbbb74d0b2c6d2778d56",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_mage_coldray.luac",
+      "cache_path": "data/scripts/skills/prince_mage_coldray.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_mage_coldray.luac",
+      "bytes": 3500,
+      "sha256": "7afbe301d99522929e666017d7adc63596ad332ec8be69f78abec9733f364447",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_mage_cyclone.luac",
+      "cache_path": "data/scripts/skills/prince_mage_cyclone.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_mage_cyclone.luac",
+      "bytes": 8724,
+      "sha256": "d04c7053e2b15d27f3cf027b316b1004d053423d78804b54e2c3df20fa32af3e",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_mage_elemental_mastery.luac",
+      "cache_path": "data/scripts/skills/prince_mage_elemental_mastery.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_mage_elemental_mastery.luac",
+      "bytes": 1591,
+      "sha256": "1b44cec1778a6c2e36fda33e65451139b3798cdc9b2eeeef834a03148fff99c2",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_mage_faeryblood.luac",
+      "cache_path": "data/scripts/skills/prince_mage_faeryblood.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_mage_faeryblood.luac",
+      "bytes": 1684,
+      "sha256": "d511b0ca716553f011c5a947091b42cfd497a437b5e8f38ffae9b22295728bb7",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_mage_magi_shielding.luac",
+      "cache_path": "data/scripts/skills/prince_mage_magi_shielding.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_mage_magi_shielding.luac",
+      "bytes": 1472,
+      "sha256": "793497741d59bce7ad4320d8f32aa2b4de373529e1ba0a2fd6e9680d13c0efd6",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_mage_staffmaster.luac",
+      "cache_path": "data/scripts/skills/prince_mage_staffmaster.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_mage_staffmaster.luac",
+      "bytes": 1429,
+      "sha256": "b61c7b5a0d7039d0384f0b84aef66a7f460721fd7736882a7b1a9607eca0f84b",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_mage_stone_escape.luac",
+      "cache_path": "data/scripts/skills/prince_mage_stone_escape.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_mage_stone_escape.luac",
+      "bytes": 6843,
+      "sha256": "6390612bbf175bd72dd400fa2d01fbc00614f0c1fc7038f35b3a4d7ce697f881",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_necromancer_carrioneater.luac",
+      "cache_path": "data/scripts/skills/prince_necromancer_carrioneater.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_necromancer_carrioneater.luac",
+      "bytes": 2753,
+      "sha256": "61852237dd047dd9f719ef97a06715fa3fa15915966cae443f876d40f736da28",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_necromancer_deathclaw.luac",
+      "cache_path": "data/scripts/skills/prince_necromancer_deathclaw.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_necromancer_deathclaw.luac",
+      "bytes": 3792,
+      "sha256": "25181e24c84d4c4bed200d56eb8959385d29de5fa2255c2bde4d1d635b554251",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_necromancer_fireskullrain.luac",
+      "cache_path": "data/scripts/skills/prince_necromancer_fireskullrain.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_necromancer_fireskullrain.luac",
+      "bytes": 5159,
+      "sha256": "5a93189e26dce32b9478e3eae0241e5bc4bba433a90436ca5172376397a42715",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_necromancer_leecher.luac",
+      "cache_path": "data/scripts/skills/prince_necromancer_leecher.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_necromancer_leecher.luac",
+      "bytes": 1493,
+      "sha256": "d47c833f8dc074c03ff744b28fda04b70dc81737597fc26f726dcbc151b67aed",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_necromancer_pestilence.luac",
+      "cache_path": "data/scripts/skills/prince_necromancer_pestilence.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_necromancer_pestilence.luac",
+      "bytes": 7334,
+      "sha256": "c3ec01a11b26202b5157fe5f274f3ebb4a4b83f9f46a2f0ebc7faf7b8f903674",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_necromancer_putrid.luac",
+      "cache_path": "data/scripts/skills/prince_necromancer_putrid.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_necromancer_putrid.luac",
+      "bytes": 3062,
+      "sha256": "4313482ef26183f09c0607531874861c59debd2f2b9169be3868246bed33f8ff",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_necromancer_rise.luac",
+      "cache_path": "data/scripts/skills/prince_necromancer_rise.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_necromancer_rise.luac",
+      "bytes": 10826,
+      "sha256": "65bb23a14e9d02349f2041c2dce434ed4d655c0353207c3c325885e9c16da7fb",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_necromancer_wrath.luac",
+      "cache_path": "data/scripts/skills/prince_necromancer_wrath.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_necromancer_wrath.luac",
+      "bytes": 2376,
+      "sha256": "530fa1d16ec0bbf87eb9b82aa4fd691e30d1a5eae9ce6d8ab9dcfac7f8cec4ed",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_paladin_conversion.luac",
+      "cache_path": "data/scripts/skills/prince_paladin_conversion.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_paladin_conversion.luac",
+      "bytes": 6788,
+      "sha256": "44cbbe20022a2cddc9f6d2daf6eb1f83958d32bd3d4c0aca03a832424fc09922",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_paladin_divine_judgement.luac",
+      "cache_path": "data/scripts/skills/prince_paladin_divine_judgement.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_paladin_divine_judgement.luac",
+      "bytes": 3723,
+      "sha256": "90c9fbbf8a05809bc384abd5db30eb05a2a15026797e739d3d29ddc2389c6480",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_paladin_energy_balance.luac",
+      "cache_path": "data/scripts/skills/prince_paladin_energy_balance.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_paladin_energy_balance.luac",
+      "bytes": 3414,
+      "sha256": "a0c8e993a6575d45a9ee794218dc350612f5af44420c27709dc11ef30a4dfcbb",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_paladin_guarding_aura.luac",
+      "cache_path": "data/scripts/skills/prince_paladin_guarding_aura.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_paladin_guarding_aura.luac",
+      "bytes": 5665,
+      "sha256": "cbc74ab3b77cf184015e0e2f40dac1f37694277de7f520c32b26e16653f9e4fe",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_paladin_holy_weapon.luac",
+      "cache_path": "data/scripts/skills/prince_paladin_holy_weapon.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_paladin_holy_weapon.luac",
+      "bytes": 3104,
+      "sha256": "5e06dda87b8006e185e6452ac68d925f8949e5f5f26c624d5c656d2d849894f2",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_paladin_offensive_aura.luac",
+      "cache_path": "data/scripts/skills/prince_paladin_offensive_aura.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_paladin_offensive_aura.luac",
+      "bytes": 5745,
+      "sha256": "135a23a4a42c8236ada261fd1678c04a2524202a9518d30b4a412ac40b16f51f",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_paladin_purifying_aura.luac",
+      "cache_path": "data/scripts/skills/prince_paladin_purifying_aura.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_paladin_purifying_aura.luac",
+      "bytes": 5556,
+      "sha256": "5228369970ecf119bc0046d9d87a8a5c4a1b286e52b5395a957ead2bea1e9540",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_paladin_shield.luac",
+      "cache_path": "data/scripts/skills/prince_paladin_shield.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_paladin_shield.luac",
+      "bytes": 6754,
+      "sha256": "e11c4e864d7cd8d2eeca0ee266cb34484c9a4c2b379e0474e33c777954cdf2bb",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_rogue_acrobat.luac",
+      "cache_path": "data/scripts/skills/prince_rogue_acrobat.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_rogue_acrobat.luac",
+      "bytes": 1497,
+      "sha256": "aa41df8f3e75420fb2c6e4ddd0281e5aa76b7266402ac09c6fa318d737a9a1d7",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_rogue_ambidextrous.luac",
+      "cache_path": "data/scripts/skills/prince_rogue_ambidextrous.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_rogue_ambidextrous.luac",
+      "bytes": 2384,
+      "sha256": "c8a9c731db8988e381a9f5c94589fd0dc0026e43ed13d7fd0dadcd347222d864",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_rogue_combomaster.luac",
+      "cache_path": "data/scripts/skills/prince_rogue_combomaster.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_rogue_combomaster.luac",
+      "bytes": 1513,
+      "sha256": "892d3825dcf2a3e0cb1ca97faad6f0e3bcb162bf0a59a63596cba586db3dcd90",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_rogue_findweakness.luac",
+      "cache_path": "data/scripts/skills/prince_rogue_findweakness.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_rogue_findweakness.luac",
+      "bytes": 1617,
+      "sha256": "d6fa4b5c86ab7072ddf0ab22657429c8ccd1f93682403939e240154f631469a6",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_rogue_jump_kick.luac",
+      "cache_path": "data/scripts/skills/prince_rogue_jump_kick.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_rogue_jump_kick.luac",
+      "bytes": 3296,
+      "sha256": "7065b8f542f24033abaab2cab91812b40e863a873f3339dec4891343d52f31f1",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_rogue_quickness.luac",
+      "cache_path": "data/scripts/skills/prince_rogue_quickness.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_rogue_quickness.luac",
+      "bytes": 4059,
+      "sha256": "01a516c99ec5c8be9921718bab85c7ae1a68c64aeb098bd5b05e7562f106113d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_rogue_roundhouse.luac",
+      "cache_path": "data/scripts/skills/prince_rogue_roundhouse.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_rogue_roundhouse.luac",
+      "bytes": 3425,
+      "sha256": "a26fb81a4fe1573a4d2fba1277919277f065f2bdc29e8e691eccf995f1cd5a85",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_rogue_vicious_strike.luac",
+      "cache_path": "data/scripts/skills/prince_rogue_vicious_strike.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_rogue_vicious_strike.luac",
+      "bytes": 3832,
+      "sha256": "8ab262b65496f70c64c7adcaa099b8d29cdd3b7bd293de2b355f1ac610a2b467",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_warrior_bashdown.luac",
+      "cache_path": "data/scripts/skills/prince_warrior_bashdown.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_warrior_bashdown.luac",
+      "bytes": 3278,
+      "sha256": "d9f41ce04e8e9c632df2377571ff85f76aacad168bb0bebdb111ccb6f8f4dde3",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_warrior_charge.luac",
+      "cache_path": "data/scripts/skills/prince_warrior_charge.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_warrior_charge.luac",
+      "bytes": 4272,
+      "sha256": "62345c14aef6ea218c2a9725b1c312acf37f4214f9bc712521b6a3edacbf8fe1",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_warrior_combat_master.luac",
+      "cache_path": "data/scripts/skills/prince_warrior_combat_master.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_warrior_combat_master.luac",
+      "bytes": 1514,
+      "sha256": "3dc445fd5c3d52bd26f2079d3b5b797e712675373e81b84e98c4d7bb95eff697",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_warrior_fast_metabolism.luac",
+      "cache_path": "data/scripts/skills/prince_warrior_fast_metabolism.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_warrior_fast_metabolism.luac",
+      "bytes": 1474,
+      "sha256": "c65e154d082fc6d2414e91c7007f8442df30037f43ed706fa45a204472704c64",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_warrior_ground_slam.luac",
+      "cache_path": "data/scripts/skills/prince_warrior_ground_slam.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_warrior_ground_slam.luac",
+      "bytes": 3651,
+      "sha256": "ed21121df8541350451072aff53a44abd03274ba0a0c0a7ceb0784f748463780",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_warrior_hardiness.luac",
+      "cache_path": "data/scripts/skills/prince_warrior_hardiness.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_warrior_hardiness.luac",
+      "bytes": 2133,
+      "sha256": "4a94206eedf3acd35651a0bb83bbf16fe4be81fc87ec7b5802f3c3c956b75352",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_warrior_leadership.luac",
+      "cache_path": "data/scripts/skills/prince_warrior_leadership.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_warrior_leadership.luac",
+      "bytes": 2572,
+      "sha256": "6c7ec5c934e095b21237e995fb43975f05becb64d97e877d59f7ea49a87563d0",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/prince_warrior_potion_addict.luac",
+      "cache_path": "data/scripts/skills/prince_warrior_potion_addict.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/prince_warrior_potion_addict.luac",
+      "bytes": 1456,
+      "sha256": "81df7fda3d598d90a28def7884f07b1b4720adca8eb61d26671f997ed418899d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/resgod_dying_attack.luac",
+      "cache_path": "data/scripts/skills/resgod_dying_attack.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/resgod_dying_attack.luac",
+      "bytes": 2638,
+      "sha256": "04bd7105b4f57128b55c7222871dade1b9ccd56988f596f2092495fa38c6e912",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/root_troll_attack.luac",
+      "cache_path": "data/scripts/skills/root_troll_attack.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/root_troll_attack.luac",
+      "bytes": 3314,
+      "sha256": "28752c1fd30e4cc308f3ff494598d8d630780083cf9deda2625581ad391c9552",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/root_troll_attack_noskill.luac",
+      "cache_path": "data/scripts/skills/root_troll_attack_noskill.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/root_troll_attack_noskill.luac",
+      "bytes": 2585,
+      "sha256": "e699dcf5cde9829f459c72cd8cfd36be71668c4cf22d9237bf7281ce468322c8",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/root_troll_charge.luac",
+      "cache_path": "data/scripts/skills/root_troll_charge.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/root_troll_charge.luac",
+      "bytes": 2575,
+      "sha256": "7b255fffa31c16a07cb2d49383af1105fa120af5e95baa163e1c30e2e535a9d4",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/sandworm_emerge.luac",
+      "cache_path": "data/scripts/skills/sandworm_emerge.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/sandworm_emerge.luac",
+      "bytes": 2284,
+      "sha256": "4f0d21932a9761699bec729854e27a2d4cbbba988e0994a4882014aa40cbeef2",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/sandworm_spit.luac",
+      "cache_path": "data/scripts/skills/sandworm_spit.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/sandworm_spit.luac",
+      "bytes": 4029,
+      "sha256": "ad40819d9711459dbea5367bb144abf3a9685977ffe0112d40608fcc0a2b3144",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/swamp_king_attack_1.luac",
+      "cache_path": "data/scripts/skills/swamp_king_attack_1.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/swamp_king_attack_1.luac",
+      "bytes": 2200,
+      "sha256": "f2e62eadfa3e360e3bcc92361a2ee8dd79d8eeafc5f887b2dbada5cf6a4d7146",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/swamp_king_attack_2.luac",
+      "cache_path": "data/scripts/skills/swamp_king_attack_2.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/swamp_king_attack_2.luac",
+      "bytes": 2201,
+      "sha256": "823b8c7cc4ddc1101fce080f1275327b69d056244413820095e3d558abf9ed37",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/swamp_king_attack_3.luac",
+      "cache_path": "data/scripts/skills/swamp_king_attack_3.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/swamp_king_attack_3.luac",
+      "bytes": 2250,
+      "sha256": "d59807a237a2f3c5aaf6907018ed09d7588233fbc2aa4e1ea7bf2490b9c6488f",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/swamp_king_attack_4.luac",
+      "cache_path": "data/scripts/skills/swamp_king_attack_4.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/swamp_king_attack_4.luac",
+      "bytes": 2298,
+      "sha256": "6cd7676d20e201aaa598d419ab9eabccc00c347adf830f44b17796c7992ec8f2",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/swampking_atk_spit.luac",
+      "cache_path": "data/scripts/skills/swampking_atk_spit.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/swampking_atk_spit.luac",
+      "bytes": 4009,
+      "sha256": "6254027d8aae8787a95adffa35ab41b769b5cf3ad77f51533b18d25e5541ca6f",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/winddragon_aoebombs.luac",
+      "cache_path": "data/scripts/skills/winddragon_aoebombs.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/winddragon_aoebombs.luac",
+      "bytes": 9038,
+      "sha256": "8d58822578c89feeab86e2fa5a814c45f169d59ca73a345a29e735d4ea914f2d",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/winddragon_bite.luac",
+      "cache_path": "data/scripts/skills/winddragon_bite.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/winddragon_bite.luac",
+      "bytes": 2389,
+      "sha256": "2e3e2021640fd4a2e905e4870faf1ddee6757c5c00b9a4d986f791729bdf23e2",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/winddragon_breathsweep.luac",
+      "cache_path": "data/scripts/skills/winddragon_breathsweep.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/winddragon_breathsweep.luac",
+      "bytes": 8373,
+      "sha256": "4a3ef0d13ad73a5c19808adf7e5c1db406502fab2d27904e52268905aa92a99e",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/winddragon_insidesweep.luac",
+      "cache_path": "data/scripts/skills/winddragon_insidesweep.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/winddragon_insidesweep.luac",
+      "bytes": 6458,
+      "sha256": "681e825a2bbbfd04f6e3211c542d9c0d1216b632cb7bad2bd9b19d4464c558b3",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/winddragon_outsidesweep.luac",
+      "cache_path": "data/scripts/skills/winddragon_outsidesweep.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/winddragon_outsidesweep.luac",
+      "bytes": 5990,
+      "sha256": "df6e6166223b66cbc836aaf7f4643de7383b605989876ef0d6f81cc48b791f28",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/witch_ranged_00.luac",
+      "cache_path": "data/scripts/skills/witch_ranged_00.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/witch_ranged_00.luac",
+      "bytes": 2866,
+      "sha256": "b92a73f95d28a21ed9fd08c904051a8f6fbf15062f917b6f05ee680c6e0faf2e",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/worm_attack_1.luac",
+      "cache_path": "data/scripts/skills/worm_attack_1.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/worm_attack_1.luac",
+      "bytes": 2195,
+      "sha256": "5e8222b000d6852fb895c158d6804193311b2d200fd4c138568c2137e8e678a0",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/skills/worm_attack_2.luac",
+      "cache_path": "data/scripts/skills/worm_attack_2.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/skills/worm_attack_2.luac",
+      "bytes": 2196,
+      "sha256": "1127d3272ea610c0c5513821e2921db2ca668ac2742da594266125862a6a8b6c",
+      "encoding": "utf-8"
+    },
+    {
+      "path": "recovered/scripts/original/data/scripts/test.luac",
+      "cache_path": "data/scripts/test.luac",
+      "archive_member": "com.gameloft.android.GAND.GloftD2SS/files/data/scripts/test.luac",
+      "bytes": 655,
+      "sha256": "ca294bf166d0b87293683de9c6e17f5d6916846db0e549fd18ef0166d06672ab",
+      "encoding": "utf-8"
+    }
+  ],
+  "overrides": [
+    {
+      "path": "port/lua-scripts/overrides/data/scripts/ai/sandworm_small_core.luac",
+      "original": "recovered/scripts/original/data/scripts/ai/sandworm_small_core.luac",
+      "bytes": 14521,
+      "sha256": "a9835022441c2b22a41f985b924de151d4ea3f8d3333bee824f40dd89a3aa9f8",
+      "replace_from": "PlayAnim(GetPyOID(\"AnimDict\", \"swampking_emerge\");",
+      "replace_to": "PlayAnim(GetPyOID(\"AnimDict\", \"swampking_emerge\"));",
+      "reason": "Add missing outer closing parenthesis at original line 159; no original bytes overwritten"
+    }
+  ]
+}

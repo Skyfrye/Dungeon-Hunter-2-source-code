@@ -1,0 +1,22 @@
+Include("monster");
+Include("miniboss_state");
+
+-- ----------------------------------------------------------------------------------------------------
+-- Miniboss behavior: Use his skill every 1 to 5 secondes ---------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- When the character is created/loaded
+function myOnInit()
+	OnInit();
+
+	-- Init state
+	RegisterAIState("StateBasic",				"StateBasicUpdate",				"StateBasicConditions",					"StateBasicInit",				"StateInitPost");
+
+	-- Set the correct state
+	ChangeAIState("StateBasic");
+end
+AddToVFTable("OnInit", "myOnInit");
+
+

@@ -1,0 +1,82 @@
+local timer_attack_flag = -1;
+local traces	= false;
+
+function StealTarget()
+end
+
+-- -------------------------------------------------------------------------------
+-- When the character is created/loaded
+function dummy_OnInit()
+	OnInit();
+	m_attack_flag = false;
+end
+AddToVFTable("OnInit", "dummy_OnInit");
+
+-- -------------------------------------------------------------------------------
+--
+function dummy_OnInitFinal()
+	-- Do the Skill to explode
+	DoSkill(0);
+	--SetProp(GetPyStruct("CharacterProperties", "HP"), ToFixed(0.0));
+	if (traces) then Trace("Dummy: Done the skill and set the health to 0! PASSED!"); end
+end
+AddToVFTable("OnInitFinal", "dummy_OnInitFinal");
+-- ----------------------------------------------------------------------------------------------------
+function dummy_OnEnemySpotted(enemy)
+   -- Detect ennemies
+   if (traces) then Trace("An ennemie as been spotted"); end
+   enemy:SetTarget(GetSelf());
+end
+AddToVFTable("OnEnemySpotted", "dummy_OnEnemySpotted");
+
+function dummy_OnTargetInRangedRange()
+   -- Detect ennemies
+   if (traces) then Trace("An ennemie as been spotted"); end
+   enemy:SetTarget(GetSelf());
+   timer_attack_flag = StartTimerCB(ATTACK_DELAY, true, StealTargets);
+end
+AddToVFTable("OnTargetInRangedRange", "dummy_OnTargetInRangedRange");
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+function Dummy_OnUpdate()
+	if (traces) then Trace("Dummy: Being Updated!"); end
+-- -- 	DoSkill(0);
+end
+AddToVFTable("OnUpdate", "Dummy_OnUpdate");
+-- 
+-- -- -------------------------------------------------------------------------------
+-- -- When the character's target is out of attack range
+-- -- (Can be outside the ranged attack radius -OR- between the ranged and melee attack radius)
+-- function dummy_OnTargetOutOfRange()
+-- 
+-- end
+-- AddToVFTable("OnTargetOutOfRange", "dummy_OnTargetOutOfRange");
+-- -- -------------------------------------------------------------------------------
+-- 
+-- 
+-- 
+-- -- -------------------------------------------------------------------------------
+-- function dummy_DoDamage()
+-- 	m_attack_flag = false;
+-- end
+-- -- -------------------------------------------------------------------------------
+-- 
+-- 
+-- 
+-- -- -------------------------------------------------------------------------------
+-- -- When the character's target is in range of a ranged attack
+-- function dummy_OnTargetInRangedRange()
+-- 
+-- end
+-- AddToVFTable("OnTargetInRangedRange", "dummy_OnTargetInRangedRange");
+-- -- -------------------------------------------------------------------------------
+-- 
+-- 
+-- 
+-- -- -------------------------------------------------------------------------------
+-- -- When the character's target is in range of a melee attack
+-- function dummy_OnTargetInMeleeRange()
+-- 	Trace("Wow! I see a target there!");
+-- end
+-- AddToVFTable("OnTargetInMeleeRange", "dummy_OnTargetInMeleeRange");
+-- -- -------------------------------------------------------------------------------

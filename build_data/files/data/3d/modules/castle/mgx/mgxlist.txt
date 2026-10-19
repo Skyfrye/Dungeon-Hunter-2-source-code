@@ -1,0 +1,14 @@
+corner_ne.mgx
+corner_se.mgx
+corner_wn.mgx
+corner_ws.mgx
+deadend_e.mgx
+deadend_n.mgx
+deadend_s.mgx
+deadend_w.mgx
+entrance_ns.mgx
+kingroom_s.mgx
+objectiveroom_s.mgx
+straighta_ns.mgx
+straightb_ew.mgx
+t_new.mgx

@@ -1,0 +1,92 @@
+--[[	Poison Arrows
+
+	Normal arrow damage + DOT
+	05/04/2010 	Skill is mostly working. Still have to check for the DOT not seem to work
+					Duration value seem to be not displaying.
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+local RANGE			= 600.0;
+local ANGLE			= 220.0;
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Archer_PoisonArrows");
+local AIR_PROJECTILE_ID	= GetPyOID("ProjectileTable", "ArrowPoison");
+
+-- Cached values
+local skill_level	= 0;
+local mana_cost;
+local traces 		= false;
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level=slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	if(not HasBow()) then
+		return false, false
+	end
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	TargetListSearch(RANGE, ANGLE);
+	if(not IsTargetListEmpty()) then
+		local target = GetTargetListTop();
+		LookAt(target);
+		if (traces) then Trace ("[Skills | Poison Arrows] Initial check: "..GetTargetListSize().." Potential target(s)"); end
+	end
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(not IsTargetListEmpty()) then 
+		PopTargetList();
+	end	
+	SpawnSkillProjectile(AIR_PROJECTILE_ID);	
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+		ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target)
+	if (target) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+		local dmg = SkillCombatRoll(target);
+		if (dmg~=nil) then
+			if (traces) then Trace ("[Skills | Poison Arrows] A target got "..FromFixed(dmg).." damage"); end
+		end
+	end
+end
+
+
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_, OnSkillInfo_);

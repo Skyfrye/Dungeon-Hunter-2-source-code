@@ -1,0 +1,147 @@
+--[[	WarCry
+
+	terrorise (¾ fear ¼ stun) enemies for a short duration
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+
+local RANGE				= 600.0;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Berserk_Intimidation");
+
+-- Cached values
+local skill_level		=	0;
+local mana_cost;
+local target;
+local bufftime			=	0;
+local buff_timer 		= -1;
+local	traces			= false;
+
+local canPlayFearSFX	= false;
+local canPlayStunSFX	= false;
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function BuffExpired(timerId)
+		if (traces) then Trace("[Skills | WarCry] Buff expired"); end
+		buff_timer = -1;
+end
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+	--return buff
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	-- Set the Skill capabilities from the Character properties
+	ClearProps(true);
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	ApplyPropClass(CLASS_ID, true);
+	mana_cost = GetProp(GetPyStruct("CharacterProperties", "SnS_ManaCost"), true)
+	bufftime = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_Duration"), true));
+	if (bufftime==0) then 
+		bufftime=2000; 
+		if (traces) then Trace("Warning, duration was not retrieved!"..bufftime); end 
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+
+	if(buff) then
+		--Trace("Deactivating the buff");
+		RemoveBuff(CLASS_ID, buff);
+		buff = nil;
+	end
+	-- We only target enemies
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	-- We only target destructible objects
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	-- Look for target in front of us prior to looking for the distance
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+
+	TargetListSearch(RANGE);
+
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+	else
+		target = nil;
+	end
+	
+	if (traces) then Trace("[Skills | Warcry] Used "..FromFixed(mana_cost).." mana..."); end
+	UseMana(mana_cost);
+	--We do this in the animation.pyarray 
+	--PlayFX(GetPyOID("AnimatedEffectTable", "skill_dh2_prince_warrior_berseker_intimidate"));
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	-- First Target come from the pre-skill
+	if(target) then
+		-- Because OnSkill() is only called once for Instant skill type, we can ApplyPropClass() here
+		repeat
+			if (not (IsBoss(target)) and not(IsMiniBoss(target))) then
+				local result = GetRand(1, 4);
+				if (result==1) then
+					target:SetScareState(bufftime, true);
+					canPlayFearSFX = true;
+				end
+				if (result==2) then
+					target:SetScareState(bufftime, true);
+					canPlayFearSFX = true;
+				end
+				if (result==3) then
+					target:SetStunState(bufftime, true);
+					canPlayStunSFX = true;
+				end
+				if (result==4) then
+					target:SetScareState(bufftime, true);
+					canPlayFearSFX = true;
+				end
+			
+				if (result==3) then
+					if (traces) then Trace("[Skills | Warcry]oooo! I'm stunned for "..(bufftime/1000).." seconds!"); end 
+				else
+					if (traces) then Trace("[Skills | Warcry]oooo! I'm scared for "..(bufftime/1000).." seconds!"); end 
+				end
+			end
+			PopTargetList();
+			if (not IsTargetListEmpty()) then  target = GetTargetListTop(); end
+		until(IsTargetListEmpty())
+		
+		if (canPlayFearSFX) then
+			canPlayFearSFX = false;
+			PlaySound("sfx_skill_warrior_bsk_bloodmoon_howl_hit_fear", false, 0, false);
+		end
+		if (canPlayStunSFX) then
+			canPlayStunSFX = false;
+			PlaySound("sfx_skill_warrior_bsk_bloodmoon_howl_hit_stun", false, 0, false);
+		end
+		
+		buff_timer = StartSkillTimerCB(bufftime, false, BuffExpired);	
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

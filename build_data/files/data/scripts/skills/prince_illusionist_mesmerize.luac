@@ -1,0 +1,75 @@
+--[[	Mesmerize
+
+	Better prices with merchants + player & allies have better attack rate
+
+--]]
+
+local BUFF_ID		= GetPyOID("ClassTable", "Skill_Illusionist_Mesmerize");
+local BUFF_RANGE	= 1200;
+
+-- Cached values
+local skill_level	= 0;
+local self_buff;
+local group_buff
+
+local function startGroupBuff()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	
+	TargetListSearch(BUFF_RANGE);
+	
+	if(not IsTargetListEmpty()) then
+		repeat
+			local target = GetTargetListTop();
+			if (target:GetName() ~= GetSelf():GetName() and target:IsPlayer()) then
+				group_buff = target:CreateBuff(BUFF_ID, 0, false, skill_level);
+				target:ApplyBuff(BUFF_ID, group_buff);
+			end
+			PopTargetList();
+		until(IsTargetListEmpty())
+	end
+end
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(BUFF_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level = slvl;
+	end
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	if (self_buff) then
+		RemoveBuff(BUFF_ID, self_buff);
+		self_buff=nil;
+	end
+	if(skill_level ~= 0) then
+		self_buff = CreateBuff(BUFF_ID, 0, false, skill_level);
+		ApplyBuff(BUFF_ID, self_buff);
+		startGroupBuff();
+	end
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

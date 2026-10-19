@@ -1,0 +1,200 @@
+Include("monster");
+
+-- ----------------------------------------------------------------------------------------------------
+-- MothCocoon behavoir: Summons Moths until killed ----------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+-- INIT --
+function MothCocoonOnInit()
+	monster_OnInit();
+
+	local m_lvl_max = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMax")));
+	local m_lvl_min = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMin")));
+	local m_lvl_offset = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelOffset")));
+	local pl_lvl = GetHostPlayerLevel();
+	local pl_diff = GetHostPlayerDifficulty();
+	local m_lvl = pl_lvl;
+	local m_level_min, m_level_max = GetCurrentLevelRange(pl_diff);
+
+  	BUFF_ID		= GetPyOID("ClassTable", "Buff_Speed");
+	buff = nil;
+	
+	saved_X, saved_Y = GetPosition();
+
+----------------------------------------------------------------------------------------
+-- Dynamic level for monster. Monster must have there LevelMax param set to use dynamic level
+----------------------------------------------------------------------------------------
+
+	if(m_lvl_max > -1 ) then
+		if(m_level_max > -1 ) then
+			if( m_lvl <= m_level_min ) then
+				m_lvl = m_level_min;
+			else
+				if( m_lvl >= m_level_max ) then
+					m_lvl = m_level_max;
+				end
+			end
+		else
+			if( m_lvl <= m_lvl_min ) then
+				m_lvl = m_lvl_min;
+			else
+				if( m_lvl >= m_lvl_max ) then
+					m_lvl = m_lvl_max;
+				end
+			end
+		end
+		m_lvl = m_lvl + m_lvl_offset;
+	end
+
+----------------------------------------------------------------------
+-- Level is save so it add the base to the save, for tset properly the level
+-- we need to substract the save level.
+----------------------------------------------------------------------
+
+	SetLevel(ToFixed(m_lvl));
+	
+	-- Change the spawn timer here
+	m_timer_time_spawn = 5000;
+	---------------
+
+	m_timer_spawn = -1;
+	mothSlot1 = nil;
+	mothSlot2 = nil;
+	mothSlot3 = nil;
+	mothSlot4 = nil;
+end
+AddToVFTable("OnInit", "MothCocoonOnInit");
+
+local function CheckSlot()
+	local slot = nil;
+	
+	if(mothSlot1 == nil) then
+		return "mothSlot1";
+	end
+	if(mothSlot2 == nil) then
+		return "mothSlot2";
+	end
+	if(mothSlot3 == nil) then
+		return "mothSlot3";
+	end
+	if(mothSlot4 == nil) then
+		return "mothSlot4";
+	end
+	if(mothSlot1 ~= nil) then
+		if(mothSlot1:IsDead()) then
+			mothSlot1:UNLOCK();
+			mothSlot1 = nil;
+			return "mothSlot1";
+		end		
+	end
+	if(mothSlot2 ~= nil) then
+		if(mothSlot2:IsDead()) then
+			mothSlot2:UNLOCK();
+			mothSlot2 = nil;
+			return "mothSlot2";
+		end	
+	end
+	if(mothSlot3 ~= nil) then
+		if(mothSlot3:IsDead()) then
+			mothSlot3:UNLOCK();
+			mothSlot3 = nil;
+			return "mothSlot3";
+		end	
+	end
+	if(mothSlot4 ~= nil) then
+		if(mothSlot4:IsDead()) then
+			mothSlot4:UNLOCK();
+			mothSlot4 = nil;
+			return "mothSlot4";
+		end	
+	end
+	
+	return -1;
+end
+
+local function SpawnMoth(slot)
+	if(slot == "mothSlot1") then
+		mothSlot1 = Summon(GetPyOID("CharacterTable", "Swamp_Moth_Minions"), true, 0.0, 30.0, 0.0, true);
+		mothSlot1:LOCK();
+	end
+	if(slot == "mothSlot2") then
+		mothSlot2 = Summon(GetPyOID("CharacterTable", "Swamp_Moth_Minions"), true, 0.0, 30.0, 0.0, true);
+		mothSlot2:LOCK();
+	end
+	if(slot == "mothSlot3") then
+		mothSlot3 = Summon(GetPyOID("CharacterTable", "Swamp_Moth_Minions"), true, 0.0, 30.0, 0.0, true);
+		mothSlot3:LOCK();
+	end
+	if(slot == "mothSlot4") then
+		mothSlot4 = Summon(GetPyOID("CharacterTable", "Swamp_Moth_Minions"), true, 0.0, 30.0, 0.0, true);
+		mothSlot4:LOCK();
+	end
+end
+	
+local function SummonMothMinion()
+	local slot = CheckSlot();
+	if(slot ~= -1) then
+		PlayActorAnim(GetPyOID("AnimDict", "moth_cocoon_open"));
+		PlaySound("MotherSlimeAttack", false, 0.0, false);
+		SpawnMoth(slot);
+	end
+end
+
+local function UnlockAllMothMinions()
+	if(mothSlot1 ~= nil) then
+		mothSlot1:UNLOCK();
+	end
+	if(mothSlot2 ~= nil) then
+		mothSlot2:UNLOCK();
+	end
+	if(mothSlot3 ~= nil) then
+		mothSlot3:UNLOCK();
+	end
+	if(mothSlot4 ~= nil) then
+		mothSlot4:UNLOCK();
+	end
+end
+
+local function KillAllMothMinions()
+	UnlockAllMothMinions();
+	
+	if(mothSlot1 ~= nil) then
+		mothSlot1:Kill();
+	end
+	if(mothSlot2 ~= nil) then
+		mothSlot2:Kill();
+	end
+	if(mothSlot3 ~= nil) then
+		mothSlot3:Kill();
+	end
+	if(mothSlot4 ~= nil) then
+		mothSlot4:Kill();
+	end
+end
+
+function MothCocoonOnTargetOutOfRange()
+	monster_OnTargetOutOfRange()
+	if(m_timer_spawn == -1) then
+		m_timer_spawn = StartTimerCB(m_timer_time_spawn, true, SummonMothMinion);
+	end
+end
+AddToVFTable("OnTargetOutOfRange", "MothCocoonOnTargetOutOfRange");
+
+function MothCocoonOnDied()
+	if (m_timer_spawn) then
+		StopTimerCB(m_timer_spawn);
+		m_timer_spawn = nil;
+	end
+	UnlockAllMothMinions();
+end
+AddToVFTable("OnDied", "MothCocoonOnDied");
+
+function MothCocoonOnTerminate()
+	if (m_timer_spawn) then
+		StopTimerCB(m_timer_spawn);
+		m_timer_spawn = nil;
+	end
+	UnlockAllMothMinions();
+	KillAllMothMinions();
+end
+AddToVFTable("OnTerminate", "MothCocoonOnTerminate");

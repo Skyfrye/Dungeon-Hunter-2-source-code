@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/earth_temple"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\011_EARTH_TEMPLE_DEMO.pyscript"
+	camera_znear="900"
+	camera_zfar="10000"
+	music="EarthTempleAmbientMusic"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	light_set="data/3D/Light/earthtemple.lightset_xml"
+	fixed_light_set="data/3D/Light/earthtemple_es1_1.lightset_xml"
+>
+
+	<list name="objective_rooms" random="true">
+		<elem name="straight_earthtemp_ew_" gameplay="ET02_straight_earthtemp_ew__DEMO.mgp" visual="demo_straight_ew.mvp"/>
+		<elem name="midboss_earthtemp_ns_" gameplay="demo_midboss.mgp" visual="demo_corner_ne.mvp"/>
+	</list>
+	
+	<list name="start" random="true">
+		<elem name="entry_earthtemp_w_" gameplay="ET01_entry_earthtemp_w__DEMO.mgp" visual="demo_entrance_w.mvp"/>
+	</list>
+	
+	<list name="end" random="true">
+		<elem name="deadend_earthtemp_s_" gameplay="demo_deadend_s.mgp" visual="demo_deadend_s.mvp"/>
+	</list>
+
+	<list name="path" random="true" replacement="true">
+		<elem name="corner_earthtemp_ne_" gameplay="ET02_corner_earthtemp_ne__DEMO.mgp" visual="demo_corner_ne.mvp"/>
+	</list>
+
+
+<RootRule name="#start">
+
+		<ForceBlock name="#path">
+			<ForceBlock name="#objective_rooms[1]">
+					<Forceblock name="#end"/>
+			</ForceBlock>
+		</ForceBlock>
+
+</RootRule>
+</rules>

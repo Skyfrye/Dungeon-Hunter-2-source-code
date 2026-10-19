@@ -1,0 +1,832 @@
+elf_address,body_bytes,owner,name,demangled
+478634,4,Condition,_ZN9Condition7CompileEv,Condition::Compile()
+478648,36,Condition,_ZN9ConditionC2Ev,Condition::Condition()
+478674,36,Condition,_ZN9ConditionC1Ev,Condition::Condition()
+4786a0,4,Condition,_ZN9ConditionD2Ev,Condition::~Condition()
+4786d8,4,Condition,_ZN9ConditionD1Ev,Condition::~Condition()
+478e90,20,Condition,_ZN9ConditionD0Ev,Condition::~Condition()
+478fcc,24,Condition,_ZN9Condition37DBG_TraceDetailedConditionInformationEP7__sFILE,Condition::DBG_TraceDetailedConditionInformation(__sFILE*)
+33dd24,8,ConditionData,_ZN13ConditionData11SetAsTestedEb,ConditionData::SetAsTested(bool)
+33e5f8,36,ConditionData,_ZNK13ConditionData6IsTrueEv,ConditionData::IsTrue() const
+33e7c8,40,ConditionData,_ZN13ConditionData5ClearEv,ConditionData::Clear()
+33e7f8,48,ConditionData,_ZN13ConditionDataD1Ev,ConditionData::~ConditionData()
+33eacc,20,ConditionData,_ZN13ConditionDataD0Ev,ConditionData::~ConditionData()
+33eae8,48,ConditionData,_ZN13ConditionDataD2Ev,ConditionData::~ConditionData()
+33eb28,208,ConditionData,_ZN13ConditionData4InitEv,ConditionData::Init()
+33ed7c,56,ConditionData,_ZN13ConditionDataC1Ev,ConditionData::ConditionData()
+33edd8,56,ConditionData,_ZN13ConditionDataC2Ev,ConditionData::ConditionData()
+4786dc,20,ConditionList,_ZN13ConditionListC2Ev,ConditionList::ConditionList()
+4786f0,20,ConditionList,_ZN13ConditionListC1Ev,ConditionList::ConditionList()
+478704,88,ConditionList,_ZN13ConditionList4EvalEv,ConditionList::Eval()
+47875c,76,ConditionList,_ZNK13ConditionList41DBG_TraceDetailedConditionListInformationEP7__sFILE,ConditionList::DBG_TraceDetailedConditionListInformation(__sFILE*) const
+478914,132,ConditionList,_ZN13ConditionList12AssignPyDataEPN7Structs15v2ConditionStubEi,"ConditionList::AssignPyData(Structs::v2ConditionStub*, int)"
+478eac,108,ConditionList,_ZN13ConditionListD1Ev,ConditionList::~ConditionList()
+478f20,108,ConditionList,_ZN13ConditionListD2Ev,ConditionList::~ConditionList()
+4787a8,44,Condition_IsEventInState,_ZN24Condition_IsEventInStateD1Ev,Condition_IsEventInState::~Condition_IsEventInState()
+478c10,148,Condition_IsEventInState,_ZN24Condition_IsEventInState37DBG_TraceDetailedConditionInformationEP7__sFILE,Condition_IsEventInState::DBG_TraceDetailedConditionInformation(__sFILE*)
+478db4,192,Condition_IsEventInState,_ZN24Condition_IsEventInState4EvalEv,Condition_IsEventInState::Eval()
+4791f4,44,Condition_IsEventInState,_ZN24Condition_IsEventInStateD0Ev,Condition_IsEventInState::~Condition_IsEventInState()
+478638,8,Condition_IsLevelInState,_ZN24Condition_IsLevelInState4EvalEv,Condition_IsLevelInState::Eval()
+478844,44,Condition_IsLevelInState,_ZN24Condition_IsLevelInStateD1Ev,Condition_IsLevelInState::~Condition_IsLevelInState()
+478fb0,24,Condition_IsLevelInState,_ZN24Condition_IsLevelInState37DBG_TraceDetailedConditionInformationEP7__sFILE,Condition_IsLevelInState::DBG_TraceDetailedConditionInformation(__sFILE*)
+47917c,44,Condition_IsLevelInState,_ZN24Condition_IsLevelInStateD0Ev,Condition_IsLevelInState::~Condition_IsLevelInState()
+478640,8,Condition_IsPlayerAtLevel,_ZN25Condition_IsPlayerAtLevel4EvalEv,Condition_IsPlayerAtLevel::Eval()
+478810,44,Condition_IsPlayerAtLevel,_ZN25Condition_IsPlayerAtLevelD1Ev,Condition_IsPlayerAtLevel::~Condition_IsPlayerAtLevel()
+478f94,24,Condition_IsPlayerAtLevel,_ZN25Condition_IsPlayerAtLevel37DBG_TraceDetailedConditionInformationEP7__sFILE,Condition_IsPlayerAtLevel::DBG_TraceDetailedConditionInformation(__sFILE*)
+47926c,44,Condition_IsPlayerAtLevel,_ZN25Condition_IsPlayerAtLevelD0Ev,Condition_IsPlayerAtLevel::~Condition_IsPlayerAtLevel()
+4787dc,44,Condition_IsPlayerInLevel,_ZN25Condition_IsPlayerInLevelD1Ev,Condition_IsPlayerInLevel::~Condition_IsPlayerInLevel()
+478ba4,88,Condition_IsPlayerInLevel,_ZN25Condition_IsPlayerInLevel37DBG_TraceDetailedConditionInformationEP7__sFILE,Condition_IsPlayerInLevel::DBG_TraceDetailedConditionInformation(__sFILE*)
+478d78,52,Condition_IsPlayerInLevel,_ZN25Condition_IsPlayerInLevel4EvalEv,Condition_IsPlayerInLevel::Eval()
+479230,44,Condition_IsPlayerInLevel,_ZN25Condition_IsPlayerInLevelD0Ev,Condition_IsPlayerInLevel::~Condition_IsPlayerInLevel()
+4788e0,44,Condition_IsQuestInState,_ZN24Condition_IsQuestInStateD1Ev,Condition_IsQuestInState::~Condition_IsQuestInState()
+479320,44,Condition_IsQuestInState,_ZN24Condition_IsQuestInStateD0Ev,Condition_IsQuestInState::~Condition_IsQuestInState()
+4786a4,44,Condition_IsQuestInStateGeneric,_ZN31Condition_IsQuestInStateGenericD1Ev,Condition_IsQuestInStateGeneric::~Condition_IsQuestInStateGeneric()
+478cc4,148,Condition_IsQuestInStateGeneric,_ZN31Condition_IsQuestInStateGeneric37DBG_TraceDetailedConditionInformationEP7__sFILE,Condition_IsQuestInStateGeneric::DBG_TraceDetailedConditionInformation(__sFILE*)
+478fe8,176,Condition_IsQuestInStateGeneric,_ZN31Condition_IsQuestInStateGeneric4EvalEv,Condition_IsQuestInStateGeneric::Eval()
+4791b8,44,Condition_IsQuestInStateGeneric,_ZN31Condition_IsQuestInStateGenericD0Ev,Condition_IsQuestInStateGeneric::~Condition_IsQuestInStateGeneric()
+478878,44,Condition_IsQuestStateHigher,_ZN28Condition_IsQuestStateHigherD1Ev,Condition_IsQuestStateHigher::~Condition_IsQuestStateHigher()
+4792a8,44,Condition_IsQuestStateHigher,_ZN28Condition_IsQuestStateHigherD0Ev,Condition_IsQuestStateHigher::~Condition_IsQuestStateHigher()
+4788ac,44,Condition_IsQuestStateLower,_ZN27Condition_IsQuestStateLowerD1Ev,Condition_IsQuestStateLower::~Condition_IsQuestStateLower()
+4792e4,44,Condition_IsQuestStateLower,_ZN27Condition_IsQuestStateLowerD0Ev,Condition_IsQuestStateLower::~Condition_IsQuestStateLower()
+3f9d78,136,ItemInstance,_ZNK12ItemInstanceeqERKS_,ItemInstance::operator==(ItemInstance const&) const
+3f9e00,8,ItemInstance,_ZNK12ItemInstance9GetItemIdEv,ItemInstance::GetItemId() const
+3f9e08,36,ItemInstance,_ZNK12ItemInstance7GetItemEv,ItemInstance::GetItem() const
+3f9e34,36,ItemInstance,_ZNK12ItemInstance13GetPickUpTypeEv,ItemInstance::GetPickUpType() const
+3f9e58,16,ItemInstance,_ZNK12ItemInstance11IsStackableEv,ItemInstance::IsStackable() const
+3f9e68,24,ItemInstance,_ZNK12ItemInstance12IsEquippableEv,ItemInstance::IsEquippable() const
+3f9e80,20,ItemInstance,_ZNK12ItemInstance12GetNumPowersEv,ItemInstance::GetNumPowers() const
+3f9e94,40,ItemInstance,_ZNK12ItemInstance11GetIconNameEv,ItemInstance::GetIconName() const
+3f9ec4,168,ItemInstance,_ZNK12ItemInstance8GetPowerEj,ItemInstance::GetPower(unsigned int) const
+3f9f88,152,ItemInstance,_ZNK12ItemInstance12GetPowerDescEj,ItemInstance::GetPowerDesc(unsigned int) const
+3fa038,148,ItemInstance,_ZNK12ItemInstance10GetPowerIdEj,ItemInstance::GetPowerId(unsigned int) const
+3fa0e4,128,ItemInstance,_ZN12ItemInstance6SetQtyEi,ItemInstance::SetQty(int)
+3fa17c,12,ItemInstance,_ZN12ItemInstance6AddQtyEi,ItemInstance::AddQty(int)
+3fa1fc,92,ItemInstance,_ZNK12ItemInstanceltERKS_,ItemInstance::operator<(ItemInstance const&) const
+3fa330,608,ItemInstance,_ZNK12ItemInstance14IsEquippableByEP9Character,ItemInstance::IsEquippableBy(Character*) const
+3fa5cc,208,ItemInstance,_ZN12ItemInstance10GetFontDefEi,ItemInstance::GetFontDef(int)
+3fa6cc,16,ItemInstance,_ZNK12ItemInstance10GetFontDefEv,ItemInstance::GetFontDef() const
+3fa6dc,44,ItemInstance,_ZN12ItemInstance8GetColorEi,ItemInstance::GetColor(int)
+3fa710,16,ItemInstance,_ZNK12ItemInstance8GetColorEv,ItemInstance::GetColor() const
+3faa64,44,ItemInstance,_ZN12ItemInstanceD1Ev,ItemInstance::~ItemInstance()
+3faab0,20,ItemInstance,_ZN12ItemInstanceD0Ev,ItemInstance::~ItemInstance()
+3faacc,44,ItemInstance,_ZN12ItemInstanceD2Ev,ItemInstance::~ItemInstance()
+3facdc,252,ItemInstance,_ZN12ItemInstance11_UpdateReqsEv,ItemInstance::_UpdateReqs()
+3fb290,484,ItemInstance,_ZN12ItemInstance12_UpdateStatsEv,ItemInstance::_UpdateStats()
+3fb570,168,ItemInstance,_ZN12ItemInstance9PowerInfo4swapERS0_,ItemInstance::PowerInfo::swap(ItemInstance::PowerInfo&)
+3fb754,472,ItemInstance,_ZN12ItemInstance11_UpdateNameEv,ItemInstance::_UpdateName()
+3fbc58,8,ItemInstance,_ZN12ItemInstance8SetValueEi,ItemInstance::SetValue(int)
+3fbc60,340,ItemInstance,_ZN12ItemInstance8AddPowerEii,"ItemInstance::AddPower(int, int)"
+3fc1b4,176,ItemInstance,_ZN12ItemInstance18UpdateLocalizationEv,ItemInstance::UpdateLocalization()
+3fc26c,72,ItemInstance,_ZN12ItemInstanceC1Eij,"ItemInstance::ItemInstance(int, unsigned int)"
+3fc3e0,180,ItemInstance,_ZN12ItemInstance5SplitEi,ItemInstance::Split(int)
+3fc494,72,ItemInstance,_ZN12ItemInstanceC2Eij,"ItemInstance::ItemInstance(int, unsigned int)"
+3fc608,20,ItemInventory,_ZNK13ItemInventory11GetNumItemsEv,ItemInventory::GetNumItems() const
+3fc61c,32,ItemInventory,_ZN13ItemInventory7GetItemEj,ItemInventory::GetItem(unsigned int)
+3fc63c,84,ItemInventory,_ZNK13ItemInventory12GetItemIndexEPK12ItemInstance,ItemInventory::GetItemIndex(ItemInstance const*) const
+3fc690,16,ItemInventory,_ZNK13ItemInventory13GetNumPotionsEv,ItemInventory::GetNumPotions() const
+3fc6a0,8,ItemInventory,_ZN13ItemInventory18GetCurrentSkillSetEi,ItemInventory::GetCurrentSkillSet(int)
+3fc6a8,32,ItemInventory,_ZNK13ItemInventory18GetCurrentEquipSetEi,ItemInventory::GetCurrentEquipSet(int) const
+3fc6c8,32,ItemInventory,_ZN13ItemInventory16SwapEquipmentSetEv,ItemInventory::SwapEquipmentSet()
+3fcff8,348,ItemInventory,_ZN13ItemInventory19TrophyCheckArmorSetEv,ItemInventory::TrophyCheckArmorSet()
+3fd15c,128,ItemInventory,_ZN13ItemInventory8FindItemEi,ItemInventory::FindItem(int)
+3fda20,184,ItemInventory,_ZNK13ItemInventory20IsItemEquippedInSlotEjj,"ItemInventory::IsItemEquippedInSlot(unsigned int, unsigned int) const"
+3fdaf0,240,ItemInventory,_ZNK13ItemInventory14IsItemEquippedEj,ItemInventory::IsItemEquipped(unsigned int) const
+3fdbf8,172,ItemInventory,_ZNK13ItemInventory7GetItemEj,ItemInventory::GetItem(unsigned int) const
+3fdcbc,524,ItemInventory,_ZNK13ItemInventory16IsItemEquippableEjj,"ItemInventory::IsItemEquippable(unsigned int, unsigned int) const"
+3fdeec,156,ItemInventory,_ZNK13ItemInventory16IsItemEquippableEj,ItemInventory::IsItemEquippable(unsigned int) const
+3fdfa0,56,ItemInventory,_ZN13ItemInventory26UpdateLocalizationForItemsEv,ItemInventory::UpdateLocalizationForItems()
+3fdfd8,352,ItemInventory,_ZN13ItemInventory7SetGoldEi,ItemInventory::SetGold(int)
+3fe164,68,ItemInventory,_ZN13ItemInventory7AddGoldEi,ItemInventory::AddGold(int)
+3fe1a8,36,ItemInventory,_ZN13ItemInventory14TransferGoldToEiRS_,"ItemInventory::TransferGoldTo(int, ItemInventory&)"
+3fe1cc,136,ItemInventory,_ZN13ItemInventory20_HasItemInstanceLikeEPK12ItemInstanceRj,"ItemInventory::_HasItemInstanceLike(ItemInstance const*, unsigned int&)"
+3fe330,76,ItemInventory,_ZNK13ItemInventory15IsInventoryFullEv,ItemInventory::IsInventoryFull() const
+3fe448,448,ItemInventory,_ZN13ItemInventory10RemoveItemEj,ItemInventory::RemoveItem(unsigned int)
+3fe658,100,ItemInventory,_ZN13ItemInventory12TryConsumingEii,"ItemInventory::TryConsuming(int, int)"
+3fe6bc,256,ItemInventory,_ZN13ItemInventory14RemoveAllItemsEb,ItemInventory::RemoveAllItems(bool)
+3fe7d8,108,ItemInventory,_ZN13ItemInventory16_DelItemInstanceEP12ItemInstance,ItemInventory::_DelItemInstance(ItemInstance*)
+3fe878,40,ItemInventory,_ZN13ItemInventory15RemoveOnePotionEv,ItemInventory::RemoveOnePotion()
+3fed48,264,ItemInventory,_ZN13ItemInventory18GetItemListForSlotEjPSt6vectorINS_4ItemESaIS1_EE,"ItemInventory::GetItemListForSlot(unsigned int, std::vector<ItemInventory::Item, std::allocator<ItemInventory::Item> >*)"
+3fee50,252,ItemInventory,_ZN13ItemInventory16GetValuableItemsEPSt6vectorINS_4ItemESaIS1_EE,"ItemInventory::GetValuableItems(std::vector<ItemInventory::Item, std::allocator<ItemInventory::Item> >*)"
+3ff200,292,ItemInventory,_ZN13ItemInventoryC1Ev,ItemInventory::ItemInventory()
+3ff330,292,ItemInventory,_ZN13ItemInventoryC2Ev,ItemInventory::ItemInventory()
+3ff460,156,ItemInventory,_ZN13ItemInventoryD1Ev,ItemInventory::~ItemInventory()
+3ff50c,20,ItemInventory,_ZN13ItemInventoryD0Ev,ItemInventory::~ItemInventory()
+3ff528,156,ItemInventory,_ZN13ItemInventoryD2Ev,ItemInventory::~ItemInventory()
+3ff5d4,628,ItemInventory,_ZN13ItemInventory16_AddItemInstanceEP12ItemInstancebb,"ItemInventory::_AddItemInstance(ItemInstance*, bool, bool)"
+3ff858,416,ItemInventory,_ZN13ItemInventory14TransferItemToEjRS_ibb,"ItemInventory::TransferItemTo(unsigned int, ItemInventory&, int, bool, bool)"
+3ffa44,36,ItemInventory,_ZN13ItemInventory14TransferItemToEjRS_bb,"ItemInventory::TransferItemTo(unsigned int, ItemInventory&, bool, bool)"
+3ffa68,416,ItemInventory,_ZN13ItemInventory19TransferInventoryToERS_bb,"ItemInventory::TransferInventoryTo(ItemInventory&, bool, bool)"
+3ffc40,204,ItemInventory,_ZN13ItemInventory12SetPotionQtyEi,ItemInventory::SetPotionQty(int)
+3ffd1c,4,ItemInventory,_ZN13ItemInventory15AddItemInstanceEP12ItemInstancebb,"ItemInventory::AddItemInstance(ItemInstance*, bool, bool)"
+3ffd20,24,ItemInventory,_ZNK13ItemInventory20GetNumEquipmentSlotsEv,ItemInventory::GetNumEquipmentSlots() const
+3ffd38,28,ItemInventory,_ZNK13ItemInventory14CanMeleeAttackEv,ItemInventory::CanMeleeAttack() const
+3ffd54,128,ItemInventory,_ZNK13ItemInventory22GetModularCategoryNameEj,ItemInventory::GetModularCategoryName(unsigned int) const
+3ffdec,80,ItemInventory,_ZNK13ItemInventory15GetEquippedItemEj,ItemInventory::GetEquippedItem(unsigned int) const
+3ffe3c,80,ItemInventory,_ZN13ItemInventory15GetEquippedItemEj,ItemInventory::GetEquippedItem(unsigned int)
+3ffe8c,48,ItemInventory,_ZNK13ItemInventory17HasMainHandWeaponEv,ItemInventory::HasMainHandWeapon() const
+3ffebc,116,ItemInventory,_ZNK13ItemInventory14CanRangeAttackERiS0_S0_,"ItemInventory::CanRangeAttack(int&, int&, int&) const"
+3fff30,116,ItemInventory,_ZNK13ItemInventory14CanMeleeAttackERi,ItemInventory::CanMeleeAttack(int&) const
+3fffa4,112,ItemInventory,_ZNK13ItemInventory15HasRangedWeaponEv,ItemInventory::HasRangedWeapon() const
+400014,4,ItemInventory,_ZNK13ItemInventory14CanRangeAttackEv,ItemInventory::CanRangeAttack() const
+400018,104,ItemInventory,_ZNK13ItemInventory12HasAxeOrMaceEv,ItemInventory::HasAxeOrMace() const
+400080,72,ItemInventory,_ZNK13ItemInventory6HasBowEv,ItemInventory::HasBow() const
+4000c8,72,ItemInventory,_ZNK13ItemInventory8HasStaffEv,ItemInventory::HasStaff() const
+400110,72,ItemInventory,_ZNK13ItemInventory9HasShieldEv,ItemInventory::HasShield() const
+400158,68,ItemInventory,_ZNK13ItemInventory16HasOffHandWeaponEv,ItemInventory::HasOffHandWeapon() const
+40019c,4,ItemInventory,_ZNK13ItemInventory14IsDualWieldingEv,ItemInventory::IsDualWielding() const
+4001a0,140,ItemInventory,_ZNK13ItemInventory12HasTwoHanderEb,ItemInventory::HasTwoHander(bool) const
+40022c,148,ItemInventory,_ZNK13ItemInventory23IsEquipmentSlotLeftHandEj,ItemInventory::IsEquipmentSlotLeftHand(unsigned int) const
+4002d8,180,ItemInventory,_ZNK13ItemInventory20IsEquipmentSlotTakenEj,ItemInventory::IsEquipmentSlotTaken(unsigned int) const
+4003a4,336,ItemInventory,_ZN13ItemInventory20_UnEquipItemFromSlotEji,"ItemInventory::_UnEquipItemFromSlot(unsigned int, int)"
+40050c,4,ItemInventory,_ZN13ItemInventory19UnEquipItemFromSlotEji,"ItemInventory::UnEquipItemFromSlot(unsigned int, int)"
+400510,264,ItemInventory,_ZN13ItemInventory16_UnEquipItemAutoEj,ItemInventory::_UnEquipItemAuto(unsigned int)
+400630,4,ItemInventory,_ZN13ItemInventory15UnEquipItemAutoEj,ItemInventory::UnEquipItemAuto(unsigned int)
+400634,908,ItemInventory,_ZN13ItemInventory16_EquipItemToSlotEjjb,"ItemInventory::_EquipItemToSlot(unsigned int, unsigned int, bool)"
+4009f0,8,ItemInventory,_ZN13ItemInventory15EquipItemToSlotEjj,"ItemInventory::EquipItemToSlot(unsigned int, unsigned int)"
+4009f8,628,ItemInventory,_ZN13ItemInventory14_EquipItemAutoEj,ItemInventory::_EquipItemAuto(unsigned int)
+400c84,4,ItemInventory,_ZN13ItemInventory13EquipItemAutoEj,ItemInventory::EquipItemAuto(unsigned int)
+4016e4,580,ItemInventory,_ZN13ItemInventory14_EquipSlotAutoEjP9Character,"ItemInventory::_EquipSlotAuto(unsigned int, Character*)"
+401940,4,ItemInventory,_ZN13ItemInventory13EquipSlotAutoEjP9Character,"ItemInventory::EquipSlotAuto(unsigned int, Character*)"
+401b90,500,ItemInventory,_ZN13ItemInventory16_GetProbQuantityEii,"ItemInventory::_GetProbQuantity(int, int)"
+401dbc,344,ItemInventory,_ZN13ItemInventory14_GetRandomItemERKN7Structs17ItemListEntryListE,ItemInventory::_GetRandomItem(Structs::ItemListEntryList const&)
+401f38,344,ItemInventory,_ZN13ItemInventory24_GetRandomItemPowerEntryERKN7Structs18ItemPowerEntryListE,ItemInventory::_GetRandomItemPowerEntry(Structs::ItemPowerEntryList const&)
+4020b4,172,ItemInventory,_ZN13ItemInventory17CalcLootItemValueEP12ItemInstancei,"ItemInventory::CalcLootItemValue(ItemInstance*, int)"
+4027a4,160,ItemInventory,_ZN13ItemInventory20_IsLootEntryUsingPctERKN7Structs9LootEntryE,ItemInventory::_IsLootEntryUsingPct(Structs::LootEntry const&)
+402854,116,ItemInventory,_ZN13ItemInventory17_GetEffectiveProbERKN7Structs9LootEntryE,ItemInventory::_GetEffectiveProb(Structs::LootEntry const&)
+4028d0,376,ItemInventory,_ZN13ItemInventory19_GetRandomLootEntryERKSt6vectorIPKN7Structs9LootEntryESaIS4_EE,"ItemInventory::_GetRandomLootEntry(std::vector<Structs::LootEntry const*, std::allocator<Structs::LootEntry const*> > const&)"
+402a60,356,ItemInventory,_ZN13ItemInventory19_GetRandomLootEntryERKN7Structs4LootE,ItemInventory::_GetRandomLootEntry(Structs::Loot const&)
+402bdc,244,ItemInventory,_ZN13ItemInventory10_DoPctRollERKN7Structs9LootEntryE,ItemInventory::_DoPctRoll(Structs::LootEntry const&)
+402ce4,140,ItemInventory,_ZN13ItemInventory11_DoPctRollsERSt6vectorIPKN7Structs9LootEntryESaIS4_EERKS6_,"ItemInventory::_DoPctRolls(std::vector<Structs::LootEntry const*, std::allocator<Structs::LootEntry const*> >&, std::vector<Structs::LootEntry const*, std::allocator<Structs::LootEntry const*> > const&)"
+402d70,140,ItemInventory,_ZN13ItemInventory11_DoPctRollsERSt6vectorIPKN7Structs9LootEntryESaIS4_EES4_i,"ItemInventory::_DoPctRolls(std::vector<Structs::LootEntry const*, std::allocator<Structs::LootEntry const*> >&, Structs::LootEntry const*, int)"
+402dfc,1208,ItemInventory,_ZN13ItemInventory13_AddLootItemsERKSt6vectorIPKN7Structs9LootEntryESaIS4_EERS0_INS_8LootInfoESaIS9_EEb,"ItemInventory::_AddLootItems(std::vector<Structs::LootEntry const*, std::allocator<Structs::LootEntry const*> > const&, std::vector<ItemInventory::LootInfo, std::allocator<ItemInventory::LootInfo> >&, bool)"
+403310,1592,ItemInventory,_ZN13ItemInventory18_AddLootItemPowersEPKN7Structs9LootEntryEP12ItemInstanceiii,"ItemInventory::_AddLootItemPowers(Structs::LootEntry const*, ItemInstance*, int, int, int)"
+4039a0,1692,ItemInventory,_ZN13ItemInventory13_AddLootTableEiRSt6vectorIPKN7Structs9LootEntryESaIS4_EEPS6_,"ItemInventory::_AddLootTable(int, std::vector<Structs::LootEntry const*, std::allocator<Structs::LootEntry const*> >&, std::vector<Structs::LootEntry const*, std::allocator<Structs::LootEntry const*> >*)"
+40407c,1344,ItemInventory,_ZN13ItemInventory7AddLootEiiiib,"ItemInventory::AddLoot(int, int, int, int, bool)"
+404658,64,ItemInventory,_ZN13ItemInventory16DBG_DropAllLootsEv,ItemInventory::DBG_DropAllLoots()
+47d5fc,232,ItemInventory,_ZN13ItemInventory30UnregisterQuestGatheringItemIdEi,ItemInventory::UnregisterQuestGatheringItemId(int)
+3eabcc,44,ItemManager,_ZN11ItemManagerC2Ev,ItemManager::ItemManager()
+3eac00,44,ItemManager,_ZN11ItemManagerC1Ev,ItemManager::ItemManager()
+3eac34,156,ItemManager,_ZN11ItemManager7DeSpawnEP10ItemObject,ItemManager::DeSpawn(ItemObject*)
+3eacd0,368,ItemManager,_ZN11ItemManager5SpawnER13ItemInventoryjPK10GameObjectRK7Point3DIfES8_PK9Character,"ItemManager::Spawn(ItemInventory&, unsigned int, GameObject const*, Point3D<float> const&, Point3D<float> const&, Character const*)"
+3eb6bc,40,ItemManager,_ZN11ItemManager5FlushEv,ItemManager::Flush()
+3eb6e4,1008,ItemManager,_ZN11ItemManager8PreCacheEv,ItemManager::PreCache()
+3ebb58,56,ItemManager,_ZN11ItemManagerD1Ev,ItemManager::~ItemManager()
+3ebb98,20,ItemManager,_ZN11ItemManagerD0Ev,ItemManager::~ItemManager()
+3ebbb4,56,ItemManager,_ZN11ItemManagerD2Ev,ItemManager::~ItemManager()
+3ebbf4,8,ItemObject,_ZNK10ItemObject11IsUpdatableEv,ItemObject::IsUpdatable() const
+3ebbfc,8,ItemObject,_ZNK10ItemObject10IsAnimatedEv,ItemObject::IsAnimated() const
+3ebc04,8,ItemObject,_ZNK10ItemObject8GetSpeedEv,ItemObject::GetSpeed() const
+3ebc0c,32,ItemObject,_ZN10ItemObject16_OnItemCollectedEP10ProjectilePv,"ItemObject::_OnItemCollected(Projectile*, void*)"
+3ebc34,24,ItemObject,_ZN10ItemObject21_GetCurrentPlayerRRIdEv,ItemObject::_GetCurrentPlayerRRId()
+3ebc54,64,ItemObject,_ZN10ItemObject18_GetNextPlayerRRIdEv,ItemObject::_GetNextPlayerRRId()
+3ebca0,4,ItemObject,_ZN10ItemObject8InitPostEv,ItemObject::InitPost()
+3ebca4,4,ItemObject,_ZN10ItemObject8ShowGlowEv,ItemObject::ShowGlow()
+3ebca8,36,ItemObject,_ZN10ItemObject18UpdateLocalizationEv,ItemObject::UpdateLocalization()
+3ebccc,36,ItemObject,_ZN10ItemObject8HideGlowEv,ItemObject::HideGlow()
+3ebcf8,52,ItemObject,_ZN10ItemObject11HideTooltipEv,ItemObject::HideTooltip()
+3ebd2c,48,ItemObject,_ZN10ItemObject15OnCollisionEndsEP9Character,ItemObject::OnCollisionEnds(Character*)
+3ebd5c,328,ItemObject,_ZN10ItemObject11ShowTooltipEv,ItemObject::ShowTooltip()
+3ebeb4,48,ItemObject,_ZNK10ItemObject18GetInteractionTypeEP10GameObject,ItemObject::GetInteractionType(GameObject*) const
+3ebee4,180,ItemObject,_ZN10ItemObject6UpdateEv,ItemObject::Update()
+3ebfa0,40,ItemObject,_ZN10ItemObject15SetRelativeAABBERK4aabbIfEb,"ItemObject::SetRelativeAABB(aabb<float> const&, bool)"
+3ebffc,24,ItemObject,_ZNK10ItemObject13HasBeenLootedEv,ItemObject::HasBeenLooted() const
+3ec014,52,ItemObject,_ZNK10ItemObject13IsInteractiveEP10GameObject,ItemObject::IsInteractive(GameObject*) const
+3ec048,160,ItemObject,_ZN10ItemObject17OnCollisionBeginsEP9Character,ItemObject::OnCollisionBegins(Character*)
+3ec0f0,512,ItemObject,_ZN10ItemObject9InitAgainER13ItemInventoryjPK9Character,"ItemObject::InitAgain(ItemInventory&, unsigned int, Character const*)"
+3ec320,4,ItemObject,_ZN10ItemObject17DeclarePropertiesEv,ItemObject::DeclareProperties()
+3ec324,160,ItemObject,_ZN10ItemObjectC1EN10ObjectBase6GO_IDSE,ItemObject::ItemObject(ObjectBase::GO_IDS)
+3ec3cc,160,ItemObject,_ZN10ItemObjectC2EN10ObjectBase6GO_IDSE,ItemObject::ItemObject(ObjectBase::GO_IDS)
+3ec474,128,ItemObject,_ZN10ItemObject17_DoAutoPickupHackEPS_PK10GameObjectS3_,"ItemObject::_DoAutoPickupHack(ItemObject*, GameObject const*, GameObject const*)"
+3ec504,196,ItemObject,_ZN10ItemObject23_GetNextPlayerQuestRRIdEi,ItemObject::_GetNextPlayerQuestRRId(int)
+3ec668,92,ItemObject,_ZN10ItemObject17_GetRandomDropPosER7Point3DIfEPK10GameObjectS5_,"ItemObject::_GetRandomDropPos(Point3D<float>&, GameObject const*, GameObject const*)"
+3ec8a0,200,ItemObject,_ZN10ItemObject16DropAndAwardLootER13ItemInventoryPK10GameObjectS4_i,"ItemObject::DropAndAwardLoot(ItemInventory&, GameObject const*, GameObject const*, int)"
+3ec974,336,ItemObject,_ZN10ItemObject13DropInventoryER13ItemInventoryPK10GameObjectS4_PK9Character,"ItemObject::DropInventory(ItemInventory&, GameObject const*, GameObject const*, Character const*)"
+3ecae4,188,ItemObject,_ZN10ItemObject18GetInventoryToDropER13ItemInventoryiPK10GameObjecti,"ItemObject::GetInventoryToDrop(ItemInventory&, int, GameObject const*, int)"
+3ecba0,296,ItemObject,_ZN10ItemObject13DropLootTableEiPK10GameObjectS2_ib,"ItemObject::DropLootTable(int, GameObject const*, GameObject const*, int, bool)"
+3eccc8,124,ItemObject,_ZN10ItemObject13DropLootTableEiPK10GameObjectS2_PK9Characteri,"ItemObject::DropLootTable(int, GameObject const*, GameObject const*, Character const*, int)"
+3ecd54,112,ItemObject,_ZN10ItemObjectD1Ev,ItemObject::~ItemObject()
+3ecde4,20,ItemObject,_ZN10ItemObjectD0Ev,ItemObject::~ItemObject()
+3ece00,112,ItemObject,_ZN10ItemObjectD2Ev,ItemObject::~ItemObject()
+3ece80,176,ItemObject,_ZN10ItemObject8InitOnceEi,ItemObject::InitOnce(int)
+3ed144,1072,ItemObject,_ZN10ItemObject8InteractEP10GameObject,ItemObject::Interact(GameObject*)
+461498,76,LevelSavegame,_ZN13LevelSavegameD1Ev,LevelSavegame::~LevelSavegame()
+4614f4,20,LevelSavegame,_ZN13LevelSavegameD0Ev,LevelSavegame::~LevelSavegame()
+461510,76,LevelSavegame,_ZN13LevelSavegameD2Ev,LevelSavegame::~LevelSavegame()
+46156c,100,LevelSavegame,_ZN13LevelSavegame4LoadEv,LevelSavegame::Load()
+4615ec,116,LevelSavegame,_ZN13LevelSavegame4SaveEv,LevelSavegame::Save()
+4616b8,8,LevelSavegame,_ZN13LevelSavegame15__SaveLevelInfoEP11IStreamBasePv,"LevelSavegame::__SaveLevelInfo(IStreamBase*, void*)"
+461820,8,LevelSavegame,_ZN13LevelSavegame15__LoadLevelInfoEP11IStreamBasePv,"LevelSavegame::__LoadLevelInfo(IStreamBase*, void*)"
+461e90,88,LevelSavegame,_ZN13LevelSavegame13__LoadObjectsEP11IStreamBasePv,"LevelSavegame::__LoadObjects(IStreamBase*, void*)"
+4620f4,364,LevelSavegame,_ZN13LevelSavegame18DeleteAllLevelSaveEj,LevelSavegame::DeleteAllLevelSave(unsigned int)
+4622c8,128,LevelSavegame,_ZN13LevelSavegame21GetCheckpointFilenameEjibRSs,"LevelSavegame::GetCheckpointFilename(unsigned int, int, bool, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)"
+462394,64,LevelSavegame,_ZNK13LevelSavegame16CheckpointExistsEi,LevelSavegame::CheckpointExists(int) const
+4624e4,116,LevelSavegame,_ZN13LevelSavegame11GetFilenameEjiiiRSs,"LevelSavegame::GetFilename(unsigned int, int, int, int, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)"
+46259c,72,LevelSavegame,_ZN13LevelSavegame14LoadCheckPointEiii,"LevelSavegame::LoadCheckPoint(int, int, int)"
+4626f4,80,LevelSavegame,_ZN13LevelSavegame6DeleteEjiiibb,"LevelSavegame::Delete(unsigned int, int, int, int, bool, bool)"
+462824,72,LevelSavegame,_ZN13LevelSavegame6ExistsEjiii,"LevelSavegame::Exists(unsigned int, int, int, int)"
+462934,108,LevelSavegame,_ZN13LevelSavegameC1EP5Leveljiiib,"LevelSavegame::LevelSavegame(Level*, unsigned int, int, int, int, bool)"
+462ae8,220,LevelSavegame,_ZN13LevelSavegame9LoadLevelEjiii,"LevelSavegame::LoadLevel(unsigned int, int, int, int)"
+462bd0,108,LevelSavegame,_ZN13LevelSavegameC2EP5Leveljiiib,"LevelSavegame::LevelSavegame(Level*, unsigned int, int, int, int, bool)"
+462d84,100,LevelSavegame,_ZN13LevelSavegame13__SaveObjectsEP11IStreamBasePv,"LevelSavegame::__SaveObjects(IStreamBase*, void*)"
+463130,116,LevelSavegame,_ZN13LevelSavegame14SaveCheckPointEiii,"LevelSavegame::SaveCheckPoint(int, int, int)"
+463288,72,LevelSavegame,_ZN13LevelSavegame18ValidateCheckpointEiii,"LevelSavegame::ValidateCheckpoint(int, int, int)"
+479f6c,4,Objective,_ZN9Objective7CompileEv,Objective::Compile()
+479f70,16,Objective,_ZN9Objective17InvalidateCompileEv,Objective::InvalidateCompile()
+479f80,4,Objective,_ZN9Objective22InstallObjectiveMarkerEii,"Objective::InstallObjectiveMarker(int, int)"
+479f84,4,Objective,_ZN9Objective21RemoveObjectiveMarkerEv,Objective::RemoveObjectiveMarker()
+47a1e4,4,Objective,_ZN9ObjectiveD2Ev,Objective::~Objective()
+47a378,4,Objective,_ZN9ObjectiveD1Ev,Objective::~Objective()
+47a37c,12,Objective,_ZN9Objective10_resetDataEv,Objective::_resetData()
+47a3a0,12,Objective,_ZNK9Objective12GetDescStrIdEv,Objective::GetDescStrId() const
+47a8b0,20,Objective,_ZN9ObjectiveD0Ev,Objective::~Objective()
+47ab3c,24,Objective,_ZN9Objective9_loadDataEP11IStreamBase,Objective::_loadData(IStreamBase*)
+47ab74,16,Objective,_ZN9Objective9_saveDataEP11IStreamBase,Objective::_saveData(IStreamBase*)
+47b7ac,96,Objective,_ZNK9Objective37DBG_TraceDetailedObjectiveInformationEP7__sFILE,Objective::DBG_TraceDetailedObjectiveInformation(__sFILE*) const
+47b9b8,76,Objective,_ZNK9Objective10GetDescStrEv,Objective::GetDescStr() const
+47ba10,68,Objective,_ZN9Objective14SetIsCompletedEv,Objective::SetIsCompleted()
+47bd8c,96,Objective,_ZN9ObjectiveC1Ev,Objective::Objective()
+47be00,96,Objective,_ZN9ObjectiveC2Ev,Objective::Objective()
+47e8e4,48,Objective,_ZNK9Objective7GetDescEv,Objective::GetDesc() const
+47a3c0,20,ObjectiveList,_ZN13ObjectiveListC2Ev,ObjectiveList::ObjectiveList()
+47a3d4,20,ObjectiveList,_ZN13ObjectiveListC1Ev,ObjectiveList::ObjectiveList()
+47a3e8,40,ObjectiveList,_ZN13ObjectiveList25CreateObjectiveWithPyDataEPN7Structs20v2QuestObjectiveStubE,ObjectiveList::CreateObjectiveWithPyData(Structs::v2QuestObjectiveStub*)
+47a414,48,ObjectiveList,_ZN13ObjectiveList8SetOwnerEP9Character,ObjectiveList::SetOwner(Character*)
+47a444,84,ObjectiveList,_ZN13ObjectiveList4EvalEv,ObjectiveList::Eval()
+47a498,84,ObjectiveList,_ZN13ObjectiveList7IsValidEv,ObjectiveList::IsValid()
+47a4ec,84,ObjectiveList,_ZN13ObjectiveList23InstallObjectiveMarkersEii,"ObjectiveList::InstallObjectiveMarkers(int, int)"
+47a540,104,ObjectiveList,_ZN13ObjectiveList9LoopOnAllEM9ObjectiveFvvE,ObjectiveList::LoopOnAll(void (Objective::*)())
+47a5a8,36,ObjectiveList,_ZN13ObjectiveList10_resetDataEv,ObjectiveList::_resetData()
+47a5cc,36,ObjectiveList,_ZN13ObjectiveList22RemoveObjectiveMarkersEv,ObjectiveList::RemoveObjectiveMarkers()
+47a5f0,36,ObjectiveList,_ZN13ObjectiveList10UnregisterEv,ObjectiveList::Unregister()
+47a614,36,ObjectiveList,_ZN13ObjectiveList8RegisterEv,ObjectiveList::Register()
+47a638,44,ObjectiveList,_ZN13ObjectiveList17InvalidateCompileEv,ObjectiveList::InvalidateCompile()
+47a66c,36,ObjectiveList,_ZN13ObjectiveList7CompileEv,ObjectiveList::Compile()
+47a690,104,ObjectiveList,_ZNK13ObjectiveList9LoopOnAllEM9ObjectiveKFvvE,ObjectiveList::LoopOnAll(void (Objective::*)() const) const
+47a6f8,116,ObjectiveList,_ZN13ObjectiveList9LoopOnAllEM9ObjectiveFvP11IStreamBaseES2_,"ObjectiveList::LoopOnAll(void (Objective::*)(IStreamBase*), IStreamBase*)"
+47a76c,44,ObjectiveList,_ZN13ObjectiveList9_saveDataEP11IStreamBase,ObjectiveList::_saveData(IStreamBase*)
+47a798,44,ObjectiveList,_ZN13ObjectiveList9_loadDataEP11IStreamBase,ObjectiveList::_loadData(IStreamBase*)
+47a7c4,116,ObjectiveList,_ZNK13ObjectiveList9LoopOnAllEM9ObjectiveKFvP7__sFILEES2_,"ObjectiveList::LoopOnAll(void (Objective::*)(__sFILE*) const, __sFILE*) const"
+47a838,44,ObjectiveList,_ZNK13ObjectiveList41DBG_TraceDetailedObjectiveListInformationEP7__sFILE,ObjectiveList::DBG_TraceDetailedObjectiveListInformation(__sFILE*) const
+47a8cc,108,ObjectiveList,_ZN13ObjectiveListD1Ev,ObjectiveList::~ObjectiveList()
+47a940,108,ObjectiveList,_ZN13ObjectiveListD2Ev,ObjectiveList::~ObjectiveList()
+47aa48,108,ObjectiveList,_ZN13ObjectiveList12AssignPyDataEPN7Structs20v2QuestObjectiveStubEi,"ObjectiveList::AssignPyData(Structs::v2QuestObjectiveStub*, int)"
+47e914,60,ObjectiveList,_ZNK13ObjectiveList7GetDescEv,ObjectiveList::GetDesc() const
+47a898,4,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs23v2QuestPickedUpLiftableE19QE_PickedUpLiftableE12GetPositionsER13Vector3DFList,"ObjectiveTemplate_InteractWith<Structs::v2QuestPickedUpLiftable, QE_PickedUpLiftable>::GetPositions(Vector3DFList&) const"
+47a89c,4,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTriggerOnE12QE_TriggerOnE12GetPositionsER13Vector3DFList,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerOn, QE_TriggerOn>::GetPositions(Vector3DFList&) const"
+47a8a0,4,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs21v2QuestOpenGameObjectE17QE_OpenGameObjectE12GetPositionsER13Vector3DFList,"ObjectiveTemplate_InteractWith<Structs::v2QuestOpenGameObject, QE_OpenGameObject>::GetPositions(Vector3DFList&) const"
+47a8a4,4,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs24v2QuestDestroyGameObjectE20QE_DestroyGameObjectE12GetPositionsER13Vector3DFList,"ObjectiveTemplate_InteractWith<Structs::v2QuestDestroyGameObject, QE_DestroyGameObject>::GetPositions(Vector3DFList&) const"
+47a8a8,4,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs19v2QuestTriggerPlateE15QE_TriggerPlateE12GetPositionsER13Vector3DFList,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerPlate, QE_TriggerPlate>::GetPositions(Vector3DFList&) const"
+47a8ac,4,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTalkToNPCE12QE_TalkToNPCE12GetPositionsER13Vector3DFList,"ObjectiveTemplate_InteractWith<Structs::v2QuestTalkToNPC, QE_TalkToNPC>::GetPositions(Vector3DFList&) const"
+47c1cc,456,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs24v2QuestDestroyGameObjectE20QE_DestroyGameObjectE37DBG_TraceDetailedObjectiveInformationEP7__sFILE,"ObjectiveTemplate_InteractWith<Structs::v2QuestDestroyGameObject, QE_DestroyGameObject>::DBG_TraceDetailedObjectiveInformation(__sFILE*) const"
+47d384,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs23v2QuestPickedUpLiftableE19QE_PickedUpLiftableED1Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestPickedUpLiftable, QE_PickedUpLiftable>::~ObjectiveTemplate_InteractWith()"
+47d3d4,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTriggerOnE12QE_TriggerOnED1Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerOn, QE_TriggerOn>::~ObjectiveTemplate_InteractWith()"
+47d424,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs21v2QuestOpenGameObjectE17QE_OpenGameObjectED1Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestOpenGameObject, QE_OpenGameObject>::~ObjectiveTemplate_InteractWith()"
+47d4c4,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTalkToNPCE12QE_TalkToNPCED1Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestTalkToNPC, QE_TalkToNPC>::~ObjectiveTemplate_InteractWith()"
+47d514,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs24v2QuestDestroyGameObjectE20QE_DestroyGameObjectED1Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestDestroyGameObject, QE_DestroyGameObject>::~ObjectiveTemplate_InteractWith()"
+47d564,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs19v2QuestTriggerPlateE15QE_TriggerPlateED1Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerPlate, QE_TriggerPlate>::~ObjectiveTemplate_InteractWith()"
+47d738,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs23v2QuestPickedUpLiftableE19QE_PickedUpLiftableED0Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestPickedUpLiftable, QE_PickedUpLiftable>::~ObjectiveTemplate_InteractWith()"
+47d790,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTriggerOnE12QE_TriggerOnED0Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerOn, QE_TriggerOn>::~ObjectiveTemplate_InteractWith()"
+47d898,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs24v2QuestDestroyGameObjectE20QE_DestroyGameObjectED0Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestDestroyGameObject, QE_DestroyGameObject>::~ObjectiveTemplate_InteractWith()"
+47dc5c,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs21v2QuestOpenGameObjectE17QE_OpenGameObjectED0Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestOpenGameObject, QE_OpenGameObject>::~ObjectiveTemplate_InteractWith()"
+47dcb4,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs19v2QuestTriggerPlateE15QE_TriggerPlateED0Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerPlate, QE_TriggerPlate>::~ObjectiveTemplate_InteractWith()"
+47dd0c,60,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTalkToNPCE12QE_TalkToNPCED0Ev,"ObjectiveTemplate_InteractWith<Structs::v2QuestTalkToNPC, QE_TalkToNPC>::~ObjectiveTemplate_InteractWith()"
+47dd5c,456,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTriggerOnE12QE_TriggerOnE37DBG_TraceDetailedObjectiveInformationEP7__sFILE,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerOn, QE_TriggerOn>::DBG_TraceDetailedObjectiveInformation(__sFILE*) const"
+47df64,456,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs23v2QuestPickedUpLiftableE19QE_PickedUpLiftableE37DBG_TraceDetailedObjectiveInformationEP7__sFILE,"ObjectiveTemplate_InteractWith<Structs::v2QuestPickedUpLiftable, QE_PickedUpLiftable>::DBG_TraceDetailedObjectiveInformation(__sFILE*) const"
+47e16c,456,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs21v2QuestOpenGameObjectE17QE_OpenGameObjectE37DBG_TraceDetailedObjectiveInformationEP7__sFILE,"ObjectiveTemplate_InteractWith<Structs::v2QuestOpenGameObject, QE_OpenGameObject>::DBG_TraceDetailedObjectiveInformation(__sFILE*) const"
+47e374,456,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTalkToNPCE12QE_TalkToNPCE37DBG_TraceDetailedObjectiveInformationEP7__sFILE,"ObjectiveTemplate_InteractWith<Structs::v2QuestTalkToNPC, QE_TalkToNPC>::DBG_TraceDetailedObjectiveInformation(__sFILE*) const"
+47e57c,456,ObjectiveTemplate_InteractWith,_ZNK30ObjectiveTemplate_InteractWithIN7Structs19v2QuestTriggerPlateE15QE_TriggerPlateE37DBG_TraceDetailedObjectiveInformationEP7__sFILE,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerPlate, QE_TriggerPlate>::DBG_TraceDetailedObjectiveInformation(__sFILE*) const"
+47eb90,80,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs23v2QuestPickedUpLiftableE19QE_PickedUpLiftableE7CompileEv,"ObjectiveTemplate_InteractWith<Structs::v2QuestPickedUpLiftable, QE_PickedUpLiftable>::Compile()"
+47ebe0,80,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTriggerOnE12QE_TriggerOnE7CompileEv,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerOn, QE_TriggerOn>::Compile()"
+47ec30,80,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs21v2QuestOpenGameObjectE17QE_OpenGameObjectE7CompileEv,"ObjectiveTemplate_InteractWith<Structs::v2QuestOpenGameObject, QE_OpenGameObject>::Compile()"
+47ec80,80,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTalkToNPCE12QE_TalkToNPCE7CompileEv,"ObjectiveTemplate_InteractWith<Structs::v2QuestTalkToNPC, QE_TalkToNPC>::Compile()"
+47ecd0,80,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs24v2QuestDestroyGameObjectE20QE_DestroyGameObjectE7CompileEv,"ObjectiveTemplate_InteractWith<Structs::v2QuestDestroyGameObject, QE_DestroyGameObject>::Compile()"
+47ed20,80,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs19v2QuestTriggerPlateE15QE_TriggerPlateE7CompileEv,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerPlate, QE_TriggerPlate>::Compile()"
+47f194,148,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs19v2QuestTriggerPlateE15QE_TriggerPlateE11handleEventEPK6IEventPK12EventManager,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerPlate, QE_TriggerPlate>::handleEvent(IEvent const*, EventManager const*)"
+47f3e4,148,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs24v2QuestDestroyGameObjectE20QE_DestroyGameObjectE11handleEventEPK6IEventPK12EventManager,"ObjectiveTemplate_InteractWith<Structs::v2QuestDestroyGameObject, QE_DestroyGameObject>::handleEvent(IEvent const*, EventManager const*)"
+47f478,148,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs21v2QuestOpenGameObjectE17QE_OpenGameObjectE11handleEventEPK6IEventPK12EventManager,"ObjectiveTemplate_InteractWith<Structs::v2QuestOpenGameObject, QE_OpenGameObject>::handleEvent(IEvent const*, EventManager const*)"
+47f50c,148,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTalkToNPCE12QE_TalkToNPCE11handleEventEPK6IEventPK12EventManager,"ObjectiveTemplate_InteractWith<Structs::v2QuestTalkToNPC, QE_TalkToNPC>::handleEvent(IEvent const*, EventManager const*)"
+47f5a0,148,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs23v2QuestPickedUpLiftableE19QE_PickedUpLiftableE11handleEventEPK6IEventPK12EventManager,"ObjectiveTemplate_InteractWith<Structs::v2QuestPickedUpLiftable, QE_PickedUpLiftable>::handleEvent(IEvent const*, EventManager const*)"
+47f634,148,ObjectiveTemplate_InteractWith,_ZN30ObjectiveTemplate_InteractWithIN7Structs16v2QuestTriggerOnE12QE_TriggerOnE11handleEventEPK6IEventPK12EventManager,"ObjectiveTemplate_InteractWith<Structs::v2QuestTriggerOn, QE_TriggerOn>::handleEvent(IEvent const*, EventManager const*)"
+47b08c,304,ObjectiveTemplate_KillCharacter,_ZNK31ObjectiveTemplate_KillCharacterIN7Structs25v2QuestClearEnemyTemplateE21QE_ClearEnemyTemplate16TestCharTemplate18Objective_SavedQtyE37DBG_TraceDetailedObjectiveInformationEP7__sFILE,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemyTemplate, QE_ClearEnemyTemplate, TestCharTemplate, Objective_SavedQty>::DBG_TraceDetailedObjectiveInformation(__sFILE*) const"
+47b1f8,304,ObjectiveTemplate_KillCharacter,_ZNK31ObjectiveTemplate_KillCharacterIN7Structs24v2QuestKillEnemyTemplateE20QE_KillEnemyTemplate16TestCharTemplate18Objective_SavedQtyE37DBG_TraceDetailedObjectiveInformationEP7__sFILE,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemyTemplate, QE_KillEnemyTemplate, TestCharTemplate, Objective_SavedQty>::DBG_TraceDetailedObjectiveInformation(__sFILE*) const"
+47b4d4,304,ObjectiveTemplate_KillCharacter,_ZNK31ObjectiveTemplate_KillCharacterIN7Structs19v2QuestClearEnemiesE15QE_ClearEnemies14TestCharPropId18Objective_SavedQtyE37DBG_TraceDetailedObjectiveInformationEP7__sFILE,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemies, QE_ClearEnemies, TestCharPropId, Objective_SavedQty>::DBG_TraceDetailedObjectiveInformation(__sFILE*) const"
+47b640,304,ObjectiveTemplate_KillCharacter,_ZNK31ObjectiveTemplate_KillCharacterIN7Structs18v2QuestKillEnemiesE14QE_KillEnemies14TestCharPropId18Objective_SavedQtyE37DBG_TraceDetailedObjectiveInformationEP7__sFILE,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemies, QE_KillEnemies, TestCharPropId, Objective_SavedQty>::DBG_TraceDetailedObjectiveInformation(__sFILE*) const"
+47c6f0,252,ObjectiveTemplate_KillCharacter,_ZNK31ObjectiveTemplate_KillCharacterIN7Structs19v2QuestClearEnemiesE15QE_ClearEnemies14TestCharPropId18Objective_SavedQtyE12GetPositionsER13Vector3DFList,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemies, QE_ClearEnemies, TestCharPropId, Objective_SavedQty>::GetPositions(Vector3DFList&) const"
+47c914,252,ObjectiveTemplate_KillCharacter,_ZNK31ObjectiveTemplate_KillCharacterIN7Structs25v2QuestClearEnemyTemplateE21QE_ClearEnemyTemplate16TestCharTemplate18Objective_SavedQtyE12GetPositionsER13Vector3DFList,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemyTemplate, QE_ClearEnemyTemplate, TestCharTemplate, Objective_SavedQty>::GetPositions(Vector3DFList&) const"
+47ca18,252,ObjectiveTemplate_KillCharacter,_ZNK31ObjectiveTemplate_KillCharacterIN7Structs18v2QuestKillEnemiesE14QE_KillEnemies14TestCharPropId18Objective_SavedQtyE12GetPositionsER13Vector3DFList,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemies, QE_KillEnemies, TestCharPropId, Objective_SavedQty>::GetPositions(Vector3DFList&) const"
+47cb1c,252,ObjectiveTemplate_KillCharacter,_ZNK31ObjectiveTemplate_KillCharacterIN7Structs24v2QuestKillEnemyTemplateE20QE_KillEnemyTemplate16TestCharTemplate18Objective_SavedQtyE12GetPositionsER13Vector3DFList,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemyTemplate, QE_KillEnemyTemplate, TestCharTemplate, Objective_SavedQty>::GetPositions(Vector3DFList&) const"
+47d244,60,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs24v2QuestKillEnemyTemplateE20QE_KillEnemyTemplate16TestCharTemplate18Objective_SavedQtyED1Ev,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemyTemplate, QE_KillEnemyTemplate, TestCharTemplate, Objective_SavedQty>::~ObjectiveTemplate_KillCharacter()"
+47d294,60,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs25v2QuestClearEnemyTemplateE21QE_ClearEnemyTemplate16TestCharTemplate18Objective_SavedQtyED1Ev,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemyTemplate, QE_ClearEnemyTemplate, TestCharTemplate, Objective_SavedQty>::~ObjectiveTemplate_KillCharacter()"
+47d334,60,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs18v2QuestKillEnemiesE14QE_KillEnemies14TestCharPropId18Objective_SavedQtyED1Ev,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemies, QE_KillEnemies, TestCharPropId, Objective_SavedQty>::~ObjectiveTemplate_KillCharacter()"
+47d5b4,60,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs19v2QuestClearEnemiesE15QE_ClearEnemies14TestCharPropId18Objective_SavedQtyED1Ev,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemies, QE_ClearEnemies, TestCharPropId, Objective_SavedQty>::~ObjectiveTemplate_KillCharacter()"
+47d7e8,60,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs25v2QuestClearEnemyTemplateE21QE_ClearEnemyTemplate16TestCharTemplate18Objective_SavedQtyED0Ev,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemyTemplate, QE_ClearEnemyTemplate, TestCharTemplate, Objective_SavedQty>::~ObjectiveTemplate_KillCharacter()"
+47d840,60,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs19v2QuestClearEnemiesE15QE_ClearEnemies14TestCharPropId18Objective_SavedQtyED0Ev,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemies, QE_ClearEnemies, TestCharPropId, Objective_SavedQty>::~ObjectiveTemplate_KillCharacter()"
+47e78c,60,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs18v2QuestKillEnemiesE14QE_KillEnemies14TestCharPropId18Objective_SavedQtyED0Ev,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemies, QE_KillEnemies, TestCharPropId, Objective_SavedQty>::~ObjectiveTemplate_KillCharacter()"
+47e7e4,60,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs24v2QuestKillEnemyTemplateE20QE_KillEnemyTemplate16TestCharTemplate18Objective_SavedQtyED0Ev,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemyTemplate, QE_KillEnemyTemplate, TestCharTemplate, Objective_SavedQty>::~ObjectiveTemplate_KillCharacter()"
+47eec0,136,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs24v2QuestKillEnemyTemplateE20QE_KillEnemyTemplate16TestCharTemplate18Objective_SavedQtyE7CompileEv,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemyTemplate, QE_KillEnemyTemplate, TestCharTemplate, Objective_SavedQty>::Compile()"
+47ef50,136,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs25v2QuestClearEnemyTemplateE21QE_ClearEnemyTemplate16TestCharTemplate18Objective_SavedQtyE7CompileEv,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemyTemplate, QE_ClearEnemyTemplate, TestCharTemplate, Objective_SavedQty>::Compile()"
+47efe0,136,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs18v2QuestKillEnemiesE14QE_KillEnemies14TestCharPropId18Objective_SavedQtyE7CompileEv,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemies, QE_KillEnemies, TestCharPropId, Objective_SavedQty>::Compile()"
+47f070,136,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs19v2QuestClearEnemiesE15QE_ClearEnemies14TestCharPropId18Objective_SavedQtyE7CompileEv,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemies, QE_ClearEnemies, TestCharPropId, Objective_SavedQty>::Compile()"
+47f100,148,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs18v2QuestKillEnemiesE14QE_KillEnemies14TestCharPropId18Objective_SavedQtyE11handleEventEPK6IEventPK12EventManager,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemies, QE_KillEnemies, TestCharPropId, Objective_SavedQty>::handleEvent(IEvent const*, EventManager const*)"
+47f228,148,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs19v2QuestClearEnemiesE15QE_ClearEnemies14TestCharPropId18Objective_SavedQtyE11handleEventEPK6IEventPK12EventManager,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemies, QE_ClearEnemies, TestCharPropId, Objective_SavedQty>::handleEvent(IEvent const*, EventManager const*)"
+47f2bc,148,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs24v2QuestKillEnemyTemplateE20QE_KillEnemyTemplate16TestCharTemplate18Objective_SavedQtyE11handleEventEPK6IEventPK12EventManager,"ObjectiveTemplate_KillCharacter<Structs::v2QuestKillEnemyTemplate, QE_KillEnemyTemplate, TestCharTemplate, Objective_SavedQty>::handleEvent(IEvent const*, EventManager const*)"
+47f350,148,ObjectiveTemplate_KillCharacter,_ZN31ObjectiveTemplate_KillCharacterIN7Structs25v2QuestClearEnemyTemplateE21QE_ClearEnemyTemplate16TestCharTemplate18Objective_SavedQtyE11handleEventEPK6IEventPK12EventManager,"ObjectiveTemplate_KillCharacter<Structs::v2QuestClearEnemyTemplate, QE_ClearEnemyTemplate, TestCharTemplate, Objective_SavedQty>::handleEvent(IEvent const*, EventManager const*)"
+47d1f4,60,ObjectiveTemplate_KillEnemies,_ZN29ObjectiveTemplate_KillEnemiesIN7Structs24v2QuestKillEnemyTemplateE20QE_KillEnemyTemplate16TestCharTemplate18Objective_SavedQtyED1Ev,"ObjectiveTemplate_KillEnemies<Structs::v2QuestKillEnemyTemplate, QE_KillEnemyTemplate, TestCharTemplate, Objective_SavedQty>::~ObjectiveTemplate_KillEnemies()"
+47d2e4,60,ObjectiveTemplate_KillEnemies,_ZN29ObjectiveTemplate_KillEnemiesIN7Structs18v2QuestKillEnemiesE14QE_KillEnemies14TestCharPropId18Objective_SavedQtyED1Ev,"ObjectiveTemplate_KillEnemies<Structs::v2QuestKillEnemies, QE_KillEnemies, TestCharPropId, Objective_SavedQty>::~ObjectiveTemplate_KillEnemies()"
+47e83c,60,ObjectiveTemplate_KillEnemies,_ZN29ObjectiveTemplate_KillEnemiesIN7Structs18v2QuestKillEnemiesE14QE_KillEnemies14TestCharPropId18Objective_SavedQtyED0Ev,"ObjectiveTemplate_KillEnemies<Structs::v2QuestKillEnemies, QE_KillEnemies, TestCharPropId, Objective_SavedQty>::~ObjectiveTemplate_KillEnemies()"
+47e894,60,ObjectiveTemplate_KillEnemies,_ZN29ObjectiveTemplate_KillEnemiesIN7Structs24v2QuestKillEnemyTemplateE20QE_KillEnemyTemplate16TestCharTemplate18Objective_SavedQtyED0Ev,"ObjectiveTemplate_KillEnemies<Structs::v2QuestKillEnemyTemplate, QE_KillEnemyTemplate, TestCharTemplate, Objective_SavedQty>::~ObjectiveTemplate_KillEnemies()"
+47ed70,160,ObjectiveTemplate_KillEnemies,_ZN29ObjectiveTemplate_KillEnemiesIN7Structs18v2QuestKillEnemiesE14QE_KillEnemies14TestCharPropId18Objective_SavedQtyE7CompileEv,"ObjectiveTemplate_KillEnemies<Structs::v2QuestKillEnemies, QE_KillEnemies, TestCharPropId, Objective_SavedQty>::Compile()"
+47ee18,160,ObjectiveTemplate_KillEnemies,_ZN29ObjectiveTemplate_KillEnemiesIN7Structs24v2QuestKillEnemyTemplateE20QE_KillEnemyTemplate16TestCharTemplate18Objective_SavedQtyE7CompileEv,"ObjectiveTemplate_KillEnemies<Structs::v2QuestKillEnemyTemplate, QE_KillEnemyTemplate, TestCharTemplate, Objective_SavedQty>::Compile()"
+47a1d8,4,Objective_Automatic,_ZNK19Objective_Automatic12GetPositionsER13Vector3DFList,Objective_Automatic::GetPositions(Vector3DFList&) const
+47a1dc,4,Objective_Automatic,_ZN19Objective_Automatic8RegisterEv,Objective_Automatic::Register()
+47a1e0,4,Objective_Automatic,_ZN19Objective_Automatic10UnregisterEv,Objective_Automatic::Unregister()
+47a864,44,Objective_Automatic,_ZN19Objective_AutomaticD1Ev,Objective_Automatic::~Objective_Automatic()
+47b364,100,Objective_Automatic,_ZNK19Objective_Automatic37DBG_TraceDetailedObjectiveInformationEP7__sFILE,Objective_Automatic::DBG_TraceDetailedObjectiveInformation(__sFILE*) const
+47bd80,12,Objective_Automatic,_ZN19Objective_Automatic7CompileEv,Objective_Automatic::Compile()
+47c6b4,44,Objective_Automatic,_ZN19Objective_AutomaticD0Ev,Objective_Automatic::~Objective_Automatic()
+47a330,60,Objective_EventReceiver,_ZN23Objective_EventReceiverD1Ev,Objective_EventReceiver::~Objective_EventReceiver()
+47aab4,112,Objective_EventReceiver,_ZNK23Objective_EventReceiver37DBG_TraceDetailedObjectiveInformationEP7__sFILE,Objective_EventReceiver::DBG_TraceDetailedObjectiveInformation(__sFILE*) const
+47ac94,84,Objective_EventReceiver,_ZN23Objective_EventReceiver27CheckMustSendThroughNetworkEPK6IEvent,Objective_EventReceiver::CheckMustSendThroughNetwork(IEvent const*)
+47acf0,180,Objective_EventReceiver,_ZN23Objective_EventReceiver7onEventEPK6IEventPK12EventManager,"Objective_EventReceiver::onEvent(IEvent const*, EventManager const*)"
+47adbc,152,Objective_EventReceiver,_ZN23Objective_EventReceiver10UnregisterEv,Objective_EventReceiver::Unregister()
+47ae70,172,Objective_EventReceiver,_ZN23Objective_EventReceiver8RegisterEv,Objective_EventReceiver::Register()
+47c7f4,108,Objective_EventReceiver,_ZN23Objective_EventReceiver20HasEnemyOfTypeLoadedI14TestCharPropIdEEiii.clone.3,"int Objective_EventReceiver::HasEnemyOfTypeLoaded<TestCharPropId>(int, int)"
+47cc20,132,Objective_EventReceiver,_ZN23Objective_EventReceiver20HasEnemyOfTypeLoadedI16TestCharTemplateEEiii.clone.0,"int Objective_EventReceiver::HasEnemyOfTypeLoaded<TestCharTemplate>(int, int)"
+47ccbc,60,Objective_EventReceiver,_ZN23Objective_EventReceiverD0Ev,Objective_EventReceiver::~Objective_EventReceiver()
+47a1d4,4,Objective_GatherLoot,_ZNK20Objective_GatherLoot12GetPositionsER13Vector3DFList,Objective_GatherLoot::GetPositions(Vector3DFList&) const
+47a1f0,60,Objective_GatherLoot,_ZN20Objective_GatherLootD1Ev,Objective_GatherLoot::~Objective_GatherLoot()
+47aba4,156,Objective_GatherLoot,_ZN20Objective_GatherLoot18InitWithCurrentQtyEv,Objective_GatherLoot::InitWithCurrentQty()
+47af38,244,Objective_GatherLoot,_ZNK20Objective_GatherLoot37DBG_TraceDetailedObjectiveInformationEP7__sFILE,Objective_GatherLoot::DBG_TraceDetailedObjectiveInformation(__sFILE*) const
+47ba5c,136,Objective_GatherLoot,_ZN20Objective_GatherLoot11handleEventEPK6IEventPK12EventManager,"Objective_GatherLoot::handleEvent(IEvent const*, EventManager const*)"
+47bae4,444,Objective_GatherLoot,_ZN20Objective_GatherLoot7CompileEv,Objective_GatherLoot::Compile()
+47ce1c,60,Objective_GatherLoot,_ZN20Objective_GatherLootD0Ev,Objective_GatherLoot::~Objective_GatherLoot()
+47d6fc,52,Objective_GatherLoot,_ZN20Objective_GatherLoot10UnregisterEv,Objective_GatherLoot::Unregister()
+47eaec,164,Objective_GatherLoot,_ZN20Objective_GatherLoot8RegisterEv,Objective_GatherLoot::Register()
+47a2e0,60,Objective_MoveInZone,_ZN20Objective_MoveInZoneD1Ev,Objective_MoveInZone::~Objective_MoveInZone()
+47b3dc,208,Objective_MoveInZone,_ZNK20Objective_MoveInZone37DBG_TraceDetailedObjectiveInformationEP7__sFILE,Objective_MoveInZone::DBG_TraceDetailedObjectiveInformation(__sFILE*) const
+47b850,352,Objective_MoveInZone,_ZNK20Objective_MoveInZone12GetPositionsER13Vector3DFList,Objective_MoveInZone::GetPositions(Vector3DFList&) const
+47bcd4,172,Objective_MoveInZone,_ZN20Objective_MoveInZone11handleEventEPK6IEventPK12EventManager,"Objective_MoveInZone::handleEvent(IEvent const*, EventManager const*)"
+47c868,164,Objective_MoveInZone,_ZN20Objective_MoveInZone7CompileEv,Objective_MoveInZone::Compile()
+47cdc4,60,Objective_MoveInZone,_ZN20Objective_MoveInZoneD0Ev,Objective_MoveInZone::~Objective_MoveInZone()
+47a290,60,Objective_Qty,_ZN13Objective_QtyD1Ev,Objective_Qty::~Objective_Qty()
+47cd6c,60,Objective_Qty,_ZN13Objective_QtyD0Ev,Objective_Qty::~Objective_Qty()
+47a240,60,Objective_SavedQty,_ZN18Objective_SavedQtyD1Ev,Objective_SavedQty::~Objective_SavedQty()
+47a388,24,Objective_SavedQty,_ZN18Objective_SavedQty10_resetDataEv,Objective_SavedQty::_resetData()
+47ab54,32,Objective_SavedQty,_ZN18Objective_SavedQty9_loadDataEP11IStreamBase,Objective_SavedQty::_loadData(IStreamBase*)
+47ab84,32,Objective_SavedQty,_ZN18Objective_SavedQty9_saveDataEP11IStreamBase,Objective_SavedQty::_saveData(IStreamBase*)
+47ce74,60,Objective_SavedQty,_ZN18Objective_SavedQtyD0Ev,Objective_SavedQty::~Objective_SavedQty()
+47cd14,60,Objective_TalkToNPC,_ZN19Objective_TalkToNPCD0Ev,Objective_TalkToNPC::~Objective_TalkToNPC()
+47d474,60,Objective_TalkToNPC,_ZN19Objective_TalkToNPCD1Ev,Objective_TalkToNPC::~Objective_TalkToNPC()
+47d8e8,372,Objective_TalkToNPC,_ZN19Objective_TalkToNPC22InstallObjectiveMarkerEii,"Objective_TalkToNPC::InstallObjectiveMarker(int, int)"
+47da6c,192,Objective_TalkToNPC,_ZN19Objective_TalkToNPC21RemoveObjectiveMarkerEv,Objective_TalkToNPC::RemoveObjectiveMarker()
+47db34,136,Objective_TalkToNPC,_ZN19Objective_TalkToNPC8RegisterEv,Objective_TalkToNPC::Register()
+47dbc4,136,Objective_TalkToNPC,_ZN19Objective_TalkToNPC10UnregisterEv,Objective_TalkToNPC::Unregister()
+4634e4,12,PlayerSavegame,_ZN14PlayerSavegame20SG_GetFilenamePrefixEv,PlayerSavegame::SG_GetFilenamePrefix()
+4634f4,12,PlayerSavegame,_ZN14PlayerSavegame23SG_GetFilenameExtensionEv,PlayerSavegame::SG_GetFilenameExtension()
+463504,12,PlayerSavegame,_ZN14PlayerSavegame33SG_GetCheckpointFilenameExtensionEv,PlayerSavegame::SG_GetCheckpointFilenameExtension()
+463514,64,PlayerSavegame,_ZN14PlayerSavegame9SG_ExistsEPKc,PlayerSavegame::SG_Exists(char const*)
+46355c,64,PlayerSavegame,_ZN14PlayerSavegame9SG_DeleteEPKc,PlayerSavegame::SG_Delete(char const*)
+4635a4,12,PlayerSavegame,_ZNK14PlayerSavegame18SG_GetSavefileNameEv,PlayerSavegame::SG_GetSavefileName() const
+463654,76,PlayerSavegame,_ZN14PlayerSavegame14SG_SynchronizeEb,PlayerSavegame::SG_Synchronize(bool)
+4636a8,16,PlayerSavegame,_ZN14PlayerSavegame22SG_GetSlotFromFilenameEPKc,PlayerSavegame::SG_GetSlotFromFilename(char const*)
+4636c4,36,PlayerSavegame,_ZN14PlayerSavegame9SG_UpdateEb,PlayerSavegame::SG_Update(bool)
+46378c,192,PlayerSavegame,_ZN14PlayerSavegameD1Ev,PlayerSavegame::~PlayerSavegame()
+463870,20,PlayerSavegame,_ZN14PlayerSavegameD0Ev,PlayerSavegame::~PlayerSavegame()
+46388c,192,PlayerSavegame,_ZN14PlayerSavegameD2Ev,PlayerSavegame::~PlayerSavegame()
+463c84,160,PlayerSavegame,_ZN14PlayerSavegame14SG_GetFilenameEjRSsbb,"PlayerSavegame::SG_GetFilename(unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool, bool)"
+46403c,636,PlayerSavegame,_ZN14PlayerSavegame18SG_GetSavegameListEb,PlayerSavegame::SG_GetSavegameList(bool)
+464a68,64,PlayerSavegame,_ZN14PlayerSavegame19SG_DeleteCheckpointEjb,"PlayerSavegame::SG_DeleteCheckpoint(unsigned int, bool)"
+464b2c,360,PlayerSavegame,_ZN14PlayerSavegame7SG_SaveEv,PlayerSavegame::SG_Save()
+464ca0,60,PlayerSavegame,_ZN14PlayerSavegame9SG_DeleteEj,PlayerSavegame::SG_Delete(unsigned int)
+464d5c,60,PlayerSavegame,_ZN14PlayerSavegame9SG_ExistsEj,PlayerSavegame::SG_Exists(unsigned int)
+464f4c,972,PlayerSavegame,_ZN14PlayerSavegame5_LoadEi,PlayerSavegame::_Load(int)
+465430,32,PlayerSavegame,_ZN14PlayerSavegame7SG_LoadEi,PlayerSavegame::SG_Load(int)
+465450,116,PlayerSavegame,_ZN14PlayerSavegame17SG_LoadCheckpointEi,PlayerSavegame::SG_LoadCheckpoint(int)
+4655ac,84,PlayerSavegame,_ZN14PlayerSavegameC1Ejib,"PlayerSavegame::PlayerSavegame(unsigned int, int, bool)"
+4656bc,84,PlayerSavegame,_ZN14PlayerSavegameC2Ejib,"PlayerSavegame::PlayerSavegame(unsigned int, int, bool)"
+465ae0,88,PlayerSavegame,_ZN14PlayerSavegameC1Ev,PlayerSavegame::PlayerSavegame()
+465c40,88,PlayerSavegame,_ZN14PlayerSavegameC2Ev,PlayerSavegame::PlayerSavegame()
+4660c8,188,PlayerSavegame,_ZN14PlayerSavegame18SG_GetNextFreeSlotEv,PlayerSavegame::SG_GetNextFreeSlot()
+466184,116,PlayerSavegame,_ZN14PlayerSavegame17SG_SaveCheckpointEv,PlayerSavegame::SG_SaveCheckpoint()
+466384,108,PlayerSavegame,_ZN14PlayerSavegame23SG_UnlockAllFastTravelsEv,PlayerSavegame::SG_UnlockAllFastTravels()
+4663f8,152,PlayerSavegame,_ZN14PlayerSavegame26SG_SetFastTravelIdUnlockedEPKcbi,"PlayerSavegame::SG_SetFastTravelIdUnlocked(char const*, bool, int)"
+46649c,184,PlayerSavegame,_ZN14PlayerSavegame26SG_GetFastTravelIdUnlockedEPKci,"PlayerSavegame::SG_GetFastTravelIdUnlocked(char const*, int)"
+466564,32,PlayerSavegame,_ZNK14PlayerSavegame13SG_GetQuestSGEv,PlayerSavegame::SG_GetQuestSG() const
+466584,4,PlayerSavegame,_ZN14PlayerSavegame13SG_GetQuestSGEv,PlayerSavegame::SG_GetQuestSG()
+466588,156,PlayerSavegame,_ZN14PlayerSavegame17SG_SetFaerieStateEjii,"PlayerSavegame::SG_SetFaerieState(unsigned int, int, int)"
+46663c,172,PlayerSavegame,_ZN14PlayerSavegame17SG_SetFaerieLevelEjii,"PlayerSavegame::SG_SetFaerieLevel(unsigned int, int, int)"
+466700,172,PlayerSavegame,_ZNK14PlayerSavegame17SG_GetFaerieLevelEji,"PlayerSavegame::SG_GetFaerieLevel(unsigned int, int) const"
+4667c4,244,PlayerSavegame,_ZN14PlayerSavegame16SG_SetSkillLevelEji,"PlayerSavegame::SG_SetSkillLevel(unsigned int, int)"
+4668dc,264,PlayerSavegame,_ZNK14PlayerSavegame16SG_GetSkillLevelEj,PlayerSavegame::SG_GetSkillLevel(unsigned int) const
+466a08,236,PlayerSavegame,_ZNK14PlayerSavegame13SG_GetSkillIdEj,PlayerSavegame::SG_GetSkillId(unsigned int) const
+466b18,440,PlayerSavegame,_ZN14PlayerSavegame17SG_SetMapLocStateEiii,"PlayerSavegame::SG_SetMapLocState(int, int, int)"
+466d10,248,PlayerSavegame,_ZNK14PlayerSavegame17SG_GetMapLocStateEii,"PlayerSavegame::SG_GetMapLocState(int, int) const"
+466e30,24,PlayerSavegame,_ZNK14PlayerSavegame15SG_IsMapLocSeenEii,"PlayerSavegame::SG_IsMapLocSeen(int, int) const"
+466e48,440,PlayerSavegame,_ZN14PlayerSavegame16SG_SetLevelStateEiii,"PlayerSavegame::SG_SetLevelState(int, int, int)"
+467040,248,PlayerSavegame,_ZNK14PlayerSavegame16SG_GetLevelStateEii,"PlayerSavegame::SG_GetLevelState(int, int) const"
+467160,108,PlayerSavegame,_ZN14PlayerSavegame18SG_UnpackQuestSyncER12StreamBuffer,PlayerSavegame::SG_UnpackQuestSync(StreamBuffer&)
+4671d4,24,PlayerSavegame,_ZN14PlayerSavegame21SG_VerifyCurrentQuestEi,PlayerSavegame::SG_VerifyCurrentQuest(int)
+4671ec,24,PlayerSavegame,_ZN14PlayerSavegame25SG_GetCurrentPrimaryQuestEi,PlayerSavegame::SG_GetCurrentPrimaryQuest(int)
+467204,24,PlayerSavegame,_ZN14PlayerSavegame18SG_GetCurrentQuestEi,PlayerSavegame::SG_GetCurrentQuest(int)
+46721c,40,PlayerSavegame,_ZNK14PlayerSavegame15SG_GetPrevQuestEPFbPK5QuestEii,"PlayerSavegame::SG_GetPrevQuest(bool (*)(Quest const*), int, int) const"
+467244,40,PlayerSavegame,_ZNK14PlayerSavegame15SG_GetNextQuestEPFbPK5QuestEii,"PlayerSavegame::SG_GetNextQuest(bool (*)(Quest const*), int, int) const"
+46726c,40,PlayerSavegame,_ZNK14PlayerSavegame15SG_GetQuestByIDEPFbPK5QuestEii,"PlayerSavegame::SG_GetQuestByID(bool (*)(Quest const*), int, int) const"
+467294,32,PlayerSavegame,_ZNK14PlayerSavegame15SG_GetNumQuestsEPFbPK5QuestEi,"PlayerSavegame::SG_GetNumQuests(bool (*)(Quest const*), int) const"
+4672b4,40,PlayerSavegame,_ZN14PlayerSavegame36SG_DBG_TraceDetailedQuestInformationEP7__sFILEii,"PlayerSavegame::SG_DBG_TraceDetailedQuestInformation(__sFILE*, int, int)"
+4672dc,32,PlayerSavegame,_ZN14PlayerSavegame17SG_GetQuestByNameEPKci,"PlayerSavegame::SG_GetQuestByName(char const*, int)"
+4672fc,40,PlayerSavegame,_ZN14PlayerSavegame15SG_GetQuestByIDEiib,"PlayerSavegame::SG_GetQuestByID(int, int, bool)"
+467324,48,PlayerSavegame,_ZN14PlayerSavegame15SG_ReloadSkillsEv,PlayerSavegame::SG_ReloadSkills()
+46735c,276,PlayerSavegame,_ZNK14PlayerSavegame12SG_TellSlotsEPFvijPvES0_,"PlayerSavegame::SG_TellSlots(void (*)(int, unsigned int, void*), void*) const"
+467488,164,PlayerSavegame,_ZNK14PlayerSavegame17SG_GetSkillInSlotEi,PlayerSavegame::SG_GetSkillInSlot(int) const
+46752c,404,PlayerSavegame,_ZNK14PlayerSavegame15SG_GetSkillSlotEj,PlayerSavegame::SG_GetSkillSlot(unsigned int) const
+4676e4,52,PlayerSavegame,_ZNK14PlayerSavegame16SG_HasSkillSlotsEv,PlayerSavegame::SG_HasSkillSlots() const
+467718,44,PlayerSavegame,_ZN14PlayerSavegame16SG_GenerateSeedsEv,PlayerSavegame::SG_GenerateSeeds()
+467744,24,PlayerSavegame,_ZN14PlayerSavegame14SG_SetSaveDateEv,PlayerSavegame::SG_SetSaveDate()
+4679e8,480,PlayerSavegame,_ZN14PlayerSavegame15SG_TryQuestSyncEv,PlayerSavegame::SG_TryQuestSync()
+467c54,132,PlayerSavegame,_ZN14PlayerSavegame26SG_GetFastTravelIdUnlockedEii,"PlayerSavegame::SG_GetFastTravelIdUnlocked(int, int)"
+467ce4,332,PlayerSavegame,_ZNK14PlayerSavegame19SG_IsFaerieUnlockedEji,"PlayerSavegame::SG_IsFaerieUnlocked(unsigned int, int) const"
+467e58,252,PlayerSavegame,_ZNK14PlayerSavegame17SG_IsMapLocLockedEii,"PlayerSavegame::SG_IsMapLocLocked(int, int) const"
+467f70,252,PlayerSavegame,_ZNK14PlayerSavegame16SG_IsLevelLockedEii,"PlayerSavegame::SG_IsLevelLocked(int, int) const"
+4680a8,920,PlayerSavegame,_ZN14PlayerSavegame17SG_SetSkillInSlotEij,"PlayerSavegame::SG_SetSkillInSlot(int, unsigned int)"
+468470,76,PlayerSavegame,_ZN14PlayerSavegame16SG_GetPlayerNameEj,PlayerSavegame::SG_GetPlayerName(unsigned int)
+4684f0,120,PlayerSavegame,_ZN14PlayerSavegame22_SaveVolatileQuestsLogEv,PlayerSavegame::_SaveVolatileQuestsLog()
+468574,176,PlayerSavegame,_ZN14PlayerSavegame22_LoadVolatileQuestsLogEi,PlayerSavegame::_LoadVolatileQuestsLog(int)
+468630,540,PlayerSavegame,_ZN14PlayerSavegame19_SetupSavedSectionsEbb,"PlayerSavegame::_SetupSavedSections(bool, bool)"
+4688c0,8,PlayerSavegame,_ZN14PlayerSavegame16__SavePlayerNameEP11IStreamBasePv,"PlayerSavegame::__SavePlayerName(IStreamBase*, void*)"
+4688c8,48,PlayerSavegame,_ZN14PlayerSavegame21__SaveLevelEntryPointEP11IStreamBasePv,"PlayerSavegame::__SaveLevelEntryPoint(IStreamBase*, void*)"
+4688f8,48,PlayerSavegame,_ZN14PlayerSavegame21__SaveDifficultyLevelEP11IStreamBasePv,"PlayerSavegame::__SaveDifficultyLevel(IStreamBase*, void*)"
+468930,8,PlayerSavegame,_ZN14PlayerSavegame17__SavePlayerLevelEP11IStreamBasePv,"PlayerSavegame::__SavePlayerLevel(IStreamBase*, void*)"
+468938,48,PlayerSavegame,_ZN14PlayerSavegame21__LoadLevelEntryPointEP11IStreamBasePv,"PlayerSavegame::__LoadLevelEntryPoint(IStreamBase*, void*)"
+468968,48,PlayerSavegame,_ZN14PlayerSavegame21__LoadDifficultyLevelEP11IStreamBasePv,"PlayerSavegame::__LoadDifficultyLevel(IStreamBase*, void*)"
+4689a0,8,PlayerSavegame,_ZN14PlayerSavegame17__LoadPlayerLevelEP11IStreamBasePv,"PlayerSavegame::__LoadPlayerLevel(IStreamBase*, void*)"
+4689a8,48,PlayerSavegame,_ZN14PlayerSavegame19__SaveUseSpawnPointEP11IStreamBasePv,"PlayerSavegame::__SaveUseSpawnPoint(IStreamBase*, void*)"
+4689d8,252,PlayerSavegame,_ZN14PlayerSavegame16__SavePropertiesEP11IStreamBasePv,"PlayerSavegame::__SaveProperties(IStreamBase*, void*)"
+468af0,48,PlayerSavegame,_ZN14PlayerSavegame19__LoadUseSpawnPointEP11IStreamBasePv,"PlayerSavegame::__LoadUseSpawnPoint(IStreamBase*, void*)"
+468b20,88,PlayerSavegame,_ZN14PlayerSavegame15__SaveLevelNameEP11IStreamBasePv,"PlayerSavegame::__SaveLevelName(IStreamBase*, void*)"
+468b78,120,PlayerSavegame,_ZN14PlayerSavegame15__LoadLevelNameEP11IStreamBasePv,"PlayerSavegame::__LoadLevelName(IStreamBase*, void*)"
+468bf0,204,PlayerSavegame,_ZN14PlayerSavegame18__SaveCurrentFaeryEP11IStreamBasePv,"PlayerSavegame::__SaveCurrentFaery(IStreamBase*, void*)"
+468cd4,204,PlayerSavegame,_ZN14PlayerSavegame18__LoadCurrentFaeryEP11IStreamBasePv,"PlayerSavegame::__LoadCurrentFaery(IStreamBase*, void*)"
+468f18,320,PlayerSavegame,_ZN14PlayerSavegame13__SaveFaeriesEP11IStreamBasePv,"PlayerSavegame::__SaveFaeries(IStreamBase*, void*)"
+4691d0,324,PlayerSavegame,_ZN14PlayerSavegame13__LoadFaeriesEP11IStreamBasePv,"PlayerSavegame::__LoadFaeries(IStreamBase*, void*)"
+46932c,268,PlayerSavegame,_ZN14PlayerSavegame16__LoadPropertiesEP11IStreamBasePv,"PlayerSavegame::__LoadProperties(IStreamBase*, void*)"
+469454,36,PlayerSavegame,_ZN14PlayerSavegame12__SaveQuestsEP11IStreamBasePv,"PlayerSavegame::__SaveQuests(IStreamBase*, void*)"
+469478,80,PlayerSavegame,_ZN14PlayerSavegame12__LoadQuestsEP11IStreamBasePv,"PlayerSavegame::__LoadQuests(IStreamBase*, void*)"
+4694c8,132,PlayerSavegame,_ZN14PlayerSavegame12_InitFaeriesEv,PlayerSavegame::_InitFaeries()
+46954c,296,PlayerSavegame,_ZN14PlayerSavegame16_InitLevelStatesEv,PlayerSavegame::_InitLevelStates()
+469764,288,PlayerSavegame,_ZN14PlayerSavegame11_InitSkillsEv,PlayerSavegame::_InitSkills()
+4698dc,8,PlayerSavegame,_ZN14PlayerSavegame16__LoadPlayerNameEP11IStreamBasePv,"PlayerSavegame::__LoadPlayerName(IStreamBase*, void*)"
+4698e4,136,PlayerSavegame,_ZN14PlayerSavegame17__SavePlayerClassEP11IStreamBasePv,"PlayerSavegame::__SavePlayerClass(IStreamBase*, void*)"
+469b18,100,PlayerSavegame,_ZN14PlayerSavegame20__LoadFastTravelListEP11IStreamBasePv,"PlayerSavegame::__LoadFastTravelList(IStreamBase*, void*)"
+469cdc,72,PlayerSavegame,_ZN14PlayerSavegame20__SaveFastTravelListEP11IStreamBasePv,"PlayerSavegame::__SaveFastTravelList(IStreamBase*, void*)"
+469d88,64,PlayerSavegame,_ZN14PlayerSavegame17__LoadPlayerClassEP11IStreamBasePv,"PlayerSavegame::__LoadPlayerClass(IStreamBase*, void*)"
+469e6c,220,PlayerSavegame,_ZN14PlayerSavegame12__SaveSkillsEP11IStreamBasePv,"PlayerSavegame::__SaveSkills(IStreamBase*, void*)"
+46a0b4,312,PlayerSavegame,_ZN14PlayerSavegame15__SaveInventoryEP11IStreamBasePv,"PlayerSavegame::__SaveInventory(IStreamBase*, void*)"
+46a3a0,220,PlayerSavegame,_ZN14PlayerSavegame15__LoadInventoryEP11IStreamBasePv,"PlayerSavegame::__LoadInventory(IStreamBase*, void*)"
+46a7a0,128,PlayerSavegame,_ZN14PlayerSavegame17__SaveLevelStatesEP11IStreamBasePv,"PlayerSavegame::__SaveLevelStates(IStreamBase*, void*)"
+46a9cc,120,PlayerSavegame,_ZN14PlayerSavegame17__LoadLevelStatesEP11IStreamBasePv,"PlayerSavegame::__LoadLevelStates(IStreamBase*, void*)"
+46ac74,324,PlayerSavegame,_ZN14PlayerSavegame12__LoadSkillsEP11IStreamBasePv,"PlayerSavegame::__LoadSkills(IStreamBase*, void*)"
+379084,28,PlayerStatManager,_ZN17PlayerStatManagerC2Ev,PlayerStatManager::PlayerStatManager()
+3790a8,28,PlayerStatManager,_ZN17PlayerStatManagerC1Ev,PlayerStatManager::PlayerStatManager()
+3790cc,4,PlayerStatManager,_ZN17PlayerStatManagerD2Ev,PlayerStatManager::~PlayerStatManager()
+3790d0,4,PlayerStatManager,_ZN17PlayerStatManagerD1Ev,PlayerStatManager::~PlayerStatManager()
+3790d4,4,PlayerStatManager,_ZN17PlayerStatManager5ResetEv,PlayerStatManager::Reset()
+3790d8,4,PlayerStatManager,_ZN17PlayerStatManager6UpdateEv,PlayerStatManager::Update()
+3790dc,4,PlayerStatManager,_ZN17PlayerStatManager17ApplyPlayersBonusEv,PlayerStatManager::ApplyPlayersBonus()
+3790e0,4,PlayerStatManager,_ZN17PlayerStatManager12IncreaseStatE9EStatTypeii,"PlayerStatManager::IncreaseStat(EStatType, int, int)"
+3790e4,8,PlayerStatManager,_ZN17PlayerStatManager12DecreaseStatE9EStatTypeii,"PlayerStatManager::DecreaseStat(EStatType, int, int)"
+3790ec,12,PlayerStatManager,_ZN17PlayerStatManager13IncrementStatE9EStatTypei,"PlayerStatManager::IncrementStat(EStatType, int)"
+3790f8,12,PlayerStatManager,_ZN17PlayerStatManager13DecrementStatE9EStatTypei,"PlayerStatManager::DecrementStat(EStatType, int)"
+379104,4,PlayerStatManager,_ZN17PlayerStatManager12SetStatValueE9EStatTypeiib,"PlayerStatManager::SetStatValue(EStatType, int, int, bool)"
+379108,36,PlayerStatManager,_ZN17PlayerStatManager14ResetStatValueE9EStatTypei,"PlayerStatManager::ResetStatValue(EStatType, int)"
+37912c,48,PlayerStatManager,_ZN17PlayerStatManager18ResetAllStatValuesEi,PlayerStatManager::ResetAllStatValues(int)
+379568,68,PlayerStatManager,_ZNK17PlayerStatManager6InvokeERKSs,"PlayerStatManager::Invoke(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const"
+3795ac,20,PlayerStatManager,_ZN17PlayerStatManagerD0Ev,PlayerStatManager::~PlayerStatManager()
+3795c8,220,PlayerStatManager,_ZN17PlayerStatManager10GetStatStrE9EStatType,PlayerStatManager::GetStatStr(EStatType)
+3796c4,200,PlayerStatManager,_ZNK17PlayerStatManager6InvokeE9EStatTypeii,"PlayerStatManager::Invoke(EStatType, int, int) const"
+379824,260,PlayerStatManager,_ZNK17PlayerStatManager12GetStatValueE9EStatTypei,"PlayerStatManager::GetStatValue(EStatType, int) const"
+379ac4,564,PlayerStatManager,_ZNK17PlayerStatManager10GetRankingE9EStatTypeb,"PlayerStatManager::GetRanking(EStatType, bool) const"
+379d18,112,PlayerStatManager,_ZNK17PlayerStatManager13UpdateRankingE9EStatType,PlayerStatManager::UpdateRanking(EStatType) const
+379dfc,20,PlayerStatManager,_ZNK17PlayerStatManager9GetLeaderE9EStatType,PlayerStatManager::GetLeader(EStatType) const
+379e10,88,PlayerStatManager,_ZNK17PlayerStatManager18GetNumLeadingStatsEi,PlayerStatManager::GetNumLeadingStats(int) const
+399a88,64,Property,_ZN8PropertyC2EPKcPvS2_,"Property::Property(char const*, void*, void*)"
+510fe0,88,PropertyInstance,_ZN16PropertyInstance8ToStringEv,PropertyInstance::ToString()
+33e404,132,PropertyMap,_ZN11PropertyMap11AddPropertyISsEEvPKcRT_S3_,"void PropertyMap::AddProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >)"
+33e4ac,128,PropertyMap,_ZN11PropertyMap11AddPropertyIbEEvPKcRT_S3_,"void PropertyMap::AddProperty<bool>(char const*, bool&, bool)"
+33ef7c,68,PropertyMap,_ZN11PropertyMap11AddPropertyISsEEvPKcRT_,"void PropertyMap::AddProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)"
+389894,144,PropertyMap,_ZN11PropertyMap11AddPropertyI7Point3DIfEEEvPKcRT_S5_,"void PropertyMap::AddProperty<Point3D<float> >(char const*, Point3D<float>&, Point3D<float>)"
+39503c,128,PropertyMap,_ZN11PropertyMap11AddPropertyIfEEvPKcRT_S3_,"void PropertyMap::AddProperty<float>(char const*, float&, float)"
+398878,128,PropertyMap,_ZN11PropertyMap11AddPropertyIiEEvPKcRT_S3_,"void PropertyMap::AddProperty<int>(char const*, int&, int)"
+39bf10,128,PropertyMap,_ZN11PropertyMap11AddPropertyIiEEvPKcRT_S3_.clone.2,"void PropertyMap::AddProperty<int>(char const*, int&, int)"
+39c83c,128,PropertyMap,_ZN11PropertyMap11AddPropertyIiEEvPKcRT_S3_.clone.1,"void PropertyMap::AddProperty<int>(char const*, int&, int)"
+3a92b4,128,PropertyMap,_ZN11PropertyMap11AddPropertyIbEEvPKcRT_S3_.clone.21,"void PropertyMap::AddProperty<bool>(char const*, bool&, bool)"
+3e7ffc,128,PropertyMap,_ZN11PropertyMap11AddPropertyIbEEvPKcRT_S3_.clone.5,"void PropertyMap::AddProperty<bool>(char const*, bool&, bool)"
+510b4c,128,PropertyMap,_ZN11PropertyMap16GetThisClassNameEv,PropertyMap::GetThisClassName()
+510dec,488,PropertyMap,_ZN11PropertyMap19DestroyPropertyMapsEv,PropertyMap::DestroyPropertyMaps()
+5134c0,48,PropertyMap,_ZN11PropertyMap14GetPropertyMapEv,PropertyMap::GetPropertyMap()
+5134f0,376,PropertyMap,_ZN11PropertyMap19SavePropertiesToXMLEP12TiXmlElementPKc,"PropertyMap::SavePropertiesToXML(TiXmlElement*, char const*)"
+513674,120,PropertyMap,_ZN11PropertyMap14DumpPropertiesEv,PropertyMap::DumpProperties()
+5136ec,276,PropertyMap,_ZN11PropertyMap21LoadDefaultPropertiesEv,PropertyMap::LoadDefaultProperties()
+513808,40,PropertyMap,_ZN11PropertyMap7GetPropEPKc,PropertyMap::GetProp(char const*)
+513830,40,PropertyMap,_ZN11PropertyMap20SetTemplateParameterEPKcS1_,"PropertyMap::SetTemplateParameter(char const*, char const*)"
+513858,36,PropertyMap,_ZN11PropertyMap11GetPropertyEPKc,PropertyMap::GetProperty(char const*)
+51387c,128,PropertyMap,_ZN11PropertyMap11SetPropertyEPKcS1_,"PropertyMap::SetProperty(char const*, char const*)"
+5138fc,252,PropertyMap,_ZN11PropertyMap15ClonePropertiesERS_,PropertyMap::CloneProperties(PropertyMap&)
+513a00,168,PropertyMap,_ZN11PropertyMap20LoadOverridesFromXMLEP12TiXmlElement,PropertyMap::LoadOverridesFromXML(TiXmlElement*)
+513ce4,140,PropertyMap,_ZN11PropertyMap11AddPropertyEPKcP8Property,"PropertyMap::AddProperty(char const*, Property*)"
+513d78,224,PropertyMap,_ZN11PropertyMap14InitPropertiesEv,PropertyMap::InitProperties()
+513fec,376,PropertyMap,_ZN11PropertyMap11SetTemplateERKSs,"PropertyMap::SetTemplate(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)"
+51419c,112,PropertyMap,_ZN11PropertyMap12LoadTemplateEv,PropertyMap::LoadTemplate()
+4822d0,4,QE_ClearEnemies,_ZN15QE_ClearEnemiesD1Ev,QE_ClearEnemies::~QE_ClearEnemies()
+482320,56,QE_ClearEnemies,_ZNK15QE_ClearEnemies14FillNetworkMsgER19tMsgRaisedEventData,QE_ClearEnemies::FillNetworkMsg(tMsgRaisedEventData&) const
+4824ac,36,QE_ClearEnemies,_ZN15QE_ClearEnemiesD0Ev,QE_ClearEnemies::~QE_ClearEnemies()
+4822d8,4,QE_ClearEnemyTemplate,_ZN21QE_ClearEnemyTemplateD1Ev,QE_ClearEnemyTemplate::~QE_ClearEnemyTemplate()
+482390,56,QE_ClearEnemyTemplate,_ZNK21QE_ClearEnemyTemplate14FillNetworkMsgER19tMsgRaisedEventData,QE_ClearEnemyTemplate::FillNetworkMsg(tMsgRaisedEventData&) const
+482514,36,QE_ClearEnemyTemplate,_ZN21QE_ClearEnemyTemplateD0Ev,QE_ClearEnemyTemplate::~QE_ClearEnemyTemplate()
+3a0ce8,4,QE_DestroyGameObject,_ZN20QE_DestroyGameObjectD1Ev,QE_DestroyGameObject::~QE_DestroyGameObject()
+3a0d6c,36,QE_DestroyGameObject,_ZN20QE_DestroyGameObjectD0Ev,QE_DestroyGameObject::~QE_DestroyGameObject()
+4822e0,4,QE_GatherLoot,_ZN13QE_GatherLootD1Ev,QE_GatherLoot::~QE_GatherLoot()
+482400,56,QE_GatherLoot,_ZNK13QE_GatherLoot14FillNetworkMsgER19tMsgRaisedEventData,QE_GatherLoot::FillNetworkMsg(tMsgRaisedEventData&) const
+48257c,36,QE_GatherLoot,_ZN13QE_GatherLootD0Ev,QE_GatherLoot::~QE_GatherLoot()
+4822dc,4,QE_InteractWith,_ZN15QE_InteractWithD1Ev,QE_InteractWith::~QE_InteractWith()
+4823c8,56,QE_InteractWith,_ZNK15QE_InteractWith14FillNetworkMsgER19tMsgRaisedEventData,QE_InteractWith::FillNetworkMsg(tMsgRaisedEventData&) const
+482548,36,QE_InteractWith,_ZN15QE_InteractWithD0Ev,QE_InteractWith::~QE_InteractWith()
+4822cc,4,QE_KillEnemies,_ZN14QE_KillEnemiesD1Ev,QE_KillEnemies::~QE_KillEnemies()
+4822e8,56,QE_KillEnemies,_ZNK14QE_KillEnemies14FillNetworkMsgER19tMsgRaisedEventData,QE_KillEnemies::FillNetworkMsg(tMsgRaisedEventData&) const
+482478,36,QE_KillEnemies,_ZN14QE_KillEnemiesD0Ev,QE_KillEnemies::~QE_KillEnemies()
+4822d4,4,QE_KillEnemyTemplate,_ZN20QE_KillEnemyTemplateD1Ev,QE_KillEnemyTemplate::~QE_KillEnemyTemplate()
+482358,56,QE_KillEnemyTemplate,_ZNK20QE_KillEnemyTemplate14FillNetworkMsgER19tMsgRaisedEventData,QE_KillEnemyTemplate::FillNetworkMsg(tMsgRaisedEventData&) const
+4824e0,36,QE_KillEnemyTemplate,_ZN20QE_KillEnemyTemplateD0Ev,QE_KillEnemyTemplate::~QE_KillEnemyTemplate()
+4822e4,4,QE_MoveInZone,_ZN13QE_MoveInZoneD1Ev,QE_MoveInZone::~QE_MoveInZone()
+482438,64,QE_MoveInZone,_ZNK13QE_MoveInZone14FillNetworkMsgER19tMsgRaisedEventData,QE_MoveInZone::FillNetworkMsg(tMsgRaisedEventData&) const
+4825b0,36,QE_MoveInZone,_ZN13QE_MoveInZoneD0Ev,QE_MoveInZone::~QE_MoveInZone()
+3a1630,4,QE_OpenGameObject,_ZN17QE_OpenGameObjectD1Ev,QE_OpenGameObject::~QE_OpenGameObject()
+3a16d4,36,QE_OpenGameObject,_ZN17QE_OpenGameObjectD0Ev,QE_OpenGameObject::~QE_OpenGameObject()
+3ee3ac,4,QE_PickedUpLiftable,_ZN19QE_PickedUpLiftableD1Ev,QE_PickedUpLiftable::~QE_PickedUpLiftable()
+3ee970,36,QE_PickedUpLiftable,_ZN19QE_PickedUpLiftableD0Ev,QE_PickedUpLiftable::~QE_PickedUpLiftable()
+3a2f3c,4,QE_TalkToNPC,_ZN12QE_TalkToNPCD1Ev,QE_TalkToNPC::~QE_TalkToNPC()
+3a3908,36,QE_TalkToNPC,_ZN12QE_TalkToNPCD0Ev,QE_TalkToNPC::~QE_TalkToNPC()
+399314,4,QE_TriggerOn,_ZN12QE_TriggerOnD1Ev,QE_TriggerOn::~QE_TriggerOn()
+399368,36,QE_TriggerOn,_ZN12QE_TriggerOnD0Ev,QE_TriggerOn::~QE_TriggerOn()
+39a390,4,QE_TriggerPlate,_ZN15QE_TriggerPlateD1Ev,QE_TriggerPlate::~QE_TriggerPlate()
+39a4dc,36,QE_TriggerPlate,_ZN15QE_TriggerPlateD0Ev,QE_TriggerPlate::~QE_TriggerPlate()
+47f700,4,Quest,_ZN5Quest16UpdatePostClosedEv,Quest::UpdatePostClosed()
+47f704,8,Quest,_ZNK5Quest23DBG_GetCurrentStateNameEv,Quest::DBG_GetCurrentStateName() const
+47f70c,36,Quest,_ZNK5Quest15IsVolatileStateEi,Quest::IsVolatileState(int) const
+47f734,88,Quest,_ZN5Quest14_saveQuestDataEP11IStreamBase,Quest::_saveQuestData(IStreamBase*)
+47f78c,112,Quest,_ZN5Quest14_loadQuestDataEP11IStreamBaseb,"Quest::_loadQuestData(IStreamBase*, bool)"
+47f7fc,68,Quest,_ZNK5Quest8IsDialogEv,Quest::IsDialog() const
+47f850,68,Quest,_ZNK5Quest7IsDebugEv,Quest::IsDebug() const
+47f8a4,68,Quest,_ZNK5Quest11IsSecondaryEv,Quest::IsSecondary() const
+47f8f8,68,Quest,_ZNK5Quest9IsPrimaryEv,Quest::IsPrimary() const
+47f94c,48,Quest,_ZNK5Quest18GetPostDescriptionEv,Quest::GetPostDescription() const
+47f984,76,Quest,_ZNK5Quest17GetPreDescriptionEv,Quest::GetPreDescription() const
+47f9dc,76,Quest,_ZNK5Quest8GetTitleEv,Quest::GetTitle() const
+47fa80,244,Quest,_ZNK5Quest17GetScriptIDFromIDEi,Quest::GetScriptIDFromID(int) const
+47fb74,596,Quest,_ZN5Quest34HandleSaveInStateTransitonIfNeededEi,Quest::HandleSaveInStateTransitonIfNeeded(int)
+47fde4,276,Quest,_ZN5Quest19TestIsScriptRunningEi,Quest::TestIsScriptRunning(int)
+47ff20,280,Quest,_ZN5Quest10ExecScriptEi,Quest::ExecScript(int)
+480060,252,Quest,_ZN5Quest6ReInitEv,Quest::ReInit()
+48015c,28,Quest,_ZN5Quest11GiveRewardsEv,Quest::GiveRewards()
+480178,316,Quest,_ZN5Quest7CompileEv,Quest::Compile()
+4802b4,116,Quest,_ZN5Quest11SynchronizeEPKS_b,"Quest::Synchronize(Quest const*, bool)"
+480328,1044,Quest,_ZNK5Quest33DBG_TraceDetailedQuestInformationEP7__sFILE,Quest::DBG_TraceDetailedQuestInformation(__sFILE*) const
+4807d8,68,Quest,_ZN5Quest18SetOwnerToChildrenEv,Quest::SetOwnerToChildren()
+48081c,200,Quest,_ZN5Quest12AssignPyDataEPN7Structs7v2QuestE,Quest::AssignPyData(Structs::v2Quest*)
+4808e4,96,Quest,_ZN5QuestC1Ei,Quest::Quest(int)
+480944,96,Quest,_ZN5QuestC2Ei,Quest::Quest(int)
+4809a4,112,Quest,_ZN5QuestD1Ev,Quest::~Quest()
+480a14,112,Quest,_ZN5QuestD2Ev,Quest::~Quest()
+480a84,124,Quest,_ZNK5Quest23GetObjectiveDescriptionEv,Quest::GetObjectiveDescription() const
+480c78,1204,Quest,_ZN5Quest8SetStateEi,Quest::SetState(int)
+481150,8,Quest,_ZN5Quest23ReinitStateAfterLoadingEv,Quest::ReinitStateAfterLoading()
+481158,44,Quest,_ZN5Quest12DBG_IncStateEv,Quest::DBG_IncState()
+481184,92,Quest,_ZN5Quest15UpdatePreClosedEv,Quest::UpdatePreClosed()
+4811f0,84,Quest,_ZN5Quest19UpdatePostCompletedEv,Quest::UpdatePostCompleted()
+481254,84,Quest,_ZN5Quest18UpdatePreCompletedEv,Quest::UpdatePreCompleted()
+4812b8,84,Quest,_ZN5Quest16UpdatePostActiveEv,Quest::UpdatePostActive()
+48131c,84,Quest,_ZN5Quest19UpdatePostAvailableEv,Quest::UpdatePostAvailable()
+481380,84,Quest,_ZN5Quest18UpdatePreAvailableEv,Quest::UpdatePreAvailable()
+4813e4,84,Quest,_ZN5Quest16UpdatePostLockedEv,Quest::UpdatePostLocked()
+481448,128,Quest,_ZN5Quest12UpdateClosedEv,Quest::UpdateClosed()
+4814d8,236,Quest,_ZN5Quest15UpdateCompletedEv,Quest::UpdateCompleted()
+4815d4,164,Quest,_ZN5Quest15UpdatePreActiveEv,Quest::UpdatePreActive()
+481688,104,Quest,_ZN5Quest12UpdateActiveEv,Quest::UpdateActive()
+481700,156,Quest,_ZN5Quest15UpdateAvailableEv,Quest::UpdateAvailable()
+4817b4,84,Quest,_ZN5Quest12UpdateLockedEv,Quest::UpdateLocked()
+481818,892,Quest,_ZN5Quest6UpdateEv,Quest::Update()
+39611c,4,QuestEvent,_ZN10QuestEventD1Ev,QuestEvent::~QuestEvent()
+396250,36,QuestEvent,_ZN10QuestEventD0Ev,QuestEvent::~QuestEvent()
+396120,264,QuestMoveInZone,_ZN15QuestMoveInZone17OnCollisionBeginsEP10GameObject,QuestMoveInZone::OnCollisionBegins(GameObject*)
+39628c,56,QuestMoveInZone,_ZN15QuestMoveInZoneD1Ev,QuestMoveInZone::~QuestMoveInZone()
+3962d4,20,QuestMoveInZone,_ZN15QuestMoveInZoneD0Ev,QuestMoveInZone::~QuestMoveInZone()
+3962f0,56,QuestMoveInZone,_ZN15QuestMoveInZoneD2Ev,QuestMoveInZone::~QuestMoveInZone()
+396330,64,QuestMoveInZone,_ZN15QuestMoveInZoneC1EN10ObjectBase6GO_IDSE,QuestMoveInZone::QuestMoveInZone(ObjectBase::GO_IDS)
+396378,64,QuestMoveInZone,_ZN15QuestMoveInZoneC2EN10ObjectBase6GO_IDSE,QuestMoveInZone::QuestMoveInZone(ObjectBase::GO_IDS)
+46b004,152,QuestSavegame,_ZN13QuestSavegameC2Ev,QuestSavegame::QuestSavegame()
+46b0a4,152,QuestSavegame,_ZN13QuestSavegameC1Ev,QuestSavegame::QuestSavegame()
+46b144,44,QuestSavegame,_ZNK13QuestSavegame15IsActCompatibleEii,"QuestSavegame::IsActCompatible(int, int) const"
+46b170,96,QuestSavegame,_ZNK13QuestSavegame15SG_GetNumQuestsEPFbPK5QuestEi,"QuestSavegame::SG_GetNumQuests(bool (*)(Quest const*), int) const"
+46b1d0,136,QuestSavegame,_ZNK13QuestSavegame15SG_GetQuestByIDEPFbPK5QuestEii,"QuestSavegame::SG_GetQuestByID(bool (*)(Quest const*), int, int) const"
+46b258,124,QuestSavegame,_ZNK13QuestSavegame15SG_GetNextQuestEPFbPK5QuestEii,"QuestSavegame::SG_GetNextQuest(bool (*)(Quest const*), int, int) const"
+46b2d4,136,QuestSavegame,_ZNK13QuestSavegame15SG_GetPrevQuestEPFbPK5QuestEii,"QuestSavegame::SG_GetPrevQuest(bool (*)(Quest const*), int, int) const"
+46b35c,12,QuestSavegame,_ZN13QuestSavegame25SG_GetCurrentPrimaryQuestEi,QuestSavegame::SG_GetCurrentPrimaryQuest(int)
+46b510,176,QuestSavegame,_ZN13QuestSavegame21SG_VerifyCurrentQuestEi,QuestSavegame::SG_VerifyCurrentQuest(int)
+46b5c0,28,QuestSavegame,_ZN13QuestSavegame18SG_GetCurrentQuestEi,QuestSavegame::SG_GetCurrentQuest(int)
+46b5dc,104,QuestSavegame,_ZNK13QuestSavegame19HasMainQuestUpdatedEi,QuestSavegame::HasMainQuestUpdated(int) const
+46b644,480,QuestSavegame,_ZN13QuestSavegame11SynchronizeERKS_b,"QuestSavegame::Synchronize(QuestSavegame const&, bool)"
+46b824,140,QuestSavegame,_ZN13QuestSavegame13CompileQuestsEb,QuestSavegame::CompileQuests(bool)
+46b8b0,144,QuestSavegame,_ZN13QuestSavegame36SG_DBG_TraceDetailedQuestInformationEP7__sFILEii,"QuestSavegame::SG_DBG_TraceDetailedQuestInformation(__sFILE*, int, int)"
+46b940,244,QuestSavegame,_ZN13QuestSavegame15SG_GetQuestByIDEiib,"QuestSavegame::SG_GetQuestByID(int, int, bool)"
+46ba4c,236,QuestSavegame,_ZN13QuestSavegame17SG_GetQuestByNameEPKci,"QuestSavegame::SG_GetQuestByName(char const*, int)"
+46bb58,124,QuestSavegame,_ZN13QuestSavegame12UpdateQuestsEb,QuestSavegame::UpdateQuests(bool)
+46be6c,204,QuestSavegame,_ZN13QuestSavegameD1Ev,QuestSavegame::~QuestSavegame()
+46bf4c,20,QuestSavegame,_ZN13QuestSavegameD0Ev,QuestSavegame::~QuestSavegame()
+46bf68,204,QuestSavegame,_ZN13QuestSavegameD2Ev,QuestSavegame::~QuestSavegame()
+46c1a8,396,QuestSavegame,_ZN13QuestSavegame10InitQuestsEv,QuestSavegame::InitQuests()
+46c344,296,QuestSavegame,_ZN13QuestSavegame11UnpackQuestEiiP11IStreamBaseb,"QuestSavegame::UnpackQuest(int, int, IStreamBase*, bool)"
+46c48c,196,QuestSavegame,_ZN13QuestSavegame12UnpackQuestsEiP11IStreamBaseb,"QuestSavegame::UnpackQuests(int, IStreamBase*, bool)"
+46c550,52,QuestSavegame,_ZN13QuestSavegame10LoadQuestsEP11IStreamBase,QuestSavegame::LoadQuests(IStreamBase*)
+46c584,200,QuestSavegame,_ZN13QuestSavegame9PackQuestEiiP11IStreamBase,"QuestSavegame::PackQuest(int, int, IStreamBase*)"
+46c658,164,QuestSavegame,_ZN13QuestSavegame10PackQuestsEiP11IStreamBase,"QuestSavegame::PackQuests(int, IStreamBase*)"
+46c6fc,60,QuestSavegame,_ZN13QuestSavegame10SaveQuestsEP11IStreamBase,QuestSavegame::SaveQuests(IStreamBase*)
+482870,4,Reward,_ZN6Reward7CompileEv,Reward::Compile()
+482874,12,Reward,_ZN6Reward9GetParam1Ev,Reward::GetParam1()
+4828e8,4,Reward,_ZN6RewardD2Ev,Reward::~Reward()
+4828ec,4,Reward,_ZN6RewardD1Ev,Reward::~Reward()
+482b8c,20,Reward,_ZN6RewardD0Ev,Reward::~Reward()
+482ca0,92,Reward,_ZN6RewardC1Ev,Reward::Reward()
+482d10,92,Reward,_ZN6RewardC2Ev,Reward::Reward()
+483278,96,Reward,_ZN6Reward34DBG_TraceDetailedRewardInformationEP7__sFILE,Reward::DBG_TraceDetailedRewardInformation(__sFILE*)
+4828f0,48,RewardList,_ZN10RewardList8SetOwnerEP9Character,RewardList::SetOwner(Character*)
+482920,88,RewardList,_ZN10RewardList4GiveEv,RewardList::Give()
+482978,68,RewardList,_ZN10RewardList7CompileEv,RewardList::Compile()
+4829bc,76,RewardList,_ZNK10RewardList38DBG_TraceDetailedRewardListInformationEP7__sFILE,RewardList::DBG_TraceDetailedRewardListInformation(__sFILE*) const
+482b0c,44,RewardList,_ZN10RewardListC1Ev,RewardList::RewardList()
+482b4c,44,RewardList,_ZN10RewardListC2Ev,RewardList::RewardList()
+482ba8,108,RewardList,_ZN10RewardListD1Ev,RewardList::~RewardList()
+482c24,108,RewardList,_ZN10RewardListD2Ev,RewardList::~RewardList()
+4835a0,300,RewardList,_ZN10RewardList18CreateRewardStringEv,RewardList::CreateRewardString()
+4838fc,80,RewardList,_ZN10RewardList17InvalidateCompileEv,RewardList::InvalidateCompile()
+483950,172,RewardList,_ZN10RewardList12AssignPyDataEPN7Structs17v2QuestRewardStubEi,"RewardList::AssignPyData(Structs::v2QuestRewardStub*, int)"
+4828a8,20,Reward_CharacterProps,_ZN21Reward_CharacterProps7CompileEv,Reward_CharacterProps::Compile()
+482a70,44,Reward_CharacterProps,_ZN21Reward_CharacterPropsD1Ev,Reward_CharacterProps::~Reward_CharacterProps()
+483330,156,Reward_CharacterProps,_ZN21Reward_CharacterProps34DBG_TraceDetailedRewardInformationEP7__sFILE,Reward_CharacterProps::DBG_TraceDetailedRewardInformation(__sFILE*)
+4833e8,56,Reward_CharacterProps,_ZN21Reward_CharacterProps4GiveEv,Reward_CharacterProps::Give()
+483884,44,Reward_CharacterProps,_ZN21Reward_CharacterPropsD0Ev,Reward_CharacterProps::~Reward_CharacterProps()
+4828d0,24,Reward_ConsumeLoot,_ZN18Reward_ConsumeLoot7CompileEv,Reward_ConsumeLoot::Compile()
+482a08,44,Reward_ConsumeLoot,_ZN18Reward_ConsumeLootD1Ev,Reward_ConsumeLoot::~Reward_ConsumeLoot()
+482f4c,200,Reward_ConsumeLoot,_ZN18Reward_ConsumeLoot34DBG_TraceDetailedRewardInformationEP7__sFILE,Reward_ConsumeLoot::DBG_TraceDetailedRewardInformation(__sFILE*)
+483034,84,Reward_ConsumeLoot,_ZN18Reward_ConsumeLoot4GiveEv,Reward_ConsumeLoot::Give()
+48380c,44,Reward_ConsumeLoot,_ZN18Reward_ConsumeLootD0Ev,Reward_ConsumeLoot::~Reward_ConsumeLoot()
+482880,20,Reward_Gold,_ZN11Reward_Gold7CompileEv,Reward_Gold::Compile()
+482ad8,44,Reward_Gold,_ZN11Reward_GoldD1Ev,Reward_Gold::~Reward_Gold()
+4831ec,116,Reward_Gold,_ZN11Reward_Gold34DBG_TraceDetailedRewardInformationEP7__sFILE,Reward_Gold::DBG_TraceDetailedRewardInformation(__sFILE*)
+483480,68,Reward_Gold,_ZN11Reward_Gold4GiveEv,Reward_Gold::Give()
+4837d0,44,Reward_Gold,_ZN11Reward_GoldD0Ev,Reward_Gold::~Reward_Gold()
+4828bc,20,Reward_Loot,_ZN11Reward_Loot7CompileEv,Reward_Loot::Compile()
+482a3c,44,Reward_Loot,_ZN11Reward_LootD1Ev,Reward_Loot::~Reward_Loot()
+483088,180,Reward_Loot,_ZN11Reward_Loot34DBG_TraceDetailedRewardInformationEP7__sFILE,Reward_Loot::DBG_TraceDetailedRewardInformation(__sFILE*)
+4832ec,68,Reward_Loot,_ZN11Reward_Loot4GiveEv,Reward_Loot::Give()
+483848,44,Reward_Loot,_ZN11Reward_LootD0Ev,Reward_Loot::~Reward_Loot()
+482894,20,Reward_XP,_ZN9Reward_XP7CompileEv,Reward_XP::Compile()
+482aa4,44,Reward_XP,_ZN9Reward_XPD1Ev,Reward_XP::~Reward_XP()
+483160,116,Reward_XP,_ZN9Reward_XP34DBG_TraceDetailedRewardInformationEP7__sFILE,Reward_XP::DBG_TraceDetailedRewardInformation(__sFILE*)
+483420,96,Reward_XP,_ZN9Reward_XP4GiveEv,Reward_XP::Give()
+4838c0,44,Reward_XP,_ZN9Reward_XPD0Ev,Reward_XP::~Reward_XP()
+313720,64,Savegame,_ZN8Savegame3Job6finishEv,Savegame::Job::finish()
+313c90,68,Savegame,_ZN8Savegame3JobD1Ev,Savegame::Job::~Job()
+313cdc,128,Savegame,_ZN8Savegame3Job4copyERKS0_,Savegame::Job::copy(Savegame::Job const&)
+313dfc,124,Savegame,_ZN8SavegameD1Ev,Savegame::~Savegame()
+313e88,20,Savegame,_ZN8SavegameD0Ev,Savegame::~Savegame()
+313ea4,124,Savegame,_ZN8SavegameD2Ev,Savegame::~Savegame()
+313fb0,236,Savegame,_ZN8Savegame18DeleteAllSlotFilesEi,Savegame::DeleteAllSlotFiles(int)
+3145e0,36,Savegame,_ZN8Savegame3JobC1ERKS0_,Savegame::Job::Job(Savegame::Job const&)
+314734,1076,Savegame,_ZN8Savegame10UpdateJobsEv,Savegame::UpdateJobs()
+314cfc,152,Savegame,_ZN8Savegame9FlushJobsEPKc,Savegame::FlushJobs(char const*)
+315110,164,Savegame,_ZN8Savegame6AddJobERNS_3JobE,Savegame::AddJob(Savegame::Job&)
+315848,188,Savegame,_ZN8Savegame4loadEPKcPFvP11IStreamBasePvES6_S4_,"Savegame::load(char const*, void (*)(IStreamBase*, void*), void (*)(IStreamBase*, void*), void*)"
+315904,116,Savegame,_ZN8Savegame15initSectionInfoEPKcPFvP11IStreamBasePvES6_S4_,"Savegame::initSectionInfo(char const*, void (*)(IStreamBase*, void*), void (*)(IStreamBase*, void*), void*)"
+315ad0,812,Savegame,_ZN8Savegame10_cacheFileEP12StreamBuffer,Savegame::_cacheFile(StreamBuffer*)
+315ed8,104,Savegame,_ZN8SavegameC1EPKcb,"Savegame::Savegame(char const*, bool)"
+315f48,104,Savegame,_ZN8SavegameC2EPKcb,"Savegame::Savegame(char const*, bool)"
+315fb8,992,Savegame,_ZN8Savegame7saveAllEv,Savegame::saveAll()
+3163c0,68,Savegame,_ZN8Savegame5resetEv,Savegame::reset()
+46c738,32,SavegameManager,_ZN15SavegameManager14__loadLastSlotEP11IStreamBasePv,"SavegameManager::__loadLastSlot(IStreamBase*, void*)"
+46c758,32,SavegameManager,_ZN15SavegameManager14__saveLastSlotEP11IStreamBasePv,"SavegameManager::__saveLastSlot(IStreamBase*, void*)"
+46c778,32,SavegameManager,_ZN15SavegameManager15__loadTutorialsEP11IStreamBasePv,"SavegameManager::__loadTutorials(IStreamBase*, void*)"
+46c798,32,SavegameManager,_ZN15SavegameManager15__saveTutorialsEP11IStreamBasePv,"SavegameManager::__saveTutorials(IStreamBase*, void*)"
+46c7b8,504,SavegameManager,_ZN15SavegameManager28__loadLanguageAndOrientationEP11IStreamBasePv,"SavegameManager::__loadLanguageAndOrientation(IStreamBase*, void*)"
+46ca78,188,SavegameManager,_ZN15SavegameManager13__saveOptionsEP11IStreamBasePv,"SavegameManager::__saveOptions(IStreamBase*, void*)"
+46cb34,156,SavegameManager,_ZN15SavegameManager12saveSettingsEv,SavegameManager::saveSettings()
+46cc18,132,SavegameManager,_ZN15SavegameManagerD1Ev,SavegameManager::~SavegameManager()
+46cca4,20,SavegameManager,_ZN15SavegameManagerD0Ev,SavegameManager::~SavegameManager()
+46ccc0,132,SavegameManager,_ZN15SavegameManagerD2Ev,SavegameManager::~SavegameManager()
+46cd4c,116,SavegameManager,_ZN15SavegameManagerC1Ev,SavegameManager::SavegameManager()
+46cdd8,116,SavegameManager,_ZN15SavegameManagerC2Ev,SavegameManager::SavegameManager()
+46cfd4,104,SavegameManager,_ZN15SavegameManager9decOptionEPKc,SavegameManager::decOption(char const*)
+46d03c,148,SavegameManager,_ZN15SavegameManager9incOptionEPKc,SavegameManager::incOption(char const*)
+46d0d0,52,SavegameManager,_ZN15SavegameManager9setOptionEPKci,"SavegameManager::setOption(char const*, int)"
+46d104,368,SavegameManager,_ZN15SavegameManager11setLanguageEi,SavegameManager::setLanguage(int)
+46d280,56,SavegameManager,_ZNK15SavegameManager13getOptionTypeEPKc,SavegameManager::getOptionType(char const*) const
+46d2b8,64,SavegameManager,_ZNK15SavegameManager15getOptionStringEPKc,SavegameManager::getOptionString(char const*) const
+46d2f8,56,SavegameManager,_ZNK15SavegameManager14getOptionLabelEPKc,SavegameManager::getOptionLabel(char const*) const
+46d330,72,SavegameManager,_ZNK15SavegameManager12getOptionMaxEPKc,SavegameManager::getOptionMax(char const*) const
+46d378,64,SavegameManager,_ZNK15SavegameManager13isOptionAtMinEPKc,SavegameManager::isOptionAtMin(char const*) const
+46d3b8,96,SavegameManager,_ZNK15SavegameManager13isOptionAtMaxEPKc,SavegameManager::isOptionAtMax(char const*) const
+46d418,92,SavegameManager,_ZNK15SavegameManager15isOptionToggledEPKc,SavegameManager::isOptionToggled(char const*) const
+46d474,52,SavegameManager,_ZNK15SavegameManager9getOptionEPKc,SavegameManager::getOption(char const*) const
+46d4a8,48,SavegameManager,_ZNK15SavegameManager9hasOptionEPKc,SavegameManager::hasOption(char const*) const
+46d4d8,56,SavegameManager,_ZNK15SavegameManager20getAutoReorientationEv,SavegameManager::getAutoReorientation() const
+46d514,88,SavegameManager,_ZNK15SavegameManager11getLanguageEv,SavegameManager::getLanguage() const
+46d578,264,SavegameManager,_ZN15SavegameManager12toggleOptionEPKc,SavegameManager::toggleOption(char const*)
+46d8f4,188,SavegameManager,_ZN15SavegameManager13__loadOptionsEP11IStreamBasePv,"SavegameManager::__loadOptions(IStreamBase*, void*)"
+46e47c,248,SavegameManager,_ZN15SavegameManager13_initSettingsEb,SavegameManager::_initSettings(bool)
+46e584,284,SavegameManager,_ZN15SavegameManager12loadSettingsEb,SavegameManager::loadSettings(bool)
+33de64,28,SimpleTypeProperty,_ZN18SimpleTypePropertyIbE14IsDefaultValueEPv,SimpleTypeProperty<bool>::IsDefaultValue(void*)
+33de80,16,SimpleTypeProperty,_ZN18SimpleTypePropertyIbE17SetToDefaultValueEPv,SimpleTypeProperty<bool>::SetToDefaultValue(void*)
+33e218,44,SimpleTypeProperty,_ZN18SimpleTypePropertyISsE8ToStringEPv,"SimpleTypeProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::ToString(void*)"
+33e244,84,SimpleTypeProperty,_ZN18SimpleTypePropertyISsEaSERKS0_,"SimpleTypeProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator=(SimpleTypeProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)"
+33e298,36,SimpleTypeProperty,_ZN18SimpleTypePropertyISsE17SetToDefaultValueEPv,"SimpleTypeProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::SetToDefaultValue(void*)"
+33e358,20,SimpleTypeProperty,_ZN18SimpleTypePropertyISsE25SetDefaultValueFromStringEPKc,"SimpleTypeProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::SetDefaultValueFromString(char const*)"
+33e380,120,SimpleTypeProperty,_ZN18SimpleTypePropertyISsEC1EPvPKcPSsSs,"SimpleTypeProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::SimpleTypeProperty(void*, char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::basic_string<char, std::char_traits<char>, std::allocator<char> >)"
+33e538,60,SimpleTypeProperty,_ZN18SimpleTypePropertyISsE14IsDefaultValueEPv,"SimpleTypeProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::IsDefaultValue(void*)"
+33e580,24,SimpleTypeProperty,_ZN18SimpleTypePropertyIbE25SetDefaultValueFromStringEPKc,SimpleTypeProperty<bool>::SetDefaultValueFromString(char const*)
+33e598,24,SimpleTypeProperty,_ZN18SimpleTypePropertyIbE10FromStringEPvPKc,"SimpleTypeProperty<bool>::FromString(void*, char const*)"
+33e5b0,72,SimpleTypeProperty,_ZN18SimpleTypePropertyIbE8ToStringEPv,SimpleTypeProperty<bool>::ToString(void*)
+33ee34,72,SimpleTypeProperty,_ZN18SimpleTypePropertyISsE5CloneEv,"SimpleTypeProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Clone()"
+33eed8,72,SimpleTypeProperty,_ZN18SimpleTypePropertyIbE5CloneEv,SimpleTypeProperty<bool>::Clone()
+33f4c4,24,SimpleTypeProperty,_ZN18SimpleTypePropertyISsE10FromStringEPvPKc,"SimpleTypeProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::FromString(void*, char const*)"
+387734,72,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core11dimension2dIfEEE14IsDefaultValueEPv,SimpleTypeProperty<glitch::core::dimension2d<float> >::IsDefaultValue(void*)
+38777c,24,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core11dimension2dIfEEE17SetToDefaultValueEPv,SimpleTypeProperty<glitch::core::dimension2d<float> >::SetToDefaultValue(void*)
+387794,100,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core8vector3dIfEEE14IsDefaultValueEPv,SimpleTypeProperty<glitch::core::vector3d<float> >::IsDefaultValue(void*)
+3877f8,36,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core8vector3dIfEEE17SetToDefaultValueEPv,SimpleTypeProperty<glitch::core::vector3d<float> >::SetToDefaultValue(void*)
+387a8c,32,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core8vector3dIfEEE25SetDefaultValueFromStringEPKc,SimpleTypeProperty<glitch::core::vector3d<float> >::SetDefaultValueFromString(char const*)
+387aac,36,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core8vector3dIfEEE10FromStringEPvPKc,"SimpleTypeProperty<glitch::core::vector3d<float> >::FromString(void*, char const*)"
+387ad0,72,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core8vector3dIfEEE8ToStringEPv,SimpleTypeProperty<glitch::core::vector3d<float> >::ToString(void*)
+387b18,28,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core11dimension2dIfEEE25SetDefaultValueFromStringEPKc,SimpleTypeProperty<glitch::core::dimension2d<float> >::SetDefaultValueFromString(char const*)
+387b34,32,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core11dimension2dIfEEE10FromStringEPvPKc,"SimpleTypeProperty<glitch::core::dimension2d<float> >::FromString(void*, char const*)"
+387b54,72,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core11dimension2dIfEEE8ToStringEPv,SimpleTypeProperty<glitch::core::dimension2d<float> >::ToString(void*)
+387e40,72,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core8vector3dIfEEE5CloneEv,SimpleTypeProperty<glitch::core::vector3d<float> >::Clone()
+387f04,72,SimpleTypeProperty,_ZN18SimpleTypePropertyIN6glitch4core11dimension2dIfEEE5CloneEv,SimpleTypeProperty<glitch::core::dimension2d<float> >::Clone()
+3883fc,36,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point3DIfEE17SetToDefaultValueEPv,SimpleTypeProperty<Point3D<float> >::SetToDefaultValue(void*)
+38865c,32,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point3DIfEE25SetDefaultValueFromStringEPKc,SimpleTypeProperty<Point3D<float> >::SetDefaultValueFromString(char const*)
+38867c,36,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point3DIfEE10FromStringEPvPKc,"SimpleTypeProperty<Point3D<float> >::FromString(void*, char const*)"
+3886a0,20,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point3DIfEE14IsDefaultValueEPv,SimpleTypeProperty<Point3D<float> >::IsDefaultValue(void*)
+389980,72,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point3DIfEE8ToStringEPv,SimpleTypeProperty<Point3D<float> >::ToString(void*)
+389ee4,72,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point3DIfEE5CloneEv,SimpleTypeProperty<Point3D<float> >::Clone()
+38ae00,28,SimpleTypeProperty,_ZN18SimpleTypePropertyIiE14IsDefaultValueEPv,SimpleTypeProperty<int>::IsDefaultValue(void*)
+38ae1c,16,SimpleTypeProperty,_ZN18SimpleTypePropertyIiE17SetToDefaultValueEPv,SimpleTypeProperty<int>::SetToDefaultValue(void*)
+38ba94,24,SimpleTypeProperty,_ZN18SimpleTypePropertyIiE25SetDefaultValueFromStringEPKc,SimpleTypeProperty<int>::SetDefaultValueFromString(char const*)
+38baac,24,SimpleTypeProperty,_ZN18SimpleTypePropertyIiE10FromStringEPvPKc,"SimpleTypeProperty<int>::FromString(void*, char const*)"
+38bac4,72,SimpleTypeProperty,_ZN18SimpleTypePropertyIiE8ToStringEPv,SimpleTypeProperty<int>::ToString(void*)
+38c08c,72,SimpleTypeProperty,_ZN18SimpleTypePropertyIiE5CloneEv,SimpleTypeProperty<int>::Clone()
+394ed4,44,SimpleTypeProperty,_ZN18SimpleTypePropertyIfE14IsDefaultValueEPv,SimpleTypeProperty<float>::IsDefaultValue(void*)
+394f00,16,SimpleTypeProperty,_ZN18SimpleTypePropertyIfE17SetToDefaultValueEPv,SimpleTypeProperty<float>::SetToDefaultValue(void*)
+394f10,56,SimpleTypeProperty,_ZN18SimpleTypePropertyISsEC1Ev,"SimpleTypeProperty<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::SimpleTypeProperty()"
+394f98,72,SimpleTypeProperty,_ZN18SimpleTypePropertyIfE5CloneEv,SimpleTypeProperty<float>::Clone()
+3950c8,24,SimpleTypeProperty,_ZN18SimpleTypePropertyIfE25SetDefaultValueFromStringEPKc,SimpleTypeProperty<float>::SetDefaultValueFromString(char const*)
+3950e0,28,SimpleTypeProperty,_ZN18SimpleTypePropertyIfE10FromStringEPvPKc,"SimpleTypeProperty<float>::FromString(void*, char const*)"
+3950fc,72,SimpleTypeProperty,_ZN18SimpleTypePropertyIfE8ToStringEPv,SimpleTypeProperty<float>::ToString(void*)
+3a357c,116,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point2DIiEE14IsDefaultValueEPv,SimpleTypeProperty<Point2D<int> >::IsDefaultValue(void*)
+3a35f0,28,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point2DIiEE17SetToDefaultValueEPv,SimpleTypeProperty<Point2D<int> >::SetToDefaultValue(void*)
+3a66bc,28,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point2DIiEE25SetDefaultValueFromStringEPKc,SimpleTypeProperty<Point2D<int> >::SetDefaultValueFromString(char const*)
+3a66d8,32,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point2DIiEE10FromStringEPvPKc,"SimpleTypeProperty<Point2D<int> >::FromString(void*, char const*)"
+3a926c,72,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point2DIiEE8ToStringEPv,SimpleTypeProperty<Point2D<int> >::ToString(void*)
+3a98e8,72,SimpleTypeProperty,_ZN18SimpleTypePropertyI7Point2DIiEE5CloneEv,SimpleTypeProperty<Point2D<int> >::Clone()
+3f03d8,20,SimpleTypeProperty,_ZN18SimpleTypePropertyISt6vectorI7Point3DIfESaIS2_EEE14IsDefaultValueEPv,"SimpleTypeProperty<std::vector<Point3D<float>, std::allocator<Point3D<float> > > >::IsDefaultValue(void*)"
+3f3858,72,SimpleTypeProperty,_ZN18SimpleTypePropertyISt6vectorI7Point3DIfESaIS2_EEE8ToStringEPv,"SimpleTypeProperty<std::vector<Point3D<float>, std::allocator<Point3D<float> > > >::ToString(void*)"
+3f8eb4,20,SimpleTypeProperty,_ZN18SimpleTypePropertyISt6vectorI7Point3DIfESaIS2_EEE17SetToDefaultValueEPv,"SimpleTypeProperty<std::vector<Point3D<float>, std::allocator<Point3D<float> > > >::SetToDefaultValue(void*)"
+3f8ec8,72,SimpleTypeProperty,_ZN18SimpleTypePropertyISt6vectorI7Point3DIfESaIS2_EEE5CloneEv,"SimpleTypeProperty<std::vector<Point3D<float>, std::allocator<Point3D<float> > > >::Clone()"
+3f8f7c,76,SimpleTypeProperty,_ZN18SimpleTypePropertyISt6vectorI7Point3DIfESaIS2_EEE25SetDefaultValueFromStringEPKc,"SimpleTypeProperty<std::vector<Point3D<float>, std::allocator<Point3D<float> > > >::SetDefaultValueFromString(char const*)"
+3f8fc8,80,SimpleTypeProperty,_ZN18SimpleTypePropertyISt6vectorI7Point3DIfESaIS2_EEE10FromStringEPvPKc,"SimpleTypeProperty<std::vector<Point3D<float>, std::allocator<Point3D<float> > > >::FromString(void*, char const*)"
+37f9cc,4,TrophyData,_ZN10TrophyDataD1Ev,TrophyData::~TrophyData()
+37fa80,36,TrophyData,_ZN10TrophyDataD0Ev,TrophyData::~TrophyData()
+37f9d0,8,TrophyManager,_ZN13TrophyManager4InitEv,TrophyManager::Init()
+37f9d8,8,TrophyManager,_ZN13TrophyManager9TerminateEv,TrophyManager::Terminate()
+37f9e0,4,TrophyManager,_ZN13TrophyManager24UnlockTrophiesGameCenterEv,TrophyManager::UnlockTrophiesGameCenter()
+37f9e4,56,TrophyManager,_ZN13TrophyManager17IsTrophyUnlockingEi,TrophyManager::IsTrophyUnlocking(int)
+37fab4,124,TrophyManager,_ZN13TrophyManager20UnlockTrophiesGLLiveEv,TrophyManager::UnlockTrophiesGLLive()
+37fc98,104,TrophyManager,_ZN13TrophyManager14UnloadTrophiesEv,TrophyManager::UnloadTrophies()
+37fdf0,132,TrophyManager,_ZN13TrophyManagerD1Ev,TrophyManager::~TrophyManager()
+37fe88,56,TrophyManager,_ZN13TrophyManager14DeleteInstanceEv,TrophyManager::DeleteInstance()
+37fec8,132,TrophyManager,_ZN13TrophyManagerD2Ev,TrophyManager::~TrophyManager()
+37ff60,224,TrophyManager,_ZN13TrophyManager13GetTrophyDataEi,TrophyManager::GetTrophyData(int)
+380058,20,TrophyManager,_ZN13TrophyManager16IsTrophyUnlockedEi,TrophyManager::IsTrophyUnlocked(int)
+38006c,320,TrophyManager,_ZN13TrophyManager12SaveTrophiesEv,TrophyManager::SaveTrophies()
+3801c4,612,TrophyManager,_ZN13TrophyManager12InitTrophiesEv,TrophyManager::InitTrophies()
+380474,68,TrophyManager,_ZN13TrophyManagerC1Ev,TrophyManager::TrophyManager()
+3804c0,64,TrophyManager,_ZN13TrophyManager14CreateInstanceEv,TrophyManager::CreateInstance()
+380508,68,TrophyManager,_ZN13TrophyManagerC2Ev,TrophyManager::TrophyManager()
+380e48,1236,TrophyManager,_ZN13TrophyManager16TrophyUnlockedCBEi,TrophyManager::TrophyUnlockedCB(int)
+3813b8,264,TrophyManager,_ZN13TrophyManager12UnlockTrophyEi,TrophyManager::UnlockTrophy(int)
+3814c8,76,TrophyManager,_ZN13TrophyManager21DBG_UnlockAllTrophiesEv,TrophyManager::DBG_UnlockAllTrophies()
+38151c,312,TrophyManager,_ZN13TrophyManager12LoadTrophiesEv,TrophyManager::LoadTrophies()
+318178,88,UserProperties,_ZN14UserPropertiesD1Ev,UserProperties::~UserProperties()
+3181d8,20,UserProperties,_ZN14UserPropertiesD0Ev,UserProperties::~UserProperties()
+3181f4,88,UserProperties,_ZN14UserPropertiesD2Ev,UserProperties::~UserProperties()
+318e18,44,UserProperties,_ZN14UserProperties11AddPropertyEPKcS1_,"UserProperties::AddProperty(char const*, char const*)"
+318e5c,376,UserProperties,_ZN14UserProperties14_ParseKeyValueEPcS0_,"UserProperties::_ParseKeyValue(char*, char*)"
+318fe4,88,UserProperties,_ZN14UserProperties10_ParseLineEPc,UserProperties::_ParseLine(char*)
+31903c,256,UserProperties,_ZN14UserProperties16_ParsePropertiesEPKc,UserProperties::_ParseProperties(char const*)
+319158,80,UserProperties,_ZN14UserPropertiesC1EPKc,UserProperties::UserProperties(char const*)
+3191b0,80,UserProperties,_ZN14UserPropertiesC2EPKc,UserProperties::UserProperties(char const*)

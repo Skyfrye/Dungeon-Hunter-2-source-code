@@ -1,0 +1,112 @@
+// gameswf_render.h	-- Thatcher Ulrich <tu@tulrich.com> 2003
+
+// This source code has been donated to the Public Domain.  Do
+// whatever you want with it.
+
+// Interface to renderer back-end.
+
+
+#ifndef GAMESWF_RENDER_H
+#define GAMESWF_RENDER_H
+
+
+#include "gameswf/gameswf_types.h"
+#include "gameswf/gameswf.h"
+#include "base/image.h"
+
+
+namespace gameswf
+{
+	render_handler*	get_render_handler();
+
+	namespace render
+	{
+		bitmap_info*	create_bitmap_info_empty();
+		// DH2: Gameloft factories (binary 0x7739dc and 0x773a5c). With no render handler they return a bogus_bi.
+		bitmap_info*	create_bitmap_info_native(int w, int h, const membuf* data);  // DH2
+		bitmap_info*	create_bitmap_info_texture(glitch::video::ITexture* texture);  // DH2
+		// DH2: placeholder bitmap for the no-handler paths (binary render::bogus_bi, 0x773974 and 0x773cf8).
+		// DH2: Definitions are in vendor-gameswf/src/v1-vendor-gameswf-pack6-a8bd9d-0.cpp.
+		struct bogus_bi : public bitmap_info  // DH2
+		{
+			~bogus_bi() override;  // DH2
+		};
+		bitmap_info*	create_bitmap_info_alpha(int w, int h, unsigned char* data);
+		bitmap_info*	create_bitmap_info_rgb(image_rgb* im);	// DH2: gameswf::image_rgb (0x773b3c)
+		bitmap_info*	create_bitmap_info_rgba(image_rgba* im);	// DH2: gameswf::image_rgba (0x773acc)
+		video_handler*	create_video_handler();
+
+		// Bracket the displaying of a frame from a movie.
+		// Fill the background color, and set up default
+		// transforms, etc.
+		void	begin_display(
+			rgba background_color,
+			int viewport_x0, int viewport_y0,
+			int viewport_width, int viewport_height,
+			float x0, float x1, float y0, float y1);
+		void	end_display();
+
+		// Geometric and color transforms for mesh and line_strip rendering.
+		void	set_matrix(const matrix& m);
+		void	set_cxform(const cxform& cx);
+
+		// Draw triangles using the current fill-style 0.
+		// Clears the style list after rendering.
+		//
+		// coords is a list of (x,y) coordinate pairs, in
+		// triangle-strip order.  The type of the array should
+		// be float[vertex_count*2]
+		void	draw_mesh_strip(const coord_component coords[], int vertex_count);
+
+		// Draw triangles using the current fill-style 0.
+		// Clears the style list after rendering.
+		//
+		// coords is a list of (x,y) coordinate pairs, in
+		// triangle-list order.  The type of the array should
+		// be float[vertex_count*2]
+		void draw_triangle_list(const coord_component coords[], int vertex_count);
+
+		// Draw a line-strip using the current line style.
+		// Clear the style list after rendering.
+		//
+		// Coords is a list of (x,y) coordinate pairs, in
+		// sequence.
+		void	draw_line_strip(const coord_component coords[], int vertex_count);
+
+		void	fill_style_disable(int fill_side);
+		void	fill_style_color(int fill_side, const rgba& color);
+		void	fill_style_bitmap(int fill_side, bitmap_info* bi, const matrix& m,
+			 render_handler::bitmap_wrap_mode wm, render_handler::bitmap_blend_mode bm);
+
+		void	line_style_disable();
+		void	line_style_color(rgba color);
+		void	line_style_width(float width);
+
+		#if 0 /* DH2: the render handler has no stencil test */
+		bool	test_stencil_buffer(const rect& bound, Uint8 pattern);
+		#endif /* DH2 */
+		void	begin_submit_mask();
+		void	end_submit_mask();
+		void	disable_mask();
+		void	set_mask_bound(const rect& bound);
+		const rect&	get_mask_bound();
+
+		// Special function to draw a rectangular bitmap;
+		// intended for textured glyph rendering.  Ignores
+		// current transforms.
+		void	draw_bitmap(const matrix& m, bitmap_info* bi, const rect& coords, const rect& uv_coords, rgba color);
+
+		void set_cursor(render_handler::cursor_type cursor);
+		bool is_visible(const rect& bound);
+	};	// end namespace render
+};	// end namespace gameswf
+
+
+#endif // GAMESWF_RENDER_H
+
+// Local Variables:
+// mode: C++
+// c-basic-offset: 8 
+// tab-width: 8
+// indent-tabs-mode: t
+// End:

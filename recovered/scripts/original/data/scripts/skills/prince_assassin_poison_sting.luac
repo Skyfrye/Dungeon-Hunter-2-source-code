@@ -1,0 +1,109 @@
+--[[	Poison Sting
+
+	Short duration buff that adds poison damage to weapons for a short duration
+	and chances to slow
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local MANA_BASE		= ToFixed(10);	-- Base mana cost
+local MANA_PLVL		= ToFixed(0);	-- Mana cost per player level
+local MANA_SLVL		= ToFixed(3);	-- Mana cost per skill level
+
+local RANGE				= 300.0;
+
+local BUFF_FX		= GetPyOID("AnimatedEffectTable", "skill_dh2_assassin_poison_sting_persist")
+local BUFF_ID		= GetPyOID("ClassTable", "Skill_Assassin_PoisonSting");
+local BUFF_TIME	= 0;
+
+-- Cached values
+local skill_level	= 0;
+local mana_cost;
+local buff;
+local buff_timer;
+local target
+local traces		= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function BuffExpired(timerId)
+	if(buff and buff_timer == timerId) then
+		if (traces) then Trace("[Skills | Poison Sting] Buff expired"); end
+		buff = nil;
+	end
+end
+-- ----------------------------------------------------------------------------------------------
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(BUFF_ID, slvl);
+end
+
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if (traces) then Trace("[Skills/Poison Sting] Activating the poison sting buff"); end
+
+	buff = CreateBuff(BUFF_ID, BUFF_TIME, false, skill_level, BUFF_FX);
+	ApplyBuff(BUFF_ID, buff);
+	-- Even if the buff has a duration, there is no callbacks associated with it,
+	-- so we keep our own timer.
+	buff_timer = StartSkillTimerCB(BUFF_TIME, 0, BuffExpired);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(BUFF_ID, skill_level);
+	BUFF_TIME = FromFixed(GetProp(GetPyStruct("CharacterProperties", "Dot_Duration"), true));
+	if (BUFF_TIME==0) then
+		if (traces) then Trace("[Skills/Poison Sting] Failed to determinate Buff time!"); end
+		BUFF_TIME=4000;
+	end
+
+	if(buff) then
+		-- Since it is the same script at this point as in OnSkill_(),
+		-- we simply call OnSkill_() to avoid duplicating script.
+		OnSkill_();
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	if(buff) then
+		if (traces) then Trace("[Skills/Poison Sting] Deactivating the poison sting buff"); end
+
+		RemoveBuff(BUFF_ID, buff);
+		buff = nil;
+	end
+
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+local function OnDelayedSkill_()
+	-- Used for the projectiles
+	if (traces) then Trace("[Skills/Poison Sting] OnDelayedSkill called"); end
+end
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_, OnSkillInfo_);

@@ -1,0 +1,86 @@
+--[[	Leadership (Passive)
+
+	increases the experience gained by you and your nearby allies and reduces 
+	the cost of items at the merchant.
+		+5% XP	|	+5% XP
+			5% cost reduction
+	
+--]]
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Warrior_Leadership");
+local BUFF_ID		= GetPyOID("ClassTable", "Skill_Warrior_Leadership_GroupBonus");
+local BUFF_DELAY	= 3000;
+local BUFF_RANGE	= 600;
+local BUFF_FX		= GetPyOID("AnimatedEffectTable", "active_buff_fx");
+
+-- Cached values
+local skill_level	= 0;
+local timer_buff;
+local self_buff;
+local group_buff;
+
+local function startGroupBuff()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+	
+	TargetListSearch(BUFF_RANGE, 360);
+	
+	if(not IsTargetListEmpty()) then
+		repeat
+			local target = GetTargetListTop();
+			if (target:GetName() ~= GetSelf():GetName()) then
+				group_buff = target:CreateBuff(BUFF_ID, BUFF_DELAY, false, slvl, BUFF_FX);
+				target:ApplyBuff(BUFF_ID, group_buff);
+			end
+			
+			PopTargetList();
+		until(IsTargetListEmpty())
+	end
+end
+
+local function OnSkillInfo_(slvl)	
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level = slvl;
+	end
+	if (self_buff) then
+		RemoveBuff(CLASS_ID, self_buff);
+		self_buff=nil;
+	end
+	if (timer_buff) then
+		StopTimerCB(timer_buff);
+		timer_buff=nil;
+	end
+	if(slvl~=0) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		self_buff = CreateBuff(CLASS_ID, 0, false, slvl);
+		ApplyBuff(CLASS_ID, self_buff);
+		startGroupBuff();
+		timer_buff = StartSkillTimerCB(BUFF_DELAY, true, startGroupBuff);
+	end
+end
+
+local function OnSkillCheck_()
+	return false, skill_level > 0;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

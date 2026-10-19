@@ -1,0 +1,233 @@
+-- Constants for the teleportation FX when the Witch is injured.
+local TELEPORT_FX	= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_mage_stone_escape_magefx");
+local MOVE_RANGE	= 900.0;		-- Teleportation range
+local MOVE_DELAY 	= 10000.0;		-- Delay between teleports
+
+local musicStarted_flag = false;
+
+local timer_teleport_flag;
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+
+
+-- -------------------------------------------------------------------------------
+-- EVENTS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+local function Do_SearchVictims()
+
+	local RANGE = GetProp(GetPyStruct("CharacterProperties", "RangeMinDistance"));
+	
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+	
+	TargetListSearch(RANGE);
+	
+	local targetChosen = false;
+	
+	if(not IsTargetListEmpty()) then
+		repeat
+			local target = GetTargetListTop();
+			
+			if (target:IsPlayer()) then
+				targetChosen = true;
+			end
+			
+			if (targetChosen) then
+				SetTarget(target);
+				AddAggro(target, 10);
+				LookAt(target);
+			end
+			
+			PopTargetList();
+			
+		until (IsTargetListEmpty() or targetChosen)
+	end
+end
+
+-- -------------------------------------------------------------------------------
+local function DoTeleport()
+	x, y, z = GetPosition();
+	-- Hack to validate the path... if it doesn't work, we will have to add a method in PFWorld
+	-- Trying moving forward
+	Stop();
+	PlayFX(TELEPORT_FX, x, y, z);
+	PlaySound("sfx_teleport",false,0,false);
+	MoveTo(0.0, MOVE_RANGE, 0.0, true);
+	if(HasPath()) then
+		WarpTo(0.0, MOVE_RANGE, 0.0, true);
+-- 		Trace("Yes, there is a path in front!");
+	else -- Trying backward
+		MoveTo(0.0, -MOVE_RANGE, 0.0, true);
+		if(HasPath()) then
+			WarpTo(0.0, -MOVE_RANGE, 0.0, true);
+-- 			Trace("There is a path, but it is backward!");
+		else -- Trying right
+		MoveTo(MOVE_RANGE, 0.0, 0.0, true);
+			if(HasPath()) then
+				WarpTo(MOVE_RANGE, 0.0, 0.0, true);
+-- 				Trace("There is a path, but it is right!");
+			else -- Trying left
+				MoveTo(-MOVE_RANGE, 0.0, 0.0, true);
+				if(HasPath()) then
+					WarpTo(-MOVE_RANGE, 0.0, 0.0, true);
+-- 					Trace("There is a path, but it is left!");
+				else
+					x=nil; y=nil; z=nil;
+				end
+			end
+		end
+	end
+	x1, y1, z1 = GetPosition();
+	PlayFX(TELEPORT_FX, x1, y1, z1);
+end
+
+-- -------------------------------------------------------------------------------
+-- CALLBACKS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+function Witch_OnInit()
+	OnInit();
+-- -------------------------------------------------------------------------------	
+	local m_lvl_max = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMax")));
+	local m_lvl_min = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMin")));
+	local m_lvl_offset = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelOffset")));
+	local pl_lvl = GetHostPlayerLevel();
+	local pl_diff = GetHostPlayerDifficulty();
+	local m_lvl = pl_lvl;
+	local m_level_min, m_level_max = GetCurrentLevelRange(pl_diff);
+
+----------------------------------------------------------------------------------------
+-- Dynamic level for monster. Monster must have there LevelMax param set to use dynamic level
+----------------------------------------------------------------------------------------
+
+	if(m_lvl_max > -1 ) then
+		if(m_level_max and m_level_max > -1 ) then
+		   if( m_lvl <= m_level_min ) then
+		   	m_lvl = m_level_min;
+		   else
+				if( m_lvl >= m_level_max ) then
+			   	m_lvl = m_level_max;
+				end
+			end
+		else
+			if( m_lvl <= m_lvl_min ) then
+		   	m_lvl = m_lvl_min;
+		   else
+				if( m_lvl >= m_lvl_max ) then
+		   		m_lvl = m_lvl_max;
+		   	end
+		   end
+		end
+	   m_lvl = m_lvl + m_lvl_offset;
+	end
+	SetLevel(ToFixed(m_lvl));
+	
+	if (timer_teleport_flag ~= nil) then
+		StopTimerCB(timer_teleport_flag);
+		timer_teleport_flag = nil;
+	end
+	
+	musicStarted_flag = false;
+	
+	MarkAsFlying(true);
+end
+AddToVFTable("OnInitFinal", "Witch_OnInit");
+
+-- -------------------------------------------------------------------------------
+function Witch_OnEnemySpotted(enemy)
+	if (not musicStarted_flag) then
+		musicStarted_flag = true;
+		PlayMusic("SwampKingMusic", 500);
+	end
+
+	if(not HasTarget()) then
+ 		Do_SearchVictims();
+  	end
+
+	if(not timer_teleport_flag) then
+		timer_teleport_flag = StartTimerCB(MOVE_DELAY, true, DoTeleport);
+	end
+end
+AddToVFTable("OnEnemySpotted", "Witch_OnEnemySpotted");
+
+-- -------------------------------------------------------------------------------
+function Witch_OnTargetDied()
+	Stop();
+	ClearTarget();
+	
+	if (timer_teleport_flag) then
+		StopTimerCB(timer_teleport_flag);
+		timer_teleport_flag = nil;
+	end
+end
+AddToVFTable("OnTargetDied", "Witch_OnTargetDied");
+
+-- -------------------------------------------------------------------------------
+function Witch_OnTargetOutOfRange()
+	Stop();	--NOTE: used to be a MoveTo() where the target was last seen
+	ClearAggro(GetTarget());
+	ClearTarget();
+-- 	Trace ("[AI SCRIPT: Witch] Target is out of range");
+end
+AddToVFTable("OnTargetOutOfRange", "Witch_OnTargetOutOfRange");
+
+
+
+-- -------------------------------------------------------------------------------
+function Witch_OnTargetInRangedRange()
+	local state = GetState();
+	if( state == GetPyCst("AIStates", "Idle") and not HasPath() ) then
+		MoveTo(GetTarget());
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "Witch_OnTargetInRangedRange");
+
+-- -------------------------------------------------------------------------------
+function Witch_OnTargetInCloseRange()
+	Stop();
+	LookAtTarget();
+	DoSkill(0);
+end
+AddToVFTable("OnTargetInCloseRange", "Witch_OnTargetInCloseRange");
+AddToVFTable("OnTargetInMeleeRange", "Witch_OnTargetInCloseRange");
+
+
+-- -------------------------------------------------------------------------------
+function Witch_OnUpdate(timestamp)	
+end
+AddToVFTable("OnUpdate", "Witch_OnUpdate");
+
+-- -------------------------------------------------------------------------------
+function monster_OnTargetHit(attacker, defender)
+	-- Only if we are the defender
+	if(defender:GetID() == GetSelf():GetID()) then
+-- 	Trace ("[AI SCRIPT: Witch] Attacking the target in Melee.");	
+		-- We do the same thing as if we spotted the attacker
+		if(not HasTarget()) then
+			SetTarget(attacker);
+			HeadTo(attacker);
+		end
+	end
+end
+
+-- -------------------------------------------------------------------------------
+function Witch_OnDied(killer)
+	PlayMusic("SwampHubAmbientMusic", 1000);
+	if (timer_teleport_flag) then
+		StopTimerCB(timer_teleport_flag);
+		timer_teleport_flag = nil;
+	end
+end
+AddToVFTable("OnDied", "Witch_OnDied");
+
+-- -------------------------------------------------------------------------------
+function Witch_OnTerminate()
+	if (timer_teleport_flag) then
+		StopTimerCB(timer_teleport_flag);
+		timer_teleport_flag = nil;
+	end
+end
+AddToVFTable("OnTerminate", "Witch_OnTerminate");

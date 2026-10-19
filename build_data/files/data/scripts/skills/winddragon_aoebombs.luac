@@ -1,0 +1,246 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Wind Dragon AOE Bombs Skill: 
+-- 
+-- - Frontal direct ranged attack.
+-- Searches for all targets in range, taking the closest point for each target and start the launching process.
+-- If the max number of bombs is higher than the number of targets acquired, he will randomly choose a point from his list.
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Data
+local RANGE 			= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMaxDistance")));
+local SPLASH_RANGE	= 150; -- Damage range of the bomb once it lands.
+
+local BOMBPOINT_NAME	= "aoebomb_";	-- Prefix of the waypoint name in the level (Can add as many as you want)
+local MAX_BOMBS		= 3;		-- Max number of bomb that can be launched when performing the skill.
+
+local CLASS_ID			= GetPyOID("ClassTable", "WindDragon_AOEBombs");
+local BOMB_FX_ID		= GetPyOID("AnimatedEffectTable", "WindDragonAoEBomb");
+
+local LAUNCHER_DELAY	= 500;	-- Delay before each FX launch (since it's a delayed FX the damage delay needs to be tweaked accordingly)
+local DAMAGE_DELAY	= 750;	-- Delay before applying damage to the target (both timers are started at the same time).
+
+
+-- Constants
+local g_bomb_spawns	= {};
+local g_target_list	= {};
+local g_targetBombs_list	= {};
+
+local fx_launcher_flag		= -1;
+local damage_dealer_flag	= -1;
+local g_target_num			= -1;
+
+local g_canAddObject 	= true;
+
+local timer_fx_launcher;
+local timer_damage_dealer;
+local disabled				= false;
+local traces				= false;
+
+-- ----------------------------------------------------------------------------------------------
+local function InitWPLocations()
+	if (traces) then Trace("Get the bomb spawns!"); end
+	local spawns	= g_bomb_spawns;
+	local objects	= {};
+	local num_found	= 0;
+	
+	disabled=true;
+	repeat
+		objects		= {GetGameObjectsByType("Dummy", num_found)};
+		num_found	= num_found + #objects;
+
+		for i, obj in ipairs(objects) do
+			--if (not obj==nil) then
+				local obj_name = obj:GetName();
+
+				for name in string.gmatch(obj_name, BOMBPOINT_NAME) do
+					g_canAddObject = true;
+					local num_spawns = 1;
+				
+					if (#spawns > 1) then
+						repeat
+							disabled=false;
+							for j, objspawns in ipairs(spawns) do
+								local obj_spawnName = objspawns:GetName();
+								if (traces) then Trace("This target name is named:"..objspawns:GetName()); end
+								if (obj_name == obj_spawnName) then
+									g_canAddObject = false;
+								end
+							end
+							num_spawns = num_spawns + 1
+						until(num_spawns > #spawns)
+					end
+				
+					if (g_canAddObject) then
+						table.insert(spawns, obj);
+					end
+				end
+			--end
+		end
+	until(#objects == 0)
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function getTargetBombs()
+	if (traces) then Trace("Get the targets of the bombs:"); end
+	local dist = -1;
+	local dist_obj;
+	local currIndex = 1;
+	
+	repeat
+		for k,v in pairs(g_bomb_spawns) do
+			if (dist == -1) then
+				g_targetBombs_list = {};
+				dist = FromFixed(GetDistanceBetween(g_target_list[currIndex]:GetName(), g_bomb_spawns[k]:GetName()));
+				if (traces) then Trace("Target name is "..g_bomb_spawns[k]:GetName()); end
+				dist_obj = g_bomb_spawns[k];
+			else
+				local temp_dist = FromFixed(GetDistanceBetween(g_target_list[currIndex]:GetName(), g_bomb_spawns[k]:GetName()));
+				if (traces) then Trace("Target name is "..g_bomb_spawns[k]:GetName()); end
+				if (temp_dist < dist) then
+					dist = temp_dist;
+					dist_obj = g_bomb_spawns[k];
+				end
+			end
+		end
+		table.insert(g_targetBombs_list, dist_obj);
+		
+		currIndex = currIndex + 1;
+	until(currIndex > #g_target_list)
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function getTargetMum()
+		if (traces) then Trace("This is get Target Mum!"); end
+		g_target_num = GetRand(1,#g_bomb_spawns);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function Do_Damages()
+	if (traces) then Trace("Do the damage on"); end
+	if (damage_dealer_flag > #g_targetBombs_list and damage_dealer_flag > MAX_BOMBS and timer_damage_dealer) then
+		g_targetBombs_list = {};
+		StopTimerCB(timer_damage_dealer);
+	elseif (damage_dealer_flag > #g_targetBombs_list and damage_dealer_flag <= MAX_BOMBS) then
+		SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+		SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+		SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+		
+		TargetListSearch(SPLASH_RANGE, 360, g_bomb_spawns[g_target_num]);
+		
+		if(not IsTargetListEmpty()) then
+			repeat
+				local target = GetTargetListTop()
+				SkillCombatRoll(target);
+				PopTargetList();
+			until(IsTargetListEmpty())
+		end
+		damage_dealer_flag = damage_dealer_flag + 1;
+	else
+		SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+		SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+		SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+		
+		TargetListSearch(SPLASH_RANGE, 360, g_targetBombs_list[damage_dealer_flag]);
+		
+		if(not IsTargetListEmpty()) then
+			repeat
+				local target = GetTargetListTop()
+				SkillCombatRoll(target);
+				PopTargetList();
+			until(IsTargetListEmpty())
+		end
+		
+		damage_dealer_flag = damage_dealer_flag + 1;
+	end
+	
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function Do_PlayFX()
+	if (traces) then Trace("Play the FX on"); end
+	if (fx_launcher_flag > #g_targetBombs_list and fx_launcher_flag > MAX_BOMBS and timer_fx_launcher) then
+		g_targetBombs_list = {};
+		StopTimerCB(timer_fx_launcher);
+	elseif (fx_launcher_flag > #g_targetBombs_list and fx_launcher_flag <= MAX_BOMBS) then
+		getTargetMum();
+		g_bomb_spawns[g_target_num]:PlayFX(BOMB_FX_ID);
+		PlaySound("sfx_dragon_reaperstorm",false,0,false);
+		fx_launcher_flag = fx_launcher_flag + 1;		
+	else
+		g_targetBombs_list[fx_launcher_flag]:PlayFX(BOMB_FX_ID);
+		PlaySound("sfx_dragon_reaperstorm",false,0,false);
+		fx_launcher_flag = fx_launcher_flag + 1;
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	if (#g_bomb_spawns == 0) then
+		InitWPLocations();
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	if (not disabled) then
+		g_target_list = {};
+	
+		SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player")); --Player, Ennemy
+		SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+		SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+		TargetListSearch(RANGE);
+
+		if(not IsTargetListEmpty()) then
+			repeat
+				local target = GetTargetListTop()
+				if (target:GetID()~=nil) then
+					table.insert(g_target_list, target);
+					if (traces) then Trace("Target name is "..target:GetName()); end
+				end
+				PopTargetList();
+			until(IsTargetListEmpty())
+		else
+			g_target_list = {};
+			if (traces) then Trace("Really no target to add this time!"); end
+		end
+		if (traces) then Trace("Dragon AOE bomb skill"); end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if (not disabled) then
+		getTargetBombs();
+	
+		fx_launcher_flag		= 1;
+		damage_dealer_flag	= 1;
+
+	timer_fx_launcher = StartSkillTimerCB(LAUNCHER_DELAY, true, Do_PlayFX);
+	timer_damage_dealer = StartSkillTimerCB(DAMAGE_DELAY, true, Do_Damages);
+	else
+		Trace ("Wind Dragon AOE Bomb skill error, there is waypoint named aoebomb_ in the level!")
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

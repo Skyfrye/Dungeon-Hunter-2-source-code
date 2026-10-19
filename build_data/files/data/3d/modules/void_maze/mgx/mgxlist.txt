@@ -1,0 +1,16 @@
+assassin_voidmaze_s_00.mgx
+corner_voidmaze_ne_00.mgx
+corner_voidmaze_nw_00.mgx
+corner_voidmaze_se_00.mgx
+corner_voidmaze_sw_00.mgx
+deadend_voidmaze_e_00.mgx
+deadend_voidmaze_n_00.mgx
+deadend_voidmaze_n_01.mgx
+deadend_voidmaze_s_00.mgx
+deadend_voidmaze_w_00.mgx
+island_voidmaze_00.mgx
+straight_voidmaze_ns_00.mgx
+straight_voidmaze_we_00.mgx
+t_voidmaze_nse_00.mgx
+t_voidmaze_nsw_00.mgx
+x_voidmaze_nswe_00.mgx

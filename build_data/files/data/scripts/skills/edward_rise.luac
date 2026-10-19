@@ -1,0 +1,357 @@
+--[[	Rise
+
+	revive a fallen foe that will fight on your side for a short duration 
+	Time to respawn after death: 2 sec
+	Duration before redeath: 10 sec
+	Max of  allies: 3
+	Cool down: na
+	Cast time: na
+	Mana Cost: 15
+	
+	This could be set as a buff.
+	Need to find a way to summon monsters with the right alignment. no solution atm
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local MOVE_RANGE	= 650.0;		-- Teleportation range
+local RISEN			= {};			-- The risen gameobject tabl
+local count			= 0;			-- number of risen zombies
+local path_found	= 0;			-- Path direction found for the spawn
+local bufftime 		= 10000		-- duration of the effect on the dead
+local x,y,z							-- Position
+local projectile	= nil			-- the path test projectile
+
+local RISE_FX		= GetPyOID("AnimatedEffectTable", "spell_dh2_prince_necromancer_rise");
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Necromancer_Rise");
+local PROJECTILE_ID	= GetPyOID("ProjectileTable", "TeleportTool");
+local plvl			= GetProp(GetPyStruct("CharacterProperties", "Level"));
+
+-- Cached values
+local skill_level	 = 0;
+local mana_cost;
+local traces		= false;
+
+local totalSpawnedInt = 0;			-- Counts how many total Risen Zombies have spawned
+local firstSpawnedInt = 0;			-- Holds an Int given to it from totalSpawnedInt
+local secondSpawnedInt = 0;			-- Holds an Int given to it from totalSpawnedInt
+local thirdSpawnedInt = 0;			-- Holds an Int given to it from totalSpawnedInt
+local firstRiseTimer = nil;			-- Holds a TimerID used to kill Risen Zombies early
+local secondRiseTimer = nil;			-- Holds a TimerID used to kill Risen Zombies early
+local thirdRiseTimer = nil;			-- Holds a TimerID used to kill Risen Zombies early
+
+-- ----------------------------------------------------------------------------------------------
+-- FUNCTIONS
+-- ----------------------------------------------------------------------------------------------
+local function KillAllSummoned()
+	if (RISEN[1]~=nil) then
+		if (RISEN[1]:IsDead()==false) then
+			RISEN[1]:Kill();
+		end
+		RISEN[1]:UNLOCK();
+		RISEN[1]=nil;
+		if(firstRiseTimer ~= nil) then
+			StopTimerCB(firstRiseTimer);
+			firstRiseTimer = nil;
+		end
+	end
+	if (RISEN[2]~=nil) then
+		if (RISEN[2]:IsDead()==false) then
+			RISEN[2]:Kill();
+		end
+		RISEN[2]:UNLOCK();
+		RISEN[2]=nil;
+		if(secondRiseTimer ~= nil) then
+			StopTimerCB(secondRiseTimer);
+			secondRiseTimer = nil;
+		end
+	end
+	if (RISEN[3]~=nil) then
+		if (RISEN[3]:IsDead()==false) then
+			RISEN[3]:Kill();
+		end
+		RISEN[3]:UNLOCK();
+		RISEN[3]=nil;
+		if(thirdRiseTimer ~= nil) then
+			StopTimerCB(thirdRiseTimer);
+			thirdRiseTimer = nil;
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function IncrementTotalSpawnedCounter()
+	totalSpawnedInt = totalSpawnedInt + 1;
+	return totalSpawnedInt;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function spawn(slot)
+	local spawnCount = IncrementTotalSpawnedCounter();
+	
+	RISEN[slot] = Summon(GetPyOID("CharacterTable", "WT_Skeleton2"),false, x, y, z, false);
+	RISEN[slot]:LOCK();
+	RISEN[slot]:PlayFX(RISE_FX);
+	RISEN[slot]:SetLevel(plvl);
+	
+	if (slot == 1) then
+		firstSpawnedInt = spawnCount;
+	elseif (slot == 2) then
+		secondSpawnedInt = spawnCount;
+	elseif (slot == 3) then
+		thirdSpawnedInt = spawnCount;
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function killed(timer, counted)
+	if (RISEN[counted]~=nil) then
+		if (RISEN[counted]:IsDead()==false) then
+			RISEN[counted]:Kill();
+			RISEN[counted]:UNLOCK();
+			RISEN[counted]=nil;
+			if (traces) then Trace("Risen Zombie "..counted.." has given it's last breath."); end
+			
+			if(counted == 1) then
+				firstRiseTimer = nil;
+			elseif(counted == 2) then
+				secondRiseTimer = nil;
+			elseif(counted == 3) then
+				thirdRiseTimer = nil;
+			end
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function GetFirstSpawned()
+
+	if ((firstSpawnedInt < secondSpawnedInt) and (firstSpawnedInt < thirdSpawnedInt)) then
+		return 1;
+	elseif ((secondSpawnedInt < firstSpawnedInt) and (secondSpawnedInt < thirdSpawnedInt)) then
+		return 2;
+	elseif ((thirdSpawnedInt < secondSpawnedInt) and (thirdSpawnedInt < firstSpawnedInt)) then
+		return 3;
+	else
+		Trace("GetFirstSpawned didn't work!!");
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function ForceKillAndSpawnNew()
+
+	local spawnSlot = GetFirstSpawned();
+	local spawnTimer = nil;
+	local timerToStop = nil;
+	
+	if (spawnSlot == 1) then
+		timerToStop = firstRiseTimer;
+	elseif (spawnSlot == 2) then
+		timerToStop = secondRiseTimer;
+	elseif (spawnSlot == 3) then
+		timerToStop = thirdRiseTimer;
+	end
+	
+	if (RISEN[spawnSlot]~=nil) then
+	
+		if (RISEN[spawnSlot]:IsDead()==false) then
+			StopTimerCB(timerToStop);
+			RISEN[spawnSlot]:Kill();
+			RISEN[spawnSlot]:UNLOCK();
+			RISEN[spawnSlot]=nil;
+			spawnTimer = StartSkillTimerCB(bufftime, false, killed, spawnSlot);
+		end
+	end
+	
+	if (spawnSlot == 1) then
+		firstRiseTimer = spawnTimer;
+	elseif (spawnSlot == 2) then
+		secondRiseTimer = spawnTimer;
+	elseif (spawnSlot == 3) then
+		thirdRiseTimer = spawnTimer;
+	end
+			
+	if (traces) then Trace("Risen Zombie "..spawnSlot.." has given it's last breath."); end
+	
+	spawn(spawnSlot);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function checkslot()
+	local slot = 0;
+	if (RISEN[1]==nil) then
+		if (traces) then Trace ("Slot 1 empty..."); end
+		slot=1; return slot;
+	end
+	if (RISEN[2]==nil) then
+		if (traces) then Trace ("Slot2 empty..."); end
+		slot=2; return slot;
+	end
+	if (RISEN[3]==nil) then
+		if (traces) then Trace ("Slot 3 empty..."); end
+		slot=3; return slot;
+	end
+	if (RISEN[1]~=nil) then
+		if (RISEN[1]:IsDead()) then
+			if (traces) then Trace ("Slot 1 empty..."); end
+			RISEN[1]:UNLOCK();
+			slot=1; 
+			RISEN[1]=nil;
+			firstSpawnedInt = nil;
+			return slot;
+		end
+	end
+	if (RISEN[2]~=nil) then
+		if (RISEN[2]:IsDead()) then
+			if (traces) then Trace ("Slot2 empty..."); end
+			RISEN[2]:UNLOCK();
+			slot=2; 
+			RISEN[2]=nil;
+			secondSpawnedInt = nil;
+			return slot;
+		end
+	end
+	if (RISEN[3]~=nil) then
+		if (RISEN[3]:IsDead()) then
+			if (traces) then Trace ("Slot 3 empty..."); end
+			RISEN[3]:UNLOCK();
+			slot=3; 
+			RISEN[3]=nil;
+			thirdSpawnedInt = nil;
+			return slot;
+		end
+	end
+	return -1;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function DoRise(slot)
+	x = nil; y=nil; z=nil;
+
+	MoveTo(0.0, MOVE_RANGE, 0.0, true);
+	if(HasPath()) then
+		if (traces) then Trace("Yes, I can rise in the front!"); end
+		projectile = SpawnSkillProjectile(PROJECTILE_ID, 0.0);
+	else -- Trying backward
+		MoveTo(0.0, -MOVE_RANGE, 0.0, true);
+		if(HasPath()) then
+			if (traces) then Trace("Yes, I can rise in the back!"); end
+			projectile = SpawnSkillProjectile(PROJECTILE_ID, 180);
+		else -- Trying right
+		MoveTo(MOVE_RANGE, 0.0, 0.0, true);
+			if(HasPath()) then
+				if (traces) then Trace("Yes, I can rise to the right!"); end
+				projectile = SpawnSkillProjectile(PROJECTILE_ID, 90.0);
+			else -- Trying left
+				MoveTo(-MOVE_RANGE, 0.0, 0.0, true);
+				if(HasPath()) then
+					if (traces) then Trace("Yes, I can rise to the left!"); end
+					projectile = SpawnSkillProjectile(PROJECTILE_ID, 270.0);
+				else
+					projectile = SpawnSkillProjectile(PROJECTILE_ID, 0.0);
+				end
+			end
+		end
+	end
+end
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	DoRise(count);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	count=checkslot();
+	if (traces) then Trace("Here is the slot:"..count); end
+	if (count~=-1) then
+	    if not (x) then
+			local hack = GetSelf();
+			hack._this = projectile;
+			x, y, z = hack:GetPosition();
+		end
+		if (x) then
+			spawn(count)
+			kill_timer = StartSkillTimerCB(bufftime, false, killed, count);
+			
+			if(count == 1) then
+				firstRiseTimer = kill_timer;
+			elseif(count == 2) then
+				secondRiseTimer = kill_timer;
+			elseif(count == 3) then
+				thirdRiseTimer = kill_timer;
+			end
+		end
+	end
+	if (count == -1) then
+		ForceKillAndSpawnNew();
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target, projectile)
+	local hack = GetSelf();
+	hack._this = projectile;
+	x, y, z = hack:GetPosition();
+	reached = true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkillCheck_(target, projectile)
+	--if(target and (target:IsDoor() or target:IsDecor())) then
+	if(target and not target:IsCharacter()) then
+		return true;
+	end
+
+	return false;
+end
+-- ----------------------------------------------------------------------------------------------
+
+local function OnSkillCleanUp_()
+	KillAllSummoned();
+	
+	firstSpawnedInt = 0;
+	secondSpawnedInt = 0;
+	thirdSpawnedInt = 0;
+	totalSpawnedInt = 0;
+	firstRiseTimer = nil;
+	secondRiseTimer = nil;
+	thirdRiseTimer = nil;
+end
+-- ----------------------------------------------------------------------------------------------
+-- RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);
+RegisterSkillEx({	update=OnSkillUpdate_,
+					cleanup=OnSkillCleanUp_,
+					check=OnSkillCheck_,
+					pre=OnPreSkill_,
+					skill=OnSkill_,
+					post=OnPostSkill_,
+					delayed=OnDelayedSkill_,
+					delayed_check=OnDelayedSkillCheck_,
+					info=OnSkillInfo_,
+					});

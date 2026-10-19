@@ -1,0 +1,251 @@
+-- ####################################################################################################
+--	 Rene AI	(Base taken from Niessa (Alain Cadieux - alain.cadieux@gameloft.com))
+--
+--		Specialized AI for Rene. He is an attacking follower, with ranged attacks;
+--
+--		NOTE:
+--			-	The various distance used for our Idle wandering can be found in MoveAround().
+--			-	His speed boost while he catches up can be found in character_classes.pyarray.
+--			-	IDLE_DELAY represents the time before he moves to a new spot while Idle.
+--			-	When Idle and close enough to the player, he only uses half the IDLE_DELAY.
+--			-	CATCH_DELAY represents how often he is updating his path, in case the player
+--				keeps moving while he is catching up.
+--
+--		BUG:
+--			-	If the player keeps running away from him, he will keep stopping and restarting to walk,
+--				because he did reach our destination from the previous "CatchingUp()" path finding,
+--				however he is still flagged as "catching up", because he didn't get close enough.
+-- ####################################################################################################
+local IDLE_DELAY		= 8000;
+local CATCH_DELAY		= 500;
+local WARP_DELAY		= 2000;
+
+local CST_IDLE			= GetPyCst("AIStates", "Idle");
+local CST_MOVE			= GetPyCst("AIStates", "Move");
+local OID_HASTE			= GetPyOID("ClassTable", "Buff_Rene_Haste");
+
+local g_master 			= nil;
+local g_target 			= nil;
+
+local g_is_far			= false;
+local g_is_catching_up	= false;
+local g_catch_time		= 0;
+local g_catchup_timer	= nil;
+
+local traces			= false;
+
+
+local function InitVars()
+	g_master 			= nil;
+	g_target 			= nil;
+
+	g_is_far			= false;
+	g_is_catching_up	= false;
+	g_catch_time		= 0;
+	g_catchup_timer		= nil;
+
+	traces				= false;
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnInit()
+	-- Adjusting the Rene's level so he's not getting owned in advanced difficulties modes. -------
+	local m_lvl_offset = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelOffset")));
+	local pl_lvl = GetHostPlayerLevel();
+	local m_lvl = pl_lvl;
+
+	m_lvl = pl_lvl + m_lvl_offset;
+
+	SetLevel(ToFixed(m_lvl));
+	
+	InitVars();
+end
+AddToVFTable("OnInitFinal", "rene_OnInit");
+
+-- ----------------------------------------------------------------------------------------------------
+local function GrabTarget(t)
+	if(not g_is_far and not g_is_catching_up and not g_target) then
+		g_target = t;
+		SetTarget(t);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------------
+local function DropTarget()
+	if(g_target) then
+		g_target = nil;
+		ClearTarget();
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------------
+local function CatchFallbackCheck()
+	if(not HasPath()) then
+	if (traces) then Trace("[RENE] Couldn't find a path to our master... extreme fallback solution for now is... TELEPORTATION!"); end
+		WarpTo(g_master);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------------
+local function CatchUp()
+	if(g_master and not g_is_catching_up) then
+		if (traces) then Trace("[RENE] Catching Up"); end
+		g_is_catching_up	= true;
+		g_catch_time		= 0;
+
+		local buff = CreateBuff(OID_HASTE, 0, false, 0);
+
+		ApplyBuff(OID_HASTE, buff);	-- We make him to go faster
+		EnableCollisions(false);		-- So nothing prevents us from pathing
+		if (traces) then Trace("Moving Around from CatchUp!"); end
+		if (g_master) then
+			MoveTo(g_master);	-- Long range, directly on the master, to increase the chance of finding a path
+			CatchFallbackCheck();
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------------
+local function CatchingUp()
+	if (g_master) then
+		MoveTo(g_master);
+		CatchFallbackCheck();
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------------
+local function CaughtUp()
+	if(g_is_catching_up) then
+		g_is_catching_up = false;
+		g_catchup_timer = nil;
+		if (traces) then Trace("[RENE] Caught Up!"); end
+		RemoveBuff(OID_HASTE);	-- We make her to return to her normal speed
+		EnableCollisions(true);	-- We can now collide with other objects normally
+		Stop();						-- So we don't end up directly on the player
+	end
+end
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ------------------------------------------CALLBACKS-------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnUpdate()
+	if(not HasMaster() or not IsMasterHostPlayer()  or g_master == nil) then
+	  	g_master = GetHostPlayer();
+		SetMaster(g_master);
+	end
+
+	if(g_is_catching_up) then
+		CatchingUp();
+
+	elseif(g_is_far) then
+		CatchUp();
+	end
+
+	g_target = GetTarget();
+end
+AddToVFTable("OnUpdate", "rene_OnUpdate");
+
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ---------------------------------------------MASTER-------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnFriendSpotted(friend)
+	if(not HasMaster()) then
+		SetMaster(friend);
+		g_master = friend;
+	end
+end
+AddToVFTable("OnFriendSpotted", "rene_OnFriendSpotted");
+
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnMasterOutOfSight()
+	if(not g_is_catching_up) then
+	
+		g_is_far = true;
+	end
+	DropTarget();
+end
+AddToVFTable("OnMasterOutOfSight", "rene_OnMasterOutOfSight");
+
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnMasterInSight()
+	if(not g_target and not g_is_catching_up) then
+		g_is_far = true;
+	end
+end
+AddToVFTable("OnMasterInSight", "rene_OnMasterInSight");
+
+
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnMasterInRangedRange()
+	-- if not attacking, get closer to the prince...
+	if(not g_target and not g_is_catching_up) then
+		g_is_far = true;
+	end
+end
+AddToVFTable("OnMasterInRangedRange", "rene_OnMasterInRangedRange");
+
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnMasterInCloseRange()
+	g_is_far  = false;
+	
+	if (not g_catchup_timer and g_is_catching_up) then
+		g_catchup_timer = StartTimerCB(200, false, CaughtUp);
+	end
+end
+AddToVFTable("OnMasterInCloseRange", "rene_OnMasterInCloseRange");
+
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------TARGET------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnEnemySpotted(enemy)
+	if(not g_is_far)then
+		CaughtUp();
+		GrabTarget(enemy);
+	end
+end
+AddToVFTable("OnEnemySpotted", "rene_OnEnemySpotted");
+
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnTargetDied()
+	DropTarget();
+end
+AddToVFTable("OnTargetDied", "rene_OnTargetDied");
+
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnTargetOutOfSight()
+	DropTarget();
+end
+AddToVFTable("OnTargetOutOfSight", "rene_OnTargetOutOfSight");
+
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnTargetOutOfRange()
+	MoveTo(g_target);
+end
+AddToVFTable("OnTargetOutOfRange", "rene_OnTargetOutOfRange");
+
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnTargetInRangedRange()
+	if(GetState() == CST_MOVE) then
+		Stop();
+	end
+
+	Attack();
+end
+AddToVFTable("OnTargetInRangedRange", "rene_OnTargetInRangedRange");
+
+-- ----------------------------------------------------------------------------------------------------
+function rene_OnTargetInCloseRange()
+	Stop();
+	Attack();
+end
+AddToVFTable("OnTargetInCloseRange", "rene_OnTargetInCloseRange");

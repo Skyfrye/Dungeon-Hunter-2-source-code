@@ -1,0 +1,82 @@
+--[[	Holy Weapon -- New (2010/08/24)
+
+	Damage dealt is received in a certain proportion by the attacker
+	HP received: 2/hit, next: +2/hit HP received
+
+--]]
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Paladin_HolyWeapon");
+
+-- Cached values
+local skill_level	= 0;
+local regenHP_amount;			-- Contain the TempProp1 value for the number of HP per kill.
+local traces		= false;
+
+-- ----------------------------------------------------------------------------------------------
+local function OnTargetHit_Skill(attacker, defender)
+	if (skill_level > 0) then
+		if (defender:GetID() == GetID()) then
+			attacker:SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+			attacker:ApplyPropClass(CLASS_ID);
+			if (traces) then 
+				Trace("[Skills/Mirror-Retribution] is being checked");
+				Trace("[Skills/Mirror-Retribution] We have been hit. Gimme the reward! "..regenHP_amount.." HP!");
+			end	
+-- 			local hp, max_hp, hp_percent = GetHP();
+-- 			if ((hp+regenHP_amount)<max_hp) then
+-- 				max_hp = hp+regenHP_amount;
+-- 			end
+-- 			SetProp(GetPyStruct("CharacterProperties", "HP"),ToFixed(max_hp));
+			local hp, max_hp, hp_percent = attacker:GetHP();
+			if ((hp-regenHP_amount)<0) then
+				hp = 0;
+			else
+				hp=hp-regenHP_amount
+			end
+			if (traces) then Trace("Enemy HP is now:"..hp); end
+			attacker:SetProp(GetPyStruct("CharacterProperties", "HP"),ToFixed(hp));
+			if (hp==0) then attacker:Kill(); end
+			--RegenHP(regenHP_amount);
+			-- For some reason, RegenHP did not work (did not see the health meter increased)
+			-- Used another method and tested
+		end
+	end
+end
+StealAIEvent("OnTargetHit", OnTargetHit_Skill)
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+	regenHP_amount = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"), true));
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

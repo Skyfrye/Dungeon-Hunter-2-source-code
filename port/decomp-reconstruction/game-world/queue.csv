@@ -1,0 +1,1528 @@
+elf_address,body_bytes,owner,name,demangled
+50a474,68,AssetManager,_ZN12AssetManager9SceneNodeD1Ev,AssetManager::SceneNode::~SceneNode()
+50a4c4,52,AssetManager,_ZN12AssetManager15ToggleWireFrameEv,AssetManager::ToggleWireFrame()
+50a504,52,AssetManager,_ZN12AssetManager13loadSceneNodeEPKcS1_bi,"AssetManager::loadSceneNode(char const*, char const*, bool, int)"
+50a540,28,AssetManager,_ZN12AssetManager16preloadSceneNodeEPKcS1_bi,"AssetManager::preloadSceneNode(char const*, char const*, bool, int)"
+50a564,184,AssetManager,_ZN12AssetManager15GetAssetManagerEv,AssetManager::GetAssetManager()
+50a70c,56,AssetManager,_ZN12AssetManager7TextureD1Ev,AssetManager::Texture::~Texture()
+50a74c,56,AssetManager,_ZN12AssetManager7TextureD0Ev,AssetManager::Texture::~Texture()
+50a794,68,AssetManager,_ZN12AssetManager9SceneNodeD0Ev,AssetManager::SceneNode::~SceneNode()
+50aa4c,160,AssetManager,_ZN12AssetManagerD1Ev,AssetManager::~AssetManager()
+50addc,176,AssetManager,_ZN12AssetManager12getNextAssetERSs,"AssetManager::getNextAsset(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)"
+50b020,20,AssetManager,_ZN12AssetManager13getFirstAssetERSs,"AssetManager::getFirstAsset(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)"
+50bdb4,308,AssetManager,_ZN12AssetManager11loadTextureEPKci,"AssetManager::loadTexture(char const*, int)"
+50bef0,56,AssetManager,_ZN12AssetManager14preloadTextureEPKci,"AssetManager::preloadTexture(char const*, int)"
+50bf28,248,AssetManager,_ZN12AssetManager11dropTextureEPKc,AssetManager::dropTexture(char const*)
+50c02c,248,AssetManager,_ZN12AssetManager12clearTextureEi,AssetManager::clearTexture(int)
+50c124,192,AssetManager,_ZN12AssetManager11dropTextureEN5boost13intrusive_ptrIN6glitch5video8ITextureEEE,AssetManager::dropTexture(boost::intrusive_ptr<glitch::video::ITexture>)
+50c8a0,120,AssetManager,_ZN12AssetManager13dropSceneNodeERKSs,"AssetManager::dropSceneNode(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)"
+50c918,244,AssetManager,_ZN12AssetManager14clearSceneNodeEi,AssetManager::clearSceneNode(int)
+50ca0c,32,AssetManager,_ZN12AssetManager5clearEi,AssetManager::clear(int)
+50ca2c,84,AssetManager,_ZN12AssetManager13dropSceneNodeEPKcS1_,"AssetManager::dropSceneNode(char const*, char const*)"
+35a9a8,16,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada14CMeshSceneNodeEE6renderEPv,BaseMeshSceneNode<glitch::collada::CMeshSceneNode>::render(void*)
+35a9b8,16,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada21CSkinnedMeshSceneNodeEE6renderEPv,BaseMeshSceneNode<glitch::collada::CSkinnedMeshSceneNode>::render(void*)
+35a9c8,16,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada28CModularSkinnedMeshSceneNodeEE6renderEPv,BaseMeshSceneNode<glitch::collada::CModularSkinnedMeshSceneNode>::render(void*)
+35aa00,64,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada14CMeshSceneNodeEED1Ev,BaseMeshSceneNode<glitch::collada::CMeshSceneNode>::~BaseMeshSceneNode()
+35ae5c,164,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada28CModularSkinnedMeshSceneNodeEEC2ERKN5boost13intrusive_ptrINS1_5IMeshEEE,BaseMeshSceneNode<glitch::collada::CModularSkinnedMeshSceneNode>::BaseMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh> const&)
+35affc,164,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada21CSkinnedMeshSceneNodeEEC2ERKN5boost13intrusive_ptrINS1_5IMeshEEE,BaseMeshSceneNode<glitch::collada::CSkinnedMeshSceneNode>::BaseMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh> const&)
+35b19c,164,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada14CMeshSceneNodeEEC2ERKN5boost13intrusive_ptrINS1_5IMeshEEE,BaseMeshSceneNode<glitch::collada::CMeshSceneNode>::BaseMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh> const&)
+35b478,100,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada14CMeshSceneNodeEED0Ev,BaseMeshSceneNode<glitch::collada::CMeshSceneNode>::~BaseMeshSceneNode()
+35b668,128,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada28CModularSkinnedMeshSceneNodeEED1Ev,BaseMeshSceneNode<glitch::collada::CModularSkinnedMeshSceneNode>::~BaseMeshSceneNode()
+35b714,20,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada28CModularSkinnedMeshSceneNodeEED0Ev,BaseMeshSceneNode<glitch::collada::CModularSkinnedMeshSceneNode>::~BaseMeshSceneNode()
+35b750,92,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada21CSkinnedMeshSceneNodeEED1Ev,BaseMeshSceneNode<glitch::collada::CSkinnedMeshSceneNode>::~BaseMeshSceneNode()
+35b9bc,144,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada28CModularSkinnedMeshSceneNodeEED2Ev,BaseMeshSceneNode<glitch::collada::CModularSkinnedMeshSceneNode>::~BaseMeshSceneNode()
+35bb18,128,BaseMeshSceneNode,_ZN17BaseMeshSceneNodeIN6glitch7collada21CSkinnedMeshSceneNodeEED0Ev,BaseMeshSceneNode<glitch::collada::CSkinnedMeshSceneNode>::~BaseMeshSceneNode()
+3876c8,4,Billboard,_ZNK9Billboard4DrawEv,Billboard::Draw() const
+3876cc,8,Billboard,_ZNK9Billboard9IsZonableEv,Billboard::IsZonable() const
+3876d4,8,Billboard,_ZNK9Billboard11IsUpdatableEv,Billboard::IsUpdatable() const
+3876dc,80,Billboard,_ZN9Billboard6UpdateEv,Billboard::Update()
+38781c,604,Billboard,_ZN9Billboard8InitPostEv,Billboard::InitPost()
+387ba4,80,Billboard,_ZN9BillboardD1Ev,Billboard::~Billboard()
+387c1c,20,Billboard,_ZN9BillboardD0Ev,Billboard::~Billboard()
+387c38,80,Billboard,_ZN9BillboardD2Ev,Billboard::~Billboard()
+387d84,76,Billboard,_ZN9BillboardC2EN10ObjectBase6GO_IDSE,Billboard::Billboard(ObjectBase::GO_IDS)
+387fc4,368,Billboard,_ZN9Billboard17DeclarePropertiesEv,Billboard::DeclareProperties()
+38815c,76,Billboard,_ZN9BillboardC1EN10ObjectBase6GO_IDSE,Billboard::Billboard(ObjectBase::GO_IDS)
+7d4284,176,BufferedRenderer,_ZN16BufferedRenderer20ensureBufferCapacityEi,BufferedRenderer::ensureBufferCapacity(int)
+7d4768,672,BufferedRenderer,_ZN16BufferedRendererC1EPN6glitch5video12IVideoDriverE,BufferedRenderer::BufferedRenderer(glitch::video::IVideoDriver*)
+7d4ab0,136,BufferedRenderer,_ZN16BufferedRenderer23createBlendModeMaterialEN5boost13intrusive_ptrIN6glitch5video17CMaterialRendererEEEiPKc,"BufferedRenderer::createBlendModeMaterial(boost::intrusive_ptr<glitch::video::CMaterialRenderer>, int, char const*)"
+7d673c,344,BufferedRenderer,_ZN16BufferedRenderer15getWireMaterialEv,BufferedRenderer::getWireMaterial()
+7d6894,424,BufferedRenderer,_ZN16BufferedRenderer5flushEv,BufferedRenderer::flush()
+7d6a48,80,BufferedRenderer,_ZN16BufferedRenderer10setTextureERN5boost13intrusive_ptrIN6glitch5video8ITextureEEE,BufferedRenderer::setTexture(boost::intrusive_ptr<glitch::video::ITexture>&)
+7d6a98,100,BufferedRenderer,_ZN16BufferedRenderer13clearTexturesEv,BufferedRenderer::clearTextures()
+7d6ea0,340,BufferedRenderer,_ZN16BufferedRenderer11queueBufferERKN5boost13intrusive_ptrIN6glitch5video14CVertexStreamsEEENS3_16E_PRIMITIVE_TYPEE,"BufferedRenderer::queueBuffer(boost::intrusive_ptr<glitch::video::CVertexStreams> const&, glitch::video::E_PRIMITIVE_TYPE)"
+7d7094,248,BufferedRenderer,_ZN16BufferedRenderer21queueIndexedTrianglesERKN5boost13intrusive_ptrIN6glitch5video14CVertexStreamsEEEPKti,"BufferedRenderer::queueIndexedTriangles(boost::intrusive_ptr<glitch::video::CVertexStreams> const&, unsigned short const*, int)"
+7d72b4,284,BufferedRenderer,_ZN16BufferedRenderer5resetEv,BufferedRenderer::reset()
+7d7b8c,132,BufferedRenderer,_ZN16BufferedRendererD1Ev,BufferedRenderer::~BufferedRenderer()
+7d7f28,700,BufferedRenderer,_ZN16BufferedRenderer14applyMaskStateEi,BufferedRenderer::applyMaskState(int)
+817d78,4,CRoomAttributes,_ZN15CRoomAttributes6ReloadEv,CRoomAttributes::Reload()
+817d7c,24,CRoomAttributes,_ZN15CRoomAttributes16IsAttibuteActiveE20tROOM_ATTRIBUTES_INT,CRoomAttributes::IsAttibuteActive(tROOM_ATTRIBUTES_INT)
+817d94,24,CRoomAttributes,_ZN15CRoomAttributes16IsAttibuteActiveE20tROOM_ATTRIBUTES_BIN,CRoomAttributes::IsAttibuteActive(tROOM_ATTRIBUTES_BIN)
+817dac,16,CRoomAttributes,_ZN15CRoomAttributes15GetAttributeIntE20tROOM_ATTRIBUTES_INT,CRoomAttributes::GetAttributeInt(tROOM_ATTRIBUTES_INT)
+817dbc,68,CRoomAttributes,_ZN15CRoomAttributes15GetAttributeBinE20tROOM_ATTRIBUTES_BINPvj,"CRoomAttributes::GetAttributeBin(tROOM_ATTRIBUTES_BIN, void*, unsigned int)"
+817e00,28,CRoomAttributes,_ZN15CRoomAttributes16GetMaxBufferSizeE20tROOM_ATTRIBUTES_BIN,CRoomAttributes::GetMaxBufferSize(tROOM_ATTRIBUTES_BIN)
+817e4c,8,CRoomAttributes,_ZN15CRoomAttributes6ResendEv,CRoomAttributes::Resend()
+817e54,8,CRoomAttributes,_ZN15CRoomAttributes22AreChangesAcknowledgedEv,CRoomAttributes::AreChangesAcknowledged()
+817e5c,16,CRoomAttributes,_ZN15CRoomAttributes11UnserializeER12NetBitStream,CRoomAttributes::Unserialize(NetBitStream&)
+817e6c,80,CRoomAttributes,_ZN15CRoomAttributes11UnserializeEPcj,"CRoomAttributes::Unserialize(char*, unsigned int)"
+817ebc,44,CRoomAttributes,_ZN15CRoomAttributes9SerializeEiiR12NetBitStream,"CRoomAttributes::Serialize(int, int, NetBitStream&)"
+817ee8,8,CRoomAttributes,_ZN15CRoomAttributes10HasChangedEv,CRoomAttributes::HasChanged()
+817ef0,8,CRoomAttributes,_ZN15CRoomAttributes25ProcessAcknowledgedPacketEii,"CRoomAttributes::ProcessAcknowledgedPacket(int, int)"
+817ef8,8,CRoomAttributes,_ZN15CRoomAttributes17ProcessLostPacketEii,"CRoomAttributes::ProcessLostPacket(int, int)"
+817fec,164,CRoomAttributes,_ZN15CRoomAttributes11UnserializeEiR12NetBitStream,"CRoomAttributes::Unserialize(int, NetBitStream&)"
+8180f4,184,CRoomAttributes,_ZN15CRoomAttributes17NetRoomAttributesD1Ev,CRoomAttributes::NetRoomAttributes::~NetRoomAttributes()
+8181bc,20,CRoomAttributes,_ZN15CRoomAttributes17NetRoomAttributesD0Ev,CRoomAttributes::NetRoomAttributes::~NetRoomAttributes()
+8183e0,332,CRoomAttributes,_ZN15CRoomAttributes17EraseAttributeIntE20tROOM_ATTRIBUTES_INT,CRoomAttributes::EraseAttributeInt(tROOM_ATTRIBUTES_INT)
+818544,336,CRoomAttributes,_ZN15CRoomAttributes15SetAttributeIntE20tROOM_ATTRIBUTES_INTi,"CRoomAttributes::SetAttributeInt(tROOM_ATTRIBUTES_INT, int)"
+8186ac,576,CRoomAttributes,_ZN15CRoomAttributes17NetRoomAttributes4CopyERKS0_j,"CRoomAttributes::NetRoomAttributes::Copy(CRoomAttributes::NetRoomAttributes const&, unsigned int)"
+818900,44,CRoomAttributes,_ZN15CRoomAttributes4CopyERKS_,CRoomAttributes::Copy(CRoomAttributes const&)
+81892c,28,CRoomAttributes,_ZN15CRoomAttributesaSERKS_,CRoomAttributes::operator=(CRoomAttributes const&)
+818948,212,CRoomAttributes,_ZN15CRoomAttributes17EraseAttributeBinE20tROOM_ATTRIBUTES_BIN,CRoomAttributes::EraseAttributeBin(tROOM_ATTRIBUTES_BIN)
+818a28,472,CRoomAttributes,_ZN15CRoomAttributes5ClearEv,CRoomAttributes::Clear()
+818c14,56,CRoomAttributes,_ZN15CRoomAttributesD1Ev,CRoomAttributes::~CRoomAttributes()
+818c54,20,CRoomAttributes,_ZN15CRoomAttributesD0Ev,CRoomAttributes::~CRoomAttributes()
+818c70,56,CRoomAttributes,_ZN15CRoomAttributesD2Ev,CRoomAttributes::~CRoomAttributes()
+818cb0,236,CRoomAttributes,_ZN15CRoomAttributes15SetAttributeBinE20tROOM_ATTRIBUTES_BINPKvj,"CRoomAttributes::SetAttributeBin(tROOM_ATTRIBUTES_BIN, void const*, unsigned int)"
+818dac,644,CRoomAttributes,_ZN15CRoomAttributes17NetRoomAttributesC1Ev,CRoomAttributes::NetRoomAttributes::NetRoomAttributes()
+819050,60,CRoomAttributes,_ZN15CRoomAttributesC1ERKS_,CRoomAttributes::CRoomAttributes(CRoomAttributes const&)
+819094,60,CRoomAttributes,_ZN15CRoomAttributesC2ERKS_,CRoomAttributes::CRoomAttributes(CRoomAttributes const&)
+8190d8,84,CRoomAttributes,_ZN15CRoomAttributes9SerializeER12NetBitStreamj,"CRoomAttributes::Serialize(NetBitStream&, unsigned int)"
+81912c,88,CRoomAttributes,_ZN15CRoomAttributes9SerializeEPcjj,"CRoomAttributes::Serialize(char*, unsigned int, unsigned int)"
+819184,52,CRoomAttributes,_ZN15CRoomAttributesC1Ev,CRoomAttributes::CRoomAttributes()
+8191c0,52,CRoomAttributes,_ZN15CRoomAttributesC2Ev,CRoomAttributes::CRoomAttributes()
+8191fc,56,CRoomSearchFilter,_ZN17CRoomSearchFilterC2Ev,CRoomSearchFilter::CRoomSearchFilter()
+81923c,56,CRoomSearchFilter,_ZN17CRoomSearchFilterC1Ev,CRoomSearchFilter::CRoomSearchFilter()
+81927c,36,CRoomSearchFilter,_ZN17CRoomSearchFilter5ClearEv,CRoomSearchFilter::Clear()
+8192a0,24,CRoomSearchFilter,_ZN17CRoomSearchFilter14IsFilterActiveE20tROOM_ATTRIBUTES_INT,CRoomSearchFilter::IsFilterActive(tROOM_ATTRIBUTES_INT)
+8192b8,24,CRoomSearchFilter,_ZN17CRoomSearchFilter14IsFilterActiveE20tROOM_ATTRIBUTES_BIN,CRoomSearchFilter::IsFilterActive(tROOM_ATTRIBUTES_BIN)
+8192d0,220,CRoomSearchFilter,_ZN17CRoomSearchFilter23EraseSearchAttributeIntE20tROOM_ATTRIBUTES_INT,CRoomSearchFilter::EraseSearchAttributeInt(tROOM_ATTRIBUTES_INT)
+8193ac,200,CRoomSearchFilter,_ZN17CRoomSearchFilter23EraseSearchAttributeBinE20tROOM_ATTRIBUTES_BIN,CRoomSearchFilter::EraseSearchAttributeBin(tROOM_ATTRIBUTES_BIN)
+819488,136,CRoomSearchFilter,_ZN17CRoomSearchFilter13TestIntValuesEii20ROOM_SEARCH_OPERATOR,"CRoomSearchFilter::TestIntValues(int, int, ROOM_SEARCH_OPERATOR)"
+819510,48,CRoomSearchFilter,_ZN17CRoomSearchFilter13TestBinValuesEPciS0_i20ROOM_SEARCH_OPERATOR,"CRoomSearchFilter::TestBinValues(char*, int, char*, int, ROOM_SEARCH_OPERATOR)"
+819548,480,CRoomSearchFilter,_ZN17CRoomSearchFilter18TestRoomAttributesER15CRoomAttributes,CRoomSearchFilter::TestRoomAttributes(CRoomAttributes&)
+819c64,52,CRoomSearchFilter,_ZN17CRoomSearchFilterD1Ev,CRoomSearchFilter::~CRoomSearchFilter()
+819ca0,20,CRoomSearchFilter,_ZN17CRoomSearchFilterD0Ev,CRoomSearchFilter::~CRoomSearchFilter()
+819cbc,52,CRoomSearchFilter,_ZN17CRoomSearchFilterD2Ev,CRoomSearchFilter::~CRoomSearchFilter()
+819cf8,480,CRoomSearchFilter,_ZN17CRoomSearchFilter21SetSearchAttributeIntE20tROOM_ATTRIBUTES_INT20ROOM_SEARCH_OPERATORi,"CRoomSearchFilter::SetSearchAttributeInt(tROOM_ATTRIBUTES_INT, ROOM_SEARCH_OPERATOR, int)"
+819edc,132,CRoomSearchFilter,_ZN17CRoomSearchFilter21SetSearchAttributeBinE20tROOM_ATTRIBUTES_BIN20ROOM_SEARCH_OPERATORPvj,"CRoomSearchFilter::SetSearchAttributeBin(tROOM_ATTRIBUTES_BIN, ROOM_SEARCH_OPERATOR, void*, unsigned int)"
+81a3e4,40,CRoomSearchFilter,_ZN17CRoomSearchFilter4CopyERKS_,CRoomSearchFilter::Copy(CRoomSearchFilter const&)
+81a40c,28,CRoomSearchFilter,_ZN17CRoomSearchFilteraSERKS_,CRoomSearchFilter::operator=(CRoomSearchFilter const&)
+81a428,72,CRoomSearchFilter,_ZN17CRoomSearchFilterC1ERKS_,CRoomSearchFilter::CRoomSearchFilter(CRoomSearchFilter const&)
+81a478,72,CRoomSearchFilter,_ZN17CRoomSearchFilterC2ERKS_,CRoomSearchFilter::CRoomSearchFilter(CRoomSearchFilter const&)
+40e718,4,CameraBase,_ZN10CameraBase9ActivatedEv,CameraBase::Activated()
+40e71c,4,CameraBase,_ZN10CameraBase11DeactivatedEv,CameraBase::Deactivated()
+40e720,40,CameraBase,_ZN10CameraBaseC2Ev,CameraBase::CameraBase()
+40e750,40,CameraBase,_ZN10CameraBaseC1Ev,CameraBase::CameraBase()
+40e780,136,CameraBase,_ZN10CameraBaseD2Ev,CameraBase::~CameraBase()
+40e814,136,CameraBase,_ZN10CameraBaseD1Ev,CameraBase::~CameraBase()
+40e8a8,120,CameraBase,_ZNK10CameraBase18GetCameraLookAtVecEv,CameraBase::GetCameraLookAtVec() const
+40e928,120,CameraBase,_ZNK10CameraBase14GetCameraUpVecEv,CameraBase::GetCameraUpVec() const
+40e9a8,168,CameraBase,_ZN10CameraBase7SetDataEffffb,"CameraBase::SetData(float, float, float, float, bool)"
+40ea50,4,CameraBase,_ZN10CameraBase6UpdateEv,CameraBase::Update()
+40f2f0,120,CameraBase,_ZN10CameraBase13GetWorldCoordERK7Point2DIiER7Point3DIfEf,"CameraBase::GetWorldCoord(Point2D<int> const&, Point3D<float>&, float)"
+40f394,76,CameraBase,_ZN10CameraBase13GetWorldCoordERK7Point2DIfER7Point3DIfEf,"CameraBase::GetWorldCoord(Point2D<float> const&, Point3D<float>&, float)"
+40f45c,116,CameraBase,_ZN10CameraBase9SetActiveEv,CameraBase::SetActive()
+40f4dc,116,CameraBase,_ZNK10CameraBase15GetCenterOffsetER7Point3DIfEf,"CameraBase::GetCenterOffset(Point3D<float>&, float) const"
+40f6f8,20,CameraBase,_ZN10CameraBaseD0Ev,CameraBase::~CameraBase()
+40f714,212,CameraBase,_ZN10CameraBase14GetScreenCoordERK7Point3DIfER7Point2DIfE,"CameraBase::GetScreenCoord(Point3D<float> const&, Point2D<float>&)"
+40f8f8,12,CameraLevel,_ZN11CameraLevel10__CallbackEPN6glitch5scene19ITimelineControllerEPv,"CameraLevel::__Callback(glitch::scene::ITimelineController*, void*)"
+40f904,124,CameraLevel,_ZN11CameraLevel8PlayAnimEiib,"CameraLevel::PlayAnim(int, int, bool)"
+40f980,204,CameraLevel,_ZNK11CameraLevel16CanPlayShakeAnimEP9Character,CameraLevel::CanPlayShakeAnim(Character*) const
+40fa68,528,CameraLevel,_ZN11CameraLevel15HandleCenteringER7Point3DIfE,CameraLevel::HandleCentering(Point3D<float>&)
+40fd18,204,CameraLevel,_ZN11CameraLevel30CalculateDefaultTargetDistanceEv,CameraLevel::CalculateDefaultTargetDistance()
+40fe7c,76,CameraLevel,_ZN11CameraLevelD1Ev,CameraLevel::~CameraLevel()
+40fee8,20,CameraLevel,_ZN11CameraLevelD0Ev,CameraLevel::~CameraLevel()
+40ff04,76,CameraLevel,_ZN11CameraLevelD2Ev,CameraLevel::~CameraLevel()
+40ff70,72,CameraLevel,_ZN11CameraLevelC1Ev,CameraLevel::CameraLevel()
+41002c,72,CameraLevel,_ZN11CameraLevelC2Ev,CameraLevel::CameraLevel()
+410218,76,CameraLevel,_ZN11CameraLevel10HandleZoomEv,CameraLevel::HandleZoom()
+410390,384,CameraLevel,_ZN11CameraLevel6UpdateEv,CameraLevel::Update()
+41068c,56,CameraLevel,_ZN11CameraLevel4LoadEPKciS1_,"CameraLevel::Load(char const*, int, char const*)"
+410930,356,CameraOverview,_ZN14CameraOverview7onEventEPK6IEventPK12EventManager,"CameraOverview::onEvent(IEvent const*, EventManager const*)"
+410ac4,32,CameraOverview,_ZN14CameraOverview11DeactivatedEv,CameraOverview::Deactivated()
+410aec,200,CameraOverview,_ZN14CameraOverview9ActivatedEv,CameraOverview::Activated()
+410c64,60,CameraOverview,_ZN14CameraOverviewD1Ev,CameraOverview::~CameraOverview()
+410cb4,20,CameraOverview,_ZN14CameraOverviewD0Ev,CameraOverview::~CameraOverview()
+410cd0,60,CameraOverview,_ZN14CameraOverviewD2Ev,CameraOverview::~CameraOverview()
+410ea4,444,CameraOverview,_ZN14CameraOverviewC2Ev,CameraOverview::CameraOverview()
+41106c,444,CameraOverview,_ZN14CameraOverviewC1Ev,CameraOverview::CameraOverview()
+411234,108,CameraOverview,_ZN14CameraOverview6UpdateEv,CameraOverview::Update()
+4115d8,24,CameraTarget,_ZN12CameraTarget14HandleGhostCamER7Point3DIfE,CameraTarget::HandleGhostCam(Point3D<float>&)
+41161c,48,CameraTarget,_ZN12CameraTarget13EnableDampingEb,CameraTarget::EnableDamping(bool)
+411654,8,CameraTarget,_ZN12CameraTarget15SetDampingRatioEf,CameraTarget::SetDampingRatio(float)
+41165c,64,CameraTarget,_ZN12CameraTarget13HandleDampingER7Point3DIfE,CameraTarget::HandleDamping(Point3D<float>&)
+4117bc,76,CameraTarget,_ZN12CameraTarget12HandleOffsetER7Point3DIfE,CameraTarget::HandleOffset(Point3D<float>&)
+411830,212,CameraTarget,_ZN12CameraTarget16HandleTransitionEv,CameraTarget::HandleTransition()
+4119c4,168,CameraTarget,_ZN12CameraTarget9SetTargetEP10GameObjecti,"CameraTarget::SetTarget(GameObject*, int)"
+411a74,8,CameraTarget,_ZN12CameraTarget17GetTargetPositionEv,CameraTarget::GetTargetPosition()
+411a7c,188,CameraTarget,_ZN12CameraTarget6UpdateEv,CameraTarget::Update()
+411b38,124,CameraTarget,_ZN12CameraTarget9SetTargetEPKci,"CameraTarget::SetTarget(char const*, int)"
+411bbc,44,CameraTarget,_ZN12CameraTargetD1Ev,CameraTarget::~CameraTarget()
+411bf0,20,CameraTarget,_ZN12CameraTargetD0Ev,CameraTarget::~CameraTarget()
+411c0c,44,CameraTarget,_ZN12CameraTargetD2Ev,CameraTarget::~CameraTarget()
+411c40,144,CameraTarget,_ZN12CameraTargetC1Ev,CameraTarget::CameraTarget()
+411cdc,144,CameraTarget,_ZN12CameraTargetC2Ev,CameraTarget::CameraTarget()
+39594c,96,CheckpointZone,_ZN14CheckpointZoneC1EN10ObjectBase6GO_IDSE,CheckpointZone::CheckpointZone(ObjectBase::GO_IDS)
+3959b4,96,CheckpointZone,_ZN14CheckpointZoneC2EN10ObjectBase6GO_IDSE,CheckpointZone::CheckpointZone(ObjectBase::GO_IDS)
+395b38,108,CheckpointZone,_ZN14CheckpointZoneD1Ev,CheckpointZone::~CheckpointZone()
+395bb4,20,CheckpointZone,_ZN14CheckpointZoneD0Ev,CheckpointZone::~CheckpointZone()
+395bd0,108,CheckpointZone,_ZN14CheckpointZoneD2Ev,CheckpointZone::~CheckpointZone()
+395f04,496,CheckpointZone,_ZN14CheckpointZone17OnCollisionBeginsEP10GameObject,CheckpointZone::OnCollisionBegins(GameObject*)
+3883f4,8,ColBox,_ZNK6ColBox11IsUpdatableEv,ColBox::IsUpdatable() const
+3884b8,56,ColBox,_ZN6ColBoxD1Ev,ColBox::~ColBox()
+3884fc,28,ColBox,_ZN6ColBox8InitPostEv,ColBox::InitPost()
+388e60,56,ColBox,_ZN6ColBoxD0Ev,ColBox::~ColBox()
+3896f0,100,ColBox,_ZNK6ColBox4DrawEv,ColBox::Draw() const
+389938,68,ColBox,_ZN6ColBox17DeclarePropertiesEv,ColBox::DeclareProperties()
+3506ac,44,ColladaFactory,_ZN14ColladaFactoryD1Ev,ColladaFactory::~ColladaFactory()
+3506e0,44,ColladaFactory,_ZN14ColladaFactory14createMaterialERKN6glitch7collada16CColladaDatabaseEPNS0_5video12IVideoDriverEPNS1_9SMaterialEPNS1_14CRootSceneNodeE,"ColladaFactory::createMaterial(glitch::collada::CColladaDatabase const&, glitch::video::IVideoDriver*, glitch::collada::SMaterial*, glitch::collada::CRootSceneNode*)"
+35070c,48,ColladaFactory,_ZN14ColladaFactory14createAnimatorERKN6glitch7collada16CColladaDatabaseEPNS1_22SLibraryAnimationClipsE,"ColladaFactory::createAnimator(glitch::collada::CColladaDatabase const&, glitch::collada::SLibraryAnimationClips*)"
+35073c,44,ColladaFactory,_ZN14ColladaFactory10createSkinERKN6glitch7collada16CColladaDatabaseEPNS0_5video12IVideoDriverEPNS1_11SControllerEPNS1_14CRootSceneNodeE,"ColladaFactory::createSkin(glitch::collada::CColladaDatabase const&, glitch::video::IVideoDriver*, glitch::collada::SController*, glitch::collada::CRootSceneNode*)"
+350768,44,ColladaFactory,_ZN14ColladaFactory11createMorphERKN6glitch7collada16CColladaDatabaseEPNS0_5video12IVideoDriverEPNS1_11SControllerEPNS1_14CRootSceneNodeE,"ColladaFactory::createMorph(glitch::collada::CColladaDatabase const&, glitch::video::IVideoDriver*, glitch::collada::SController*, glitch::collada::CRootSceneNode*)"
+350794,36,ColladaFactory,_ZN14ColladaFactory14createGeometryERKN6glitch7collada16CColladaDatabaseEPNS0_5video12IVideoDriverEPNS1_9SGeometryE,"ColladaFactory::createGeometry(glitch::collada::CColladaDatabase const&, glitch::video::IVideoDriver*, glitch::collada::SGeometry*)"
+3507b8,4,ColladaFactory,_ZN14ColladaFactory20createParticleSystemERKN6glitch7collada16CColladaDatabaseEPNS0_5video12IVideoDriverEPNS1_8SEmitterEPNS0_3res6vectorINSA_6StringEEEPNS1_14CRootSceneNodeE,"ColladaFactory::createParticleSystem(glitch::collada::CColladaDatabase const&, glitch::video::IVideoDriver*, glitch::collada::SEmitter*, glitch::res::vector<glitch::res::String>*, glitch::collada::CRootSceneNode*)"
+3507bc,136,ColladaFactory,_ZN14ColladaFactory15createBillboardERKN6glitch7collada16CColladaDatabaseEPNS1_5SNodeE,"ColladaFactory::createBillboard(glitch::collada::CColladaDatabase const&, glitch::collada::SNode*)"
+350854,40,ColladaFactory,_ZN14ColladaFactory21createModularSkinNodeERKN6glitch7collada16CColladaDatabaseERKN5boost13intrusive_ptrINS1_5IMeshEEEPv,"ColladaFactory::createModularSkinNode(glitch::collada::CColladaDatabase const&, boost::intrusive_ptr<glitch::collada::IMesh> const&, void*)"
+35087c,40,ColladaFactory,_ZN14ColladaFactory14createSkinNodeERKN6glitch7collada16CColladaDatabaseERKN5boost13intrusive_ptrINS1_5IMeshEEEPv,"ColladaFactory::createSkinNode(glitch::collada::CColladaDatabase const&, boost::intrusive_ptr<glitch::collada::IMesh> const&, void*)"
+3508a4,40,ColladaFactory,_ZN14ColladaFactory14createMeshNodeERKN6glitch7collada16CColladaDatabaseERKN5boost13intrusive_ptrINS1_5IMeshEEEPv,"ColladaFactory::createMeshNode(glitch::collada::CColladaDatabase const&, boost::intrusive_ptr<glitch::collada::IMesh> const&, void*)"
+3508cc,40,ColladaFactory,_ZN14ColladaFactory11createSceneERKN6glitch7collada16CColladaDatabaseE,ColladaFactory::createScene(glitch::collada::CColladaDatabase const&)
+350a10,44,ColladaFactory,_ZN14ColladaFactoryD0Ev,ColladaFactory::~ColladaFactory()
+39f324,8,Container,_ZNK9Container11IsUpdatableEv,Container::IsUpdatable() const
+39f32c,8,Container,_ZNK9Container9GetScriptEv,Container::GetScript() const
+39f334,8,Container,_ZNK9Container9GetVisualEv,Container::GetVisual() const
+39f33c,8,Container,_ZNK9Container9GetDataIdEv,Container::GetDataId() const
+39f344,8,Container,_ZNK9Container7GetLootEv,Container::GetLoot() const
+39f34c,8,Container,_ZNK9Container8GetSoundEv,Container::GetSound() const
+39f354,8,Container,_ZNK9Container11KeepPhysicsEv,Container::KeepPhysics() const
+39f35c,8,Container,_ZNK9Container21GetLootFixedNumPowersEv,Container::GetLootFixedNumPowers() const
+39f364,24,Container,_ZNK9Container6IsDeadEv,Container::IsDead() const
+39f37c,8,Container,_ZNK9Container10IsAnimatedEv,Container::IsAnimated() const
+39f384,36,Container,_ZNK9Container13IsInteractiveEP10GameObject,Container::IsInteractive(GameObject*) const
+39f3a8,8,Container,_ZNK9Container10IsObstacleEv,Container::IsObstacle() const
+39f3b0,12,Container,_ZNK9Container17GetObstacleRadiusEv,Container::GetObstacleRadius() const
+39f3bc,12,Container,_ZNK9Container19GetObstacleStrengthEv,Container::GetObstacleStrength() const
+39f3cc,36,Container,_ZN9Container8SetStateENS_5StateE,Container::SetState(Container::State)
+39f3f0,88,Container,_ZN9Container5SpawnEv,Container::Spawn()
+39f44c,196,Container,_ZN9Container10__CallbackEPN6glitch5scene19ITimelineControllerEPv,"Container::__Callback(glitch::scene::ITimelineController*, void*)"
+39f534,4,Container,_ZNK9Container9IsZonableEv,Container::IsZonable() const
+39f6f0,296,Container,_ZN9Container11DeserializeEP11IStreamBase,Container::Deserialize(IStreamBase*)
+39f8e0,48,Container,_ZN9Container9SerializeEP11IStreamBase,Container::Serialize(IStreamBase*)
+39f910,524,Container,_ZN9Container8InitPostEv,Container::InitPost()
+39fc98,152,Container,_ZN9Container9InitFinalEv,Container::InitFinal()
+39fd38,524,Container,_ZN9Container26InterpretIncomingNetStructEb,Container::InterpretIncomingNetStruct(bool)
+39ff58,412,Container,_ZN9Container18NetStructContainerC1Ev,Container::NetStructContainer::NetStructContainer()
+3a0110,500,Container,_ZN9Container25PopulateOutgoingNetStructEb,Container::PopulateOutgoingNetStruct(bool)
+3a0324,112,Container,_ZN9Container18NetStructContainerD1Ev,Container::NetStructContainer::~NetStructContainer()
+3a03a4,112,Container,_ZN9Container18NetStructContainerD0Ev,Container::NetStructContainer::~NetStructContainer()
+3a0430,292,Container,_ZN9ContainerD1Ev,Container::~Container()
+3a057c,20,Container,_ZN9ContainerD0Ev,Container::~Container()
+3a0598,292,Container,_ZN9ContainerD2Ev,Container::~Container()
+3a06dc,76,Container,_ZN9ContainerC1EN10ObjectBase6GO_IDSE,Container::Container(ObjectBase::GO_IDS)
+3a0788,76,Container,_ZN9ContainerC2EN10ObjectBase6GO_IDSE,Container::Container(ObjectBase::GO_IDS)
+3a083c,184,Container,_ZN9Container17DeclarePropertiesEv,Container::DeclareProperties()
+3a0a98,156,Container,_ZN9Container6DoOpenEv,Container::DoOpen()
+3a0b38,288,Container,_ZN9Container8InteractEP10GameObject,Container::Interact(GameObject*)
+3a0c64,124,Container,_ZN9Container15__EventCallbackERKN6glitch7collada15STriggeredEventEPv,"Container::__EventCallback(glitch::collada::STriggeredEvent const&, void*)"
+3883d4,8,Decor,_ZNK5Decor11IsUpdatableEv,Decor::IsUpdatable() const
+388428,56,Decor,_ZN5DecorD1Ev,Decor::~Decor()
+388730,120,Decor,_ZN5Decor12LoadFloorMapEv,Decor::LoadFloorMap()
+388a98,128,Decor,_ZN5Decor8InitPostEv,Decor::InitPost()
+388eb0,56,Decor,_ZN5DecorD0Ev,Decor::~Decor()
+3899d0,140,Decor,_ZN5Decor17DeclarePropertiesEv,Decor::DeclareProperties()
+3a0cec,52,DestructibleContainer,_ZNK21DestructibleContainer9GetScriptEv,DestructibleContainer::GetScript() const
+3a0d28,48,DestructibleContainer,_ZNK21DestructibleContainer9GetVisualEv,DestructibleContainer::GetVisual() const
+3a0d60,8,DestructibleContainer,_ZNK21DestructibleContainer18GetInteractionTypeEP10GameObject,DestructibleContainer::GetInteractionType(GameObject*) const
+3a0d68,4,DestructibleContainer,_ZN21DestructibleContainer9DoEffectsEv,DestructibleContainer::DoEffects()
+3a0da0,676,DestructibleContainer,_ZN21DestructibleContainer8InteractEP10GameObject,DestructibleContainer::Interact(GameObject*)
+3a10f8,64,DestructibleContainer,_ZNK21DestructibleContainer11KeepPhysicsEv,DestructibleContainer::KeepPhysics() const
+3a1140,56,DestructibleContainer,_ZNK21DestructibleContainer8GetSoundEv,DestructibleContainer::GetSound() const
+3a1180,56,DestructibleContainer,_ZNK21DestructibleContainer7GetLootEv,DestructibleContainer::GetLoot() const
+3a11c0,28,DestructibleContainer,_ZNK21DestructibleContainer9GetDataIdEv,DestructibleContainer::GetDataId() const
+3a11dc,128,DestructibleContainer,_ZN21DestructibleContainer8InitPostEv,DestructibleContainer::InitPost()
+3a1270,4,DestructibleContainer,_ZN21DestructibleContainer17DeclarePropertiesEv,DestructibleContainer::DeclareProperties()
+3a1274,360,DestructibleContainer,_ZN21DestructibleContainer15__EventCallbackERKN6glitch7collada15STriggeredEventEPv,"DestructibleContainer::__EventCallback(glitch::collada::STriggeredEvent const&, void*)"
+3a1418,56,DestructibleContainer,_ZN21DestructibleContainerD1Ev,DestructibleContainer::~DestructibleContainer()
+3a1460,20,DestructibleContainer,_ZN21DestructibleContainerD0Ev,DestructibleContainer::~DestructibleContainer()
+3a147c,56,DestructibleContainer,_ZN21DestructibleContainerD2Ev,DestructibleContainer::~DestructibleContainer()
+3a14bc,68,DestructibleContainer,_ZN21DestructibleContainerC1EN10ObjectBase6GO_IDSE,DestructibleContainer::DestructibleContainer(ObjectBase::GO_IDS)
+3a1508,68,DestructibleContainer,_ZN21DestructibleContainerC2EN10ObjectBase6GO_IDSE,DestructibleContainer::DestructibleContainer(ObjectBase::GO_IDS)
+3e7498,8,Door,_ZNK4Door11IsUpdatableEv,Door::IsUpdatable() const
+3e74a0,8,Door,_ZNK4Door10IsAnimatedEv,Door::IsAnimated() const
+3e74a8,8,Door,_ZNK4Door13IsInteractiveEP10GameObject,Door::IsInteractive(GameObject*) const
+3e74b0,8,Door,_ZNK4Door9IsZonableEv,Door::IsZonable() const
+3e74b8,12,Door,_ZNK4Door13getUDTypeNameEv,Door::getUDTypeName() const
+3e74c8,132,Door,_ZN4Door14createBindingsERN3sfc6script3lua6BinderE,Door::createBindings(sfc::script::lua::Binder&)
+3e7560,56,Door,_ZN4Door6UpdateEv,Door::Update()
+3e7598,152,Door,_ZN4Door6ClosedEb,Door::Closed(bool)
+3e763c,304,Door,_ZN4Door5CloseEb,Door::Close(bool)
+3e777c,12,Door,_ZN4Door6_CloseERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Door::_Close(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3e7788,148,Door,_ZN4Door6OpenedEb,Door::Opened(bool)
+3e7828,68,Door,_ZN4Door26InterpretIncomingNetStructEb,Door::InterpretIncomingNetStruct(bool)
+3e786c,300,Door,_ZN4Door4OpenEb,Door::Open(bool)
+3e79a8,12,Door,_ZN4Door5_OpenERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"Door::_Open(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3e7a6c,80,Door,_ZN4Door11DeserializeEP11IStreamBase,Door::Deserialize(IStreamBase*)
+3e7b74,32,Door,_ZN4Door9SerializeEP11IStreamBase,Door::Serialize(IStreamBase*)
+3e7b94,60,Door,_ZN4Door8DisabledEv,Door::Disabled()
+3e7bd8,60,Door,_ZN4Door7EnabledEv,Door::Enabled()
+3e7c1c,92,Door,_ZN4Door9InitFinalEv,Door::InitFinal()
+3e7da8,540,Door,_ZN4Door8InitPostEv,Door::InitPost()
+3e8088,76,Door,_ZN4Door25PopulateOutgoingNetStructEb,Door::PopulateOutgoingNetStruct(bool)
+3e80d4,400,Door,_ZN4Door13NetStructDoorC1Ev,Door::NetStructDoor::NetStructDoor()
+3e8274,84,Door,_ZN4DoorC1EN10ObjectBase6GO_IDSE,Door::Door(ObjectBase::GO_IDS)
+3e8324,84,Door,_ZN4DoorC2EN10ObjectBase6GO_IDSE,Door::Door(ObjectBase::GO_IDS)
+3e83d4,112,Door,_ZN4Door13NetStructDoorD1Ev,Door::NetStructDoor::~NetStructDoor()
+3e8450,252,Door,_ZN4Door15__EventCallbackERKN6glitch7collada15STriggeredEventEPv,"Door::__EventCallback(glitch::collada::STriggeredEvent const&, void*)"
+3e8568,220,Door,_ZN4Door10__CallbackEPN6glitch5scene19ITimelineControllerEPv,"Door::__Callback(glitch::scene::ITimelineController*, void*)"
+3e8658,288,Door,_ZN4DoorD2Ev,Door::~Door()
+3e8798,112,Door,_ZN4Door13NetStructDoorD0Ev,Door::NetStructDoor::~NetStructDoor()
+3e8824,288,Door,_ZN4DoorD1Ev,Door::~Door()
+3e896c,20,Door,_ZN4DoorD0Ev,Door::~Door()
+3e8990,72,Door,_ZN4Door17DeclarePropertiesEv,Door::DeclareProperties()
+340134,8,Dummy,_ZNK5Dummy11IsUpdatableEv,Dummy::IsUpdatable() const
+34013c,8,Dummy,_ZNK5Dummy9IsZonableEv,Dummy::IsZonable() const
+340144,8,Dummy,_ZNK5Dummy10IsAnimatedEv,Dummy::IsAnimated() const
+34014c,8,Dummy,_ZNK5Dummy13IsInteractiveEP10GameObject,Dummy::IsInteractive(GameObject*) const
+341184,56,Dummy,_ZN5DummyD1Ev,Dummy::~Dummy()
+341960,56,Dummy,_ZN5DummyD0Ev,Dummy::~Dummy()
+3883e4,8,Floor,_ZNK5Floor11IsUpdatableEv,Floor::IsUpdatable() const
+3883ec,8,Floor,_ZNK5Floor9IsZonableEv,Floor::IsZonable() const
+388470,56,Floor,_ZN5FloorD1Ev,Floor::~Floor()
+3886b4,84,Floor,_ZN5Floor8InitPostEv,Floor::InitPost()
+388e10,56,Floor,_ZN5FloorD0Ev,Floor::~Floor()
+385ea0,48,GSLevel,_ZN7GSLevel6ReloadEv,GSLevel::Reload()
+385ed0,4,GSLevel,_ZN7GSLevel5PauseEPK12StateMachine,GSLevel::Pause(StateMachine const*)
+385ed4,4,GSLevel,_ZN7GSLevel6WakeUpEPK12StateMachine,GSLevel::WakeUp(StateMachine const*)
+385ed8,56,GSLevel,_ZN7GSLevelC1Ev,GSLevel::GSLevel()
+385f30,56,GSLevel,_ZN7GSLevelC2Ev,GSLevel::GSLevel()
+385f88,36,GSLevel,_ZN7GSLevelD1Ev,GSLevel::~GSLevel()
+385fbc,20,GSLevel,_ZN7GSLevelD0Ev,GSLevel::~GSLevel()
+385fd8,36,GSLevel,_ZN7GSLevelD2Ev,GSLevel::~GSLevel()
+38600c,8,GSLevel,_ZN7GSLevel6Draw2DEPK12StateMachine,GSLevel::Draw2D(StateMachine const*)
+386014,44,GSLevel,_ZN7GSLevel4DrawEPK12StateMachine,GSLevel::Draw(StateMachine const*)
+386040,116,GSLevel,_ZN7GSLevel6ResumeEPK12StateMachine,GSLevel::Resume(StateMachine const*)
+3860bc,124,GSLevel,_ZN7GSLevel4DtorEPK12StateMachine,GSLevel::Dtor(StateMachine const*)
+386190,308,GSLevel,_ZN7GSLevel4CtorEPK12StateMachine,GSLevel::Ctor(StateMachine const*)
+386630,368,GSLevel,_ZN7GSLevel6UpdateEP12StateMachined,"GSLevel::Update(StateMachine*, double)"
+386818,24,GSLevel,_ZN7GSLevel9LoadLevelEPKcijjjbbii,"GSLevel::LoadLevel(char const*, int, unsigned int, unsigned int, unsigned int, bool, bool, int, int)"
+3868b8,36,GSLevelMap,_ZN10GSLevelMapC2Ev,GSLevelMap::GSLevelMap()
+3868e4,36,GSLevelMap,_ZN10GSLevelMapC1Ev,GSLevelMap::GSLevelMap()
+386910,4,GSLevelMap,_ZN10GSLevelMapD2Ev,GSLevelMap::~GSLevelMap()
+386914,4,GSLevelMap,_ZN10GSLevelMapD1Ev,GSLevelMap::~GSLevelMap()
+386938,8,GSLevelMap,_ZN10GSLevelMap4DrawEPK12StateMachine,GSLevelMap::Draw(StateMachine const*)
+386940,8,GSLevelMap,_ZN10GSLevelMap6UpdateEP12StateMachined,"GSLevelMap::Update(StateMachine*, double)"
+386948,56,GSLevelMap,_ZN10GSLevelMap4DtorEPK12StateMachine,GSLevelMap::Dtor(StateMachine const*)
+386980,48,GSLevelMap,_ZN10GSLevelMap4CtorEPK12StateMachine,GSLevelMap::Ctor(StateMachine const*)
+3869b0,124,GSLevelMap,_ZN10GSLevelMap4InstEi,GSLevelMap::Inst(int)
+386a40,20,GSLevelMap,_ZN10GSLevelMapD0Ev,GSLevelMap::~GSLevelMap()
+340054,8,GameObject,_ZNK10GameObject12IsGameObjectEv,GameObject::IsGameObject() const
+34005c,8,GameObject,_ZNK10GameObject14IsUpdatingPathEv,GameObject::IsUpdatingPath() const
+340064,8,GameObject,_ZNK10GameObject28IsUpdatingPositionFromVisualEv,GameObject::IsUpdatingPositionFromVisual() const
+34006c,8,GameObject,_ZNK10GameObject29IsUpdatingPositionFromPhysicsEv,GameObject::IsUpdatingPositionFromPhysics() const
+340074,8,GameObject,_ZNK10GameObject28IsUpdatingRotationFromVisualEv,GameObject::IsUpdatingRotationFromVisual() const
+34007c,8,GameObject,_ZNK10GameObject29IsUpdatingRotationFromPhysicsEv,GameObject::IsUpdatingRotationFromPhysics() const
+340084,8,GameObject,_ZNK10GameObject28IsUpdatingVisualWithRotationEv,GameObject::IsUpdatingVisualWithRotation() const
+34008c,16,GameObject,_ZNK10GameObject25IsValidatingFloorPositionEv,GameObject::IsValidatingFloorPosition() const
+34009c,8,GameObject,_ZNK10GameObject24IsValidatingCameraLimitsEv,GameObject::IsValidatingCameraLimits() const
+3400a4,8,GameObject,_ZNK10GameObject19IsAvoidingObstaclesEv,GameObject::IsAvoidingObstacles() const
+3400ac,8,GameObject,_ZNK10GameObject6IsDeadEv,GameObject::IsDead() const
+3400b4,8,GameObject,_ZNK10GameObject5IsHitEv,GameObject::IsHit() const
+3400bc,4,GameObject,_ZN10GameObject8InteractEPS_,GameObject::Interact(GameObject*)
+3400c0,28,GameObject,_ZNK10GameObject10GetFXScaleEv,GameObject::GetFXScale() const
+3400dc,8,GameObject,_ZNK10GameObject15GetFXScaleValueEv,GameObject::GetFXScaleValue() const
+3400e4,12,GameObject,_ZNK10GameObject8GetSpeedEv,GameObject::GetSpeed() const
+3400f0,12,GameObject,_ZNK10GameObject16GetRotationSpeedEv,GameObject::GetRotationSpeed() const
+3400fc,8,GameObject,_ZNK10GameObject14GetFocusObjectEv,GameObject::GetFocusObject() const
+340104,8,GameObject,_ZNK10GameObject10IsObstacleEv,GameObject::IsObstacle() const
+34010c,8,GameObject,_ZNK10GameObject17GetObstacleRadiusEv,GameObject::GetObstacleRadius() const
+340114,8,GameObject,_ZNK10GameObject19GetObstacleStrengthEv,GameObject::GetObstacleStrength() const
+34011c,8,GameObject,_ZNK10GameObject10GetOpacityEv,GameObject::GetOpacity() const
+340124,12,GameObject,_ZNK10GameObject13getUDTypeNameEv,GameObject::getUDTypeName() const
+3883a8,8,GameObject,_ZNK10GameObject10IsAnimatedEv,GameObject::IsAnimated() const
+3883b0,8,GameObject,_ZNK10GameObject13IsInteractiveEPS_,GameObject::IsInteractive(GameObject*) const
+3883b8,12,GameObject,_ZNK10GameObject9IsZonableEv,GameObject::IsZonable() const
+38aac0,8,GameObject,_ZNK10GameObject11IsUpdatableEv,GameObject::IsUpdatable() const
+38aac8,64,GameObject,_ZN10GameObject18UpdateAbsoluteAABBEv,GameObject::UpdateAbsoluteAABB()
+38ab60,8,GameObject,_ZNK10GameObject13MeetConditionEv,GameObject::MeetCondition() const
+38ab68,164,GameObject,_ZNK10GameObject10IsTouchingERK7Point3DIfE,GameObject::IsTouching(Point3D<float> const&) const
+38ac0c,64,GameObject,_ZNK10GameObject8IsNearbyERK7Point3DIfEf,"GameObject::IsNearby(Point3D<float> const&, float) const"
+38ad30,68,GameObject,_ZNK10GameObject15IsInteractiveExEPS_,GameObject::IsInteractiveEx(GameObject*) const
+38ad74,8,GameObject,_ZNK10GameObject18GetInteractionTypeEPS_,GameObject::GetInteractionType(GameObject*) const
+38ad7c,20,GameObject,_ZNK10GameObject20GetInteractionRadiusEv,GameObject::GetInteractionRadius() const
+38adc8,28,GameObject,_ZN10GameObject8SetScaleERK7Point3DIfE,GameObject::SetScale(Point3D<float> const&)
+38ade4,28,GameObject,_ZNK10GameObject14IsBatchVisibleEv,GameObject::IsBatchVisible() const
+38ae2c,336,GameObject,_ZN10GameObject15UpdateIdleSoundEv,GameObject::UpdateIdleSound()
+38b0f0,32,GameObject,_ZN10GameObject10SetVisibleEb,GameObject::SetVisible(bool)
+38b110,68,GameObject,_ZN10GameObject15SetRelativeAABBERK4aabbIfEb,"GameObject::SetRelativeAABB(aabb<float> const&, bool)"
+38b228,160,GameObject,_ZNK10GameObject18GetInteractionSpotEv,GameObject::GetInteractionSpot() const
+38b300,132,GameObject,_ZNK10GameObject8IsNearbyEPKS_f,"GameObject::IsNearby(GameObject const*, float) const"
+38b48c,132,GameObject,_ZNK10GameObject14IsPlayerNearbyEf,GameObject::IsPlayerNearby(float) const
+38b518,256,GameObject,_ZNK10GameObject10IsTouchingEPKS_,GameObject::IsTouching(GameObject const*) const
+38b630,156,GameObject,_ZNK10GameObject14IsHostTouchingEv,GameObject::IsHostTouching() const
+38b6d4,124,GameObject,_ZNK10GameObject20GetNumPlayerTouchingEv,GameObject::GetNumPlayerTouching() const
+38b8b8,92,GameObject,_ZN10GameObject19RequireOnlineUpdateEv,GameObject::RequireOnlineUpdate()
+38b91c,168,GameObject,_ZN10GameObject11DeserializeEP11IStreamBase,GameObject::Deserialize(IStreamBase*)
+38b9e4,32,GameObject,_ZN10GameObject9SerializeEP11IStreamBase,GameObject::Serialize(IStreamBase*)
+38ba04,52,GameObject,_ZN10GameObject8DisabledEv,GameObject::Disabled()
+38ba38,52,GameObject,_ZN10GameObject7EnabledEv,GameObject::Enabled()
+38ba6c,8,GameObject,_ZN10GameObject15FlushTargetListEv,GameObject::FlushTargetList()
+38bd64,240,GameObject,_ZN10GameObject21CheckSpawnProbabilityEv,GameObject::CheckSpawnProbability()
+38be5c,72,GameObject,_ZN10GameObject8InitPostEv,GameObject::InitPost()
+38c130,284,GameObject,_ZN10GameObjectC1EN10ObjectBase6GO_IDSE,GameObject::GameObject(ObjectBase::GO_IDS)
+38c398,284,GameObject,_ZN10GameObjectC2EN10ObjectBase6GO_IDSE,GameObject::GameObject(ObjectBase::GO_IDS)
+38c600,148,GameObject,_ZN10GameObject13DisableZoningEv,GameObject::DisableZoning()
+38c69c,116,GameObject,_ZN10GameObject10ZoneExitedEv,GameObject::ZoneExited()
+38c710,128,GameObject,_ZN10GameObject11ZoneEnteredEv,GameObject::ZoneEntered()
+38c790,228,GameObject,_ZN10GameObject12EnableZoningEv,GameObject::EnableZoning()
+38c968,612,GameObject,_ZNK10GameObject4DrawEv,GameObject::Draw() const
+38cbe8,324,GameObject,_ZN10GameObject6UpdateEv,GameObject::Update()
+38cd48,144,GameObject,_ZN10GameObject9InitFinalEv,GameObject::InitFinal()
+38cee8,532,GameObject,_ZN10GameObject17DeclarePropertiesEv,GameObject::DeclareProperties()
+38d228,288,GameObject,_ZN10GameObjectD1Ev,GameObject::~GameObject()
+38d35c,20,GameObject,_ZN10GameObjectD0Ev,GameObject::~GameObject()
+38d378,288,GameObject,_ZN10GameObjectD2Ev,GameObject::~GameObject()
+38d5f8,16,GameObject,_ZN10GameObject5_LockERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_Lock(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38d7a8,20,GameObject,_ZN10GameObject7_UnlockERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_Unlock(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38d7ec,2268,GameObject,_ZN10GameObject14createBindingsERN3sfc6script3lua6BinderE,GameObject::createBindings(sfc::script::lua::Binder&)
+38e700,52,GameObject,_ZN10GameObject12_GetPositionERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_GetPosition(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38e930,64,GameObject,_ZN10GameObject18_GetTargetListSizeERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_GetTargetListSize(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38e970,28,GameObject,_ZN10GameObject18_IsTargetListEmptyERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_IsTargetListEmpty(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38e98c,52,GameObject,_ZN10GameObject8_HasPathERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_HasPath(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38e9c0,24,GameObject,_ZN10GameObject8_IsDecorERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_IsDecor(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38e9d8,24,GameObject,_ZN10GameObject7_IsDoorERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_IsDoor(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38e9f0,44,GameObject,_ZN10GameObject9_IsPlayerERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_IsPlayer(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38ea1c,44,GameObject,_ZN10GameObject12_IsCharacterERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_IsCharacter(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38ea48,44,GameObject,_ZN10GameObject7_IsDeadERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_IsDead(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38ea74,32,GameObject,_ZN10GameObject11_IsSwimmingERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_IsSwimming(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38ea94,32,GameObject,_ZN10GameObject9_IsFlyingERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_IsFlying(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38eab4,32,GameObject,_ZN10GameObject10_IsInWaterERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_IsInWater(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38ead4,32,GameObject,_ZN10GameObject12_IsOverAHoleERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_IsOverAHole(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38eaf4,12,GameObject,_ZN10GameObject8_GetSelfERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_GetSelf(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38eb68,80,GameObject,_ZN10GameObject17_GetTargetListTopERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_GetTargetListTop(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38ebe4,12,GameObject,_ZN10GameObject6_GetIDERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_GetID(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38ebf0,12,GameObject,_ZN10GameObject8_GetNameERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_GetName(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38ef60,196,GameObject,_ZN10GameObject18LoadExternalScriptEPKcS1_,"GameObject::LoadExternalScript(char const*, char const*)"
+38fbb8,64,GameObject,_ZN10GameObject14_PopTargetListERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_PopTargetList(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38fbf8,124,GameObject,_ZN10GameObject17_TargetListResortERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_TargetListResort(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38fc74,116,GameObject,_ZN10GameObject7_DropFXERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_DropFX(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+38fcf0,1328,GameObject,_ZN10GameObject17_TargetListSearchERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_TargetListSearch(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+39040c,316,GameObject,_ZN10GameObject17_EnableCollisionsERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_EnableCollisions(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+390548,204,GameObject,_ZN10GameObject21_SetTargetListSortingERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_SetTargetListSorting(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+390624,108,GameObject,_ZN10GameObject26_SetTargetListObjectFilterERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_SetTargetListObjectFilter(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+390690,108,GameObject,_ZN10GameObject29_SetTargetListCharacterFilterERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_SetTargetListCharacterFilter(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3906fc,388,GameObject,_ZN10GameObject12_DealDamagesERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_DealDamages(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+39088c,116,GameObject,_ZN10GameObject15_MarkAsSwimmingERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_MarkAsSwimming(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+390900,116,GameObject,_ZN10GameObject13_MarkAsFlyingERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_MarkAsFlying(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+390974,456,GameObject,_ZN10GameObject14_SetFXEndPointERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_SetFXEndPoint(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+390b3c,152,GameObject,_ZN10GameObject11_SetMaxPathERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_SetMaxPath(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+390bd4,120,GameObject,_ZN10GameObject17_TargetListBackupERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_TargetListBackup(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+390c50,696,GameObject,_ZN10GameObject16_SummonTimerTrapERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_SummonTimerTrap(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+390f1c,588,GameObject,_ZN10GameObject10_IsInRangeERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_IsInRange(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+391438,440,GameObject,_ZN10GameObject19_GetDistanceBetweenERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_GetDistanceBetween(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+391670,696,GameObject,_ZN10GameObject18_SummonTriggerTrapERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_SummonTriggerTrap(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+39193c,1556,GameObject,_ZN10GameObject7_SummonERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_Summon(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+39212c,640,GameObject,_ZN10GameObject12_PlaySound3DERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_PlaySound3D(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3923cc,576,GameObject,_ZN10GameObject7_PlayFXERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_PlayFX(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+392620,228,GameObject,_ZN10GameObject7_GrabFXERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_GrabFX(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+392714,296,GameObject,_ZN10GameObject15_RegisterSummonERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_RegisterSummon(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+392848,160,GameObject,_ZN10GameObject16_GetObjectByNameERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_GetObjectByName(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3928f0,648,GameObject,_ZN10GameObject12_SetPositionERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_SetPosition(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+392b80,1472,GameObject,_ZN10GameObject21_TargetListSearchRectERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_TargetListSearchRect(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+393310,300,GameObject,_ZN10GameObject5_RandERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_Rand(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+393444,288,GameObject,_ZN10GameObject16_GetDistanceFromERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"GameObject::_GetDistanceFrom(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+3935dc,36,GameObject,_ZNK10GameObject17GetTargetPositionEv,GameObject::GetTargetPosition() const
+393600,28,GameObject,_ZN10GameObject14SetDestinationERK7Point3DIfE,GameObject::SetDestination(Point3D<float> const&)
+39361c,60,GameObject,_ZNK10GameObject15IsAtDestinationEv,GameObject::IsAtDestination() const
+393710,32,GameObject,_ZN10GameObject14UpdateRotationEv,GameObject::UpdateRotation()
+3938a0,88,GameObject,_ZN10GameObject11SetRotationERK7Point3DIfE,GameObject::SetRotation(Point3D<float> const&)
+3938f8,236,GameObject,_ZN10GameObject4StopEv,GameObject::Stop()
+3939f0,112,GameObject,_ZN10GameObject6PathToERK7Point3DIfE,GameObject::PathTo(Point3D<float> const&)
+393ae4,56,GameObject,_ZNK10GameObject12GetLookAtVecER7Point3DIfE,GameObject::GetLookAtVec(Point3D<float>&) const
+393b1c,64,GameObject,_ZN10GameObject11LookTowardsERK7Point3DIfE,GameObject::LookTowards(Point3D<float> const&)
+393be8,52,GameObject,_ZN10GameObject19SetHeadingDirectionERK7Point3DIfEb,"GameObject::SetHeadingDirection(Point3D<float> const&, bool)"
+393cec,28,GameObject,_ZN10GameObject6LookAtERK7Point3DIfE,GameObject::LookAt(Point3D<float> const&)
+393d48,44,GameObject,_ZN10GameObject6LookAtEPS_,GameObject::LookAt(GameObject*)
+393d74,64,GameObject,_ZN10GameObject20UpdateTargetPositionEv,GameObject::UpdateTargetPosition()
+393db4,140,GameObject,_ZN10GameObject11SetPositionERK7Point3DIfEb,"GameObject::SetPosition(Point3D<float> const&, bool)"
+393e90,16,GameObject,_ZN10GameObject19ForceUpdatePositionEv,GameObject::ForceUpdatePosition()
+393ea0,172,GameObject,_ZN10GameObject14UpdatePFObjectEv,GameObject::UpdatePFObject()
+3940c0,352,GameObject,_ZN10GameObject10UpdatePathEv,GameObject::UpdatePath()
+394338,64,GameObject,_ZN10GameObject15SetVisualObjectEP12VisualObject,GameObject::SetVisualObject(VisualObject*)
+394378,64,GameObject,_ZN10GameObject21SetCameraAnchorObjectEP10AnchorBase,GameObject::SetCameraAnchorObject(AnchorBase*)
+3943b8,20,GameObject,_ZNK10GameObject23GetCameraAnchorPositionEv,GameObject::GetCameraAnchorPosition() const
+3943cc,916,GameObject,_ZN10GameObject16UpdateSubObjectsEv,GameObject::UpdateSubObjects()
+3949b0,132,GameObject,_ZN10GameObject17DisableCollisionsEv,GameObject::DisableCollisions()
+394a3c,132,GameObject,_ZN10GameObject16EnableCollisionsEv,GameObject::EnableCollisions()
+394bf8,84,GameObject,_ZN10GameObject17SetPhysicalObjectEP14PhysicalObjectb,"GameObject::SetPhysicalObject(PhysicalObject*, bool)"
+394d34,288,GameObject,_ZN10GameObject15SetVisualObjectEPKcS1_b,"GameObject::SetVisualObject(char const*, char const*, bool)"
+394eb0,16,GameObject,_ZN10GameObject16LoadVisualObjectEv,GameObject::LoadVisualObject()
+350a4c,44,IrrFactory,_ZN10IrrFactoryD1Ev,IrrFactory::~IrrFactory()
+350a80,108,IrrFactory,_ZN10IrrFactory18createSceneManagerEPN6glitch5video12IVideoDriverERKN5boost13intrusive_ptrINS0_2io11IFileSystemEEEPNS0_3gui14ICursorControlEPNSB_15IGUIEnvironmentE,"IrrFactory::createSceneManager(glitch::video::IVideoDriver*, boost::intrusive_ptr<glitch::io::IFileSystem> const&, glitch::gui::ICursorControl*, glitch::gui::IGUIEnvironment*)"
+350aec,56,IrrFactory,_ZN10IrrFactory16createFileSystemEv,IrrFactory::createFileSystem()
+350c40,44,IrrFactory,_ZN10IrrFactoryD0Ev,IrrFactory::~IrrFactory()
+3e3e24,8,LaserTypeProjectile,_ZNK19LaserTypeProjectile8GetSpeedEv,LaserTypeProjectile::GetSpeed() const
+3e3e2c,404,LaserTypeProjectile,_ZN19LaserTypeProjectile11OnCollisionEP10GameObjectRK7Point2DIfE,"LaserTypeProjectile::OnCollision(GameObject*, Point2D<float> const&)"
+3e3fcc,536,LaserTypeProjectile,_ZN19LaserTypeProjectile6UpdateEv,LaserTypeProjectile::Update()
+3e449c,188,LaserTypeProjectile,_ZN19LaserTypeProjectile7SetInfoEiP10GameObjectS1_PFiP10ProjectilePvES6_S4_f,"LaserTypeProjectile::SetInfo(int, GameObject*, GameObject*, int (*)(Projectile*, void*), int (*)(Projectile*, void*), void*, float)"
+3e4570,1144,LaserTypeProjectile,_ZN19LaserTypeProjectile7SetInfoEiP10GameObjectS1_PFiP10ProjectilePvES6_S4_b,"LaserTypeProjectile::SetInfo(int, GameObject*, GameObject*, int (*)(Projectile*, void*), int (*)(Projectile*, void*), void*, bool)"
+3e4ac8,56,LaserTypeProjectile,_ZN19LaserTypeProjectileD1Ev,LaserTypeProjectile::~LaserTypeProjectile()
+3e4b10,20,LaserTypeProjectile,_ZN19LaserTypeProjectileD0Ev,LaserTypeProjectile::~LaserTypeProjectile()
+3e4b2c,56,LaserTypeProjectile,_ZN19LaserTypeProjectileD2Ev,LaserTypeProjectile::~LaserTypeProjectile()
+3e4b6c,84,LaserTypeProjectile,_ZN19LaserTypeProjectileC1EN10ObjectBase6GO_IDSE,LaserTypeProjectile::LaserTypeProjectile(ObjectBase::GO_IDS)
+3e4bc8,84,LaserTypeProjectile,_ZN19LaserTypeProjectileC2EN10ObjectBase6GO_IDSE,LaserTypeProjectile::LaserTypeProjectile(ObjectBase::GO_IDS)
+3ef200,4,Level,_ZN5Level19_SpawnLoadingThreadEv,Level::_SpawnLoadingThread()
+3ef204,4,Level,_ZN5Level17_CheckLoadProcessEv,Level::_CheckLoadProcess()
+3ef208,4,Level,_ZN5Level21_ThreadLoadingProcessEv,Level::_ThreadLoadingProcess()
+3ef20c,8,Level,_ZN5Level14LoadScriptFileEv,Level::LoadScriptFile()
+3ef214,4,Level,_ZN5Level19_LoadResumeBatchingEv,Level::_LoadResumeBatching()
+3ef218,12,Level,_ZN5Level4LoadEv,Level::Load()
+3ef224,16,Level,_ZN5Level13ResetIsLoadedEv,Level::ResetIsLoaded()
+3ef234,4,Level,_ZN5Level14UpdateMaterialEbb,"Level::UpdateMaterial(bool, bool)"
+3ef238,16,Level,_ZN5Level13SG_BlockLevelEb,Level::SG_BlockLevel(bool)
+3ef248,4,Level,_ZNK5Level6Draw2DEv,Level::Draw2D() const
+3ef24c,36,Level,_ZNK5Level15hasActiveDialogEv,Level::hasActiveDialog() const
+3ef278,8,Level,_ZN5Level17SetObjectModuleIdEi,Level::SetObjectModuleId(int)
+3ef280,4,Level,_ZN5Level14UpdateLightSetEbi,"Level::UpdateLightSet(bool, int)"
+3ef3fc,88,Level,_ZN5Level16CleanUpAllSkillsEv,Level::CleanUpAllSkills()
+3ef460,64,Level,_ZN5Level16UnlockAllObjectsEv,Level::UnlockAllObjects()
+3ef4a8,128,Level,_ZNK5Level14GetLevelConfigEv,Level::GetLevelConfig() const
+3ef540,128,Level,_ZNK5Level12GetMPRefereeEv,Level::GetMPReferee() const
+3ef5cc,28,Level,_ZN5Level10DisableFogEPN6glitch5scene10ISceneNodeE,Level::DisableFog(glitch::scene::ISceneNode*)
+3ef5f0,28,Level,_ZN5Level14UpdateLightSetEiRSt6vectorIbSaIbEEPN6glitch5scene10ISceneNodeE,"Level::UpdateLightSet(int, std::vector<bool, std::allocator<bool> >&, glitch::scene::ISceneNode*)"
+3ef614,268,Level,_ZN5Level13GetSpawnPointEv,Level::GetSpawnPoint()
+3ef728,120,Level,_ZNK5Level36SG_DBG_TraceDetailedQuestInformationEi,Level::SG_DBG_TraceDetailedQuestInformation(int) const
+3ef7ac,156,Level,_ZNK5Level15SG_IsMapLocSeenEi,Level::SG_IsMapLocSeen(int) const
+3ef850,160,Level,_ZNK5Level17SG_IsMapLocLockedEi,Level::SG_IsMapLocLocked(int) const
+3ef8f8,160,Level,_ZNK5Level16SG_IsLevelLockedEi,Level::SG_IsLevelLocked(int) const
+3ef9a0,84,Level,_ZN5Level7RestartEv,Level::Restart()
+3efa54,152,Level,_ZN5Level13SG_SavePlayerEP9Characterb,"Level::SG_SavePlayer(Character*, bool)"
+3efaec,300,Level,_ZN5Level13SG_SavePlayerEib,"Level::SG_SavePlayer(int, bool)"
+3efc40,92,Level,_ZN5Level16SG_SaveAllPlayerEb,Level::SG_SaveAllPlayer(bool)
+3efca4,200,Level,_ZN5Level14_LoadFinalInitEv,Level::_LoadFinalInit()
+3efd74,220,Level,_ZN5Level13ResetSkinningEv,Level::ResetSkinning()
+3eff98,120,Level,_ZN5Level15_LoadCharStatesEv,Level::_LoadCharStates()
+3f0018,424,Level,_ZN5Level11_LoadPlayerEv,Level::_LoadPlayer()
+3f01c8,192,Level,_ZN5Level12_LoadFromXMLEP12TiXmlElement,Level::_LoadFromXML(TiXmlElement*)
+3f02ac,92,Level,_ZN5Level25AssignSteamToLoadDataFileER12StreamBuffer,Level::AssignSteamToLoadDataFile(StreamBuffer&)
+3f0310,44,Level,_ZN5Level12LoadFileDataD1Ev,Level::LoadFileData::~LoadFileData()
+3f03ec,44,Level,_ZN5Level12LoadFileDataD0Ev,Level::LoadFileData::~LoadFileData()
+3f0428,132,Level,_ZN5Level14LoadCheckpointEv,Level::LoadCheckpoint()
+3f04b4,224,Level,_ZN5Level14CheckpointSaveERK7Point3DIfEb,"Level::CheckpointSave(Point3D<float> const&, bool)"
+3f059c,236,Level,_ZN5Level9QuickSaveEb,Level::QuickSave(bool)
+3f0690,264,Level,_ZN5Level6UnloadEv,Level::Unload()
+3f07b0,64,Level,_ZN5Level18SG_SaveLocalPlayerEb,Level::SG_SaveLocalPlayer(bool)
+3f07f8,144,Level,_ZN5Level19GenerateRandomLevelER12StreamBufferj,"Level::GenerateRandomLevel(StreamBuffer&, unsigned int)"
+3f0898,304,Level,_ZN5Level22PlaceFaeryAndFollowersEP9Character,Level::PlaceFaeryAndFollowers(Character*)
+3f0ae0,1248,Level,_ZN5Level14UpdateListenerEv,Level::UpdateListener()
+3f1008,832,Level,_ZN5Level11_LoadCameraEv,Level::_LoadCamera()
+3f1394,132,Level,_ZNK5Level15GetMPGameScriptEv,Level::GetMPGameScript() const
+3f1430,192,Level,_ZN5Level9EnableFogEPN6glitch5scene10ISceneNodeE,Level::EnableFog(glitch::scene::ISceneNode*)
+3f150c,388,Level,_ZN5Level14SetLevelConfigEP11LevelConfig,Level::SetLevelConfig(LevelConfig*)
+3f16c0,340,Level,_ZN5Level16UpdateDynamicFogEv,Level::UpdateDynamicFog()
+3f2304,216,Level,_ZN5Level9UpdateFogEPN6glitch5scene10ISceneNodeE,Level::UpdateFog(glitch::scene::ISceneNode*)
+3f240c,140,Level,_ZN5Level14_LoadBatchInitEv,Level::_LoadBatchInit()
+3f254c,156,Level,_ZNK5Level4DrawEv,Level::Draw() const
+3f2ae4,100,Level,_ZN5Level13_LoadBatchingEv,Level::_LoadBatching()
+3f2d38,100,Level,_ZN5Level14_LoadBatchListEv,Level::_LoadBatchList()
+3f3128,876,Level,_ZN5LevelC1EPKcijjjbbii,"Level::Level(char const*, int, unsigned int, unsigned int, unsigned int, bool, bool, int, int)"
+3f34c0,876,Level,_ZN5LevelC2EPKcijjjbbii,"Level::Level(char const*, int, unsigned int, unsigned int, unsigned int, bool, bool, int, int)"
+3f38a0,408,Level,_ZN5Level15_LoadScriptFileERSs,"Level::_LoadScriptFile(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)"
+3f3a58,196,Level,_ZN5Level12_LoadScriptsEv,Level::_LoadScripts()
+3f3b40,604,Level,_ZN5Level8LoadFileERKSsS1_,"Level::LoadFile(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)"
+3f4154,196,Level,_ZN5Level8LoadTileEPN3rnd4TileEi,"Level::LoadTile(rnd::Tile*, int)"
+3f459c,764,Level,_ZN5Level13_LoadLightSetEv,Level::_LoadLightSet()
+3f55a4,472,Level,_ZN5Level12_FlushMeshesEv,Level::_FlushMeshes()
+3f5ea0,100,Level,_ZN5Level13_LoadBatchMapEv,Level::_LoadBatchMap()
+3f6990,200,Level,_ZN5Level12_LoadProcessEv,Level::_LoadProcess()
+3f82d8,308,Level,_ZN5Level6UpdateEb,Level::Update(bool)
+3f90b0,444,Level,_ZN5LevelD2Ev,Level::~Level()
+3f92c4,444,Level,_ZN5LevelD1Ev,Level::~Level()
+3f94d8,20,Level,_ZN5LevelD0Ev,Level::~Level()
+3f94f4,96,Level,_ZN5Level14CanMoveTowardsERK7Point3DIfES3_,"Level::CanMoveTowards(Point3D<float> const&, Point3D<float> const&)"
+3f9870,532,Level,_ZN5Level16UpdateCameraZoomEv,Level::UpdateCameraZoom()
+474260,160,Level,_ZN5Level15GetRimLightFileEv,Level::GetRimLightFile()
+3ef184,4,LevelConfig,_ZN11LevelConfig6UpdateEv,LevelConfig::Update()
+3ef188,4,LevelConfig,_ZNK11LevelConfig4DrawEv,LevelConfig::Draw() const
+3f20c8,52,LevelConfig,_ZN11LevelConfigD1Ev,LevelConfig::~LevelConfig()
+3f2194,20,LevelConfig,_ZN11LevelConfigD0Ev,LevelConfig::~LevelConfig()
+3f21b0,52,LevelConfig,_ZN11LevelConfigD2Ev,LevelConfig::~LevelConfig()
+3f28ec,308,LevelConfig,_ZN11LevelConfig8InitPostEv,LevelConfig::InitPost()
+3f4910,76,LevelConfig,_ZN11LevelConfigC2EN10ObjectBase6GO_IDSE,LevelConfig::LevelConfig(ObjectBase::GO_IDS)
+3f4b9c,140,LevelConfig,_ZN11LevelConfig17DeclarePropertiesEv,LevelConfig::DeclareProperties()
+3f51a8,76,LevelConfig,_ZN11LevelConfigC1EN10ObjectBase6GO_IDSE,LevelConfig::LevelConfig(ObjectBase::GO_IDS)
+3f9c6c,32,LevelMap,_ZN8LevelMapC2Ei,LevelMap::LevelMap(int)
+3f9c94,32,LevelMap,_ZN8LevelMapC1Ei,LevelMap::LevelMap(int)
+3f9cbc,4,LevelMap,_ZN8LevelMapD2Ev,LevelMap::~LevelMap()
+3f9cc0,4,LevelMap,_ZN8LevelMapD1Ev,LevelMap::~LevelMap()
+3f9ce4,20,LevelMap,_ZNK8LevelMap4DrawEv,LevelMap::Draw() const
+3f9cf8,20,LevelMap,_ZN8LevelMap6UpdateEv,LevelMap::Update()
+3f9d0c,36,LevelMap,_ZN8LevelMap6UnloadEv,LevelMap::Unload()
+3f9d30,44,LevelMap,_ZN8LevelMap4LoadEv,LevelMap::Load()
+3f9d5c,20,LevelMap,_ZN8LevelMapD0Ev,LevelMap::~LevelMap()
+3ee3b0,8,LiftableObject,_ZNK14LiftableObject11IsUpdatableEv,LiftableObject::IsUpdatable() const
+3ee3b8,8,LiftableObject,_ZNK14LiftableObject10IsAnimatedEv,LiftableObject::IsAnimated() const
+3ee3c0,16,LiftableObject,_ZNK14LiftableObject28IsUpdatingPositionFromVisualEv,LiftableObject::IsUpdatingPositionFromVisual() const
+3ee3d0,16,LiftableObject,_ZNK14LiftableObject29IsUpdatingPositionFromPhysicsEv,LiftableObject::IsUpdatingPositionFromPhysics() const
+3ee3e0,44,LiftableObject,_ZNK14LiftableObject13IsInteractiveEP10GameObject,LiftableObject::IsInteractive(GameObject*) const
+3ee40c,8,LiftableObject,_ZNK14LiftableObject10IsObstacleEv,LiftableObject::IsObstacle() const
+3ee414,12,LiftableObject,_ZNK14LiftableObject17GetObstacleRadiusEv,LiftableObject::GetObstacleRadius() const
+3ee420,12,LiftableObject,_ZNK14LiftableObject19GetObstacleStrengthEv,LiftableObject::GetObstacleStrength() const
+3ee42c,8,LiftableObject,_ZNK14LiftableObject9GetDataIdEv,LiftableObject::GetDataId() const
+3ee434,12,LiftableObject,_ZN14LiftableObject10__CallbackEPN6glitch5scene19ITimelineControllerEPv,"LiftableObject::__Callback(glitch::scene::ITimelineController*, void*)"
+3ee440,32,LiftableObject,_ZNK14LiftableObject18GetInteractionTypeEP10GameObject,LiftableObject::GetInteractionType(GameObject*) const
+3ee460,4,LiftableObject,_ZN14LiftableObject8InteractEP10GameObject,LiftableObject::Interact(GameObject*)
+3ee464,4,LiftableObject,_ZNK14LiftableObject9IsZonableEv,LiftableObject::IsZonable() const
+3ee468,288,LiftableObject,_ZN14LiftableObject7ReleaseEv,LiftableObject::Release()
+3ee5a8,80,LiftableObject,_ZN14LiftableObject4DropEv,LiftableObject::Drop()
+3ee5fc,788,LiftableObject,_ZN14LiftableObject6PickUpEP10GameObject,LiftableObject::PickUp(GameObject*)
+3ee9a4,108,LiftableObject,_ZN14LiftableObject6UpdateEv,LiftableObject::Update()
+3eea10,392,LiftableObject,_ZN14LiftableObject8InitPostEv,LiftableObject::InitPost()
+3eebcc,52,LiftableObject,_ZN14LiftableObjectD1Ev,LiftableObject::~LiftableObject()
+3eec20,20,LiftableObject,_ZN14LiftableObjectD0Ev,LiftableObject::~LiftableObject()
+3eec3c,52,LiftableObject,_ZN14LiftableObjectD2Ev,LiftableObject::~LiftableObject()
+3eec88,76,LiftableObject,_ZN14LiftableObjectC1EN10ObjectBase6GO_IDSE,LiftableObject::LiftableObject(ObjectBase::GO_IDS)
+3eed10,76,LiftableObject,_ZN14LiftableObjectC2EN10ObjectBase6GO_IDSE,LiftableObject::LiftableObject(ObjectBase::GO_IDS)
+3eeec8,272,LiftableObject,_ZN14LiftableObject9InitFinalEv,LiftableObject::InitFinal()
+3eefec,176,LiftableObject,_ZN14LiftableObject17DeclarePropertiesEv,LiftableObject::DeclareProperties()
+40a708,4,LightBase,_ZN9LightBase17RefreshAttachmentEv,LightBase::RefreshAttachment()
+40a70c,8,LightBase,_ZNK9LightBase11IsUpdatableEv,LightBase::IsUpdatable() const
+40a714,20,LightBase,_ZN9LightBase6UpdateEv,LightBase::Update()
+40a728,56,LightBase,_ZN9LightBase6TurnOnEv,LightBase::TurnOn()
+40a768,28,LightBase,_ZN9LightBase7TurnOffEv,LightBase::TurnOff()
+40a784,124,LightBase,_ZNK9LightBase4DrawEv,LightBase::Draw() const
+40a8f8,160,LightBase,_ZN9LightBase8SyncDataEv,LightBase::SyncData()
+40aaa0,88,LightBase,_ZN9LightBaseD1Ev,LightBase::~LightBase()
+40ab18,20,LightBase,_ZN9LightBaseD0Ev,LightBase::~LightBase()
+40ab34,88,LightBase,_ZN9LightBaseD2Ev,LightBase::~LightBase()
+40aba4,148,LightBase,_ZN9LightBaseC1EN10ObjectBase6GO_IDSE,LightBase::LightBase(ObjectBase::GO_IDS)
+40ac58,148,LightBase,_ZN9LightBaseC2EN10ObjectBase6GO_IDSE,LightBase::LightBase(ObjectBase::GO_IDS)
+40adf0,468,LightBase,_ZN9LightBase17DeclarePropertiesEv,LightBase::DeclareProperties()
+40b0c0,84,LightBase,_ZN9LightBase8InitPostEv,LightBase::InitPost()
+40b3c8,80,LightBase,_ZN9LightBase14SetAttenuationE7Point3DIfE,LightBase::SetAttenuation(Point3D<float>)
+40b498,296,LightBase,_ZN9LightBase12setLightNodeEPN6glitch5scene15CLightSceneNodeE,LightBase::setLightNode(glitch::scene::CLightSceneNode*)
+40b5c8,164,LightBase,_ZN9LightBase16SetSpecularColorE7Point3DIfE,LightBase::SetSpecularColor(Point3D<float>)
+40b674,164,LightBase,_ZN9LightBase15SetDiffuseColorE7Point3DIfE,LightBase::SetDiffuseColor(Point3D<float>)
+40b720,164,LightBase,_ZN9LightBase15SetAmbientColorE7Point3DIfE,LightBase::SetAmbientColor(Point3D<float>)
+40b7cc,24,LightPoint,_ZN10LightPoint14GetIdsFromNameEPKcRiS2_Rc,"LightPoint::GetIdsFromName(char const*, int&, int&, char&)"
+40b828,476,LightPoint,_ZN10LightPoint13AssignTweakerEii,"LightPoint::AssignTweaker(int, int)"
+40ba0c,124,LightPoint,_ZN10LightPoint6UpdateEv,LightPoint::Update()
+40bac0,356,LightPoint,_ZN10LightPoint17RefreshAttachmentEv,LightPoint::RefreshAttachment()
+40bcdc,56,LightPoint,_ZN10LightPoint8InitPostEv,LightPoint::InitPost()
+40bd1c,52,LightPoint,_ZN10LightPointD1Ev,LightPoint::~LightPoint()
+40bd70,20,LightPoint,_ZN10LightPointD0Ev,LightPoint::~LightPoint()
+40bd8c,52,LightPoint,_ZN10LightPointD2Ev,LightPoint::~LightPoint()
+40bdd8,80,LightPoint,_ZN10LightPointC1Ev,LightPoint::LightPoint()
+40be5c,80,LightPoint,_ZN10LightPointC2Ev,LightPoint::LightPoint()
+40bfc4,72,LightPoint,_ZN10LightPoint17DeclarePropertiesEv,LightPoint::DeclareProperties()
+3541d4,652,LightSetManager,_ZN15LightSetManageraSERKS_,LightSetManager::operator=(LightSetManager const&)
+40c178,4,LightSetManager,_ZN15LightSetManager11StaticLightD1Ev,LightSetManager::StaticLight::~StaticLight()
+40c17c,4,LightSetManager,_ZN15LightSetManager11ActiveLightD1Ev,LightSetManager::ActiveLight::~ActiveLight()
+40c364,36,LightSetManager,_ZN15LightSetManager11StaticLightD0Ev,LightSetManager::StaticLight::~StaticLight()
+40c398,36,LightSetManager,_ZN15LightSetManager11ActiveLightD0Ev,LightSetManager::ActiveLight::~ActiveLight()
+40c3cc,64,LightSetManager,_ZN15LightSetManager21GetLightSetIdFromNameESs,"LightSetManager::GetLightSetIdFromName(std::basic_string<char, std::char_traits<char>, std::allocator<char> >)"
+40c40c,244,LightSetManager,_ZN15LightSetManager8GetLightEii,"LightSetManager::GetLight(int, int)"
+40c524,156,LightSetManager,_ZN15LightSetManager14AddStaticLightEPN6glitch5scene15CLightSceneNodeE,LightSetManager::AddStaticLight(glitch::scene::CLightSceneNode*)
+40c5d8,192,LightSetManager,_ZN15LightSetManager14AddActiveLightE12ObjectHandlePN6glitch5scene15CLightSceneNodeE,"LightSetManager::AddActiveLight(ObjectHandle, glitch::scene::CLightSceneNode*)"
+40c6b0,292,LightSetManager,_ZN15LightSetManager21GetClosestStaticLightE7Point3DIfE,LightSetManager::GetClosestStaticLight(Point3D<float>)
+40c9a8,536,LightSetManager,_ZN15LightSetManager13ApplySettingsEiRN5boost13intrusive_ptrIN6glitch5video9CMaterialEEERSt6vectorIbSaIbEE,"LightSetManager::ApplySettings(int, boost::intrusive_ptr<glitch::video::CMaterial>&, std::vector<bool, std::allocator<bool> >&)"
+40cbc0,264,LightSetManager,_ZN15LightSetManager14ResetLightSetsEv,LightSetManager::ResetLightSets()
+40ccd0,384,LightSetManager,_ZN15LightSetManagerD1Ev,LightSetManager::~LightSetManager()
+40ce60,384,LightSetManager,_ZN15LightSetManagerD2Ev,LightSetManager::~LightSetManager()
+40cff0,884,LightSetManager,_ZN15LightSetManager15InitLightFilterERSt6vectorIbSaIbEEb,"LightSetManager::InitLightFilter(std::vector<bool, std::allocator<bool> >&, bool)"
+40d368,400,LightSetManager,_ZN15LightSetManager8SetLightEiiRKN5boost13intrusive_ptrIN6glitch5video6CLightEEE,"LightSetManager::SetLight(int, int, boost::intrusive_ptr<glitch::video::CLight> const&)"
+40d520,120,LightSetManager,_ZN15LightSetManager16SetDummyLightOffEiRKN5boost13intrusive_ptrIN6glitch5video6CLightEEE,"LightSetManager::SetDummyLightOff(int, boost::intrusive_ptr<glitch::video::CLight> const&)"
+40d5a0,140,LightSetManager,_ZN15LightSetManager6UpdateEv,LightSetManager::Update()
+40d7d4,60,LightSetManager,_ZN15LightSetManagerC1Ev,LightSetManager::LightSetManager()
+40daa8,60,LightSetManager,_ZN15LightSetManagerC2Ev,LightSetManager::LightSetManager()
+7d4a08,168,MaterialData,_ZN12MaterialData11setMaterialERKN5boost13intrusive_ptrIN6glitch5video9CMaterialEEE,MaterialData::setMaterial(boost::intrusive_ptr<glitch::video::CMaterial> const&)
+35aad8,92,MeshSceneNode,_ZN13MeshSceneNodeD1Ev,MeshSceneNode::~MeshSceneNode()
+35ab40,20,MeshSceneNode,_ZN13MeshSceneNodeD0Ev,MeshSceneNode::~MeshSceneNode()
+35ab5c,104,MeshSceneNode,_ZN13MeshSceneNodeD2Ev,MeshSceneNode::~MeshSceneNode()
+35b240,112,MeshSceneNode,_ZN13MeshSceneNodeC1ERKN5boost13intrusive_ptrIN6glitch7collada5IMeshEEE,MeshSceneNode::MeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh> const&)
+35b2c0,64,MeshSceneNode,_ZN13MeshSceneNodeC2ERKN5boost13intrusive_ptrIN6glitch7collada5IMeshEEE,MeshSceneNode::MeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh> const&)
+35a8e8,44,ModularSkinnedMeshSceneNode,_ZN27ModularSkinnedMeshSceneNode19onRegisterSceneNodeEv,ModularSkinnedMeshSceneNode::onRegisterSceneNode()
+35a940,52,ModularSkinnedMeshSceneNode,_ZN27ModularSkinnedMeshSceneNode22updateAbsolutePositionEb,ModularSkinnedMeshSceneNode::updateAbsolutePosition(bool)
+35acb4,208,ModularSkinnedMeshSceneNode,_ZN27ModularSkinnedMeshSceneNode23prepareSkinForRenderingEv,ModularSkinnedMeshSceneNode::prepareSkinForRendering()
+35af00,120,ModularSkinnedMeshSceneNode,_ZN27ModularSkinnedMeshSceneNodeC1ERKN5boost13intrusive_ptrIN6glitch7collada5IMeshEEE,ModularSkinnedMeshSceneNode::ModularSkinnedMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh> const&)
+35af88,104,ModularSkinnedMeshSceneNode,_ZN27ModularSkinnedMeshSceneNodeC2ERKN5boost13intrusive_ptrIN6glitch7collada5IMeshEEE,ModularSkinnedMeshSceneNode::ModularSkinnedMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh> const&)
+35ba4c,72,ModularSkinnedMeshSceneNode,_ZN27ModularSkinnedMeshSceneNodeD1Ev,ModularSkinnedMeshSceneNode::~ModularSkinnedMeshSceneNode()
+35baa0,20,ModularSkinnedMeshSceneNode,_ZN27ModularSkinnedMeshSceneNodeD0Ev,ModularSkinnedMeshSceneNode::~ModularSkinnedMeshSceneNode()
+35babc,84,ModularSkinnedMeshSceneNode,_ZN27ModularSkinnedMeshSceneNodeD2Ev,ModularSkinnedMeshSceneNode::~ModularSkinnedMeshSceneNode()
+388710,32,Module,_ZN6Module9SerializeEP11IStreamBase,Module::Serialize(IStreamBase*)
+388b20,288,Module,_ZN6Module8InitPostEv,Module::InitPost()
+388f00,76,Module,_ZN6Module11DeserializeEP11IStreamBase,Module::Deserialize(IStreamBase*)
+389444,132,Module,_ZN6ModuleD1Ev,Module::~Module()
+38952c,20,Module,_ZN6ModuleD0Ev,Module::~Module()
+389548,132,Module,_ZN6ModuleD2Ev,Module::~Module()
+389e04,192,Module,_ZN6Module17DeclarePropertiesEv,Module::DeclareProperties()
+389fa8,92,Module,_ZN6ModuleC1EN10ObjectBase6GO_IDSE,Module::Module(ObjectBase::GO_IDS)
+38a100,92,Module,_ZN6ModuleC2EN10ObjectBase6GO_IDSE,Module::Module(ObjectBase::GO_IDS)
+38a38c,236,Module,_ZNK6Module11_ChooseXmlsERSsS0_,"Module::_ChooseXmls(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const"
+38a88c,208,Module,_ZNK6Module10LoadModuleEv,Module::LoadModule() const
+33dcc8,8,ObjectBase,_ZNK10ObjectBase12IsGameObjectEv,ObjectBase::IsGameObject() const
+33dcd0,8,ObjectBase,_ZNK10ObjectBase11IsCharacterEv,ObjectBase::IsCharacter() const
+33dcd8,8,ObjectBase,_ZNK10ObjectBase8IsPlayerEv,ObjectBase::IsPlayer() const
+33dce0,8,ObjectBase,_ZNK10ObjectBase6IsDeadEv,ObjectBase::IsDead() const
+33dce8,8,ObjectBase,_ZNK10ObjectBase11IsUpdatableEv,ObjectBase::IsUpdatable() const
+33dcf0,8,ObjectBase,_ZN10ObjectBase11setUpdatingEb,ObjectBase::setUpdating(bool)
+33dcf8,16,ObjectBase,_ZN10ObjectBase10SetVisibleEb,ObjectBase::SetVisible(bool)
+33dd08,4,ObjectBase,_ZN10ObjectBase25PopulateOutgoingNetStructEb,ObjectBase::PopulateOutgoingNetStruct(bool)
+33dd0c,4,ObjectBase,_ZN10ObjectBase26InterpretIncomingNetStructEb,ObjectBase::InterpretIncomingNetStruct(bool)
+33dd10,20,ObjectBase,_ZNK10ObjectBase17IsRemotelyUpdatedEv,ObjectBase::IsRemotelyUpdated() const
+33dd2c,52,ObjectBase,_ZN10ObjectBase9GetHandleEv,ObjectBase::GetHandle()
+33dd70,52,ObjectBase,_ZNK10ObjectBase9GetHandleEv,ObjectBase::GetHandle() const
+33ddb4,20,ObjectBase,_ZN10ObjectBase6DeleteEv,ObjectBase::Delete()
+33ddc8,60,ObjectBase,_ZN10ObjectBase9SetEnableEb,ObjectBase::SetEnable(bool)
+33de04,48,ObjectBase,_ZN10ObjectBase7EnabledEv,ObjectBase::Enabled()
+33de34,48,ObjectBase,_ZN10ObjectBase8DisabledEv,ObjectBase::Disabled()
+33de90,316,ObjectBase,_ZN10ObjectBase23TestCullingBeforeUpdateERK4aabbIfE,ObjectBase::TestCullingBeforeUpdate(aabb<float> const&)
+33e0f8,64,ObjectBase,_ZN10ObjectBase11DeserializeEP11IStreamBase,ObjectBase::Deserialize(IStreamBase*)
+33e1f0,40,ObjectBase,_ZN10ObjectBase9SerializeEP11IStreamBase,ObjectBase::Serialize(IStreamBase*)
+33e61c,176,ObjectBase,_ZN10ObjectBase20TestDisableConditionEb,ObjectBase::TestDisableCondition(bool)
+33e6d4,236,ObjectBase,_ZN10ObjectBase19TestEnableConditionEb,ObjectBase::TestEnableCondition(bool)
+33e840,172,ObjectBase,_ZN10ObjectBaseD1Ev,ObjectBase::~ObjectBase()
+33e97c,20,ObjectBase,_ZN10ObjectBaseD0Ev,ObjectBase::~ObjectBase()
+33e998,172,ObjectBase,_ZN10ObjectBaseD2Ev,ObjectBase::~ObjectBase()
+33ec0c,136,ObjectBase,_ZN10ObjectBase8InitPostEv,ObjectBase::InitPost()
+33f014,280,ObjectBase,_ZN10ObjectBase17DeclarePropertiesEv,ObjectBase::DeclareProperties()
+33f15c,76,ObjectBase,_ZN10ObjectBaseC1ENS_6GO_IDSE,ObjectBase::ObjectBase(ObjectBase::GO_IDS)
+33f310,76,ObjectBase,_ZN10ObjectBaseC2ENS_6GO_IDSE,ObjectBase::ObjectBase(ObjectBase::GO_IDS)
+34ac18,20,ObjectBase,_ZN10ObjectBase7SetNameEPKc,ObjectBase::SetName(char const*)
+33f4f4,24,ObjectHandle,_ZN12ObjectHandleC2Ev,ObjectHandle::ObjectHandle()
+33f50c,24,ObjectHandle,_ZN12ObjectHandleC1Ev,ObjectHandle::ObjectHandle()
+33f524,84,ObjectHandle,_ZN12ObjectHandleC1EP10ObjectBase,ObjectHandle::ObjectHandle(ObjectBase*)
+33f578,84,ObjectHandle,_ZN12ObjectHandleC2EP10ObjectBase,ObjectHandle::ObjectHandle(ObjectBase*)
+33fdc0,208,ObjectHandle,_ZN12ObjectHandle9GetObjectEb,ObjectHandle::GetObject(bool)
+33feac,56,ObjectHandle,_ZN12ObjectHandlecvPK10GameObjectEv,ObjectHandle::operator GameObject const*()
+33fee4,56,ObjectHandle,_ZN12ObjectHandlecvP10GameObjectEv,ObjectHandle::operator GameObject*()
+33ff1c,56,ObjectHandle,_ZN12ObjectHandlecvPK9CharacterEv,ObjectHandle::operator Character const*()
+33ff54,56,ObjectHandle,_ZN12ObjectHandlecvP9CharacterEv,ObjectHandle::operator Character*()
+33ff8c,4,ObjectHandle,_ZNK12ObjectHandle9GetObjectEb,ObjectHandle::GetObject(bool) const
+4593f4,156,ObjectHandle,_ZN12ObjectHandlecvPT_I9ContainerEEv,ObjectHandle::operator Container*<Container>()
+34024c,4,ObjectManager,_ZN13ObjectManager6Draw2DEv,ObjectManager::Draw2D()
+340250,36,ObjectManager,_ZN13ObjectManager18DoOnlineStateFlushEv,ObjectManager::DoOnlineStateFlush()
+340274,124,ObjectManager,_ZN13ObjectManager20DoRemoteUpdateUpdateEf,ObjectManager::DoRemoteUpdateUpdate(float)
+3402f4,16,ObjectManager,_ZN13ObjectManager24GetNetworkIdByObjectBaseEPK10ObjectBase,ObjectManager::GetNetworkIdByObjectBase(ObjectBase const*)
+340304,56,ObjectManager,_ZN13ObjectManager19DBG_DumpRoomObjectsEv,ObjectManager::DBG_DumpRoomObjects()
+34064c,96,ObjectManager,_ZN13ObjectManager12DoCharAIInitEv,ObjectManager::DoCharAIInit()
+3406ac,128,ObjectManager,_ZN13ObjectManager12ObjectReInitEv,ObjectManager::ObjectReInit()
+34072c,116,ObjectManager,_ZN13ObjectManager24DeleteRandomOnlineObjectEv,ObjectManager::DeleteRandomOnlineObject()
+3407a0,96,ObjectManager,_ZN13ObjectManager26GetObjectHandleByNetworkIdEi,ObjectManager::GetObjectHandleByNetworkId(int)
+340848,256,ObjectManager,_ZN13ObjectManager13CanSendUpdateEP10ObjectBase,ObjectManager::CanSendUpdate(ObjectBase*)
+340948,164,ObjectManager,_ZN13ObjectManager22IsRemotePlayerOfMemberEiP9Character,"ObjectManager::IsRemotePlayerOfMember(int, Character*)"
+3409f4,456,ObjectManager,_ZN13ObjectManager20IsObjectSerializableEP10ObjectBasei,"ObjectManager::IsObjectSerializable(ObjectBase*, int)"
+340bc4,28,ObjectManager,_ZN13ObjectManager18NetworkUnInitLevelEv,ObjectManager::NetworkUnInitLevel()
+340be0,96,ObjectManager,_ZN13ObjectManager16NetworkInitLevelEv,ObjectManager::NetworkInitLevel()
+340c54,84,ObjectManager,_ZN13ObjectManager14GetObjectByPtrEP10ObjectBase,ObjectManager::GetObjectByPtr(ObjectBase*)
+34163c,88,ObjectManager,_ZN13ObjectManager11UpdateRoomsEv,ObjectManager::UpdateRooms()
+34169c,48,ObjectManager,_ZN13ObjectManager22ForceEverythingVisibleEv,ObjectManager::ForceEverythingVisible()
+3419a8,36,ObjectManager,_ZN13ObjectManager23GetDynamicFogColorAtPosERK7Point3DIfEf,"ObjectManager::GetDynamicFogColorAtPos(Point3D<float> const&, float)"
+3426b0,240,ObjectManager,_ZNK13ObjectManager16GetObjectsByTypeEPKcRSt4listIP9CharacterSaIS4_EE,"ObjectManager::GetObjectsByType(char const*, std::list<Character*, std::allocator<Character*> >&) const"
+3427a0,300,ObjectManager,_ZN13ObjectManager14AddRoomObjectsEPSt4listIP10GameObjectSaIS2_EE,"ObjectManager::AddRoomObjects(std::list<GameObject*, std::allocator<GameObject*> >*)"
+342f30,536,ObjectManager,_ZN13ObjectManager13IsPacketValidEii,"ObjectManager::IsPacketValid(int, int)"
+343188,56,ObjectManager,_ZN13ObjectManager29AddOrphanRenderObjectToDeleteEP10ObjectBase,ObjectManager::AddOrphanRenderObjectToDelete(ObjectBase*)
+3431c0,300,ObjectManager,_ZN13ObjectManager21AssignObjectNetworkIdEP10ObjectBase,ObjectManager::AssignObjectNetworkId(ObjectBase*)
+3432f8,116,ObjectManager,_ZN13ObjectManager15MarkForDeletionEP10ObjectBase,ObjectManager::MarkForDeletion(ObjectBase*)
+34336c,224,ObjectManager,_ZNK13ObjectManager16GetLightBaseListERSt4listIP9LightBaseSaIS2_EE,"ObjectManager::GetLightBaseList(std::list<LightBase*, std::allocator<LightBase*> >&) const"
+344184,84,ObjectManager,_ZN13ObjectManager15AddNoRoomObjectEP10GameObject,ObjectManager::AddNoRoomObject(GameObject*)
+3454dc,80,ObjectManager,_ZN13ObjectManager27FlushAllOrphanRenderObjectsEv,ObjectManager::FlushAllOrphanRenderObjects()
+34552c,896,ObjectManager,_ZN13ObjectManager8InitPostEv,ObjectManager::InitPost()
+345954,248,ObjectManager,_ZN13ObjectManager19HandleNoRoomObjectsEv,ObjectManager::HandleNoRoomObjects()
+345bcc,84,ObjectManager,_ZNK13ObjectManager19GetNumObjectsByTypeEPKc,ObjectManager::GetNumObjectsByType(char const*) const
+345c20,116,ObjectManager,_ZN13ObjectManager15GetObjectByTypeEPKc,ObjectManager::GetObjectByType(char const*)
+345e30,212,ObjectManager,_ZN13ObjectManager22AskNetResendByObjectIdEi,ObjectManager::AskNetResendByObjectId(int)
+345fbc,188,ObjectManager,_ZN13ObjectManager14DelRoomObjectsEPSt4listIP10GameObjectSaIS2_EE,"ObjectManager::DelRoomObjects(std::list<GameObject*, std::allocator<GameObject*> >*)"
+3460cc,80,ObjectManager,_ZN13ObjectManager34ProcessNextGameObjectToStartUpdateEv,ObjectManager::ProcessNextGameObjectToStartUpdate()
+346178,268,ObjectManager,_ZN13ObjectManager25ProcessAcknowledgedPacketEii,"ObjectManager::ProcessAcknowledgedPacket(int, int)"
+346284,44,ObjectManager,_ZN13ObjectManager26sProcessAcknowledgedPacketEii,"ObjectManager::sProcessAcknowledgedPacket(int, int)"
+3462b8,92,ObjectManager,_ZN13ObjectManager18RemoveNoRoomObjectEP10GameObject,ObjectManager::RemoveNoRoomObject(GameObject*)
+346510,2896,ObjectManager,_ZN13ObjectManager26SerializeGameObjectNetDataEiiR12NetBitStream,"ObjectManager::SerializeGameObjectNetData(int, int, NetBitStream&)"
+347074,132,ObjectManager,_ZN13ObjectManager16sWritePacketDataEiiR12NetBitStream,"ObjectManager::sWritePacketData(int, int, NetBitStream&)"
+347100,380,ObjectManager,_ZN13ObjectManager19InitModulesFogColorERKSt6vectorI7Point3DIfESaIS2_EEi,"ObjectManager::InitModulesFogColor(std::vector<Point3D<float>, std::allocator<Point3D<float> > > const&, int)"
+34735c,2580,ObjectManager,_ZN13ObjectManager21LoadGameObjectNetDataEiiR12NetBitStream,"ObjectManager::LoadGameObjectNetData(int, int, NetBitStream&)"
+347d90,84,ObjectManager,_ZN13ObjectManager15sReadPacketDataEiiR12NetBitStream,"ObjectManager::sReadPacketData(int, int, NetBitStream&)"
+347dec,228,ObjectManager,_ZN13ObjectManager16IsOnlineDeferredEP10ObjectBase,ObjectManager::IsOnlineDeferred(ObjectBase*)
+347fd0,1640,ObjectManager,_ZN13ObjectManager15ForceFullUpdateEv,ObjectManager::ForceFullUpdate()
+348644,224,ObjectManager,_ZN13ObjectManager17ProcessLostPacketEii,"ObjectManager::ProcessLostPacket(int, int)"
+348724,44,ObjectManager,_ZN13ObjectManager18sProcessLostPacketEii,"ObjectManager::sProcessLostPacket(int, int)"
+348988,1284,ObjectManager,_ZN13ObjectManager6Draw3DEv,ObjectManager::Draw3D()
+348ea4,924,ObjectManager,_ZN13ObjectManager6RemoveE12ObjectHandle,ObjectManager::Remove(ObjectHandle)
+349240,748,ObjectManager,_ZN13ObjectManager10FakeRemoveE12ObjectHandle,ObjectManager::FakeRemove(ObjectHandle)
+3496b8,1116,ObjectManager,_ZN13ObjectManager5FlushEv,ObjectManager::Flush()
+349b14,852,ObjectManager,_ZN13ObjectManagerD1Ev,ObjectManager::~ObjectManager()
+349e70,20,ObjectManager,_ZN13ObjectManagerD0Ev,ObjectManager::~ObjectManager()
+349e8c,852,ObjectManager,_ZN13ObjectManagerD2Ev,ObjectManager::~ObjectManager()
+34a1e8,532,ObjectManager,_ZN13ObjectManagerC1Ev,ObjectManager::ObjectManager()
+34a404,532,ObjectManager,_ZN13ObjectManagerC2Ev,ObjectManager::ObjectManager()
+34a620,1480,ObjectManager,_ZN13ObjectManager6UpdateEf,ObjectManager::Update(float)
+34aca0,880,ObjectManager,_ZN13ObjectManager15GetObjectByNameEPKcibS1_,"ObjectManager::GetObjectByName(char const*, int, bool, char const*)"
+34b064,248,ObjectManager,_ZN13ObjectManager22GetHighestThreatPlayerEPKcib,"ObjectManager::GetHighestThreatPlayer(char const*, int, bool)"
+34b270,408,ObjectManager,_ZN13ObjectManager3AddEP10ObjectBasePKcS3_ib,"ObjectManager::Add(ObjectBase*, char const*, char const*, int, bool)"
+34b520,472,ObjectManager,_ZN13ObjectManager12GetNewObjectEPKcS1_ib,"ObjectManager::GetNewObject(char const*, char const*, int, bool)"
+34b724,164,ObjectManager,_ZN13ObjectManager5SpawnEPKcS1_bb,"ObjectManager::Spawn(char const*, char const*, bool, bool)"
+34b868,764,ObjectManager,_ZN13ObjectManager11LoadFromXMLEP12TiXmlElementPKcRK7Point3DIfEi,"ObjectManager::LoadFromXML(TiXmlElement*, char const*, Point3D<float> const&, int)"
+34bbe4,48,ObjectManager,_ZN13ObjectManager11LoadFromXMLEP12TiXmlElementPKc,"ObjectManager::LoadFromXML(TiXmlElement*, char const*)"
+38aabc,4,ObjectSearcher,_ZN14ObjectSearcher11IObjectListD1Ev,ObjectSearcher::IObjectList::~IObjectList()
+38b2cc,36,ObjectSearcher,_ZN14ObjectSearcher11IObjectListD0Ev,ObjectSearcher::IObjectList::~IObjectList()
+38c900,88,ObjectSearcher,_ZN14ObjectSearcher16BackupObjectListD1Ev,ObjectSearcher::BackupObjectList::~BackupObjectList()
+38d18c,148,ObjectSearcher,_ZN14ObjectSearcher10TargetListD1Ev,ObjectSearcher::TargetList::~TargetList()
+38d4a4,20,ObjectSearcher,_ZN14ObjectSearcher13CharacterList5ResetEv,ObjectSearcher::CharacterList::Reset()
+38d4b8,24,ObjectSearcher,_ZN14ObjectSearcher13CharacterList5AtEndEv,ObjectSearcher::CharacterList::AtEnd()
+38d4d0,16,ObjectSearcher,_ZN14ObjectSearcher13CharacterList4NextEv,ObjectSearcher::CharacterList::Next()
+38d4e0,44,ObjectSearcher,_ZN14ObjectSearcher13CharacterList4SizeEv,ObjectSearcher::CharacterList::Size()
+38d50c,12,ObjectSearcher,_ZN14ObjectSearcher13CharacterList3GetEv,ObjectSearcher::CharacterList::Get()
+38d518,12,ObjectSearcher,_ZN14ObjectSearcher13CharacterList7GetCharEv,ObjectSearcher::CharacterList::GetChar()
+38d524,12,ObjectSearcher,_ZN14ObjectSearcher10PlayerList5ResetEv,ObjectSearcher::PlayerList::Reset()
+38d530,28,ObjectSearcher,_ZN14ObjectSearcher10PlayerList5AtEndEv,ObjectSearcher::PlayerList::AtEnd()
+38d54c,16,ObjectSearcher,_ZN14ObjectSearcher10PlayerList4NextEv,ObjectSearcher::PlayerList::Next()
+38d55c,12,ObjectSearcher,_ZN14ObjectSearcher10PlayerList4SizeEv,ObjectSearcher::PlayerList::Size()
+38d568,8,ObjectSearcher,_ZN14ObjectSearcher12TargetSorter11_sortNoSortERKNS_10TargetInfoES3_,"ObjectSearcher::TargetSorter::_sortNoSort(ObjectSearcher::TargetInfo const&, ObjectSearcher::TargetInfo const&)"
+38d570,48,ObjectSearcher,_ZN14ObjectSearcher12TargetSorter12_sortClosestERKNS_10TargetInfoES3_,"ObjectSearcher::TargetSorter::_sortClosest(ObjectSearcher::TargetInfo const&, ObjectSearcher::TargetInfo const&)"
+38d5b4,48,ObjectSearcher,_ZN14ObjectSearcher12TargetSorter12_sortFrontalERKNS_10TargetInfoES3_,"ObjectSearcher::TargetSorter::_sortFrontal(ObjectSearcher::TargetInfo const&, ObjectSearcher::TargetInfo const&)"
+38d608,4,ObjectSearcher,_ZN14ObjectSearcher10PlayerListD1Ev,ObjectSearcher::PlayerList::~PlayerList()
+38d60c,4,ObjectSearcher,_ZN14ObjectSearcher13CharacterListD1Ev,ObjectSearcher::CharacterList::~CharacterList()
+38d730,36,ObjectSearcher,_ZN14ObjectSearcher10PlayerListD0Ev,ObjectSearcher::PlayerList::~PlayerList()
+38d764,36,ObjectSearcher,_ZN14ObjectSearcher13CharacterListD0Ev,ObjectSearcher::CharacterList::~CharacterList()
+38d7bc,24,ObjectSearcher,_ZN14ObjectSearcher10PlayerList7GetCharEv,ObjectSearcher::PlayerList::GetChar()
+38d7d4,24,ObjectSearcher,_ZN14ObjectSearcher10PlayerList3GetEv,ObjectSearcher::PlayerList::Get()
+38f72c,136,ObjectSearcher,_ZN14ObjectSearcher10TargetList16GetResultsBackupEPKc,ObjectSearcher::TargetList::GetResultsBackup(char const*)
+3d0020,84,ObjectSearcher,_ZN14ObjectSearcher10TargetList6SearchEff,"ObjectSearcher::TargetList::Search(float, float)"
+3d015c,72,ObjectSearcher,_ZN14ObjectSearcher10TargetList11SetSortTypeEi.clone.1,ObjectSearcher::TargetList::SetSortType(int)
+4a17fc,24,ObjectSearcher,_ZN14ObjectSearcher14RoomObjectList5AtEndEv,ObjectSearcher::RoomObjectList::AtEnd()
+4a1814,44,ObjectSearcher,_ZN14ObjectSearcher14RoomObjectList4SizeEv,ObjectSearcher::RoomObjectList::Size()
+4a1840,12,ObjectSearcher,_ZN14ObjectSearcher14RoomObjectList3GetEv,ObjectSearcher::RoomObjectList::Get()
+4a184c,16,ObjectSearcher,_ZN14ObjectSearcher16BackupObjectList5ResetEv,ObjectSearcher::BackupObjectList::Reset()
+4a185c,24,ObjectSearcher,_ZN14ObjectSearcher16BackupObjectList5AtEndEv,ObjectSearcher::BackupObjectList::AtEnd()
+4a1874,16,ObjectSearcher,_ZN14ObjectSearcher16BackupObjectList4NextEv,ObjectSearcher::BackupObjectList::Next()
+4a1884,20,ObjectSearcher,_ZN14ObjectSearcher16BackupObjectList4SizeEv,ObjectSearcher::BackupObjectList::Size()
+4a1898,12,ObjectSearcher,_ZN14ObjectSearcher16BackupObjectList3GetEv,ObjectSearcher::BackupObjectList::Get()
+4a18a4,4,ObjectSearcher,_ZN14ObjectSearcher14RoomObjectListD1Ev,ObjectSearcher::RoomObjectList::~RoomObjectList()
+4a18a8,68,ObjectSearcher,_ZN14ObjectSearcher14RoomObjectList16_ValidateCurrentEv,ObjectSearcher::RoomObjectList::_ValidateCurrent()
+4a18ec,16,ObjectSearcher,_ZN14ObjectSearcher14RoomObjectList4NextEv,ObjectSearcher::RoomObjectList::Next()
+4a18fc,32,ObjectSearcher,_ZN14ObjectSearcher14RoomObjectList5ResetEv,ObjectSearcher::RoomObjectList::Reset()
+4a191c,52,ObjectSearcher,_ZN14ObjectSearcher10TargetList12SetRefObjectEP10GameObject,ObjectSearcher::TargetList::SetRefObject(GameObject*)
+4a1950,116,ObjectSearcher,_ZN14ObjectSearcher10TargetList18_IsGameObjectValidEP10GameObject,ObjectSearcher::TargetList::_IsGameObjectValid(GameObject*)
+4a19c4,36,ObjectSearcher,_ZN14ObjectSearcher14RoomObjectListD0Ev,ObjectSearcher::RoomObjectList::~RoomObjectList()
+4a19f8,64,ObjectSearcher,_ZN14ObjectSearcher16BackupObjectList6_ClearEv,ObjectSearcher::BackupObjectList::_Clear()
+4a1a38,128,ObjectSearcher,_ZN14ObjectSearcher10TargetList18FlushBackupResultsEv,ObjectSearcher::TargetList::FlushBackupResults()
+4a1ab8,528,ObjectSearcher,_ZN14ObjectSearcher10TargetList17_IsCharacterValidEP9Character,ObjectSearcher::TargetList::_IsCharacterValid(Character*)
+4a1cc8,52,ObjectSearcher,_ZN14ObjectSearcher16BackupObjectList7GetCharEv,ObjectSearcher::BackupObjectList::GetChar()
+4a1cfc,52,ObjectSearcher,_ZN14ObjectSearcher14RoomObjectList7GetCharEv,ObjectSearcher::RoomObjectList::GetChar()
+4a1fcc,20,ObjectSearcher,_ZN14ObjectSearcher16BackupObjectListD0Ev,ObjectSearcher::BackupObjectList::~BackupObjectList()
+4a20f0,228,ObjectSearcher,_ZN14ObjectSearcher16BackupObjectList4_AddEP10GameObject,ObjectSearcher::BackupObjectList::_Add(GameObject*)
+4a2730,280,ObjectSearcher,_ZN14ObjectSearcher10TargetListC1EP10GameObjectiii,"ObjectSearcher::TargetList::TargetList(GameObject*, int, int, int)"
+4a2858,824,ObjectSearcher,_ZN14ObjectSearcher10TargetList10SearchRectERK7Point3DIfEfS4_fRNS_11IObjectListE,"ObjectSearcher::TargetList::SearchRect(Point3D<float> const&, float, Point3D<float> const&, float, ObjectSearcher::IObjectList&)"
+4a2e70,96,ObjectSearcher,_ZN14ObjectSearcher10TargetList10SearchRectERK7Point3DIfEffRNS_11IObjectListE,"ObjectSearcher::TargetList::SearchRect(Point3D<float> const&, float, float, ObjectSearcher::IObjectList&)"
+4a2ed0,100,ObjectSearcher,_ZN14ObjectSearcher10TargetList10SearchRectEffRNS_11IObjectListE,"ObjectSearcher::TargetList::SearchRect(float, float, ObjectSearcher::IObjectList&)"
+4a2f34,808,ObjectSearcher,_ZN14ObjectSearcher10TargetList6SearchERK7Point3DIfEfS4_fRNS_11IObjectListE,"ObjectSearcher::TargetList::Search(Point3D<float> const&, float, Point3D<float> const&, float, ObjectSearcher::IObjectList&)"
+4a33c8,96,ObjectSearcher,_ZN14ObjectSearcher10TargetList6SearchERK7Point3DIfEffRNS_11IObjectListE,"ObjectSearcher::TargetList::Search(Point3D<float> const&, float, float, ObjectSearcher::IObjectList&)"
+4a3428,100,ObjectSearcher,_ZN14ObjectSearcher10TargetList6SearchEffRNS_11IObjectListE,"ObjectSearcher::TargetList::Search(float, float, ObjectSearcher::IObjectList&)"
+4a348c,280,ObjectSearcher,_ZN14ObjectSearcher10TargetListC2EP10GameObjectiii,"ObjectSearcher::TargetList::TargetList(GameObject*, int, int, int)"
+4a35b4,204,ObjectSearcher,_ZN14ObjectSearcher10TargetList6ResortEi,ObjectSearcher::TargetList::Resort(int)
+4a36b0,264,ObjectSearcher,_ZN14ObjectSearcher10TargetList13BackupResultsEPKc,ObjectSearcher::TargetList::BackupResults(char const*)
+3a1634,52,OpenableContainer,_ZNK17OpenableContainer9GetScriptEv,OpenableContainer::GetScript() const
+3a1670,48,OpenableContainer,_ZNK17OpenableContainer9GetVisualEv,OpenableContainer::GetVisual() const
+3a16a8,36,OpenableContainer,_ZNK17OpenableContainer8IsLockedEv,OpenableContainer::IsLocked() const
+3a16cc,8,OpenableContainer,_ZNK17OpenableContainer18GetInteractionTypeEP10GameObject,OpenableContainer::GetInteractionType(GameObject*) const
+3a177c,64,OpenableContainer,_ZNK17OpenableContainer11KeepPhysicsEv,OpenableContainer::KeepPhysics() const
+3a17c4,56,OpenableContainer,_ZNK17OpenableContainer8GetSoundEv,OpenableContainer::GetSound() const
+3a1804,56,OpenableContainer,_ZNK17OpenableContainer7GetLootEv,OpenableContainer::GetLoot() const
+3a1844,28,OpenableContainer,_ZNK17OpenableContainer9GetDataIdEv,OpenableContainer::GetDataId() const
+3a1860,92,OpenableContainer,_ZN17OpenableContainer6UnlockEP9Character,OpenableContainer::Unlock(Character*)
+3a18bc,72,OpenableContainer,_ZN17OpenableContainer12TryUnlockingEP10GameObject,OpenableContainer::TryUnlocking(GameObject*)
+3a1904,548,OpenableContainer,_ZN17OpenableContainer8InteractEP10GameObject,OpenableContainer::Interact(GameObject*)
+3a1b64,124,OpenableContainer,_ZN17OpenableContainer8InitPostEv,OpenableContainer::InitPost()
+3a1bf4,52,OpenableContainer,_ZN17OpenableContainerD1Ev,OpenableContainer::~OpenableContainer()
+3a1c48,20,OpenableContainer,_ZN17OpenableContainerD0Ev,OpenableContainer::~OpenableContainer()
+3a1c64,52,OpenableContainer,_ZN17OpenableContainerD2Ev,OpenableContainer::~OpenableContainer()
+3a1cb0,76,OpenableContainer,_ZN17OpenableContainerC1EN10ObjectBase6GO_IDSE,OpenableContainer::OpenableContainer(ObjectBase::GO_IDS)
+3a1d2c,76,OpenableContainer,_ZN17OpenableContainerC2EN10ObjectBase6GO_IDSE,OpenableContainer::OpenableContainer(ObjectBase::GO_IDS)
+3a1e8c,72,OpenableContainer,_ZN17OpenableContainer17DeclarePropertiesEv,OpenableContainer::DeclareProperties()
+51b874,240,PFFloor,_ZN7PFFloor14GetCollisionAtERK7Point3DIfES3_RS1_,"PFFloor::GetCollisionAt(Point3D<float> const&, Point3D<float> const&, Point3D<float>&)"
+51b96c,240,PFFloor,_ZN7PFFloor14GetCollisionAtERK7Point3DIfERS1_RN6glitch4core10triangle3dIfEE,"PFFloor::GetCollisionAt(Point3D<float> const&, Point3D<float>&, glitch::core::triangle3d<float>&)"
+51badc,136,PFFloor,_ZN7PFFloor16GetFloorHeightAtERK7Point3DIfEPfPS1_,"PFFloor::GetFloorHeightAt(Point3D<float> const&, float*, Point3D<float>*)"
+51bee8,64,PFFloor,_ZN7PFFloor9_PostLoadEv,PFFloor::_PostLoad()
+51c0bc,32,PFFloor,_ZNK7PFFloor10_GetNodeAtERK7Point3DIfE,PFFloor::_GetNodeAt(Point3D<float> const&) const
+51c0dc,32,PFFloor,_ZN7PFFloor10_GetNodeAtERK7Point3DIfE,PFFloor::_GetNodeAt(Point3D<float> const&)
+51c2c0,544,PFFloor,_ZN7PFFloor9_DBG_DrawEv,PFFloor::_DBG_Draw()
+51cca4,348,PFFloor,_ZN7PFFloorD1Ev,PFFloor::~PFFloor()
+51ce20,20,PFFloor,_ZN7PFFloorD0Ev,PFFloor::~PFFloor()
+51ce3c,348,PFFloor,_ZN7PFFloorD2Ev,PFFloor::~PFFloor()
+51d1b4,92,PFFloor,_ZN7PFFloorC1EPKcP6PFRoomP13PFGOuterGraphP13PFGInnerGraphj,"PFFloor::PFFloor(char const*, PFRoom*, PFGOuterGraph*, PFGInnerGraph*, unsigned int)"
+51d40c,92,PFFloor,_ZN7PFFloorC2EPKcP6PFRoomP13PFGOuterGraphP13PFGInnerGraphj,"PFFloor::PFFloor(char const*, PFRoom*, PFGOuterGraph*, PFGInnerGraph*, unsigned int)"
+51e98c,124,PFFloor,_ZN7PFFloor11_CreateEdgeEP12PFGInnerNodeS1_,"PFFloor::_CreateEdge(PFGInnerNode*, PFGInnerNode*)"
+51fa64,92,PFFloor,_ZN7PFFloor11_CreateNodeERK7Point3DIfES3_S3_b,"PFFloor::_CreateNode(Point3D<float> const&, Point3D<float> const&, Point3D<float> const&, bool)"
+51fd78,848,PFFloor,_ZN7PFFloor5_LinkEPS_,PFFloor::_Link(PFFloor*)
+520588,176,PFFloor,_ZN7PFFloor12_CreateNodesEPN6glitch4core10triangle3dIfEEj,"PFFloor::_CreateNodes(glitch::core::triangle3d<float>*, unsigned int)"
+520b40,592,PFFloor,_ZN7PFFloor12_LoadNavMeshEPN6glitch5scene14IMeshSceneNodeE,PFFloor::_LoadNavMesh(glitch::scene::IMeshSceneNode*)
+5241ac,4,PFGInnerDirectEdge,_ZN18PFGInnerDirectEdgeD1Ev,PFGInnerDirectEdge::~PFGInnerDirectEdge()
+5241b0,8,PFGInnerDirectEdge,_ZNK18PFGInnerDirectEdge9GetSourceEv,PFGInnerDirectEdge::GetSource() const
+5241b8,8,PFGInnerDirectEdge,_ZNK18PFGInnerDirectEdge14GetDestinationEv,PFGInnerDirectEdge::GetDestination() const
+524348,36,PFGInnerDirectEdge,_ZN18PFGInnerDirectEdgeD0Ev,PFGInnerDirectEdge::~PFGInnerDirectEdge()
+51b840,4,PFGInnerEdge,_ZN12PFGInnerEdgeD1Ev,PFGInnerEdge::~PFGInnerEdge()
+51b844,24,PFGInnerEdge,_ZNK12PFGInnerEdge9GetSourceEv,PFGInnerEdge::GetSource() const
+51b85c,24,PFGInnerEdge,_ZNK12PFGInnerEdge14GetDestinationEv,PFGInnerEdge::GetDestination() const
+51c114,36,PFGInnerEdge,_ZN12PFGInnerEdgeD0Ev,PFGInnerEdge::~PFGInnerEdge()
+523480,44,PFGInnerGraph,_ZN13PFGInnerGraphD1Ev,PFGInnerGraph::~PFGInnerGraph()
+5234b4,44,PFGInnerGraph,_ZN13PFGInnerGraphD0Ev,PFGInnerGraph::~PFGInnerGraph()
+52ddd0,156,PFGInnerGraph,_ZNK13PFGInnerGraph15DBG_GetMemUsageEv,PFGInnerGraph::DBG_GetMemUsage() const
+51b83c,4,PFGInnerNode,_ZN12PFGInnerNodeD1Ev,PFGInnerNode::~PFGInnerNode()
+51c17c,36,PFGInnerNode,_ZN12PFGInnerNodeD0Ev,PFGInnerNode::~PFGInnerNode()
+523164,44,PFGOuterGraph,_ZN13PFGOuterGraphD1Ev,PFGOuterGraph::~PFGOuterGraph()
+523198,44,PFGOuterGraph,_ZN13PFGOuterGraphD0Ev,PFGOuterGraph::~PFGOuterGraph()
+525028,20,PFInnerTest_BasicIdentity,_ZNK25PFInnerTest_BasicIdentityclEPK12PFGInnerNode,PFInnerTest_BasicIdentity::operator()(PFGInnerNode const*) const
+525080,60,PFInnerTest_PFObject,_ZNK20PFInnerTest_PFObject7isValidEPK12PFGInnerEdge,PFInnerTest_PFObject::isValid(PFGInnerEdge const*) const
+52510c,44,PFInnerTest_PFObject,_ZNK20PFInnerTest_PFObject7isValidEPK12PFGInnerNode,PFInnerTest_PFObject::isValid(PFGInnerNode const*) const
+52503c,24,PFInnerTest_PathValidity,_ZNK24PFInnerTest_PathValidity7isValidEPK12PFGInnerEdge,PFInnerTest_PathValidity::isValid(PFGInnerEdge const*) const
+525054,44,PFInnerTest_PathValidity,_ZNK24PFInnerTest_PathValidity7isValidEPK12PFGInnerNode,PFInnerTest_PathValidity::isValid(PFGInnerNode const*) const
+5241c0,20,PFObject,_ZNK8PFObject11IsOverAHoleEv,PFObject::IsOverAHole() const
+5241d4,20,PFObject,_ZNK8PFObject9IsInWaterEv,PFObject::IsInWater() const
+5241e8,12,PFObject,_ZNK8PFObject8IsFlyingEv,PFObject::IsFlying() const
+5241f4,24,PFObject,_ZN8PFObject9SetFlyingEb,PFObject::SetFlying(bool)
+52420c,12,PFObject,_ZNK8PFObject10IsSwimmingEv,PFObject::IsSwimming() const
+524218,24,PFObject,_ZN8PFObject11SetSwimmingEb,PFObject::SetSwimming(bool)
+524230,52,PFObject,_ZNK8PFObject9CanPathOnEP7PFFloor,PFObject::CanPathOn(PFFloor*) const
+524264,96,PFObject,_ZNK8PFObject15GetPathLengthSQEv,PFObject::GetPathLengthSQ() const
+524538,252,PFObject,_ZN8PFObjectC2Ev,PFObject::PFObject()
+524644,252,PFObject,_ZN8PFObjectC1Ev,PFObject::PFObject()
+524750,200,PFObject,_ZN8PFObjectD2Ev,PFObject::~PFObject()
+524828,296,PFObject,_ZNK8PFObject12DBG_DrawPathEv,PFObject::DBG_DrawPath() const
+524b30,256,PFObject,_ZNK8PFObject16DBG_DrawObstacleEv,PFObject::DBG_DrawObstacle() const
+524cd0,360,PFObject,_ZNK8PFObject22DBG_DrawObstacleForcesEv,PFObject::DBG_DrawObstacleForces() const
+524f50,200,PFObject,_ZN8PFObjectD1Ev,PFObject::~PFObject()
+388218,32,PFRoom,_ZN6PFRoom17ExtendBoundingBoxERK4aabbIfE,PFRoom::ExtendBoundingBox(aabb<float> const&)
+520f98,420,PFRoom,_ZN6PFRoom16GetFloorHeightAtERK7Point3DIfEPfPS1_PP7PFFloorb,"PFRoom::GetFloorHeightAt(Point3D<float> const&, float*, Point3D<float>*, PFFloor**, bool)"
+52113c,420,PFRoom,_ZN6PFRoom14GetCollisionAtERK7Point3DIfERS1_RN6glitch4core10triangle3dIfEEPP7PFFloorb,"PFRoom::GetCollisionAt(Point3D<float> const&, Point3D<float>&, glitch::core::triangle3d<float>&, PFFloor**, bool)"
+5212e0,228,PFRoom,_ZN6PFRoom14GetCollisionAtERK7Point3DIfES3_RS1_b,"PFRoom::GetCollisionAt(Point3D<float> const&, Point3D<float> const&, Point3D<float>&, bool)"
+5213c4,68,PFRoom,_ZN6PFRoom9_DBG_DrawEv,PFRoom::_DBG_Draw()
+521408,312,PFRoom,_ZN6PFRoom9_PostLoadEv,PFRoom::_PostLoad()
+521540,420,PFRoom,_ZN6PFRoomC1EPKcjP7PFWorldP13PFGOuterGraphP13PFGInnerGraph,"PFRoom::PFRoom(char const*, unsigned int, PFWorld*, PFGOuterGraph*, PFGInnerGraph*)"
+521718,420,PFRoom,_ZN6PFRoomC2EPKcjP7PFWorldP13PFGOuterGraphP13PFGInnerGraph,"PFRoom::PFRoom(char const*, unsigned int, PFWorld*, PFGOuterGraph*, PFGInnerGraph*)"
+5219cc,252,PFRoom,_ZN6PFRoom5_LinkEPS_,PFRoom::_Link(PFRoom*)
+521c54,216,PFRoom,_ZN6PFRoomD2Ev,PFRoom::~PFRoom()
+521db0,216,PFRoom,_ZN6PFRoomD1Ev,PFRoom::~PFRoom()
+521e9c,20,PFRoom,_ZN6PFRoomD0Ev,PFRoom::~PFRoom()
+521eb8,688,PFRoom,_ZN6PFRoom10_LoadFloorEPN6glitch5scene14IMeshSceneNodeEPKc,"PFRoom::_LoadFloor(glitch::scene::IMeshSceneNode*, char const*)"
+52224c,4,PFWorld,_ZN7PFWorld16DBG_DumpMeshListEv,PFWorld::DBG_DumpMeshList()
+522250,204,PFWorld,_ZN7PFWorld17DBG_DumpMeshLinksEv,PFWorld::DBG_DumpMeshLinks()
+52231c,200,PFWorld,_ZN7PFWorld13DBG_WorldInfoERjS0_S0_,"PFWorld::DBG_WorldInfo(unsigned int&, unsigned int&, unsigned int&)"
+5223e4,28,PFWorld,_ZN7PFWorld10DBG_PFInfoERjS0_,"PFWorld::DBG_PFInfo(unsigned int&, unsigned int&)"
+522444,180,PFWorld,_ZN7PFWorld17DBG_ObstaclesInfoERj,PFWorld::DBG_ObstaclesInfo(unsigned int&)
+52253c,112,PFWorld,_ZN7PFWorld14DBG_SearchInfoERj,PFWorld::DBG_SearchInfo(unsigned int&)
+5225ac,32,PFWorld,_ZN7PFWorld11DBG_MemInfoERj,PFWorld::DBG_MemInfo(unsigned int&)
+5225cc,28,PFWorld,_ZN7PFWorld16DBG_ObstacleInfoERK8PFObjectRjR7Point3DIfE,"PFWorld::DBG_ObstacleInfo(PFObject const&, unsigned int&, Point3D<float>&)"
+5225e8,228,PFWorld,_ZN7PFWorld8DBG_DrawEPK7Point3DIfE,PFWorld::DBG_Draw(Point3D<float> const*)
+5226cc,136,PFWorld,_ZN7PFWorld8PostLoadEv,PFWorld::PostLoad()
+522844,560,PFWorld,_ZN7PFWorld5_InitEv,PFWorld::_Init()
+522d58,204,PFWorld,_ZN7PFWorldC2Ev,PFWorld::PFWorld()
+522e2c,204,PFWorld,_ZN7PFWorldC1Ev,PFWorld::PFWorld()
+5236d0,272,PFWorld,_ZN7PFWorld5FlushEv,PFWorld::Flush()
+523864,164,PFWorld,_ZN7PFWorldD1Ev,PFWorld::~PFWorld()
+523918,20,PFWorld,_ZN7PFWorldD0Ev,PFWorld::~PFWorld()
+523934,164,PFWorld,_ZN7PFWorldD2Ev,PFWorld::~PFWorld()
+5239e8,536,PFWorld,_ZN7PFWorld16_AddExitPositionEPN6glitch5scene10ISceneNodeEPKc,"PFWorld::_AddExitPosition(glitch::scene::ISceneNode*, char const*)"
+523c14,1200,PFWorld,_ZN7PFWorld8LoadRoomEPN6glitch5scene10ISceneNodeEjPKc,"PFWorld::LoadRoom(glitch::scene::ISceneNode*, unsigned int, char const*)"
+525188,320,PFWorld,_ZN7PFWorld9GetRoomAtERK7Point3DIfE,PFWorld::GetRoomAt(Point3D<float> const&)
+5252c8,36,PFWorld,_ZN7PFWorld18FlagFloorAsEnabledERK8PFObjectb,"PFWorld::FlagFloorAsEnabled(PFObject const&, bool)"
+5252ec,36,PFWorld,_ZN7PFWorld18FlagFloorAsDeadEndERK8PFObjectb,"PFWorld::FlagFloorAsDeadEnd(PFObject const&, bool)"
+525508,300,PFWorld,_ZN7PFWorld16GetFloorHeightAtERK7Point3DIfEPfPS1_PP6PFRoomPP7PFFloorb,"PFWorld::GetFloorHeightAt(Point3D<float> const&, float*, Point3D<float>*, PFRoom**, PFFloor**, bool)"
+525634,80,PFWorld,_ZN7PFWorld18FlagFloorAsDeadEndERK7Point3DIfEb,"PFWorld::FlagFloorAsDeadEnd(Point3D<float> const&, bool)"
+525684,80,PFWorld,_ZN7PFWorld18FlagFloorAsEnabledERK7Point3DIfEb,"PFWorld::FlagFloorAsEnabled(Point3D<float> const&, bool)"
+5256d4,300,PFWorld,_ZN7PFWorld14GetCollisionAtERK7Point3DIfERS1_RN6glitch4core10triangle3dIfEEPP6PFRoomPP7PFFloorb,"PFWorld::GetCollisionAt(Point3D<float> const&, Point3D<float>&, glitch::core::triangle3d<float>&, PFRoom**, PFFloor**, bool)"
+525800,132,PFWorld,_ZN7PFWorld14GetCollisionAtERK7Point3DIfES3_RS1_b,"PFWorld::GetCollisionAt(Point3D<float> const&, Point3D<float> const&, Point3D<float>&, bool)"
+525884,184,PFWorld,_ZN7PFWorld22TranslateScreenToWorldERK7Point2DIfER7Point3DIfE,"PFWorld::TranslateScreenToWorld(Point2D<float> const&, Point3D<float>&)"
+525944,224,PFWorld,_ZN7PFWorld17ValidateDirectionER7Point3DIfERKS1_fj,"PFWorld::ValidateDirection(Point3D<float>&, Point3D<float> const&, float, unsigned int)"
+525d60,36,PFWorld,_ZN7PFWorld17ValidateDirectionER7Point3DIfERK8PFObject,"PFWorld::ValidateDirection(Point3D<float>&, PFObject const&)"
+525d84,464,PFWorld,_ZN7PFWorld16ValidatePositionER7Point3DIfEP8PFObject,"PFWorld::ValidatePosition(Point3D<float>&, PFObject*)"
+526b18,64,PFWorld,_ZN7PFWorld10InitObjectER8PFObjectbRK7Point3DIfEfPv,"PFWorld::InitObject(PFObject&, bool, Point3D<float> const&, float, void*)"
+527660,452,PFWorld,_ZN7PFWorld19_CalcObstaclesForceERK8PFObjectR7Point3DIfEPSt6vectorINS_13ObstacleForceESaIS7_EE,"PFWorld::_CalcObstaclesForce(PFObject const&, Point3D<float>&, std::vector<PFWorld::ObstacleForce, std::allocator<PFWorld::ObstacleForce> >*)"
+527cc4,156,PFWorld,_ZN7PFWorld14AvoidObstaclesERK8PFObjectR7Point3DIfE,"PFWorld::AvoidObstacles(PFObject const&, Point3D<float>&)"
+528234,568,PFWorld,_ZN7PFWorld12InitObstacleER8PFObjectbff,"PFWorld::InitObstacle(PFObject&, bool, float, float)"
+528484,300,PFWorld,_ZN7PFWorld25_ChangeObstacleParentListERK8PFObjectP7PFFloor,"PFWorld::_ChangeObstacleParentList(PFObject const&, PFFloor*)"
+528868,184,PFWorld,_ZN7PFWorld15_IsPastWaypointER8PFObject,PFWorld::_IsPastWaypoint(PFObject&)
+52899c,208,PFWorld,_ZN7PFWorld16_CalcWaypointVecER8PFObject,PFWorld::_CalcWaypointVec(PFObject&)
+528b2c,148,PFWorld,_ZN7PFWorld15_GetClosestNodeERK7Point3DIfE,PFWorld::_GetClosestNode(Point3D<float> const&)
+528ea0,136,PFWorld,_ZN7PFWorld15_GetClosestNodeERK8PFObject,PFWorld::_GetClosestNode(PFObject const&)
+52aae4,308,PFWorld,_ZN7PFWorld8DropPathER8PFObject,PFWorld::DropPath(PFObject&)
+52b560,908,PFWorld,_ZN7PFWorld12_SearchGraphEPK8PFObjectRK7Point3DIfES6_jPSt4listIPK12PFGInnerEdgeSaISA_EE,"PFWorld::_SearchGraph(PFObject const*, Point3D<float> const&, Point3D<float> const&, unsigned int, std::list<PFGInnerEdge const*, std::allocator<PFGInnerEdge const*> >*)"
+52c354,52,PFWorld,_ZN7PFWorld12HasValidPathERK7Point3DIfES3_j,"PFWorld::HasValidPath(Point3D<float> const&, Point3D<float> const&, unsigned int)"
+52c388,40,PFWorld,_ZN7PFWorld12HasValidPathERK8PFObjectRK7Point3DIfEj,"PFWorld::HasValidPath(PFObject const&, Point3D<float> const&, unsigned int)"
+52cb90,2132,PFWorld,_ZN7PFWorld12_SearchGraphEPK8PFObjectRK7Point3DIfERKN3sfc4math5graph5ITestI12PFGInnerEdge12PFGInnerNodeEEj,"PFWorld::_SearchGraph(PFObject const*, Point3D<float> const&, sfc::math::graph::ITest<PFGInnerEdge, PFGInnerNode> const&, unsigned int)"
+52d4f0,40,PFWorld,_ZN7PFWorld8TestPathERK7Point3DIfERKN3sfc4math5graph5ITestI12PFGInnerEdge12PFGInnerNodeEEj,"PFWorld::TestPath(Point3D<float> const&, sfc::math::graph::ITest<PFGInnerEdge, PFGInnerNode> const&, unsigned int)"
+52d518,32,PFWorld,_ZN7PFWorld8TestPathERK8PFObjectRKN3sfc4math5graph5ITestI12PFGInnerEdge12PFGInnerNodeEEj,"PFWorld::TestPath(PFObject const&, sfc::math::graph::ITest<PFGInnerEdge, PFGInnerNode> const&, unsigned int)"
+52d538,424,PFWorld,_ZN7PFWorld11_SmoothPathER8PFObject,PFWorld::_SmoothPath(PFObject&)
+52d838,380,PFWorld,_ZN7PFWorld8MovePathER8PFObjectR7Point3DIfE,"PFWorld::MovePath(PFObject&, Point3D<float>&)"
+52db48,588,PFWorld,_ZN7PFWorld8FindPathER8PFObjectRK7Point3DIfEj,"PFWorld::FindPath(PFObject&, Point3D<float> const&, unsigned int)"
+46e6b0,4,PhysicalBaseObject,_ZN18PhysicalBaseObjectD1Ev,PhysicalBaseObject::~PhysicalBaseObject()
+46e9a0,36,PhysicalBaseObject,_ZN18PhysicalBaseObjectD0Ev,PhysicalBaseObject::~PhysicalBaseObject()
+3883c4,4,PhysicalObject,_ZN14PhysicalObject17onCollisionBeginsEP18PhysicalBaseObjectRK7Point2DIfEb,"PhysicalObject::onCollisionBegins(PhysicalBaseObject*, Point2D<float> const&, bool)"
+3883c8,4,PhysicalObject,_ZN14PhysicalObject19onCollisionPersistsEP18PhysicalBaseObjectRK7Point2DIfEb,"PhysicalObject::onCollisionPersists(PhysicalBaseObject*, Point2D<float> const&, bool)"
+3883cc,4,PhysicalObject,_ZN14PhysicalObject15onCollisionEndsEP18PhysicalBaseObjectRK7Point2DIfEb,"PhysicalObject::onCollisionEnds(PhysicalBaseObject*, Point2D<float> const&, bool)"
+3883d0,4,PhysicalObject,_ZN14PhysicalObject18onCollisionResultsEP18PhysicalBaseObjectb,"PhysicalObject::onCollisionResults(PhysicalBaseObject*, bool)"
+46e6bc,148,PhysicalObject,_ZN14PhysicalObject15onCollisionTestEP18PhysicalBaseObjectsttstt,"PhysicalObject::onCollisionTest(PhysicalBaseObject*, short, unsigned short, unsigned short, short, unsigned short, unsigned short)"
+46e750,20,PhysicalObject,_ZNK14PhysicalObject9getRadiusEv,PhysicalObject::getRadius() const
+46e768,176,PhysicalObject,_ZNK14PhysicalObject10canCollideEPS_,PhysicalObject::canCollide(PhysicalObject*) const
+46e818,28,PhysicalObject,_ZNK14PhysicalObject11getPositionEv,PhysicalObject::getPosition() const
+46e858,12,PhysicalObject,_ZNK14PhysicalObject8getAngleEv,PhysicalObject::getAngle() const
+46e864,104,PhysicalObject,_ZN14PhysicalObject17addLinearVelocityEffff,"PhysicalObject::addLinearVelocity(float, float, float, float)"
+46e918,96,PhysicalObject,_ZN14PhysicalObject17setLinearVelocityEff,"PhysicalObject::setLinearVelocity(float, float)"
+46e978,36,PhysicalObject,_ZN14PhysicalObject18setAngularVelocityEf,PhysicalObject::setAngularVelocity(float)
+46e99c,4,PhysicalObject,_ZN14PhysicalObject6UpdateEv,PhysicalObject::Update()
+46ea70,16,PhysicalObject,_ZN14PhysicalObject8setAngleEf,PhysicalObject::setAngle(float)
+46ea80,32,PhysicalObject,_ZN14PhysicalObject11setPositionEff,"PhysicalObject::setPosition(float, float)"
+46ead4,12,PhysicalObject,_ZN14PhysicalObject11setPositionERK7Point2DIfE,PhysicalObject::setPosition(Point2D<float> const&)
+46eae0,64,PhysicalObject,_ZN14PhysicalObject5unpinEv,PhysicalObject::unpin()
+46eb20,80,PhysicalObject,_ZN14PhysicalObject3pinEv,PhysicalObject::pin()
+46eb70,116,PhysicalObject,_ZN14PhysicalObject13disableFilterEv,PhysicalObject::disableFilter()
+46ebe4,136,PhysicalObject,_ZN14PhysicalObject12enableFilterEv,PhysicalObject::enableFilter()
+46ec6c,124,PhysicalObject,_ZN14PhysicalObject11resetFilterEv,PhysicalObject::resetFilter()
+46ece8,124,PhysicalObject,_ZN14PhysicalObject9setFilterEsttb,"PhysicalObject::setFilter(short, unsigned short, unsigned short, bool)"
+46ed64,84,PhysicalObject,_ZN14PhysicalObject9getLookAtER7Point2DIfE,PhysicalObject::getLookAt(Point2D<float>&)
+46edb8,56,PhysicalObject,_ZN14PhysicalObject9_addShapeEP10b2ShapeDefb,"PhysicalObject::_addShape(b2ShapeDef*, bool)"
+46edf0,204,PhysicalObject,_ZN14PhysicalObject5_initEP10b2ShapeDefffbb,"PhysicalObject::_init(b2ShapeDef*, float, float, bool, bool)"
+46eebc,64,PhysicalObject,_ZN14PhysicalObjectD1Ev,PhysicalObject::~PhysicalObject()
+46ef04,20,PhysicalObject,_ZN14PhysicalObjectD0Ev,PhysicalObject::~PhysicalObject()
+46ef20,64,PhysicalObject,_ZN14PhysicalObjectD2Ev,PhysicalObject::~PhysicalObject()
+46ef68,220,PhysicalObject,_ZN14PhysicalObjectC1EP13PhysicalWorldP10GameObjectbbbbstti,"PhysicalObject::PhysicalObject(PhysicalWorld*, GameObject*, bool, bool, bool, bool, short, unsigned short, unsigned short, int)"
+46f2f0,220,PhysicalObject,_ZN14PhysicalObjectC2EP13PhysicalWorldP10GameObjectbbbbstti,"PhysicalObject::PhysicalObject(PhysicalWorld*, GameObject*, bool, bool, bool, bool, short, unsigned short, unsigned short, int)"
+46f754,136,PhysicalObject,_ZNK14PhysicalObject4DrawEv,PhysicalObject::Draw() const
+34bc30,68,PhysicalWorld,_ZN13PhysicalWorldC2Ev,PhysicalWorld::PhysicalWorld()
+34bc7c,68,PhysicalWorld,_ZN13PhysicalWorldC1Ev,PhysicalWorld::PhysicalWorld()
+34bcc8,40,PhysicalWorld,_ZN13PhysicalWorld11destroyBodyERP6b2Body,PhysicalWorld::destroyBody(b2Body*&)
+34bcf0,24,PhysicalWorld,_ZN13PhysicalWorld10createBodyEP9b2BodyDef,PhysicalWorld::createBody(b2BodyDef*)
+34bd08,60,PhysicalWorld,_ZN13PhysicalWorld6updateEv,PhysicalWorld::update()
+34be0c,148,PhysicalWorld,_ZN13PhysicalWorld5clearEv,PhysicalWorld::clear()
+34bf84,64,PhysicalWorld,_ZN13PhysicalWorldD1Ev,PhysicalWorld::~PhysicalWorld()
+34bfe4,20,PhysicalWorld,_ZN13PhysicalWorldD0Ev,PhysicalWorld::~PhysicalWorld()
+34c000,64,PhysicalWorld,_ZN13PhysicalWorldD2Ev,PhysicalWorld::~PhysicalWorld()
+34c048,112,PhysicalWorld,_ZN13PhysicalWorld4loadEffff,"PhysicalWorld::load(float, float, float, float)"
+34c1e4,40,PhysicalWorld,_ZN13PhysicalWorld19_IsShape1InstigatorEPK14b2ContactPointP18PhysicalBaseObjectS4_,"PhysicalWorld::_IsShape1Instigator(b2ContactPoint const*, PhysicalBaseObject*, PhysicalBaseObject*)"
+34c2cc,4,PhysicalWorld,_ZN13PhysicalWorld10SayGoodbyeEP7b2Joint,PhysicalWorld::SayGoodbye(b2Joint*)
+34c2d8,4,PhysicalWorld,_ZN13PhysicalWorld10SayGoodbyeEP7b2Shape,PhysicalWorld::SayGoodbye(b2Shape*)
+34c304,188,PhysicalWorld,_ZN13PhysicalWorld13ShouldCollideEP7b2ShapeS1_,"PhysicalWorld::ShouldCollide(b2Shape*, b2Shape*)"
+34c418,108,PhysicalWorld,_ZN13PhysicalWorld6RemoveEPK14b2ContactPoint,PhysicalWorld::Remove(b2ContactPoint const*)
+34c548,104,PhysicalWorld,_ZN13PhysicalWorld6ResultEPK15b2ContactResult,PhysicalWorld::Result(b2ContactResult const*)
+34c62c,100,PhysicalWorld,_ZN13PhysicalWorld9ViolationEP6b2Body,PhysicalWorld::Violation(b2Body*)
+34c6c4,108,PhysicalWorld,_ZN13PhysicalWorld3AddEPK14b2ContactPoint,PhysicalWorld::Add(b2ContactPoint const*)
+34c7f4,108,PhysicalWorld,_ZN13PhysicalWorld7PersistEPK14b2ContactPoint,PhysicalWorld::Persist(b2ContactPoint const*)
+312848,44,Point2D,_ZN7Point2DIfE16lineIntersectionERKS0_S2_S2_S2_RS0_RfS4_,"Point2D<float>::lineIntersection(Point2D<float> const&, Point2D<float> const&, Point2D<float> const&, Point2D<float> const&, Point2D<float>&, float&, float&)"
+312b40,44,Point2D,_ZN7Point2DIfE16lineIntersectionERKS0_S2_S2_S2_RS0_,"Point2D<float>::lineIntersection(Point2D<float> const&, Point2D<float> const&, Point2D<float> const&, Point2D<float> const&, Point2D<float>&)"
+412258,24,Point2D,_ZN7Point2DIfE9normalizeEv,Point2D<float>::normalize()
+312b6c,24,Point3D,_ZNK7Point3DIfEeqERKS0_,Point3D<float>::operator==(Point3D<float> const&) const
+312da8,88,Point3D,_ZN7Point3DIfE9transformERKN6glitch4core8CMatrix4IfEE,Point3D<float>::transform(glitch::core::CMatrix4<float> const&)
+312f40,36,Point3D,_ZNK7Point3DIfE8angleCosERKS0_,Point3D<float>::angleCos(Point3D<float> const&) const
+313058,16,Point3D,_ZNK7Point3DIfE5angleERKS0_,Point3D<float>::angle(Point3D<float> const&) const
+34d04c,24,Point3D,_ZN7Point3DIfEdVERKf,Point3D<float>::operator/=(float const&)
+34d0b0,28,Point3D,_ZN7Point3DIfE9normalizeEv,Point3D<float>::normalize()
+3a4118,24,Point3D,_ZNK7Point3DIfE8distanceERKS0_,Point3D<float>::distance(Point3D<float> const&) const
+3e5740,52,Point3D,_ZN7Point3DIfE8rotateXYEf,Point3D<float>::rotateXY(float)
+418c48,28,Point3D,_ZN7Point3DIfE10rotateXYByEfRKS0_,"Point3D<float>::rotateXYBy(float, Point3D<float> const&)"
+5102e8,60,PolyStat,_ZN8PolyStatD1Ev,PolyStat::~PolyStat()
+3e3df4,8,Projectile,_ZNK10Projectile6IsDeadEv,Projectile::IsDead() const
+3e3dfc,8,Projectile,_ZNK10Projectile25IsValidatingFloorPositionEv,Projectile::IsValidatingFloorPosition() const
+3e3e04,8,Projectile,_ZNK10Projectile9IsZonableEv,Projectile::IsZonable() const
+3e3e0c,8,Projectile,_ZNK10Projectile11IsUpdatableEv,Projectile::IsUpdatable() const
+3e3e14,8,Projectile,_ZNK10Projectile10IsAnimatedEv,Projectile::IsAnimated() const
+3e3e1c,8,Projectile,_ZNK10Projectile13IsInteractiveEP10GameObject,Projectile::IsInteractive(GameObject*) const
+3e4da8,8,Projectile,_ZNK10Projectile8GetSpeedEv,Projectile::GetSpeed() const
+3e4db0,300,Projectile,_ZN10Projectile14HandleImpactFXENS_10ImpactTypeERK7Point3DIfE,"Projectile::HandleImpactFX(Projectile::ImpactType, Point3D<float> const&)"
+3e4eec,224,Projectile,_ZN10Projectile14HandleImpactFXEP10GameObjectRK7Point2DIfE,"Projectile::HandleImpactFX(GameObject*, Point2D<float> const&)"
+3e4fe4,124,Projectile,_ZN10Projectile10SetManagerEP17ProjectileManager,Projectile::SetManager(ProjectileManager*)
+3e5078,300,Projectile,_ZN10Projectile8OnExpireENS_10ImpactTypeE,Projectile::OnExpire(Projectile::ImpactType)
+3e51b0,368,Projectile,_ZN10Projectile6UpdateEv,Projectile::Update()
+3e55b4,388,Projectile,_ZN10Projectile11OnCollisionEP10GameObjectRK7Point2DIfE,"Projectile::OnCollision(GameObject*, Point2D<float> const&)"
+3e57cc,104,Projectile,_ZN10Projectile7SetInfoEiP10GameObjectS1_PFiPS_PvES5_S3_f,"Projectile::SetInfo(int, GameObject*, GameObject*, int (*)(Projectile*, void*), int (*)(Projectile*, void*), void*, float)"
+3e58cc,1028,Projectile,_ZN10Projectile7SetInfoEiP10GameObjectS1_PFiPS_PvES5_S3_b,"Projectile::SetInfo(int, GameObject*, GameObject*, int (*)(Projectile*, void*), int (*)(Projectile*, void*), void*, bool)"
+3e5d9c,56,Projectile,_ZN10ProjectileD1Ev,Projectile::~Projectile()
+3e5de4,20,Projectile,_ZN10ProjectileD0Ev,Projectile::~Projectile()
+3e5e00,56,Projectile,_ZN10ProjectileD2Ev,Projectile::~Projectile()
+3e5e40,148,Projectile,_ZN10ProjectileC1EN10ObjectBase6GO_IDSE,Projectile::Projectile(ObjectBase::GO_IDS)
+3e5edc,148,Projectile,_ZN10ProjectileC2EN10ObjectBase6GO_IDSE,Projectile::Projectile(ObjectBase::GO_IDS)
+3e60fc,84,ProjectileManager,_ZN17ProjectileManagerC2Ev,ProjectileManager::ProjectileManager()
+3e6158,84,ProjectileManager,_ZN17ProjectileManagerC1Ev,ProjectileManager::ProjectileManager()
+3e61b4,492,ProjectileManager,_ZN17ProjectileManager7DeSpawnEP10Projectileb,"ProjectileManager::DeSpawn(Projectile*, bool)"
+3e646c,260,ProjectileManager,_ZN17ProjectileManager5FlushEv,ProjectileManager::Flush()
+3e68b0,96,ProjectileManager,_ZN17ProjectileManagerD1Ev,ProjectileManager::~ProjectileManager()
+3e6920,20,ProjectileManager,_ZN17ProjectileManagerD0Ev,ProjectileManager::~ProjectileManager()
+3e693c,1404,ProjectileManager,_ZN17ProjectileManager7_CreateEbb,"ProjectileManager::_Create(bool, bool)"
+3e6edc,288,ProjectileManager,_ZN17ProjectileManager5SpawnEiP10GameObjectS1_PFiP10ProjectilePvES6_S4_f,"ProjectileManager::Spawn(int, GameObject*, GameObject*, int (*)(Projectile*, void*), int (*)(Projectile*, void*), void*, float)"
+3e701c,288,ProjectileManager,_ZN17ProjectileManager5SpawnEiP10GameObjectS1_PFiP10ProjectilePvES6_S4_b,"ProjectileManager::Spawn(int, GameObject*, GameObject*, int (*)(Projectile*, void*), int (*)(Projectile*, void*), void*, bool)"
+3e715c,96,ProjectileManager,_ZN17ProjectileManagerD2Ev,ProjectileManager::~ProjectileManager()
+3e71cc,644,ProjectileManager,_ZN17ProjectileManager8PreCacheEv,ProjectileManager::PreCache()
+39cb2c,60,ProjectileTrap,_ZNK14ProjectileTrap9GetScriptEv,ProjectileTrap::GetScript() const
+39cb74,48,ProjectileTrap,_ZNK14ProjectileTrap9GetVisualEv,ProjectileTrap::GetVisual() const
+39cbac,48,ProjectileTrap,_ZNK14ProjectileTrap12GetDamagerIdEv,ProjectileTrap::GetDamagerId() const
+39cbe4,72,ProjectileTrap,_ZNK14ProjectileTrap13GetHurtChanceEv,ProjectileTrap::GetHurtChance() const
+39cc34,48,ProjectileTrap,_ZNK14ProjectileTrap8GetSoundEv,ProjectileTrap::GetSound() const
+39cc6c,52,ProjectileTrap,_ZNK14ProjectileTrap8GetDelayEv,ProjectileTrap::GetDelay() const
+39cca8,260,ProjectileTrap,_ZN14ProjectileTrap17_HandleProjectileEP10ProjectilePv,"ProjectileTrap::_HandleProjectile(Projectile*, void*)"
+39cdc4,320,ProjectileTrap,_ZN14ProjectileTrap14SpecificUpdateEv,ProjectileTrap::SpecificUpdate()
+39cf18,332,ProjectileTrap,_ZN14ProjectileTrap6CreateEP10GameObjectii,"ProjectileTrap::Create(GameObject*, int, int)"
+39d0f8,104,ProjectileTrap,_ZNK14ProjectileTrap9GetDataIdEv,ProjectileTrap::GetDataId() const
+39d16c,84,ProjectileTrap,_ZN14ProjectileTrap8InitPostEv,ProjectileTrap::InitPost()
+39d1d0,4,ProjectileTrap,_ZN14ProjectileTrap17DeclarePropertiesEv,ProjectileTrap::DeclareProperties()
+39d1dc,56,ProjectileTrap,_ZN14ProjectileTrapD1Ev,ProjectileTrap::~ProjectileTrap()
+39d224,20,ProjectileTrap,_ZN14ProjectileTrapD0Ev,ProjectileTrap::~ProjectileTrap()
+39d240,56,ProjectileTrap,_ZN14ProjectileTrapD2Ev,ProjectileTrap::~ProjectileTrap()
+39d280,56,ProjectileTrap,_ZN14ProjectileTrapC1EN10ObjectBase6GO_IDSE,ProjectileTrap::ProjectileTrap(ObjectBase::GO_IDS)
+39d2c0,56,ProjectileTrap,_ZN14ProjectileTrapC2EN10ObjectBase6GO_IDSE,ProjectileTrap::ProjectileTrap(ObjectBase::GO_IDS)
+39d430,236,ProjectileTrap,_ZN14ProjectileTrap8ActivateEv,ProjectileTrap::Activate()
+3964a0,8,RoomZone,_ZNK8RoomZone9IsZonableEv,RoomZone::IsZonable() const
+3964a8,20,RoomZone,_ZNK8RoomZone14HasBeenVisitedEv,RoomZone::HasBeenVisited() const
+3964bc,16,RoomZone,_ZN8RoomZone10SetVisitedEb,RoomZone::SetVisited(bool)
+3964cc,120,RoomZone,_ZNK8RoomZone9HasInsideERK7Point3DIfE,RoomZone::HasInside(Point3D<float> const&) const
+396544,4,RoomZone,_ZNK8RoomZone4DrawEv,RoomZone::Draw() const
+396548,4,RoomZone,_ZN8RoomZone8InitPostEv,RoomZone::InitPost()
+396554,4,RoomZone,_ZN8RoomZone17DeclarePropertiesEv,RoomZone::DeclareProperties()
+396558,100,RoomZone,_ZN8RoomZoneC1EN10ObjectBase6GO_IDSE,RoomZone::RoomZone(ObjectBase::GO_IDS)
+3965c4,100,RoomZone,_ZN8RoomZoneC2EN10ObjectBase6GO_IDSE,RoomZone::RoomZone(ObjectBase::GO_IDS)
+39672c,116,RoomZone,_ZN8RoomZone9AddObjectEP10GameObject,RoomZone::AddObject(GameObject*)
+3967a0,120,RoomZone,_ZN8RoomZoneD2Ev,RoomZone::~RoomZone()
+396828,120,RoomZone,_ZN8RoomZoneD1Ev,RoomZone::~RoomZone()
+3968b0,20,RoomZone,_ZN8RoomZoneD0Ev,RoomZone::~RoomZone()
+3968cc,76,RoomZone,_ZN8RoomZone12RemoveObjectEP10GameObject,RoomZone::RemoveObject(GameObject*)
+396918,340,RoomZone,_ZN8RoomZone10DeActivateEv,RoomZone::DeActivate()
+396a90,416,RoomZone,_ZN8RoomZone16AddInitialObjectEP10GameObject,RoomZone::AddInitialObject(GameObject*)
+396c44,216,RoomZone,_ZN8RoomZone14InitObjectListEv,RoomZone::InitObjectList()
+396d24,340,RoomZone,_ZN8RoomZone8ActivateEv,RoomZone::Activate()
+396e9c,220,RoomZone,_ZN8RoomZone6UpdateEv,RoomZone::Update()
+35c058,52,RootSceneNode,_ZN13RootSceneNode18ResetDebugCountersEv,RootSceneNode::ResetDebugCounters()
+35c09c,88,RootSceneNode,_ZN13RootSceneNode11ForwardAnimEj,RootSceneNode::ForwardAnim(unsigned int)
+35c0f4,92,RootSceneNode,_ZN13RootSceneNode12onUpdateTimeEj,RootSceneNode::onUpdateTime(unsigned int)
+35c268,4,RootSceneNode,_ZN13RootSceneNode14PlainOnAnimateEj,RootSceneNode::PlainOnAnimate(unsigned int)
+35c26c,16,RootSceneNode,_ZN13RootSceneNode10setVisibleEb,RootSceneNode::setVisible(bool)
+35c27c,32,RootSceneNode,_ZN13RootSceneNode22updateAbsolutePositionEb,RootSceneNode::updateAbsolutePosition(bool)
+35c51c,536,RootSceneNode,_ZN13RootSceneNode25UpdateEnlargedViewFrustumEPN6glitch5scene13CSceneManagerE,RootSceneNode::UpdateEnlargedViewFrustum(glitch::scene::CSceneManager*)
+35c784,156,RootSceneNode,_ZNK13RootSceneNode17IsVisibleFastTestEv,RootSceneNode::IsVisibleFastTest() const
+35c854,48,RootSceneNode,_ZN13RootSceneNode18RefreshBoundingBoxEv,RootSceneNode::RefreshBoundingBox()
+35cc0c,208,RootSceneNode,_ZN13RootSceneNode21ResetPositionFromFileEv,RootSceneNode::ResetPositionFromFile()
+35ccdc,112,RootSceneNode,_ZN13RootSceneNode11GetAnimRootEb,RootSceneNode::GetAnimRoot(bool)
+35cd5c,212,RootSceneNode,_ZN13RootSceneNode10_CalcDeltaERN6glitch4core8vector3dIfEE,RootSceneNode::_CalcDelta(glitch::core::vector3d<float>&)
+35ce6c,196,RootSceneNode,_ZN13RootSceneNode11_ResetDeltaEj,RootSceneNode::_ResetDelta(unsigned int)
+35cf48,96,RootSceneNode,_ZN13RootSceneNode19_HandleDisplacementEj,RootSceneNode::_HandleDisplacement(unsigned int)
+35d168,632,RootSceneNode,_ZN13RootSceneNode9onAnimateEj,RootSceneNode::onAnimate(unsigned int)
+35d4cc,344,RootSceneNode,_ZN13RootSceneNode19_EnableDisplacementEb,RootSceneNode::_EnableDisplacement(bool)
+35d624,88,RootSceneNode,_ZN13RootSceneNode7NewAnimEb,RootSceneNode::NewAnim(bool)
+35d67c,156,RootSceneNode,_ZN13RootSceneNodeD1Ev,RootSceneNode::~RootSceneNode()
+35d748,20,RootSceneNode,_ZN13RootSceneNodeD0Ev,RootSceneNode::~RootSceneNode()
+35d764,164,RootSceneNode,_ZN13RootSceneNodeD2Ev,RootSceneNode::~RootSceneNode()
+35d824,128,RootSceneNode,_ZN13RootSceneNodeC1ERKN6glitch7collada16CColladaDatabaseE,RootSceneNode::RootSceneNode(glitch::collada::CColladaDatabase const&)
+35d910,84,RootSceneNode,_ZN13RootSceneNodeC2ERKN6glitch7collada16CColladaDatabaseE,RootSceneNode::RootSceneNode(glitch::collada::CColladaDatabase const&)
+350e5c,36,SceneManager,_ZN12SceneManager12SearchByTypeEPN6glitch5scene10ISceneNodeERSt6vectorIS3_NS0_4core10SAllocatorIS3_LNS0_6memory13E_MEMORY_HINTE0EEEENS1_17E_SCENE_NODE_TYPEE,"SceneManager::SearchByType(glitch::scene::ISceneNode*, std::vector<glitch::scene::ISceneNode*, glitch::core::SAllocator<glitch::scene::ISceneNode*, (glitch::memory::E_MEMORY_HINT)0> >&, glitch::scene::E_SCENE_NODE_TYPE)"
+350e80,12,SceneManager,_ZN12SceneManager10DisableFogEPN6glitch5scene10ISceneNodeE,SceneManager::DisableFog(glitch::scene::ISceneNode*)
+350e8c,84,SceneManager,_ZN12SceneManager13DBG_PrintNodeEPN6glitch5scene10ISceneNodeEbj,"SceneManager::DBG_PrintNode(glitch::scene::ISceneNode*, bool, unsigned int)"
+350ee0,16,SceneManager,_ZN12SceneManager13ForceRegisterEv,SceneManager::ForceRegister()
+350ef0,16,SceneManager,_ZN12SceneManager28setSceneNodeCustomRenderPassE31E_SCENE_NODE_CUSTOM_RENDER_PASS,SceneManager::setSceneNodeCustomRenderPass(E_SCENE_NODE_CUSTOM_RENDER_PASS)
+352154,100,SceneManager,_ZN12SceneManager14DBG_DrawCircleERK7Point2DIfEffRKN6glitch5video6SColorE,"SceneManager::DBG_DrawCircle(Point2D<float> const&, float, float, glitch::video::SColor const&)"
+3522f8,68,SceneManager,_ZN12SceneManager9UpdateFogEffRK7Point3DIfE,"SceneManager::UpdateFog(float, float, Point3D<float> const&)"
+35233c,136,SceneManager,_ZN12SceneManager9EnableFogEffRK7Point3DIfEPN6glitch5scene10ISceneNodeE,"SceneManager::EnableFog(float, float, Point3D<float> const&, glitch::scene::ISceneNode*)"
+3523c4,208,SceneManager,_ZN12SceneManager12SetCustomFogERN5boost13intrusive_ptrIN6glitch5video9CMaterialEEENS2_4core8vector3dIfEES9_S9_,"SceneManager::SetCustomFog(boost::intrusive_ptr<glitch::video::CMaterial>&, glitch::core::vector3d<float>, glitch::core::vector3d<float>, glitch::core::vector3d<float>)"
+3524a0,276,SceneManager,_ZN12SceneManager12AddNodeToMapEPN6glitch5scene10ISceneNodeE,SceneManager::AddNodeToMap(glitch::scene::ISceneNode*)
+3525b4,176,SceneManager,_ZN12SceneManager18SetMaterialTextureEN5boost13intrusive_ptrIN6glitch5video9CMaterialEEES5_,"SceneManager::SetMaterialTexture(boost::intrusive_ptr<glitch::video::CMaterial>, boost::intrusive_ptr<glitch::video::CMaterial>)"
+352668,288,SceneManager,_ZN12SceneManager34SetShadowProjectionMaterialEffectsEN5boost13intrusive_ptrIN6glitch5video9CMaterialEEENS2_4core8vector3dIfEEff,"SceneManager::SetShadowProjectionMaterialEffects(boost::intrusive_ptr<glitch::video::CMaterial>, glitch::core::vector3d<float>, float, float)"
+3527fc,180,SceneManager,_ZN12SceneManager18SetMaterialEffectsEN5boost13intrusive_ptrIN6glitch5video9CMaterialEEENS2_4core8vector3dIfEEff,"SceneManager::SetMaterialEffects(boost::intrusive_ptr<glitch::video::CMaterial>, glitch::core::vector3d<float>, float, float)"
+352a2c,120,SceneManager,_ZN12SceneManager15ChangeTechniqueEN5boost13intrusive_ptrIN6glitch5video9CMaterialEEEPKc,"SceneManager::ChangeTechnique(boost::intrusive_ptr<glitch::video::CMaterial>, char const*)"
+352aa4,208,SceneManager,_ZN12SceneManager12SearchByNameEPN6glitch5scene10ISceneNodeEPFvS3_ERKSsb,"SceneManager::SearchByName(glitch::scene::ISceneNode*, void (*)(glitch::scene::ISceneNode*), std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)"
+352b74,200,SceneManager,_ZN12SceneManager12SearchByNameEPN6glitch5scene10ISceneNodeERKSsb,"SceneManager::SearchByName(glitch::scene::ISceneNode*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)"
+352c3c,256,SceneManager,_ZN12SceneManagerC1EPN6glitch5video12IVideoDriverEN5boost13intrusive_ptrINS0_2io11IFileSystemEEEPNS0_3gui14ICursorControlEPNS9_15IGUIEnvironmentE,"SceneManager::SceneManager(glitch::video::IVideoDriver*, boost::intrusive_ptr<glitch::io::IFileSystem>, glitch::gui::ICursorControl*, glitch::gui::IGUIEnvironment*)"
+352d4c,200,SceneManager,_ZN12SceneManagerC2EPN6glitch5video12IVideoDriverEN5boost13intrusive_ptrINS0_2io11IFileSystemEEEPNS0_3gui14ICursorControlEPNS9_15IGUIEnvironmentE,"SceneManager::SceneManager(glitch::video::IVideoDriver*, boost::intrusive_ptr<glitch::io::IFileSystem>, glitch::gui::ICursorControl*, glitch::gui::IGUIEnvironment*)"
+352fa8,1280,SceneManager,_ZN12SceneManager17AutoLoadNormalMapEN5boost13intrusive_ptrIN6glitch5video9CMaterialEEE,SceneManager::AutoLoadNormalMap(boost::intrusive_ptr<glitch::video::CMaterial>)
+3535d0,124,SceneManager,_ZN12SceneManager12SearchByTypeEPN6glitch5scene10ISceneNodeEPFvS3_ENS1_17E_SCENE_NODE_TYPEE,"SceneManager::SearchByType(glitch::scene::ISceneNode*, void (*)(glitch::scene::ISceneNode*), glitch::scene::E_SCENE_NODE_TYPE)"
+353afc,156,SceneManager,_ZN12SceneManager19registerSkinnedMeshEP22SkinnedMeshSceneNodeEx,SceneManager::registerSkinnedMesh(SkinnedMeshSceneNodeEx*)
+353bac,208,SceneManager,_ZN12SceneManager25_RegisterAutomacticLightsEv,SceneManager::_RegisterAutomacticLights()
+353dec,356,SceneManager,_ZN12SceneManager16renderCustomListIN6glitch5scene13CSceneManager18SUnsortedNodeEntryEEEv31E_SCENE_NODE_CUSTOM_RENDER_PASSRSt6vectorIT_NS1_4core10SAllocatorIS7_LNS1_6memory13E_MEMORY_HINTE0EEEE,"void SceneManager::renderCustomList<glitch::scene::CSceneManager::SUnsortedNodeEntry>(E_SCENE_NODE_CUSTOM_RENDER_PASS, std::vector<glitch::scene::CSceneManager::SUnsortedNodeEntry, glitch::core::SAllocator<glitch::scene::CSceneManager::SUnsortedNodeEntry, (glitch::memory::E_MEMORY_HINT)0> >&)"
+354468,280,SceneManager,_ZN12SceneManager5clearEv,SceneManager::clear()
+354588,500,SceneManager,_ZN12SceneManager13DBG_WireFrameEbPN6glitch5scene10ISceneNodeE,"SceneManager::DBG_WireFrame(bool, glitch::scene::ISceneNode*)"
+35477c,548,SceneManager,_ZN12SceneManager11SetMaskXrayEPN6glitch5scene10ISceneNodeEb,"SceneManager::SetMaskXray(glitch::scene::ISceneNode*, bool)"
+3549a0,396,SceneManager,_ZN12SceneManager14UpdateLightSetEiRSt6vectorIbSaIbEEPN6glitch5scene10ISceneNodeE,"SceneManager::UpdateLightSet(int, std::vector<bool, std::allocator<bool> >&, glitch::scene::ISceneNode*)"
+354b2c,396,SceneManager,_ZN12SceneManager17AutoLoadNormalMapEPN6glitch5scene10ISceneNodeE,SceneManager::AutoLoadNormalMap(glitch::scene::ISceneNode*)
+354cb8,468,SceneManager,_ZN12SceneManager18SetMaterialEffectsEPN6glitch5scene10ISceneNodeENS0_4core8vector3dIfEEff,"SceneManager::SetMaterialEffects(glitch::scene::ISceneNode*, glitch::core::vector3d<float>, float, float)"
+355000,484,SceneManager,_ZN12SceneManager11GetMaterialEPN6glitch5scene10ISceneNodeERKSsb,"SceneManager::GetMaterial(glitch::scene::ISceneNode*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)"
+3551e4,624,SceneManager,_ZN12SceneManager21ChangeCommonTechniqueEN5boost13intrusive_ptrIN6glitch5video9CMaterialEEEbbb,"SceneManager::ChangeCommonTechnique(boost::intrusive_ptr<glitch::video::CMaterial>, bool, bool, bool)"
+355484,624,SceneManager,_ZN12SceneManager29ResetCommonTechniqueToDefaultEPN6glitch5scene10ISceneNodeEbbb,"SceneManager::ResetCommonTechniqueToDefault(glitch::scene::ISceneNode*, bool, bool, bool)"
+355704,372,SceneManager,_ZN12SceneManager25ChangeCustomXrayTechniqueEN5boost13intrusive_ptrIN6glitch5video9CMaterialEEEbbb,"SceneManager::ChangeCustomXrayTechnique(boost::intrusive_ptr<glitch::video::CMaterial>, bool, bool, bool)"
+355890,324,SceneManager,_ZN12SceneManager37ChangeCustomShadowProjectionTechniqueEN5boost13intrusive_ptrIN6glitch5video9CMaterialEEEbb,"SceneManager::ChangeCustomShadowProjectionTechnique(boost::intrusive_ptr<glitch::video::CMaterial>, bool, bool)"
+3559e8,516,SceneManager,_ZN12SceneManager45ResetCustomShadowProjectionTechniqueToDefaultEPN6glitch5scene10ISceneNodeEbb,"SceneManager::ResetCustomShadowProjectionTechniqueToDefault(glitch::scene::ISceneNode*, bool, bool)"
+355bf0,112,SceneManager,_ZN12SceneManager21ChangeCustomTechniqueEN5boost13intrusive_ptrIN6glitch5video9CMaterialEEEbbNS_10EForceBoolEbbb,"SceneManager::ChangeCustomTechnique(boost::intrusive_ptr<glitch::video::CMaterial>, bool, bool, SceneManager::EForceBool, bool, bool, bool)"
+356434,680,SceneManager,_ZN12SceneManager29ResetCustomTechniqueToDefaultEPN6glitch5scene10ISceneNodeEbbNS_10EForceBoolEbbb,"SceneManager::ResetCustomTechniqueToDefault(glitch::scene::ISceneNode*, bool, bool, SceneManager::EForceBool, bool, bool, bool)"
+3566ec,372,SceneManager,_ZN12SceneManager15ChangeTechniqueEPN6glitch5scene10ISceneNodeEPKcS5_i,"SceneManager::ChangeTechnique(glitch::scene::ISceneNode*, char const*, char const*, int)"
+356878,160,SceneManager,_ZN12SceneManagerD2Ev,SceneManager::~SceneManager()
+356bec,160,SceneManager,_ZN12SceneManagerD1Ev,SceneManager::~SceneManager()
+356c9c,20,SceneManager,_ZN12SceneManagerD0Ev,SceneManager::~SceneManager()
+357780,448,SceneManager,_ZN12SceneManager16renderCustomListIN6glitch5scene13CSceneManager17SDefaultNodeEntryEEEv31E_SCENE_NODE_CUSTOM_RENDER_PASSRSt6vectorIT_NS1_4core10SAllocatorIS7_LNS1_6memory13E_MEMORY_HINTE0EEEE,"void SceneManager::renderCustomList<glitch::scene::CSceneManager::SDefaultNodeEntry>(E_SCENE_NODE_CUSTOM_RENDER_PASS, std::vector<glitch::scene::CSceneManager::SDefaultNodeEntry, glitch::core::SAllocator<glitch::scene::CSceneManager::SDefaultNodeEntry, (glitch::memory::E_MEMORY_HINT)0> >&)"
+357dc0,228,SceneManager,_ZN12SceneManager16clearRenderListsEv,SceneManager::clearRenderLists()
+357ea4,336,SceneManager,_ZN12SceneManager19_registerSceneNodesEPN6glitch5scene10ISceneNodeE,SceneManager::_registerSceneNodes(glitch::scene::ISceneNode*)
+358008,1556,SceneManager,_ZN12SceneManager17renderCustomListsEPN6glitch5video12IVideoDriverE,SceneManager::renderCustomLists(glitch::video::IVideoDriver*)
+3586ac,244,SceneManager,_ZN12SceneManager12SearchByNameEPN6glitch5scene10ISceneNodeERSt6vectorIS3_NS0_4core10SAllocatorIS3_LNS0_6memory13E_MEMORY_HINTE0EEEERKSsb,"SceneManager::SearchByName(glitch::scene::ISceneNode*, std::vector<glitch::scene::ISceneNode*, glitch::core::SAllocator<glitch::scene::ISceneNode*, (glitch::memory::E_MEMORY_HINT)0> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)"
+3587a0,2832,SceneManager,_ZN12SceneManager12_renderListsEPN6glitch5video12IVideoDriverE,SceneManager::_renderLists(glitch::video::IVideoDriver*)
+3592b0,136,SceneManager,_ZN12SceneManager8_drawAllEPN6glitch5scene10ISceneNodeE,SceneManager::_drawAll(glitch::scene::ISceneNode*)
+359338,344,SceneManager,_ZN12SceneManager7drawAllEPN6glitch5scene10ISceneNodeE,SceneManager::drawAll(glitch::scene::ISceneNode*)
+3594a4,560,SceneManager,_ZN12SceneManager9LoadFXLibEPKcS1_,"SceneManager::LoadFXLib(char const*, char const*)"
+3596f8,712,SceneManager,_ZN12SceneManager9LoadSceneEPKcS1_bb,"SceneManager::LoadScene(char const*, char const*, bool, bool)"
+359a38,304,SceneManager,_ZN12SceneManager18AddSkyBoxSceneNodeEPKcS1_,"SceneManager::AddSkyBoxSceneNode(char const*, char const*)"
+359b68,240,SceneManager,_ZN12SceneManager12PreloadSceneEPKcS1_,"SceneManager::PreloadScene(char const*, char const*)"
+359c60,160,SceneManager,_ZN12SceneManager11GetMaterialEPN6glitch5scene10ISceneNodeEPKcb,"SceneManager::GetMaterial(glitch::scene::ISceneNode*, char const*, bool)"
+359d08,200,SceneManager,_ZN12SceneManager26SetMaterialRimLightEffectsEN5boost13intrusive_ptrIN6glitch5video9CMaterialEEEfSs,"SceneManager::SetMaterialRimLightEffects(boost::intrusive_ptr<glitch::video::CMaterial>, float, std::basic_string<char, std::char_traits<char>, std::allocator<char> >)"
+359fac,144,SceneManager,_ZN12SceneManager12SearchByNameEPN6glitch5scene10ISceneNodeERSt6vectorIS3_NS0_4core10SAllocatorIS3_LNS0_6memory13E_MEMORY_HINTE0EEEEPKcb,"SceneManager::SearchByName(glitch::scene::ISceneNode*, std::vector<glitch::scene::ISceneNode*, glitch::core::SAllocator<glitch::scene::ISceneNode*, (glitch::memory::E_MEMORY_HINT)0> >&, char const*, bool)"
+35a044,152,SceneManager,_ZN12SceneManager12SearchByNameEPN6glitch5scene10ISceneNodeEPFvS3_EPKcb,"SceneManager::SearchByName(glitch::scene::ISceneNode*, void (*)(glitch::scene::ISceneNode*), char const*, bool)"
+35a0e4,156,SceneManager,_ZN12SceneManager12SearchByNameEPN6glitch5scene10ISceneNodeEPKcb,"SceneManager::SearchByName(glitch::scene::ISceneNode*, char const*, bool)"
+35a188,580,SceneManager,_ZN12SceneManager26SetMaterialRimLightEffectsEPN6glitch5scene10ISceneNodeEfSs,"SceneManager::SetMaterialRimLightEffects(glitch::scene::ISceneNode*, float, std::basic_string<char, std::char_traits<char>, std::allocator<char> >)"
+35a3d8,1224,SceneManager,_ZN12SceneManager30registerNodeForCustomRenderingEPN6glitch5scene10ISceneNodeERKN5boost13intrusive_ptrINS0_5video9CMaterialEEEPv31E_SCENE_NODE_CUSTOM_RENDER_PASSPKNS0_4core8vector3dIfEEi,"SceneManager::registerNodeForCustomRendering(glitch::scene::ISceneNode*, boost::intrusive_ptr<glitch::video::CMaterial> const&, void*, E_SCENE_NODE_CUSTOM_RENDER_PASS, glitch::core::vector3d<float> const*, int)"
+4558bc,8,Script_ActivateProjectileTrap,_ZNK29Script_ActivateProjectileTrap10IsBlockingEv,Script_ActivateProjectileTrap::IsBlocking() const
+45d3cc,232,Script_ActivateProjectileTrap,_ZN29Script_ActivateProjectileTrap7ExecuteEbi,"Script_ActivateProjectileTrap::Execute(bool, int)"
+4558c4,8,Script_DeactivateProjectileTrap,_ZNK31Script_DeactivateProjectileTrap10IsBlockingEv,Script_DeactivateProjectileTrap::IsBlocking() const
+45d2d4,228,Script_DeactivateProjectileTrap,_ZN31Script_DeactivateProjectileTrap7ExecuteEbi,"Script_DeactivateProjectileTrap::Execute(bool, int)"
+35dcd0,28,ShadowModularSkinnedMeshSceneNode,_ZNK33ShadowModularSkinnedMeshSceneNode14getBoundingBoxEv,ShadowModularSkinnedMeshSceneNode::getBoundingBox() const
+35dcec,28,ShadowModularSkinnedMeshSceneNode,_ZNK33ShadowModularSkinnedMeshSceneNode25getTransformedBoundingBoxEv,ShadowModularSkinnedMeshSceneNode::getTransformedBoundingBox() const
+35f348,324,ShadowModularSkinnedMeshSceneNode,_ZN33ShadowModularSkinnedMeshSceneNode12UpdateShadowEv,ShadowModularSkinnedMeshSceneNode::UpdateShadow()
+35f530,552,ShadowModularSkinnedMeshSceneNode,_ZN33ShadowModularSkinnedMeshSceneNode19onRegisterSceneNodeEv,ShadowModularSkinnedMeshSceneNode::onRegisterSceneNode()
+3601fc,188,ShadowModularSkinnedMeshSceneNode,_ZN33ShadowModularSkinnedMeshSceneNodeD1Ev,ShadowModularSkinnedMeshSceneNode::~ShadowModularSkinnedMeshSceneNode()
+3602cc,20,ShadowModularSkinnedMeshSceneNode,_ZN33ShadowModularSkinnedMeshSceneNodeD0Ev,ShadowModularSkinnedMeshSceneNode::~ShadowModularSkinnedMeshSceneNode()
+3602e8,444,ShadowModularSkinnedMeshSceneNode,_ZN33ShadowModularSkinnedMeshSceneNode10renderMeshEPv,ShadowModularSkinnedMeshSceneNode::renderMesh(void*)
+3604a8,736,ShadowModularSkinnedMeshSceneNode,_ZN33ShadowModularSkinnedMeshSceneNode6renderEPv,ShadowModularSkinnedMeshSceneNode::render(void*)
+360aa8,188,ShadowModularSkinnedMeshSceneNode,_ZN33ShadowModularSkinnedMeshSceneNodeD2Ev,ShadowModularSkinnedMeshSceneNode::~ShadowModularSkinnedMeshSceneNode()
+361298,1808,ShadowModularSkinnedMeshSceneNode,_ZN33ShadowModularSkinnedMeshSceneNode24regenerateShadowMaterialEv,ShadowModularSkinnedMeshSceneNode::regenerateShadowMaterial()
+3619c8,216,ShadowModularSkinnedMeshSceneNode,_ZN33ShadowModularSkinnedMeshSceneNodeC1EN5boost13intrusive_ptrIN6glitch7collada5IMeshEEEPKNS2_5scene10ISceneNodeES9_,"ShadowModularSkinnedMeshSceneNode::ShadowModularSkinnedMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh>, glitch::scene::ISceneNode const*, glitch::scene::ISceneNode const*)"
+361ab0,164,ShadowModularSkinnedMeshSceneNode,_ZN33ShadowModularSkinnedMeshSceneNodeC2EN5boost13intrusive_ptrIN6glitch7collada5IMeshEEEPKNS2_5scene10ISceneNodeES9_,"ShadowModularSkinnedMeshSceneNode::ShadowModularSkinnedMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh>, glitch::scene::ISceneNode const*, glitch::scene::ISceneNode const*)"
+35dc98,28,ShadowSkinnedMeshSceneNode,_ZNK26ShadowSkinnedMeshSceneNode14getBoundingBoxEv,ShadowSkinnedMeshSceneNode::getBoundingBox() const
+35dcb4,28,ShadowSkinnedMeshSceneNode,_ZNK26ShadowSkinnedMeshSceneNode25getTransformedBoundingBoxEv,ShadowSkinnedMeshSceneNode::getTransformedBoundingBox() const
+35f780,324,ShadowSkinnedMeshSceneNode,_ZN26ShadowSkinnedMeshSceneNode12UpdateShadowEv,ShadowSkinnedMeshSceneNode::UpdateShadow()
+35ffb8,540,ShadowSkinnedMeshSceneNode,_ZN26ShadowSkinnedMeshSceneNode19onRegisterSceneNodeEv,ShadowSkinnedMeshSceneNode::onRegisterSceneNode()
+3607a0,420,ShadowSkinnedMeshSceneNode,_ZN26ShadowSkinnedMeshSceneNode10renderMeshEPv,ShadowSkinnedMeshSceneNode::renderMesh(void*)
+360948,328,ShadowSkinnedMeshSceneNode,_ZN26ShadowSkinnedMeshSceneNode6renderEPv,ShadowSkinnedMeshSceneNode::render(void*)
+360b7c,212,ShadowSkinnedMeshSceneNode,_ZN26ShadowSkinnedMeshSceneNodeD1Ev,ShadowSkinnedMeshSceneNode::~ShadowSkinnedMeshSceneNode()
+360c60,20,ShadowSkinnedMeshSceneNode,_ZN26ShadowSkinnedMeshSceneNodeD0Ev,ShadowSkinnedMeshSceneNode::~ShadowSkinnedMeshSceneNode()
+360c7c,220,ShadowSkinnedMeshSceneNode,_ZN26ShadowSkinnedMeshSceneNodeD2Ev,ShadowSkinnedMeshSceneNode::~ShadowSkinnedMeshSceneNode()
+361b54,928,ShadowSkinnedMeshSceneNode,_ZN26ShadowSkinnedMeshSceneNodeC1EN5boost13intrusive_ptrIN6glitch7collada5IMeshEEEPKNS2_5scene10ISceneNodeE,"ShadowSkinnedMeshSceneNode::ShadowSkinnedMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh>, glitch::scene::ISceneNode const*)"
+361f24,884,ShadowSkinnedMeshSceneNode,_ZN26ShadowSkinnedMeshSceneNodeC2EN5boost13intrusive_ptrIN6glitch7collada5IMeshEEEPKNS2_5scene10ISceneNodeE,"ShadowSkinnedMeshSceneNode::ShadowSkinnedMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh>, glitch::scene::ISceneNode const*)"
+35a914,44,SkinnedMeshSceneNode,_ZN20SkinnedMeshSceneNode19onRegisterSceneNodeEv,SkinnedMeshSceneNode::onRegisterSceneNode()
+35a974,52,SkinnedMeshSceneNode,_ZN20SkinnedMeshSceneNode22updateAbsolutePositionEb,SkinnedMeshSceneNode::updateAbsolutePosition(bool)
+35ad8c,208,SkinnedMeshSceneNode,_ZN20SkinnedMeshSceneNode23prepareSkinForRenderingEv,SkinnedMeshSceneNode::prepareSkinForRendering()
+35b0a0,120,SkinnedMeshSceneNode,_ZN20SkinnedMeshSceneNodeC1ERKN5boost13intrusive_ptrIN6glitch7collada5IMeshEEE,SkinnedMeshSceneNode::SkinnedMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh> const&)
+35b128,104,SkinnedMeshSceneNode,_ZN20SkinnedMeshSceneNodeC2ERKN5boost13intrusive_ptrIN6glitch7collada5IMeshEEE,SkinnedMeshSceneNode::SkinnedMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh> const&)
+35b860,136,SkinnedMeshSceneNode,_ZN20SkinnedMeshSceneNodeD1Ev,SkinnedMeshSceneNode::~SkinnedMeshSceneNode()
+35b8f4,20,SkinnedMeshSceneNode,_ZN20SkinnedMeshSceneNodeD0Ev,SkinnedMeshSceneNode::~SkinnedMeshSceneNode()
+35b910,164,SkinnedMeshSceneNode,_ZN20SkinnedMeshSceneNodeD2Ev,SkinnedMeshSceneNode::~SkinnedMeshSceneNode()
+36233c,12,SkyBoxMeshSceneNode,_ZNK19SkyBoxMeshSceneNode7getTypeEv,SkyBoxMeshSceneNode::getType() const
+362398,144,SkyBoxMeshSceneNode,_ZN19SkyBoxMeshSceneNode6renderEPv,SkyBoxMeshSceneNode::render(void*)
+3625d0,328,SkyBoxMeshSceneNode,_ZN19SkyBoxMeshSceneNode19onRegisterSceneNodeEv,SkyBoxMeshSceneNode::onRegisterSceneNode()
+362718,104,SkyBoxMeshSceneNode,_ZN19SkyBoxMeshSceneNodeD1Ev,SkyBoxMeshSceneNode::~SkyBoxMeshSceneNode()
+36278c,20,SkyBoxMeshSceneNode,_ZN19SkyBoxMeshSceneNodeD0Ev,SkyBoxMeshSceneNode::~SkyBoxMeshSceneNode()
+3627a8,104,SkyBoxMeshSceneNode,_ZN19SkyBoxMeshSceneNodeD2Ev,SkyBoxMeshSceneNode::~SkyBoxMeshSceneNode()
+362810,380,SkyBoxMeshSceneNode,_ZN19SkyBoxMeshSceneNodeC1ERKN5boost13intrusive_ptrIN6glitch7collada5IMeshEEEPNS2_5scene14IMeshSceneNodeE,"SkyBoxMeshSceneNode::SkyBoxMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh> const&, glitch::scene::IMeshSceneNode*)"
+36299c,332,SkyBoxMeshSceneNode,_ZN19SkyBoxMeshSceneNodeC2ERKN5boost13intrusive_ptrIN6glitch7collada5IMeshEEEPNS2_5scene14IMeshSceneNodeE,"SkyBoxMeshSceneNode::SkyBoxMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh> const&, glitch::scene::IMeshSceneNode*)"
+3a2090,8,SlotContainer,_ZNK13SlotContainer11IsUpdatableEv,SlotContainer::IsUpdatable() const
+3a2098,64,SlotContainer,_ZNK13SlotContainer21GetLootFixedNumPowersEv,SlotContainer::GetLootFixedNumPowers() const
+3a20d8,328,SlotContainer,_ZN13SlotContainer6UpdateEv,SlotContainer::Update()
+3a244c,132,SlotContainer,_ZN13SlotContainerD1Ev,SlotContainer::~SlotContainer()
+3a24f0,20,SlotContainer,_ZN13SlotContainerD0Ev,SlotContainer::~SlotContainer()
+3a250c,76,SlotContainer,_ZN13SlotContainerD2Ev,SlotContainer::~SlotContainer()
+3a2640,840,SlotContainer,_ZN13SlotContainer8InitPostEv,SlotContainer::InitPost()
+3a2bcc,80,SlotContainer,_ZN13SlotContainerC1EN10ObjectBase6GO_IDSE,SlotContainer::SlotContainer(ObjectBase::GO_IDS)
+3a2c54,80,SlotContainer,_ZN13SlotContainerC2EN10ObjectBase6GO_IDSE,SlotContainer::SlotContainer(ObjectBase::GO_IDS)
+3a2ce4,72,SlotContainer,_ZN13SlotContainer17DeclarePropertiesEv,SlotContainer::DeclareProperties()
+394ec0,4,SoundEmitter,_ZNK12SoundEmitter4DrawEv,SoundEmitter::Draw() const
+394ec4,8,SoundEmitter,_ZNK12SoundEmitter9IsZonableEv,SoundEmitter::IsZonable() const
+394ecc,8,SoundEmitter,_ZNK12SoundEmitter11IsUpdatableEv,SoundEmitter::IsUpdatable() const
+395144,112,SoundEmitter,_ZN12SoundEmitter8InitPostEv,SoundEmitter::InitPost()
+3951c0,152,SoundEmitter,_ZN12SoundEmitter6UpdateEv,SoundEmitter::Update()
+3953e0,96,SoundEmitter,_ZN12SoundEmitterD1Ev,SoundEmitter::~SoundEmitter()
+395474,20,SoundEmitter,_ZN12SoundEmitterD0Ev,SoundEmitter::~SoundEmitter()
+395490,96,SoundEmitter,_ZN12SoundEmitterD2Ev,SoundEmitter::~SoundEmitter()
+39551c,76,SoundEmitter,_ZN12SoundEmitterC1EN10ObjectBase6GO_IDSE,SoundEmitter::SoundEmitter(ObjectBase::GO_IDS)
+3955a8,76,SoundEmitter,_ZN12SoundEmitterC2EN10ObjectBase6GO_IDSE,SoundEmitter::SoundEmitter(ObjectBase::GO_IDS)
+395718,176,SoundEmitter,_ZN12SoundEmitter17DeclarePropertiesEv,SoundEmitter::DeclareProperties()
+39d524,56,TimerTrap,_ZNK9TimerTrap9GetScriptEv,TimerTrap::GetScript() const
+39d568,44,TimerTrap,_ZNK9TimerTrap9GetVisualEv,TimerTrap::GetVisual() const
+39d59c,44,TimerTrap,_ZNK9TimerTrap12GetDamagerIdEv,TimerTrap::GetDamagerId() const
+39d5d0,68,TimerTrap,_ZNK9TimerTrap13GetHurtChanceEv,TimerTrap::GetHurtChance() const
+39d61c,44,TimerTrap,_ZNK9TimerTrap8GetSoundEv,TimerTrap::GetSound() const
+39d650,48,TimerTrap,_ZNK9TimerTrap8GetDelayEv,TimerTrap::GetDelay() const
+39d688,148,TimerTrap,_ZN9TimerTrap14SpecificUpdateEv,TimerTrap::SpecificUpdate()
+39d724,332,TimerTrap,_ZN9TimerTrap6CreateEP10GameObjectii,"TimerTrap::Create(GameObject*, int, int)"
+39d904,104,TimerTrap,_ZNK9TimerTrap9GetDataIdEv,TimerTrap::GetDataId() const
+39d978,36,TimerTrap,_ZN9TimerTrap8InitPostEv,TimerTrap::InitPost()
+39d9a4,4,TimerTrap,_ZN9TimerTrap17DeclarePropertiesEv,TimerTrap::DeclareProperties()
+39d9b0,56,TimerTrap,_ZN9TimerTrapD1Ev,TimerTrap::~TimerTrap()
+39d9f8,20,TimerTrap,_ZN9TimerTrapD0Ev,TimerTrap::~TimerTrap()
+39da14,56,TimerTrap,_ZN9TimerTrapD2Ev,TimerTrap::~TimerTrap()
+39da54,64,TimerTrap,_ZN9TimerTrapC1EN10ObjectBase6GO_IDSE,TimerTrap::TimerTrap(ObjectBase::GO_IDS)
+39da9c,64,TimerTrap,_ZN9TimerTrapC2EN10ObjectBase6GO_IDSE,TimerTrap::TimerTrap(ObjectBase::GO_IDS)
+398768,8,Trigger,_ZNK7Trigger9IsZonableEv,Trigger::IsZonable() const
+398770,36,Trigger,_ZNK7Trigger17IsRemotelyUpdatedEv,Trigger::IsRemotelyUpdated() const
+398794,24,Trigger,_ZN7Trigger8ActivateEv,Trigger::Activate()
+3987ac,48,Trigger,_ZNK7Trigger11CanActivateEv,Trigger::CanActivate() const
+3987dc,28,Trigger,_ZN7Trigger26InterpretIncomingNetStructEb,Trigger::InterpretIncomingNetStruct(bool)
+3987f8,4,Trigger,_ZNK7Trigger22GetNumPlayerActivatingEv,Trigger::GetNumPlayerActivating() const
+3987fc,52,Trigger,_ZN7Trigger11UpdateTimerEv,Trigger::UpdateTimer()
+398838,60,Trigger,_ZN7Trigger6UpdateEv,Trigger::Update()
+398874,4,Trigger,_ZN7Trigger8InitPostEv,Trigger::InitPost()
+39890c,92,Trigger,_ZN7Trigger11DeserializeEP11IStreamBase,Trigger::Deserialize(IStreamBase*)
+398978,44,Trigger,_ZN7Trigger9SerializeEP11IStreamBase,Trigger::Serialize(IStreamBase*)
+398a88,188,Trigger,_ZN7Trigger17DeclarePropertiesEv,Trigger::DeclareProperties()
+398b5c,112,Trigger,_ZN7Trigger16NetStructTriggerD1Ev,Trigger::NetStructTrigger::~NetStructTrigger()
+398bd8,444,Trigger,_ZN7Trigger25PopulateOutgoingNetStructEb,Trigger::PopulateOutgoingNetStruct(bool)
+398da4,400,Trigger,_ZN7Trigger16NetStructTriggerC1Ev,Trigger::NetStructTrigger::NetStructTrigger()
+398f44,136,Trigger,_ZN7TriggerC1EN10ObjectBase6GO_IDSEbb,"Trigger::Trigger(ObjectBase::GO_IDS, bool, bool)"
+398fd4,136,Trigger,_ZN7TriggerC2EN10ObjectBase6GO_IDSEbb,"Trigger::Trigger(ObjectBase::GO_IDS, bool, bool)"
+399064,112,Trigger,_ZN7Trigger16NetStructTriggerD0Ev,Trigger::NetStructTrigger::~NetStructTrigger()
+3990f0,240,Trigger,_ZN7TriggerD1Ev,Trigger::~Trigger()
+3991f8,20,Trigger,_ZN7TriggerD0Ev,Trigger::~Trigger()
+399214,240,Trigger,_ZN7TriggerD2Ev,Trigger::~Trigger()
+399318,8,TriggerObject,_ZNK13TriggerObject11IsUpdatableEv,TriggerObject::IsUpdatable() const
+399320,8,TriggerObject,_ZNK13TriggerObject9IsZonableEv,TriggerObject::IsZonable() const
+399328,8,TriggerObject,_ZNK13TriggerObject10IsAnimatedEv,TriggerObject::IsAnimated() const
+399330,48,TriggerObject,_ZNK13TriggerObject18GetInteractionTypeEP10GameObject,TriggerObject::GetInteractionType(GameObject*) const
+39939c,32,TriggerObject,_ZN13TriggerObject26InterpretIncomingNetStructEb,TriggerObject::InterpretIncomingNetStruct(bool)
+3993bc,200,TriggerObject,_ZN13TriggerObject19TestInteractiveCondEv,TriggerObject::TestInteractiveCond()
+399490,24,TriggerObject,_ZNK13TriggerObject13IsInteractiveEP10GameObject,TriggerObject::IsInteractive(GameObject*) const
+3994a8,204,TriggerObject,_ZN13TriggerObject6UpdateEv,TriggerObject::Update()
+399580,268,TriggerObject,_ZN13TriggerObject11DeserializeEP11IStreamBase,TriggerObject::Deserialize(IStreamBase*)
+3996a4,4,TriggerObject,_ZN13TriggerObject9SerializeEP11IStreamBase,TriggerObject::Serialize(IStreamBase*)
+39993c,132,TriggerObject,_ZN13TriggerObjectD1Ev,TriggerObject::~TriggerObject()
+3999d8,20,TriggerObject,_ZN13TriggerObjectD0Ev,TriggerObject::~TriggerObject()
+3999f4,132,TriggerObject,_ZN13TriggerObjectD2Ev,TriggerObject::~TriggerObject()
+399af0,572,TriggerObject,_ZN13TriggerObject8InteractEP10GameObject,TriggerObject::Interact(GameObject*)
+399d70,112,TriggerObject,_ZN13TriggerObject17DeclarePropertiesEv,TriggerObject::DeclareProperties()
+399df0,92,TriggerObject,_ZN13TriggerObjectC1Ev,TriggerObject::TriggerObject()
+399ef4,92,TriggerObject,_ZN13TriggerObjectC2Ev,TriggerObject::TriggerObject()
+399ff8,840,TriggerObject,_ZN13TriggerObject8InitPostEv,TriggerObject::InitPost()
+39a394,8,TriggerPlate,_ZNK12TriggerPlate10IsAnimatedEv,TriggerPlate::IsAnimated() const
+39a39c,8,TriggerPlate,_ZNK12TriggerPlate11IsUpdatableEv,TriggerPlate::IsUpdatable() const
+39a3a4,44,TriggerPlate,_ZNK12TriggerPlate9GetVisualEv,TriggerPlate::GetVisual() const
+39a3d8,44,TriggerPlate,_ZNK12TriggerPlate10GetSoundOnEv,TriggerPlate::GetSoundOn() const
+39a40c,44,TriggerPlate,_ZNK12TriggerPlate11GetSoundOffEv,TriggerPlate::GetSoundOff() const
+39a440,44,TriggerPlate,_ZNK12TriggerPlate14GetTriggerTypeEv,TriggerPlate::GetTriggerType() const
+39a474,44,TriggerPlate,_ZNK12TriggerPlate11GetBehaviorEv,TriggerPlate::GetBehavior() const
+39a4a8,44,TriggerPlate,_ZNK12TriggerPlate17GetSpecificObjectEv,TriggerPlate::GetSpecificObject() const
+39a510,220,TriggerPlate,_ZNK12TriggerPlate18IsObjectActivatingEi,TriggerPlate::IsObjectActivating(int) const
+39a5ec,124,TriggerPlate,_ZNK12TriggerPlate29GetNumValidContactsActivatingEv,TriggerPlate::GetNumValidContactsActivating() const
+39a668,964,TriggerPlate,_ZN12TriggerPlate6UpdateEv,TriggerPlate::Update()
+39aa68,104,TriggerPlate,_ZNK12TriggerPlate9GetDataIdEv,TriggerPlate::GetDataId() const
+39aae4,52,TriggerPlate,_ZN12TriggerPlateD1Ev,TriggerPlate::~TriggerPlate()
+39ab50,20,TriggerPlate,_ZN12TriggerPlateD0Ev,TriggerPlate::~TriggerPlate()
+39ab6c,52,TriggerPlate,_ZN12TriggerPlateD2Ev,TriggerPlate::~TriggerPlate()
+39ae64,140,TriggerPlate,_ZN12TriggerPlate17DeclarePropertiesEv,TriggerPlate::DeclareProperties()
+39af04,88,TriggerPlate,_ZN12TriggerPlateC1EN10ObjectBase6GO_IDSE,TriggerPlate::TriggerPlate(ObjectBase::GO_IDS)
+39afe0,88,TriggerPlate,_ZN12TriggerPlateC2EN10ObjectBase6GO_IDSE,TriggerPlate::TriggerPlate(ObjectBase::GO_IDS)
+39b0bc,388,TriggerPlate,_ZN12TriggerPlate8InitPostEv,TriggerPlate::InitPost()
+39cadc,8,TriggerTrap,_ZNK11TriggerTrap11IsUpdatableEv,TriggerTrap::IsUpdatable() const
+39cae4,8,TriggerTrap,_ZNK11TriggerTrap10IsAnimatedEv,TriggerTrap::IsAnimated() const
+39caec,8,TriggerTrap,_ZNK11TriggerTrap13IsInteractiveEP10GameObject,TriggerTrap::IsInteractive(GameObject*) const
+39caf4,8,TriggerTrap,_ZNK11TriggerTrap9IsZonableEv,TriggerTrap::IsZonable() const
+39cafc,8,TriggerTrap,_ZNK11TriggerTrap10IsObstacleEv,TriggerTrap::IsObstacle() const
+39cb04,12,TriggerTrap,_ZNK11TriggerTrap17GetObstacleRadiusEv,TriggerTrap::GetObstacleRadius() const
+39cb10,12,TriggerTrap,_ZNK11TriggerTrap19GetObstacleStrengthEv,TriggerTrap::GetObstacleStrength() const
+39cb1c,12,TriggerTrap,_ZNK11TriggerTrap13getUDTypeNameEv,TriggerTrap::getUDTypeName() const
+39dbc0,60,TriggerTrap,_ZNK11TriggerTrap9GetScriptEv,TriggerTrap::GetScript() const
+39dc08,48,TriggerTrap,_ZNK11TriggerTrap9GetVisualEv,TriggerTrap::GetVisual() const
+39dc40,72,TriggerTrap,_ZNK11TriggerTrap12GetDamagerIdEv,TriggerTrap::GetDamagerId() const
+39dc90,72,TriggerTrap,_ZNK11TriggerTrap13GetHurtChanceEv,TriggerTrap::GetHurtChance() const
+39dce0,48,TriggerTrap,_ZNK11TriggerTrap8GetSoundEv,TriggerTrap::GetSound() const
+39dd18,124,TriggerTrap,_ZN11TriggerTrap7_RemoveERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"TriggerTrap::_Remove(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+39dd98,184,TriggerTrap,_ZN11TriggerTrap14createBindingsERN3sfc6script3lua6BinderE,TriggerTrap::createBindings(sfc::script::lua::Binder&)
+39de6c,104,TriggerTrap,_ZNK11TriggerTrap9GetDataIdEv,TriggerTrap::GetDataId() const
+39dee0,428,TriggerTrap,_ZN11TriggerTrap8InitPostEv,TriggerTrap::InitPost()
+39e198,244,TriggerTrap,_ZN11TriggerTrap8ActivateEv,TriggerTrap::Activate()
+39e298,332,TriggerTrap,_ZN11TriggerTrap6CreateEP10GameObjectii,"TriggerTrap::Create(GameObject*, int, int)"
+39e480,204,TriggerTrap,_ZN11TriggerTrapD1Ev,TriggerTrap::~TriggerTrap()
+39e56c,20,TriggerTrap,_ZN11TriggerTrapD0Ev,TriggerTrap::~TriggerTrap()
+39e58c,204,TriggerTrap,_ZN11TriggerTrapD2Ev,TriggerTrap::~TriggerTrap()
+39e670,84,TriggerTrap,_ZN11TriggerTrapC2EN10ObjectBase6GO_IDSE,TriggerTrap::TriggerTrap(ObjectBase::GO_IDS)
+39e738,400,TriggerTrap,_ZN11TriggerTrap10__CallbackEPN6glitch5scene19ITimelineControllerEPv,"TriggerTrap::__Callback(glitch::scene::ITimelineController*, void*)"
+39e8ec,72,TriggerTrap,_ZN11TriggerTrap17DeclarePropertiesEv,TriggerTrap::DeclareProperties()
+39ea64,44,TriggerTrap,_ZN11TriggerTrap11_GetDamagerERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"TriggerTrap::_GetDamager(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+39ea90,12,TriggerTrap,_ZN11TriggerTrap9_GetOwnerERKN3sfc6script3lua9ArgumentsERNS2_12ReturnValuesEPv,"TriggerTrap::_GetOwner(sfc::script::lua::Arguments const&, sfc::script::lua::ReturnValues&, void*)"
+39ea9c,256,TriggerTrap,_ZN11TriggerTrap10CanTriggerEP10GameObject,TriggerTrap::CanTrigger(GameObject*)
+39ec78,88,TriggerTrap,_ZN11TriggerTrap15__EventCallbackERKN6glitch7collada15STriggeredEventEPv,"TriggerTrap::__EventCallback(glitch::collada::STriggeredEvent const&, void*)"
+39ecd4,84,TriggerTrap,_ZN11TriggerTrapC1EN10ObjectBase6GO_IDSE,TriggerTrap::TriggerTrap(ObjectBase::GO_IDS)
+39eedc,644,TriggerTrap,_ZN11TriggerTrap6UpdateEv,TriggerTrap::Update()
+39f168,384,TriggerTrap,_ZN11TriggerTrap15TransferVictimsEv,TriggerTrap::TransferVictims()
+39f2e8,56,TriggerTrap,_ZN11TriggerTrap14SpecificUpdateEv,TriggerTrap::SpecificUpdate()
+39b26c,16,TriggerZone,_ZN11TriggerZone11setUpdatingEb,TriggerZone::setUpdating(bool)
+39b27c,36,TriggerZone,_ZNK11TriggerZone21IsDoorClosedActivatedEv,TriggerZone::IsDoorClosedActivated() const
+39b2a0,76,TriggerZone,_ZNK11TriggerZone23SafeStartScriptOnlyOnceEi,TriggerZone::SafeStartScriptOnlyOnce(int) const
+39b2f4,88,TriggerZone,_ZN11TriggerZone10HideMarkerEv,TriggerZone::HideMarker()
+39b354,232,TriggerZone,_ZN11TriggerZone10ShowMarkerEv,TriggerZone::ShowMarker()
+39b458,748,TriggerZone,_ZN11TriggerZone6UpdateEv,TriggerZone::Update()
+39b754,60,TriggerZone,_ZN11TriggerZoneD1Ev,TriggerZone::~TriggerZone()
+39b7e8,20,TriggerZone,_ZN11TriggerZoneD0Ev,TriggerZone::~TriggerZone()
+39b804,60,TriggerZone,_ZN11TriggerZoneD2Ev,TriggerZone::~TriggerZone()
+39b890,244,TriggerZone,_ZN11TriggerZoneC1EN10ObjectBase6GO_IDSE,TriggerZone::TriggerZone(ObjectBase::GO_IDS)
+39b990,244,TriggerZone,_ZN11TriggerZoneC2EN10ObjectBase6GO_IDSE,TriggerZone::TriggerZone(ObjectBase::GO_IDS)
+39bd70,100,TriggerZone,_ZNK11TriggerZone4DrawEv,TriggerZone::Draw() const
+39bfa4,224,TriggerZone,_ZN11TriggerZone17DeclarePropertiesEv,TriggerZone::DeclareProperties()
+39c0a8,524,TriggerZone,_ZN11TriggerZone8InitPostEv,TriggerZone::InitPost()
+39c33c,820,TriggerZoneExitLevel,_ZN20TriggerZoneExitLevel6UpdateEv,TriggerZoneExitLevel::Update()
+39c68c,52,TriggerZoneExitLevel,_ZN20TriggerZoneExitLevelD1Ev,TriggerZoneExitLevel::~TriggerZoneExitLevel()
+39c6ec,20,TriggerZoneExitLevel,_ZN20TriggerZoneExitLevelD0Ev,TriggerZoneExitLevel::~TriggerZoneExitLevel()
+39c708,52,TriggerZoneExitLevel,_ZN20TriggerZoneExitLevelD2Ev,TriggerZoneExitLevel::~TriggerZoneExitLevel()
+39c8c8,40,TriggerZoneExitLevel,_ZN20TriggerZoneExitLevel8InitPostEv,TriggerZoneExitLevel::InitPost()
+39c8f8,148,TriggerZoneExitLevel,_ZN20TriggerZoneExitLevel17DeclarePropertiesEv,TriggerZoneExitLevel::DeclareProperties()
+39c9a4,88,TriggerZoneExitLevel,_ZN20TriggerZoneExitLevelC1EN10ObjectBase6GO_IDSE,TriggerZoneExitLevel::TriggerZoneExitLevel(ObjectBase::GO_IDS)
+39ca40,88,TriggerZoneExitLevel,_ZN20TriggerZoneExitLevelC2EN10ObjectBase6GO_IDSE,TriggerZoneExitLevel::TriggerZoneExitLevel(ObjectBase::GO_IDS)
+326fcc,232,UnderlaySceneNode,_ZN17UnderlaySceneNode15AddUnderlayNodeEPN6glitch5scene10ISceneNodeE,UnderlaySceneNode::AddUnderlayNode(glitch::scene::ISceneNode*)
+381ad4,84,UnderlaySceneNode,_ZN17UnderlaySceneNodeD1Ev,UnderlaySceneNode::~UnderlaySceneNode()
+381b54,20,UnderlaySceneNode,_ZN17UnderlaySceneNodeD0Ev,UnderlaySceneNode::~UnderlaySceneNode()
+381b90,344,UnderlaySceneNode,_ZN17UnderlaySceneNode6renderEPv,UnderlaySceneNode::render(void*)
+381cf0,180,UnderlaySceneNode,_ZN17UnderlaySceneNode19onRegisterSceneNodeEv,UnderlaySceneNode::onRegisterSceneNode()
+381e48,116,UnderlaySceneNode,_ZNK17UnderlaySceneNode14getBoundingBoxEv,UnderlaySceneNode::getBoundingBox() const
+479f88,16,Vector3DFList,_ZN13Vector3DFListixEi,Vector3DFList::operator[](int)
+479f98,8,Vector3DFList,_ZNK13Vector3DFList8getCountEv,Vector3DFList::getCount() const
+479fa0,40,Vector3DFList,_ZN13Vector3DFList20setCharacterPositionERKN6glitch4core8vector3dIfEE,Vector3DFList::setCharacterPosition(glitch::core::vector3d<float> const&)
+479fc8,36,Vector3DFList,_ZN13Vector3DFList10addClosestERKN6glitch4core8vector3dIfEE,Vector3DFList::addClosest(glitch::core::vector3d<float> const&)
+47a178,92,Vector3DFList,_ZN13Vector3DFList3addERKN6glitch4core8vector3dIfEE,Vector3DFList::add(glitch::core::vector3d<float> const&)
+47a9b4,136,Vector3DFList,_ZN13Vector3DFList6setNewEi,Vector3DFList::setNew(int)
+47bfcc,56,Vector3DFList,_ZN13Vector3DFListD1Ev,Vector3DFList::~Vector3DFList()
+47c014,56,Vector3DFList,_ZN13Vector3DFListD2Ev,Vector3DFList::~Vector3DFList()
+47c05c,124,Vector3DFList,_ZN13Vector3DFListC1Ei,Vector3DFList::Vector3DFList(int)
+47c0d8,124,Vector3DFList,_ZN13Vector3DFListC2Ei,Vector3DFList::Vector3DFList(int)
+47c154,60,Vector3DFList,_ZN13Vector3DFListC1Ev,Vector3DFList::Vector3DFList()
+47c190,60,Vector3DFList,_ZN13Vector3DFListC2Ev,Vector3DFList::Vector3DFList()
+493260,92,VisualFXManager,_ZN15VisualFXManagerC2Ev,VisualFXManager::VisualFXManager()
+4932c4,92,VisualFXManager,_ZN15VisualFXManagerC1Ev,VisualFXManager::VisualFXManager()
+493328,176,VisualFXManager,_ZNK15VisualFXManager22DBG_GetAnimatedFXStatsERjS0_,"VisualFXManager::DBG_GetAnimatedFXStats(unsigned int&, unsigned int&) const"
+4933d8,12,VisualFXManager,_ZN15VisualFXManager17_PreCacheAnimDictEv,VisualFXManager::_PreCacheAnimDict()
+4933e4,164,VisualFXManager,_ZN15VisualFXManager13GetAnimFXDataENS_13AnimFXSetInfoEPNS_13AnimFXSetDataE,"VisualFXManager::GetAnimFXData(VisualFXManager::AnimFXSetInfo, VisualFXManager::AnimFXSetData*)"
+4935b8,152,VisualFXManager,_ZN15VisualFXManager16GetAnimFXSetDataEiiiPK10GameObjectPNS_13AnimFXSetDataE7Point3DIfES6_,"VisualFXManager::GetAnimFXSetData(int, int, int, GameObject const*, VisualFXManager::AnimFXSetData*, Point3D<float>, Point3D<float>)"
+493924,104,VisualFXManager,_ZN15VisualFXManager13AnimFXSetInfoC1ERKS0_,VisualFXManager::AnimFXSetInfo::AnimFXSetInfo(VisualFXManager::AnimFXSetInfo const&)
+493f88,68,VisualFXManager,_ZN15VisualFXManager14AnimatedFXInfoD1Ev,VisualFXManager::AnimatedFXInfo::~AnimatedFXInfo()
+4940d8,116,VisualFXManager,_ZN15VisualFXManager13AnimFXSetInfoD1Ev,VisualFXManager::AnimFXSetInfo::~AnimFXSetInfo()
+494660,260,VisualFXManager,_ZN15VisualFXManager21DropAnimatedFXSetByIDEi,VisualFXManager::DropAnimatedFXSetByID(int)
+494978,308,VisualFXManager,_ZN15VisualFXManager14DropAnimatedFXERP10AnimatedFX,VisualFXManager::DropAnimatedFX(AnimatedFX*&)
+494ad4,292,VisualFXManager,_ZN15VisualFXManager10_GetAnimFXEi,VisualFXManager::_GetAnimFX(int)
+494e3c,600,VisualFXManager,_ZN15VisualFXManager14_FlushAnimDictEv,VisualFXManager::_FlushAnimDict()
+4950a0,4,VisualFXManager,_ZN15VisualFXManager14FlushLibrariesEv,VisualFXManager::FlushLibraries()
+4950a4,116,VisualFXManager,_ZN15VisualFXManagerD1Ev,VisualFXManager::~VisualFXManager()
+495130,20,VisualFXManager,_ZN15VisualFXManagerD0Ev,VisualFXManager::~VisualFXManager()
+49514c,116,VisualFXManager,_ZN15VisualFXManagerD2Ev,VisualFXManager::~VisualFXManager()
+4951d8,104,VisualFXManager,_ZN15VisualFXManager14AnimatedFXInfoC1ERKS0_,VisualFXManager::AnimatedFXInfo::AnimatedFXInfo(VisualFXManager::AnimatedFXInfo const&)
+495364,192,VisualFXManager,_ZN15VisualFXManager16_BuildAnimFXDictEv,VisualFXManager::_BuildAnimFXDict()
+495430,612,VisualFXManager,_ZN15VisualFXManager10GrabAnimFXEiP10GameObject,"VisualFXManager::GrabAnimFX(int, GameObject*)"
+4956b8,440,VisualFXManager,_ZN15VisualFXManager10PlayAnimFXEiRK7Point3DIfES3_PK10GameObjectPNS_10AnimFXDataE,"VisualFXManager::PlayAnimFX(int, Point3D<float> const&, Point3D<float> const&, GameObject const*, VisualFXManager::AnimFXData*)"
+495888,504,VisualFXManager,_ZN15VisualFXManager13PlayAnimFXSetEiRK7Point3DIfES3_PK10GameObjectPNS_13AnimFXSetDataE,"VisualFXManager::PlayAnimFXSet(int, Point3D<float> const&, Point3D<float> const&, GameObject const*, VisualFXManager::AnimFXSetData*)"
+495a88,184,VisualFXManager,_ZN15VisualFXManager17PreCacheLibrariesEv,VisualFXManager::PreCacheLibraries()
+495b54,424,VisualFXManager,_ZN15VisualFXManager10PlayAnimFXEiRK7Point3DIfEPK10GameObjectPNS_10AnimFXDataE,"VisualFXManager::PlayAnimFX(int, Point3D<float> const&, GameObject const*, VisualFXManager::AnimFXData*)"
+495d14,484,VisualFXManager,_ZN15VisualFXManager13PlayAnimFXSetEiRK7Point3DIfEPK10GameObjectPNS_13AnimFXSetDataE,"VisualFXManager::PlayAnimFXSet(int, Point3D<float> const&, GameObject const*, VisualFXManager::AnimFXSetData*)"
+495f04,48,VisualFXManager,_ZN15VisualFXManager13PlayAnimFXSetEiPK10GameObjectPNS_13AnimFXSetDataE,"VisualFXManager::PlayAnimFXSet(int, GameObject const*, VisualFXManager::AnimFXSetData*)"
+495f3c,48,VisualFXManager,_ZN15VisualFXManager10PlayAnimFXEiPK10GameObjectPNS_10AnimFXDataE,"VisualFXManager::PlayAnimFX(int, GameObject const*, VisualFXManager::AnimFXData*)"
+495f74,456,VisualFXManager,_ZN15VisualFXManager14PlayAnimFXStepEPNS_13AnimFXSetDataENS_10AnimFXDataE,"VisualFXManager::PlayAnimFXStep(VisualFXManager::AnimFXSetData*, VisualFXManager::AnimFXData)"
+496144,544,VisualFXManager,_ZN15VisualFXManager15_HandleSequenceEP10AnimatedFXPNS_13AnimFXSetDataEb,"VisualFXManager::_HandleSequence(AnimatedFX*, VisualFXManager::AnimFXSetData*, bool)"
+496364,108,VisualFXManager,_ZN15VisualFXManager18_HandleEndOfLoopCBEP10AnimatedFXPNS_13AnimFXSetDataE,"VisualFXManager::_HandleEndOfLoopCB(AnimatedFX*, VisualFXManager::AnimFXSetData*)"
+4963d0,92,VisualFXManager,_ZN15VisualFXManager16__Anim_EndOfLoopEP10AnimatedFXPNS_13AnimFXSetDataE,"VisualFXManager::__Anim_EndOfLoop(AnimatedFX*, VisualFXManager::AnimFXSetData*)"
+496434,320,VisualFXManager,_ZN15VisualFXManager16RegisterFXToLoadEi,VisualFXManager::RegisterFXToLoad(int)
+496594,568,VisualFXManager,_ZN15VisualFXManager6UpdateEv,VisualFXManager::Update()
+4967e8,336,VisualFXManager,_ZN15VisualFXManager19RegisterFXSetToLoadEi,VisualFXManager::RegisterFXSetToLoad(int)
+496954,580,VisualFXManager,_ZN15VisualFXManager16_BuildAnimFXSetsEv,VisualFXManager::_BuildAnimFXSets()
+496ba4,52,VisualFXManager,_ZN15VisualFXManager17_BuildAnimLibraryEv,VisualFXManager::_BuildAnimLibrary()
+496bd8,184,VisualFXManager,_ZN15VisualFXManager14BuildLibrariesEv,VisualFXManager::BuildLibraries()
+38ba74,32,VisualObject,_ZN12VisualObject4SyncEv,VisualObject::Sync()
+4709dc,52,VisualObject,_ZNK12VisualObject15GetSpecificNodeEi,VisualObject::GetSpecificNode(int) const
+470a18,52,VisualObject,_ZNK12VisualObject15GetSpecificNodeEPKc,VisualObject::GetSpecificNode(char const*) const
+470a54,48,VisualObject,_ZN12VisualObject12ApplyMeshBoxEv,VisualObject::ApplyMeshBox()
+470a84,64,VisualObject,_ZN12VisualObject17SetAnimControllerEP14AnimController,VisualObject::SetAnimController(AnimController*)
+470ac4,20,VisualObject,_ZNK12VisualObject9IsVisibleEv,VisualObject::IsVisible() const
+470ad8,160,VisualObject,_ZN12VisualObject27SetShadowSkinnedMeshVisibleEb,VisualObject::SetShadowSkinnedMeshVisible(bool)
+470b78,88,VisualObject,_ZN12VisualObject25SetXraySkinnedMeshVisibleEb,VisualObject::SetXraySkinnedMeshVisible(bool)
+470bd0,20,VisualObject,_ZN12VisualObject19ForceUpdatePositionEv,VisualObject::ForceUpdatePosition()
+470be4,64,VisualObject,_ZN12VisualObject11GetPositionER7Point3DIfE,VisualObject::GetPosition(Point3D<float>&)
+470c24,96,VisualObject,_ZN12VisualObject11SetPositionERK7Point3DIfE,VisualObject::SetPosition(Point3D<float> const&)
+470c84,52,VisualObject,_ZN12VisualObject11GetRotationER7Point3DIfE,VisualObject::GetRotation(Point3D<float>&)
+470cb8,20,VisualObject,_ZN12VisualObject12SyncPositionEv,VisualObject::SyncPosition()
+470ccc,4,VisualObject,_ZN12VisualObject13ApplyRotationEv,VisualObject::ApplyRotation()
+470cd0,4,VisualObject,_ZN12VisualObject12ApplyScalingEv,VisualObject::ApplyScaling()
+470cd4,4,VisualObject,_ZN12VisualObject13ApplyMaterialEv,VisualObject::ApplyMaterial()
+470cd8,4,VisualObject,_ZN12VisualObject12StartFadeOutEf,VisualObject::StartFadeOut(float)
+470cdc,4,VisualObject,_ZN12VisualObject11StopFadeOutEv,VisualObject::StopFadeOut()
+470ce0,4,VisualObject,_ZN12VisualObject13UpdateFadeOutEv,VisualObject::UpdateFadeOut()
+470ce4,4,VisualObject,_ZN12VisualObject11StartFadeInEf,VisualObject::StartFadeIn(float)
+470ce8,4,VisualObject,_ZN12VisualObject10StopFadeInEv,VisualObject::StopFadeIn()
+470cec,4,VisualObject,_ZN12VisualObject12UpdateFadeInEv,VisualObject::UpdateFadeIn()
+470cf0,4,VisualObject,_ZN12VisualObject6UpdateEv,VisualObject::Update()
+470cf4,4,VisualObject,_ZNK12VisualObject4DrawEv,VisualObject::Draw() const
+470e18,60,VisualObject,_ZN12VisualObject14SetModularSkinEii,"VisualObject::SetModularSkin(int, int)"
+470e5c,24,VisualObject,_ZNK12VisualObject20GetModularCategoryIdEPKc,VisualObject::GetModularCategoryId(char const*) const
+470e74,28,VisualObject,_ZNK12VisualObject20GetModularModuleNameEii,"VisualObject::GetModularModuleName(int, int) const"
+470e94,16,VisualObject,_ZNK12VisualObject21GetModularModuleCountEi,VisualObject::GetModularModuleCount(int) const
+470ea4,16,VisualObject,_ZNK12VisualObject23GetModularCategoryCountEv,VisualObject::GetModularCategoryCount() const
+470eb4,36,VisualObject,_ZN12VisualObject35ApplyShadowProjectionMaterialEffectEN6glitch4core8vector3dIfEEff,"VisualObject::ApplyShadowProjectionMaterialEffect(glitch::core::vector3d<float>, float, float)"
+4710f0,284,VisualObject,_ZN12VisualObject19ApplyShadowMaterialEv,VisualObject::ApplyShadowMaterial()
+471214,48,VisualObject,_ZN12VisualObject13ApplyLightSetEv,VisualObject::ApplyLightSet()
+47124c,76,VisualObject,_ZN12VisualObject13ApplyPositionEv,VisualObject::ApplyPosition()
+471298,208,VisualObject,_ZN12VisualObject16ExternalNodeSyncEP13RootSceneNode,VisualObject::ExternalNodeSync(RootSceneNode*)
+471368,96,VisualObject,_ZN12VisualObject10SetVisibleEb,VisualObject::SetVisible(bool)
+4713d0,108,VisualObject,_ZN12VisualObject14SyncVisibilityEv,VisualObject::SyncVisibility()
+4718f0,256,VisualObject,_ZN12VisualObject27_FindModularSkinnedMeshNodeEv,VisualObject::_FindModularSkinnedMeshNode()
+471a0c,340,VisualObject,_ZN12VisualObject13ResetSkinningEv,VisualObject::ResetSkinning()
+471b7c,528,VisualObject,_ZN12VisualObject19ApplyMaterialEffectEN6glitch4core8vector3dIfEEff,"VisualObject::ApplyMaterialEffect(glitch::core::vector3d<float>, float, float)"
+471dc4,332,VisualObject,_ZN12VisualObject23ApplyUnlitColorMaterialEv,VisualObject::ApplyUnlitColorMaterial()
+471f1c,512,VisualObject,_ZN12VisualObject14SetMeshVisibleEb,VisualObject::SetMeshVisible(bool)
+47211c,660,VisualObject,_ZN12VisualObject11CalcMeshBoxEv,VisualObject::CalcMeshBox()
+472708,164,VisualObject,_ZN12VisualObject10SetScalingEf,VisualObject::SetScaling(float)
+4727ac,180,VisualObject,_ZN12VisualObject10SetScalingERK7Point3DIfE,VisualObject::SetScaling(Point3D<float> const&)
+472860,20,VisualObject,_ZN12VisualObject11SyncScalingEv,VisualObject::SyncScaling()
+472874,212,VisualObject,_ZN12VisualObject11SetRotationERK7Point3DIfE,VisualObject::SetRotation(Point3D<float> const&)
+472948,20,VisualObject,_ZN12VisualObject12SyncRotationEv,VisualObject::SyncRotation()
+47295c,168,VisualObject,_ZN12VisualObject9SetParentEP10GameObject,VisualObject::SetParent(GameObject*)
+472a0c,576,VisualObject,_ZN12VisualObjectC1EP10GameObjectRKSsS3_,"VisualObject::VisualObject(GameObject*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)"
+472c5c,576,VisualObject,_ZN12VisualObjectC2EP10GameObjectRKSsS3_,"VisualObject::VisualObject(GameObject*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)"
+4732ac,728,VisualObject,_ZN12VisualObject16CreateShadowMeshEv,VisualObject::CreateShadowMesh()
+4736e4,408,VisualObject,_ZN12VisualObject14CreateXrayMeshEv,VisualObject::CreateXrayMesh()
+473884,508,VisualObject,_ZN12VisualObjectD1Ev,VisualObject::~VisualObject()
+473aa0,20,VisualObject,_ZN12VisualObjectD0Ev,VisualObject::~VisualObject()
+473abc,508,VisualObject,_ZN12VisualObjectD2Ev,VisualObject::~VisualObject()
+473cd8,296,VisualObject,_ZN12VisualObject13SetWeaponSkinEPKcii,"VisualObject::SetWeaponSkin(char const*, int, int)"
+473ea0,652,VisualObject,_ZN12VisualObject17ApplyXrayMaterialEv,VisualObject::ApplyXrayMaterial()
+474140,280,VisualObject,_ZN12VisualObject11FlushMeshesEv,VisualObject::FlushMeshes()
+474318,564,VisualObject,_ZN12VisualObject22ApplyMaterialBaseParamEv,VisualObject::ApplyMaterialBaseParam()
+474568,72,VisualObject,_ZNK12VisualObject18GetModularModuleIdEiPKc,"VisualObject::GetModularModuleId(int, char const*) const"
+474654,36,VisualObject,_ZNK12VisualObject18GetModularModuleIdEPKcS1_,"VisualObject::GetModularModuleId(char const*, char const*) const"
+362b28,28,XrayModularSkinnedMeshSceneNode,_ZNK31XrayModularSkinnedMeshSceneNode14getBoundingBoxEv,XrayModularSkinnedMeshSceneNode::getBoundingBox() const
+362b44,28,XrayModularSkinnedMeshSceneNode,_ZNK31XrayModularSkinnedMeshSceneNode25getTransformedBoundingBoxEv,XrayModularSkinnedMeshSceneNode::getTransformedBoundingBox() const
+362bc8,112,XrayModularSkinnedMeshSceneNode,_ZN31XrayModularSkinnedMeshSceneNode10UpdateXrayEv,XrayModularSkinnedMeshSceneNode::UpdateXray()
+362c38,176,XrayModularSkinnedMeshSceneNode,_ZN31XrayModularSkinnedMeshSceneNode18updateXrayMaterialEv,XrayModularSkinnedMeshSceneNode::updateXrayMaterial()
+362e1c,228,XrayModularSkinnedMeshSceneNode,_ZN31XrayModularSkinnedMeshSceneNodeD2Ev,XrayModularSkinnedMeshSceneNode::~XrayModularSkinnedMeshSceneNode()
+362f08,548,XrayModularSkinnedMeshSceneNode,_ZN31XrayModularSkinnedMeshSceneNode10renderMeshEPvb,"XrayModularSkinnedMeshSceneNode::renderMesh(void*, bool)"
+363138,1060,XrayModularSkinnedMeshSceneNode,_ZN31XrayModularSkinnedMeshSceneNode6renderEPv,XrayModularSkinnedMeshSceneNode::render(void*)
+363574,696,XrayModularSkinnedMeshSceneNode,_ZN31XrayModularSkinnedMeshSceneNode19onRegisterSceneNodeEv,XrayModularSkinnedMeshSceneNode::onRegisterSceneNode()
+363848,224,XrayModularSkinnedMeshSceneNode,_ZN31XrayModularSkinnedMeshSceneNodeD1Ev,XrayModularSkinnedMeshSceneNode::~XrayModularSkinnedMeshSceneNode()
+36393c,20,XrayModularSkinnedMeshSceneNode,_ZN31XrayModularSkinnedMeshSceneNodeD0Ev,XrayModularSkinnedMeshSceneNode::~XrayModularSkinnedMeshSceneNode()
+363958,2044,XrayModularSkinnedMeshSceneNode,_ZN31XrayModularSkinnedMeshSceneNode22regenerateXrayMaterialEv,XrayModularSkinnedMeshSceneNode::regenerateXrayMaterial()
+364174,208,XrayModularSkinnedMeshSceneNode,_ZN31XrayModularSkinnedMeshSceneNodeC1EN5boost13intrusive_ptrIN6glitch7collada5IMeshEEEPKNS2_5scene10ISceneNodeE,"XrayModularSkinnedMeshSceneNode::XrayModularSkinnedMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh>, glitch::scene::ISceneNode const*)"
+364254,156,XrayModularSkinnedMeshSceneNode,_ZN31XrayModularSkinnedMeshSceneNodeC2EN5boost13intrusive_ptrIN6glitch7collada5IMeshEEEPKNS2_5scene10ISceneNodeE,"XrayModularSkinnedMeshSceneNode::XrayModularSkinnedMeshSceneNode(boost::intrusive_ptr<glitch::collada::IMesh>, glitch::scene::ISceneNode const*)"
+395940,4,Zone,_ZN4Zone11OnCollisionEP10GameObject,Zone::OnCollision(GameObject*)
+395944,4,Zone,_ZN4Zone19OnCollisionPersistsEP10GameObject,Zone::OnCollisionPersists(GameObject*)
+395948,4,Zone,_ZN4Zone15OnCollisionEndsEP10GameObject,Zone::OnCollisionEnds(GameObject*)
+39649c,4,Zone,_ZN4Zone17OnCollisionBeginsEP10GameObject,Zone::OnCollisionBegins(GameObject*)
+3970c8,304,Zone,_ZN4Zone8IsInsideEP10GameObject,Zone::IsInside(GameObject*)
+397594,28,Zone,_ZN4Zone19InitWithBoundingBoxERKN6glitch4core8aabbox3dIfEE,Zone::InitWithBoundingBox(glitch::core::aabbox3d<float> const&)
+39771c,64,Zone,_ZN4Zone8InitPostEv,Zone::InitPost()
+397b38,96,Zone,_ZN4ZoneD1Ev,Zone::~Zone()
+397ba8,20,Zone,_ZN4ZoneD0Ev,Zone::~Zone()
+397bc4,96,Zone,_ZN4ZoneD2Ev,Zone::~Zone()
+397c2c,108,Zone,_ZN4ZoneC1EN10ObjectBase6GO_IDSEbb,"Zone::Zone(ObjectBase::GO_IDS, bool, bool)"
+397ca0,108,Zone,_ZN4ZoneC2EN10ObjectBase6GO_IDSEbb,"Zone::Zone(ObjectBase::GO_IDS, bool, bool)"
+397df8,148,Zone,_ZN4Zone17DeclarePropertiesEv,Zone::DeclareProperties()
+397e9c,8,ZoneEx,_ZNK6ZoneEx16GetNumCharactersEv,ZoneEx::GetNumCharacters() const
+397ea4,8,ZoneEx,_ZNK6ZoneEx13GetNumPlayersEv,ZoneEx::GetNumPlayers() const
+397eac,20,ZoneEx,_ZNK6ZoneEx13GetNumObjectsEv,ZoneEx::GetNumObjects() const
+397ec0,96,ZoneEx,_ZN6ZoneExC1EN10ObjectBase6GO_IDSEbb,"ZoneEx::ZoneEx(ObjectBase::GO_IDS, bool, bool)"
+397f28,96,ZoneEx,_ZN6ZoneExC2EN10ObjectBase6GO_IDSEbb,"ZoneEx::ZoneEx(ObjectBase::GO_IDS, bool, bool)"
+3980a8,344,ZoneEx,_ZN6ZoneEx6UpdateEv,ZoneEx::Update()
+398200,204,ZoneEx,_ZN6ZoneEx15OnCollisionEndsEP10GameObject,ZoneEx::OnCollisionEnds(GameObject*)
+39858c,144,ZoneEx,_ZN6ZoneEx17OnCollisionBeginsEP10GameObject,ZoneEx::OnCollisionBegins(GameObject*)
+39865c,108,ZoneEx,_ZN6ZoneExD1Ev,ZoneEx::~ZoneEx()
+3986d8,20,ZoneEx,_ZN6ZoneExD0Ev,ZoneEx::~ZoneEx()
+3986f4,108,ZoneEx,_ZN6ZoneExD2Ev,ZoneEx::~ZoneEx()
+3ef180,4,batch,_ZN5batch17BatchNodeCompiler25SGameObjectLinkedCallbackD1Ev,batch::BatchNodeCompiler::SGameObjectLinkedCallback::~SGameObjectLinkedCallback()
+3ef394,36,batch,_ZN5batch17BatchNodeCompiler25SGameObjectLinkedCallbackD0Ev,batch::BatchNodeCompiler::SGameObjectLinkedCallback::~SGameObjectLinkedCallback()
+3efe58,296,batch,_ZN5batch17BatchNodeCompiler25SGameObjectLinkedCallbackclEPN6glitch5scene10CBatchMeshEPvRKNS3_12SCompileInfoE,"batch::BatchNodeCompiler::SGameObjectLinkedCallback::operator()(glitch::scene::CBatchMesh*, void*, glitch::scene::SCompileInfo const&)"
+3f1868,112,batch,_ZN5batch17BatchNodeCompiler4FreeEv,batch::BatchNodeCompiler::Free()
+3f1a48,140,batch,_ZN5batch17BatchNodeCompilerD1Ev,batch::BatchNodeCompiler::~BatchNodeCompiler()
+3f5dcc,212,batch,_ZN5batch17BatchNodeCompiler12_MapMeshNodeEP10GameObjectPN6glitch5scene10ISceneNodeE,"batch::BatchNodeCompiler::_MapMeshNode(GameObject*, glitch::scene::ISceneNode*)"
+50cd44,108,batch,_ZN5batch16GOBatchSceneNode16isSegmentVisibleERKN6glitch5scene10CBatchMesh8SSegmentE,batch::GOBatchSceneNode::isSegmentVisible(glitch::scene::CBatchMesh::SSegment const&)
+50cf08,64,batch,_ZN5batch16GOBatchSceneNodeD1Ev,batch::GOBatchSceneNode::~GOBatchSceneNode()
+50cfa8,132,batch,_ZN5batch17BatchNodeCompiler18MakeNoBatchVisibleEPN6glitch5scene10ISceneNodeEb,"batch::BatchNodeCompiler::MakeNoBatchVisible(glitch::scene::ISceneNode*, bool)"
+50d71c,884,batch,_ZN5batch16GOBatchSceneNode23updateSegmentVisibilityEv,batch::GOBatchSceneNode::updateSegmentVisibility()
+50dabc,100,batch,_ZN5batch16GOBatchSceneNodeD0Ev,batch::GOBatchSceneNode::~GOBatchSceneNode()
+50dbbc,196,batch,_ZN5batch17BatchNodeCompiler4TrimEv,batch::BatchNodeCompiler::Trim()
+50dc84,1340,batch,_ZN5batch17BatchNodeCompiler7CompileEb,batch::BatchNodeCompiler::Compile(bool)

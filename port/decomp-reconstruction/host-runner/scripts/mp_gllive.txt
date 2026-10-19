@@ -1,0 +1,9 @@
+# Online (Gameloft Live, mode 3) with the servers gone: the game must degrade with its own error path (no hang, no crash).
+60 tap 1000 700
+300 log mp init 3
+300 mp init 3
+330 mp search
+600 mp status
+1200 mp status
+2400 mp status
+3600 mp status

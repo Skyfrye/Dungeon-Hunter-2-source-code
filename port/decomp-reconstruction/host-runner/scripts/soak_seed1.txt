@@ -1,0 +1,15 @@
+# seeded soak: continue the saved hero and play randomly (seed 1) for 30000 frames (about 16 game minutes); levelstat every 5000
+60 tap 1000 700
+200 tap 2148 322
+300 tap 2136 368
+420 tap 1200 540
+700 auto 1
+700 cheats 1
+710 rand 1 30000 4000
+5700 levelstat soak
+10700 levelstat soak
+15700 levelstat soak
+20700 levelstat soak
+25700 levelstat soak
+30700 levelstat soak
+30710 quit

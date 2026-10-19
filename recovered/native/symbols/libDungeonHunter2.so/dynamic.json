@@ -1,0 +1,127 @@
+[
+  {
+    "tag": "DT_NEEDED",
+    "value": 665194,
+    "string": "libc.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 665202,
+    "string": "libGLESv2.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 665215,
+    "string": "libstdc++.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 665228,
+    "string": "libm.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 665236,
+    "string": "libGLESv1_CM.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 665252,
+    "string": "libdl.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 665261,
+    "string": "liblog.so"
+  },
+  {
+    "tag": "DT_SONAME",
+    "value": 2049390,
+    "string": "libDungeonHunter2.so"
+  },
+  {
+    "tag": "DT_SYMBOLIC",
+    "value": 0,
+    "string": null
+  },
+  {
+    "tag": "DT_INIT_ARRAY",
+    "value": 9789744,
+    "string": null
+  },
+  {
+    "tag": "DT_INIT_ARRAYSZ",
+    "value": 2156,
+    "string": null
+  },
+  {
+    "tag": "DT_HASH",
+    "value": 212,
+    "string": null
+  },
+  {
+    "tag": "DT_STRTAB",
+    "value": 717304,
+    "string": null
+  },
+  {
+    "tag": "DT_SYMTAB",
+    "value": 196152,
+    "string": null
+  },
+  {
+    "tag": "DT_STRSZ",
+    "value": 2049411,
+    "string": null
+  },
+  {
+    "tag": "DT_SYMENT",
+    "value": 16,
+    "string": null
+  },
+  {
+    "tag": "DT_PLTGOT",
+    "value": 10046104,
+    "string": null
+  },
+  {
+    "tag": "DT_PLTRELSZ",
+    "value": 2808,
+    "string": null
+  },
+  {
+    "tag": "DT_PLTREL",
+    "value": 17,
+    "string": null
+  },
+  {
+    "tag": "DT_JMPREL",
+    "value": 3199612,
+    "string": null
+  },
+  {
+    "tag": "DT_REL",
+    "value": 2766716,
+    "string": null
+  },
+  {
+    "tag": "DT_RELSZ",
+    "value": 432896,
+    "string": null
+  },
+  {
+    "tag": "DT_RELENT",
+    "value": 8,
+    "string": null
+  },
+  {
+    "tag": "DT_RELCOUNT",
+    "value": 49132,
+    "string": null
+  },
+  {
+    "tag": "DT_NULL",
+    "value": 0,
+    "string": null
+  }
+]

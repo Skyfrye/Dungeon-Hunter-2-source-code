@@ -1,0 +1,79 @@
+--[[	Container Example Script
+
+	Example of what a container script would looks like.
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+-- Chance in % to spawn a moth when destroying an object
+local prob_spawn = 25;
+-- Which kind of plant is spawned?
+local prob_spawnb = 20;
+
+
+-- Cached values
+local calc_spawn;
+local calc_spawnb;
+local calc_spider;
+-- ----------------------------------------------------------------------------------------------
+
+
+-- 0 : actor represents what triggered the container to get opened
+function OnOpen(actor)
+
+calc_spawn = GetRand(0,100);
+calc_spawnb = GetRand(0,100);
+
+--Trace("calc_spawn random 100: "..calc_spawn);
+
+if(calc_spawn < prob_spawn) then
+	--Trace("Summoning a Moth out of the jar...");
+	calc_spawn = -1;
+	
+	calc_spider = GetRand(0,100);
+	if(calc_spider < 50) then
+		if(calc_spawnb < prob_spawnb) then
+			Summon(GetPyOID("CharacterTable", "EarthTemple_SmallPlantMinion"), true, 0.0, 0.0, 0.0, true);
+		else
+			Summon(GetPyOID("CharacterTable", "EarthTemple_SmallPlant"), true, 0.0, 0.0, 0.0, true);
+		end
+	else
+		if(calc_spawnb < prob_spawnb) then
+			Summon(GetPyOID("CharacterTable", "EarthTemple_BigSpider"), true, 0.0, 0.0, 0.0, true);
+		else
+			Summon(GetPyOID("CharacterTable", "EarthTemple_Spider"), true, 0.0, 0.0, 0.0, true);
+		end
+	end
+	calc_spider = -1;
+	calc_spawnb = -1;
+end
+
+end
+
+-- 	if(actor) then
+-- 		--Trace(GetName().." was opened by "..actor:GetName());
+-- 
+-- 		local dmg = DealDamages(actor, GetPyOID("GameObjectDamager", "Level01Damage"), GetPyCst("Elemental", "Fire"));
+-- 
+-- 		if(not dmg or dmg > 0) then
+-- 			if(dmg) then
+-- 				--Trace(FromFixed(dmg) .. " damages done to a Character!");
+-- 			else
+-- 				--Trace(" damaged a GameObject");
+-- 			end
+-- 
+-- 			--actor:PlayFX(GetPyOID("AnimatedFXTable", "blahblahblah"));
+-- 		end
+-- 	else
+-- 		--Trace(GetName().." was opened miraculously");
+-- 	end
+-- end
+
+
+-- 0 : event name
+function OnAnimEvent(event)
+end

@@ -1,0 +1,68 @@
+--[[	Fireball
+
+	NPC Fireball projectile
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE 			= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMaxDistance")));
+
+local PROJECTILE_ID		= GetProp(GetPyStruct("CharacterProperties", "RangeProjectileID"));
+local CLASS_ID			= GetPyOID("ClassTable", "DarkQueen2_RangedAttack");
+local target 			= -1;
+local skill_level 		= 0;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSpellInfo();
+
+	skill_level	= slvl;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	
+	TargetListSearch(RANGE);
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	LookAt(target);
+	SpawnSkillProjectile(PROJECTILE_ID);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target)
+	if(target) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+		SkillCombatRoll(target);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, OnDelayedSkill_);

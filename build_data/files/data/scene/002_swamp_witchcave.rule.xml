@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ALERT:   Folder is now a attribute of rules instead of RootRule -->
+<!-- target now needs to be specified to be able to load in max -->
+<rules
+	target="iphone"
+	folder="data/3d/modules/swamp"
+	ambientColor="0.5,0.5,0.5"
+	scriptFile="data\pydata\scripts\002_swamp_cave_witch.pyscript"
+	camera_znear="900"
+	camera_zfar="5000"
+	music="SwampWitchCaveAmbientMusic"
+	ambiant_music="sfx_witch_cave_ambiance"
+	fog_start="4000"
+	fog_end="5800"
+	fog_color="1.14,0.36,0.49"
+	light_set="data/3D/Light/swampcave.lightset_xml"
+	fixed_light_set="data/3D/Light/swampcave_es1_1.lightset_xml"
+	prog_vertex_buffer_size="319104"
+	prog_index_buffer_size="58248"
+	fix_vertex_buffer_size="319104"
+	fix_index_buffer_size="58248"
+>
+
+	<list name="deadends" random="true">
+		<elem name="deadend_swpcave_s_00" gameplay="deadend_swpcave_s_00.mgp" visual="deadend_swpcave_s_00_01.mvp"/>
+	</list>
+
+	<list name="deadends2" random="true">
+		<elem name="deadend_swpcave_n_00" gameplay="deadend_swpcave_n_00.mgp" visual="deadend_swpcave_n_00_01.mvp"/>
+		<elem name="deadend_swpcave_n_00" gameplay="deadend_swpcave_n_00.mgp" visual="deadend_swpcave_n_00_01.mvp"/>
+		<elem name="deadend_swpcave_n_00" gameplay="deadend_swpcave_n_00.mgp" visual="deadend_swpcave_n_00_01.mvp"/>
+		<elem name="deadend_swpcave_n_00" gameplay="deadend_swpcave_n_00.mgp" visual="deadend_swpcave_n_00_01.mvp"/>
+		<elem name="deadend_swpcave_n_00" gameplay="deadend_swpcave_n_00.mgp" visual="deadend_swpcave_n_00_01.mvp"/>
+		<elem name="deadend_swpcave_n_00" gameplay="deadend_swpcave_n_00.mgp" visual="deadend_swpcave_n_00_01.mvp"/>
+		<elem name="deadend_swpcave_n_00" gameplay="deadend_swpcave_epic_n_01.mgp" visual="deadend_swpcave_n_00_01.mvp"/>
+	</list>
+
+	<list name="tmodules" random="true">
+		<elem name="t_swpcave_nse_00" gameplay="witch_a_e_nse_00_01.mgp" visual="t_swpcave_nse_00_01.mvp"/>
+	</list>
+	
+	<list name="bossroom" random="true">
+		<elem name="bossroom_swpcave_w_00" gameplay="bossroom_witch_.mgp" visual="witch_a_swpcave_n_00_01.mvp"/>
+	</list>	
+	
+	<list name="path_cave" random="true">
+		<elem name="straight_swpcave_we_00" gameplay="witch_a__swpcave_we_00_01.mgp" visual="straight_swpcave_we_00_01.mvp"/>
+		<elem name="corner_swpcave_nw_00" gameplay="witch_a_wpcave_nw_00_01.mgp" visual="corner_swpcave_nw_00_01.mvp"/>
+		<elem name="corner_swpcave_se_00" gameplay="witch_a_wpcave_se_00_01.mgp" visual="corner_swpcave_se_00_01.mvp"/>
+	</list>
+
+<RootRule name="#deadends">
+	<ForceBlock name="#path_cave[1]">
+		<ForceBlock name="#path_cave[2]">
+			<ForceBlock name="#tmodules[0]">
+				<ForceBlock name="#deadends2"/>
+				<ForceBlock name="#path_cave[0]">
+					<ForceBlock name="#bossroom"/>
+				</ForceBlock>
+			</ForceBlock>
+		</ForceBlock>
+	</ForceBlock>
+</RootRule>
+</rules>

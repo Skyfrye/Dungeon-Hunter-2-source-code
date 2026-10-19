@@ -1,0 +1,97 @@
+--[[	Roundhouse (Active)
+
+	This melee attack hit all enemies around the rogue.
+	The targets receive damage based on the rogue level, skill level, dexterity and strength stats. 
+	Affected enemies has high chances to be stunned for a short duration
+		Mana Cost: 15		|	+1 mana cost
+		Cast time: 1 sec	|
+		Cooldown: na		|
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE			= 220.0; -- 200 unit range for now
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Rogue_Roundhouse");
+
+-- Cached values
+local skill_level	= 0;
+local mana_cost;
+local traces		= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost = CalcManaCost(CLASS_ID, skill_level);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	--PlaySound("sfx_skill_rogue_desert_pinwheel",false,0,false);
+	TargetListSearch(RANGE);
+
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+	else
+		target = nil;
+	end
+	if (traces) then Trace("Rogue, Roundhouse: consumes "..FromFixed(mana_cost).." mana..."); end
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(not IsTargetListEmpty()) then
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+		repeat
+			local target,_,_, character = GetTargetListTop();
+			PopTargetList();
+			if(character) then
+				-- Damaged a character
+				local dmg=SkillCombatRoll(target);
+				--target:PlayFX(GetPyOID("AnimatedEffectTable", "bloodsplat"));
+			end
+			if(not character) then
+				-- Damaged and object
+				SkillCombatRoll(target);
+			end
+		until(IsTargetListEmpty())
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

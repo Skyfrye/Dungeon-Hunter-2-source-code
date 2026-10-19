@@ -1,0 +1,24 @@
+[
+  {
+    "section": ".plt",
+    "address": 2064,
+    "size": 212,
+    "instruction_bytes": 0,
+    "mapped_data_bytes": 0,
+    "undecoded_bytes": 0,
+    "outside_function_ranges_bytes": 212,
+    "instruction_byte_fraction": 0.0,
+    "accounted_byte_fraction": 0.0
+  },
+  {
+    "section": ".text",
+    "address": 2276,
+    "size": 2428,
+    "instruction_bytes": 1830,
+    "mapped_data_bytes": 0,
+    "undecoded_bytes": 2,
+    "outside_function_ranges_bytes": 596,
+    "instruction_byte_fraction": 0.7537067545304778,
+    "accounted_byte_fraction": 0.7545304777594728
+  }
+]

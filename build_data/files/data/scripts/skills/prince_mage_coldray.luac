@@ -1,0 +1,99 @@
+--[[	ColdRay
+
+	Cone target skill, dealing water damage
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+
+local RANGE				= 650.0;
+local ANGLE				= 90.0;
+local DURATION			= 1000.0; -- Freeze State duration
+
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Mage_ColdRay");
+
+-- Cached values
+
+local skill_level = 0;
+local mana_cost;
+local traces		= false;
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	-- We only target enemies
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	-- We only target destructible objects
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	-- Look for target in front of us prior to looking for the distance
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	local plvl = GetProp(GetPyStruct("CharacterProperties", "Level"));
+	local slvl = GetCurrentSkillInfo();
+	if (traces) then Trace("Current Player Level:"..FromFixed(plvl).." Current Spell level:"..slvl); end
+	TargetListSearch(RANGE);
+	TargetListBackup("MaxAngleSearch");
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+	else
+		target = nil;
+	end
+
+	if (traces) then Trace("Mage Coldray: consumes "..FromFixed(mana_cost).." mana..."); end
+	UseMana(mana_cost);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	TargetListSearch(RANGE, ANGLE, "MaxAngleSearch");
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	ApplyPropClass(CLASS_ID);
+  	if(not IsTargetListEmpty()) then
+		repeat
+			local target,_,_, character = GetTargetListTop();
+			PopTargetList();
+			local dmg = SkillCombatRoll(target);
+			if (dmg == nil) then 
+				dmg = 0;
+			end
+			if (traces) then Trace("Mage coldray caused "..FromFixed(dmg).." damage!") end
+			if(character) and (dmg > 0) then
+				target:PlayFX(GetPyOID("AnimatedEffectTable", "elem_dmg_02_water"));
+			end
+		until(IsTargetListEmpty())
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

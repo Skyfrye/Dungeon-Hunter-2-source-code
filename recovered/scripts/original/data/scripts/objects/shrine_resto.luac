@@ -1,0 +1,49 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Shrine/Cauldron generic behavior
+-- 
+-- Apply a buff on the player(s) when triggered
+-- ----------------------------------------------------------------------------------------------------
+
+-- DATA
+local SHRINE_FX		= GetPyOID("AnimatedEffectTable", "spell_dh2_cauldron_red");
+
+local BUFF_AOE			= true; -- If set to true, will give the Buff to all players in a limited range.
+local BUFF_AOE_RANGE	= 5000;
+
+function OnTrigger(actor)
+	if(actor) then
+		if (BUFF_AOE) then
+			if (BUFF_AOE_RANGE ~= -1) then
+				SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+				SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+				SetTargetListSorting(GetPyCst("AITargetList_Sorting", "NoSort"));
+				
+				TargetListSearch(BUFF_AOE_RANGE);
+				
+				if(not IsTargetListEmpty()) then
+					repeat
+						local target = GetTargetListTop();
+						PopTargetList();
+						
+						target:RegenHP(-1);
+						target:RegenMP(-1);
+						
+						if (SHRINE_FX) then
+							target:PlayFX(SHRINE_FX);
+						end
+					until(IsTargetListEmpty())
+				end
+			end
+		else
+			actor:RegenHP(-1);
+			actor:RegenMP(-1);
+			if (SHRINE_FX) then
+				actor:PlayFX(SHRINE_FX);
+			end
+		end
+	end
+end
+
+
+function OnAnimEvent(event)
+end

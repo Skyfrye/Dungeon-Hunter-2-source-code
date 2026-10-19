@@ -1,0 +1,80 @@
+--[[	Ambidextrous (Passive)
+
+	Increases the attack rating  When using 2 weapons. Players can eventually use
+	A main hand weapon in their Off hand as he train this skill
+	
+		+2 AR	|	+2 AR
+					Can equip a main hand weapon
+					in 2nd hand at 7 pts
+					(based on dexterity???)
+					
+	-- note, there is currently no commands in LUA to have that capability.
+
+--]]
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Rogue_Ambidextrous");
+local BUFF_ID		= GetPyOID("ClassTable", "Skill_Rogue_Ambidextrous_buff");
+
+-- Cached values
+local skill_level	= 0;
+local buff			= nil;
+local buffbase		= nil;
+local traces		= true;
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+	local plvl = GetProp(GetPyStruct("CharacterProperties", "Level"));
+	
+	if (slvl ~= skill_level) then
+		skill_level = slvl;
+	end
+	
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	mana_cost	= CalcManaCost(CLASS_ID, skill_level);
+	
+	
+	if (buffbase) then
+		RemoveBuff(CLASS_ID, buffbase);
+		buffbase=nil;
+	end
+	if (buff) then
+		RemoveBuff(BUFF_ID, buff);
+		buff = nil;
+	end
+	
+	if (skill_level > 0) then
+		-- Apply the standard stuff
+		buffbase = CreateBuff(CLASS_ID, 0, false, skill_level);
+		ApplyBuff(CLASS_ID, buffbase);
+		-- Give the 2 hands capability
+		if (skill_level > 6) then
+			buff = CreateBuff(BUFF_ID, 0, false, skill_level);
+			ApplyBuff(BUFF_ID, buff);
+			if (traces) then Trace("[Skill | Ambidextrous]: activating new capabilities now."); end
+		end
+	end
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

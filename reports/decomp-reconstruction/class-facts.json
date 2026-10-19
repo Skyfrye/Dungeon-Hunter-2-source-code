@@ -1,0 +1,6236 @@
+{
+ "<global>": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "vox-audio",
+  "ctors": [],
+  "embedded": [],
+  "functions": 949,
+  "vtable_bytes": null
+ },
+ "ADevice": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 17,
+  "vtable_bytes": null
+ },
+ "AISDefault": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 52,
+  "vtable_bytes": 216
+ },
+ "AISExternal": {
+  "alloc_sizes": [
+   196
+  ],
+  "bases": [
+   "CharAIScript"
+  ],
+  "category": "game-character",
+  "ctors": [
+   "0x3dd0e4",
+   "0x3dd128"
+  ],
+  "embedded": [],
+  "functions": 33,
+  "vtable_bytes": 216
+ },
+ "AISFaery": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 216
+ },
+ "AISMonster": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 216
+ },
+ "AISPlayer": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 216
+ },
+ "AISPlayerIPhone": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 216
+ },
+ "AbstractTableModel": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": null
+ },
+ "AccelerometerBase": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [
+   "0x33da0c",
+   "0x33da64"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 20
+ },
+ "AccelerometerIPhone": {
+  "alloc_sizes": [],
+  "bases": [
+   "AccelerometerBase"
+  ],
+  "category": "core-platform",
+  "ctors": [
+   "0x33dbf8",
+   "0x33dc2c"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 20
+ },
+ "AchievementMsg": {
+  "alloc_sizes": [],
+  "bases": [
+   "std::string"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x380554",
+   "0x433acc",
+   "0x433b08"
+  ],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": null
+ },
+ "AdpcmState": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "vox-audio",
+  "ctors": [
+   "0x896038",
+   "0x89604c"
+  ],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": null
+ },
+ "AnchorBase": {
+  "alloc_sizes": [
+   28,
+   100
+  ],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x4770d0",
+   "0x4771a0"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 24
+ },
+ "AnchorForward": {
+  "alloc_sizes": [],
+  "bases": [
+   "AnchorBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x477a80",
+   "0x477cd4"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 24
+ },
+ "AnchorGroup": {
+  "alloc_sizes": [],
+  "bases": [
+   "AnchorBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x478578",
+   "0x4785b4"
+  ],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 24
+ },
+ "AnimApplicator": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x364330",
+   "0x364398"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": 28
+ },
+ "AnimController": {
+  "alloc_sizes": [
+   8
+  ],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x474d30",
+   "0x474e44"
+  ],
+  "embedded": [],
+  "functions": 21,
+  "vtable_bytes": 56
+ },
+ "AnimSetController": {
+  "alloc_sizes": [
+   20
+  ],
+  "bases": [
+   "AnimController"
+  ],
+  "category": "game-anim",
+  "ctors": [
+   "0x4751b4",
+   "0x475248"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": 56
+ },
+ "AnimSetManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x475364",
+   "0x4753b4"
+  ],
+  "embedded": [],
+  "functions": 15,
+  "vtable_bytes": 16
+ },
+ "AnimatedDecor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 244
+ },
+ "AnimatedFX": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x4922e0",
+   "0x492374"
+  ],
+  "embedded": [],
+  "functions": 23,
+  "vtable_bytes": 16
+ },
+ "Animation": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "AnimationSet": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [],
+  "embedded": [],
+  "functions": 22,
+  "vtable_bytes": 20
+ },
+ "Animator": {
+  "alloc_sizes": [],
+  "bases": [
+   "glitch::collada::CSceneNodeAnimator"
+  ],
+  "category": "game-anim",
+  "ctors": [
+   "0x366490",
+   "0x366518"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 208
+ },
+ "AnimatorBlender": {
+  "alloc_sizes": [],
+  "bases": [
+   "glitch::collada::CSceneNodeAnimatorBlender"
+  ],
+  "category": "game-anim",
+  "ctors": [
+   "0x367018",
+   "0x3670c8"
+  ],
+  "embedded": [],
+  "functions": 21,
+  "vtable_bytes": 200
+ },
+ "AnimatorSet": {
+  "alloc_sizes": [],
+  "bases": [
+   "glitch::collada::CSceneNodeAnimatorSet"
+  ],
+  "category": "game-anim",
+  "ctors": [
+   "0x3676b8",
+   "0x367790"
+  ],
+  "embedded": [],
+  "functions": 17,
+  "vtable_bytes": 204
+ },
+ "AnimatorSynchronizedBlender": {
+  "alloc_sizes": [],
+  "bases": [
+   "glitch::collada::CSceneNodeAnimatorSynchronizedBlender"
+  ],
+  "category": "game-anim",
+  "ctors": [
+   "0x3688f0",
+   "0x3689cc"
+  ],
+  "embedded": [],
+  "functions": 20,
+  "vtable_bytes": 336
+ },
+ "AnimatorSynchronizedSet": {
+  "alloc_sizes": [],
+  "bases": [
+   "glitch::collada::CSceneNodeAnimatorSynchronizedSet"
+  ],
+  "category": "game-anim",
+  "ctors": [
+   "0x36904c",
+   "0x3690dc"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 340
+ },
+ "Application": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x32d79c",
+   "0x32d980"
+  ],
+  "embedded": [],
+  "functions": 66,
+  "vtable_bytes": 20
+ },
+ "Array2d": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": null
+ },
+ "Arrays": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "pydata-accessors",
+  "ctors": [],
+  "embedded": [],
+  "functions": 392,
+  "vtable_bytes": null
+ },
+ "AssetManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 20,
+  "vtable_bytes": null
+ },
+ "BaseMeshSceneNode": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": null
+ },
+ "Billboard": {
+  "alloc_sizes": [],
+  "bases": [
+   "ObjectBase"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x387d84",
+   "0x38815c"
+  ],
+  "embedded": [
+   [
+    "0x168",
+    "ObjectHandle"
+   ]
+  ],
+  "functions": 11,
+  "vtable_bytes": 136
+ },
+ "BlendedAnimSetController": {
+  "alloc_sizes": [
+   24
+  ],
+  "bases": [
+   "AnimController"
+  ],
+  "category": "game-anim",
+  "ctors": [
+   "0x476b4c",
+   "0x476ddc"
+  ],
+  "embedded": [],
+  "functions": 14,
+  "vtable_bytes": 56
+ },
+ "Buffer": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": null
+ },
+ "BufferedRenderer": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x7d4768"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": null
+ },
+ "BufferedStream": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "ByteArray": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "CAndroidSocket": {
+  "alloc_sizes": [],
+  "bases": [
+   "GLXPlayerSocket"
+  ],
+  "category": "net-transport",
+  "ctors": [
+   "0x84232c",
+   "0x842430"
+  ],
+  "embedded": [],
+  "functions": 36,
+  "vtable_bytes": 144
+ },
+ "CBluetoothNetRoomInfo": {
+  "alloc_sizes": [],
+  "bases": [
+   "NetStruct"
+  ],
+  "category": "net-transport",
+  "ctors": [
+   "0x800d7c"
+  ],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 80
+ },
+ "CBluetoothReliable": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x82900c",
+   "0x829260",
+   "0x829330",
+   "0x8295c4"
+  ],
+  "embedded": [],
+  "functions": 30,
+  "vtable_bytes": 64
+ },
+ "CBluetoothSocket": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 21,
+  "vtable_bytes": 108
+ },
+ "CBluetoothSocketAbstract": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 108
+ },
+ "CBluetoothUnreliable": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x829980",
+   "0x829b5c",
+   "0x829c2c",
+   "0x829ecc"
+  ],
+  "embedded": [],
+  "functions": 30,
+  "vtable_bytes": 64
+ },
+ "CConnection": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x8259a8",
+   "0x825ab8"
+  ],
+  "embedded": [],
+  "functions": 26,
+  "vtable_bytes": 36
+ },
+ "CConnectionManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x7fc0a8",
+   "0x7fc140"
+  ],
+  "embedded": [],
+  "functions": 56,
+  "vtable_bytes": 24
+ },
+ "CDataStats": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": null
+ },
+ "CEvent": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [
+   "0x7fe084",
+   "0x7fe0d4",
+   "0x7fe124",
+   "0x7fe164"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 16
+ },
+ "CEventQueue": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 33,
+  "vtable_bytes": null
+ },
+ "CEventQueueBase": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 44
+ },
+ "CLobbyParameterAndQuery": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [
+   "0x836e3c",
+   "0x837224"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 28
+ },
+ "CMessage": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [
+   "0x80a540",
+   "0x80a61c"
+  ],
+  "embedded": [],
+  "functions": 44,
+  "vtable_bytes": 44
+ },
+ "CMessaging": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [
+   "0x80afe4",
+   "0x80b1c4"
+  ],
+  "embedded": [],
+  "functions": 43,
+  "vtable_bytes": 16
+ },
+ "CMsgAskResendAttributes": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 44
+ },
+ "CMsgAttackResult": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 44
+ },
+ "CMsgControllerAction": {
+  "alloc_sizes": [],
+  "bases": [
+   "CMessage"
+  ],
+  "category": "net-session-online",
+  "ctors": [
+   "0x328a64"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 44
+ },
+ "CMsgDropLoot": {
+  "alloc_sizes": [],
+  "bases": [
+   "CMessage"
+  ],
+  "category": "net-session-online",
+  "ctors": [
+   "0x328c84"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 44
+ },
+ "CMsgGlobalDeath": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 44
+ },
+ "CMsgInitialSetup": {
+  "alloc_sizes": [],
+  "bases": [
+   "CMessage"
+  ],
+  "category": "net-session-online",
+  "ctors": [
+   "0x328be4"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 44
+ },
+ "CMsgIsHost": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 44
+ },
+ "CMsgMenuReady": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 44
+ },
+ "CMsgQuestsSync": {
+  "alloc_sizes": [],
+  "bases": [
+   "CMessage"
+  ],
+  "category": "net-session-online",
+  "ctors": [
+   "0x3291f8"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 44
+ },
+ "CMsgRaisedEvent": {
+  "alloc_sizes": [],
+  "bases": [
+   "CMessage"
+  ],
+  "category": "net-session-online",
+  "ctors": [
+   "0x329630"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 44
+ },
+ "CMsgScriptCmd": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 44
+ },
+ "CMsgSpawnObject": {
+  "alloc_sizes": [],
+  "bases": [
+   "CMessage"
+  ],
+  "category": "net-session-online",
+  "ctors": [
+   "0x32a66c"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 44
+ },
+ "CMsgStartGame": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 44
+ },
+ "CMutex": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x3106e4",
+   "0x3106e8"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": null
+ },
+ "CNetLog": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 20
+ },
+ "CNetMutex": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x80e398",
+   "0x80e3d4"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": null
+ },
+ "CNetPlayerInfo": {
+  "alloc_sizes": [],
+  "bases": [
+   "NetStruct"
+  ],
+  "category": "net-transport",
+  "ctors": [
+   "0x377448",
+   "0x4417d8",
+   "0x80f7b4",
+   "0x80fc28"
+  ],
+  "embedded": [],
+  "functions": 23,
+  "vtable_bytes": 108
+ },
+ "CNetPlayerManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x812a30",
+   "0x812bf0"
+  ],
+  "embedded": [],
+  "functions": 51,
+  "vtable_bytes": 20
+ },
+ "CNetworkEmulation": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x826d54",
+   "0x826df8"
+  ],
+  "embedded": [],
+  "functions": 23,
+  "vtable_bytes": 16
+ },
+ "CNetworkId": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": null
+ },
+ "CPacketManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x8162a4",
+   "0x816540"
+  ],
+  "embedded": [],
+  "functions": 33,
+  "vtable_bytes": 16
+ },
+ "CReadWriteLock": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x80e2ec",
+   "0x80e310"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 16
+ },
+ "CRoomAttributes": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x819050",
+   "0x819094",
+   "0x819184",
+   "0x8191c0"
+  ],
+  "embedded": [],
+  "functions": 35,
+  "vtable_bytes": 40
+ },
+ "CRoomSearchFilter": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x8191fc",
+   "0x81923c",
+   "0x81a428",
+   "0x81a478"
+  ],
+  "embedded": [],
+  "functions": 19,
+  "vtable_bytes": 20
+ },
+ "CSAnim": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSAttack": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSCast": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSDead": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSDespawn": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSIdle": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 36
+ },
+ "CSInjured": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSInteract": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSKnockedBack": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSLiftingIdle": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSLiftingMove": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSLimbus": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSMove": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 36
+ },
+ "CSPreSpawn": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSRevived": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSReviving": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSScared": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSSkill": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSSpawn": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSStunned": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 36
+ },
+ "CSemaphore": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x80e2cc",
+   "0x80e2d4"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": null
+ },
+ "CSignIn": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [
+   "0x81a58c",
+   "0x81a61c"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 48
+ },
+ "CSignInCredentials": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [
+   "0x81a9c4",
+   "0x81a9cc"
+  ],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": null
+ },
+ "CSignInDummy": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 48
+ },
+ "CSignInGLLive": {
+  "alloc_sizes": [],
+  "bases": [
+   "CSignIn"
+  ],
+  "category": "net-session-online",
+  "ctors": [
+   "0x8246b8",
+   "0x824734"
+  ],
+  "embedded": [],
+  "functions": 14,
+  "vtable_bytes": 48
+ },
+ "CSignInGLLiveObserver": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [
+   "0x824a1c",
+   "0x824a68"
+  ],
+  "embedded": [],
+  "functions": 17,
+  "vtable_bytes": 28
+ },
+ "CSocket": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x827b5c",
+   "0x827bb0"
+  ],
+  "embedded": [],
+  "functions": 24,
+  "vtable_bytes": 92
+ },
+ "CSocketAbstract": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 92
+ },
+ "CTcp": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 20,
+  "vtable_bytes": 64
+ },
+ "CTransport": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 64
+ },
+ "CTransportFactory": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": null
+ },
+ "CTransportManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x81b758",
+   "0x81b7ac"
+  ],
+  "embedded": [],
+  "functions": 35,
+  "vtable_bytes": 44
+ },
+ "CTransportManagerImpl": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 44
+ },
+ "CUdp": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 16,
+  "vtable_bytes": 64
+ },
+ "CameraBase": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x40e720",
+   "0x40e750"
+  ],
+  "embedded": [],
+  "functions": 16,
+  "vtable_bytes": 28
+ },
+ "CameraLevel": {
+  "alloc_sizes": [
+   168
+  ],
+  "bases": [
+   "CameraTarget"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x40ff70",
+   "0x41002c"
+  ],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 28
+ },
+ "CameraOverview": {
+  "alloc_sizes": [
+   40
+  ],
+  "bases": [
+   "CameraBase"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x410ea4",
+   "0x41106c"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 52
+ },
+ "CameraTarget": {
+  "alloc_sizes": [],
+  "bases": [
+   "CameraBase"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x411c40",
+   "0x411cdc"
+  ],
+  "embedded": [],
+  "functions": 15,
+  "vtable_bytes": 28
+ },
+ "CharAI": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [
+   "0x3cebf0",
+   "0x3ced50"
+  ],
+  "embedded": [],
+  "functions": 180,
+  "vtable_bytes": 212
+ },
+ "CharAIScript": {
+  "alloc_sizes": [
+   196,
+   200,
+   216
+  ],
+  "bases": [
+   "LuaScript"
+  ],
+  "category": "game-character",
+  "ctors": [
+   "0x3d8f44",
+   "0x3d8fb0"
+  ],
+  "embedded": [],
+  "functions": 17,
+  "vtable_bytes": 212
+ },
+ "CharAISkillScript": {
+  "alloc_sizes": [
+   28
+  ],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [
+   "0x3cde2c"
+  ],
+  "embedded": [],
+  "functions": 16,
+  "vtable_bytes": 16
+ },
+ "CharAnimator": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x3c8ff4",
+   "0x3c906c"
+  ],
+  "embedded": [],
+  "functions": 41,
+  "vtable_bytes": 16
+ },
+ "CharMenuTutorialMsg": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [
+   "0x433b44",
+   "0x433b70",
+   "0x45a780"
+  ],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": null
+ },
+ "CharPropTextField": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [
+   "0x41f8f0",
+   "0x41f978"
+  ],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": null
+ },
+ "CharProperties": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [
+   "0x3deff4",
+   "0x3df084"
+  ],
+  "embedded": [],
+  "functions": 80,
+  "vtable_bytes": 16
+ },
+ "CharState": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 36
+ },
+ "CharStateMachine": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [
+   "0x3c1ac4",
+   "0x3c1b58"
+  ],
+  "embedded": [],
+  "functions": 54,
+  "vtable_bytes": 16
+ },
+ "CharTimers": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [
+   "0x3dbb0c",
+   "0x3dbb58"
+  ],
+  "embedded": [],
+  "functions": 16,
+  "vtable_bytes": 16
+ },
+ "Character": {
+  "alloc_sizes": [],
+  "bases": [
+   "GameObject"
+  ],
+  "category": "game-character",
+  "ctors": [
+   "0x3a9340",
+   "0x3aa1b4"
+  ],
+  "embedded": [
+   [
+    "0x37c",
+    "ItemInventory"
+   ],
+   [
+    "0x3b4",
+    "CharTimers"
+   ],
+   [
+    "0x3c8",
+    "CharAI"
+   ],
+   [
+    "0x49c",
+    "CharAnimator"
+   ],
+   [
+    "0x4fc",
+    "CharStateMachine"
+   ],
+   [
+    "0x560",
+    "CharProperties"
+   ],
+   [
+    "0x1508",
+    "Character::NetStructCharacter"
+   ],
+   [
+    "0x1a48",
+    "Character::NetStructCharacter"
+   ]
+  ],
+  "functions": 391,
+  "vtable_bytes": 812
+ },
+ "CheckpointZone": {
+  "alloc_sizes": [],
+  "bases": [
+   "Zone"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x39594c",
+   "0x3959b4"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 260
+ },
+ "ColBox": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 244
+ },
+ "ColladaFactory": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 136
+ },
+ "Condition": {
+  "alloc_sizes": [
+   12
+  ],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x478648",
+   "0x478674"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 28
+ },
+ "ConditionData": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x33ed7c",
+   "0x33edd8"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 16
+ },
+ "ConditionList": {
+  "alloc_sizes": [
+   12
+  ],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x4786dc",
+   "0x4786f0"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": null
+ },
+ "Condition_IsEventInState": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 28
+ },
+ "Condition_IsLevelInState": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 28
+ },
+ "Condition_IsPlayerAtLevel": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 28
+ },
+ "Condition_IsPlayerInLevel": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 28
+ },
+ "Condition_IsQuestInState": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 28
+ },
+ "Condition_IsQuestInStateGeneric": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 28
+ },
+ "Condition_IsQuestStateHigher": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 28
+ },
+ "Condition_IsQuestStateLower": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 28
+ },
+ "ConfigFile": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [
+   "0x89bed0",
+   "0x89bed4"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": null
+ },
+ "Connection": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x846ca4",
+   "0x846dac"
+  ],
+  "embedded": [],
+  "functions": 35,
+  "vtable_bytes": 32
+ },
+ "ConnectionLobby": {
+  "alloc_sizes": [],
+  "bases": [
+   "Connection"
+  ],
+  "category": "net-transport",
+  "ctors": [
+   "0x849164",
+   "0x849198"
+  ],
+  "embedded": [],
+  "functions": 48,
+  "vtable_bytes": 32
+ },
+ "Console": {
+  "alloc_sizes": [
+   168
+  ],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [
+   "0x333a4c",
+   "0x33401c"
+  ],
+  "embedded": [],
+  "functions": 43,
+  "vtable_bytes": 20
+ },
+ "Container": {
+  "alloc_sizes": [],
+  "bases": [
+   "GameObject"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x3a06dc",
+   "0x3a0788"
+  ],
+  "embedded": [
+   [
+    "0x3a0",
+    "Container::NetStructContainer"
+   ],
+   [
+    "0x548",
+    "Container::NetStructContainer"
+   ]
+  ],
+  "functions": 36,
+  "vtable_bytes": 272
+ },
+ "DataPacket": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 180
+ },
+ "DataPacketLobby": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x849d20",
+   "0x849dcc",
+   "0x849e78",
+   "0x849f5c"
+  ],
+  "embedded": [],
+  "functions": 50,
+  "vtable_bytes": 180
+ },
+ "DataReloaderManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x339094",
+   "0x3390c8"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 16
+ },
+ "DebugCachedCharacter": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x41aeec",
+   "0x431428"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": null
+ },
+ "DebugSwitches": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x335f94",
+   "0x335fcc"
+  ],
+  "embedded": [],
+  "functions": 14,
+  "vtable_bytes": null
+ },
+ "Decor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 244
+ },
+ "DefaultDataPacket": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x84a508",
+   "0x84a5a4",
+   "0x84a988",
+   "0x84aa7c"
+  ],
+  "embedded": [],
+  "functions": 42,
+  "vtable_bytes": 180
+ },
+ "DestructibleContainer": {
+  "alloc_sizes": [],
+  "bases": [
+   "Container"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x3a14bc",
+   "0x3a1508"
+  ],
+  "embedded": [],
+  "functions": 17,
+  "vtable_bytes": 272
+ },
+ "Device": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": null
+ },
+ "DialogMsg": {
+  "alloc_sizes": [],
+  "bases": [
+   "std::string"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x433b9c",
+   "0x433ea8",
+   "0x4343d8",
+   "0x434434",
+   "0x43452c"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": null
+ },
+ "Door": {
+  "alloc_sizes": [],
+  "bases": [
+   "Zone"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x3e8274",
+   "0x3e8324"
+  ],
+  "embedded": [
+   [
+    "0x3b0",
+    "Door::NetStructDoor"
+   ],
+   [
+    "0x540",
+    "Door::NetStructDoor"
+   ]
+  ],
+  "functions": 32,
+  "vtable_bytes": 260
+ },
+ "DragAndDrop": {
+  "alloc_sizes": [
+   28
+  ],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x411ebc",
+   "0x411ee0"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": null
+ },
+ "Dragable": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x4124c4",
+   "0x413240"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": null
+ },
+ "Dropable": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x411e5c",
+   "0x411e88"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": null
+ },
+ "Dummy": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 244
+ },
+ "EvAcceleration": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 20
+ },
+ "EvGamepad": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 20
+ },
+ "EvGamepadAxis": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 20
+ },
+ "EvKeyboard": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 20
+ },
+ "EvMouseButton": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 20
+ },
+ "EvMouseMove": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 20
+ },
+ "EvMouseWheel": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 20
+ },
+ "EvTouchScreenMove": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 20
+ },
+ "EvTouchScreenPress": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 20
+ },
+ "EventManager": {
+  "alloc_sizes": [
+   48
+  ],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x33805c",
+   "0x3380bc"
+  ],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 16
+ },
+ "FSCommandParam": {
+  "alloc_sizes": [],
+  "bases": [
+   "std::string"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x415c98",
+   "0x415cb8"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": null
+ },
+ "FSCommandParamTokenizer": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x416100",
+   "0x416130"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": null
+ },
+ "FileSystemBase": {
+  "alloc_sizes": [],
+  "bases": [
+   "glitch::io::CFileSystem"
+  ],
+  "category": "core-platform",
+  "ctors": [
+   "0x34e504",
+   "0x34e538"
+  ],
+  "embedded": [],
+  "functions": 14,
+  "vtable_bytes": 196
+ },
+ "FileSystemWin32": {
+  "alloc_sizes": [
+   1344
+  ],
+  "bases": [
+   "FileSystemBase"
+  ],
+  "category": "core-platform",
+  "ctors": [
+   "0x34f6f4",
+   "0x34f788"
+  ],
+  "embedded": [],
+  "functions": 39,
+  "vtable_bytes": 196
+ },
+ "FlashAnimContext": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": null
+ },
+ "FlashAnimManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x413748",
+   "0x4137b4"
+  ],
+  "embedded": [],
+  "functions": 19,
+  "vtable_bytes": null
+ },
+ "Floor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 244
+ },
+ "GCSingleton": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": null
+ },
+ "GSConsole": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x383274",
+   "0x383298"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 52
+ },
+ "GSEndGame": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x38358c",
+   "0x3835b8"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 52
+ },
+ "GSFlashMenu": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x3841b4",
+   "0x38421c"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 52
+ },
+ "GSInit": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x3847fc",
+   "0x384834"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 52
+ },
+ "GSKeyboard": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x3859ac",
+   "0x385a18"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": 52
+ },
+ "GSLevel": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x385ed8",
+   "0x385f30"
+  ],
+  "embedded": [],
+  "functions": 15,
+  "vtable_bytes": 52
+ },
+ "GSLevelMap": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x3868b8",
+   "0x3868e4"
+  ],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 52
+ },
+ "GSTest": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x386a5c",
+   "0x386a80"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 52
+ },
+ "GSViewer": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x387158",
+   "0x38718c"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 52
+ },
+ "GS_InterruptLoading": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x417720",
+   "0x417768"
+  ],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 88
+ },
+ "GameCenter": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [
+   "0x32bc34"
+  ],
+  "embedded": [],
+  "functions": 28,
+  "vtable_bytes": 16
+ },
+ "GameCenterInfo": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "GameEvent": {
+  "alloc_sizes": [
+   32
+  ],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x4795ac",
+   "0x4795e0"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": null
+ },
+ "GameEventManager": {
+  "alloc_sizes": [
+   12
+  ],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x479cf4",
+   "0x479d08"
+  ],
+  "embedded": [],
+  "functions": 14,
+  "vtable_bytes": null
+ },
+ "GameObject": {
+  "alloc_sizes": [],
+  "bases": [
+   "ObjectBase"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x38c130",
+   "0x38c398"
+  ],
+  "embedded": [
+   [
+    "0x1c8",
+    "PFObject"
+   ]
+  ],
+  "functions": 141,
+  "vtable_bytes": 244
+ },
+ "GameSWFUtils": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [],
+  "embedded": [],
+  "functions": 18,
+  "vtable_bytes": null
+ },
+ "Gamepad": {
+  "alloc_sizes": [],
+  "bases": [
+   "InputDevice"
+  ],
+  "category": "game-app",
+  "ctors": [
+   "0x34cd0c",
+   "0x34ce88"
+  ],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 12
+ },
+ "GamepadTweaker": {
+  "alloc_sizes": [
+   232
+  ],
+  "bases": [
+   "glitch::debugger::CTweakable"
+  ],
+  "category": "game-app",
+  "ctors": [
+   "0x32f074"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 32
+ },
+ "HUDControls": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x41af1c",
+   "0x41b1a4"
+  ],
+  "embedded": [],
+  "functions": 19,
+  "vtable_bytes": 48
+ },
+ "HUDMinimap": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x41cbe0",
+   "0x41cd74"
+  ],
+  "embedded": [],
+  "functions": 31,
+  "vtable_bytes": 164
+ },
+ "IDataReloader": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 20
+ },
+ "IEvent": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 20
+ },
+ "IEventReceiver": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 20
+ },
+ "IFileStream": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 60
+ },
+ "ISerializable": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 24
+ },
+ "IStreamBase": {
+  "alloc_sizes": [
+   12
+  ],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 28,
+  "vtable_bytes": 60
+ },
+ "InfoHUDManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x41ecb0",
+   "0x41ee58"
+  ],
+  "embedded": [],
+  "functions": 14,
+  "vtable_bytes": null
+ },
+ "InputDevice": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x34ca64",
+   "0x34ca94"
+  ],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 12
+ },
+ "InputManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x34d6bc",
+   "0x34d6fc"
+  ],
+  "embedded": [],
+  "functions": 14,
+  "vtable_bytes": 32
+ },
+ "InputManagerEventReceiver": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 24
+ },
+ "InputManagerWin32": {
+  "alloc_sizes": [
+   11200
+  ],
+  "bases": [
+   "InputManager"
+  ],
+  "category": "game-app",
+  "ctors": [
+   "0x34dd18",
+   "0x34de68"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 32
+ },
+ "IrrFactory": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 28
+ },
+ "ItemInstance": {
+  "alloc_sizes": [
+   108
+  ],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x3fc26c",
+   "0x3fc494"
+  ],
+  "embedded": [],
+  "functions": 32,
+  "vtable_bytes": 16
+ },
+ "ItemInventory": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x3ff200",
+   "0x3ff330"
+  ],
+  "embedded": [],
+  "functions": 84,
+  "vtable_bytes": 44
+ },
+ "ItemManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x3eabcc",
+   "0x3eac00"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 16
+ },
+ "ItemObject": {
+  "alloc_sizes": [],
+  "bases": [
+   "GameObject"
+  ],
+  "category": "game-items-save",
+  "ctors": [
+   "0x3ec324",
+   "0x3ec3cc"
+  ],
+  "embedded": [
+   [
+    "0x374",
+    "ItemInventory"
+   ]
+  ],
+  "functions": 36,
+  "vtable_bytes": 288
+ },
+ "Keyboard": {
+  "alloc_sizes": [],
+  "bases": [
+   "InputDevice"
+  ],
+  "category": "game-app",
+  "ctors": [
+   "0x34cc1c",
+   "0x34cc94"
+  ],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 12
+ },
+ "LCAndroidSocket": {
+  "alloc_sizes": [],
+  "bases": [
+   "LCXPlayerSocket"
+  ],
+  "category": "net-transport",
+  "ctors": [
+   "0x8a0020",
+   "0x8a013c"
+  ],
+  "embedded": [],
+  "functions": 36,
+  "vtable_bytes": 140
+ },
+ "LaserTypeProjectile": {
+  "alloc_sizes": [],
+  "bases": [
+   "Projectile"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x3e4b6c",
+   "0x3e4bc8"
+  ],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 256
+ },
+ "Level": {
+  "alloc_sizes": [
+   428
+  ],
+  "bases": [
+   "EventManager"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x3f3128",
+   "0x3f34c0"
+  ],
+  "embedded": [],
+  "functions": 71,
+  "vtable_bytes": 16
+ },
+ "LevelConfig": {
+  "alloc_sizes": [],
+  "bases": [
+   "ObjectBase"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x3f4910",
+   "0x3f51a8"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 132
+ },
+ "LevelMap": {
+  "alloc_sizes": [
+   8
+  ],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x3f9c6c",
+   "0x3f9c94"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 16
+ },
+ "LevelSavegame": {
+  "alloc_sizes": [
+   60
+  ],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x462934",
+   "0x462bd0"
+  ],
+  "embedded": [],
+  "functions": 21,
+  "vtable_bytes": 16
+ },
+ "LiftableObject": {
+  "alloc_sizes": [],
+  "bases": [
+   "GameObject"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x3eec88",
+   "0x3eed10"
+  ],
+  "embedded": [],
+  "functions": 25,
+  "vtable_bytes": 248
+ },
+ "LightBase": {
+  "alloc_sizes": [],
+  "bases": [
+   "ObjectBase"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x40aba4",
+   "0x40ac58"
+  ],
+  "embedded": [],
+  "functions": 19,
+  "vtable_bytes": 148
+ },
+ "LightPoint": {
+  "alloc_sizes": [
+   436
+  ],
+  "bases": [
+   "LightBase"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x40bdd8",
+   "0x40be5c"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 148
+ },
+ "LightSetManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x40d7d4",
+   "0x40daa8"
+  ],
+  "embedded": [],
+  "functions": 20,
+  "vtable_bytes": null
+ },
+ "LuaManager": {
+  "alloc_sizes": [
+   28
+  ],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x379e68",
+   "0x379eb0"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 16
+ },
+ "LuaScript": {
+  "alloc_sizes": [
+   152
+  ],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x37c584",
+   "0x37c674"
+  ],
+  "embedded": [],
+  "functions": 51,
+  "vtable_bytes": 16
+ },
+ "MaterialData": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "MenuBase": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuFX::State"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x4269dc",
+   "0x427200"
+  ],
+  "embedded": [],
+  "functions": 96,
+  "vtable_bytes": 88
+ },
+ "MenuCharMenu_InvDetails": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x452cec",
+   "0x452d34"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 88
+ },
+ "MenuCharMenu_InvMain": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x452e20",
+   "0x452e68"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": 88
+ },
+ "MenuCharMenu_Map": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x453ccc",
+   "0x453e28"
+  ],
+  "embedded": [],
+  "functions": 28,
+  "vtable_bytes": 88
+ },
+ "MenuCharacterSelect": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x429a98",
+   "0x429b98"
+  ],
+  "embedded": [],
+  "functions": 15,
+  "vtable_bytes": 88
+ },
+ "MenuConfirm": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuConfirmBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x42acb8",
+   "0x42ad80"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 88
+ },
+ "MenuConfirmBase": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x42ab24",
+   "0x42ab6c"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 88
+ },
+ "MenuDebug": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x42a610",
+   "0x42a6e8"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 88
+ },
+ "MenuDebugHUD": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x42a470",
+   "0x42a584"
+  ],
+  "embedded": [],
+  "functions": 15,
+  "vtable_bytes": 88
+ },
+ "MenuEnterName": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x42afa0",
+   "0x42afec"
+  ],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 88
+ },
+ "MenuFX": {
+  "alloc_sizes": [],
+  "bases": [
+   "RenderFX"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x7a86e4",
+   "0x7a8750"
+  ],
+  "embedded": [],
+  "functions": 38,
+  "vtable_bytes": 80
+ },
+ "MenuFlash2DCamera": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x42cc50",
+   "0x42ccd0"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 16
+ },
+ "MenuHUDConfirm": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuConfirmBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x42abb4",
+   "0x42ac78"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 88
+ },
+ "MenuLeaderboard": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x42b8a0",
+   "0x42b970"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 88
+ },
+ "MenuMainMenu": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x42c2c4",
+   "0x42c310"
+  ],
+  "embedded": [],
+  "functions": 20,
+  "vtable_bytes": 88
+ },
+ "MenuManager": {
+  "alloc_sizes": [
+   276
+  ],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x4319cc",
+   "0x431c38"
+  ],
+  "embedded": [],
+  "functions": 50,
+  "vtable_bytes": 52
+ },
+ "MenuMerchant": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x433688",
+   "0x4336d4"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": 88
+ },
+ "MenuMessageManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [],
+  "embedded": [],
+  "functions": 35,
+  "vtable_bytes": null
+ },
+ "MenuMinimap": {
+  "alloc_sizes": [],
+  "bases": [
+   "HUDMinimap"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x4350d8",
+   "0x43519c"
+  ],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 164
+ },
+ "MenuMultiplayerLobbyMulti": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x4357e8",
+   "0x435834"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 88
+ },
+ "MenuWorldMap": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuBase"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x43641c",
+   "0x436580"
+  ],
+  "embedded": [],
+  "functions": 19,
+  "vtable_bytes": 88
+ },
+ "MeshSceneNode": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x35b240",
+   "0x35b2c0"
+  ],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 308
+ },
+ "ModularSkinnedMeshSceneNode": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x35af00",
+   "0x35af88"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 324
+ },
+ "Module": {
+  "alloc_sizes": [],
+  "bases": [
+   "GameObject"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x389fa8",
+   "0x38a100"
+  ],
+  "embedded": [
+   [
+    "0x400",
+    "ObjectHandle"
+   ]
+  ],
+  "functions": 11,
+  "vtable_bytes": 244
+ },
+ "Mouse": {
+  "alloc_sizes": [],
+  "bases": [
+   "InputDevice"
+  ],
+  "category": "game-app",
+  "ctors": [
+   "0x34cac4",
+   "0x34cb70"
+  ],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 12
+ },
+ "MultiMenuManager": {
+  "alloc_sizes": [],
+  "bases": [
+   "MenuFX"
+  ],
+  "category": "game-ui",
+  "ctors": [
+   "0x437e24",
+   "0x437ea4"
+  ],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 96
+ },
+ "MultiplayerCallback": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 24,
+  "vtable_bytes": null
+ },
+ "MultiplayerStateMachine": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": null
+ },
+ "NetBitStream": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x80e908",
+   "0x80ea50",
+   "0x80eef4",
+   "0x80ef8c"
+  ],
+  "embedded": [],
+  "functions": 28,
+  "vtable_bytes": 16
+ },
+ "NetBitStreamArray": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x80e980",
+   "0x80e9e8"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": null
+ },
+ "NetStruct": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x81388c",
+   "0x8138f4"
+  ],
+  "embedded": [],
+  "functions": 28,
+  "vtable_bytes": 80
+ },
+ "NetStructArray": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": null
+ },
+ "NetStructBool": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 48
+ },
+ "NetStructByteArray": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 50,
+  "vtable_bytes": null
+ },
+ "NetStructInt": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 25,
+  "vtable_bytes": null
+ },
+ "NetStructInterpolatedRangedFloat": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": null
+ },
+ "NetStructInterpolation": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": null
+ },
+ "NetStructMember": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 16,
+  "vtable_bytes": 36
+ },
+ "NetStructMemberType": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 43,
+  "vtable_bytes": null
+ },
+ "NetStructNetworkId": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 48
+ },
+ "NetStructRangedFloat": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 15,
+  "vtable_bytes": null
+ },
+ "NetStructString": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 18,
+  "vtable_bytes": null
+ },
+ "NetStructUInt": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 20,
+  "vtable_bytes": null
+ },
+ "NonCopyable": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 16
+ },
+ "ObjectBase": {
+  "alloc_sizes": [
+   1744,
+   1776,
+   1816,
+   8080
+  ],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x33f15c",
+   "0x33f310"
+  ],
+  "embedded": [
+   [
+    "0x8c",
+    "ConditionData"
+   ],
+   [
+    "0xb0",
+    "ConditionData"
+   ]
+  ],
+  "functions": 29,
+  "vtable_bytes": 132
+ },
+ "ObjectHandle": {
+  "alloc_sizes": [
+   12
+  ],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x33f4f4",
+   "0x33f50c",
+   "0x33f524",
+   "0x33f578"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": null
+ },
+ "ObjectManager": {
+  "alloc_sizes": [
+   432
+  ],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x34a1e8",
+   "0x34a404"
+  ],
+  "embedded": [],
+  "functions": 63,
+  "vtable_bytes": 16
+ },
+ "ObjectSearcher": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 58,
+  "vtable_bytes": null
+ },
+ "Objective": {
+  "alloc_sizes": [
+   36,
+   40,
+   44,
+   48
+  ],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x47bd8c",
+   "0x47be00"
+  ],
+  "embedded": [],
+  "functions": 17,
+  "vtable_bytes": 60
+ },
+ "ObjectiveList": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x47a3c0",
+   "0x47a3d4"
+  ],
+  "embedded": [],
+  "functions": 24,
+  "vtable_bytes": null
+ },
+ "ObjectiveTemplate_InteractWith": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 36,
+  "vtable_bytes": null
+ },
+ "ObjectiveTemplate_KillCharacter": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 24,
+  "vtable_bytes": null
+ },
+ "ObjectiveTemplate_KillEnemies": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": null
+ },
+ "Objective_Automatic": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 60
+ },
+ "Objective_EventReceiver": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 88
+ },
+ "Objective_GatherLoot": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 88
+ },
+ "Objective_MoveInZone": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 88
+ },
+ "Objective_Qty": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 88
+ },
+ "Objective_SavedQty": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 88
+ },
+ "Objective_TalkToNPC": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 88
+ },
+ "OnScreenKeyboard": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x51b3f4",
+   "0x51b418"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 20
+ },
+ "OpenableContainer": {
+  "alloc_sizes": [],
+  "bases": [
+   "Container"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x3a1cb0",
+   "0x3a1d2c"
+  ],
+  "embedded": [],
+  "functions": 18,
+  "vtable_bytes": 272
+ },
+ "PFFloor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x51d1b4",
+   "0x51d40c"
+  ],
+  "embedded": [],
+  "functions": 17,
+  "vtable_bytes": 16
+ },
+ "PFGInnerDirectEdge": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 52
+ },
+ "PFGInnerEdge": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 52
+ },
+ "PFGInnerGraph": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 16
+ },
+ "PFGInnerNode": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "PFGOuterGraph": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 16
+ },
+ "PFInnerTest_BasicIdentity": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": 36
+ },
+ "PFInnerTest_PFObject": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 36
+ },
+ "PFInnerTest_PathValidity": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 36
+ },
+ "PFObject": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x524538",
+   "0x524644"
+  ],
+  "embedded": [],
+  "functions": 15,
+  "vtable_bytes": null
+ },
+ "PFRoom": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x521540",
+   "0x521718"
+  ],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 16
+ },
+ "PFWorld": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x522d58",
+   "0x522e2c"
+  ],
+  "embedded": [],
+  "functions": 50,
+  "vtable_bytes": 16
+ },
+ "POCharacter": {
+  "alloc_sizes": [
+   40
+  ],
+  "bases": [
+   "PhysicalObject"
+  ],
+  "category": "game-app",
+  "ctors": [
+   "0x3b4010"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 52
+ },
+ "POColmap": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 48
+ },
+ "PODecor": {
+  "alloc_sizes": [
+   40
+  ],
+  "bases": [
+   "PhysicalObject"
+  ],
+  "category": "game-app",
+  "ctors": [
+   "0x388a2c",
+   "0x39fc2c"
+  ],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 48
+ },
+ "POFaerie": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 52
+ },
+ "POFollower": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 52
+ },
+ "POItem": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 48
+ },
+ "POMonster": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 52
+ },
+ "POPlayer": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 52
+ },
+ "POProjectile": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 48
+ },
+ "POVillager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 52
+ },
+ "POZone": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 48
+ },
+ "PerfCounters": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [
+   "0x3110c4",
+   "0x311118"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": null
+ },
+ "PhysicalBaseObject": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 40
+ },
+ "PhysicalObject": {
+  "alloc_sizes": [
+   40
+  ],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x46ef68",
+   "0x46f2f0"
+  ],
+  "embedded": [],
+  "functions": 31,
+  "vtable_bytes": 48
+ },
+ "PhysicalWorld": {
+  "alloc_sizes": [
+   20
+  ],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x34bc30",
+   "0x34bc7c"
+  ],
+  "embedded": [],
+  "functions": 19,
+  "vtable_bytes": 124
+ },
+ "PlayerInfo": {
+  "alloc_sizes": [
+   1672
+  ],
+  "bases": [
+   "CNetPlayerInfo"
+  ],
+  "category": "game-character",
+  "ctors": [
+   "0x37418c",
+   "0x374cc0",
+   "0x3777d0"
+  ],
+  "embedded": [],
+  "functions": 24,
+  "vtable_bytes": 108
+ },
+ "PlayerLightTweaker": {
+  "alloc_sizes": [
+   324
+  ],
+  "bases": [
+   "glitch::debugger::CTweakable"
+  ],
+  "category": "game-app",
+  "ctors": [
+   "0x32f2b4"
+  ],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 32
+ },
+ "PlayerManager": {
+  "alloc_sizes": [
+   1824
+  ],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [
+   "0x374b28",
+   "0x374be4"
+  ],
+  "embedded": [],
+  "functions": 61,
+  "vtable_bytes": 16
+ },
+ "PlayerSavegame": {
+  "alloc_sizes": [
+   408
+  ],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x4655ac",
+   "0x4656bc",
+   "0x465ae0",
+   "0x465c40"
+  ],
+  "embedded": [],
+  "functions": 104,
+  "vtable_bytes": 16
+ },
+ "PlayerStatManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x379084",
+   "0x3790a8"
+  ],
+  "embedded": [],
+  "functions": 23,
+  "vtable_bytes": 16
+ },
+ "Point2D": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": null
+ },
+ "Point3D": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": null
+ },
+ "PolyStat": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "Projectile": {
+  "alloc_sizes": [],
+  "bases": [
+   "GameObject"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x3e5e40",
+   "0x3e5edc"
+  ],
+  "embedded": [],
+  "functions": 20,
+  "vtable_bytes": 256
+ },
+ "ProjectileManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x3e60fc",
+   "0x3e6158"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 16
+ },
+ "ProjectileTrap": {
+  "alloc_sizes": [],
+  "bases": [
+   "TimerTrap"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x39d280",
+   "0x39d2c0"
+  ],
+  "embedded": [],
+  "functions": 18,
+  "vtable_bytes": 296
+ },
+ "Property": {
+  "alloc_sizes": [
+   36,
+   40,
+   44,
+   56
+  ],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x399a88"
+  ],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": 32
+ },
+ "PropertyInstance": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "PropertyMap": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 26,
+  "vtable_bytes": 12
+ },
+ "PyDataArrays": {
+  "alloc_sizes": [
+   60
+  ],
+  "bases": [],
+  "category": "pydata-accessors",
+  "ctors": [
+   "0x4be550",
+   "0x4c0ddc"
+  ],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 20
+ },
+ "PyDataConstants": {
+  "alloc_sizes": [
+   36
+  ],
+  "bases": [],
+  "category": "pydata-accessors",
+  "ctors": [
+   "0x4c3668",
+   "0x4c36b8"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 20
+ },
+ "QE_ClearEnemies": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "QE_ClearEnemyTemplate": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "QE_DestroyGameObject": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "QE_GatherLoot": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "QE_InteractWith": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "QE_KillEnemies": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "QE_KillEnemyTemplate": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "QE_MoveInZone": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "QE_OpenGameObject": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "QE_PickedUpLiftable": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "QE_TalkToNPC": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "QE_TriggerOn": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "QE_TriggerPlate": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Quest": {
+  "alloc_sizes": [
+   108
+  ],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x4808e4",
+   "0x480944"
+  ],
+  "embedded": [],
+  "functions": 45,
+  "vtable_bytes": null
+ },
+ "QuestEvent": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "QuestMoveInZone": {
+  "alloc_sizes": [],
+  "bases": [
+   "Zone"
+  ],
+  "category": "game-items-save",
+  "ctors": [
+   "0x396330",
+   "0x396378"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 260
+ },
+ "QuestSavegame": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x46b004",
+   "0x46b0a4"
+  ],
+  "embedded": [],
+  "functions": 27,
+  "vtable_bytes": 16
+ },
+ "Random": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": null
+ },
+ "Rct": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": null
+ },
+ "Reward": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x482ca0",
+   "0x482d10"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 28
+ },
+ "RewardList": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x482b0c",
+   "0x482b4c"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": null
+ },
+ "Reward_CharacterProps": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 28
+ },
+ "Reward_ConsumeLoot": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 28
+ },
+ "Reward_Gold": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 28
+ },
+ "Reward_Loot": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 28
+ },
+ "Reward_XP": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 28
+ },
+ "RoomZone": {
+  "alloc_sizes": [],
+  "bases": [
+   "Zone"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x396558",
+   "0x3965c4"
+  ],
+  "embedded": [],
+  "functions": 19,
+  "vtable_bytes": 260
+ },
+ "RootSceneNode": {
+  "alloc_sizes": [
+   532
+  ],
+  "bases": [
+   "glitch::collada::CRootSceneNode"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x35d824",
+   "0x35d910"
+  ],
+  "embedded": [],
+  "functions": 22,
+  "vtable_bytes": 304
+ },
+ "SWFAnim": {
+  "alloc_sizes": [
+   108
+  ],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x497070",
+   "0x497128"
+  ],
+  "embedded": [],
+  "functions": 14,
+  "vtable_bytes": 16
+ },
+ "SWFAnimManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x4971e0",
+   "0x497228"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": 16
+ },
+ "SWFAnimToolTip": {
+  "alloc_sizes": [
+   12
+  ],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x498f30",
+   "0x498ff4"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": null
+ },
+ "Savegame": {
+  "alloc_sizes": [
+   60
+  ],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x315ed8",
+   "0x315f48"
+  ],
+  "embedded": [],
+  "functions": 18,
+  "vtable_bytes": 16
+ },
+ "SavegameManager": {
+  "alloc_sizes": [
+   88
+  ],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x46cd4c",
+   "0x46cdd8"
+  ],
+  "embedded": [],
+  "functions": 31,
+  "vtable_bytes": 16
+ },
+ "SceneManager": {
+  "alloc_sizes": [],
+  "bases": [
+   "glitch::scene::CSceneManager"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x352c3c",
+   "0x352d4c"
+  ],
+  "embedded": [
+   [
+    "0x294",
+    "LightSetManager"
+   ]
+  ],
+  "functions": 60,
+  "vtable_bytes": 204
+ },
+ "ScriptCmdImpl": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 24
+ },
+ "ScriptManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x455980",
+   "0x4559bc"
+  ],
+  "embedded": [],
+  "functions": 21,
+  "vtable_bytes": null
+ },
+ "Script_AIChangeScript": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_AIDoSkill": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_AIEnableTimer": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_AIResetTimer": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_AISetHP": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_AISetInt": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_ActivateProjectileTrap": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_ActivateTriggerPlate": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_AutoEquip": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_AwardEndGameTrophies": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_AwardTrophy": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_BlockSaveGame": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_CONSOLE": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_ChangeLevel": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_CloseDoor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_DeactivateProjectileTrap": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_DeactivateTriggerPlate": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_DoTutorial": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_DropLoot": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_EmptyImpl": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_EndGame": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_EnqueueCharMenuTutorialMessage": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_EnqueueTutorialMessage": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_EnterCutSceneMode": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_EnterSafeZone": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_ExecScript": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_ExitCutSceneMode": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_FlushMessages": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_HideActor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_HideFlash": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "Script_IncFaeryLevel": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_KillActor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_LeaveSafeZone": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_LockCharacter": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_LockTutorial": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_LookActor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_MarkCharacterAsScripted": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 4,
+  "vtable_bytes": 24
+ },
+ "Script_MoveActor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_OpenDoor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_PlayActorAnim": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "Script_PlayAnimById": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_PlayAnimByName": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_PlayCamera": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_PlayEffect": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "Script_PlayLevelMusic": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_PlaySound": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_PutCharacterInIdle": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "Script_PutCharacterInLimbus": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_ReEquipHands": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_RestartLevel": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SaveGame": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SetActorMaster": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SetActorPosition": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SetCamera": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SetCameraClip": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SetCameraTarget": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SetFaeryState": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SetLevelState": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SetStatic": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SetWorldMapLocationState": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_ShowActor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_ShowFlash": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "Script_ShowTrophies": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SkipAllCharMenuTutorialMessages": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SkipAllTutorialMessages": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SkipCharMenuTutorialMessage": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SkipTutorialMessage": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SpawnCharacter": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_SpawnContainer": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_StartDialog": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "Script_StartDialogID": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_StopActor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_StopEffect": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_StopSound": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_UnEquipHands": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_UnEquipItemFromSlot": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_UnlockCharacter": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_Wait": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 24
+ },
+ "Script_WaitCamera": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "Script_WaitDialog": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 24
+ },
+ "SearchFailCache": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "ShadowModularSkinnedMeshSceneNode": {
+  "alloc_sizes": [
+   472
+  ],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x3619c8",
+   "0x361ab0"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": 308
+ },
+ "ShadowSkinnedMeshSceneNode": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x361b54",
+   "0x361f24"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 308
+ },
+ "SimpleTypeProperty": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 57,
+  "vtable_bytes": null
+ },
+ "SkinnedMeshSceneNode": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x35b0a0",
+   "0x35b128"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 324
+ },
+ "SkyBoxMeshSceneNode": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x362810",
+   "0x36299c"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 308
+ },
+ "SlideEventCharacter": {
+  "alloc_sizes": [
+   44
+  ],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x41f6c4",
+   "0x41f77c"
+  ],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": null
+ },
+ "SlotContainer": {
+  "alloc_sizes": [],
+  "bases": [
+   "OpenableContainer"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x3a2bcc",
+   "0x3a2c54"
+  ],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 272
+ },
+ "SortByEquipability": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "SortByValueAndClass": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "SortModuleByDistance": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "SoundEmitter": {
+  "alloc_sizes": [],
+  "bases": [
+   "GameObject"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x39551c",
+   "0x3955a8"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 244
+ },
+ "SpawnGroupManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-character",
+  "ctors": [
+   "0x3e8b3c",
+   "0x3e8b84"
+  ],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 16
+ },
+ "SpawnPoint": {
+  "alloc_sizes": [],
+  "bases": [
+   "GameObject"
+  ],
+  "category": "game-character",
+  "ctors": [
+   "0x3ea388",
+   "0x3ea3fc"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": 244
+ },
+ "SpawnSpot": {
+  "alloc_sizes": [],
+  "bases": [
+   "GameObject"
+  ],
+  "category": "game-character",
+  "ctors": [
+   "0x3ea8e4",
+   "0x3ea94c"
+  ],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 244
+ },
+ "StateBase": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 52
+ },
+ "StateMachine": {
+  "alloc_sizes": [
+   32
+  ],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x339e70",
+   "0x339ec8"
+  ],
+  "embedded": [],
+  "functions": 21,
+  "vtable_bytes": 16
+ },
+ "StreamBuffer": {
+  "alloc_sizes": [
+   48
+  ],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x316d3c",
+   "0x3171b8",
+   "0x3172d8",
+   "0x3173f8"
+  ],
+  "embedded": [],
+  "functions": 21,
+  "vtable_bytes": 64
+ },
+ "StreamReader": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 21,
+  "vtable_bytes": null
+ },
+ "StringManager": {
+  "alloc_sizes": [
+   2008
+  ],
+  "bases": [],
+  "category": "game-ui",
+  "ctors": [
+   "0x507d10",
+   "0x507d6c"
+  ],
+  "embedded": [],
+  "functions": 31,
+  "vtable_bytes": 16
+ },
+ "Structs": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "pydata-accessors",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1862,
+  "vtable_bytes": null
+ },
+ "TestCharPropId": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "TestCharTemplate": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "TestUD": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": 24
+ },
+ "TestUD2": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 24
+ },
+ "Thread": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 28
+ },
+ "TiXmlAttribute": {
+  "alloc_sizes": [
+   76
+  ],
+  "bases": [],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [
+   "0x515cd0",
+   "0x516334",
+   "0x517034"
+  ],
+  "embedded": [],
+  "functions": 16,
+  "vtable_bytes": 24
+ },
+ "TiXmlAttributeSet": {
+  "alloc_sizes": [],
+  "bases": [
+   "TiXmlAttribute"
+  ],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [
+   "0x515d60",
+   "0x515d7c"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": null
+ },
+ "TiXmlBase": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [],
+  "embedded": [],
+  "functions": 14,
+  "vtable_bytes": 24
+ },
+ "TiXmlComment": {
+  "alloc_sizes": [],
+  "bases": [
+   "TiXmlNode"
+  ],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [
+   "0x516a20",
+   "0x516a68"
+  ],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 84
+ },
+ "TiXmlDeclaration": {
+  "alloc_sizes": [
+   136
+  ],
+  "bases": [
+   "TiXmlNode"
+  ],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [
+   "0x515f68",
+   "0x516154",
+   "0x516244",
+   "0x516b90",
+   "0x516c3c",
+   "0x517690",
+   "0x517780"
+  ],
+  "embedded": [],
+  "functions": 19,
+  "vtable_bytes": 88
+ },
+ "TiXmlDocument": {
+  "alloc_sizes": [
+   112
+  ],
+  "bases": [
+   "TiXmlNode"
+  ],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [
+   "0x516dd4",
+   "0x516e4c",
+   "0x516ec4",
+   "0x516f98"
+  ],
+  "embedded": [],
+  "functions": 17,
+  "vtable_bytes": 84
+ },
+ "TiXmlElement": {
+  "alloc_sizes": [
+   140
+  ],
+  "bases": [
+   "TiXmlNode"
+  ],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [
+   "0x515e98",
+   "0x515f00",
+   "0x5173a4",
+   "0x517400",
+   "0x51745c",
+   "0x517504"
+  ],
+  "embedded": [],
+  "functions": 37,
+  "vtable_bytes": 84
+ },
+ "TiXmlHandle": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": null
+ },
+ "TiXmlNode": {
+  "alloc_sizes": [
+   64
+  ],
+  "bases": [],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [
+   "0x515d98",
+   "0x515e18"
+  ],
+  "embedded": [],
+  "functions": 37,
+  "vtable_bytes": 84
+ },
+ "TiXmlParsingData": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "TiXmlPrinter": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [
+   "0x485aa0",
+   "0x5160c0"
+  ],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 48
+ },
+ "TiXmlPrinterDH": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": 48
+ },
+ "TiXmlText": {
+  "alloc_sizes": [],
+  "bases": [
+   "TiXmlNode"
+  ],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [
+   "0x519080"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": 84
+ },
+ "TiXmlUnknown": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 84
+ },
+ "TiXmlVisitor": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 48
+ },
+ "TimerTrap": {
+  "alloc_sizes": [],
+  "bases": [
+   "TriggerTrap"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x39da54",
+   "0x39da9c"
+  ],
+  "embedded": [],
+  "functions": 16,
+  "vtable_bytes": 296
+ },
+ "TimerUtil": {
+  "alloc_sizes": [
+   8
+  ],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [
+   "0x317a8c",
+   "0x317aa0"
+  ],
+  "embedded": [],
+  "functions": 7,
+  "vtable_bytes": null
+ },
+ "TouchScreenBase": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [
+   "0x33c298",
+   "0x33c3d8"
+  ],
+  "embedded": [],
+  "functions": 28,
+  "vtable_bytes": 92
+ },
+ "TouchScreenIPhone": {
+  "alloc_sizes": [],
+  "bases": [
+   "TouchScreenBase"
+  ],
+  "category": "core-platform",
+  "ctors": [
+   "0x33cd34",
+   "0x33cdcc"
+  ],
+  "embedded": [],
+  "functions": 15,
+  "vtable_bytes": 92
+ },
+ "TouchScreenPS3": {
+  "alloc_sizes": [],
+  "bases": [
+   "TouchScreenBase"
+  ],
+  "category": "core-platform",
+  "ctors": [
+   "0x33d3f4",
+   "0x33d440"
+  ],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 116
+ },
+ "TouchScreenWin32": {
+  "alloc_sizes": [
+   440
+  ],
+  "bases": [
+   "TouchScreenBase"
+  ],
+  "category": "core-platform",
+  "ctors": [
+   "0x33d68c",
+   "0x33d6d0"
+  ],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 116
+ },
+ "Trigger": {
+  "alloc_sizes": [],
+  "bases": [
+   "ZoneEx"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x398f44",
+   "0x398fd4"
+  ],
+  "embedded": [
+   [
+    "0x3c8",
+    "Trigger::NetStructTrigger"
+   ],
+   [
+    "0x570",
+    "Trigger::NetStructTrigger"
+   ]
+  ],
+  "functions": 21,
+  "vtable_bytes": 260
+ },
+ "TriggerObject": {
+  "alloc_sizes": [
+   1936
+  ],
+  "bases": [
+   "Trigger"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x399df0",
+   "0x399ef4"
+  ],
+  "embedded": [],
+  "functions": 18,
+  "vtable_bytes": 260
+ },
+ "TriggerPlate": {
+  "alloc_sizes": [],
+  "bases": [
+   "Trigger"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x39af04",
+   "0x39afe0"
+  ],
+  "embedded": [],
+  "functions": 19,
+  "vtable_bytes": 288
+ },
+ "TriggerTrap": {
+  "alloc_sizes": [],
+  "bases": [
+   "ZoneEx"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x39e670",
+   "0x39ecd4"
+  ],
+  "embedded": [],
+  "functions": 33,
+  "vtable_bytes": 292
+ },
+ "TriggerZone": {
+  "alloc_sizes": [],
+  "bases": [
+   "Trigger"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x39b890",
+   "0x39b990"
+  ],
+  "embedded": [],
+  "functions": 14,
+  "vtable_bytes": 260
+ },
+ "TriggerZoneExitLevel": {
+  "alloc_sizes": [],
+  "bases": [
+   "TriggerZone"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x39c9a4",
+   "0x39ca40"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 260
+ },
+ "TrophyData": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 16
+ },
+ "TrophyManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x380474",
+   "0x380508"
+  ],
+  "embedded": [],
+  "functions": 20,
+  "vtable_bytes": 16
+ },
+ "UnderlaySceneNode": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 300
+ },
+ "UserProperties": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-items-save",
+  "ctors": [
+   "0x319158",
+   "0x3191b0"
+  ],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": 16
+ },
+ "VarArgs": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": 16
+ },
+ "Vector3DFList": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x47c05c",
+   "0x47c0d8",
+   "0x47c154",
+   "0x47c190"
+  ],
+  "embedded": [],
+  "functions": 12,
+  "vtable_bytes": null
+ },
+ "VectorSet": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": null
+ },
+ "VisualFXManager": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x493260",
+   "0x4932c4"
+  ],
+  "embedded": [],
+  "functions": 37,
+  "vtable_bytes": 16
+ },
+ "VisualObject": {
+  "alloc_sizes": [
+   172
+  ],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x472a0c",
+   "0x472c5c"
+  ],
+  "embedded": [],
+  "functions": 61,
+  "vtable_bytes": 24
+ },
+ "XrayModularSkinnedMeshSceneNode": {
+  "alloc_sizes": [
+   468
+  ],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [
+   "0x364174",
+   "0x364254"
+  ],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 308
+ },
+ "Zone": {
+  "alloc_sizes": [],
+  "bases": [
+   "GameObject"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x397c2c",
+   "0x397ca0"
+  ],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 260
+ },
+ "ZoneEx": {
+  "alloc_sizes": [],
+  "bases": [
+   "Zone"
+  ],
+  "category": "game-world",
+  "ctors": [
+   "0x397ec0",
+   "0x397f28"
+  ],
+  "embedded": [],
+  "functions": 11,
+  "vtable_bytes": 260
+ },
+ "ZoomHandler": {
+  "alloc_sizes": [
+   68
+  ],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [
+   "0x382204",
+   "0x3822e4"
+  ],
+  "embedded": [],
+  "functions": 10,
+  "vtable_bytes": 44
+ },
+ "_JNIEnv": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 9,
+  "vtable_bytes": null
+ },
+ "_LiveFeed": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "batch": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-world",
+  "ctors": [],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": null
+ },
+ "channel": {
+  "alloc_sizes": [],
+  "bases": [
+   "std::string"
+  ],
+  "category": "net-session-online",
+  "ctors": [
+   "0x8436e4",
+   "0x843c60"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": null
+ },
+ "engine-glitch": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "glitch-video",
+  "ctors": [],
+  "embedded": [],
+  "functions": 7772,
+  "vtable_bytes": null
+ },
+ "item": {
+  "alloc_sizes": [],
+  "bases": [
+   "std::string"
+  ],
+  "category": "net-session-online",
+  "ctors": [
+   "0x842d70",
+   "0x843cd8"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": null
+ },
+ "lib-box2d": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "vendor-box2d",
+  "ctors": [],
+  "embedded": [],
+  "functions": 318,
+  "vtable_bytes": null
+ },
+ "lib-gameswf": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "vendor-gameswf",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2474,
+  "vtable_bytes": null
+ },
+ "lib-image-zip-font": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "tinyxml-and-c-libs",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1495,
+  "vtable_bytes": null
+ },
+ "lib-libnativeinterface": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 15,
+  "vtable_bytes": null
+ },
+ "lib-lua": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "vendor-lua",
+  "ctors": [],
+  "embedded": [],
+  "functions": 577,
+  "vtable_bytes": null
+ },
+ "lib-online-glx": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 881,
+  "vtable_bytes": null
+ },
+ "lib-vox-audio": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "vox-audio",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1080,
+  "vtable_bytes": null
+ },
+ "lstr": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "rnd": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 156,
+  "vtable_bytes": null
+ },
+ "rss": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": null
+ },
+ "sfc": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 35,
+  "vtable_bytes": null
+ },
+ "slim": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 28,
+  "vtable_bytes": null
+ },
+ "switchD_008a02e8": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "switchD_008a7b5c": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": null
+ },
+ "sys": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "core-platform",
+  "ctors": [],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": null
+ },
+ "tFriendInfo": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [
+   "0x81e024",
+   "0x81ebc8"
+  ],
+  "embedded": [],
+  "functions": 3,
+  "vtable_bytes": null
+ },
+ "tGLRoomInfo": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "tMemberInfo": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "tRoomInfo": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-session-online",
+  "ctors": [
+   "0x43fb60"
+  ],
+  "embedded": [],
+  "functions": 2,
+  "vtable_bytes": null
+ },
+ "unsigned char StreamReader": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "unsigned int StreamReader": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-app",
+  "ctors": [],
+  "embedded": [],
+  "functions": 1,
+  "vtable_bytes": null
+ },
+ "updateJob_thread": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "net-transport",
+  "ctors": [
+   "0x317e14",
+   "0x317e44"
+  ],
+  "embedded": [],
+  "functions": 13,
+  "vtable_bytes": 28
+ },
+ "v2Controllable": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x404db8",
+   "0x404de4"
+  ],
+  "embedded": [],
+  "functions": 31,
+  "vtable_bytes": 116
+ },
+ "v2Controller": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [],
+  "embedded": [],
+  "functions": 28,
+  "vtable_bytes": 20
+ },
+ "v2EmuController": {
+  "alloc_sizes": [
+   28
+  ],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x4065ac",
+   "0x4066cc"
+  ],
+  "embedded": [],
+  "functions": 8,
+  "vtable_bytes": 44
+ },
+ "v2GamepadController": {
+  "alloc_sizes": [
+   32
+  ],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x406978",
+   "0x406a64"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 20
+ },
+ "v2HudController": {
+  "alloc_sizes": [
+   16
+  ],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x408930",
+   "0x408a04"
+  ],
+  "embedded": [],
+  "functions": 5,
+  "vtable_bytes": 20
+ },
+ "v2MixedController": {
+  "alloc_sizes": [
+   36
+  ],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x408dd8",
+   "0x408ecc"
+  ],
+  "embedded": [],
+  "functions": 31,
+  "vtable_bytes": 232
+ },
+ "v2NetController": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x4091f4",
+   "0x4092c8"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 20
+ },
+ "v2PS3MoveController": {
+  "alloc_sizes": [],
+  "bases": [],
+  "category": "game-anim",
+  "ctors": [
+   "0x4098d0",
+   "0x4099bc"
+  ],
+  "embedded": [],
+  "functions": 6,
+  "vtable_bytes": 20
+ }
+}

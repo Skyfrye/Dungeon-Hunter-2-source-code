@@ -1,0 +1,53 @@
+--[[	Combat Master (Passive)
+
+	increase damage dealth with axe, sword and mace
+	+1 damage			|	+1 damage
+	+3 attack rate		|	+3 attack rate	
+
+--]]
+
+local CLASS_ID		= GetPyOID("ClassTable", "Skill_Warrior_CombatMaster");
+
+-- Cached values
+local skill_level	= 0;
+local buff			= nil;
+
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	if (buff) then
+		RemoveBuff(CLASS_ID, buff);
+	end
+	if (slvl~=0) then
+		buff = CreateBuff(CLASS_ID, 0, false, slvl);
+		ApplyBuff(CLASS_ID, buff);
+	end
+end
+
+local function OnSkillCheck_()
+	return false, true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);

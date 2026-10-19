@@ -1,0 +1,85 @@
+--[[	Witch attack
+
+	NPC Fireball projectile
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE 			= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMaxDistance")));
+
+local PROJECTILE_ID		= GetProp(GetPyStruct("CharacterProperties", "RangeProjectileID"));
+local CLASS_ID			= GetPyOID("ClassTable", "Swamp_WitchRangedAttack");
+local target 			= -1;
+local skill_level 	= 0;
+local traces 			= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSpellInfo();
+
+	skill_level	= slvl;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	
+	TargetListSearch(RANGE);
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	LookAt(target);
+	SpawnSkillProjectile(PROJECTILE_ID);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(target)
+	if(target) then
+		if (traces) then Trace ("target hit at "..target:GetName()); end
+		SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+		ApplyPropClass(CLASS_ID);
+		SkillCombatRoll(target);
+	end
+end
+
+local function OnDelayedSkillCheck_(target, projectile)
+	if(target and target:IsCharacter()) then
+		return true;
+	end
+
+	return false;
+end
+-- ----------------------------------------------------------------------------------------------
+RegisterSkillEx({	update=OnSkillUpdate_,
+					check=OnSkillCheck_,
+					pre=OnPreSkill_,
+					skill=OnSkill_,
+					post=OnPostSkill_,
+					delayed=OnDelayedSkill_,
+					delayed_check=OnDelayedSkillCheck_,
+					info=OnSkillInfo_,
+					});

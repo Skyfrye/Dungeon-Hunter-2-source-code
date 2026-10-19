@@ -1,0 +1,196 @@
+local SKILLTREE_ID		= FromFixed(GetProp(GetPyStruct("CharacterProperties", "SkillTree")));
+local SKILL_CHANCE		= 40;
+local BUFF_ID			= GetPyOID("ClassTable", "Buff_Speed");
+local traces 			= false;
+-- ----------------------------------------------------------------------------------------------------
+-- Large Plant behavior: Summons smaller plants at a regular rate -------------------------------------
+-- ----------------------------------------------------------------------------------------------------
+
+-- INIT --
+local function InitVars()
+
+	m_flee_flag 		= true;
+	buff 				= nil;
+	saved_X, saved_Y 	= GetPosition();
+end
+
+-- -------------------------------------------------------------------------------
+function LargePlantOnInit()
+
+	InitVars();
+	
+----------------------------------------------------------------------------------------
+-- Dynamic level for monster. Monster must have there LevelMax param set to use dynamic level
+----------------------------------------------------------------------------------------
+	local m_lvl_max = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMax")));
+	local m_lvl_min = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMin")));
+	local m_lvl_offset = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelOffset")));
+	local pl_lvl = GetHostPlayerLevel();
+	local pl_diff = GetHostPlayerDifficulty();
+	local m_lvl = pl_lvl;
+	local m_level_min, m_level_max = GetCurrentLevelRange(pl_diff);
+
+	if(m_lvl_max > -1 ) then
+		if(m_level_max and m_level_max > -1 ) then
+			if( m_lvl <= m_level_min ) then
+				m_lvl = m_level_min;
+			else
+				if( m_lvl >= m_level_max ) then
+					m_lvl = m_level_max;
+				end
+			end
+		else
+			if( m_lvl <= m_lvl_min ) then
+				m_lvl = m_lvl_min;
+			else
+				if( m_lvl >= m_lvl_max ) then
+					m_lvl = m_lvl_max;
+				end
+			end
+		end
+		m_lvl = m_lvl + m_lvl_offset;
+
+		SetLevel(ToFixed(m_lvl));
+	end
+end
+AddToVFTable("OnInit", "LargePlantOnInit");
+
+-- -------------------------------------------------------------------------------
+local function IsHavingSkillTree()
+
+	return SKILLTREE_ID > -1;
+end
+
+-- -------------------------------------------------------------------------------
+function LargePlant_OnTargetOutOfRange()
+	
+	ClearAggro(GetTarget());
+	ClearTarget();
+end
+AddToVFTable("OnTargetOutOfRange", "LargePlant_OnTargetOutOfRange");
+
+-- -------------------------------------------------------------------------------
+function LargePlant_OnEnemySpotted(target)
+
+	if(not HasTarget() and target:IsCharacter()) then
+ 		AddAggro(target, 0);
+ 		SetTarget(target);
+ 	end
+end
+AddToVFTable("OnEnemySpotted", "LargePlant_OnEnemySpotted");
+
+-- -------------------------------------------------------------------------------
+function LargePlant_OnTargetDied()
+
+	Stop();
+	ClearTarget();
+	if (traces) then Trace("[LargePlant] Target Died"); end
+end
+AddToVFTable("OnTargetDied", "LargePlant_OnTargetDied");
+
+-- -------------------------------------------------------------------------------
+function LargePlant_OnTargetInRangedRange()
+
+	if(buff)then
+		RemoveBuff(BUFF_ID, buff);
+		buff = nil;
+		m_flee_flag = true;
+	end
+	
+	Stop();
+	
+	if (IsHavingSkillTree()) then
+		DoSkill(0);
+	else
+		Attack(GetTarget());
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "LargePlant_OnTargetInRangedRange");
+
+-- -------------------------------------------------------------------------------
+function LargePlant_OnTargetInCloseRange()
+
+	local state = GetState();
+	
+	if(not buff) then
+		buff = CreateBuff(BUFF_ID);
+		ApplyBuff(BUFF_ID, buff);
+	end
+	
+	curr_X, curr_Y = GetPosition();	
+
+	if (not m_flee_flag) then
+		if (IsHavingSkillTree()) then
+			DoSkill(0);
+		else
+			Attack(GetTarget());
+		end
+		
+	elseif( curr_X == saved_X and curr_Y == saved_Y and m_flee_flag and state == GetPyCst("AIStates", "Move") and GetStateTime() > 500) then
+		m_flee_flag = false;
+		Stop();
+		
+	elseif(m_flee_flag) then
+		Flee(GetTarget());
+	end
+
+	saved_X = curr_X;
+	saved_Y = curr_Y;
+end
+AddToVFTable("OnTargetInCloseRange", "LargePlant_OnTargetInCloseRange");
+
+-- -------------------------------------------------------------------------------
+function LargePlant_OnTargetInMeleeRange()
+
+	Stop();
+
+	if (IsHavingSkillTree()) then
+		Roll = GetRand(0,100);
+		if (Roll < SKILL_CHANCE) then
+			DoSkill(0);
+		else
+			Attack(GetTarget());
+		end
+	else
+		Attack(GetTarget());
+	end
+end
+AddToVFTable("OnTargetInMeleeRange", "LargePlant_OnTargetInMeleeRange");
+
+-- -------------------------------------------------------------------------------
+local function LargePlant_OnEndGameCleanUp()
+
+	if (HasTarget()) then
+		ClearAggro(GetTarget());
+		ClearTarget();
+	end
+end
+
+-- -------------------------------------------------------------------------------
+function LargePlant_OnDied()
+
+	LargePlant_OnEndGameCleanUp();
+end
+AddToVFTable("OnDied", "LargePlant_OnDied");
+
+-- -------------------------------------------------------------------------------
+function LargePlant_OnTerminate()
+
+	LargePlant_OnEndGameCleanUp();
+end
+AddToVFTable("OnTerminate", "LargePlant_OnTerminate");
+
+-- -------------------------------------------------------------------------------
+function LargePlant_OnTargetHit(attacker, defender)
+	
+	if(defender:GetID() == GetID()) then
+		if (traces) then Trace("[LargePlant] was hit"); end
+		
+		if(not HasTarget()) then
+			SetTarget(attacker);
+			HeadTo(attacker);
+		end
+	end
+end
+AddToVFTable("OnTargetHit", "LargePlant_OnTargetHit");
+AddToVFTable("OnTargetMissed", "LargePlant_OnTargetHit");

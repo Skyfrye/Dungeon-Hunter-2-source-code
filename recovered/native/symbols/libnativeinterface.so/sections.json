@@ -1,0 +1,182 @@
+[
+  {
+    "index": 0,
+    "name": "",
+    "type": "SHT_NULL",
+    "address": 0,
+    "file_offset": 0,
+    "size": 0,
+    "flags": 0,
+    "alignment": 0
+  },
+  {
+    "index": 1,
+    "name": ".hash",
+    "type": "SHT_HASH",
+    "address": 212,
+    "file_offset": 212,
+    "size": 324,
+    "flags": 2,
+    "alignment": 4
+  },
+  {
+    "index": 2,
+    "name": ".dynsym",
+    "type": "SHT_DYNSYM",
+    "address": 536,
+    "file_offset": 536,
+    "size": 672,
+    "flags": 2,
+    "alignment": 4
+  },
+  {
+    "index": 3,
+    "name": ".dynstr",
+    "type": "SHT_STRTAB",
+    "address": 1208,
+    "file_offset": 1208,
+    "size": 671,
+    "flags": 2,
+    "alignment": 1
+  },
+  {
+    "index": 4,
+    "name": ".rel.dyn",
+    "type": "SHT_REL",
+    "address": 1880,
+    "file_offset": 1880,
+    "size": 56,
+    "flags": 2,
+    "alignment": 4
+  },
+  {
+    "index": 5,
+    "name": ".rel.plt",
+    "type": "SHT_REL",
+    "address": 1936,
+    "file_offset": 1936,
+    "size": 128,
+    "flags": 2,
+    "alignment": 4
+  },
+  {
+    "index": 6,
+    "name": ".plt",
+    "type": "SHT_PROGBITS",
+    "address": 2064,
+    "file_offset": 2064,
+    "size": 212,
+    "flags": 6,
+    "alignment": 4
+  },
+  {
+    "index": 7,
+    "name": ".text",
+    "type": "SHT_PROGBITS",
+    "address": 2276,
+    "file_offset": 2276,
+    "size": 2428,
+    "flags": 6,
+    "alignment": 4
+  },
+  {
+    "index": 8,
+    "name": ".rodata",
+    "type": "SHT_PROGBITS",
+    "address": 4704,
+    "file_offset": 4704,
+    "size": 5160,
+    "flags": 2,
+    "alignment": 4
+  },
+  {
+    "index": 9,
+    "name": ".ARM.extab",
+    "type": "SHT_PROGBITS",
+    "address": 9864,
+    "file_offset": 9864,
+    "size": 96,
+    "flags": 2,
+    "alignment": 4
+  },
+  {
+    "index": 10,
+    "name": ".ARM.exidx",
+    "type": "SHT_ARM_EXIDX",
+    "address": 9960,
+    "file_offset": 9960,
+    "size": 120,
+    "flags": 130,
+    "alignment": 4
+  },
+  {
+    "index": 11,
+    "name": ".data.rel.ro",
+    "type": "SHT_PROGBITS",
+    "address": 14176,
+    "file_offset": 10080,
+    "size": 24,
+    "flags": 3,
+    "alignment": 4
+  },
+  {
+    "index": 12,
+    "name": ".dynamic",
+    "type": "SHT_DYNAMIC",
+    "address": 14200,
+    "file_offset": 10104,
+    "size": 192,
+    "flags": 3,
+    "alignment": 4
+  },
+  {
+    "index": 13,
+    "name": ".got",
+    "type": "SHT_PROGBITS",
+    "address": 14392,
+    "file_offset": 10296,
+    "size": 80,
+    "flags": 3,
+    "alignment": 4
+  },
+  {
+    "index": 14,
+    "name": ".bss",
+    "type": "SHT_NOBITS",
+    "address": 14472,
+    "file_offset": 10376,
+    "size": 12,
+    "flags": 3,
+    "alignment": 4
+  },
+  {
+    "index": 15,
+    "name": ".comment",
+    "type": "SHT_PROGBITS",
+    "address": 0,
+    "file_offset": 10376,
+    "size": 36,
+    "flags": 0,
+    "alignment": 1
+  },
+  {
+    "index": 16,
+    "name": ".ARM.attributes",
+    "type": "SHT_ARM_ATTRIBUTES",
+    "address": 0,
+    "file_offset": 10412,
+    "size": 41,
+    "flags": 0,
+    "alignment": 1
+  },
+  {
+    "index": 17,
+    "name": ".shstrtab",
+    "type": "SHT_STRTAB",
+    "address": 0,
+    "file_offset": 10453,
+    "size": 144,
+    "flags": 0,
+    "alignment": 1
+  }
+]

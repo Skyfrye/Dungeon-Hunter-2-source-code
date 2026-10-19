@@ -1,0 +1,101 @@
+elf_address,symbol,status,source_file,notes
+0x6ad02c,_ZN6glitch3gui15CGUIContextMenu9sendClickERKNS_4core10position2dIiEE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,parent onEvent forward stubbed (unattached); event parent at +0x174 not stored (uint32 in gui.hpp); item selection rebuilt
+0x6ad260,_ZN6glitch3gui15CGUIContextMenu15recalculateSizeEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,skin and font metrics via environment vtable not declared; item layout pass not rebuilt
+0x6ad58c,_ZN6glitch3gui15CGUIContextMenu14setEventParentEPNS0_11IGUIElementE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,event parent word at +0x174 is uint32 in gui.hpp so the pointer is not stored; submenu walk rebuilt
+0x6ad620,_ZNK6glitch3gui15CGUIContextMenu14hasOpenSubMenuEv,reconstructed,glitch-scene-collada-gui/src/recon/slice_25.cpp,isVisible read as the visible byte at +0x98
+0x6ad6c4,_ZN6glitch3gui15CGUIContextMenu16closeAllSubMenusEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,submenu hide calls setVisible which stubs the timer; decompiled return word (items end) not reproduced
+0x6ad8cc,_ZN6glitch3gui15CGUIContextMenu11setItemTextEjPKw,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,text assign rebuilt; recalculateSize stubbed; decompiled return on out-of-range path not reproduced
+0x6ad9e8,_ZN6glitch3gui15CGUIContextMenu9highlightERKNS_4core10position2dIiEEb,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,item rectangle hit test (virtual slot +0xc8) and timer not rebuilt; returns false
+0x6adc3c,_ZN6glitch3gui15CGUIContextMenu10setVisibleEb,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,timer stamp stubbed (unattached glitch::os::Timer::getTime); decompiled return count not reproduced
+0x6adcf0,_ZN6glitch3gui15IGUIContextMenuC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,base ids rectangles and tab fields set; string storage and environment rectangle pass not rebuilt
+0x6adfb8,_ZN6glitch3gui15CGUIContextMenuC1EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEbb,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,base constructed; environment addChild not declared; recalculateSize stubbed
+0x6ae100,_ZN6glitch3gui15CGUIContextMenuC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEEbb,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,second variant of 0x6adfb8; same stubs
+0x6ae1f4,_ZN6glitch3gui15CGUIContextMenu7onEventERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,event decisions rebuilt; parent forward and environment gates stubbed (unattached onEvent)
+0x6ae480,_ZN6glitch3gui15CGUIContextMenu14removeAllItemsEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,submenu release stubbed; vector erase not modelled through void* words
+0x6ae7bc,_ZN6glitch3gui15CGUIContextMenu10removeItemEj,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,vector erase not modelled through void* words; submenu release stubbed
+0x6ae858,_ZN6glitch3gui15CGUIContextMenuD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,complete destructor; submenu release stubbed; vtable reset and base destruction compiler generated
+0x6ae974,_ZN6glitch3gui15CGUIContextMenuD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor; compiler thunk
+0x6ae990,_ZN6glitch3gui15CGUIContextMenuD2Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,secondary-base destructor variant; compiler generated
+0x6aea9c,_ZN6glitch3gui15CGUIContextMenu7addItemEPKwibbb,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,push_back and submenu construction not rebuilt; returns -1
+0x6aec08,_ZN6glitch3gui15CGUIContextMenu4drawEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,skin and font calls and item drawing not rebuilt
+0x6afafc,_ZN6glitch3gui11CGUIEditBox11setTextRectEi,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; CGUIEditBox has no layout in layouts; body stubbed
+0x6afd18,_ZN6glitch3gui11CGUIEditBox12getCursorPosEii,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; CGUIEditBox has no layout; returns 0
+0x6afe9c,_ZN6glitch3gui11CGUIEditBox16getTextDimensionEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; CGUIEditBox has no layout; returns empty dimension
+0x6affcc,_ZN6glitch3gui11CGUIEditBox14getLineFromPosEi,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; CGUIEditBox has no layout; returns -1
+0x6b0194,_ZNK6glitch3gui11IGUIElement14getNextElementEibbRPS1_S3_b.clone.4,reconstructed,glitch-scene-collada-gui/src/recon/slice_25.cpp,tab walk of IGUIElement children; visibility from +0x98; no unattached calls
+0x6b02e8,_ZN6glitch3gui11IGUIElement11setTabOrderEi.clone.2,reconstructed,glitch-scene-collada-gui/src/recon/slice_25.cpp,decompiled body writes 0 to tabOrder and ignores the argument; ancestor walk rebuilt
+0x6b0394,_ZN6glitch3gui11IGUIEditBoxC2EPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,IGUIEditBox base state only; CGUIEditBox members unattached
+0x6b0844,_ZN6glitch3gui11CGUIEditBox14setPasswordBoxEbw,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; CGUIEditBox has no layout; stub
+0x6b0bac,_ZN6glitch3gui11CGUIEditBoxD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; CGUIEditBox has no layout; releases stubbed
+0x6b0c60,_ZN6glitch3gui11CGUIEditBoxD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor; compiler thunk
+0x6b0c7c,_ZN6glitch3gui11CGUIEditBoxD2Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,secondary-base destructor variant; compiler generated
+0x6b0d20,_ZN6glitch3gui11IGUIEditBoxD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor of IGUIEditBox; compiler thunk
+0x6b0f8c,_ZN6glitch3gui11CGUIEditBox9breakTextEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; CGUIEditBox has no layout; word-wrap pass not rebuilt
+0x6b15c8,_ZN6glitch3gui11CGUIEditBox7setTextEPKw,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; text member not declared; stub
+0x6b160c,_ZN6glitch3gui11CGUIEditBox22updateAbsolutePositionEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; base update and breakText stubbed
+0x6b162c,_ZN6glitch3gui11CGUIEditBox15setOverrideFontEPNS0_8IGUIFontE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; override font member not declared; stub
+0x6b1668,_ZN6glitch3gui11CGUIEditBox9inputCharEw,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; text and max-length members not declared; stub
+0x6b185c,_ZN6glitch3gui11CGUIEditBox6setMaxEj,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; max-length member not declared; stub
+0x6b18e0,_ZN6glitch3gui11CGUIEditBox4drawEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; drawing pass with skin and font calls not rebuilt
+0x6b246c,_ZN6glitch3gui11CGUIEditBox18calculateScrollPosEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; scroll members not declared; stub
+0x6b2608,_ZN6glitch3gui11CGUIEditBoxC1EPKwbPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiRKNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; text border and line members not declared; base only
+0x6b28c8,_ZN6glitch3gui11CGUIEditBoxC2EPKwbPNS0_15IGUIEnvironmentEPNS0_11IGUIElementEiRKNS_4core4rectIiEE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,second variant of 0x6b2608; same stubs
+0x6b2b3c,_ZN6glitch3gui11CGUIEditBox12processMouseERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; cursor and selection members not declared; stub
+0x6b2cc0,_ZN6glitch3gui11CGUIEditBox10processKeyERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,4 KB key handler not rebuilt; stub
+0x6b3d70,_ZN6glitch3gui11CGUIEditBox7onEventERKNS_6SEventE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; key and mouse handlers stubbed; event falls through to parent stub
+0x6b8834,_ZN6glitch5scene17CAppendMeshBuffer12adjustStrideEt,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; CAppendMeshBuffer has no layout in scene.hpp; stub
+0x6b88a8,_ZN6glitch5scene11CMeshBufferC2EjRKNS_5video16CPrimitiveStreamEb.clone.3,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,reference words owner and flag set; vertex-stream allocation and CPrimitiveStream copies not rebuilt
+0x6b8950,_ZN6glitch5scene17CAppendMeshBuffer15configureStreamEhiNS_5video29E_VERTEX_ATTRIBUTE_VALUE_TYPEEt,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; CVertexStreams and stream vector not declared; stub
+0x6b8aa0,_ZN6glitch5scene17CAppendMeshBuffer9endAppendEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; CAppendMeshBuffer layout not declared; stub
+0x6b8b74,_ZN6glitch5scene17CAppendMeshBuffer6resizeEjj,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; IBuffer::reset not declared; stub
+0x6b8bb4,_ZN6glitch5scene17CAppendMeshBuffer5resetEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; stream clear and homogeneity update not declared; stub
+0x6b8c2c,_ZN6glitch5scene17CAppendMeshBufferD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,complete destructor; unattached members; calls endAppend stub
+0x6b8c98,_ZN6glitch5scene17CAppendMeshBufferD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor; compiler thunk
+0x6b8cb4,_ZN6glitch5scene17CAppendMeshBufferC1EjjPNS_5video12IVideoDriverENS2_14E_BUFFER_USAGEEj,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; CAppendMeshBuffer layout not declared; stub
+0x6b8fe0,_ZN6glitch5scene17CAppendMeshBufferC2EjjPNS_5video12IVideoDriverENS2_14E_BUFFER_USAGEEj,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,second variant of 0x6b8cb4; same stub
+0x6b93b0,_ZN6glitch5scene24CColladaBinaryFileLoaderD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; loader layout not declared; release stubbed
+0x6b93f0,_ZN6glitch5scene24CColladaBinaryFileLoaderD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,second variant of 0x6b93b0; same stub
+0x6b9430,_ZN6glitch5scene24CColladaBinaryFileLoader11createSceneEPNS_2io9IReadFileE,reconstructed,glitch-scene-collada-gui/src/recon/slice_25.cpp,decompiled body returns 0
+0x6b9458,_ZN6glitch5scene24CColladaBinaryFileLoader10createMeshEPNS_2io9IReadFileE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; CResFileManager and CColladaDatabase not declared; returns nullptr
+0x6b955c,_ZN6glitch5scene24CColladaBinaryFileLoaderD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor; compiler thunk
+0x6b9578,_ZN6glitch5scene11IMeshLoaderD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor of IMeshLoader; compiler thunk
+0x6b9590,_ZN6glitch5scene32CDefaultSceneNodeAnimatorFactoryC2EPNS0_13CSceneManagerEPNS_3gui14ICursorControlE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/gui.hpp; factory layout not declared in scene.hpp; stub
+0x6b95dc,_ZN6glitch5scene32CDefaultSceneNodeAnimatorFactoryC1EPNS0_13CSceneManagerEPNS_3gui14ICursorControlE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,second variant of 0x6b9590; same stub
+0x6b9628,_ZN6glitch5scene32CDefaultSceneNodeAnimatorFactoryD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; factory layout not declared; stub
+0x6b9668,_ZN6glitch5scene32CDefaultSceneNodeAnimatorFactoryD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,second variant of 0x6b9628; same stub
+0x6b9720,_ZNK6glitch5scene32CDefaultSceneNodeAnimatorFactory15getTypeFromNameEPKc,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; SceneNodeAnimatorTypeNames table not declared; returns 10 not-found index
+0x6b9778,_ZN6glitch5scene32CDefaultSceneNodeAnimatorFactory23createSceneNodeAnimatorEPKcPNS0_10ISceneNodeE,reconstructed,glitch-scene-collada-gui/src/recon/slice_25.cpp,control flow matches; delegates to getTypeFromName (partial) and the enum overload (partial)
+0x6b97a4,_ZN6glitch5scene32CDefaultSceneNodeAnimatorFactoryD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor; compiler thunk
+0x6b97c0,_ZN6glitch5scene25ISceneNodeAnimatorFactoryD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor of ISceneNodeAnimatorFactory; compiler thunk
+0x6b9928,_ZN6glitch5scene32CDefaultSceneNodeAnimatorFactory23createSceneNodeAnimatorENS0_26E_SCENE_NODE_ANIMATOR_TYPEEPNS0_10ISceneNodeE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,animator classes not declared; switch not rebuilt; returns nullptr
+0x6b9da0,_ZNK6glitch5scene24CDefaultSceneNodeFactory30getCreateableSceneNodeTypeNameENS0_17E_SCENE_NODE_TYPEE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; type-name table entries not declared; returns 0
+0x6b9e44,_ZN6glitch5scene17ISceneNodeFactoryD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor of ISceneNodeFactory; compiler thunk
+0x6b9e58,_ZNK6glitch5scene24CDefaultSceneNodeFactory15getTypeFromNameEPKc,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; type-name table not declared; returns not-found value
+0x6b9f04,_ZN6glitch5scene24CDefaultSceneNodeFactory12addSceneNodeEPKcPNS0_10ISceneNodeE,reconstructed,glitch-scene-collada-gui/src/recon/slice_25.cpp,control flow matches; delegates to getTypeFromName (partial) and the enum overload (partial)
+0x6b9f30,_ZN6glitch5scene24CDefaultSceneNodeFactory12addSceneNodeENS0_17E_SCENE_NODE_TYPEEPNS0_10ISceneNodeE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,per-type constructor switch not rebuilt; returns nullptr
+0x6ba774,_ZN6glitch5scene24CDefaultSceneNodeFactory18SSceneNodeTypePairC1ENS0_17E_SCENE_NODE_TYPEEPKc,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,name range initialization not modelled; type not stored
+0x6ba8f8,_ZN6glitch5scene24CDefaultSceneNodeFactoryD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,complete destructor; type-pair vector destruction stubbed
+0x6ba940,_ZN6glitch5scene24CDefaultSceneNodeFactoryD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor; compiler thunk
+0x6baae8,_ZN6glitch5scene24CDefaultSceneNodeFactoryC2EPNS0_13CSceneManagerEPNS_3gui14ICursorControlERKN5boost13intrusive_ptrINS_2io11IFileSystemEEE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,1.2 KB constructor not rebuilt; stub
+0x6bb008,_ZN6glitch5scene24CDefaultSceneNodeFactoryC1EPNS0_13CSceneManagerEPNS_3gui14ICursorControlERKN5boost13intrusive_ptrINS_2io11IFileSystemEEE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,second variant of 0x6baae8; same stub
+0x6bb540,_ZN6glitch5scene29CDummyTransformationSceneNode31getRelativeTransformationMatrixEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; matrix member at +0x130 not declared; returns nullptr
+0x6bb568,_ZN6glitch5scene29IDummyTransformationSceneNodeD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,complete base destructor; base destruction compiler generated; no members declared
+0x6bb5d4,_ZN6glitch5scene29CDummyTransformationSceneNodeD1Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,complete destructor; base destruction compiler generated; no members declared
+0x6bb65c,_ZN6glitch5scene29CDummyTransformationSceneNode31setRelativeTransformationMatrixERKNS_4core8CMatrix4IfEE,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,matrix copy and virtual setters not rebuilt; stub
+0x6bb6f0,_ZN6glitch5scene29IDummyTransformationSceneNodeC2Ei,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,ISceneNode base constructor not declared; identity defaults not applied
+0x6bb77c,_ZN6glitch5scene29CDummyTransformationSceneNodeC1Ei,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,depends on the IDummy base constructor stub
+0x6bb858,_ZN6glitch5scene29CDummyTransformationSceneNode5cloneEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,base clone-members and matrix copy not rebuilt; returns nullptr
+0x6bb8cc,_ZN6glitch5scene29IDummyTransformationSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor of IDummyTransformationSceneNode; compiler thunk
+0x6bb940,_ZN6glitch5scene29CDummyTransformationSceneNodeC2Ei,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,second variant; depends on the IDummy base constructor stub
+0x6bb9e0,_ZN6glitch5scene29CDummyTransformationSceneNodeD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor; compiler thunk
+0x6bbcc4,_ZN6glitch5scene5CMesh7SBufferaSERKS2_,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,buffer word copied; material and vertex-attribute-map refcounts not applied
+0x6bc27c,_ZN6glitch5scene5CMeshD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor; compiler thunk
+0x6bc298,_ZN6glitch5scene5CMeshD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,complete destructor; buffer vector destruction stubbed
+0x6bc2cc,_ZN6glitch5scene5CMesh22recalculateBoundingBoxEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; CVertexStreams vertex reads not declared; box unchanged
+0x6bc3e4,_ZNK6glitch5scene5CMesh5cloneEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; buffer vector copy not modelled; returns nullptr
+0x6bc6d8,_ZN6glitch5scene11CMeshBuffer8onDeleteEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,owner word at +0x30 is uint32 in scene.hpp; owner vtable call stubbed
+0x6bca1c,_ZN6glitch5scene11CMeshBufferD0Ev,skipped,glitch-scene-collada-gui/src/recon/slice_25.cpp,D0 deleting destructor; compiler thunk
+0x6bca38,_ZN6glitch5scene11CMeshBufferD2Ev,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,complete destructor; vertex stream and block releases stubbed
+0x6bcb90,_ZNK6glitch5scene11CMeshBuffer5cloneEv,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,vertex stream clone and 0x38 copy not rebuilt; returns nullptr
+0x6be5b0,_ZN6glitch5scene10CMeshCache14getMeshByIndexEj,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; mesh cache layout not declared; returns nullptr
+0x6be6d4,_ZN6glitch5scene10CMeshCache12isMeshLoadedEPKc,partial,glitch-scene-collada-gui/src/recon/slice_25.cpp,unattached: needs member declaration in layouts/scene.hpp; lookup via cache vtable slot not declared; returns false

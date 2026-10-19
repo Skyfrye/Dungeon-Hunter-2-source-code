@@ -1,0 +1,102 @@
+[
+  {
+    "tag": "DT_NEEDED",
+    "value": 519,
+    "string": "libc.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 527,
+    "string": "libstdc++.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 540,
+    "string": "libm.so"
+  },
+  {
+    "tag": "DT_NEEDED",
+    "value": 548,
+    "string": "libdl.so"
+  },
+  {
+    "tag": "DT_SONAME",
+    "value": 649,
+    "string": "libnativeinterface.so"
+  },
+  {
+    "tag": "DT_SYMBOLIC",
+    "value": 0,
+    "string": null
+  },
+  {
+    "tag": "DT_HASH",
+    "value": 212,
+    "string": null
+  },
+  {
+    "tag": "DT_STRTAB",
+    "value": 1208,
+    "string": null
+  },
+  {
+    "tag": "DT_SYMTAB",
+    "value": 536,
+    "string": null
+  },
+  {
+    "tag": "DT_STRSZ",
+    "value": 671,
+    "string": null
+  },
+  {
+    "tag": "DT_SYMENT",
+    "value": 16,
+    "string": null
+  },
+  {
+    "tag": "DT_PLTGOT",
+    "value": 14392,
+    "string": null
+  },
+  {
+    "tag": "DT_PLTRELSZ",
+    "value": 128,
+    "string": null
+  },
+  {
+    "tag": "DT_PLTREL",
+    "value": 17,
+    "string": null
+  },
+  {
+    "tag": "DT_JMPREL",
+    "value": 1936,
+    "string": null
+  },
+  {
+    "tag": "DT_REL",
+    "value": 1880,
+    "string": null
+  },
+  {
+    "tag": "DT_RELSZ",
+    "value": 56,
+    "string": null
+  },
+  {
+    "tag": "DT_RELENT",
+    "value": 8,
+    "string": null
+  },
+  {
+    "tag": "DT_RELCOUNT",
+    "value": 6,
+    "string": null
+  },
+  {
+    "tag": "DT_NULL",
+    "value": 0,
+    "string": null
+  }
+]

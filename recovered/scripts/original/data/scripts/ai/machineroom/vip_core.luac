@@ -1,0 +1,219 @@
+-- FLAGS
+
+
+-- CONSTANTS
+
+
+-- DATA
+g_vip_point 						= 1;
+g_canAddObject 						= true;
+g_canApplyDebuff					= true;
+g_safezone_radius					= 950;
+g_killmonster_radius				= 7000;
+g_safezone_radius_max				= 30000;
+
+-- TIMERS
+local DEBUFF_DELAY 					= 1000;
+local DEBUFF_ID						= GetPyOID("ClassTable", "MachineRoom_AreaDebuff");
+local VIP_BUFF_FX					= GetPyOID("AnimatedEffectTable", "active_buff_fx");
+
+-- CACHED VALUES
+g_players							= {};
+g_monsters							= {};
+g_dest_spawns 						= {};
+g_players_debuff					= {};
+
+local playerIsAlive 				= true;
+
+g_starting_point					= -1;
+local g_debuff_timer;
+local g_debuff;
+local traces 						= false;
+
+
+-- ==============================================================================
+-- ** VIP
+-- ==============================================================================
+-- ------------------------------------------------------------------------------
+local function ApplyPlayerDebuff()
+	if (#g_players_debuff > 0) then
+		for index, object in pairs(g_players_debuff) do
+			if (not object:IsConnected() or object:IsDead()) then
+				table.remove(g_players_debuff, index);
+			else
+				local buff = object:CreateBuff(DEBUFF_ID, DEBUFF_DELAY, false, 0, VIP_BUFF_FX);
+				object:ApplyBuff(DEBUFF_ID, buff);
+			end
+		end
+	end
+end
+
+-- ------------------------------------------------------------------------------
+InitPathingLocations = function()
+	local spawns		= {};
+	local objects		= {};
+	local num_found	= 0;
+
+	repeat
+		objects		= {GetGameObjectsByType("Dummy", num_found)};
+		num_found	= num_found + #objects;
+
+		for i, obj in ipairs(objects) do
+			local obj_name = obj:GetName();
+			
+			if (traces) then Trace("obj_name: "..obj_name); end
+			
+			if (obj_name == "vip_start") then
+				g_starting_point = obj;
+			else
+			
+				for name in string.gmatch(obj_name, "vip_") do
+					
+					g_canAddObject = true;
+					local num_spawns = 1;
+					
+					if (#spawns > 1) then
+						repeat
+							
+							for j, objspawns in ipairs(spawns) do
+								local obj_spawnName = objspawns:GetName();
+								
+								if ((obj_name == obj_spawnName)) then
+									g_canAddObject = false;
+								end
+							end
+								
+							num_spawns = num_spawns + 1
+						until(num_spawns > #spawns)
+					end
+					
+					if (g_canAddObject) then
+						table.insert(spawns, obj);
+					end
+					
+				end
+			end
+			
+		end
+	until(#objects == 0)
+	
+	g_dest_spawns = spawns;
+end
+
+-- ------------------------------------------------------------------------------
+goToNextDestination = function()
+	if (g_last_wave ~= true) then
+		if (traces) then Trace("g_vip_point: "..g_vip_point); end
+		if (g_vip_point > #g_dest_spawns) then
+		else
+			
+			local num_spawns = 1;
+			local obj_name;
+			
+			if (g_vip_point < 10) then
+				obj_name = "vip_0"..tostring(g_vip_point);
+			else
+				obj_name = "vip_"..tostring(g_vip_point);
+			end
+			
+			if (traces) then Trace("My destination object name is " .. obj_name ); end
+			
+			for j, objpath in ipairs(g_dest_spawns) do
+				local obj_spawnName = objpath:GetName();
+				
+				if (obj_name == obj_spawnName) then
+					SetMaxPath(10000);
+					
+					MoveTo(objpath);
+					
+					g_vip_point = g_vip_point + 1;
+					
+					if (not HasPath()) then
+						if (traces) then Trace("Ho ho... No path found. Go to objective in straight line now."); end
+						local x, y, z = objpath:GetPosition();
+						HeadTo(x,y,z);
+					end
+					break;
+				end
+			end
+		end
+	end
+end
+
+-- ------------------------------------------------------------------------------
+hasReachDestination = function()
+	local state = GetState();
+	
+	if (state == GetPyCst("AIStates", "Idle")) then
+		return true;
+	else
+		return false;
+	end
+end
+
+playAlarmAnimation = function()
+	if (traces) then Trace("DID IT PLAY?"); end
+	PlayAnim(GetPyOID("AnimDict", "faeries_celeste_alarm"),nil, true);
+end
+
+-- ------------------------------------------------------------------------------
+UpdatePlayerPosition = function()
+
+	if (#g_players > 0) then
+		
+		for index, player in pairs(g_players) do
+		
+			local distance = FromFixed(GetDistanceBetween(GetName(), player:GetName()));
+			
+			if (distance < g_safezone_radius) then
+				if (#g_players_debuff > 0) then
+					for i, object in pairs(g_players_debuff) do
+						if (player:GetID() == object:GetID()) then
+							table.remove(g_players_debuff, i);
+							player:RemoveBuff(DEBUFF_ID);
+							if (traces) then Trace("[Referee] Player is entering the safe zone. Removing debuff..."); end
+						end
+					end
+				end
+				
+			elseif (distance > g_safezone_radius_max and (player:GetHP() > 0)) then
+				if (traces) then Trace("Player reached point of no return! Killing him automatically..."); end
+				player:Kill();
+				
+			elseif (distance > g_safezone_radius) then
+				local canAddDebuffToPlayer = true;
+				
+				if (#g_players_debuff > 0) then
+					for i, object in pairs(g_players_debuff) do
+						if (player:GetID() == object:GetID()) then
+							canAddDebuffToPlayer = false;
+						end
+					end
+				end
+				
+				if (canAddDebuffToPlayer) then
+					table.insert(g_players_debuff, player);
+					if (g_debuff_timer == nil) then
+						if (traces) then Trace("[Debuff Timer] Starting Debuff Timer!"); end
+						ApplyPlayerDebuff();
+						g_debuff_timer = StartTimerCB(DEBUFF_DELAY, true, ApplyPlayerDebuff);
+					end
+					if (traces) then Trace("[Referee] Player is exiting the safe zone! Applying debuff!!!!"); end
+				end
+			end
+		end
+	end
+	
+	--Kill monsters if they go too far away
+	if (#g_monsters > 0) then
+		
+		for m_index, monster in pairs(g_monsters) do
+		
+			local m_distance = FromFixed(GetDistanceBetween(GetName(), monster:GetName()));
+			if (m_distance > g_killmonster_radius) then
+				if (traces) then Trace("[Referee] Monster is too far!  Killing Monster!"); end
+				monster:Kill();
+			end
+		end
+	end
+end

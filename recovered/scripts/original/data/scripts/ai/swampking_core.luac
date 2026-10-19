@@ -1,0 +1,768 @@
+-- FLAGS
+local debugTrace_flag				= true;		-- For enabling the traces for debugging the AI
+local attack_flag					= false; 	-- checks if the character is ready to attack.
+local first_melee_flag				= true; 	-- checks if the first melee attack can be initialized.
+
+local diveAnim_flag					= false; -- checks if the OnEndOfAnim event can be used to check the dive anim status.
+local emergeAnim_flag				= false; -- check if the OnEndOfAnim event can be used to check the emerge anim status.
+local weakAnim_flag					= false; -- checks if the OnEndOfAnim event can be used to check the weak anim status.
+
+local musicStarted_flag				= false; -- checks if the boss music has started or not.
+
+local intimidateAnim_flag			= 0; 	-- checks if the OnEndOfAnim event can be used to check the intimidate anim status and which action to take after.
+											--	= 1; -- Do nothing, return to idle.
+											--	= 2; -- Perform DoSkill(2).
+
+local diveCounter					= 0; -- checks how many times Dive has been performed				
+local canDiveNow					= false; -- checks whether or not the King can do his dive pattern	
+local allowed						= false;	
+
+local timer_attack_flag				= nil;
+local timer_diving_flag				= nil;
+local timer_divepattern_flag 		= nil;
+local emerge_timer					= nil;
+local dive_timer					= nil;
+local skill2_timer					= nil;
+
+
+-- CONSTANTS
+local ST_IDLE						= 0;
+local ST_INTIMIDATE					= 1;
+local ST_DIVE						= 2;
+local ST_EMERGE						= 3;
+
+local SK_STATE						= ST_IDLE;
+
+local SK_PHASE_ID					= -1;
+
+local DEBUFF_ID						= GetPyOID("ClassTable", "Swampking_Debuff"); 
+
+local MELEE_RANGE					= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMinDistance")));
+local RANGED_RANGE					= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMaxDistance")));
+
+-- DATA
+local normalRangedAttack_prob		= 80;					-- chances in PCT to perform a regular ranged attack.
+local normalMeleeAttack1_prob 		= 80; 				-- chances in PCT to perform a regular melee attack in phase 1.
+local normalMeleeAttack2_prob		= {40, 50, 10};	-- chances in PCT to perform one of the 3 regular melee/ranged attacks in phase 2 - !Cumulative values - MUST MATCH 100%.
+																	--  {Atk 1, Atk 2, Atk 4} - HARDCODED table for phase 2 probs.
+											
+local firstMeleeAttack2_prob 		= 50; 				-- chances in PCT to perform a first regular melee attack in phase 2.
+
+local phase2_initPct				= 75;					-- HP PCT of the character at when to init phase 2. 25%
+local sk_spawn_points				=	{					-- Spawn point names table for the Dive attack.
+										"_prim_BossSpawnPoint_03", -- HARDCODED - First one is the phase 2 only SawnPoint.
+										"_prim_BossSpawnPoint_02", 
+										"_prim_BossSpawnPoint_01", 
+										"_prim_BossSpawnPoint_04", 
+										"_prim_BossSpawnPoint_05"
+										};
+
+
+-- TIMERS
+local ATTACK_DELAY 					= 1500; 	-- Timer attack delay.
+local WEAK_DELAY					= 7000;	-- Timer for weak state.
+local DIVE_DELAY					= 1000;	-- Timer for dive state.
+local INTIMIDATE_DELAY				= 2000;	-- Timer for intimidate state.
+local OUTOFRANGE_MIN_DELAY			= 1000;	-- Timer for out of range minimum reaction delay.
+local OUTOFRANGE_MAX_DELAY			= 3000;	-- Timer for out of range maximum reaction delay.
+local GOTODIVE_DELAY				= 15000; -- Timer to enter Dive state.
+local INDIVEPATTERN_DELAY			= 8500;  -- Timer to enter into Dive and Spit pattern.
+
+
+-- -------------------------------------------------------------------------------
+-- EVENTS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+-- FLAGS
+local function InitVars()
+	
+	SK_STATE						= ST_IDLE;
+	attack_flag						= false; 	-- checks if the character is ready to attack.
+	first_melee_flag				= true; 	-- checks if the first melee attack can be initialized.
+
+	diveAnim_flag					= false; -- checks if the OnEndOfAnim event can be used to check the dive anim status.
+	emergeAnim_flag					= false; -- check if the OnEndOfAnim event can be used to check the emerge anim status.
+	weakAnim_flag					= false; -- checks if the OnEndOfAnim event can be used to check the weak anim status.
+
+	musicStarted_flag				= false; -- checks if the boss music has started or not.
+	StopSound("SwampKingMusic", 2000);
+
+	intimidateAnim_flag				= 0; -- checks if the OnEndOfAnim event can be used to check the intimidate anim status and which action to take after.
+										--	= 1; -- Do nothing, return to idle.
+										--	= 2; -- Perform DoSkill(2).
+
+	diveCounter						= 0; -- checks how many times Dive has been performed				
+	canDiveNow						= false; -- checks whether or not the King can do his dive pattern
+	allowed							= false;			
+	
+	debugTrace_flag					= false;	
+
+	-- CONSTANTS
+	ST_IDLE							= 0;
+	ST_INTIMIDATE					= 1;
+	ST_DIVE							= 2;
+	ST_EMERGE						= 3;
+
+	SK_PHASE_ID						= -1;
+
+	DEBUFF_ID						= GetPyOID("ClassTable", "Swampking_Debuff"); 
+
+	MELEE_RANGE						= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMinDistance")));
+	RANGED_RANGE					= FromFixed(GetProp(GetPyStruct("CharacterProperties", "RangeMaxDistance")));
+
+	-- DATA
+	normalRangedAttack_prob			= 80;					-- chances in PCT to perform a regular ranged attack.
+	normalMeleeAttack1_prob			= 80; 				-- chances in PCT to perform a regular melee attack in phase 1.
+	normalMeleeAttack2_prob			= {40, 50, 10};	-- chances in PCT to perform one of the 3 regular melee/ranged attacks in phase 2 - !Cumulative values - MUST MATCH 100%.
+																	--  {Atk 1, Atk 2, Atk 4} - HARDCODED table for phase 2 probs.
+											
+	firstMeleeAttack2_prob 			= 50; 				-- chances in PCT to perform a first regular melee attack in phase 2.
+
+	phase2_initPct					= 75;					-- HP PCT of the character at when to init phase 2. 25%
+	sk_spawn_points					=	{					-- Spawn point names table for the Dive attack.
+										"_prim_BossSpawnPoint_03", -- HARDCODED - First one is the phase 2 only SawnPoint.
+										"_prim_BossSpawnPoint_02", 
+										"_prim_BossSpawnPoint_01", 
+										"_prim_BossSpawnPoint_04", 
+										"_prim_BossSpawnPoint_05"
+										};
+	-- TIMERS
+	ATTACK_DELAY 					= 1500; 	-- Timer attack delay.
+	WEAK_DELAY						= 7000;	-- Timer for weak state.
+	DIVE_DELAY						= 1000;	-- Timer for dive state.
+	INTIMIDATE_DELAY				= 2000;	-- Timer for intimidate state.
+	OUTOFRANGE_MIN_DELAY			= 1000;	-- Timer for out of range minimum reaction delay.
+	OUTOFRANGE_MAX_DELAY			= 3000;	-- Timer for out of range maximum reaction delay.
+	GOTODIVE_DELAY					= 15000; -- Timer to enter Dive state.
+	INDIVEPATTERN_DELAY				= 8500;  -- Timer to enter into Dive and Spit pattern.
+	
+	-- stop all timers 
+	if (timer_attack_flag ~= nil) then
+		StopTimerCB(timer_attack_flag);
+		timer_attack_flag = nil;
+	end
+	if (timer_diving_flag ~= nil) then
+		StopTimerCB(timer_diving_flag);
+		timer_diving_flag = nil;
+	end
+	if (timer_divepattern_flag ~= nil) then
+		StopTimerCB(timer_divepattern_flag);
+		timer_divepattern_flag = nil;
+	end
+	if (emerge_timer ~= nil) then
+		StopTimerCB(emerge_timer);
+		emerge_timer = nil;
+	end
+	if (dive_timer ~= nil) then
+		StopTimerCB(dive_timer);
+		dive_timer = nil;
+	end
+	if (skill2_timer ~= nil) then
+		StopTimerCB(skill2_timer);
+		skill2_timer = nil;
+	end
+end
+
+
+
+-- -------------------------------------------------------------------------------
+-- Search functions
+-- -------------------------------------------------------------------------------
+function searchForEfficientTarget()
+
+	if (HasTarget()) then
+		ClearAggro(GetTarget());
+		ClearTarget();
+	end
+	
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+	
+	TargetListSearch(RANGED_RANGE);
+	
+	local targetChosen = false;
+	
+	if (not IsTargetListEmpty()) then
+		repeat
+			local myTarget = GetTargetListTop();
+			
+			if (myTarget:IsPlayer()) then
+				targetChosen = true;
+			end
+			
+			if (targetChosen) then
+				SetTarget(myTarget);
+				AddAggro(myTarget, 10);
+				LookAt(myTarget);
+			end
+			
+			PopTargetList();
+			
+		until (IsTargetListEmpty() or targetChosen)
+	end
+end
+
+
+-- -------------------------------------------------------------------------------
+-- Attack timer reset function
+-- -------------------------------------------------------------------------------
+function isAttackReady()
+	local state = GetState();
+	
+	if (HasTarget()) then
+		LookAtTarget();
+	end
+	
+	if (SK_STATE == ST_IDLE and (state ~= GetPyCst("AIStates", "Skill")) and (not canDiveNow)) then
+		if (debugTrace_flag) then Trace("[SWAMPKING] Attack is ready!"); end
+		attack_flag = true;
+	else
+		if (debugTrace_flag) then Trace("[SWAMPKING] Preventing attack to be ready!"); end
+		attack_flag = false;
+	end
+end
+-- -------------------------------------------------------------------------------
+
+
+
+-- -------------------------------------------------------------------------------
+function RegisterAnims()
+	RegisterAnim(GetPyOID("AnimDict", "swampking_idle"));
+	RegisterAnim(GetPyOID("AnimDict", "swampking_intimidate"));
+	RegisterAnim(GetPyOID("AnimDict", "swampking_dive"));
+	RegisterAnim(GetPyOID("AnimDict", "swampking_emerge"));
+	RegisterAnim(GetPyOID("AnimDict", "swampking_fall"));
+	RegisterAnim(GetPyOID("AnimDict", "swampking_fall_idle"));
+	RegisterAnim(GetPyOID("AnimDict", "swampking_fall_idle_to_idle"));
+end
+-- -------------------------------------------------------------------------------
+
+
+
+-- -------------------------------------------------------------------------------
+-- Attack function
+-- -------------------------------------------------------------------------------
+function Do_RangedAttackPhase1()
+	if (debugTrace_flag) then Trace("[SWAMPKING] Ranged Attack phase 1, random roll on the attack..."); end
+	
+	local prob_pct = GetRand(1,100);
+	
+	attack_flag = false;
+	
+	SetSwampkingInIntimidateState(2);
+end
+
+function Do_RangedAttackPhase2()
+	if (debugTrace_flag) then Trace("[SWAMPKING] Ranged Attack phase 2 - DoSkill(2) - Spit"); end
+	attack_flag = false;
+	
+	DoSkill(2);
+	
+end
+
+function Do_MeleeAttackPhase1()
+	if (debugTrace_flag) then Trace("[SWAMPKING] Melee Attack phase 1, checking for initial melee attack..."); end
+	attack_flag = false;
+	
+	if (first_melee_flag) then
+		if (debugTrace_flag) then Trace("[SWAMPKING] Result is - first melee attack - DoSkill(1) - Bite 2)"); end
+		DoSkill(1);
+	else
+		local prob_pct = GetRand(1,100);
+		
+		if (prob_pct < normalMeleeAttack1_prob) then
+			if (debugTrace_flag) then Trace("[SWAMPKING] Result is DoSkill(1) - Bite 2)"); end
+			DoSkill(1);
+		else
+			if (debugTrace_flag) then Trace("[SWAMPKING] Result is DoSkill(0) - Bite 1)"); end
+			DoSkill(0);
+		end
+	end
+end
+
+function Do_MeleeAttackPhase2()
+	if (debugTrace_flag) then Trace("[SWAMPKING] Melee Attack phase 2, checking for initial melee attack..."); end
+	attack_flag = false;
+	
+	if (first_melee_flag) then
+		first_melee_flag = false;
+		local prob_pct = GetRand(1,100);
+		
+		if (prob_pct < firstMeleeAttack2_prob) then
+			DoSkill(0);
+		else
+			DoSkill(1);
+		end
+	else
+		local prob_pct = GetRand(1,100);
+		
+		if (prob_pct < normalMeleeAttack2_prob[1]) then
+			DoSkill(0);
+		elseif (prob_pct < (normalMeleeAttack2_prob[1] + normalMeleeAttack2_prob[2]) and prob_pct > normalMeleeAttack2_prob[1]) then
+			DoSkill(1);
+		end
+	end
+end
+-- -------------------------------------------------------------------------------
+
+
+
+-- -------------------------------------------------------------------------------
+-- Spawn point dive function
+-- -------------------------------------------------------------------------------
+function CheckForClosestSpawnPoint(target)
+	local t_distance = {};
+	local objectName;
+	-- By Default the "shortest route" is the first spawn point.
+	objectName = sk_spawn_points[1];
+	if (target) then
+		local short_distance = FromFixed(GetDistanceBetween(sk_spawn_points[1], target:GetName()));
+		for i, obj in pairs(sk_spawn_points) do
+			if (obj) then -- Strangely OBJ sometimes becomes "nil"
+				local distance = FromFixed(GetDistanceBetween(obj, target:GetName()));
+			
+				if (debugTrace_flag) then Trace("[SWAMPKING] Player: Player: "..target:GetName()); end
+				if (debugTrace_flag) then Trace("[SWAMPKING] object: "..obj); end
+				if (debugTrace_flag) then Trace("[SWAMPKING] Distance between: "..FromFixed(distance)); end
+		
+--				If the others spawnpoint route are shortest then they are the one taken
+				if (distance<short_distance) then 
+					short_distance = distance;
+					objectName = obj;
+				end
+			end
+		end
+	else
+		objectName = sk_spawn_points[1];
+		if (debugTrace_flag) then Trace("[SWAMPKING] No Target. Fallback: "..sk_spawn_points[1]); end
+	end
+	if (objectName==nil) then Trace("WARNING!!! NOT WORKING!"); objectName = sk_spawn_points[3]; end
+	if (debugTrace_flag) then Trace("[SWAMPKING] Choosen object is: "..objectName); end
+	return objectName;
+
+end
+
+-- -------------------------------------------------------------------------------
+function CheckForRandomSpawnPoint()
+	local objectName;
+	local numSpawners = table.getn(sk_spawn_points);
+	local randObjectPos = GetRand(1, numSpawners);
+	
+	if (not weakAnim_flag) then  -- weakAnim_flag is set to true when Actor is less than 25% health
+		Trace("Picked Random Spawn Point!");
+		objectName = sk_spawn_points[randObjectPos];
+	else
+		Trace("Picked First Spawn Point!");
+		objectName = sk_spawn_points[1];
+	end
+	
+	return objectName;
+end
+
+-- -------------------------------------------------------------------------------
+function GoToDivePattern()
+	Trace("DivePattern told me to dive!");
+	if (attack_flag) then
+		attack_flag = false;
+	end
+	
+	local state = GetState();
+	if (state ~= GetPyCst("AIStates", "Idle")) then
+		Trace("Can't dive yet!  Try again soon!");
+		StartTimerCB(500, false, GoToDivePattern);
+	else
+		Trace("I can dive now!");
+		canDiveNow = true;
+		SetSwampkingInDiveState();
+	end
+end
+
+-- -------------------------------------------------------------------------------
+function DiveAttackDecision()
+	if (diveCounter < 2) then
+		diveCounter = diveCounter + 1;
+		--stop timer until diveCount has been reached
+		StopTimerCB(timer_diving_flag);
+		Trace("DiveAttackDecision told me to dive!");
+		timer_divepattern_flag = StartTimerCB(INDIVEPATTERN_DELAY, true, SetSwampkingInDiveState);
+		if (debugTrace_flag) then Trace("[SWAMPKING/STATES] Going to SPIT from DECISION..."); end
+		Do_RangedAttackPhase2();
+	else
+		if (debugTrace_flag) then Trace("[SWAMPKING/STATES] Going back in IDLE state from DECISION..."); end
+		diveCounter = 0;
+		canDiveNow = false;
+		StopTimerCB(timer_divepattern_flag);
+		timer_divepattern_flag = nil;
+		timer_diving_flag = StartTimerCB(GOTODIVE_DELAY, true, GoToDivePattern);
+		SetSwampkingInIdleState();
+	end
+end
+
+-- -------------------------------------------------------------------------------
+function MoveToPosition()
+	--respawn at a random position
+	Trace("Moving to a position!");
+	local targetSpot = CheckForRandomSpawnPoint();
+	SetActorPosition(targetSpot)
+end
+
+-- -------------------------------------------------------------------------------
+-- State functions
+-- -------------------------------------------------------------------------------
+function SetSwampkingInIdleState()
+	if (debugTrace_flag) then Trace("[SWAMPKING/STATES] Going back in IDLE state..."); end
+	
+	if (SK_STATE == ST_DIVE) then
+		local target = GetTarget();
+		local targetSpot;
+		
+		if (SK_PHASE_ID == 1) then
+			targetSpot = CheckForClosestSpawnPoint(target);
+		elseif (SK_PHASE_ID == 2) then
+			targetSpot = sk_spawn_points[1];
+		end
+		
+		SetActorPosition(targetSpot);
+		
+		attack_flag = false;
+		
+		DoSkill(2);
+	end
+	
+	SK_STATE = ST_IDLE;
+	Trace ("Enabling back the the targetting (disabled for now");
+	SetIsTargetable(true);
+end
+
+function SetSwampkingInDiveState()
+	if (SK_STATE ~= ST_DIVE) then
+	
+		if (debugTrace_flag) then Trace("[SWAMPKING/STATES] Going into DIVE state..."); end
+		
+		SK_STATE = ST_DIVE;
+		
+		if (HasTarget()) then
+			local myTarget = GetTarget();
+			
+			ClearAggro(myTarget);
+		end
+		
+		diveAnim_flag = true;
+		SetIsTargetable(false);
+		
+		PlayAnim(GetPyOID("AnimDict", "swampking_dive"));
+		PlaySound("sfx_serpent_submerge", false, 0, false); 
+	end
+end
+
+function TargetAgain()
+	SetIsTargetable(true);
+end
+
+function SetSwampkingInEmergeState()
+	if (SK_STATE ~= ST_EMERGE) then
+	
+		SK_STATE = ST_EMERGE;
+		
+		
+		if (debugTrace_flag) then Trace("[SWAMPKING/STATES] Playing EMERGE state..."); end
+		DoSkill(3);
+		
+		--PlayAnim(GetPyOID("AnimDict", "swampking_emerge"));
+		Trace ("Enabling back the the targetting (disabled for now");
+		emergeAnim_flag = true;
+	end
+end
+
+function SetSwampkingInIntimidateState(nextAction)
+	if (SK_STATE ~= ST_INTIMIDATE) then
+	
+		if (debugTrace_flag) then Trace("[SWAMPKING/STATES] Going into INTIMIDATE state..."); end
+		
+		SK_STATE = ST_INTIMIDATE;
+		intimidateAnim_flag = nextAction;
+		
+		if (debugTrace_flag) then Trace("intimidateAnim_flag: "..intimidateAnim_flag); end
+		
+		PlayAnim(GetPyOID("AnimDict", "swampking_intimidate"), nil, true);
+		local soundselect = GetRand(1,3);
+		if (soundselect==1) then PlaySound("sfx_serpent_intimidate_1", false, 0, false); end
+		if (soundselect==2) then PlaySound("sfx_serpent_intimidate_2", false, 0, false); end
+		if (soundselect==3) then PlaySound("sfx_serpent_intimidate_3", false, 0, false); end
+	end
+end
+-- -------------------------------------------------------------------------------
+
+
+
+
+
+-- -------------------------------------------------------------------------------
+-- CALLBACKS
+-- -------------------------------------------------------------------------------
+-- -------------------------------------------------------------------------------
+function swampking_OnInit()
+
+----------------------------------------------------------------------------------------
+-- Dynamic level for monster. Monster must have there LevelMax param set to use dynamic level
+----------------------------------------------------------------------------------------
+	local m_lvl_max = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMax")));
+	local m_lvl_min = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelMin")));
+	local m_lvl_offset = FromFixed(GetProp(GetPyStruct("CharacterProperties", "LevelOffset")));
+	local pl_lvl = GetHostPlayerLevel();
+	local pl_diff = GetHostPlayerDifficulty();
+	local m_lvl = pl_lvl;
+	local m_level_min, m_level_max = GetCurrentLevelRange(pl_diff);
+
+	if(m_lvl_max > -1 ) then
+		if(m_level_max and m_level_max > -1 ) then
+			if( m_lvl <= m_level_min ) then
+				m_lvl = m_level_min;
+			else
+				if( m_lvl >= m_level_max ) then
+					m_lvl = m_level_max;
+				end
+			end
+		else
+			if( m_lvl <= m_lvl_min ) then
+				m_lvl = m_lvl_min;
+			else
+				if( m_lvl >= m_lvl_max ) then
+					m_lvl = m_lvl_max;
+				end
+			end
+		end
+		m_lvl = m_lvl + m_lvl_offset;
+
+		Trace("[SWAMPKING] Attack is ready!" .. m_lvl)
+		SetLevel(ToFixed(m_lvl));
+	end
+----------------------------------------------------------------------------------------
+-- End Dynamic level for monster
+----------------------------------------------------------------------------------------
+	InitVars();
+
+	MarkAsFlying(true);
+	
+	SK_PHASE_ID = 1;
+	
+	RegisterAnims();
+	if (timer_attack_flag==-1) then
+		if (timer_attack_flag ~= nil) then
+			StopTimerCB(timer_attack_flag);
+		end
+		if (timer_diving_flag ~= nil) then
+			StopTimerCB(timer_diving_flag);
+		end
+		if (timer_divepattern_flag ~= nil) then
+			StopTimerCB(timer_divepattern_flag);
+		end
+	end
+end
+AddToVFTable("OnInitFinal", "swampking_OnInit");
+
+-- -------------------------------------------------------------------------------
+function swampking_OnEnemySpotted(enemy)
+	if (allowed) then
+		if (not musicStarted_flag) then
+			musicStarted_flag = true;
+			PlayMusic("SwampKingMusic", 500);
+		end
+	
+		if(not HasTarget()) then
+ 			AddAggro(enemy, 0);
+ 			SetTarget(enemy);
+ 			if (debugTrace_flag) then Trace("[SWAMPKING] Found an enemy:"..enemy:GetName()); end
+ 		end
+ 	end
+end
+AddToVFTable("OnEnemySpotted", "swampking_OnEnemySpotted");
+
+-- -------------------------------------------------------------------------------
+function swampking_OnTargetOutOfSight()
+	if (allowed) then
+		if (SK_PHASE_ID == 1) then
+			OUTOFRANGE_DELAY = GetRand(OUTOFRANGE_MIN_DELAY, OUTOFRANGE_MAX_DELAY);
+			if (debugTrace_flag) then Trace("The target lost..."); end
+		end
+	end
+end
+AddToVFTable("OnTargetOutOfSight", "swampking_OnTargetOutOfSight");
+
+-- -------------------------------------------------------------------------------
+function swampking_OnTargetInRangedRange()
+	if (allowed) then
+		first_melee_flag = true;
+		
+		if (SK_PHASE_ID == 1) then
+			if (attack_flag) then
+				Do_RangedAttackPhase1();
+				if (debugTrace_flag) then Trace("[SWAMPKING] Enemy is in range, attack 1:"); end
+			end
+		elseif (SK_PHASE_ID == 2) then
+			if (attack_flag) then
+				Do_RangedAttackPhase2();
+				if (debugTrace_flag) then Trace("[SWAMPKING] Enemy is in range, attack 2:"); end
+			end
+		end
+	end
+end
+AddToVFTable("OnTargetInRangedRange", "swampking_OnTargetInRangedRange");
+
+-- -------------------------------------------------------------------------------
+function swampking_OnTargetInCloseRange()
+	if (allowed) then
+		if (SK_PHASE_ID == 1) then
+			if (first_melee_flag and attack_flag) then
+				DoSkill(1);
+				first_melee_flag = false;
+				attack_flag = false;
+			elseif (attack_flag) then
+				Do_MeleeAttackPhase1();
+			end
+		elseif (SK_PHASE_ID == 2) then
+			if (attack_flag) then
+				Do_MeleeAttackPhase2();
+			end
+		end
+	end
+end
+AddToVFTable("OnTargetInCloseRange", "swampking_OnTargetInCloseRange");
+
+-- -------------------------------------------------------------------------------
+function swampking_OnUpdate(timestamp)
+	OnUpdate(timestamp);
+	
+	local HPCurr, HPMax, HPPercentCurr = GetPropHP();
+	
+	if(HPPercentCurr <= 25 and (not weakAnim_flag)) then
+		weakAnim_flag = true;
+	end
+	
+	if(SK_PHASE_ID == 1 and HPPercentCurr <= phase2_initPct ) then
+		SK_PHASE_ID = 2;
+		
+		attack_flag = false;
+	end
+	
+	-- Killed a player, stop the attack for a moment.
+	if (HasTarget() and GetTarget():IsDead()) then
+		if (debugTrace_flag) then Trace("The target is dead now..."); end
+		StopSound("SwampKingMusic", 2000);
+		PlayMusic("SwampHubAmbientMusic", 1000);
+
+		if (timer_attack_flag) then
+			StopTimerCB(timer_attack_flag);
+			StopTimerCB(timer_diving_flag);
+			timer_attack_flag = nil;
+			timer_diving_flag = nil;
+		end
+	end
+	-- check the AI State to be sure the AI is being spawned.
+	if (allowed==false) then
+		local state = GetState();
+		if (state == GetPyCst("AIStates", "Idle")) then
+			allowed = true;
+			if (debugTrace_flag) then Trace("Starting attack timer..."); end
+			timer_attack_flag = StartTimerCB(ATTACK_DELAY, true, isAttackReady);
+			timer_diving_flag = StartTimerCB(GOTODIVE_DELAY, true, GoToDivePattern);
+		end
+	end
+end
+AddToVFTable("OnUpdate", "swampking_OnUpdate");
+
+function swampking_OnTargetDied()
+	Stop();
+	if (HasTarget()) then
+		ClearAggro(GetTarget());
+		ClearTarget();
+	end
+	musicStarted_flag = false;
+	StopSound("SwampKingMusic", 2000);
+	--PlaySound("SwampHubAmbientMusic", true, 1000, true);
+end
+AddToVFTable("OnTargetDied", "swampking_OnTargetDied");
+
+-- -------------------------------------------------------------------------------
+local function swampking_OnEndGameCleanUp()
+	if (HasTarget()) then
+		ClearAggro(GetTarget());
+		ClearTarget();
+	end
+	if (timer_attack_flag ~= nil) then
+		StopTimerCB(timer_attack_flag);
+		timer_attack_flag = nil;
+	end
+	if (timer_diving_flag ~= nil) then
+		StopTimerCB(timer_diving_flag);
+		timer_diving_flag = nil;
+	end
+	if (timer_divepattern_flag ~= nil) then
+		StopTimerCB(timer_divepattern_flag);
+		timer_divepattern_flag = nil;
+	end
+	if (emerge_timer ~= nil) then
+		StopTimerCB(emerge_timer);
+		emerge_timer = nil;
+	end
+	if (dive_timer ~= nil) then
+		StopTimerCB(dive_timer);
+		dive_timer = nil;
+	end
+	if (skill2_timer ~= nil) then
+		StopTimerCB(skill2_timer);
+		skill2_timer = nil;
+	end
+end
+
+-- -------------------------------------------------------------------------------
+function swampking_OnDied(killer)
+	StopSound("SwampKingMusic", 2000);
+	PlaySound("SwampHubAmbientMusic", true, 1000, true);
+	
+	swampking_OnEndGameCleanUp();
+end
+AddToVFTable("OnDied", "swampking_OnDied");
+
+-- -------------------------------------------------------------------------------
+function swampking_OnTerminate()
+	swampking_OnEndGameCleanUp();
+end
+AddToVFTable("OnTerminate", "swampking_OnTerminate");
+
+-- -------------------------------------------------------------------------------
+function swampking_OnEndOfAnim()
+	if (SK_STATE == ST_DIVE and diveAnim_flag) then
+		diveAnim_flag = false;
+		
+		searchForEfficientTarget();
+		dive_timer1 = StartTimerCB(500, false, MoveToPosition);
+		emerge_timer = StartTimerCB(DIVE_DELAY, false, SetSwampkingInEmergeState);
+		StartTimerCB(3000, false, TargetAgain);
+		if (debugTrace_flag) then Trace("[SWAMPKING] Started Emerge Delay timer"); end
+	end
+	
+	if (SK_STATE == ST_EMERGE and emergeAnim_flag) then
+		if (debugTrace_flag) then Trace("[SWAMPKING] Ended EMERGE anim"); end
+		emergeAnim_flag = false;
+		dive_timer = StartTimerCB(500, false, DiveAttackDecision);
+	end
+	
+	if (SK_STATE == ST_INTIMIDATE and intimidateAnim_flag > 0) then
+	
+		if (intimidateAnim_flag == 1) then
+			SetSwampkingInIdleState();
+		elseif (intimidateAnim_flag == 2) then
+			if (debugTrace_flag) then Trace("[SWAMPKING] Result is DoSkill(2) - Spit)"); end
+			
+			searchForEfficientTarget();
+			
+			skill2_timer = StartTimerCB(500, false, function() DoSkill(2); end);
+			SK_STATE = ST_IDLE;
+		end
+		
+		intimidateAnim_flag = 0;
+	end
+end
+AddToVFTable("OnEndOfAnim", "swampking_OnEndOfAnim");

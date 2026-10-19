@@ -1,0 +1,19 @@
+elf_address,symbol,status,source_file,notes
+0x863228,_ZN3vox10EmitterObj20ProcessNonNativeDataEf,skipped,,"blocked: calls DSP source slots +0x24 and +0x28 and decoder slot +0x18, none named in the port; buffer ring at +0xf4 not in the port layout"
+0x863318,_ZN3vox10EmitterObj8Update3DEv,skipped,,"blocked: pushes the 3D parameters through DSP source slot +0x3c, which is not named in the port (dirty bytes +0xe0..+0xea are in the header)"
+0x863954,_ZN3vox10EmitterObj7CleanUpEv,partial,vox-audio/src/emitter-obj/emitter_obj_dsp.cpp,"partial: frees the two DSP name buffers (+0xec, +0xf0) only; the buffer ring at +0xf4 and the decoder AllowBufferReference check are not in the port layout"
+0x864e28,_ZN3vox10EmitterObj10PrintDebugEv,skipped,,"blocked: calls DSP source slot +0x50 (PrintDebug), not named in the port"
+0x8653ec,_ZN3vox10EmitterObj13SetPlayCursorEf,skipped,,blocked: DSP source slots +0x14 and +0x20 and decoder slot +0x18 are not named in the port (decoder Seek +0x28 is named)
+0x8654f8,_ZN3vox10EmitterObj13GetPlayCursorEv,skipped,,blocked: DSP source slot +0x1c (play position) not named in the port; the original also returns with the mutex locked when the length is 0
+0x866380,_ZN3vox10EmitterObjC1ExiiPNS_21DriverSourceInterfaceEPNS_7DataObjE,skipped,,"blocked: DataObj fields +0x28..+0x34, +0x38, +0x3c, +0x50, +0x140 are not in the DataObj port layout; buffer ring not in the port"
+0x8665cc,_ZN3vox10EmitterObjC2ExiiPNS_21DriverSourceInterfaceEPNS_7DataObjE,skipped,,blocked: same body as C1 (0x866380); DataObj fields and buffer ring not in the port
+0x866818,_ZN3vox10EmitterObj12GetDebugInfoERNS_18DebugChunk_emitterE,skipped,,blocked: DebugChunk_emitter struct not in the port; body writes about 29 fields and reads DataObj and driver fields
+0x866acc,_ZN3vox10EmitterObj15SetDSPParameterEiPv,partial,vox-audio/src/emitter-obj/emitter_obj_dsp.cpp,"partial: parameter 0 (DSP name) only; the name is copied to the pending slot +0xf0 (dsp_pending_, replacing dsp_buffer_size_); unlock result dropped"
+0x866b30,_ZN3vox10EmitterObj17ProcessNativeDataEf,skipped,,"blocked: DecoderNativeCursor not in the port (SetInteractiveMusicState); DSP source slots +0x24, +0x4c not named"
+0x86c5ec,_ZN3vox10EmitterObjC1ExiiiPNS_21DriverSourceInterfaceEPNS_22DecoderCursorInterfaceEPNS_7DataObjE,skipped,,"blocked: DataObj fields, buffer ring and vector of buffers not in the port layout; decoder slots +0x34, +0x48 not named"
+0x86ce1c,_ZN3vox10EmitterObjC2ExiiiPNS_21DriverSourceInterfaceEPNS_22DecoderCursorInterfaceEPNS_7DataObjE,skipped,,blocked: same body as C1 (0x86c5ec)
+0x86d238,_ZN3vox10EmitterObj9LoadAsyncEv,skipped,,blocked: decoder and stream factory calls through DataObj fields +0x38 and +0x3c (not in the port) and the buffer ring
+0x86d5b8,_ZN3vox10EmitterObj6UpdateEf,skipped,,blocked: update loop calls DSP source slots +0x38..+0x4c and decoder slots not named in the port; 7 KB state machine depends on the ring and LoadAsync
+0x86e304,_ZN3vox10EmitterObj4PlayEf,partial,vox-audio/src/emitter-obj/emitter_obj_transport.cpp,partial: resume fade (+0x5c..+0x6c) restarted toward 1.0 from sub-state 2 or from 0; unlock result dropped (see SetGain)
+0x86e428,_ZN3vox10EmitterObj5PauseEf,partial,vox-audio/src/emitter-obj/emitter_obj_transport.cpp,"partial: pause fade toward 0 (or silent fade with the flag) from sub-states 1, 2 and 3; unlock result dropped (see SetGain)"
+0x86e868,_ZN3vox10EmitterObj4StopEf,partial,vox-audio/src/emitter-obj/emitter_obj_transport.cpp,partial: stop fade toward 0 from sub-state 3 or silent fade when not playing; unlock result dropped (see SetGain)

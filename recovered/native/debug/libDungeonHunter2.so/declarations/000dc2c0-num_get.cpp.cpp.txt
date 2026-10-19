@@ -1,0 +1,830 @@
+DWARF-derived C++ declaration sketches. These are NOT original source files,
+not compilation-ready headers, and contain NO recovered function bodies.
+Qualified names are printed verbatim; arrays/function pointers, templates,
+access defaults, static methods, and ABI-only entries may require manual repair.
+Exact DWARF attributes and type references are preserved in dies.jsonl.gz.
+Source paths refer to original debug metadata; those files are not bundled.
+
+Compilation unit: /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/src/num_get.cpp
+Evidence category: cxx_runtime_stlport
+
+// DIE 0xdc64c, byte_size=None, declaration=True
+struct std::_STLP_mutex_base;
+
+// DIE 0xdc740, byte_size=None, declaration=True
+struct std::input_iterator_tag;
+
+// DIE 0xdc746, byte_size=None, declaration=True
+struct std::forward_iterator_tag;
+
+// DIE 0xdc74c, byte_size=None, declaration=True
+struct std::bidirectional_iterator_tag;
+
+// DIE 0xdc752, byte_size=None, declaration=True
+struct std::random_access_iterator_tag;
+
+// DIE 0xdc758, byte_size=None, declaration=True
+struct std::__true_type;
+
+// DIE 0xdc75e, byte_size=None, declaration=True
+struct std::__false_type;
+
+// DIE 0xdc77e, byte_size=None, declaration=True
+struct std::priv::_String_reserve_t;
+
+// DIE 0xdc784, byte_size=None, declaration=True
+class std::priv::_String_base<char, std::allocator<char> >;
+
+// DIE 0xdc78e, byte_size=16, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_string_base.h:54
+union std::priv::_String_base<char, std::allocator<char> >::_Buffers {
+    char* _M_end_of_storage; // byte offset: None, access: None, artificial: False
+    char[16] _M_static_buf; // byte offset: None, access: None, artificial: False
+};
+
+// DIE 0xdc7ae, byte_size=None, declaration=True
+class std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >;
+
+// DIE 0xdc888, byte_size=None, declaration=True
+class std::locale;
+
+// DIE 0xdc892, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_locale.h:101
+class std::locale::id {
+    size_t _M_index; // byte offset: 0, access: None, artificial: False
+};
+
+// DIE 0xdc8ba, byte_size=None, declaration=True
+struct std::_Locale_impl;
+
+// DIE 0xdc8c0, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_string_fwd.h:40
+typedef std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::string;
+
+// DIE 0xdc8cb, byte_size=None, declaration=True
+struct std::basic_string<char, std::char_traits<char>, std::allocator<char> >;
+
+// DIE 0xdc8d1, byte_size=None, declaration=True
+struct std::__stlport_class<std::allocator<char> >;
+
+// DIE 0xdc8d7, byte_size=None, declaration=True
+struct std::allocator<char>;
+
+// DIE 0xdc8dd, byte_size=None, declaration=True
+class std::__move_source<std::allocator<char> >;
+
+// DIE 0xdc8e3, byte_size=None, declaration=True
+class std::__move_source<std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> > >;
+
+// DIE 0xdc8e9, byte_size=None, declaration=True
+class std::__move_source<std::priv::_String_base<char, std::allocator<char> > >;
+
+// DIE 0xdc8ef, byte_size=None, declaration=True
+class std::reverse_iterator<const char*>;
+
+// DIE 0xdc8f5, byte_size=None, declaration=True
+class std::reverse_iterator<char*>;
+
+// DIE 0xdc8fb, byte_size=None, declaration=True
+class std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >;
+
+// DIE 0xdc901, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_limits.h:41
+enum std::float_round_style {
+    round_indeterminate = -1,
+    round_toward_zero = 0,
+    round_to_nearest = 1,
+    round_toward_infinity = 2,
+    round_toward_neg_infinity = 3,
+};
+
+// DIE 0xdc92c, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_limits.h:49
+enum std::float_denorm_style {
+    denorm_indeterminate = -1,
+    denorm_absent = 0,
+    denorm_present = 1,
+};
+
+// DIE 0xdc98d, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/../include/stddef.h:149
+typedef int ptrdiff_t;
+
+// DIE 0xdc99f, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/../include/stddef.h:211
+typedef unsigned int size_t;
+
+// DIE 0xdc9e9, byte_size=4, declaration=False
+struct __va_list {
+    void* __ap; // byte offset: 0, access: None, artificial: True
+};
+
+// DIE 0xdca0d, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/asm/posix_types.h:18
+typedef long int __kernel_off_t;
+
+// DIE 0xdca18, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/asm/posix_types.h:26
+typedef long int __kernel_time_t;
+
+// DIE 0xdca23, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/asm/posix_types.h:28
+typedef long int __kernel_clock_t;
+
+// DIE 0xdca34, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/sys/types.h:54
+typedef __kernel_clock_t clock_t;
+
+// DIE 0xdca3f, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/sys/types.h:67
+typedef __kernel_off_t off_t;
+
+// DIE 0xdca4a, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/sys/types.h:100
+typedef __kernel_time_t time_t;
+
+// DIE 0xdca55, byte_size=44, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/time.h:45
+struct tm {
+    int tm_sec; // byte offset: 0, access: None, artificial: False
+    int tm_min; // byte offset: 4, access: None, artificial: False
+    int tm_hour; // byte offset: 8, access: None, artificial: False
+    int tm_mday; // byte offset: 12, access: None, artificial: False
+    int tm_mon; // byte offset: 16, access: None, artificial: False
+    int tm_year; // byte offset: 20, access: None, artificial: False
+    int tm_wday; // byte offset: 24, access: None, artificial: False
+    int tm_yday; // byte offset: 28, access: None, artificial: False
+    int tm_isdst; // byte offset: 32, access: None, artificial: False
+    long int tm_gmtoff; // byte offset: 36, access: None, artificial: False
+    char const* tm_zone; // byte offset: 40, access: None, artificial: False
+};
+
+// DIE 0xdcc11, byte_size=8, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdlib.h:144
+struct div_t {
+    int quot; // byte offset: 0, access: None, artificial: False
+    int rem; // byte offset: 4, access: None, artificial: False
+};
+
+// DIE 0xdcc3a, byte_size=8, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdlib.h:151
+struct ldiv_t {
+    long int quot; // byte offset: 0, access: None, artificial: False
+    long int rem; // byte offset: 4, access: None, artificial: False
+};
+
+// DIE 0xdcc63, byte_size=16, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdlib.h:158
+struct lldiv_t {
+    long long int quot; // byte offset: 0, access: None, artificial: False
+    long long int rem; // byte offset: 8, access: None, artificial: False
+};
+
+// DIE 0xdd208, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/../include/stdarg.h:40
+typedef __va_list __gnuc_va_list;
+
+// DIE 0xdd213, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdio.h:78
+typedef off_t fpos_t;
+
+// DIE 0xdd21e, byte_size=8, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdio.h:87
+struct __sbuf {
+    unsigned char* _base; // byte offset: 0, access: None, artificial: False
+    int _size; // byte offset: 4, access: None, artificial: False
+};
+
+// DIE 0xdd24d, byte_size=84, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdio.h:119
+struct __sFILE {
+    unsigned char* _p; // byte offset: 0, access: None, artificial: False
+    int _r; // byte offset: 4, access: None, artificial: False
+    int _w; // byte offset: 8, access: None, artificial: False
+    short int _flags; // byte offset: 12, access: None, artificial: False
+    short int _file; // byte offset: 14, access: None, artificial: False
+    __sbuf _bf; // byte offset: 16, access: None, artificial: False
+    int _lbfsize; // byte offset: 24, access: None, artificial: False
+    void* _cookie; // byte offset: 28, access: None, artificial: False
+    int (void*)* _close; // byte offset: 32, access: None, artificial: False
+    int (void*, char*, int)* _read; // byte offset: 36, access: None, artificial: False
+    fpos_t (void*, fpos_t, int)* _seek; // byte offset: 40, access: None, artificial: False
+    int (void*, char const*, int)* _write; // byte offset: 44, access: None, artificial: False
+    __sbuf _ext; // byte offset: 48, access: None, artificial: False
+    unsigned char* _up; // byte offset: 56, access: None, artificial: False
+    int _ur; // byte offset: 60, access: None, artificial: False
+    unsigned char[3] _ubuf; // byte offset: 64, access: None, artificial: False
+    unsigned char[1] _nbuf; // byte offset: 67, access: None, artificial: False
+    __sbuf _lb; // byte offset: 68, access: None, artificial: False
+    int _blksize; // byte offset: 76, access: None, artificial: False
+    fpos_t _offset; // byte offset: 80, access: None, artificial: False
+};
+
+// DIE 0xdd401, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/stdio.h:151
+typedef __sFILE FILE;
+
+// DIE 0xdd40c, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/../include/stdarg.h:102
+typedef __gnuc_va_list va_list;
+
+// DIE 0xdd417, byte_size=None, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/wchar.h:53
+typedef int wint_t;
+
+// DIE 0xdd422, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/wchar.h:54
+struct mbstate_t {
+    int dummy; // byte offset: 0, access: None, artificial: False
+};
+
+// DIE 0xdd953, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/platforms/android-3/arch-arm/usr/include/../include/pthread.h:41
+struct pthread_mutex_t {
+    int volatile value; // byte offset: 0, access: None, artificial: False
+};
+
+// DIE 0xdd973, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_threads.h:275
+struct std::_STLP_mutex_base {
+    pthread_mutex_t _M_lock; // byte offset: 0, access: None, artificial: False
+    void std::_STLP_mutex_base::_M_initialize(); // method DIE 0xdd98f
+    void std::_STLP_mutex_base::_M_destroy(); // method DIE 0xdd9a8
+    void std::_STLP_mutex_base::_M_acquire_lock(); // method DIE 0xdd9c1
+    void std::_STLP_mutex_base::_M_release_lock(); // method DIE 0xdd9da
+};
+
+// DIE 0xddd14, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_iterator_base.h:51
+struct std::input_iterator_tag {
+};
+
+// DIE 0xddd1c, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_iterator_base.h:53
+struct std::forward_iterator_tag : std::input_iterator_tag {
+};
+
+// DIE 0xddd32, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_iterator_base.h:54
+struct std::bidirectional_iterator_tag : std::forward_iterator_tag {
+};
+
+// DIE 0xddd48, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_iterator_base.h:55
+struct std::random_access_iterator_tag : std::bidirectional_iterator_tag {
+};
+
+// DIE 0xddd5e, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/type_manips.h:23
+struct std::__true_type {
+};
+
+// DIE 0xddd66, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/type_manips.h:24
+struct std::__false_type {
+};
+
+// DIE 0xddd92, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_locale.h:75
+class std::locale {
+    std::_Locale_impl* _M_impl; // byte offset: 0, access: 2, artificial: False
+    std::locale::locale(); // method DIE 0xdde47
+    std::locale::locale(std::locale const&); // method DIE 0xdde5f
+    std::locale::locale(char const*); // method DIE 0xdde7c
+    std::locale::locale(std::locale const&, char const*, int); // method DIE 0xdde99
+    std::locale::locale(std::_Locale_impl*); // method DIE 0xddec0
+    std::locale::locale(std::locale const&, std::locale const&, int); // method DIE 0xddede
+    std::locale const& std::locale::operator=(std::locale const&); // method DIE 0xddf05
+    std::locale::~locale(); // method DIE 0xddf26
+    std::string std::locale::name(); // method DIE 0xddf44
+    bool std::locale::operator==(std::locale const&); // method DIE 0xddf60
+    bool std::locale::operator!=(std::locale const&); // method DIE 0xddf81
+    std::locale std::locale::global(std::locale const&); // method DIE 0xddfa2
+    std::locale const& std::locale::classic(); // method DIE 0xddfbd
+    std::locale::facet* std::locale::_M_get_facet(std::locale::id const&); // method DIE 0xddfce
+    std::locale::facet* std::locale::_M_use_facet(std::locale::id const&); // method DIE 0xddfef
+    void std::locale::_M_throw_on_combine_error(std::string const&); // method DIE 0xde010
+    void std::locale::_M_throw_on_null_name(); // method DIE 0xde027
+    void std::locale::_M_throw_on_creation_failure(int, char const*, char const*); // method DIE 0xde034
+    void std::locale::_M_insert(std::locale::facet*, std::locale::id&); // method DIE 0xde055
+    std::_Locale_impl* std::locale::_M_get_impl(); // method DIE 0xde077
+};
+
+// DIE 0xdde41, byte_size=None, declaration=True
+class std::locale::facet;
+
+// DIE 0xde0d6, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_string.h:99
+struct std::priv::_String_reserve_t {
+};
+
+// DIE 0xde0ee, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/type_traits.h:572
+struct std::__stlport_class<std::allocator<char> > {
+};
+
+// DIE 0xde0f7, byte_size=1, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/char_traits.h:53
+struct std::allocator<char> : std::__stlport_class<std::allocator<char> > {
+    std::allocator<char>* std::allocator<char>::allocator(); // method DIE 0xde10c
+    std::allocator<char>* std::allocator<char>::allocator(std::allocator<char> const&); // method DIE 0xde125
+    std::allocator<char>* std::allocator<char>::allocator(std::__move_source<std::allocator<char> >); // method DIE 0xde143
+    void* std::allocator<char>::~allocator(); // method DIE 0xde161
+    char* std::allocator<char>::address(char&); // method DIE 0xde180
+    char const* std::allocator<char>::address(char const&); // method DIE 0xde1a2
+    char* std::allocator<char>::allocate(unsigned int, void const*); // method DIE 0xde1c4
+    void std::allocator<char>::deallocate(char*, unsigned int); // method DIE 0xde1eb
+    void std::allocator<char>::deallocate(char*); // method DIE 0xde20e
+    size_t std::allocator<char>::max_size(); // method DIE 0xde22c
+    void std::allocator<char>::construct(char*, char const&); // method DIE 0xde249
+    void std::allocator<char>::destroy(char*); // method DIE 0xde26c
+    char* std::allocator<char>::_M_allocate(unsigned int, size_t&); // method DIE 0xde28a
+};
+
+// DIE 0xde2c5, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_alloc.h:472
+class std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> > : std::allocator<char> {
+    char* _M_data; // byte offset: 0, access: None, artificial: False
+    std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_STLP_alloc_proxy(std::allocator<char> const&, char*); // method DIE 0xde2ea
+    std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_STLP_alloc_proxy(std::__move_source<std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> > >); // method DIE 0xde30d
+    std::allocator<char>& std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_M_base(); // method DIE 0xde32b
+    void std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_M_swap_alloc(std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >&, std::__true_type const&); // method DIE 0xde348
+    void std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_M_swap_alloc(std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >&, std::__false_type const&); // method DIE 0xde36c
+    void std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::_M_swap_alloc(std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >&); // method DIE 0xde390
+    void std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::swap(std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >&); // method DIE 0xde3ae
+    char* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::allocate(unsigned int, size_t&); // method DIE 0xde3cc
+    char* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::allocate(unsigned int); // method DIE 0xde3f3
+    char* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::allocate(unsigned int, size_t&, std::__true_type const&); // method DIE 0xde415
+    char* std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> >::allocate(unsigned int, size_t&, std::__false_type const&); // method DIE 0xde442
+};
+
+// DIE 0xde494, byte_size=24, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_string_base.h:41
+class std::priv::_String_base<char, std::allocator<char> > {
+    std::priv::_String_base<char, std::allocator<char> >::_Buffers _M_buffers; // byte offset: 0, access: 3, artificial: False
+    char* _M_finish; // byte offset: 16, access: 2, artificial: False
+    std::priv::_STLP_alloc_proxy<char*, char, std::allocator<char> > _M_start_of_storage; // byte offset: 20, access: 2, artificial: False
+    bool std::priv::_String_base<char, std::allocator<char> >::_M_using_static_buf(); // method DIE 0xde4cd
+    char const* std::priv::_String_base<char, std::allocator<char> >::_M_Start(); // method DIE 0xde4ea
+    char* std::priv::_String_base<char, std::allocator<char> >::_M_Start(); // method DIE 0xde507
+    char const* std::priv::_String_base<char, std::allocator<char> >::_M_End(); // method DIE 0xde524
+    char* std::priv::_String_base<char, std::allocator<char> >::_M_End(); // method DIE 0xde541
+    size_t std::priv::_String_base<char, std::allocator<char> >::_M_capacity(); // method DIE 0xde55e
+    size_t std::priv::_String_base<char, std::allocator<char> >::_M_rest(); // method DIE 0xde57b
+    char const* std::priv::_String_base<char, std::allocator<char> >::_M_Finish(); // method DIE 0xde598
+    char* std::priv::_String_base<char, std::allocator<char> >::_M_Finish(); // method DIE 0xde5b5
+    void std::priv::_String_base<char, std::allocator<char> >::_M_allocate_block(unsigned int); // method DIE 0xde5d2
+    void std::priv::_String_base<char, std::allocator<char> >::_M_deallocate_block(); // method DIE 0xde5f0
+    size_t std::priv::_String_base<char, std::allocator<char> >::max_size(); // method DIE 0xde609
+    std::priv::_String_base<char, std::allocator<char> >* std::priv::_String_base<char, std::allocator<char> >::_String_base(std::allocator<char> const&); // method DIE 0xde626
+    std::priv::_String_base<char, std::allocator<char> >* std::priv::_String_base<char, std::allocator<char> >::_String_base(std::allocator<char> const&, unsigned int); // method DIE 0xde644
+    void std::priv::_String_base<char, std::allocator<char> >::_M_move_src(std::priv::_String_base<char, std::allocator<char> >&); // method DIE 0xde667
+    std::priv::_String_base<char, std::allocator<char> >* std::priv::_String_base<char, std::allocator<char> >::_String_base(std::__move_source<std::priv::_String_base<char, std::allocator<char> > >); // method DIE 0xde685
+    void* std::priv::_String_base<char, std::allocator<char> >::~_String_base(); // method DIE 0xde6a3
+    void std::priv::_String_base<char, std::allocator<char> >::_M_reset(char*, char*, char*); // method DIE 0xde6c2
+    void std::priv::_String_base<char, std::allocator<char> >::_M_swap(std::priv::_String_base<char, std::allocator<char> >&); // method DIE 0xde6ea
+    void std::priv::_String_base<char, std::allocator<char> >::_M_throw_length_error(); // method DIE 0xde708
+    void std::priv::_String_base<char, std::allocator<char> >::_M_throw_out_of_range(); // method DIE 0xde721
+};
+
+// DIE 0xde74e, byte_size=24, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_string_fwd.h:32
+struct std::basic_string<char, std::char_traits<char>, std::allocator<char> > : std::priv::_String_base<char, std::allocator<char> > {
+    std::allocator<char> std::basic_string<char, std::char_traits<char>, std::allocator<char> >::get_allocator(); // method DIE 0xde773
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::allocator<char> const&); // method DIE 0xde78f
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::priv::_String_reserve_t, unsigned int, std::allocator<char> const&); // method DIE 0xde7ac
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0xde7d3
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int, std::allocator<char> const&); // method DIE 0xde7f0
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned int, std::allocator<char> const&); // method DIE 0xde81c
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&); // method DIE 0xde843
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(unsigned int, char, std::allocator<char> const&); // method DIE 0xde865
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >); // method DIE 0xde88c
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_compute_next_size(unsigned int); // method DIE 0xde8a9
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0xde8cc
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(char const*); // method DIE 0xde8ee
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(char); // method DIE 0xde910
+    char std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_null(); // method DIE 0xde932
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct_null(char*); // method DIE 0xde945
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_terminate_string(); // method DIE 0xde964
+    bool std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_inside(char const*); // method DIE 0xde97e
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_range_initialize(char const*, char const*); // method DIE 0xde9a1
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::begin(); // method DIE 0xde9c5
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::end(); // method DIE 0xde9e2
+    char const* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::begin(); // method DIE 0xde9ff
+    char const* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::end(); // method DIE 0xdea1c
+    std::reverse_iterator<char*> std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rbegin(); // method DIE 0xdea39
+    std::reverse_iterator<char*> std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rend(); // method DIE 0xdea56
+    std::reverse_iterator<const char*> std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rbegin(); // method DIE 0xdea73
+    std::reverse_iterator<const char*> std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rend(); // method DIE 0xdea90
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::size(); // method DIE 0xdeaad
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::length(); // method DIE 0xdeaca
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::max_size(); // method DIE 0xdeae7
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::resize(unsigned int, char); // method DIE 0xdeb04
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::resize(unsigned int); // method DIE 0xdeb27
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_reserve(unsigned int); // method DIE 0xdeb45
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::reserve(unsigned int); // method DIE 0xdeb64
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::capacity(); // method DIE 0xdeb82
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::clear(); // method DIE 0xdeb9f
+    bool std::basic_string<char, std::char_traits<char>, std::allocator<char> >::empty(); // method DIE 0xdebb8
+    char const& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned int); // method DIE 0xdebd5
+    char& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned int); // method DIE 0xdebf7
+    char const& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::at(unsigned int); // method DIE 0xdec19
+    char& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::at(unsigned int); // method DIE 0xdec3a
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0xdec5b
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(char const*); // method DIE 0xdec7d
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(char); // method DIE 0xdec9f
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, char const*); // method DIE 0xdecc1
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0xdece9
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int); // method DIE 0xded0b
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned int); // method DIE 0xded37
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*); // method DIE 0xded5e
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(unsigned int, char); // method DIE 0xded80
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::push_back(char); // method DIE 0xdeda7
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::pop_back(); // method DIE 0xdedc5
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0xdedde
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int); // method DIE 0xdee00
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned int); // method DIE 0xdee2c
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*); // method DIE 0xdee53
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(unsigned int, char); // method DIE 0xdee75
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(char const*, char const*); // method DIE 0xdee9c
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0xdeec4
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int); // method DIE 0xdeeeb
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned int, char const*, unsigned int); // method DIE 0xdef1c
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned int, char const*); // method DIE 0xdef48
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned int, unsigned int, char); // method DIE 0xdef6f
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(char*, char); // method DIE 0xdef9b
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(char*, unsigned int, char); // method DIE 0xdefc2
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_insert(char*, char const*, char const*, bool); // method DIE 0xdefea
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_insert_aux(char*, char); // method DIE 0xdf018
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_copy(char const*, char const*, char*); // method DIE 0xdf040
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_move(char const*, char const*, char*); // method DIE 0xdf069
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_copyT(char const*, char const*, char*); // method DIE 0xdf092
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(char*, char const*, char const*); // method DIE 0xdf0bb
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::erase(unsigned int, unsigned int); // method DIE 0xdf0e3
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::erase(char*); // method DIE 0xdf10a
+    char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::erase(char*, char*); // method DIE 0xdf12c
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned int, unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0xdf153
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned int, unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int); // method DIE 0xdf17f
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned int, unsigned int, char const*, unsigned int); // method DIE 0xdf1b5
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned int, unsigned int, char const*); // method DIE 0xdf1e6
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned int, unsigned int, unsigned int, char); // method DIE 0xdf212
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(char*, char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0xdf243
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(char*, char*, char const*, unsigned int); // method DIE 0xdf26f
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(char*, char*, char const*); // method DIE 0xdf2a0
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(char*, char*, unsigned int, char); // method DIE 0xdf2cc
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(char*, char*, char const*, char const*, bool); // method DIE 0xdf2fd
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(char*, char*, char const*, char const*); // method DIE 0xdf334
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::copy(char*, unsigned int, unsigned int); // method DIE 0xdf365
+    void std::basic_string<char, std::char_traits<char>, std::allocator<char> >::swap(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&); // method DIE 0xdf391
+    char const* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str(); // method DIE 0xdf3af
+    char const* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::data(); // method DIE 0xdf3cc
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0xdf3e9
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char const*, unsigned int); // method DIE 0xdf410
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char const*, unsigned int, unsigned int); // method DIE 0xdf437
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char); // method DIE 0xdf463
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char, unsigned int); // method DIE 0xdf485
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rfind(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0xdf4ac
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rfind(char const*, unsigned int); // method DIE 0xdf4d3
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rfind(char const*, unsigned int, unsigned int); // method DIE 0xdf4fa
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::rfind(char, unsigned int); // method DIE 0xdf526
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_of(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0xdf54d
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_of(char const*, unsigned int); // method DIE 0xdf574
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_of(char const*, unsigned int, unsigned int); // method DIE 0xdf59b
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_of(char, unsigned int); // method DIE 0xdf5c7
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_of(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0xdf5ee
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_of(char const*, unsigned int); // method DIE 0xdf615
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_of(char const*, unsigned int, unsigned int); // method DIE 0xdf63c
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_of(char, unsigned int); // method DIE 0xdf668
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_not_of(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0xdf68f
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_not_of(char const*, unsigned int); // method DIE 0xdf6b6
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_not_of(char const*, unsigned int, unsigned int); // method DIE 0xdf6dd
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_first_not_of(char, unsigned int); // method DIE 0xdf709
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_not_of(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int); // method DIE 0xdf730
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_not_of(char const*, unsigned int); // method DIE 0xdf757
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_not_of(char const*, unsigned int, unsigned int); // method DIE 0xdf77e
+    size_t std::basic_string<char, std::char_traits<char>, std::allocator<char> >::find_last_not_of(char, unsigned int); // method DIE 0xdf7aa
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::basic_string<char, std::char_traits<char>, std::allocator<char> >::substr(unsigned int, unsigned int); // method DIE 0xdf7d1
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0xdf7f8
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(unsigned int, unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&); // method DIE 0xdf81a
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(unsigned int, unsigned int, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int); // method DIE 0xdf846
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*); // method DIE 0xdf87c
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(unsigned int, unsigned int, char const*); // method DIE 0xdf89e
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(unsigned int, unsigned int, char const*, unsigned int); // method DIE 0xdf8ca
+    int std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_compare(char const*, char const*, char const*, char const*); // method DIE 0xdf8fb
+};
+
+// DIE 0xdf945, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_move_construct_fwk.h:35
+class std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > {
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& const _M_data; // byte offset: 0, access: 3, artificial: False
+    std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::__move_source(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&); // method DIE 0xdf960
+    std::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::get(); // method DIE 0xdf97d
+    std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >& std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator=(std::__move_source<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&); // method DIE 0xdf999
+};
+
+// DIE 0xdf9e9, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_move_construct_fwk.h:35
+class std::__move_source<std::priv::_String_base<char, std::allocator<char> > > {
+    std::priv::_String_base<char, std::allocator<char> >& const _M_data; // byte offset: 0, access: 3, artificial: False
+    std::__move_source<std::priv::_String_base<char, std::allocator<char> > >* std::__move_source<std::priv::_String_base<char, std::allocator<char> > >::__move_source(std::priv::_String_base<char, std::allocator<char> >&); // method DIE 0xdfa04
+    std::priv::_String_base<char, std::allocator<char> >& std::__move_source<std::priv::_String_base<char, std::allocator<char> > >::get(); // method DIE 0xdfa21
+    std::__move_source<std::priv::_String_base<char, std::allocator<char> > >& std::__move_source<std::priv::_String_base<char, std::allocator<char> > >::operator=(std::__move_source<std::priv::_String_base<char, std::allocator<char> > > const&); // method DIE 0xdfa3d
+};
+
+// DIE 0xdfa7e, byte_size=4, declaration=False
+// /tmp/ndk-toolchain/ndk-prebuilt-31319/sources/cxx-stl/stlport/stlport/stl/_move_construct_fwk.h:35
+class std::__move_source<std::allocator<char> > {
+    std::allocator<char>& const _M_data; // byte offset: 0, access: 3, artificial: False
+    std::__move_source<std::allocator<char> >* std::__move_source<std::allocator<char> >::__move_source(std::allocator<char>&); // method DIE 0xdfa99
+    std::allocator<char>& std::__move_source<std::allocator<char> >::get(); // method DIE 0xdfab6
+    std::__move_source<std::allocator<char> >& std::__move_source<std::allocator<char> >::operator=(std::__move_source<std::allocator<char> > const&); // method DIE 0xdfad2
+};
+
+
+// Functions outside record declarations
+// DIE 0xdc7b4, ranges: []
+bool std::priv::__valid_grouping(char const*, char const*, char const*, char const*);
+// DIE 0xdc7de, ranges: []
+unsigned char std::priv::__digit_val_table(unsigned int);
+// DIE 0xdc7f9, ranges: []
+char const* std::priv::__narrow_atoms();
+// DIE 0xdc80a, ranges: []
+wchar_t const* std::priv::__find<const wchar_t*, wchar_t>(wchar_t const*, wchar_t const*, wchar_t const&, std::random_access_iterator_tag const&);
+// DIE 0xdc834, ranges: []
+bool std::priv::__get_fdigit(wchar_t&, wchar_t const*);
+// DIE 0xdc854, ranges: []
+bool std::priv::__get_fdigit_or_sep(wchar_t&, wchar_t, wchar_t const*);
+// DIE 0xdc94b, ranges: []
+wchar_t const* std::find<const wchar_t*, wchar_t>(wchar_t const*, wchar_t const*, wchar_t const&);
+// DIE 0xdcb0f, ranges: []
+clock_t clock();
+// DIE 0xdcb1c, ranges: []
+char* asctime(tm const*);
+// DIE 0xdcb3e, ranges: []
+char* ctime(time_t const*);
+// DIE 0xdcb60, ranges: []
+tm* gmtime(time_t const*);
+// DIE 0xdcb7d, ranges: []
+double difftime(time_t, time_t);
+// DIE 0xdcba0, ranges: []
+time_t mktime(tm*);
+// DIE 0xdcbb7, ranges: []
+tm* localtime(time_t const*);
+// DIE 0xdcbce, ranges: []
+size_t strftime(char*, size_t, char const*, tm const*);
+// DIE 0xdcbf4, ranges: []
+time_t time(time_t*);
+// DIE 0xdcc8f, ranges: []
+char* getenv(char const*);
+// DIE 0xdcca6, ranges: []
+int mblen(char const*, size_t);
+// DIE 0xdccc2, ranges: []
+int mbtowc(wchar_t*, char const*, size_t);
+// DIE 0xdccf0, ranges: []
+int system(char const*);
+// DIE 0xdcd07, ranges: []
+void* bsearch(void const*, void const*, size_t, size_t, int (void const*, void const*)*);
+// DIE 0xdcd53, ranges: []
+int atexit(void ()*);
+// DIE 0xdcd71, ranges: []
+double atof(char const*);
+// DIE 0xdcd87, ranges: []
+int atoi(char const*);
+// DIE 0xdcd9e, ranges: []
+long int atol(char const*);
+// DIE 0xdcdb5, ranges: []
+size_t mbstowcs(wchar_t*, char const*, size_t);
+// DIE 0xdcdd6, ranges: []
+double strtod(char const*, char**);
+// DIE 0xdcdf8, ranges: []
+long int strtol(char const*, char**, int);
+// DIE 0xdce19, ranges: []
+long unsigned int strtoul(char const*, char**, int);
+// DIE 0xdce3a, ranges: []
+size_t wcstombs(char*, wchar_t const*, size_t);
+// DIE 0xdce66, ranges: []
+int wctomb(char*, wchar_t);
+// DIE 0xdce82, ranges: []
+void qsort(void*, size_t, size_t, int (void const*, void const*)*);
+// DIE 0xdcea4, ranges: []
+long int labs(long int);
+// DIE 0xdceba, ranges: []
+ldiv_t ldiv(long int, long int);
+// DIE 0xdced6, ranges: []
+long long int llabs(long long int);
+// DIE 0xdceec, ranges: []
+lldiv_t lldiv(long long int, long long int);
+// DIE 0xdcf08, ranges: []
+int rand();
+// DIE 0xdcf14, ranges: []
+void srand(unsigned int);
+// DIE 0xdcf2d, ranges: []
+long double abs(long double);
+// DIE 0xdcf50, ranges: []
+long double acos(long double);
+// DIE 0xdcf6c, ranges: []
+long double asin(long double);
+// DIE 0xdcf88, ranges: []
+long double atan(long double);
+// DIE 0xdcfa4, ranges: []
+long double atan2(long double, long double);
+// DIE 0xdcfc5, ranges: []
+long double ceil(long double);
+// DIE 0xdcfe1, ranges: []
+long double cos(long double);
+// DIE 0xdcffd, ranges: []
+long double cosh(long double);
+// DIE 0xdd019, ranges: []
+long double exp(long double);
+// DIE 0xdd035, ranges: []
+long double fabs(long double);
+// DIE 0xdd051, ranges: []
+long double floor(long double);
+// DIE 0xdd06d, ranges: []
+long double fmod(long double, long double);
+// DIE 0xdd08e, ranges: []
+long double frexp(long double, int*);
+// DIE 0xdd0b5, ranges: []
+long double ldexp(long double, int);
+// DIE 0xdd0d6, ranges: []
+long double log(long double);
+// DIE 0xdd0f2, ranges: []
+long double log10(long double);
+// DIE 0xdd10e, ranges: []
+long double modf(long double, long double*);
+// DIE 0xdd135, ranges: []
+long double pow(long double, int);
+// DIE 0xdd156, ranges: []
+long double sin(long double);
+// DIE 0xdd172, ranges: []
+long double sinh(long double);
+// DIE 0xdd18e, ranges: []
+long double sqrt(long double);
+// DIE 0xdd1aa, ranges: []
+long double tan(long double);
+// DIE 0xdd1c6, ranges: []
+long double tanh(long double);
+// DIE 0xdd1e2, ranges: []
+lldiv_t div(long long int, long long int);
+// DIE 0xdd443, ranges: []
+wint_t fgetwc(FILE*);
+// DIE 0xdd460, ranges: []
+wchar_t* fgetws(wchar_t*, int, FILE*);
+// DIE 0xdd481, ranges: []
+wint_t fputwc(wchar_t, FILE*);
+// DIE 0xdd49d, ranges: []
+int fputws(wchar_t const*, FILE*);
+// DIE 0xdd4b9, ranges: []
+int fwide(FILE*, int);
+// DIE 0xdd4d5, ranges: []
+int fwprintf(FILE*, wchar_t const*, ...);
+// DIE 0xdd4f2, ranges: []
+int fwscanf(FILE*, wchar_t const*, ...);
+// DIE 0xdd50f, ranges: []
+wint_t getwchar();
+// DIE 0xdd51c, ranges: []
+wint_t getwc(FILE*);
+// DIE 0xdd533, ranges: []
+wint_t ungetwc(wint_t, FILE*);
+// DIE 0xdd54f, ranges: []
+wint_t putwc(wchar_t, FILE*);
+// DIE 0xdd56b, ranges: []
+wint_t putwchar(wchar_t);
+// DIE 0xdd582, ranges: []
+int swprintf(wchar_t*, size_t, wchar_t const*, ...);
+// DIE 0xdd5a4, ranges: []
+int vswprintf(wchar_t*, size_t, wchar_t const*, va_list);
+// DIE 0xdd5ca, ranges: []
+int swscanf(wchar_t const*, wchar_t const*, ...);
+// DIE 0xdd5e7, ranges: []
+int vfwprintf(FILE*, wchar_t const*, va_list);
+// DIE 0xdd608, ranges: []
+int vwprintf(wchar_t const*, va_list);
+// DIE 0xdd624, ranges: []
+size_t wcsftime(wchar_t*, size_t, wchar_t const*, tm const*);
+// DIE 0xdd64a, ranges: []
+wchar_t* wcstok(wchar_t*, wchar_t const*, wchar_t**);
+// DIE 0xdd671, ranges: []
+int wcscoll(wchar_t const*, wchar_t const*);
+// DIE 0xdd68d, ranges: []
+size_t wcsxfrm(wchar_t*, wchar_t const*, size_t);
+// DIE 0xdd6ae, ranges: []
+wchar_t* wcscat(wchar_t*, wchar_t const*);
+// DIE 0xdd6ca, ranges: []
+wchar_t* wcsrchr(wchar_t const*, wchar_t);
+// DIE 0xdd6e6, ranges: []
+int wcscmp(wchar_t const*, wchar_t const*);
+// DIE 0xdd702, ranges: []
+wchar_t* wcscpy(wchar_t*, wchar_t const*);
+// DIE 0xdd71e, ranges: []
+size_t wcscspn(wchar_t const*, wchar_t const*);
+// DIE 0xdd73a, ranges: []
+size_t wcslen(wchar_t const*);
+// DIE 0xdd751, ranges: []
+wchar_t* wcsncat(wchar_t*, wchar_t const*, size_t);
+// DIE 0xdd772, ranges: []
+int wcsncmp(wchar_t const*, wchar_t const*, size_t);
+// DIE 0xdd793, ranges: []
+wchar_t* wcsncpy(wchar_t*, wchar_t const*, size_t);
+// DIE 0xdd7b4, ranges: []
+wchar_t* wcspbrk(wchar_t const*, wchar_t const*);
+// DIE 0xdd7d0, ranges: []
+wchar_t* wcschr(wchar_t const*, wchar_t);
+// DIE 0xdd7ec, ranges: []
+size_t wcsspn(wchar_t const*, wchar_t const*);
+// DIE 0xdd808, ranges: []
+double wcstod(wchar_t const*, wchar_t**);
+// DIE 0xdd824, ranges: []
+long int wcstol(wchar_t const*, wchar_t**, int);
+// DIE 0xdd845, ranges: []
+wchar_t* wcsstr(wchar_t const*, wchar_t const*);
+// DIE 0xdd861, ranges: []
+wchar_t* wmemchr(wchar_t const*, wchar_t, size_t);
+// DIE 0xdd882, ranges: []
+int wctob(wint_t);
+// DIE 0xdd899, ranges: []
+int wmemcmp(wchar_t const*, wchar_t const*, size_t);
+// DIE 0xdd8ba, ranges: []
+wchar_t* wmemmove(wchar_t*, wchar_t const*, size_t);
+// DIE 0xdd8db, ranges: []
+int wprintf(wchar_t const*, ...);
+// DIE 0xdd8f3, ranges: []
+int wscanf(wchar_t const*, ...);
+// DIE 0xdd90b, ranges: []
+wchar_t* wmemcpy(wchar_t*, wchar_t const*, size_t);
+// DIE 0xdd92c, ranges: []
+wchar_t* wmemset(wchar_t*, wchar_t, size_t);
+// DIE 0xdd9f9, ranges: []
+int strcoll(char const*, char const*);
+// DIE 0xdda15, ranges: []
+char* strerror(int);
+// DIE 0xdda2c, ranges: []
+size_t strxfrm(char*, char const*, size_t);
+// DIE 0xdda4d, ranges: []
+char* strtok(char*, char const*);
+// DIE 0xdda6f, ranges: []
+void clearerr(FILE*);
+// DIE 0xdda82, ranges: []
+int fclose(FILE*);
+// DIE 0xdda99, ranges: []
+int feof(FILE*);
+// DIE 0xddab0, ranges: []
+int ferror(FILE*);
+// DIE 0xddac7, ranges: []
+int fflush(FILE*);
+// DIE 0xddade, ranges: []
+int fgetc(FILE*);
+// DIE 0xddaf5, ranges: []
+int fgetpos(FILE*, fpos_t*);
+// DIE 0xddb17, ranges: []
+char* fgets(char*, int, FILE*);
+// DIE 0xddb38, ranges: []
+FILE* fopen(char const*, char const*);
+// DIE 0xddb54, ranges: []
+size_t fread(void*, size_t, size_t, FILE*);
+// DIE 0xddb7a, ranges: []
+FILE* freopen(char const*, char const*, FILE*);
+// DIE 0xddb9b, ranges: []
+int fseek(FILE*, long int, int);
+// DIE 0xddbbc, ranges: []
+int fsetpos(FILE*, fpos_t const*);
+// DIE 0xddbe3, ranges: []
+long int ftell(FILE*);
+// DIE 0xddbfa, ranges: []
+int getc(FILE*);
+// DIE 0xddc11, ranges: []
+int getchar();
+// DIE 0xddc1e, ranges: []
+char* gets(char*);
+// DIE 0xddc35, ranges: []
+void perror(char const*);
+// DIE 0xddc48, ranges: []
+int remove(char const*);
+// DIE 0xddc60, ranges: []
+int rename(char const*, char const*);
+// DIE 0xddc7d, ranges: []
+void rewind(FILE*);
+// DIE 0xddc91, ranges: []
+void setbuf(FILE*, char*);
+// DIE 0xddcaa, ranges: []
+FILE* tmpfile();
+// DIE 0xddcb8, ranges: []
+char* tmpnam(char*);
+// DIE 0xddcd0, ranges: []
+int setvbuf(FILE*, char*, int, size_t);
+// DIE 0xddcf7, ranges: []
+int ungetc(int, FILE*);
+// DIE 0xdfb13, ranges: []
+wchar_t const* std::find<const wchar_t*, wchar_t>(wchar_t const* __first, wchar_t const* __last, wchar_t const& const __val);
+// DIE 0xdfb44, ranges: [{'begin': 9148532, 'end': 9148602, 'source': 'low/high_pc'}]
+bool std::priv::__valid_grouping(char const* first1, char const* last1, char const* first2, char const* last2);
+// DIE 0xdfb92, ranges: [{'begin': 9148604, 'end': 9148616, 'source': 'low/high_pc'}]
+unsigned char std::priv::__digit_val_table(unsigned int __index);
+// DIE 0xdfbe2, ranges: [{'begin': 9148616, 'end': 9148628, 'source': 'low/high_pc'}]
+char const* std::priv::__narrow_atoms();
+// DIE 0xdfbfd, ranges: [{'begin': 9148628, 'end': 9148776, 'source': 'low/high_pc'}]
+wchar_t const* std::priv::__find<const wchar_t*, wchar_t>(wchar_t const* __first, wchar_t const* __last, wchar_t const& const __val, std::random_access_iterator_tag const& const);
+// DIE 0xdfc64, ranges: [{'begin': 9148776, 'end': 9148826, 'source': 'low/high_pc'}]
+bool std::priv::__get_fdigit(wchar_t& const c, wchar_t const* digits);
+// DIE 0xdfccd, ranges: [{'begin': 9148828, 'end': 9148852, 'source': 'low/high_pc'}]
+bool std::priv::__get_fdigit_or_sep(wchar_t& const c, wchar_t sep, wchar_t const* digits);

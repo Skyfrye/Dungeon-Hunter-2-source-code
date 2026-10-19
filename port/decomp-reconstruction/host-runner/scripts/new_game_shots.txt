@@ -1,0 +1,20 @@
+# Title screen -> main menu -> Start -> Single player -> loading screen -> first level (coordinates for a 2400x1080 surface, the emulator's)
+60 log tap the title screen
+60 tap 1000 700
+200 log Start
+200 tap 2148 322
+300 log Single player
+300 tap 2136 368
+# loading finished (the movie waits for a tap on its continue button), then walk with the virtual stick
+420 log tap to continue loading
+420 tap 1200 540
+520 log stick up-right for 3 s
+520 drag 420 830 520 720 10 90
+# screenshots (windowed runner only)
+55 shot s1_title
+150 shot s2_menu
+280 shot s3_menu_after_start
+400 shot s4_loading
+650 shot s5_level
+900 shot s6_level_moved
+1000 quit

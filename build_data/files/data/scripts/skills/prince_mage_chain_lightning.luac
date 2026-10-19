@@ -1,0 +1,267 @@
+--[[	Chain Lightning
+
+--]]
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 1000.0;
+local num_jumps			= 5;
+local penalty			= 0.15;	-- 15 %
+
+local CLASS_ID			= GetPyOID("ClassTable", "Skill_Chain_Lightning");
+local PROJECTILE_ID		= GetPyOID("ProjectileTable", "SimplifiedChainLightning");
+local PROJECTILE_ID2	= GetPyOID("ProjectileTable", "SimplifiedChainLightning_base");
+
+local MIN_DAMAGE		= FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_MinDamage")));
+local MAX_DAMAGE		= FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_MaxDamage")));
+local victim_count		= 0;
+local victimTable		= {};
+
+-- Cached values
+local skill_level 		= 0;
+local mana_cost			= nil;
+local traces			= false;
+
+
+-- ----------------------------------------------------------------------------------------------
+local function UnlockAllVictims()
+	if (#victimTable > 0) then
+		for index, monster in pairs(victimTable) do
+			monster:UNLOCK();
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function check_victims(targetName)
+	local canAttackTarget = true;
+	
+	if (#victimTable > 0) then
+		if (traces) then Trace("Searching for: " .. targetName .. " in table of size: " .. #victimTable); end
+		for index, victim in pairs(victimTable) do
+			if (victim:GetName() == targetName) then
+				if (traces) then Trace("Found: " .. victim:GetName()); end
+				canAttackTarget = false;
+				break
+			end
+		end
+	end
+	
+	if (canAttackTarget) then
+		if (traces) then Trace("Returning True!"); end
+		return true;
+	else
+		if (traces) then Trace("Returning False!"); end
+		return false;
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+-- FUNCTIONS
+-- ----------------------------------------------------------------------------------------------
+-- Find another victim
+local function SearchVictim(startingTarget)
+
+	if (victim_count > num_jumps) then
+		return
+	else
+		local ourTarget = nil;
+		
+		if (startingTarget) then
+			SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+			SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+			SetTargetListSorting(GetPyCst("AITargetList_Sorting", "ClosestFirst"));
+			TargetListSearch(500, 360, startingTarget);
+			
+			if (not IsTargetListEmpty() ) then
+				repeat
+					local thisTarget, _, _, isCharacter = GetTargetListTop();
+					
+					PopTargetList();
+					
+					-- We check here if the target is one of our victims... Yes, then check for another target
+					if (check_victims(thisTarget:GetName()) and (isCharacter)) then 
+						ourTarget = thisTarget;
+					end
+				until(IsTargetListEmpty() or (ourTarget ~= nil))
+			
+				-- Play different sound depending on our findings
+				if (victim_count > 1) then
+					PlaySound("sfx_skill_mage_thunder_braid_add_2",false,0,false);
+				else
+					PlaySound("sfx_skill_mage_thunder_braid_add_1",false,0,false);
+				end
+				
+				-- spawn the projectile
+				if (ourTarget ~= nil and (victim_count < num_jumps)) then 
+					if (traces) then Trace("Projectile is starting from " .. startingTarget:GetName() .. " and attacking " .. ourTarget:GetName()); end
+					
+					local projectile = SpawnSkillProjectile(PROJECTILE_ID, startingTarget, ourTarget); 
+					SetProjectileTarget(projectile, ourTarget);
+				end
+			end
+		end
+	end
+end
+
+
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+	SetTempProps(CLASS_ID, slvl);
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+	local slvl = GetCurrentSkillInfo();
+
+	if(slvl ~= skill_level) then
+		skill_level	= slvl;
+	end
+	SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+	
+	mana_cost = CalcManaCost(CLASS_ID, skill_level);
+	
+	-- Theses overide the hardcoded values with the ones from the CLASS_ID
+	num_jumps = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp1"), true));
+	penalty = FromFixed(GetProp(GetPyStruct("CharacterProperties", "TempProp2"), true));
+	
+	MIN_DAMAGE = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_MinDamage")));
+	MAX_DAMAGE = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_MaxDamage")));
+	
+	penalty = penalty / 100;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	if (#victimTable > 0) then
+		for index, monster in pairs(victimTable) do
+			if (monster:IsDead()) then
+				table.remove(victimTable, index);
+				monster:UNLOCK();
+			end
+		end
+	end
+
+	return HasMana(mana_cost), false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Enemy"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "AttackableOnly"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+	
+	TargetListSearch(RANGE);
+	
+	if(not IsTargetListEmpty()) then
+		LookAt(GetTargetListTop());
+	end
+
+	-- we use our mana
+	UseMana(mana_cost);
+	
+	-- we reset our min and max damage values to default
+	SetProp(GetPyStruct("CharacterProperties", "SnS_MinDamage"), ToFixed(MIN_DAMAGE));
+	SetProp(GetPyStruct("CharacterProperties", "SnS_MaxDamage"), ToFixed(MAX_DAMAGE));
+	
+	-- we unlock all of our stored monsters before clearing the table
+	UnlockAllVictims();
+	
+	-- we reset our count and table
+	victim_count = 0;
+	victimTable	= {};
+	
+	-- trace for seperating called skill
+	if (traces) then
+		Trace("-");
+		Trace("-");
+		Trace("-");
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	local hasFiredProjectile = false;
+	
+	-- Check for the first character here (first victim)
+	if (not IsTargetListEmpty()) then
+		repeat
+			local myTarget, _, _, character = GetTargetListTop();
+			PopTargetList();
+			
+			-- check for a victim
+			if (character) then 
+				character = false;
+				
+				PlaySound("sfx_skill_mage_thunder_braid", false, 0, false);
+				
+				local projectile = SpawnSkillProjectile(PROJECTILE_ID, GetSelf(), myTarget); 
+				SetProjectileTarget(projectile, myTarget);
+				
+				hasFiredProjectile = true;
+			end
+		until(IsTargetListEmpty() or hasFiredProjectile)
+	end
+	
+	if (not hasFiredProjectile) then
+		-- No Target found 
+		PlaySound("sfx_skill_mage_thunder_braid", false, 0, false);
+		SpawnSkillProjectile(PROJECTILE_ID2); 
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnDelayedSkill_(attackTarget)
+	
+	if (attackTarget ~= nil) then
+		local targetName = attackTarget:GetName();
+		
+		if (traces) then Trace("Hit " .. targetName.." Victim # " .. victim_count); end
+		
+		if (check_victims(targetName) and (victim_count < num_jumps)) then
+		
+			if (traces) then Trace("Adding target: " .. targetName .. " to table!"); end
+			
+			table.insert(victimTable, attackTarget);
+			attackTarget:LOCK();
+			
+			SetProp(GetPyStruct("CharacterProperties", "SnS_Level"), ToFixed(skill_level));
+			ApplyPropClass(CLASS_ID);
+			
+			local minDamage = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_MinDamage")));
+			local maxDamage = FromFixed(GetProp(GetPyStruct("CharacterProperties", "SnS_MaxDamage")));
+			
+			victim_count = victim_count + 1;
+			
+			SetProp(GetPyStruct("CharacterProperties", "SnS_MinDamage"), (ToFixed(minDamage * (1 - ((victim_count - 1) * penalty)))));
+			SetProp(GetPyStruct("CharacterProperties", "SnS_MaxDamage"), (ToFixed(maxDamage * (1 - ((victim_count - 1) * penalty)))));
+			
+			if (traces) then Trace("Should be attacking: " .. targetName); end
+			
+			SkillCombatRoll(attackTarget);
+			SearchVictim(attackTarget);
+		end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+	ClearTarget();
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkillEx({	update=OnSkillUpdate_,
+					check=OnSkillCheck_,
+					pre=OnPreSkill_,
+					skill=OnSkill_,
+					post=OnPostSkill_,
+					delayed=OnDelayedSkill_,
+					delayed_check=OnDelayedSkillCheck_,
+					info=OnSkillInfo_,
+					});

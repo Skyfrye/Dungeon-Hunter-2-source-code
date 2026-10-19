@@ -1,0 +1,97 @@
+-- ----------------------------------------------------------------------------------------------------
+-- Flaminite Dome attack: 
+-- 
+-- - Will spawn flames in a radius that will burn nearby ennemies.
+-- ----------------------------------------------------------------------------------------------------
+
+
+-- ----------------------------------------------------------------------------------------------
+-- DATA
+-- ----------------------------------------------------------------------------------------------
+-- Constants
+local RANGE				= 500.0;
+
+local CLASS_ID			= GetPyOID("ClassTable", "Flaminite_Attack");
+
+-- Cached values
+local target;
+local count				= 0;
+local timer				= nil;
+local traces			= false;
+
+local function DoDamage()
+	ApplyPropClass(CLASS_ID);
+	local dmg = SkillCombatRoll(target);
+	if(dmg > 0) then
+		target:PlayFX(GetPyOID("AnimatedEffectTable", "elem_dmg_01_fire"));
+	end
+end
+
+local function checktarget()
+	count=count+1;
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(RANGE);
+	repeat
+		if(not IsTargetListEmpty()) then
+			target = GetTargetListTop();
+			PopTargetList();
+			DoDamage();
+		end
+	until(IsTargetListEmpty())
+	if (count>2) then 
+		StopTimerCB(timer);
+		count=0;
+		timer = nil; 
+	end
+end
+-- ----------------------------------------------------------------------------------------------
+-- CALLBACKS
+-- ----------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillInfo_(slvl)
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillUpdate_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkillCheck_()
+	return true, false;
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPreSkill_()
+	SetTargetListCharacterFilter(GetPyCst("AITargetList_CharacterFilter", "Player"));
+	SetTargetListObjectFilter(GetPyCst("AITargetList_ObjectFilter", "NONE"));
+	SetTargetListSorting(GetPyCst("AITargetList_Sorting", "FrontalFirst"));
+
+	TargetListSearch(RANGE);
+
+	if(not IsTargetListEmpty()) then
+		target = GetTargetListTop();
+		LookAt(target);
+		-- TODO: Placeholder before having the FX for the Flaminite. 
+	else
+		target = nil;
+		if (traces) then Trace("there is nobody to attack here!!!"); end
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnSkill_()
+	if(target) then
+		DoDamage();
+		timer = StartSkillTimerCB(1000, true, checktarget);
+	end
+end
+
+-- ----------------------------------------------------------------------------------------------
+local function OnPostSkill_()
+end
+
+-- ----------------------------------------------------------------------------------------------
+RegisterSkill(OnSkillUpdate_, OnSkillCheck_, OnPreSkill_, OnSkill_, OnPostSkill_, nil, OnSkillInfo_);
