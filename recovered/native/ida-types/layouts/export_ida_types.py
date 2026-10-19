@@ -1,7 +1,7 @@
 import json, os, traceback
 import ida_auto, ida_typeinf, idc
 
-OUT = "<home>/AppData/Local/Temp/claude/C--Users-user-Documents-Projects-Dungeon-Hunter-2-Recomp/bac0a85d-4469-4656-be80-86863e147f70/scratchpad/ida-types"
+OUT = os.path.expanduser("~") + "/AppData/Local/Temp/claude/C--Users-user-Documents-Projects-Dungeon-Hunter-2-Recomp/bac0a85d-4469-4656-be80-86863e147f70/scratchpad/ida-types"
 os.makedirs(OUT, exist_ok=True)
 LOG = open(OUT + "/dump.log", "w")
 

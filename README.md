@@ -30,10 +30,13 @@ cmake --build build/rm
 ctest --test-dir build/rm
 ```
 
-Android APK with the game data bundled (Android NDK and SDK):
+Android APK with the game data bundled. Needs the Android SDK with build-tools 37.0.0, platform 37 and NDK 29.0.14206865;
+set `ANDROID_HOME` to the SDK folder (default: Android Studio's `~/AppData/Local/Android/Sdk`):
 
 ```
 py -3 tools/trackb/android/build_release.py --bundle-data build_data/files --only source
 ```
 
 See [`RIGHTS.md`](RIGHTS.md) for the status of the game data and recovered material.
+
+Made by Skyfrye , Angelkiller with AI
